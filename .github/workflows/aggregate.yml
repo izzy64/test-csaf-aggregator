@@ -13,6 +13,6 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.9'
-    - run: pip install requests json
+    - run: pip install requests
     - name: Run scraper
       run: python3 csaf_scraper.py

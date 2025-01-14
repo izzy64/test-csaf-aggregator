@@ -17,7 +17,7 @@ for rolie_name, rolie_url in rolie_feeds.items():
                     os.makedirs("../"+rolie["title"])
             else:
                 print("ROLIE missing critical information")
-            if rolie["entry"]["content"]["src"]:
+            if rolie["entry"]:
                 for entry in rolie["entry"]:
                     csaf_response = requests.get(entry["content"]["src"])
                     csaf = csaf_response.json()

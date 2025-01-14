@@ -16,11 +16,10 @@ jobs:
     - run: pip install requests
     - name: Run aggregator
       run: python3 aggregation/csaf_scraper.py
-    - name: Commit updates	
-      run: |
-        git add .	
-        git config user.name "Automated"	
-        git config user.email "actions@users.noreply.github.com"	
-        git commit -m "csaf updates" 	
-    - name: Push	
-      run: git push
+    - name: Add and commit
+      id: add_commit
+      uses: EndBug/add-and-commit@v8
+      with:
+        committer_name: Automated
+        committer_email: actions@users.noreply.github.com
+        message: "CSAF updates"

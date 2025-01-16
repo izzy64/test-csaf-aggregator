@@ -15,7 +15,7 @@ jobs:
         python-version: '3.9'
     - run: pip install requests
     - name: Run aggregator
-      run: python3 aggregation/csaf_scraper.py
+      run: python3 .github/aggregation/csaf_scraper.py
     - name: Add and commit
       id: add_commit
       uses: EndBug/add-and-commit@v8

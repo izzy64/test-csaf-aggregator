@@ -1,0 +1,220 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Authenticated RCE on project configuration import in Guardian/CMC before 22.0.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2022-0551"
+      ],
+      "current_release_date": "2024-09-19T11:00:00.000Z",
+      "id": "NN-2022:2-02",
+      "initial_release_date": "2022-02-14T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2022-02-14T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        },
+        {
+          "date": "2023-09-04T11:00:00.000Z",
+          "number": "2",
+          "summary": "Minor updates to format and metadata to improve the CSAF implementation"
+        },
+        {
+          "date": "2023-11-13T11:00:00.000Z",
+          "number": "3",
+          "summary": "Migrated to CSAF VEX format"
+        },
+        {
+          "date": "2023-11-16T11:00:00.000Z",
+          "number": "4",
+          "summary": "CSAF vers improvements"
+        },
+        {
+          "date": "2024-05-20T11:00:00.000Z",
+          "number": "5",
+          "summary": "Added CVSS v4.0 scoring where applicable"
+        },
+        {
+          "date": "2024-09-19T11:00:00.000Z",
+          "number": "6",
+          "summary": "Revised the CVSS scoring"
+        }
+      ],
+      "status": "final",
+      "version": "6"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<22.0.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian <22.0.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "22.0.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian 22.0.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<22.0.0",
+                "product": {
+                  "name": "Nozomi Networks CMC <22.0.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "22.0.0",
+                "product": {
+                  "name": "Nozomi Networks CMC 22.0.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "organization": "SECURA B.V.",
+          "summary": "finding this bug during a scheduled VAPT testing session"
+        }
+      ],
+      "cve": "CVE-2022-0551",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "discovery_date": "2022-02-14T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2022:2-02"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Improper Input Validation vulnerability in project file upload in Nozomi Networks Guardian and CMC allows an authenticated attacker with admin or import manager roles to execute unattended commands on the appliance using web server user privileges.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0551"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2022/nn-2022_2-02.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2022:2-02"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Use internal firewall features to limit management interface access and review users allowed to import project data files.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v22.0.0.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "Users with admin or import manager roles can upload project configuration files to add more details on asset data inside Nozomi Networks Guardian and CMC. However, an improper validation is performed on the project file, allowing the users to execute commands remotely on the appliance, leveraging the privileges of the webserver."
+        }
+      ],
+      "title": "Authenticated RCE on project configuration import in Guardian/CMC before 22.0.0"
+    }
+  ]
+}

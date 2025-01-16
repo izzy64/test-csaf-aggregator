@@ -1,0 +1,411 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The IPv6 stack of the networking component (Nucleus NET) in Nucleus Real-Time Operating System (RTOS) contains two vulnerabilities when processing IPv6 headers which could allow an attacker to cause a denial of service condition.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-248289: Denial of Service Vulnerabilities in the IPv6 Stack of Nucleus RTOS - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-248289.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-248289: Denial of Service Vulnerabilities in the IPv6 Stack of Nucleus RTOS - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-248289.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-248289: Denial of Service Vulnerabilities in the IPv6 Stack of Nucleus RTOS - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-248289.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-248289: Denial of Service Vulnerabilities in the IPv6 Stack of Nucleus RTOS - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-248289.txt"
+      }
+    ],
+    "title": "SSA-248289: Denial of Service Vulnerabilities in the IPv6 Stack of Nucleus RTOS",
+    "tracking": {
+      "current_release_date": "2024-02-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-248289",
+      "initial_release_date": "2021-04-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-04-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-11-09T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for Nucleus ReadyStart V3; consolidated list of products"
+        },
+        {
+          "date": "2024-02-13T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Renamed Capital VSTAR to Capital Embedded AR Classic; added fix and mitigation for Capital Embedded AR Classic; added CVSSv4.0 vector and score"
+        }
+      ],
+      "status": "interim",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Capital Embedded AR Classic 431-422",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Capital Embedded AR Classic 431-422"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2303",
+                "product": {
+                  "name": "Capital Embedded AR Classic R20-11",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Capital Embedded AR Classic R20-11"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Nucleus NET",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus NET"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2017.02.4",
+                "product": {
+                  "name": "Nucleus ReadyStart V3",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus ReadyStart V3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.1.0",
+                "product": {
+                  "name": "Nucleus ReadyStart V4",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus ReadyStart V4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions including affected IPv6 stack",
+                "product": {
+                  "name": "Nucleus Source Code",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus Source Code"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-25663",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The function that processes IPv6 headers does not check the lengths of extension header options, allowing attackers to put this function into an infinite loop with crafted length values.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable IPv6 functionality, if feature not used, by deselecting the TcpIpIpV6General/IpV6Enabled Pre-Compile configuration option",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2303 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.0 or later version",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "6"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "title": "CVE-2021-25663"
+    },
+    {
+      "cve": "CVE-2021-25664",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The function that processes the Hop-by-Hop extension header in IPv6 packets and its options lacks any checks against the length field of the header, allowing attackers to put the function into an infinite loop by supplying arbitrary length values.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable IPv6 functionality, if feature not used, by deselecting the TcpIpIpV6General/IpV6Enabled Pre-Compile configuration option",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2303 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.0 or later version",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "6"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "title": "CVE-2021-25664"
+    }
+  ]
+}

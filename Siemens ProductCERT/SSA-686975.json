@@ -1,0 +1,421 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Intel has published information on vulnerabilities in Intel products in November 2022. This advisory lists the related Siemens Industrial products affected by these vulnerabilities that can be patched by applying the corresponding BIOS update (\"2022.3 IPU \u2013 BIOS Advisory\" \nIntel-SA-00688).\nSiemens is preparing updates and recommends specific countermeasures for products where updates are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-686975: IPU 2022.3 Vulnerabilities in Siemens Industrial Products using Intel CPUs - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-686975.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-686975: IPU 2022.3 Vulnerabilities in Siemens Industrial Products using Intel CPUs - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-686975.json"
+      }
+    ],
+    "title": "SSA-686975: IPU 2022.3 Vulnerabilities in Siemens Industrial Products using Intel CPUs",
+    "tracking": {
+      "current_release_date": "2024-08-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-686975",
+      "initial_release_date": "2023-02-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-02-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2023-05-09T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added affected products SIMATIC IPC PX-39A and SIMATIC IPC PX-39A pro"
+        },
+        {
+          "date": "2023-07-11T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix SIMATIC Field PG M5"
+        },
+        {
+          "date": "2023-08-08T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added fix for SIMATIC IPC BX-39A, SIMATIC IPC PX-39A, and SIMATIC IPC PX-39A pro"
+        },
+        {
+          "date": "2024-07-09T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Added fix for SIMATIC IPC627E / IPC647E / IPC677E / IPC847E"
+        },
+        {
+          "date": "2024-08-13T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added fix for SIMATIC Field PG M6"
+        }
+      ],
+      "status": "interim",
+      "version": "6"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V22.01.11",
+                "product": {
+                  "name": "SIMATIC Field PG M5",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Field PG M5"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V26.01.11",
+                "product": {
+                  "name": "SIMATIC Field PG M6",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Field PG M6"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC427E",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC427E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC477E",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC477E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC477E Pro",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC477E Pro"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC627E",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC627E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC647E",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC647E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC677E",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC677E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC847E",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC847E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V29.01.03",
+                "product": {
+                  "name": "SIMATIC IPC BX-39A",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC BX-39A"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V29.01.03",
+                "product": {
+                  "name": "SIMATIC IPC PX-39A",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC PX-39A"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V29.01.03",
+                "product": {
+                  "name": "SIMATIC IPC PX-39A PRO",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC PX-39A PRO"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ITP1000",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ITP1000"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-21198",
+      "cwe": {
+        "id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Time-of-check time-of-use race condition in the BIOS firmware for some Intel(R) Processors may allow a privileged user to potentially enable escalation of privilege via local access.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "10",
+          "11",
+          "12",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "13"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "3",
+            "4",
+            "5",
+            "13"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V22.01.11 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V25.02.14 or later version",
+          "product_ids": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V26.01.11 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V29.01.03 or later version",
+          "product_ids": [
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "As a prerequisite for an attack, an attacker must be able to run untrusted code on affected systems. Siemens recommends limiting the possibilities to run untrusted code if possible.",
+          "product_ids": [
+            "1",
+            "2",
+            "10",
+            "11",
+            "12",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "13"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.9,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "10",
+            "11",
+            "12",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "13"
+          ]
+        }
+      ],
+      "title": "CVE-2022-21198"
+    }
+  ]
+}

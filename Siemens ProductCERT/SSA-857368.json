@@ -1,0 +1,549 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Omnivise T3000 contains multiple vulnerabilities that could allow an attacker to escalate privileges.\n\nSiemens Energy has released patches for several affected products and recommends to apply the patches. Siemens Energy is preparing further fixes for versions still under maintenance and recommends countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens Energy strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-857368: Multiple Vulnerabilities in Omnivise T3000 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-857368.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-857368: Multiple Vulnerabilities in Omnivise T3000 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-857368.json"
+      }
+    ],
+    "title": "SSA-857368: Multiple Vulnerabilities in Omnivise T3000",
+    "tracking": {
+      "current_release_date": "2024-08-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-857368",
+      "initial_release_date": "2024-08-02T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-08-02T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-08-13T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added additional affected Omnivise T3000 Releases R8.2 SP3 and SP4, corrected inconsistent information, added reference to SE Controls Security Announcement 2024-01"
+        }
+      ],
+      "status": "interim",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Application Server R9.2",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Application Server R9.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Domain Controller R9.2",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Domain Controller R9.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Network Intrusion Detection System (NIDS) R9.2",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Network Intrusion Detection System (NIDS) R9.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Product Data Management (PDM) R9.2",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Product Data Management (PDM) R9.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 R8.2 SP3",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 R8.2 SP3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 R8.2 SP4",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 R8.2 SP4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Security Server R9.2",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Security Server R9.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Terminal Server R9.2",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Terminal Server R9.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Thin Client R9.2",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Thin Client R9.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Omnivise T3000 Whitelisting Server R9.2",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Omnivise T3000 Whitelisting Server R9.2"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-38876",
+      "cwe": {
+        "id": "CWE-552",
+        "name": "Files or Directories Accessible to External Parties"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application regularly executes user modifiable code as a privileged user. This could allow a local authenticated attacker to execute arbitrary code with elevated privileges.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4",
+          "5",
+          "6",
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install System Software Patch 22.173.20 and System Software Patch 22.173.52; apply additional mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "2",
+            "4",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install System Software Patch 22.173.20 and System Software Patch 22.173.52 as well as Application Software Patch 09.0.19.06; apply additional mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:T/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "9",
+            "10"
+          ]
+        }
+      ],
+      "title": "CVE-2024-38876"
+    },
+    {
+      "cve": "CVE-2024-38877",
+      "cwe": {
+        "id": "CWE-312",
+        "name": "Cleartext Storage of Sensitive Information"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected devices stores initial system credentials without sufficient protection.  An attacker with remote shell access or physical access could retrieve the credentials leading to confidentiality loss allowing the attacker to laterally move within the affected network.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "If the passwords are suspected to be compromised, change the Passwords for all computers and service accounts. In addition follow the instructions from Omnivise T3000 Technical News 2024-089 which is available through T3000 customer service and applies to releases (8.2 SP3/SP4 and 9.2).",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install System Software Patch 22.173.20 and System Software Patch 22.173.52; apply additional mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "2",
+            "4",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Apply mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install System Software Patch 22.173.52; apply additional mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install System Software Patch 22.173.20 and System Software Patch 22.173.52 as well as Application Software Patch 09.0.19.06; apply additional mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        }
+      ],
+      "title": "CVE-2024-38877"
+    },
+    {
+      "cve": "CVE-2024-38878",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices allow authenticated users to export diagnostics data. The corresponding API endpoint is susceptible to path traversal and could allow an authenticated attacker to download arbitrary files from the file system.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "5",
+          "6"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install System Software Patch 22.173.20 and System Software Patch 22.173.52 as well as Application Software Patch 09.0.19.06; apply additional mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "title": "CVE-2024-38878"
+    },
+    {
+      "cve": "CVE-2024-38879",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected system exposes the port of an internal application on the public network interface allowing an attacker to circumvent authentication and directly access the exposed application.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "5",
+          "6"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install System Software Patch 22.173.20 and System Software Patch 22.173.52 as well as Application Software Patch 09.0.19.06; apply additional mitigations from Omnivise T3000 Technical News 2024-089",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "title": "CVE-2024-38879"
+    }
+  ]
+}

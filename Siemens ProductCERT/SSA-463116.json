@@ -1,0 +1,326 @@
+{
+  "document": {
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Siveillance Identity contains multiple vulnerabilities that could allow an unauthenticated remote attacker to access or modify several internal application resources.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-463116: Multiple Access Control Vulnerabilities in Siveillance Identity before V1.6.284.0 - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-463116.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-463116: Multiple Access Control Vulnerabilities in Siveillance Identity before V1.6.284.0 - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-463116.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-463116: Multiple Access Control Vulnerabilities in Siveillance Identity before V1.6.284.0 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-463116.json"
+      }
+    ],
+    "title": "SSA-463116: Multiple Access Control Vulnerabilities in Siveillance Identity before V1.6.284.0",
+    "tracking": {
+      "current_release_date": "2021-12-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-463116",
+      "initial_release_date": "2021-12-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-12-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Siveillance Identity V1.5",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Identity V1.5"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.6.284.0",
+                "product": {
+                  "name": "Siveillance Identity V1.6",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Identity V1.6"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-44522",
+      "cwe": {
+        "id": "CWE-668",
+        "name": "Exposure of Resource to Wrong Sphere"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected applications insufficiently limit the access to the internal message broker system.\n\nThis could allow an unauthenticated remote attacker to subscribe to arbitrary message queues.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-44522 - Siveillance Identity V1.6",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801819/"
+        },
+        {
+          "summary": "CVE-2021-44522 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-44522.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6.284.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5 SP4 and apply the Credential Patch Tool: https://support.industry.siemens.com/cs/ww/en/view/109801824/",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6.284.0 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801819/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2021-44522"
+    },
+    {
+      "cve": "CVE-2021-44523",
+      "cwe": {
+        "id": "CWE-668",
+        "name": "Exposure of Resource to Wrong Sphere"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected applications insufficiently limit the access to the internal activity feed database.\n\nThis could allow an unauthenticated remote attacker to read, modify or delete activity feed entries.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-44523 - Siveillance Identity V1.6",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801819/"
+        },
+        {
+          "summary": "CVE-2021-44523 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-44523.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6.284.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5 SP4 and apply the Credential Patch Tool: https://support.industry.siemens.com/cs/ww/en/view/109801824/",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6.284.0 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801819/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2021-44523"
+    },
+    {
+      "cve": "CVE-2021-44524",
+      "cwe": {
+        "id": "CWE-668",
+        "name": "Exposure of Resource to Wrong Sphere"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected applications insufficiently limit the access to the internal user authentication service.\n\nThis could allow an unauthenticated remote attacker to trigger several actions on behalf of valid user accounts.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-44524 - Siveillance Identity V1.6",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801819/"
+        },
+        {
+          "summary": "CVE-2021-44524 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-44524.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6.284.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5 SP4 and apply the Credential Patch Tool: https://support.industry.siemens.com/cs/ww/en/view/109801824/",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6.284.0 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801819/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2021-44524"
+    }
+  ]
+}

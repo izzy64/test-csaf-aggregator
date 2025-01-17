@@ -1,0 +1,451 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "WIBU Systems published information about a denial-of-service\nvulnerability and an associated fix release version of CodeMeter\nRuntime,  a product provided by WIBU Systems and used in several\nSiemens products for license management.    The vulnerability is\ndescribed in the section \"Vulnerability Classification\" below and got\nassigned the CVE ID CVE-2021-41057.  Successful exploitation of this\nvulnerability could allow an attacker to crash the CodeMeter Runtime\nServer (i.e., CodeMeter.exe), which could cause a denial-of-service\ncondition for the affected Siemens product.    Siemens has released\nupdates for the affected products and recommends to update to the\nlatest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect\nnetwork access to devices with appropriate mechanisms. In order to\noperate the devices in a protected IT environment, Siemens recommends\nto configure the environment according to Siemens' operational\nguidelines for Industrial Security (Download:\nhttps://www.siemens.com/cert/operational-guidelines-industrial-\nsecurity), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found\nat: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-580693: WIBU Systems CodeMeter Runtime Denial-of-Service Vulnerability in Siemens Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-580693.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-580693: WIBU Systems CodeMeter Runtime Denial-of-Service Vulnerability in Siemens Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-580693.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-580693: WIBU Systems CodeMeter Runtime Denial-of-Service Vulnerability in Siemens Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-580693.json"
+      }
+    ],
+    "title": "SSA-580693: WIBU Systems CodeMeter Runtime Denial-of-Service Vulnerability in Siemens Products",
+    "tracking": {
+      "current_release_date": "2022-08-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-580693",
+      "initial_release_date": "2021-11-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-11-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-12-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for SIMATIC WinCC OA V3.18 and V3.17"
+        },
+        {
+          "date": "2022-01-11T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added solution for SIMATIC PCS neo, Information Server and Process Historian"
+        },
+        {
+          "date": "2022-08-09T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added fix for SIMIT Simulation Platform"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "CAPE 14 installations installed from material dated earlier than 2021-10-05",
+                "product": {
+                  "name": "PSS(R)CAPE",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)CAPE"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V34.9.1",
+                "product": {
+                  "name": "PSS(R)E V34",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)E V34"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V35.3.2",
+                "product": {
+                  "name": "PSS(R)E V35",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)E V35"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V12.2.6.1",
+                "product": {
+                  "name": "PSS(R)ODMS V12",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)ODMS V12"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SICAM 230",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM 230"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">= 2019 SP1 and < 2020 Update 2",
+                "product": {
+                  "name": "SIMATIC Information Server",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Information Server"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.1 Upd1",
+                "product": {
+                  "name": "SIMATIC PCS neo",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS neo"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">= 2019 and < 2020 Update 2",
+                "product": {
+                  "name": "SIMATIC Process Historian (incl. Process Historian OPC UA Server)",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Process Historian (incl. Process Historian OPC UA Server)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.17 P015",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.17",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.18 P005",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.18",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">= V10.0 < V11.0",
+                "product": {
+                  "name": "SIMIT Simulation Platform",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMIT Simulation Platform"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-41057",
+      "cwe": {
+        "id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "CodeMeter Runtime improperly controls file access permissions when running on Windows.\r\n\r\nIf local attackers with basic user capabilities manage to set up a link to a special system file used with CmDongles, they could overwrite essential files in the system and thereby crash the CodeMeter Runtime Server (i.e., CodeMeter.exe).",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Harden the application server to prevent local access by untrusted\npersonnel.",
+          "product_ids": [
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Limit local access to the WinCC OA server by hardening measures\naccording to the security guideline.",
+          "product_ids": [
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "CAPE 14 installations installed from material dated 2021-10-05 or\nlater are not affected, as they contain a fixed version of CodeMeter\nRuntime.",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "If CAPE 14 was initially installed using earlier material, install\nWIBU Systems CodeMeter Runtime V7.30a manually to fix the issue:\nDownload the package from https://www.psscape.com/codemeter and\ninstall it the same way as documented for previous versions in the PSS\nCAPE 14 Installation Manual. Contact PSS(R)CAPE Support at\npsscape.support.energy@siemens.com if you need assistance with\npatching affected systems.",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V34.9.1 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://siemens-pss.com/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Alternatively, install WIBU Systems CodeMeter Runtime V7.30a manually\nto fix the issue: Download the package from\nhttps://www.wibu.com/us/support/user/downloads-user-software.html and\nfollow the installation instructions from WIBU Systems. Contact PSS(R)\nSupport via the Customer Support Portal: https://siemens-\npss.freshdesk.com/en/support/login, if you need assistance with\npatching affected systems.",
+          "product_ids": [
+            "2",
+            "3",
+            "4"
+          ],
+          "url": "https://siemens-pss.com/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V35.3.2 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://siemens-pss.com/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V12.2.6.1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://siemens-pss.com/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update SICAM 230 to V8.00 or later version. Then update CodeMeter\nRuntime to V7.30a: Download the package from:\nhttps://www.wibu.com/us/support/user/downloads-user-software.html.\nInstall it on SICAM 230 systems according to the procedure documented\nin chapter 9.2 of the COPA-DATA Security Vulnerability Announcement\n2021_2: https://www.copadata.com/fileadmin/user_upload/faq/files/CD_S\nVA_2021_2.pdf.",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to 2020 Update 2 or later version",
+          "product_ids": [
+            "6",
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "To update, use the Information Server version as bundled with PCS neo\nV3.1 Upd1\n(https://support.industry.siemens.com/cs/ww/en/view/109804750/) or\nwith PCS 7 V9.1 SP1\n(https://support.industry.siemens.com/cs/ww/en/view/109805073/)",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 Upd 1 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804750/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "To update, use the Process Historian version as bundled with PCS neo\nV3.1 Upd1\n(https://support.industry.siemens.com/cs/ww/en/view/109804750/) or\nwith PCS 7 V9.1 SP1\n(https://support.industry.siemens.com/cs/ww/en/view/109805073/)",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.17 P015 or later version",
+          "product_ids": [
+            "9"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-\npatches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.18 P005 or later version",
+          "product_ids": [
+            "10"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-\npatches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V11.0 or later version",
+          "product_ids": [
+            "11"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109810223/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "title": "CVE-2021-41057"
+    }
+  ]
+}

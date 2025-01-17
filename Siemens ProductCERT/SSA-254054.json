@@ -1,0 +1,314 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "A vulnerability in Spring Framework was disclosed, that could allow remote unauthenticated attackers to execute code on vulnerable systems. The vulnerability is tracked as CVE-2022-22965 and is also known as \"Spring4Shell\" or \"SpringShell\".\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: \nhttps://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-254054: Spring Framework Vulnerability (Spring4Shell or SpringShell, CVE-2022-22965) - Impact to Siemens Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-254054.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-254054: Spring Framework Vulnerability (Spring4Shell or SpringShell, CVE-2022-22965) - Impact to Siemens Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-254054.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-254054: Spring Framework Vulnerability (Spring4Shell or SpringShell, CVE-2022-22965) - Impact to Siemens Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-254054.json"
+      }
+    ],
+    "title": "SSA-254054: Spring Framework Vulnerability (Spring4Shell or SpringShell, CVE-2022-22965) - Impact to Siemens Products",
+    "tracking": {
+      "current_release_date": "2022-10-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-254054",
+      "initial_release_date": "2022-04-19T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-04-19T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2022-04-27T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for Siveillance Identity"
+        },
+        {
+          "date": "2022-06-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added affected products SIMATIC Speech Assistant for Machines (SAM) and SINEC NMS"
+        },
+        {
+          "date": "2022-10-11T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added fix for SINEC NMS"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 2.0.4",
+                "product": {
+                  "name": "Operation Scheduler",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Operation Scheduler"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.2.1",
+                "product": {
+                  "name": "SIMATIC Speech Assistant for Machines (SAM)",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Speech Assistant for Machines (SAM)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.0.3",
+                "product": {
+                  "name": "SINEC NMS",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINEC NMS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SiPass integrated V2.80",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated V2.80"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SiPass integrated V2.85",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated V2.85"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Siveillance Identity V1.5",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Identity V1.5"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Siveillance Identity V1.6",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Identity V1.6"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-22965",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Block both incoming and outgoing connections between the system and the Internet",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Apply the patch",
+          "product_ids": [
+            "4",
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805711/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0.4 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5 SP4 and apply the patch",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109810454/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6 SP1 and apply the patch",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109810454/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.2.1 or later version. Please contact customer support to obtain the patch",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.0.3 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109813788/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2022-22965"
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Markus Wulftange"
+        ],
+        "organization": "Code White GmbH",
+        "summary": "reporting the vulnerability"
+      }
+    ],
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Desigo CC, Desigo CC Compact and Cerberus DMS that use CCOM communication component hosted in IIS contain a deserialisation vulnerability that could allow an unauthenticated attacker to perform remote code execution. Only those systems that use Windows App and/or IE XBAP Web Client are affected. Regular installed clients and the new HTML5 Flex Clients are not impacted by this vulnerability.\n\nNote that the risk of this vulnerability being exploited is particularly high for any Desigo CC system that is connected directly to the Internet. For systems not accessible directly from the Internet, an attacker would need to have access to the local network to exploit this vulnerability.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-453715: Deserialization Vulnerability in CCOM Communication Component of Desigo CC Family - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-453715.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-453715: Deserialization Vulnerability in CCOM Communication Component of Desigo CC Family - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-453715.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-453715: Deserialization Vulnerability in CCOM Communication Component of Desigo CC Family - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-453715.json"
+      }
+    ],
+    "title": "SSA-453715: Deserialization Vulnerability in CCOM Communication Component of Desigo CC Family",
+    "tracking": {
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-453715",
+      "initial_release_date": "2021-09-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-09-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Cerberus DMS V4.0",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cerberus DMS V4.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Cerberus DMS V4.1",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cerberus DMS V4.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Cerberus DMS V4.2",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cerberus DMS V4.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< v5.0 QU1",
+                "product": {
+                  "name": "Cerberus DMS V5.0",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Cerberus DMS V5.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC Compact V4.0",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC Compact V4.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC Compact V4.1",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC Compact V4.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC Compact V4.2",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC Compact V4.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V5.0 QU1",
+                "product": {
+                  "name": "Desigo CC Compact V5.0",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC Compact V5.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC V4.0",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC V4.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC V4.1",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC V4.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC V4.2",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC V4.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V5.0 QU1",
+                "product": {
+                  "name": "Desigo CC V5.0",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC V5.0"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-37181",
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The application deserialises untrusted data without sufficient validations, that could result in an arbitrary deserialization. This could allow an unauthenticated attacker to execute code in the affected system. The CCOM communication component used for Windows App / Click-Once and IE Web / XBAP client connectivity are affected by the vulnerability.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-37181 - Cerberus DMS V4.0",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Cerberus DMS V4.1",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Cerberus DMS V4.2",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Cerberus DMS V5.0",
+          "url": "https://support.industry.siemens.com/cs/document/109800951/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC Compact V4.0",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC Compact V4.1",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC Compact V4.2",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC Compact V5.0",
+          "url": "https://support.industry.siemens.com/cs/document/109800951/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC V4.0",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC V4.1",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC V4.2",
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "summary": "CVE-2021-37181 - Desigo CC V5.0",
+          "url": "https://support.industry.siemens.com/cs/document/109800951/"
+        },
+        {
+          "summary": "CVE-2021-37181 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37181.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Apply Patch 1520637",
+          "product_ids": [
+            "1",
+            "5",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Apply Patch 1417968",
+          "product_ids": [
+            "2",
+            "6",
+            "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2 QU1 and Apply Patch 1417967",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.0 QU1 or later version",
+          "product_ids": [
+            "4",
+            "8",
+            "12"
+          ],
+          "url": "https://support.industry.siemens.com/cs/document/109800951/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2 QU1 and Apply Patch 1417967",
+          "product_ids": [
+            "7",
+            "11"
+          ],
+          "url": "https://support.industry.siemens.com/cs/document/109801179/"
+        },
+        {
+          "category": "mitigation",
+          "details": "If the user is using a software version equal or older than V3.x, no patches will be released. Siemens recommends to upgrade to V5.0 QU1 (or any newer version that will be released in the future).",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "If a patch or Quality Update is not feasible, and if the user can accept to stop the use of Windows App and IE XBAP Web Client, then disable the Web Application and Web Client from SMC. As a result, Windows App and IE XBAP Web Client will stop working and the vulnerability cannot be exploited anymore.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "If all the above cannot apply, restrict Desigo CC to dedicated local networks, disabling the Internet access by blocking the CCOM Port for inbound and outbound communication. This will allow the use of Windows App and IE XBAP Client within a defined network space like the local network only. This action requires approval from the user as it will not remove the vulnerability but reduce the exposure. The vulnerability can be exploited in case the attacker can access the protected network first.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        }
+      ],
+      "title": "CVE-2021-37181"
+    }
+  ]
+}

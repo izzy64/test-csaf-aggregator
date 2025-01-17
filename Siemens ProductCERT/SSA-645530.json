@@ -1,0 +1,195 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "Trend Micro Zero Day Initiative",
+        "summary": "coordinated disclosure"
+      }
+    ],
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Siemens has released version V13.1.0.3 for JT2Go and Teamcenter Visualization to fix a vulnerability that could be triggered when the products read files in TIFF file format. If a user is tricked to opening of a malicious file with the affected products, this could lead to application crash, or potentially arbitrary code execution or data extraction on the target host system.\n\nSiemens recommends to update to the latest versions and to limit opening of untrusted files from unknown sources in the affected products.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-645530: TIFF File Parsing Vulnerability in JT2Go and Teamcenter Visualization before V13.1.0.3 - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-645530.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-645530: TIFF File Parsing Vulnerability in JT2Go and Teamcenter Visualization before V13.1.0.3 - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-645530.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-645530: TIFF File Parsing Vulnerability in JT2Go and Teamcenter Visualization before V13.1.0.3 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-645530.json"
+      }
+    ],
+    "title": "SSA-645530: TIFF File Parsing Vulnerability in JT2Go and Teamcenter Visualization before V13.1.0.3",
+    "tracking": {
+      "current_release_date": "2021-06-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-645530",
+      "initial_release_date": "2021-06-08T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-06-08T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V13.1.0.3",
+                "product": {
+                  "name": "JT2Go",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "JT2Go"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V13.1.0.3",
+                "product": {
+                  "name": "Teamcenter Visualization",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Teamcenter Visualization"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-27390",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The TIFF_loader.dll library in affected applications lacks proper validation of user-supplied data when parsing TIFF files. This could result in an out of bounds write past the end of an allocated structure.\n\nAn attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-13131)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-27390 - JT2Go",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "summary": "CVE-2021-27390 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-27390.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0.3 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0.3 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2021-27390"
+    }
+  ]
+}

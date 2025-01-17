@@ -1,0 +1,1401 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Multiple vulnerabilities affecting various third-party components of SCALANCE W-700 IEEE 802.11ax devices before V2.0 could allow an attacker to cause a denial of service condition, disclose sensitive data or violate the system integrity.\n\nSiemens has released an update for SCALANCE W-700 IEEE 802.11ax and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-565386: Third-Party Component Vulnerabilities in SCALANCE W-700 IEEE 802.11ax devices before V2.0 - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-565386.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-565386: Third-Party Component Vulnerabilities in SCALANCE W-700 IEEE 802.11ax devices before V2.0 - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-565386.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-565386: Third-Party Component Vulnerabilities in SCALANCE W-700 IEEE 802.11ax devices before V2.0 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-565386.json"
+      }
+    ],
+    "title": "SSA-565386: Third-Party Component Vulnerabilities in SCALANCE W-700 IEEE 802.11ax devices before V2.0",
+    "tracking": {
+      "current_release_date": "2023-03-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-565386",
+      "initial_release_date": "2023-03-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-03-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5763-1AL00-7DA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WAM766-1 (EU) (6GK5766-1GE00-7DA0)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-7DA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM766-1 (EU) (6GK5766-1GE00-7DA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-7DB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WAM766-1 EEC (EU) (6GK5766-1GE00-7TA0)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-7TA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM766-1 EEC (EU) (6GK5766-1GE00-7TA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-7TB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5763-1AL00-3DA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5763-1AL00-3AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WUM766-1 (EU) (6GK5766-1GE00-3DA0)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-3DA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUM766-1 (EU) (6GK5766-1GE00-3DA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE WUM766-1 (US) (6GK5766-1GE00-3DB0)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-3DB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUM766-1 (US) (6GK5766-1GE00-3DB0)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2018-12886",
+      "cwe": {
+        "id": "CWE-209",
+        "name": "Generation of Error Message Containing Sensitive Information"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "stack_protect_prologue in cfgexpand.c and stack_protect_epilogue in function.c in GNU Compiler Collection (GCC) 4.1 through 8 (under certain circumstances) generate instruction sequences when targeting ARM targets that spill the address of the stack protector guard, which allows an attacker to bypass the protection of -fstack-protector, -fstack-protector-all, -fstack-protector-strong, and -fstack-protector-explicit against stack overflow by controlling what the stack canary is compared against.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2018-12886"
+    },
+    {
+      "cve": "CVE-2018-25032",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2018-25032"
+    },
+    {
+      "cve": "CVE-2021-42373",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A NULL pointer dereference in Busybox's man applet leads to denial of service when a section name is supplied but no page argument is given.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42373"
+    },
+    {
+      "cve": "CVE-2021-42374",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An out-of-bounds heap read in Busybox's unlzma applet leads to information leak and denial of service when crafted LZMA-compressed input is decompressed. This can be triggered by any applet/format that internally supports LZMA compression.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42374"
+    },
+    {
+      "cve": "CVE-2021-42375",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An incorrect handling of a special element in Busybox's ash applet leads to denial of service when processing a crafted shell command, due to the shell mistaking specific characters for reserved characters. This may be used for DoS under rare conditions of filtered command input.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42375"
+    },
+    {
+      "cve": "CVE-2021-42376",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A NULL pointer dereference in Busybox's hush applet leads to denial of service when processing a crafted shell command, due to missing validation after a \\x03 delimiter character. This may be used for DoS under very rare conditions of filtered command input.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42376"
+    },
+    {
+      "cve": "CVE-2021-42377",
+      "cwe": {
+        "id": "CWE-763",
+        "name": "Release of Invalid Pointer or Reference"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An attacker-controlled pointer free in Busybox's hush applet leads to denial of service and possible code execution when processing a crafted shell command, due to the shell mishandling the &&& string. This may be used for remote code execution under rare conditions of filtered command input.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42377"
+    },
+    {
+      "cve": "CVE-2021-42378",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the getvar_i function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42378"
+    },
+    {
+      "cve": "CVE-2021-42379",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the next_input_file function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42379"
+    },
+    {
+      "cve": "CVE-2021-42380",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in awk leads to denial of service and possibly code execution when processing a crafted awk pattern in the clrvar function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42380"
+    },
+    {
+      "cve": "CVE-2021-42381",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in awk leads to denial of service and possibly code execution when processing a crafted awk pattern in the hash_init function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42381"
+    },
+    {
+      "cve": "CVE-2021-42382",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in awk leads to denial of service and possibly code execution when processing a crafted awk pattern in the getvar_s function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42382"
+    },
+    {
+      "cve": "CVE-2021-42383",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in awk leads to denial of service and possibly code execution when processing a crafted awk pattern in the evaluate function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42383"
+    },
+    {
+      "cve": "CVE-2021-42384",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the handle_special function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42384"
+    },
+    {
+      "cve": "CVE-2021-42385",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in awk leads to denial of service and possibly code execution when processing a crafted awk pattern in the evaluate function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42385"
+    },
+    {
+      "cve": "CVE-2021-42386",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A use-after-free in awk leads to denial of service and possibly code execution when processing a crafted awk pattern in the nvalloc function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2021-42386"
+    },
+    {
+      "cve": "CVE-2022-23395",
+      "cwe": {
+        "id": "CWE-1321",
+        "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "jQuery Cookie 1.4.1 is affected by prototype pollution, which can lead to DOM cross-site scripting (XSS).",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "6",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "6",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2022-23395"
+    }
+  ]
+}

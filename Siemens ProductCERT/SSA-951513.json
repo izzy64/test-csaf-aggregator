@@ -1,0 +1,336 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Several SCALANCE X switches contain a vulnerability that could allow an attacker to perform administrative actions\nif the victim is tricked into clicking on a website controlled by the attacker.\nThe attack only works if the victim has an authenticated session on the administrative interface of the switch.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: \nhttps://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-951513: Clickjacking Vulnerability in SCALANCE S, SCALANCE X-300, X-200IRT, X-200RNA and X-200 Switch Families - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-951513.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-951513: Clickjacking Vulnerability in SCALANCE S, SCALANCE X-300, X-200IRT, X-200RNA and X-200 Switch Families - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-951513.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-951513: Clickjacking Vulnerability in SCALANCE S, SCALANCE X-300, X-200IRT, X-200RNA and X-200 Switch Families - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-951513.json"
+      }
+    ],
+    "title": "SSA-951513: Clickjacking Vulnerability in SCALANCE S, SCALANCE X-300, X-200IRT, X-200RNA and X-200 Switch Families",
+    "tracking": {
+      "current_release_date": "2022-12-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-951513",
+      "initial_release_date": "2020-02-11T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2020-02-11T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-02-09T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for SCALANCE X-200IRT switch family"
+        },
+        {
+          "date": "2021-04-13T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added affected products SCALANCE S602, SCALANCE S612, SCALANCE S623, and SCALANCE S627-2M"
+        },
+        {
+          "date": "2022-12-13T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added SCALANCE X-200RNA switch family"
+        }
+      ],
+      "status": "final",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.1",
+                "product": {
+                  "name": "SCALANCE S602",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S602"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.1",
+                "product": {
+                  "name": "SCALANCE S612",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S612"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.1",
+                "product": {
+                  "name": "SCALANCE S623",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S623"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.1",
+                "product": {
+                  "name": "SCALANCE S627-2M",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S627-2M"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 5.2.4",
+                "product": {
+                  "name": "SCALANCE X-200 switch family (incl. SIPLUS NET variants)",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X-200 switch family (incl. SIPLUS NET variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V5.5.0",
+                "product": {
+                  "name": "SCALANCE X-200IRT switch family (incl. SIPLUS NET variants)",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X-200IRT switch family (incl. SIPLUS NET variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.2.7",
+                "product": {
+                  "name": "SCALANCE X-200RNA switch family",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X-200RNA switch family"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 4.1.3",
+                "product": {
+                  "name": "SCALANCE X-300 switch family (incl. X408 and SIPLUS NET variants)",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X-300 switch family (incl. X408 and SIPLUS NET variants)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2019-13924",
+      "cwe": {
+        "id": "CWE-693",
+        "name": "Protection Mechanism Failure"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The device does not send the X-Frame-Option Header in the administrative web\ninterface, which makes it vulnerable to Clickjacking attacks. \n\nThe security vulnerability could be exploited by an attacker that is able\nto trick an administrative user with a valid session on the target device into\nclicking on a website controlled by the attacker. The vulnerability could\nallow an attacker to perform administrative actions via the web interface.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Only access links from trusted sources in the browser you use to configure the SCALANCE X switches.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Upgrade hardware to successor product from SCALANCE SC-600 family (\nhttps://support.industry.siemens.com/cs/document/109756957) and apply patches when available, or follow recommendations from section Workarounds and Mitigations",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.3 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/document/109773547/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.2.4 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/document/109767965/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.5.0 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109792534/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 or later version\nUpdate is only available via Siemens Support contact",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.7 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109814809/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:L/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        }
+      ],
+      "title": "CVE-2019-13924"
+    }
+  ]
+}

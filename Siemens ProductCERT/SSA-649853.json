@@ -1,0 +1,148 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Industrial Edge Management contains a vulnerability that could allow an unauthenticated attacker to spoof a trusted entity by interfering in the communication path between the Industrial Edge Management (IEM) and the Industrial Edge Hub (IEH) using a crafted certificate.\n\nAn attacker could use this to inject malicious maintenance requests (e.g. sending statistics, activating remote support, exchanging the initial keys when onboarding, querying new extensions).\n\nSiemens has released an update for the Industrial Edge Management and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: \nhttps://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-649853: Improper Certificate Validation Vulnerability in Industrial Edge Management - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-649853.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-649853: Improper Certificate Validation Vulnerability in Industrial Edge Management - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-649853.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-649853: Improper Certificate Validation Vulnerability in Industrial Edge Management - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-649853.json"
+      }
+    ],
+    "title": "SSA-649853: Improper Certificate Validation Vulnerability in Industrial Edge Management",
+    "tracking": {
+      "current_release_date": "2022-10-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-649853",
+      "initial_release_date": "2022-10-11T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-10-11T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.5.1",
+                "product": {
+                  "name": "Industrial Edge Management",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Management"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-40147",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected software does not properly validate the server certificate when initiating a TLS connection. This could allow an attacker to spoof a trusted entity by interfering in the communication path between the client and the intended server.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.1 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://iehub.eu1.edge.siemens.cloud/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2022-40147"
+    }
+  ]
+}

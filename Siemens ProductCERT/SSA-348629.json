@@ -1,0 +1,875 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Independent researcher cdev1"
+        ],
+        "summary": "coordinated disclosure"
+      },
+      {
+        "names": [
+          "Vladimir Dashchenko"
+        ],
+        "organization": "Kaspersky Lab ICS CERT",
+        "summary": "reporting the vulnerability and coordination efforts"
+      }
+    ],
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "A Denial-of-Service vulnerability has been identified in SIMATIC PCS 7, SIMATIC WinCC, SIMATIC WinCC Runtime Professional and SIMATIC NET PC-Software.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens is preparing further updates and recommends specific countermeasures for products where updates are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-348629: Denial-of-Service Vulnerability in SIMATIC PCS 7, SIMATIC WinCC, SIMATIC WinCC Runtime Professional and SIMATIC NET PC Software - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-348629.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-348629: Denial-of-Service Vulnerability in SIMATIC PCS 7, SIMATIC WinCC, SIMATIC WinCC Runtime Professional and SIMATIC NET PC Software - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-348629.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-348629: Denial-of-Service Vulnerability in SIMATIC PCS 7, SIMATIC WinCC, SIMATIC WinCC Runtime Professional and SIMATIC NET PC Software - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-348629.json"
+      }
+    ],
+    "title": "SSA-348629: Denial-of-Service Vulnerability in SIMATIC PCS 7, SIMATIC WinCC, SIMATIC WinCC Runtime Professional and SIMATIC NET PC Software",
+    "tracking": {
+      "current_release_date": "2022-04-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-348629",
+      "initial_release_date": "2018-03-27T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2018-03-27T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2018-04-18T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Updates for SIMATIC BATCH V8.0 and V8.1"
+        },
+        {
+          "date": "2018-06-12T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Updates for PCS 7 8.2"
+        },
+        {
+          "date": "2018-10-09T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Update for OpenPCS 7 V8.1 and SIMATIC WinCC Runtime Professional V13"
+        },
+        {
+          "date": "2018-11-13T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Updated solution for SIMATIC BATCH V8.2, OpenPCS 7 V8.2, SIMATIC Route Control V8.2"
+        },
+        {
+          "date": "2018-12-11T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Updated solution for SIMATIC NET PC-Software"
+        },
+        {
+          "date": "2018-12-13T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "Corrected update link for SIMATIC NET PC-Software"
+        },
+        {
+          "date": "2019-01-08T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Updated patch links for WinCC 7.2 and 7.4"
+        },
+        {
+          "date": "2019-03-12T00:00:00Z",
+          "legacy_version": "1.8",
+          "number": "9",
+          "summary": "Corrected fixed version for WinCC 7.4"
+        },
+        {
+          "date": "2022-04-12T00:00:00Z",
+          "legacy_version": "1.9",
+          "number": "10",
+          "summary": "Added solution for SIMATIC NET PC Software V14 and clarified affected versions; Clarified no remediation planned"
+        }
+      ],
+      "status": "interim",
+      "version": "10"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "OpenPCS 7 V7.1 and earlier",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenPCS 7 V7.1 and earlier"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "OpenPCS 7 V8.0",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenPCS 7 V8.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V8.1 Upd5",
+                "product": {
+                  "name": "OpenPCS 7 V8.1",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenPCS 7 V8.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "OpenPCS 7 V8.2",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenPCS 7 V8.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V9.0 Upd1",
+                "product": {
+                  "name": "OpenPCS 7 V9.0",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OpenPCS 7 V9.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC BATCH V7.1 and earlier",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC BATCH V7.1 and earlier"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V8.0 SP1 Upd21",
+                "product": {
+                  "name": "SIMATIC BATCH V8.0",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC BATCH V8.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V8.1 SP1 Upd16",
+                "product": {
+                  "name": "SIMATIC BATCH V8.1",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC BATCH V8.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V8.2 Upd10",
+                "product": {
+                  "name": "SIMATIC BATCH V8.2",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC BATCH V8.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V9.0 SP1",
+                "product": {
+                  "name": "SIMATIC BATCH V9.0",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC BATCH V9.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V14 SP1 Update 14",
+                "product": {
+                  "name": "SIMATIC NET PC Software V14",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC NET PC Software V14"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< 15 SP1",
+                "product": {
+                  "name": "SIMATIC NET PC Software V15",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC NET PC Software V15"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC PCS 7 V7.1 and earlier",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V7.1 and earlier"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC PCS 7 V8.0",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V8.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC PCS 7 V8.1",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V8.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V8.2 SP1",
+                "product": {
+                  "name": "SIMATIC PCS 7 V8.2",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V8.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V9.0 SP1",
+                "product": {
+                  "name": "SIMATIC PCS 7 V9.0",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V9.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC Route Control V7.1 and earlier",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Route Control V7.1 and earlier"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC Route Control V8.0",
+                  "product_id": "19"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Route Control V8.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC Route Control V8.1",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Route Control V8.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC Route Control V8.2",
+                  "product_id": "21"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Route Control V8.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V9.0 Upd1",
+                "product": {
+                  "name": "SIMATIC Route Control V9.0",
+                  "product_id": "22"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Route Control V9.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V13 SP2 Upd2",
+                "product": {
+                  "name": "SIMATIC WinCC Runtime Professional V13",
+                  "product_id": "23"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Runtime Professional V13"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V14 SP1 Upd5",
+                "product": {
+                  "name": "SIMATIC WinCC Runtime Professional V14",
+                  "product_id": "24"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Runtime Professional V14"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< WinCC 7.2 Upd 15",
+                "product": {
+                  "name": "SIMATIC WinCC V7.2 and earlier",
+                  "product_id": "25"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V7.2 and earlier"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< WinCC 7.3 Upd 16",
+                "product": {
+                  "name": "SIMATIC WinCC V7.3",
+                  "product_id": "26"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V7.3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V7.4 SP1 Upd 4",
+                "product": {
+                  "name": "SIMATIC WinCC V7.4",
+                  "product_id": "27"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V7.4"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2018-4832",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Specially crafted messages sent to the RPC service of the affected products could cause a Denial-of-Service condition on the remote and local communication functionality of the affected products. A reboot of the system is required to recover the remote and local communication functionality.\n\nPlease note that an attacker needs to have network access to the Application Server in order to exploit this vulnerability.\n\nAt the time of advisory publication no public exploitation of this security vulnerability was known.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2018-4832 - OpenPCS 7 V8.1",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109761055"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC BATCH V8.0",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109756847"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC BATCH V8.1",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109756846"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC BATCH V8.2",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757796"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC NET PC Software V14",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109807351/"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC NET PC Software V15",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109762690"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC WinCC Runtime Professional V13",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759753"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC WinCC Runtime Professional V14",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109747394"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC WinCC V7.2 and earlier",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109762887"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC WinCC V7.3",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109756123"
+        },
+        {
+          "summary": "CVE-2018-4832 - SIMATIC WinCC V7.4",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109753031"
+        },
+        {
+          "summary": "CVE-2018-4832 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-4832.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "6",
+            "13",
+            "14",
+            "15",
+            "18",
+            "19",
+            "20"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to OpenPCS 7 V8.1 Upd 5 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109761055"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "See remediation for PCS 7 V8.2",
+          "product_ids": [
+            "4",
+            "21"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "See remediation for PCS 7 V9.0",
+          "product_ids": [
+            "5",
+            "10",
+            "22"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to SIMATIC BATCH V8.0 SP1 Upd21 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109756847"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to SIMATIC BATCH V8.1 SP1 Upd16 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109756846"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to SIMATIC BATCH V8.2 Upd10 or later version",
+          "product_ids": [
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757796"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V14 SP1 Update 14 or later version",
+          "product_ids": [
+            "11"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109807351/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V15 SP1 or later version",
+          "product_ids": [
+            "12"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109762690"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.2 SP1 or later version",
+          "product_ids": [
+            "16"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.0 SP1 (Includes Open PCS 7 V9.0 Upd1, SIMATIC Batch V9.0 SP1, SIMATIC Route Control V9.0 Upd1 and SIMATIC WinCC V7.4 SP1 Upd4).",
+          "product_ids": [
+            "17"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V13 SP2 Upd2 or later version",
+          "product_ids": [
+            "23"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759753"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V14 SP1 Upd5 or later version",
+          "product_ids": [
+            "24"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109747394"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to WinCC 7.2 Upd 15 or later version",
+          "product_ids": [
+            "25"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109762887"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to WinCC 7.3 Upd 16 or later version",
+          "product_ids": [
+            "26"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109756123"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.4 SP1 Upd 4 or later version",
+          "product_ids": [
+            "27"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109753031"
+        },
+        {
+          "category": "mitigation",
+          "details": "Ensure that SIMATIC WinCC, SIMATIC WinCC Runtime Professional and SIMATIC PCS 7 stations communicate via encrypted channels (i.e. activate feature \u201cEncrypted Communication\u201d in SIMATIC WinCC V7.3 or newer and SIMATIC PCS 7 V8.1 or newer). Enabling \u201cEncrypted Communication\u201d completely mitigates the vulnerability.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use VPN for protecting network communication between cells",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27"
+          ]
+        }
+      ],
+      "title": "CVE-2018-4832"
+    }
+  ]
+}

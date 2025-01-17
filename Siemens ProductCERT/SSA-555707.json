@@ -1,0 +1,161 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Simcenter STAR-CCM+ contains an information disclosure vulnerability\nwhen using the Power-on-Demand public license server. An attacker\ncould access a system's host, user, and display name.    Siemens is\npreparing updates and recommends specific countermeasures for products\nwhere updates are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect\nnetwork access to devices with appropriate mechanisms. In order to\noperate the devices in a protected IT environment, Siemens recommends\nto configure the environment according to Siemens' operational\nguidelines for Industrial Security (Download:\nhttps://www.siemens.com/cert/operational-guidelines-industrial-\nsecurity), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found\nat: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-555707: Information Disclosure Vulnerability in Simcenter STAR-CCM+ - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-555707.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-555707: Information Disclosure Vulnerability in Simcenter STAR-CCM+ - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-555707.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-555707: Information Disclosure Vulnerability in Simcenter STAR-CCM+ - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-555707.json"
+      }
+    ],
+    "title": "SSA-555707: Information Disclosure Vulnerability in Simcenter STAR-CCM+",
+    "tracking": {
+      "current_release_date": "2022-08-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-555707",
+      "initial_release_date": "2022-08-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-08-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions only if the Power-on-Demand public license server is used",
+                "product": {
+                  "name": "Simcenter STAR-CCM+",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter STAR-CCM+"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-34659",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected applications expose user, host and display name of users, when the public license server is used. This could allow an attacker to retrieve this information.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Set the environmental variable STARLICENSEHIDE to 1. This will send\nthe string \"unknown\" for the user, host and display name instead of\nthe real values. The setting is  supported since version V8.04 (June\n2013) of Simcenter STAR-CCM+",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Avoid using sensitive or personal data in user, host and display names",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:T/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2022-34659"
+    }
+  ]
+}

@@ -1,0 +1,1334 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Several SCALANCE X switches contain multiple vulnerabilities. An unauthenticated attacker could reboot, cause denial-of-service conditions and potentially impact the system by other means through heap and buffer overflow vulnerabilities.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens is preparing further updates and recommends specific countermeasures for products where updates are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-310038: Multiple Vulnerabilities in SCALANCE X Switch Devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-310038.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-310038: Multiple Vulnerabilities in SCALANCE X Switch Devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-310038.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-310038: Multiple Vulnerabilities in SCALANCE X Switch Devices - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-310038.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-310038: Multiple Vulnerabilities in SCALANCE X Switch Devices - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-310038.txt"
+      }
+    ],
+    "title": "SSA-310038: Multiple Vulnerabilities in SCALANCE X Switch Devices",
+    "tracking": {
+      "current_release_date": "2023-04-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-310038",
+      "initial_release_date": "2022-07-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-07-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2023-04-11T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for SCALANCE X-200IRT switch family"
+        }
+      ],
+      "status": "interim",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X200-4P IRT (6GK5200-4AH00-2BA3)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5200-4AH00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X200-4P IRT (6GK5200-4AH00-2BA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X201-3P IRT (6GK5201-3BH00-2BA3)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5201-3BH00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X201-3P IRT (6GK5201-3BH00-2BA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X201-3P IRT PRO (6GK5201-3JR00-2BA6)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5201-3JR00-2BA6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X201-3P IRT PRO (6GK5201-3JR00-2BA6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X202-2IRT (6GK5202-2BB00-2BA3)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2BB00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X202-2IRT (6GK5202-2BB00-2BA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X202-2IRT (6GK5202-2BB10-2BA3)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2BB10-2BA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X202-2IRT (6GK5202-2BB10-2BA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X202-2P IRT (6GK5202-2BH00-2BA3)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2BH00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X202-2P IRT (6GK5202-2BH00-2BA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X202-2P IRT PRO (6GK5202-2JR00-2BA6)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2JR00-2BA6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X202-2P IRT PRO (6GK5202-2JR00-2BA6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X204-2 (6GK5204-2BB10-2AA3)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BB10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204-2 (6GK5204-2BB10-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X204-2FM (6GK5204-2BB11-2AA3)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BB11-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204-2FM (6GK5204-2BB11-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X204-2LD (6GK5204-2BC10-2AA3)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BC10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204-2LD (6GK5204-2BC10-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X204-2LD TS (6GK5204-2BC10-2CA2)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BC10-2CA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204-2LD TS (6GK5204-2BC10-2CA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X204-2TS (6GK5204-2BB10-2CA2)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BB10-2CA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204-2TS (6GK5204-2BB10-2CA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X204IRT (6GK5204-0BA00-2BA3)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204IRT (6GK5204-0BA00-2BA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X204IRT (6GK5204-0BA10-2BA3)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA10-2BA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204IRT (6GK5204-0BA10-2BA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE X204IRT PRO (6GK5204-0JA00-2BA6)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0JA00-2BA6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X204IRT PRO (6GK5204-0JA00-2BA6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X206-1 (6GK5206-1BB10-2AA3)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-1BB10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X206-1 (6GK5206-1BB10-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X206-1LD (6GK5206-1BC10-2AA3)",
+                  "product_id": "17",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-1BC10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X206-1LD (6GK5206-1BC10-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X208 (6GK5208-0BA10-2AA3)",
+                  "product_id": "18",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X208 (6GK5208-0BA10-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X208PRO (6GK5208-0HA10-2AA6)",
+                  "product_id": "19",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA10-2AA6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X208PRO (6GK5208-0HA10-2AA6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X212-2 (6GK5212-2BB00-2AA3)",
+                  "product_id": "20",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5212-2BB00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X212-2 (6GK5212-2BB00-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X212-2LD (6GK5212-2BC00-2AA3)",
+                  "product_id": "21",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5212-2BC00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X212-2LD (6GK5212-2BC00-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X216 (6GK5216-0BA00-2AA3)",
+                  "product_id": "22",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0BA00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X216 (6GK5216-0BA00-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE X224 (6GK5224-0BA00-2AA3)",
+                  "product_id": "23",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5224-0BA00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE X224 (6GK5224-0BA00-2AA3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE XF201-3P IRT (6GK5201-3BH00-2BD2)",
+                  "product_id": "24",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5201-3BH00-2BD2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF201-3P IRT (6GK5201-3BH00-2BD2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE XF202-2P IRT (6GK5202-2BH00-2BD2)",
+                  "product_id": "25",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2BH00-2BD2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF202-2P IRT (6GK5202-2BH00-2BD2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE XF204 (6GK5204-0BA00-2AF2)",
+                  "product_id": "26",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF204 (6GK5204-0BA00-2AF2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE XF204-2 (6GK5204-2BC00-2AF2)",
+                  "product_id": "27",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BC00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF204-2 (6GK5204-2BC00-2AF2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE XF204-2BA IRT (6GK5204-2AA00-2BD2)",
+                  "product_id": "28",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2AA00-2BD2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF204-2BA IRT (6GK5204-2AA00-2BD2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.5.2",
+                "product": {
+                  "name": "SCALANCE XF204IRT (6GK5204-0BA00-2BF2)",
+                  "product_id": "29",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2BF2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF204IRT (6GK5204-0BA00-2BF2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE XF206-1 (6GK5206-1BC00-2AF2)",
+                  "product_id": "30",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-1BC00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF206-1 (6GK5206-1BC00-2AF2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2.6",
+                "product": {
+                  "name": "SCALANCE XF208 (6GK5208-0BA00-2AF2)",
+                  "product_id": "31",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF208 (6GK5208-0BA00-2AF2)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-26647",
+      "cwe": {
+        "id": "CWE-330",
+        "name": "Use of Insufficiently Random Values"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The webserver of affected devices calculates session ids and nonces in an insecure manner. This could allow an unauthenticated remote attacker to brute-force session ids and hijack existing sessions.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.2.6 or later version",
+          "product_ids": [
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "26",
+            "27",
+            "30",
+            "31"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811753/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.5.2 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "13",
+            "14",
+            "15",
+            "24",
+            "25",
+            "28",
+            "29"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817790/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to the affected systems, especially to port 80/tcp and port 443/tcp to trusted IP addresses only",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate the webserver if not required, and if deactivation is supported by the product",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ],
+      "title": "CVE-2022-26647"
+    },
+    {
+      "cve": "CVE-2022-26648",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly validate the GET parameter XNo of incoming HTTP requests. This could allow an unauthenticated remote attacker to crash affected devices.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.2.6 or later version",
+          "product_ids": [
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "26",
+            "27",
+            "30",
+            "31"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811753/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.5.2 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "13",
+            "14",
+            "15",
+            "24",
+            "25",
+            "28",
+            "29"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817790/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to the affected systems, especially to port 80/tcp and port 443/tcp to trusted IP addresses only",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate the webserver if not required, and if deactivation is supported by the product",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ],
+      "title": "CVE-2022-26648"
+    },
+    {
+      "cve": "CVE-2022-26649",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly validate the URI of incoming HTTP GET requests. This could allow an unauthenticated remote attacker to crash affected devices.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.2.6 or later version",
+          "product_ids": [
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "26",
+            "27",
+            "30",
+            "31"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811753/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.5.2 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "13",
+            "14",
+            "15",
+            "24",
+            "25",
+            "28",
+            "29"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817790/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to the affected systems, especially to port 80/tcp and port 443/tcp to trusted IP addresses only",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate the webserver if not required, and if deactivation is supported by the product",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.6,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ],
+      "title": "CVE-2022-26649"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "A vulnerability in S7-300 might allow an attacker to cause a  Denial-\nof-Service condition on port 102 of the affected devices by sending\nspecially  crafted packets.    Siemens recommends specific\ncountermeasures for products where updates are not, or not yet\navailable.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect\nnetwork access to devices with appropriate mechanisms. In order to\noperate the devices in a protected IT environment, Siemens recommends\nto configure the environment according to Siemens' operational\nguidelines for Industrial Security (Download:\nhttps://www.siemens.com/cert/operational-guidelines-industrial-\nsecurity), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found\nat: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-492828: Denial-of-Service Vulnerability in SIMATIC S7-300 CPUs and SINUMERIK Controller - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-492828.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-492828: Denial-of-Service Vulnerability in SIMATIC S7-300 CPUs and SINUMERIK Controller - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-492828.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-492828: Denial-of-Service Vulnerability in SIMATIC S7-300 CPUs and SINUMERIK Controller - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-492828.json"
+      }
+    ],
+    "title": "SSA-492828: Denial-of-Service Vulnerability in SIMATIC S7-300 CPUs and SINUMERIK Controller",
+    "tracking": {
+      "current_release_date": "2022-08-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-492828",
+      "initial_release_date": "2020-11-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2020-11-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-08-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added SIMATIC TDC CPU555 to the list of affected products"
+        },
+        {
+          "date": "2022-08-09T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Clarify that currently no fix is planned"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC TDC CPU555",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC TDC CPU555"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINUMERIK 840D sl",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINUMERIK 840D sl"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-15783",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Sending multiple specially crafted packets to the affected devices could cause a\nDenial-of-Service on port 102. A cold restart is required to recover the service.\n\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Protect network access to port 102/tcp of affected devices.",
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2020-15783"
+    }
+  ]
+}

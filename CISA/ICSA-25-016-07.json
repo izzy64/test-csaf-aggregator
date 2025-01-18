@@ -3,12 +3,17 @@
     "acknowledgments": [
       {
         "names": [
-          "Doukani Mohammed Adam"
+          "Darius Pavelescu",
+          "Bernhard Rader"
         ],
-        "organization": "Resilience",
-        "summary": "reporting this vulnerability to Siemens."
+        "organization": "Limes Security",
+        "summary": "reporting this vulnerability to Hitachi Energy."
       }
     ],
+    "aggregate_severity": {
+      "namespace": "https://www.first.org/cvss/specification-document",
+      "text": "MEDIUM"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "distribution": {
@@ -18,27 +23,27 @@
         "url": "https://us-cert.cisa.gov/tlp/"
       }
     },
-    "lang": "en",
+    "lang": "en-US",
     "notes": [
       {
         "category": "summary",
-        "text": "A vulnerability in the login dialog box of SIMATIC WinCC could allow a local attacker to cause a denial of service condition in the runtime of the SCADA system.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "text": "Hitachi Energy is aware of a vulnerability that affects the XMC20 versions listed below. Please refer to the \u201cRecommended Immediate Actions\u201d for information about the remediation. ",
         "title": "Summary"
       },
       {
-        "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
-        "title": "General Recommendations"
-      },
-      {
-        "category": "general",
-        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
-        "title": "Additional Resources"
-      },
-      {
         "category": "legal_disclaimer",
-        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
-        "title": "Terms of Use"
+        "text": "The information in this document is subject to change without notice and should not be construed as a commitment by Hitachi Energy. Hitachi Energy provides no warranty, express or implied, including warran-ties of merchantability and fitness for a particular purpose, for the information contained in this document, and assumes no responsibility for any errors that may appear in this document. In no event shall Hitachi Energy or any of its suppliers be liable for direct, indirect, special, incidental or consequential damages of any nature or kind arising from the use of this document, or from the use of any hardware or software de-scribed in this document, even if Hitachi Energy or its suppliers have been advised of the possibility of such damages. This document and parts hereof must not be reproduced or copied without written permission from Hitachi Energy and the contents hereof must not be imparted to a third party nor used for any unauthorized purpose. All rights to registrations and trademarks reside with their respective owners.",
+        "title": "Notice"
+      },
+      {
+        "category": "general",
+        "text": "Recommended security practices and firewall configurations can help protect a process control network from attacks that originate from outside the network. Such practices include that process control systems are physically protected from direct access by unauthorized personnel, have no direct connections to the Internet, and are separated from other networks by means of a firewall system that has a minimal number of ports exposed, and others that have to be evaluated case by case. Process control systems should not be used for Internet surfing, instant messaging, or receiving e-mails. Portable computers and removable storage media should be carefully scanned for viruses before they are connected to a control system.",
+        "title": "General Mitigation Factors/Workarounds"
+      },
+      {
+        "category": "other",
+        "text": "For additional information and support please contact your product provider or Hitachi Energy service organization. For contact information, see https://www.hitachienergy.com/contact-us/ for Hitachi Energy contact-centers.",
+        "title": "Support"
       },
       {
         "category": "legal_disclaimer",
@@ -47,7 +52,7 @@
       },
       {
         "category": "other",
-        "text": "This CISA CSAF advisory was converted from Siemens ProductCERT's CSAF advisory.",
+        "text": "This CISA CSAF advisory was converted from Hitachi Energy PSIRT's CSAF advisory.",
         "title": "Advisory Conversion Disclaimer"
       },
       {
@@ -62,7 +67,7 @@
       },
       {
         "category": "other",
-        "text": "Germany",
+        "text": "Switzerland",
         "title": "Company headquarters location"
       },
       {
@@ -115,23 +120,18 @@
     "references": [
       {
         "category": "self",
-        "summary": "SSA-730482: Denial of Service Vulnerability in SIMATIC WinCC - CSAF Version",
-        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-730482.json"
+        "summary": "ICS Advisory ICSA-25-016-07 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-016-07.json"
       },
       {
         "category": "self",
-        "summary": "SSA-730482: Denial of Service Vulnerability in SIMATIC WinCC - HTML Version",
-        "url": "https://cert-portal.siemens.com/productcert/html/ssa-730482.html"
+        "summary": "CYBERSECURITY ADVISORY - Zip Slip Vulnerability in Hitachi Energy\u2019s XMC20",
+        "url": "https://publisher.hitachienergy.com/preview?DocumentId=8DBD000202&languageCode=en&Preview=true"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-24-102-02 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-102-02.json"
-      },
-      {
-        "category": "self",
-        "summary": "ICS Advisory ICSA-24-102-02 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-102-02"
+        "summary": "ICS Advisory ICSA-25-016-07 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-016-07"
       },
       {
         "category": "external",
@@ -164,39 +164,27 @@
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
       }
     ],
-    "title": "Siemens SIMATIC WinCC",
+    "title": "Hitachi Energy FOX61x Products",
     "tracking": {
-      "current_release_date": "2025-01-14T00:00:00.000000Z",
+      "current_release_date": "2024-06-11T12:30:00.000000Z",
       "generator": {
+        "date": "2024-06-11T15:40:33.237000Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-24-102-02",
-      "initial_release_date": "2024-04-09T00:00:00.000000Z",
+      "id": "ICSA-25-016-07",
+      "initial_release_date": "2024-06-11T12:30:00.000000Z",
       "revision_history": [
         {
-          "date": "2024-04-09T00:00:00.000000Z",
-          "legacy_version": "1.0",
-          "number": "1",
-          "summary": "Publication Date"
-        },
-        {
-          "date": "2024-07-09T00:00:00.000000Z",
-          "legacy_version": "1.1",
-          "number": "2",
-          "summary": "Added fix for SIMATIC WinCC V8.0 and SIMATIC WinCC Runtime Professional V18"
-        },
-        {
-          "date": "2025-01-14T00:00:00.000000Z",
-          "legacy_version": "1.2",
-          "number": "3",
-          "summary": "Added fix for SIMATIC WinCC Runtime Professional V17"
+          "date": "2024-06-11T12:30:00.000000Z",
+          "number": "1.0.0",
+          "summary": "Initial version."
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "1.0.0"
     }
   },
   "product_tree": {
@@ -207,193 +195,141 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.1_SP2_UC04",
+                "name": "<=R15A",
                 "product": {
-                  "name": "SIMATIC PCS 7 V9.1",
+                  "name": "XMC20 R15A and older including all subversions",
                   "product_id": "CSAFPID-0001"
                 }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC PCS 7 V9.1"
-          },
-          {
-            "branches": [
+              },
               {
-                "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "category": "product_version",
+                "name": "R15B",
                 "product": {
-                  "name": "SIMATIC WinCC Runtime Professional V17",
+                  "name": "XMC20 R15B",
                   "product_id": "CSAFPID-0002"
                 }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC Runtime Professional V17"
-          },
-          {
-            "branches": [
+              },
               {
-                "category": "product_version_range",
-                "name": "<V18_Update_4",
+                "category": "product_version",
+                "name": "R16A",
                 "product": {
-                  "name": "SIMATIC WinCC Runtime Professional V18",
+                  "name": "XMC20 R16A",
                   "product_id": "CSAFPID-0003"
                 }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC Runtime Professional V18"
-          },
-          {
-            "branches": [
+              },
               {
-                "category": "product_version_range",
-                "name": "<V19_Update_1",
+                "category": "product_version",
+                "name": "R16B_Revision_C",
                 "product": {
-                  "name": "SIMATIC WinCC Runtime Professional V19",
+                  "name": "XMC20 R16B Revision C (cent2_r16b04_02, co5ne_r16b04_02) and older including all subversions",
                   "product_id": "CSAFPID-0004"
                 }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC Runtime Professional V19"
-          },
-          {
-            "branches": [
+              },
               {
-                "category": "product_version_range",
-                "name": "<V7.5_SP2_Update_16",
+                "category": "product_version",
+                "name": "R16B_Revision_D",
                 "product": {
-                  "name": "SIMATIC WinCC V7.5",
+                  "name": "XMC20 R16B Revision D, version (cent2_r16b04_07, co5ne_r16b04_07)",
                   "product_id": "CSAFPID-0005"
                 }
               }
             ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC V7.5"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V8.0_Update_5",
-                "product": {
-                  "name": "SIMATIC WinCC V8.0",
-                  "product_id": "CSAFPID-0006"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC V8.0"
+            "category": "product_family",
+            "name": "XMC20"
           }
         ],
         "category": "vendor",
-        "name": "Siemens"
+        "name": "Hitachi Energy"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-50821",
+      "cve": "CVE-2024-2461",
       "cwe": {
-        "id": "CWE-120",
-        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+        "id": "CWE-23",
+        "name": "Relative Path Traversal"
       },
       "notes": [
         {
-          "category": "summary",
-          "text": "The affected products do not properly validate the input provided in the login dialog box. An attacker could leverage this vulnerability to cause a persistent denial of service condition.",
-          "title": "Summary"
+          "category": "description",
+          "text": "Hitachi Energy is aware of a vulnerability that affects the XMC20. If exploited an attacker could traverse the file system to access files or directories that would otherwise be inaccessible.",
+          "title": "CVE description"
         }
       ],
       "product_status": {
+        "fixed": [
+          "CSAFPID-0005"
+        ],
         "known_affected": [
           "CSAFPID-0001",
           "CSAFPID-0002",
           "CSAFPID-0003",
-          "CSAFPID-0004",
-          "CSAFPID-0005",
-          "CSAFPID-0006"
+          "CSAFPID-0004"
+        ],
+        "recommended": [
+          "CSAFPID-0005"
         ]
       },
+      "references": [
+        {
+          "category": "self",
+          "summary": "NVD - CVE-2024-2461",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-2461"
+        }
+      ],
       "remediations": [
         {
-          "category": "mitigation",
-          "details": "Activate SIMATIC Logon in the User Administrator of the SIMATIC PCS 7 Operator Stations",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006"
-          ]
-        },
-        {
           "category": "vendor_fix",
-          "details": "Update to V17 Update 8 or later version",
-          "product_ids": [
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V18 Update 4 or later version",
-          "product_ids": [
-            "CSAFPID-0003"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V19 Update 1 or later version",
+          "details": "Update to XMC20 R16B Revision D, version (cent2_r16b04_07, co5ne_r16b04_07) and apply general mitigation factors.\n(Hitachi Energy recommends that customers apply the update at the earliest convenience)",
           "product_ids": [
             "CSAFPID-0004"
           ]
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V7.5 SP2 Update 16 or later version",
+          "details": "Recommended to update to XMC20 R16B Revision D, version (cent2_r16b04_07, co5ne_r16b04_07) and apply general mitigation factors.",
           "product_ids": [
-            "CSAFPID-0005"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793460/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V8.0 Update 5 or later version",
-          "product_ids": [
-            "CSAFPID-0006"
+            "CSAFPID-0002"
           ]
         },
         {
-          "category": "vendor_fix",
-          "details": "Update to V9.1 SP2 UC04 or later version",
+          "category": "no_fix_planned",
+          "details": "EOL versions - no remediation will be available. Recommended to update to XMC20 R16B Revision D, version (cent2_r16b04_07, co5ne_r16b04_07) and apply general mitigation factors.",
           "product_ids": [
-            "CSAFPID-0001"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.2,
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 4.9,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 4.9,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "temporalScore": 4.9,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006"
+            "CSAFPID-0004"
           ]
         }
-      ],
-      "title": "CVE-2023-50821"
+      ]
     }
   ]
 }

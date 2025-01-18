@@ -2,8 +2,13 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "Siemens ProductCERT",
-        "summary": "reporting this vulnerability to CISA."
+        "names": [
+          "Steffen Robertz",
+          "Stefan Viehb\u00f6ck",
+          "Constantin Schieber-Kn\u00f6bl"
+        ],
+        "organization": "SEC Consult Vulnerability Lab",
+        "summary": "reporting this vulnerability to Siemens."
       }
     ],
     "category": "csaf_security_advisory",
@@ -19,12 +24,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Affected products do not properly sanitize user-controllable input when parsing files. This could allow an attacker to cause a type confusion and execute arbitrary code within the affected application.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "Affected SIPROTEC 5 devices do not properly limit the access of the web server to the filesystem. This could allow an authenticated remote attacker to read arbitrary files or the entire filesystem of the device.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity",
         "title": "General Recommendations"
       },
       {
@@ -112,23 +117,23 @@
     "references": [
       {
         "category": "self",
-        "summary": "SSA-871035: Session-Memory Deserialization Vulnerability in Siemens Engineering Platforms Before V19 - CSAF Version",
-        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-871035.json"
+        "summary": "SSA-194557: Improper Limitation of Filesystem Access through Web Server Vulnerability in SIPROTEC 5 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-194557.json"
       },
       {
         "category": "self",
-        "summary": "SSA-871035: Session-Memory Deserialization Vulnerability in Siemens Engineering Platforms Before V19 - HTML Version",
-        "url": "https://cert-portal.siemens.com/productcert/html/ssa-871035.html"
+        "summary": "SSA-194557: Improper Limitation of Filesystem Access through Web Server Vulnerability in SIPROTEC 5 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-194557.html"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-24-319-07 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-319-07.json"
+        "summary": "ICS Advisory ICSA-25-016-04 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-016-04.json"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-24-319-07 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-319-07"
+        "summary": "ICS Advisory ICSA-25-016-04 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-016-04"
       },
       {
         "category": "external",
@@ -161,7 +166,7 @@
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
       }
     ],
-    "title": "Siemens Engineering Platforms",
+    "title": "Siemens SIPROTEC 5 Products",
     "tracking": {
       "current_release_date": "2025-01-14T00:00:00.000000Z",
       "generator": {
@@ -170,24 +175,18 @@
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-24-319-07",
-      "initial_release_date": "2024-11-12T00:00:00.000000Z",
+      "id": "ICSA-25-016-04",
+      "initial_release_date": "2025-01-14T00:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2024-11-12T00:00:00.000000Z",
+          "date": "2025-01-14T00:00:00.000000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
-        },
-        {
-          "date": "2025-01-14T00:00:00.000000Z",
-          "legacy_version": "1.1",
-          "number": "2",
-          "summary": "Clarified no fix planned for Totally Integrated Automation Portal (TIA Portal) V16"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -198,379 +197,393 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "SIMATIC S7-PLCSIM V16",
+                  "name": "SIPROTEC 5 6MD84 (CP300)",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC S7-PLCSIM V16"
+            "name": "SIPROTEC 5 6MD84 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC S7-PLCSIM V17",
+                  "name": "SIPROTEC 5 6MD85 (CP300)",
                   "product_id": "CSAFPID-0002"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC S7-PLCSIM V17"
+            "name": "SIPROTEC 5 6MD85 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC STEP 7 Safety V16",
+                  "name": "SIPROTEC 5 6MD86 (CP300)",
                   "product_id": "CSAFPID-0003"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC STEP 7 Safety V16"
+            "name": "SIPROTEC 5 6MD86 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "name": "vers:all/>=V7.80",
                 "product": {
-                  "name": "SIMATIC STEP 7 Safety V17",
+                  "name": "SIPROTEC 5 6MD89 (CP300)",
                   "product_id": "CSAFPID-0004"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC STEP 7 Safety V17"
+            "name": "SIPROTEC 5 6MD89 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V18_Update_5",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC STEP 7 Safety V18",
+                  "name": "SIPROTEC 5 6MU85 (CP300)",
                   "product_id": "CSAFPID-0005"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC STEP 7 Safety V18"
+            "name": "SIPROTEC 5 6MU85 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC STEP 7 V16",
+                  "name": "SIPROTEC 5 7KE85 (CP300)",
                   "product_id": "CSAFPID-0006"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC STEP 7 V16"
+            "name": "SIPROTEC 5 7KE85 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "name": "vers:all/>=V7.80",
                 "product": {
-                  "name": "SIMATIC STEP 7 V17",
+                  "name": "SIPROTEC 5 7SA82 (CP100)",
                   "product_id": "CSAFPID-0007"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC STEP 7 V17"
+            "name": "SIPROTEC 5 7SA82 (CP100)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V18_Update_5",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "SIMATIC STEP 7 V18",
+                  "name": "SIPROTEC 5 7SA82 (CP150)",
                   "product_id": "CSAFPID-0008"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC STEP 7 V18"
+            "name": "SIPROTEC 5 7SA82 (CP150)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC WinCC Unified V16",
+                  "name": "SIPROTEC 5 7SA86 (CP300)",
                   "product_id": "CSAFPID-0009"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC WinCC Unified V16"
+            "name": "SIPROTEC 5 7SA86 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC WinCC Unified V17",
+                  "name": "SIPROTEC 5 7SA87 (CP300)",
                   "product_id": "CSAFPID-0010"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC WinCC Unified V17"
+            "name": "SIPROTEC 5 7SA87 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V18_SP5",
+                "name": "vers:all/>=V7.80",
                 "product": {
-                  "name": "SIMATIC WinCC Unified V18",
+                  "name": "SIPROTEC 5 7SD82 (CP100)",
                   "product_id": "CSAFPID-0011"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC WinCC Unified V18"
+            "name": "SIPROTEC 5 7SD82 (CP100)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "SIMATIC WinCC V16",
+                  "name": "SIPROTEC 5 7SD82 (CP150)",
                   "product_id": "CSAFPID-0012"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC WinCC V16"
+            "name": "SIPROTEC 5 7SD82 (CP150)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC WinCC V17",
+                  "name": "SIPROTEC 5 7SD86 (CP300)",
                   "product_id": "CSAFPID-0013"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC WinCC V17"
+            "name": "SIPROTEC 5 7SD86 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V18_SP5",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMATIC WinCC V18",
+                  "name": "SIPROTEC 5 7SD87 (CP300)",
                   "product_id": "CSAFPID-0014"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC WinCC V18"
+            "name": "SIPROTEC 5 7SD87 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80",
                 "product": {
-                  "name": "SIMOCODE ES V16",
+                  "name": "SIPROTEC 5 7SJ81 (CP100)",
                   "product_id": "CSAFPID-0015"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMOCODE ES V16"
+            "name": "SIPROTEC 5 7SJ81 (CP100)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "SIMOCODE ES V17",
+                  "name": "SIPROTEC 5 7SJ81 (CP150)",
                   "product_id": "CSAFPID-0016"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMOCODE ES V17"
+            "name": "SIPROTEC 5 7SJ81 (CP150)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80",
                 "product": {
-                  "name": "SIMOCODE ES V18",
+                  "name": "SIPROTEC 5 7SJ82 (CP100)",
                   "product_id": "CSAFPID-0017"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMOCODE ES V18"
+            "name": "SIPROTEC 5 7SJ82 (CP100)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "SIMOTION SCOUT TIA V5.4 SP1",
+                  "name": "SIPROTEC 5 7SJ82 (CP150)",
                   "product_id": "CSAFPID-0018"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMOTION SCOUT TIA V5.4 SP1"
+            "name": "SIPROTEC 5 7SJ82 (CP150)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMOTION SCOUT TIA V5.4 SP3",
+                  "name": "SIPROTEC 5 7SJ85 (CP300)",
                   "product_id": "CSAFPID-0019"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMOTION SCOUT TIA V5.4 SP3"
+            "name": "SIPROTEC 5 7SJ85 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIMOTION SCOUT TIA V5.5 SP1",
+                  "name": "SIPROTEC 5 7SJ86 (CP300)",
                   "product_id": "CSAFPID-0020"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMOTION SCOUT TIA V5.5 SP1"
+            "name": "SIPROTEC 5 7SJ86 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80",
                 "product": {
-                  "name": "SINAMICS Startdrive V16",
+                  "name": "SIPROTEC 5 7SK82 (CP100)",
                   "product_id": "CSAFPID-0021"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SINAMICS Startdrive V16"
+            "name": "SIPROTEC 5 7SK82 (CP100)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "SINAMICS Startdrive V17",
+                  "name": "SIPROTEC 5 7SK82 (CP150)",
                   "product_id": "CSAFPID-0022"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SINAMICS Startdrive V17"
+            "name": "SIPROTEC 5 7SK82 (CP150)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SINAMICS Startdrive V18",
+                  "name": "SIPROTEC 5 7SK85 (CP300)",
                   "product_id": "CSAFPID-0023"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SINAMICS Startdrive V18"
+            "name": "SIPROTEC 5 7SK85 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "name": "vers:all/>=V7.80",
                 "product": {
-                  "name": "SIRIUS Safety ES V17 (TIA Portal)",
+                  "name": "SIPROTEC 5 7SL82 (CP100)",
                   "product_id": "CSAFPID-0024"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIRIUS Safety ES V17 (TIA Portal)"
+            "name": "SIPROTEC 5 7SL82 (CP100)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "SIRIUS Safety ES V18 (TIA Portal)",
+                  "name": "SIPROTEC 5 7SL82 (CP150)",
                   "product_id": "CSAFPID-0025"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIRIUS Safety ES V18 (TIA Portal)"
+            "name": "SIPROTEC 5 7SL82 (CP150)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V17_Update_8",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIRIUS Soft Starter ES V17 (TIA Portal)",
+                  "name": "SIPROTEC 5 7SL86 (CP300)",
                   "product_id": "CSAFPID-0026"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIRIUS Soft Starter ES V17 (TIA Portal)"
+            "name": "SIPROTEC 5 7SL86 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/>=V7.80|<V9.80",
                 "product": {
-                  "name": "SIRIUS Soft Starter ES V18 (TIA Portal)",
+                  "name": "SIPROTEC 5 7SL87 (CP300)",
                   "product_id": "CSAFPID-0027"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIRIUS Soft Starter ES V18 (TIA Portal)"
+            "name": "SIPROTEC 5 7SL87 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80|<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7SS85 (CP300)",
+                  "product_id": "CSAFPID-0028"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7SS85 (CP300)"
           },
           {
             "branches": [
@@ -578,41 +591,209 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "TIA Portal Cloud V16",
-                  "product_id": "CSAFPID-0028"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "TIA Portal Cloud V16"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.6.0.1",
-                "product": {
-                  "name": "TIA Portal Cloud V17",
+                  "name": "SIPROTEC 5 7ST85 (CP300)",
                   "product_id": "CSAFPID-0029"
                 }
               }
             ],
             "category": "product_name",
-            "name": "TIA Portal Cloud V17"
+            "name": "SIPROTEC 5 7ST85 (CP300)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.6.1.0",
+                "name": "vers:all/<V9.80",
                 "product": {
-                  "name": "TIA Portal Cloud V18",
+                  "name": "SIPROTEC 5 7ST86 (CP300)",
                   "product_id": "CSAFPID-0030"
                 }
               }
             ],
             "category": "product_name",
-            "name": "TIA Portal Cloud V18"
+            "name": "SIPROTEC 5 7ST86 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7SX82 (CP150)",
+                  "product_id": "CSAFPID-0031"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7SX82 (CP150)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7SX85 (CP300)",
+                  "product_id": "CSAFPID-0032"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7SX85 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7SY82 (CP150)",
+                  "product_id": "CSAFPID-0033"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7SY82 (CP150)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80|<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7UM85 (CP300)",
+                  "product_id": "CSAFPID-0034"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7UM85 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80",
+                "product": {
+                  "name": "SIPROTEC 5 7UT82 (CP100)",
+                  "product_id": "CSAFPID-0035"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7UT82 (CP100)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7UT82 (CP150)",
+                  "product_id": "CSAFPID-0036"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7UT82 (CP150)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80|<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7UT85 (CP300)",
+                  "product_id": "CSAFPID-0037"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7UT85 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80|<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7UT86 (CP300)",
+                  "product_id": "CSAFPID-0038"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7UT86 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80|<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7UT87 (CP300)",
+                  "product_id": "CSAFPID-0039"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7UT87 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80|<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7VE85 (CP300)",
+                  "product_id": "CSAFPID-0040"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7VE85 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V7.80|<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7VK87 (CP300)",
+                  "product_id": "CSAFPID-0041"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7VK87 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 7VU85 (CP300)",
+                  "product_id": "CSAFPID-0042"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 7VU85 (CP300)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V9.80",
+                "product": {
+                  "name": "SIPROTEC 5 Compact 7SX800 (CP050)",
+                  "product_id": "CSAFPID-0043"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPROTEC 5 Compact 7SX800 (CP050)"
           }
         ],
         "category": "vendor",
@@ -622,15 +803,15 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-32736",
+      "cve": "CVE-2024-53649",
       "cwe": {
-        "id": "CWE-502",
-        "name": "Deserialization of Untrusted Data"
+        "id": "CWE-552",
+        "name": "Files or Directories Accessible to External Parties"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Affected products do not properly sanitize user-controllable input when parsing user settings. This could allow an attacker to cause a type confusion and execute arbitrary code within the affected application.",
+          "text": "Affected devices do not properly limit the path accessible via their webserver.  This could allow an authenticated remote attacker to read arbitrary files from the filesystem of affected devices.",
           "title": "Summary"
         }
       ],
@@ -665,145 +846,97 @@
           "CSAFPID-0027",
           "CSAFPID-0028",
           "CSAFPID-0029",
-          "CSAFPID-0030"
+          "CSAFPID-0030",
+          "CSAFPID-0031",
+          "CSAFPID-0032",
+          "CSAFPID-0033",
+          "CSAFPID-0034",
+          "CSAFPID-0035",
+          "CSAFPID-0036",
+          "CSAFPID-0037",
+          "CSAFPID-0038",
+          "CSAFPID-0039",
+          "CSAFPID-0040",
+          "CSAFPID-0041",
+          "CSAFPID-0042",
+          "CSAFPID-0043"
         ]
       },
       "remediations": [
         {
-          "category": "mitigation",
-          "details": "Avoid opening untrusted files from unknown sources in affected products",
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "CSAFPID-0004",
+            "CSAFPID-0007",
+            "CSAFPID-0011",
+            "CSAFPID-0015",
+            "CSAFPID-0017",
+            "CSAFPID-0021",
+            "CSAFPID-0024",
+            "CSAFPID-0029",
+            "CSAFPID-0035"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.80 or later version",
+          "product_ids": [
+            "CSAFPID-0043"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.80 or later version",
           "product_ids": [
             "CSAFPID-0001",
+            "CSAFPID-0008",
+            "CSAFPID-0012",
+            "CSAFPID-0016",
+            "CSAFPID-0018",
+            "CSAFPID-0022",
+            "CSAFPID-0025",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0033",
+            "CSAFPID-0036",
+            "CSAFPID-0042"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.80 or later version",
+          "product_ids": [
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004",
             "CSAFPID-0005",
             "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
             "CSAFPID-0009",
             "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
             "CSAFPID-0013",
             "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
             "CSAFPID-0019",
             "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
             "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
             "CSAFPID-0026",
             "CSAFPID-0027",
             "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030"
-          ]
-        },
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0006",
-            "CSAFPID-0009",
-            "CSAFPID-0012",
-            "CSAFPID-0015",
-            "CSAFPID-0018",
-            "CSAFPID-0021",
-            "CSAFPID-0028"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V17 Update 8 or later version",
-          "product_ids": [
-            "CSAFPID-0004",
-            "CSAFPID-0007",
-            "CSAFPID-0010",
-            "CSAFPID-0013",
-            "CSAFPID-0016"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V17 Update 8 or later version",
-          "product_ids": [
-            "CSAFPID-0026"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V17 Update 8 or later version",
-          "product_ids": [
-            "CSAFPID-0024"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V18 Update 5 or later version",
-          "product_ids": [
-            "CSAFPID-0005",
-            "CSAFPID-0008"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V18 SP5 or later version",
-          "product_ids": [
-            "CSAFPID-0011",
-            "CSAFPID-0014"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "TIA Portal Cloud V4.6.1.0 or later version updated TIA Portal to V18 Update 5 or later version",
-          "product_ids": [
-            "CSAFPID-0030"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update SIMATIC STEP 7 V18 to V18 Update 5 or later version",
-          "product_ids": [
-            "CSAFPID-0017",
-            "CSAFPID-0020",
-            "CSAFPID-0023",
-            "CSAFPID-0025",
-            "CSAFPID-0027"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817218/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update SIMATIC STEP 7 V17 to V17 Update 8 or later version",
-          "product_ids": [
-            "CSAFPID-0019",
-            "CSAFPID-0022"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109784441/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "TIA Portal Cloud V4.6.0.1 or later version updated TIA Portal to V17 Update 8 or later version",
-          "product_ids": [
-            "CSAFPID-0029"
+            "CSAFPID-0032",
+            "CSAFPID-0034",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041"
           ]
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.3,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
@@ -836,11 +969,24 @@
             "CSAFPID-0027",
             "CSAFPID-0028",
             "CSAFPID-0029",
-            "CSAFPID-0030"
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043"
           ]
         }
       ],
-      "title": "CVE-2023-32736"
+      "title": "CVE-2024-53649"
     }
   ]
 }

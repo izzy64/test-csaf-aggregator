@@ -34,7 +34,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -49,7 +49,7 @@
       },
       {
         "category": "other",
-        "text": "Multiple",
+        "text": "Critical Manufacturing",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -122,16 +122,6 @@
       },
       {
         "category": "self",
-        "summary": "SSA-413565: Multiple Vulnerabilities in SCALANCE Products - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-413565.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-413565: Multiple Vulnerabilities in SCALANCE Products - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-413565.txt"
-      },
-      {
-        "category": "self",
         "summary": "ICS Advisory ICSA-22-349-04 JSON",
         "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2022/icsa-22-349-04.json"
       },
@@ -171,9 +161,9 @@
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
       }
     ],
-    "title": "Siemens Multiple Vulnerabilities in SCALANCE Products",
+    "title": "Siemens SCALANCE Products",
     "tracking": {
-      "current_release_date": "2023-10-10T00:00:00.000000Z",
+      "current_release_date": "2025-01-14T00:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
@@ -206,10 +196,16 @@
           "legacy_version": "1.3",
           "number": "4",
           "summary": "Removed SCALANCE WAM766-1 6GHz devices with MLFBs 6GK5766-1JE00 as they are currently still unreleased, updated CVE-2022-34821 still unfixed and no fix planned for SCALANCE W-700 IEEE 802.11ax family"
+        },
+        {
+          "date": "2025-01-14T00:00:00.000000Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "SCALANCE W-700 IEEE 802.11ax family: added fix for CVE-2022-34821, corrected fix for CVE-2022-46143 and clarified that the devices were also affected by CVE-2022-46144 with fix in V2.0.0; added CVSSv4 vectors for all CVE IDs"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -220,7 +216,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "RUGGEDCOM RM1224 LTE(4G) EU (6GK6108-4AM00-2BA2)",
                   "product_id": "CSAFPID-0001",
@@ -239,7 +235,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "RUGGEDCOM RM1224 LTE(4G) NAM (6GK6108-4AM00-2DA2)",
                   "product_id": "CSAFPID-0002",
@@ -258,7 +254,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M804PB (6GK5804-0AP00-2AA2)",
                   "product_id": "CSAFPID-0003",
@@ -277,9 +273,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
-                  "name": "SCALANCE M812-1 ADSL-Router (Annex A) (6GK5812-1AA00-2AA2)",
+                  "name": "SCALANCE M812-1 ADSL-Router (6GK5812-1AA00-2AA2)",
                   "product_id": "CSAFPID-0004",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -290,15 +286,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE M812-1 ADSL-Router (Annex A) (6GK5812-1AA00-2AA2)"
+            "name": "SCALANCE M812-1 ADSL-Router (6GK5812-1AA00-2AA2)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
-                  "name": "SCALANCE M812-1 ADSL-Router (Annex B) (6GK5812-1BA00-2AA2)",
+                  "name": "SCALANCE M812-1 ADSL-Router (6GK5812-1BA00-2AA2)",
                   "product_id": "CSAFPID-0005",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -309,15 +305,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE M812-1 ADSL-Router (Annex B) (6GK5812-1BA00-2AA2)"
+            "name": "SCALANCE M812-1 ADSL-Router (6GK5812-1BA00-2AA2)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
-                  "name": "SCALANCE M816-1 ADSL-Router (Annex A) (6GK5816-1AA00-2AA2)",
+                  "name": "SCALANCE M816-1 ADSL-Router (6GK5816-1AA00-2AA2)",
                   "product_id": "CSAFPID-0006",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -328,15 +324,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE M816-1 ADSL-Router (Annex A) (6GK5816-1AA00-2AA2)"
+            "name": "SCALANCE M816-1 ADSL-Router (6GK5816-1AA00-2AA2)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
-                  "name": "SCALANCE M816-1 ADSL-Router (Annex B) (6GK5816-1BA00-2AA2)",
+                  "name": "SCALANCE M816-1 ADSL-Router (6GK5816-1BA00-2AA2)",
                   "product_id": "CSAFPID-0007",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -347,13 +343,13 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE M816-1 ADSL-Router (Annex B) (6GK5816-1BA00-2AA2)"
+            "name": "SCALANCE M816-1 ADSL-Router (6GK5816-1BA00-2AA2)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2)",
                   "product_id": "CSAFPID-0008",
@@ -372,7 +368,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M874-2 (6GK5874-2AA00-2AA2)",
                   "product_id": "CSAFPID-0009",
@@ -391,7 +387,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M874-3 (6GK5874-3AA00-2AA2)",
                   "product_id": "CSAFPID-0010",
@@ -410,9 +406,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
-                  "name": "SCALANCE M876-3 (EVDO) (6GK5876-3AA02-2BA2)",
+                  "name": "SCALANCE M876-3 (6GK5876-3AA02-2BA2)",
                   "product_id": "CSAFPID-0011",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -423,13 +419,13 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE M876-3 (EVDO) (6GK5876-3AA02-2BA2)"
+            "name": "SCALANCE M876-3 (6GK5876-3AA02-2BA2)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2)",
                   "product_id": "CSAFPID-0012",
@@ -448,7 +444,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M876-4 (6GK5876-4AA10-2BA2)",
                   "product_id": "CSAFPID-0013",
@@ -467,7 +463,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2)",
                   "product_id": "CSAFPID-0014",
@@ -486,7 +482,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2)",
                   "product_id": "CSAFPID-0015",
@@ -505,7 +501,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE MUM853-1 (EU) (6GK5853-2EA00-2DA1)",
                   "product_id": "CSAFPID-0016",
@@ -524,7 +520,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE MUM856-1 (EU) (6GK5856-2EA00-3DA1)",
                   "product_id": "CSAFPID-0017",
@@ -543,7 +539,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
                   "name": "SCALANCE MUM856-1 (RoW) (6GK5856-2EA00-3AA1)",
                   "product_id": "CSAFPID-0018",
@@ -562,29 +558,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V7.2",
+                "name": "vers:all/<V7.2",
                 "product": {
-                  "name": "SCALANCE S615 (6GK5615-0AA00-2AA2)",
+                  "name": "SCALANCE S615 EEC LAN-Router (6GK5615-0AA01-2AA2)",
                   "product_id": "CSAFPID-0019",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK5615-0AA00-2AA2"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SCALANCE S615 (6GK5615-0AA00-2AA2)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V7.2",
-                "product": {
-                  "name": "SCALANCE S615 EEC (6GK5615-0AA01-2AA2)",
-                  "product_id": "CSAFPID-0020",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5615-0AA01-2AA2"
@@ -594,13 +571,32 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE S615 EEC (6GK5615-0AA01-2AA2)"
+            "name": "SCALANCE S615 EEC LAN-Router (6GK5615-0AA01-2AA2)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.3",
+                "name": "vers:all/<V7.2",
+                "product": {
+                  "name": "SCALANCE S615 LAN-Router (6GK5615-0AA00-2AA2)",
+                  "product_id": "CSAFPID-0020",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5615-0AA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S615 LAN-Router (6GK5615-0AA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V2.3",
                 "product": {
                   "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
                   "product_id": "CSAFPID-0021",
@@ -613,7 +609,7 @@
               },
               {
                 "category": "product_version_range",
-                "name": ">=V2.3<V3.0",
+                "name": "vers:all/>=V2.3|<V3.0",
                 "product": {
                   "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
                   "product_id": "CSAFPID-0022",
@@ -632,7 +628,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.3",
+                "name": "vers:all/<V2.3",
                 "product": {
                   "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
                   "product_id": "CSAFPID-0023",
@@ -645,7 +641,7 @@
               },
               {
                 "category": "product_version_range",
-                "name": ">=V2.3<V3.0",
+                "name": "vers:all/>=V2.3|<V3.0",
                 "product": {
                   "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
                   "product_id": "CSAFPID-0024",
@@ -664,7 +660,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.3",
+                "name": "vers:all/<V2.3",
                 "product": {
                   "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
                   "product_id": "CSAFPID-0025",
@@ -677,7 +673,7 @@
               },
               {
                 "category": "product_version_range",
-                "name": ">=V2.3<V3.0",
+                "name": "vers:all/>=V2.3|<V3.0",
                 "product": {
                   "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
                   "product_id": "CSAFPID-0026",
@@ -696,7 +692,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.3",
+                "name": "vers:all/<V2.3",
                 "product": {
                   "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
                   "product_id": "CSAFPID-0027",
@@ -709,7 +705,7 @@
               },
               {
                 "category": "product_version_range",
-                "name": ">=V2.3<V3.0",
+                "name": "vers:all/>=V2.3|<V3.0",
                 "product": {
                   "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
                   "product_id": "CSAFPID-0028",
@@ -728,7 +724,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.3",
+                "name": "vers:all/<V2.3",
                 "product": {
                   "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
                   "product_id": "CSAFPID-0029",
@@ -741,7 +737,7 @@
               },
               {
                 "category": "product_version_range",
-                "name": ">=V2.3<V3.0",
+                "name": "vers:all/>=V2.3|<V3.0",
                 "product": {
                   "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
                   "product_id": "CSAFPID-0030",
@@ -760,7 +756,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.3",
+                "name": "vers:all/<V2.3",
                 "product": {
                   "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
                   "product_id": "CSAFPID-0031",
@@ -773,7 +769,7 @@
               },
               {
                 "category": "product_version_range",
-                "name": ">=V2.3<V3.0",
+                "name": "vers:all/>=V2.3|<V3.0",
                 "product": {
                   "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
                   "product_id": "CSAFPID-0032",
@@ -1837,10 +1833,29 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WAB762-1 (6GK5762-1AJ00-6AA0)",
+                  "product_id": "CSAFPID-0088",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5762-1AJ00-6AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAB762-1 (6GK5762-1AJ00-6AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
                 "product": {
                   "name": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)",
-                  "product_id": "CSAFPID-0088",
+                  "product_id": "CSAFPID-0089",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5763-1AL00-7DA0"
@@ -1850,10 +1865,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)",
-                  "product_id": "CSAFPID-0089",
+                  "product_id": "CSAFPID-0090",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5763-1AL00-7DA0"
@@ -1869,10 +1884,48 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1 (EU) (6GK5766-1GE00-7DA0)",
-                  "product_id": "CSAFPID-0090",
+                  "name": "SCALANCE WAM763-1 (ME) (6GK5763-1AL00-7DC0)",
+                  "product_id": "CSAFPID-0091",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5763-1AL00-7DC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM763-1 (ME) (6GK5763-1AL00-7DC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WAM763-1 (US) (6GK5763-1AL00-7DB0)",
+                  "product_id": "CSAFPID-0092",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5763-1AL00-7DB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM763-1 (US) (6GK5763-1AL00-7DB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)",
+                  "product_id": "CSAFPID-0093",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7DA0"
@@ -1882,10 +1935,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1 (EU) (6GK5766-1GE00-7DA0)",
-                  "product_id": "CSAFPID-0091",
+                  "name": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)",
+                  "product_id": "CSAFPID-0094",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7DA0"
@@ -1895,16 +1948,35 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WAM766-1 (EU) (6GK5766-1GE00-7DA0)"
+            "name": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WAM766-1 (ME) (6GK5766-1GE00-7DC0)",
+                  "product_id": "CSAFPID-0095",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-7DC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM766-1 (ME) (6GK5766-1GE00-7DC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
                 "product": {
                   "name": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)",
-                  "product_id": "CSAFPID-0092",
+                  "product_id": "CSAFPID-0096",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7DB0"
@@ -1914,10 +1986,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)",
-                  "product_id": "CSAFPID-0093",
+                  "product_id": "CSAFPID-0097",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7DB0"
@@ -1933,10 +2005,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1 EEC (EU) (6GK5766-1GE00-7TA0)",
-                  "product_id": "CSAFPID-0094",
+                  "name": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)",
+                  "product_id": "CSAFPID-0098",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7TA0"
@@ -1946,10 +2018,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1 EEC (EU) (6GK5766-1GE00-7TA0)",
-                  "product_id": "CSAFPID-0095",
+                  "name": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)",
+                  "product_id": "CSAFPID-0099",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7TA0"
@@ -1959,16 +2031,35 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WAM766-1 EEC (EU) (6GK5766-1GE00-7TA0)"
+            "name": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WAM766-1 EEC (ME) (6GK5766-1GE00-7TC0)",
+                  "product_id": "CSAFPID-0100",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-7TC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WAM766-1 EEC (ME) (6GK5766-1GE00-7TC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
                 "product": {
                   "name": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)",
-                  "product_id": "CSAFPID-0096",
+                  "product_id": "CSAFPID-0101",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7TB0"
@@ -1978,10 +2069,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)",
-                  "product_id": "CSAFPID-0097",
+                  "product_id": "CSAFPID-0102",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7TB0"
@@ -1997,10 +2088,48 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WUB762-1 (6GK5762-1AJ00-1AA0)",
+                  "product_id": "CSAFPID-0103",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5762-1AJ00-1AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUB762-1 (6GK5762-1AJ00-1AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WUB762-1 iFeatures (6GK5762-1AJ00-2AA0)",
+                  "product_id": "CSAFPID-0104",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5762-1AJ00-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUB762-1 iFeatures (6GK5762-1AJ00-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
                 "product": {
                   "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)",
-                  "product_id": "CSAFPID-0098",
+                  "product_id": "CSAFPID-0105",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5763-1AL00-3AA0"
@@ -2010,10 +2139,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)",
-                  "product_id": "CSAFPID-0099",
+                  "product_id": "CSAFPID-0106",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5763-1AL00-3AA0"
@@ -2029,10 +2158,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
                   "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)",
-                  "product_id": "CSAFPID-0100",
+                  "product_id": "CSAFPID-0107",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5763-1AL00-3DA0"
@@ -2042,10 +2171,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)",
-                  "product_id": "CSAFPID-0101",
+                  "product_id": "CSAFPID-0108",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5763-1AL00-3DA0"
@@ -2061,10 +2190,48 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE WUM766-1 (EU) (6GK5766-1GE00-3DA0)",
-                  "product_id": "CSAFPID-0102",
+                  "name": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3AB0)",
+                  "product_id": "CSAFPID-0109",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5763-1AL00-3AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3DB0)",
+                  "product_id": "CSAFPID-0110",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5763-1AL00-3DB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3DB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)",
+                  "product_id": "CSAFPID-0111",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-3DA0"
@@ -2074,10 +2241,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
-                  "name": "SCALANCE WUM766-1 (EU) (6GK5766-1GE00-3DA0)",
-                  "product_id": "CSAFPID-0103",
+                  "name": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)",
+                  "product_id": "CSAFPID-0112",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-3DA0"
@@ -2087,16 +2254,35 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WUM766-1 (EU) (6GK5766-1GE00-3DA0)"
+            "name": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE WUM766-1 (US) (6GK5766-1GE00-3DB0)",
-                  "product_id": "CSAFPID-0104",
+                  "name": "SCALANCE WUM766-1 (ME) (6GK5766-1GE00-3DC0)",
+                  "product_id": "CSAFPID-0113",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5766-1GE00-3DC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE WUM766-1 (ME) (6GK5766-1GE00-3DC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)",
+                  "product_id": "CSAFPID-0114",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-3DB0"
@@ -2106,10 +2292,10 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V2.0.0",
                 "product": {
-                  "name": "SCALANCE WUM766-1 (US) (6GK5766-1GE00-3DB0)",
-                  "product_id": "CSAFPID-0105",
+                  "name": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)",
+                  "product_id": "CSAFPID-0115",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-3DB0"
@@ -2119,16 +2305,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WUM766-1 (US) (6GK5766-1GE00-3DB0)"
+            "name": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB205-3 (SC, PN) (6GK5205-3BB00-2AB2)",
-                  "product_id": "CSAFPID-0106",
+                  "product_id": "CSAFPID-0116",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BB00-2AB2"
@@ -2144,10 +2330,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB205-3 (ST, E/IP) (6GK5205-3BB00-2TB2)",
-                  "product_id": "CSAFPID-0107",
+                  "product_id": "CSAFPID-0117",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BB00-2TB2"
@@ -2163,10 +2349,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB205-3 (ST, E/IP) (6GK5205-3BD00-2TB2)",
-                  "product_id": "CSAFPID-0108",
+                  "product_id": "CSAFPID-0118",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BD00-2TB2"
@@ -2182,10 +2368,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB205-3 (ST, PN) (6GK5205-3BD00-2AB2)",
-                  "product_id": "CSAFPID-0109",
+                  "product_id": "CSAFPID-0119",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BD00-2AB2"
@@ -2201,10 +2387,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB205-3LD (SC, E/IP) (6GK5205-3BF00-2TB2)",
-                  "product_id": "CSAFPID-0110",
+                  "product_id": "CSAFPID-0120",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BF00-2TB2"
@@ -2220,10 +2406,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB205-3LD (SC, PN) (6GK5205-3BF00-2AB2)",
-                  "product_id": "CSAFPID-0111",
+                  "product_id": "CSAFPID-0121",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BF00-2AB2"
@@ -2239,10 +2425,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB208 (E/IP) (6GK5208-0BA00-2TB2)",
-                  "product_id": "CSAFPID-0112",
+                  "product_id": "CSAFPID-0122",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2TB2"
@@ -2258,10 +2444,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB208 (PN) (6GK5208-0BA00-2AB2)",
-                  "product_id": "CSAFPID-0113",
+                  "product_id": "CSAFPID-0123",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2AB2"
@@ -2277,10 +2463,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB213-3 (SC, E/IP) (6GK5213-3BD00-2TB2)",
-                  "product_id": "CSAFPID-0114",
+                  "product_id": "CSAFPID-0124",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BD00-2TB2"
@@ -2296,10 +2482,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB213-3 (SC, PN) (6GK5213-3BD00-2AB2)",
-                  "product_id": "CSAFPID-0115",
+                  "product_id": "CSAFPID-0125",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BD00-2AB2"
@@ -2315,10 +2501,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB213-3 (ST, E/IP) (6GK5213-3BB00-2TB2)",
-                  "product_id": "CSAFPID-0116",
+                  "product_id": "CSAFPID-0126",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BB00-2TB2"
@@ -2334,10 +2520,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB213-3 (ST, PN) (6GK5213-3BB00-2AB2)",
-                  "product_id": "CSAFPID-0117",
+                  "product_id": "CSAFPID-0127",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BB00-2AB2"
@@ -2353,10 +2539,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB213-3LD (SC, E/IP) (6GK5213-3BF00-2TB2)",
-                  "product_id": "CSAFPID-0118",
+                  "product_id": "CSAFPID-0128",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BF00-2TB2"
@@ -2372,10 +2558,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB213-3LD (SC, PN) (6GK5213-3BF00-2AB2)",
-                  "product_id": "CSAFPID-0119",
+                  "product_id": "CSAFPID-0129",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BF00-2AB2"
@@ -2391,10 +2577,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB216 (E/IP) (6GK5216-0BA00-2TB2)",
-                  "product_id": "CSAFPID-0120",
+                  "product_id": "CSAFPID-0130",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2TB2"
@@ -2410,10 +2596,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XB216 (PN) (6GK5216-0BA00-2AB2)",
-                  "product_id": "CSAFPID-0121",
+                  "product_id": "CSAFPID-0131",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2AB2"
@@ -2429,10 +2615,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2 (SC) (6GK5206-2BD00-2AC2)",
-                  "product_id": "CSAFPID-0122",
+                  "product_id": "CSAFPID-0132",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BD00-2AC2"
@@ -2448,10 +2634,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2 (ST/BFOC) (6GK5206-2BB00-2AC2)",
-                  "product_id": "CSAFPID-0123",
+                  "product_id": "CSAFPID-0133",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BB00-2AC2"
@@ -2467,10 +2653,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2G PoE (6GK5206-2RS00-2AC2)",
-                  "product_id": "CSAFPID-0124",
+                  "product_id": "CSAFPID-0134",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2RS00-2AC2"
@@ -2486,10 +2672,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2G PoE (54 V DC) (6GK5206-2RS00-5AC2)",
-                  "product_id": "CSAFPID-0125",
+                  "product_id": "CSAFPID-0135",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2RS00-5AC2"
@@ -2505,10 +2691,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2G PoE EEC (54 V DC) (6GK5206-2RS00-5FC2)",
-                  "product_id": "CSAFPID-0126",
+                  "product_id": "CSAFPID-0136",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2RS00-5FC2"
@@ -2524,10 +2710,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2SFP (6GK5206-2BS00-2AC2)",
-                  "product_id": "CSAFPID-0127",
+                  "product_id": "CSAFPID-0137",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BS00-2AC2"
@@ -2543,10 +2729,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2SFP EEC (6GK5206-2BS00-2FC2)",
-                  "product_id": "CSAFPID-0128",
+                  "product_id": "CSAFPID-0138",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BS00-2FC2"
@@ -2562,10 +2748,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2SFP G (6GK5206-2GS00-2AC2)",
-                  "product_id": "CSAFPID-0129",
+                  "product_id": "CSAFPID-0139",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2GS00-2AC2"
@@ -2581,10 +2767,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2SFP G (EIP DEF.) (6GK5206-2GS00-2TC2)",
-                  "product_id": "CSAFPID-0130",
+                  "product_id": "CSAFPID-0140",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2GS00-2TC2"
@@ -2600,10 +2786,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC206-2SFP G EEC (6GK5206-2GS00-2FC2)",
-                  "product_id": "CSAFPID-0131",
+                  "product_id": "CSAFPID-0141",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2GS00-2FC2"
@@ -2619,10 +2805,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC208 (6GK5208-0BA00-2AC2)",
-                  "product_id": "CSAFPID-0132",
+                  "product_id": "CSAFPID-0142",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2AC2"
@@ -2638,10 +2824,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC208EEC (6GK5208-0BA00-2FC2)",
-                  "product_id": "CSAFPID-0133",
+                  "product_id": "CSAFPID-0143",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2FC2"
@@ -2657,10 +2843,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC208G (6GK5208-0GA00-2AC2)",
-                  "product_id": "CSAFPID-0134",
+                  "product_id": "CSAFPID-0144",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0GA00-2AC2"
@@ -2676,10 +2862,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC208G (EIP def.) (6GK5208-0GA00-2TC2)",
-                  "product_id": "CSAFPID-0135",
+                  "product_id": "CSAFPID-0145",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0GA00-2TC2"
@@ -2695,10 +2881,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC208G EEC (6GK5208-0GA00-2FC2)",
-                  "product_id": "CSAFPID-0136",
+                  "product_id": "CSAFPID-0146",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0GA00-2FC2"
@@ -2714,10 +2900,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC208G PoE (6GK5208-0RA00-2AC2)",
-                  "product_id": "CSAFPID-0137",
+                  "product_id": "CSAFPID-0147",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0RA00-2AC2"
@@ -2733,10 +2919,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC208G PoE (54 V DC) (6GK5208-0RA00-5AC2)",
-                  "product_id": "CSAFPID-0138",
+                  "product_id": "CSAFPID-0148",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0RA00-5AC2"
@@ -2752,10 +2938,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216 (6GK5216-0BA00-2AC2)",
-                  "product_id": "CSAFPID-0139",
+                  "product_id": "CSAFPID-0149",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2AC2"
@@ -2771,10 +2957,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216-3G PoE (6GK5216-3RS00-2AC2)",
-                  "product_id": "CSAFPID-0140",
+                  "product_id": "CSAFPID-0150",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-3RS00-2AC2"
@@ -2790,10 +2976,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216-3G PoE (54 V DC) (6GK5216-3RS00-5AC2)",
-                  "product_id": "CSAFPID-0141",
+                  "product_id": "CSAFPID-0151",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-3RS00-5AC2"
@@ -2809,10 +2995,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216-4C (6GK5216-4BS00-2AC2)",
-                  "product_id": "CSAFPID-0142",
+                  "product_id": "CSAFPID-0152",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4BS00-2AC2"
@@ -2828,10 +3014,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216-4C G (6GK5216-4GS00-2AC2)",
-                  "product_id": "CSAFPID-0143",
+                  "product_id": "CSAFPID-0153",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4GS00-2AC2"
@@ -2847,10 +3033,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216-4C G (EIP Def.) (6GK5216-4GS00-2TC2)",
-                  "product_id": "CSAFPID-0144",
+                  "product_id": "CSAFPID-0154",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4GS00-2TC2"
@@ -2866,10 +3052,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216-4C G EEC (6GK5216-4GS00-2FC2)",
-                  "product_id": "CSAFPID-0145",
+                  "product_id": "CSAFPID-0155",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4GS00-2FC2"
@@ -2885,10 +3071,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC216EEC (6GK5216-0BA00-2FC2)",
-                  "product_id": "CSAFPID-0146",
+                  "product_id": "CSAFPID-0156",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2FC2"
@@ -2904,10 +3090,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC224 (6GK5224-0BA00-2AC2)",
-                  "product_id": "CSAFPID-0147",
+                  "product_id": "CSAFPID-0157",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-0BA00-2AC2"
@@ -2923,10 +3109,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC224-4C G (6GK5224-4GS00-2AC2)",
-                  "product_id": "CSAFPID-0148",
+                  "product_id": "CSAFPID-0158",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-4GS00-2AC2"
@@ -2942,10 +3128,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC224-4C G (EIP Def.) (6GK5224-4GS00-2TC2)",
-                  "product_id": "CSAFPID-0149",
+                  "product_id": "CSAFPID-0159",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-4GS00-2TC2"
@@ -2961,10 +3147,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XC224-4C G EEC (6GK5224-4GS00-2FC2)",
-                  "product_id": "CSAFPID-0150",
+                  "product_id": "CSAFPID-0160",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-4GS00-2FC2"
@@ -2980,10 +3166,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XF204 (6GK5204-0BA00-2GF2)",
-                  "product_id": "CSAFPID-0151",
+                  "product_id": "CSAFPID-0161",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-0BA00-2GF2"
@@ -2999,10 +3185,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XF204 DNA (6GK5204-0BA00-2YF2)",
-                  "product_id": "CSAFPID-0152",
+                  "product_id": "CSAFPID-0162",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-0BA00-2YF2"
@@ -3018,10 +3204,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XF204-2BA (6GK5204-2AA00-2GF2)",
-                  "product_id": "CSAFPID-0153",
+                  "product_id": "CSAFPID-0163",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-2AA00-2GF2"
@@ -3037,10 +3223,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XF204-2BA DNA (6GK5204-2AA00-2YF2)",
-                  "product_id": "CSAFPID-0154",
+                  "product_id": "CSAFPID-0164",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-2AA00-2YF2"
@@ -3056,10 +3242,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XM408-4C (6GK5408-4GP00-2AM2)",
-                  "product_id": "CSAFPID-0155",
+                  "product_id": "CSAFPID-0165",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5408-4GP00-2AM2"
@@ -3075,10 +3261,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XM408-4C (L3 int.) (6GK5408-4GQ00-2AM2)",
-                  "product_id": "CSAFPID-0156",
+                  "product_id": "CSAFPID-0166",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5408-4GQ00-2AM2"
@@ -3094,10 +3280,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XM408-8C (6GK5408-8GS00-2AM2)",
-                  "product_id": "CSAFPID-0157",
+                  "product_id": "CSAFPID-0167",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5408-8GS00-2AM2"
@@ -3113,10 +3299,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XM408-8C (L3 int.) (6GK5408-8GR00-2AM2)",
-                  "product_id": "CSAFPID-0158",
+                  "product_id": "CSAFPID-0168",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5408-8GR00-2AM2"
@@ -3132,10 +3318,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XM416-4C (6GK5416-4GS00-2AM2)",
-                  "product_id": "CSAFPID-0159",
+                  "product_id": "CSAFPID-0169",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5416-4GS00-2AM2"
@@ -3151,10 +3337,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XM416-4C (L3 int.) (6GK5416-4GR00-2AM2)",
-                  "product_id": "CSAFPID-0160",
+                  "product_id": "CSAFPID-0170",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5416-4GR00-2AM2"
@@ -3170,10 +3356,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP208 (6GK5208-0HA00-2AS6)",
-                  "product_id": "CSAFPID-0161",
+                  "product_id": "CSAFPID-0171",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0HA00-2AS6"
@@ -3189,10 +3375,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP208 (Ethernet/IP) (6GK5208-0HA00-2TS6)",
-                  "product_id": "CSAFPID-0162",
+                  "product_id": "CSAFPID-0172",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0HA00-2TS6"
@@ -3208,10 +3394,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP208EEC (6GK5208-0HA00-2ES6)",
-                  "product_id": "CSAFPID-0163",
+                  "product_id": "CSAFPID-0173",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0HA00-2ES6"
@@ -3227,10 +3413,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP208PoE EEC (6GK5208-0UA00-5ES6)",
-                  "product_id": "CSAFPID-0164",
+                  "product_id": "CSAFPID-0174",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0UA00-5ES6"
@@ -3246,10 +3432,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP216 (6GK5216-0HA00-2AS6)",
-                  "product_id": "CSAFPID-0165",
+                  "product_id": "CSAFPID-0175",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0HA00-2AS6"
@@ -3265,10 +3451,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP216 (Ethernet/IP) (6GK5216-0HA00-2TS6)",
-                  "product_id": "CSAFPID-0166",
+                  "product_id": "CSAFPID-0176",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0HA00-2TS6"
@@ -3284,10 +3470,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP216EEC (6GK5216-0HA00-2ES6)",
-                  "product_id": "CSAFPID-0167",
+                  "product_id": "CSAFPID-0177",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0HA00-2ES6"
@@ -3303,10 +3489,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XP216POE EEC (6GK5216-0UA00-5ES6)",
-                  "product_id": "CSAFPID-0168",
+                  "product_id": "CSAFPID-0178",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0UA00-5ES6"
@@ -3322,10 +3508,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR324WG (24 x FE, AC 230V) (6GK5324-0BA00-3AR3)",
-                  "product_id": "CSAFPID-0169",
+                  "product_id": "CSAFPID-0179",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5324-0BA00-3AR3"
@@ -3341,10 +3527,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR324WG (24 X FE, DC 24V) (6GK5324-0BA00-2AR3)",
-                  "product_id": "CSAFPID-0170",
+                  "product_id": "CSAFPID-0180",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5324-0BA00-2AR3"
@@ -3360,10 +3546,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR326-2C PoE WG (6GK5326-2QS00-3AR3)",
-                  "product_id": "CSAFPID-0171",
+                  "product_id": "CSAFPID-0181",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5326-2QS00-3AR3"
@@ -3379,10 +3565,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR326-2C PoE WG (without UL) (6GK5326-2QS00-3RR3)",
-                  "product_id": "CSAFPID-0172",
+                  "product_id": "CSAFPID-0182",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5326-2QS00-3RR3"
@@ -3398,10 +3584,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24xFE,4xGE,AC230V) (6GK5328-4FS00-3AR3)",
-                  "product_id": "CSAFPID-0173",
+                  "product_id": "CSAFPID-0183",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-3AR3"
@@ -3417,10 +3603,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24xFE,4xGE,AC230V) (6GK5328-4FS00-3RR3)",
-                  "product_id": "CSAFPID-0174",
+                  "product_id": "CSAFPID-0184",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-3RR3"
@@ -3436,10 +3622,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24XFE, 4XGE, 24V) (6GK5328-4FS00-2AR3)",
-                  "product_id": "CSAFPID-0175",
+                  "product_id": "CSAFPID-0185",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-2AR3"
@@ -3455,10 +3641,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24xFE, 4xGE,DC24V) (6GK5328-4FS00-2RR3)",
-                  "product_id": "CSAFPID-0176",
+                  "product_id": "CSAFPID-0186",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-2RR3"
@@ -3474,10 +3660,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (28xGE, AC 230V) (6GK5328-4SS00-3AR3)",
-                  "product_id": "CSAFPID-0177",
+                  "product_id": "CSAFPID-0187",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4SS00-3AR3"
@@ -3493,10 +3679,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (28xGE, DC 24V) (6GK5328-4SS00-2AR3)",
-                  "product_id": "CSAFPID-0178",
+                  "product_id": "CSAFPID-0188",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4SS00-2AR3"
@@ -3512,10 +3698,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR524-8C, 1x230V (6GK5524-8GS00-3AR2)",
-                  "product_id": "CSAFPID-0179",
+                  "product_id": "CSAFPID-0189",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5524-8GS00-3AR2"
@@ -3531,10 +3717,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR524-8C, 1x230V (L3 int.) (6GK5524-8GR00-3AR2)",
-                  "product_id": "CSAFPID-0180",
+                  "product_id": "CSAFPID-0190",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5524-8GR00-3AR2"
@@ -3550,10 +3736,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR524-8C, 2x230V (6GK5524-8GS00-4AR2)",
-                  "product_id": "CSAFPID-0181",
+                  "product_id": "CSAFPID-0191",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5524-8GS00-4AR2"
@@ -3569,10 +3755,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR524-8C, 2x230V (L3 int.) (6GK5524-8GR00-4AR2)",
-                  "product_id": "CSAFPID-0182",
+                  "product_id": "CSAFPID-0192",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5524-8GR00-4AR2"
@@ -3588,10 +3774,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR524-8C, 24V (6GK5524-8GS00-2AR2)",
-                  "product_id": "CSAFPID-0183",
+                  "product_id": "CSAFPID-0193",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5524-8GS00-2AR2"
@@ -3607,10 +3793,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR524-8C, 24V (L3 int.) (6GK5524-8GR00-2AR2)",
-                  "product_id": "CSAFPID-0184",
+                  "product_id": "CSAFPID-0194",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5524-8GR00-2AR2"
@@ -3626,10 +3812,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR526-8C, 1x230V (6GK5526-8GS00-3AR2)",
-                  "product_id": "CSAFPID-0185",
+                  "product_id": "CSAFPID-0195",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5526-8GS00-3AR2"
@@ -3645,10 +3831,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR526-8C, 1x230V (L3 int.) (6GK5526-8GR00-3AR2)",
-                  "product_id": "CSAFPID-0186",
+                  "product_id": "CSAFPID-0196",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5526-8GR00-3AR2"
@@ -3664,10 +3850,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR526-8C, 2x230V (6GK5526-8GS00-4AR2)",
-                  "product_id": "CSAFPID-0187",
+                  "product_id": "CSAFPID-0197",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5526-8GS00-4AR2"
@@ -3683,10 +3869,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR526-8C, 2x230V (L3 int.) (6GK5526-8GR00-4AR2)",
-                  "product_id": "CSAFPID-0188",
+                  "product_id": "CSAFPID-0198",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5526-8GR00-4AR2"
@@ -3702,10 +3888,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR526-8C, 24V (6GK5526-8GS00-2AR2)",
-                  "product_id": "CSAFPID-0189",
+                  "product_id": "CSAFPID-0199",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5526-8GS00-2AR2"
@@ -3721,10 +3907,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR526-8C, 24V (L3 int.) (6GK5526-8GR00-2AR2)",
-                  "product_id": "CSAFPID-0190",
+                  "product_id": "CSAFPID-0200",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5526-8GR00-2AR2"
@@ -3740,10 +3926,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR528-6M (2HR2) (6GK5528-0AA00-2HR2)",
-                  "product_id": "CSAFPID-0191",
+                  "product_id": "CSAFPID-0201",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5528-0AA00-2HR2"
@@ -3759,10 +3945,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR528-6M (2HR2, L3 int.) (6GK5528-0AR00-2HR2)",
-                  "product_id": "CSAFPID-0192",
+                  "product_id": "CSAFPID-0202",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5528-0AR00-2HR2"
@@ -3778,10 +3964,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR528-6M (6GK5528-0AA00-2AR2)",
-                  "product_id": "CSAFPID-0193",
+                  "product_id": "CSAFPID-0203",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5528-0AA00-2AR2"
@@ -3797,10 +3983,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR528-6M (L3 int.) (6GK5528-0AR00-2AR2)",
-                  "product_id": "CSAFPID-0194",
+                  "product_id": "CSAFPID-0204",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5528-0AR00-2AR2"
@@ -3816,10 +4002,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR552-12M (2HR2) (6GK5552-0AA00-2HR2)",
-                  "product_id": "CSAFPID-0195",
+                  "product_id": "CSAFPID-0205",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5552-0AA00-2HR2"
@@ -3835,10 +4021,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR552-12M (2HR2) (6GK5552-0AR00-2HR2)",
-                  "product_id": "CSAFPID-0196",
+                  "product_id": "CSAFPID-0206",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5552-0AR00-2HR2"
@@ -3854,10 +4040,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR552-12M (2HR2, L3 int.) (6GK5552-0AR00-2AR2)",
-                  "product_id": "CSAFPID-0197",
+                  "product_id": "CSAFPID-0207",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5552-0AR00-2AR2"
@@ -3873,10 +4059,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.6",
+                "name": "vers:all/<V6.6",
                 "product": {
                   "name": "SCALANCE XR552-12M (6GK5552-0AA00-2AR2)",
-                  "product_id": "CSAFPID-0198",
+                  "product_id": "CSAFPID-0208",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5552-0AA00-2AR2"
@@ -3892,10 +4078,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC206-2 (6AG1206-2BB00-7AC2)",
-                  "product_id": "CSAFPID-0199",
+                  "product_id": "CSAFPID-0209",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1206-2BB00-7AC2"
@@ -3911,10 +4097,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC206-2SFP (6AG1206-2BS00-7AC2)",
-                  "product_id": "CSAFPID-0200",
+                  "product_id": "CSAFPID-0210",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1206-2BS00-7AC2"
@@ -3930,10 +4116,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC208 (6AG1208-0BA00-7AC2)",
-                  "product_id": "CSAFPID-0201",
+                  "product_id": "CSAFPID-0211",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1208-0BA00-7AC2"
@@ -3949,10 +4135,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.4",
+                "name": "vers:all/<V4.4",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC216-4C (6AG1216-4BS00-7AC2)",
-                  "product_id": "CSAFPID-0202",
+                  "product_id": "CSAFPID-0212",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1216-4BS00-7AC2"
@@ -4018,33 +4204,28 @@
           "CSAFPID-0030",
           "CSAFPID-0031",
           "CSAFPID-0032",
+          "CSAFPID-0088",
           "CSAFPID-0089",
           "CSAFPID-0091",
+          "CSAFPID-0092",
           "CSAFPID-0093",
           "CSAFPID-0095",
-          "CSAFPID-0097",
-          "CSAFPID-0099",
+          "CSAFPID-0096",
+          "CSAFPID-0098",
+          "CSAFPID-0100",
           "CSAFPID-0101",
           "CSAFPID-0103",
-          "CSAFPID-0105"
+          "CSAFPID-0104",
+          "CSAFPID-0105",
+          "CSAFPID-0107",
+          "CSAFPID-0109",
+          "CSAFPID-0110",
+          "CSAFPID-0111",
+          "CSAFPID-0113",
+          "CSAFPID-0114"
         ]
       },
       "remediations": [
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0089",
-            "CSAFPID-0091",
-            "CSAFPID-0093",
-            "CSAFPID-0095",
-            "CSAFPID-0097",
-            "CSAFPID-0099",
-            "CSAFPID-0101",
-            "CSAFPID-0103",
-            "CSAFPID-0105"
-          ]
-        },
         {
           "category": "vendor_fix",
           "details": "Update to V2.3 or later version",
@@ -4070,6 +4251,32 @@
             "CSAFPID-0032"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109814276/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0.0 or later version",
+          "product_ids": [
+            "CSAFPID-0088",
+            "CSAFPID-0089",
+            "CSAFPID-0091",
+            "CSAFPID-0092",
+            "CSAFPID-0093",
+            "CSAFPID-0095",
+            "CSAFPID-0096",
+            "CSAFPID-0098",
+            "CSAFPID-0100",
+            "CSAFPID-0101",
+            "CSAFPID-0103",
+            "CSAFPID-0104",
+            "CSAFPID-0105",
+            "CSAFPID-0107",
+            "CSAFPID-0109",
+            "CSAFPID-0110",
+            "CSAFPID-0111",
+            "CSAFPID-0113",
+            "CSAFPID-0114"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109977720/"
         },
         {
           "category": "vendor_fix",
@@ -4104,7 +4311,7 @@
           "cvss_v3": {
             "baseScore": 7.6,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -4140,15 +4347,25 @@
             "CSAFPID-0030",
             "CSAFPID-0031",
             "CSAFPID-0032",
+            "CSAFPID-0088",
             "CSAFPID-0089",
             "CSAFPID-0091",
+            "CSAFPID-0092",
             "CSAFPID-0093",
             "CSAFPID-0095",
-            "CSAFPID-0097",
-            "CSAFPID-0099",
+            "CSAFPID-0096",
+            "CSAFPID-0098",
+            "CSAFPID-0100",
             "CSAFPID-0101",
             "CSAFPID-0103",
-            "CSAFPID-0105"
+            "CSAFPID-0104",
+            "CSAFPID-0105",
+            "CSAFPID-0107",
+            "CSAFPID-0109",
+            "CSAFPID-0110",
+            "CSAFPID-0111",
+            "CSAFPID-0113",
+            "CSAFPID-0114"
           ]
         }
       ],
@@ -4250,24 +4467,14 @@
           "CSAFPID-0079",
           "CSAFPID-0080",
           "CSAFPID-0081",
-          "CSAFPID-0088",
           "CSAFPID-0090",
-          "CSAFPID-0092",
           "CSAFPID-0094",
-          "CSAFPID-0096",
-          "CSAFPID-0098",
-          "CSAFPID-0100",
+          "CSAFPID-0097",
+          "CSAFPID-0099",
           "CSAFPID-0102",
-          "CSAFPID-0104",
           "CSAFPID-0106",
-          "CSAFPID-0107",
           "CSAFPID-0108",
-          "CSAFPID-0109",
-          "CSAFPID-0110",
-          "CSAFPID-0111",
           "CSAFPID-0112",
-          "CSAFPID-0113",
-          "CSAFPID-0114",
           "CSAFPID-0115",
           "CSAFPID-0116",
           "CSAFPID-0117",
@@ -4326,36 +4533,46 @@
           "CSAFPID-0170",
           "CSAFPID-0171",
           "CSAFPID-0172",
-          "CSAFPID-0175",
-          "CSAFPID-0176",
           "CSAFPID-0173",
           "CSAFPID-0174",
+          "CSAFPID-0175",
+          "CSAFPID-0176",
           "CSAFPID-0177",
           "CSAFPID-0178",
           "CSAFPID-0179",
           "CSAFPID-0180",
-          "CSAFPID-0183",
-          "CSAFPID-0184",
           "CSAFPID-0181",
           "CSAFPID-0182",
           "CSAFPID-0185",
           "CSAFPID-0186",
-          "CSAFPID-0189",
-          "CSAFPID-0190",
+          "CSAFPID-0183",
+          "CSAFPID-0184",
           "CSAFPID-0187",
           "CSAFPID-0188",
+          "CSAFPID-0189",
+          "CSAFPID-0190",
           "CSAFPID-0193",
-          "CSAFPID-0192",
-          "CSAFPID-0191",
           "CSAFPID-0194",
-          "CSAFPID-0198",
-          "CSAFPID-0197",
+          "CSAFPID-0191",
+          "CSAFPID-0192",
           "CSAFPID-0195",
           "CSAFPID-0196",
           "CSAFPID-0199",
           "CSAFPID-0200",
+          "CSAFPID-0197",
+          "CSAFPID-0198",
+          "CSAFPID-0203",
+          "CSAFPID-0202",
           "CSAFPID-0201",
-          "CSAFPID-0202"
+          "CSAFPID-0204",
+          "CSAFPID-0208",
+          "CSAFPID-0207",
+          "CSAFPID-0205",
+          "CSAFPID-0206",
+          "CSAFPID-0209",
+          "CSAFPID-0210",
+          "CSAFPID-0211",
+          "CSAFPID-0212"
         ]
       },
       "remediations": [
@@ -4422,17 +4639,17 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V2.0 or later version",
+          "details": "Update to V2.0.0 or later version",
           "product_ids": [
-            "CSAFPID-0088",
             "CSAFPID-0090",
-            "CSAFPID-0092",
             "CSAFPID-0094",
-            "CSAFPID-0096",
-            "CSAFPID-0098",
-            "CSAFPID-0100",
+            "CSAFPID-0097",
+            "CSAFPID-0099",
             "CSAFPID-0102",
-            "CSAFPID-0104"
+            "CSAFPID-0106",
+            "CSAFPID-0108",
+            "CSAFPID-0112",
+            "CSAFPID-0115"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
         },
@@ -4453,16 +4670,6 @@
           "category": "vendor_fix",
           "details": "Update to V4.4 or later version",
           "product_ids": [
-            "CSAFPID-0106",
-            "CSAFPID-0107",
-            "CSAFPID-0108",
-            "CSAFPID-0109",
-            "CSAFPID-0110",
-            "CSAFPID-0111",
-            "CSAFPID-0112",
-            "CSAFPID-0113",
-            "CSAFPID-0114",
-            "CSAFPID-0115",
             "CSAFPID-0116",
             "CSAFPID-0117",
             "CSAFPID-0118",
@@ -4502,28 +4709,38 @@
             "CSAFPID-0152",
             "CSAFPID-0153",
             "CSAFPID-0154",
+            "CSAFPID-0155",
+            "CSAFPID-0156",
+            "CSAFPID-0157",
+            "CSAFPID-0158",
+            "CSAFPID-0159",
+            "CSAFPID-0160",
             "CSAFPID-0161",
             "CSAFPID-0162",
             "CSAFPID-0163",
             "CSAFPID-0164",
-            "CSAFPID-0165",
-            "CSAFPID-0166",
-            "CSAFPID-0167",
-            "CSAFPID-0168",
-            "CSAFPID-0169",
-            "CSAFPID-0170",
             "CSAFPID-0171",
             "CSAFPID-0172",
-            "CSAFPID-0175",
-            "CSAFPID-0176",
             "CSAFPID-0173",
             "CSAFPID-0174",
+            "CSAFPID-0175",
+            "CSAFPID-0176",
             "CSAFPID-0177",
             "CSAFPID-0178",
-            "CSAFPID-0199",
-            "CSAFPID-0200",
-            "CSAFPID-0201",
-            "CSAFPID-0202"
+            "CSAFPID-0179",
+            "CSAFPID-0180",
+            "CSAFPID-0181",
+            "CSAFPID-0182",
+            "CSAFPID-0185",
+            "CSAFPID-0186",
+            "CSAFPID-0183",
+            "CSAFPID-0184",
+            "CSAFPID-0187",
+            "CSAFPID-0188",
+            "CSAFPID-0209",
+            "CSAFPID-0210",
+            "CSAFPID-0211",
+            "CSAFPID-0212"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109817768/"
         },
@@ -4531,32 +4748,32 @@
           "category": "vendor_fix",
           "details": "Update to V6.6 or later version",
           "product_ids": [
-            "CSAFPID-0155",
-            "CSAFPID-0156",
-            "CSAFPID-0157",
-            "CSAFPID-0158",
-            "CSAFPID-0159",
-            "CSAFPID-0160",
-            "CSAFPID-0179",
-            "CSAFPID-0180",
-            "CSAFPID-0183",
-            "CSAFPID-0184",
-            "CSAFPID-0181",
-            "CSAFPID-0182",
-            "CSAFPID-0185",
-            "CSAFPID-0186",
+            "CSAFPID-0165",
+            "CSAFPID-0166",
+            "CSAFPID-0167",
+            "CSAFPID-0168",
+            "CSAFPID-0169",
+            "CSAFPID-0170",
             "CSAFPID-0189",
             "CSAFPID-0190",
-            "CSAFPID-0187",
-            "CSAFPID-0188",
             "CSAFPID-0193",
-            "CSAFPID-0192",
-            "CSAFPID-0191",
             "CSAFPID-0194",
-            "CSAFPID-0198",
-            "CSAFPID-0197",
+            "CSAFPID-0191",
+            "CSAFPID-0192",
             "CSAFPID-0195",
-            "CSAFPID-0196"
+            "CSAFPID-0196",
+            "CSAFPID-0199",
+            "CSAFPID-0200",
+            "CSAFPID-0197",
+            "CSAFPID-0198",
+            "CSAFPID-0203",
+            "CSAFPID-0202",
+            "CSAFPID-0201",
+            "CSAFPID-0204",
+            "CSAFPID-0208",
+            "CSAFPID-0207",
+            "CSAFPID-0205",
+            "CSAFPID-0206"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109818003/"
         },
@@ -4593,7 +4810,7 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
@@ -4678,24 +4895,14 @@
             "CSAFPID-0079",
             "CSAFPID-0080",
             "CSAFPID-0081",
-            "CSAFPID-0088",
             "CSAFPID-0090",
-            "CSAFPID-0092",
             "CSAFPID-0094",
-            "CSAFPID-0096",
-            "CSAFPID-0098",
-            "CSAFPID-0100",
+            "CSAFPID-0097",
+            "CSAFPID-0099",
             "CSAFPID-0102",
-            "CSAFPID-0104",
             "CSAFPID-0106",
-            "CSAFPID-0107",
             "CSAFPID-0108",
-            "CSAFPID-0109",
-            "CSAFPID-0110",
-            "CSAFPID-0111",
             "CSAFPID-0112",
-            "CSAFPID-0113",
-            "CSAFPID-0114",
             "CSAFPID-0115",
             "CSAFPID-0116",
             "CSAFPID-0117",
@@ -4754,36 +4961,46 @@
             "CSAFPID-0170",
             "CSAFPID-0171",
             "CSAFPID-0172",
-            "CSAFPID-0175",
-            "CSAFPID-0176",
             "CSAFPID-0173",
             "CSAFPID-0174",
+            "CSAFPID-0175",
+            "CSAFPID-0176",
             "CSAFPID-0177",
             "CSAFPID-0178",
             "CSAFPID-0179",
             "CSAFPID-0180",
-            "CSAFPID-0183",
-            "CSAFPID-0184",
             "CSAFPID-0181",
             "CSAFPID-0182",
             "CSAFPID-0185",
             "CSAFPID-0186",
-            "CSAFPID-0189",
-            "CSAFPID-0190",
+            "CSAFPID-0183",
+            "CSAFPID-0184",
             "CSAFPID-0187",
             "CSAFPID-0188",
+            "CSAFPID-0189",
+            "CSAFPID-0190",
             "CSAFPID-0193",
-            "CSAFPID-0192",
-            "CSAFPID-0191",
             "CSAFPID-0194",
-            "CSAFPID-0198",
-            "CSAFPID-0197",
+            "CSAFPID-0191",
+            "CSAFPID-0192",
             "CSAFPID-0195",
             "CSAFPID-0196",
             "CSAFPID-0199",
             "CSAFPID-0200",
+            "CSAFPID-0197",
+            "CSAFPID-0198",
+            "CSAFPID-0203",
+            "CSAFPID-0202",
             "CSAFPID-0201",
-            "CSAFPID-0202"
+            "CSAFPID-0204",
+            "CSAFPID-0208",
+            "CSAFPID-0207",
+            "CSAFPID-0205",
+            "CSAFPID-0206",
+            "CSAFPID-0209",
+            "CSAFPID-0210",
+            "CSAFPID-0211",
+            "CSAFPID-0212"
           ]
         }
       ],
@@ -4891,24 +5108,14 @@
           "CSAFPID-0079",
           "CSAFPID-0080",
           "CSAFPID-0081",
-          "CSAFPID-0088",
           "CSAFPID-0090",
-          "CSAFPID-0092",
           "CSAFPID-0094",
-          "CSAFPID-0096",
-          "CSAFPID-0098",
-          "CSAFPID-0100",
+          "CSAFPID-0097",
+          "CSAFPID-0099",
           "CSAFPID-0102",
-          "CSAFPID-0104",
           "CSAFPID-0106",
-          "CSAFPID-0107",
           "CSAFPID-0108",
-          "CSAFPID-0109",
-          "CSAFPID-0110",
-          "CSAFPID-0111",
           "CSAFPID-0112",
-          "CSAFPID-0113",
-          "CSAFPID-0114",
           "CSAFPID-0115",
           "CSAFPID-0116",
           "CSAFPID-0117",
@@ -4967,36 +5174,46 @@
           "CSAFPID-0170",
           "CSAFPID-0171",
           "CSAFPID-0172",
-          "CSAFPID-0175",
-          "CSAFPID-0176",
           "CSAFPID-0173",
           "CSAFPID-0174",
+          "CSAFPID-0175",
+          "CSAFPID-0176",
           "CSAFPID-0177",
           "CSAFPID-0178",
           "CSAFPID-0179",
           "CSAFPID-0180",
-          "CSAFPID-0183",
-          "CSAFPID-0184",
           "CSAFPID-0181",
           "CSAFPID-0182",
           "CSAFPID-0185",
           "CSAFPID-0186",
-          "CSAFPID-0189",
-          "CSAFPID-0190",
+          "CSAFPID-0183",
+          "CSAFPID-0184",
           "CSAFPID-0187",
           "CSAFPID-0188",
+          "CSAFPID-0189",
+          "CSAFPID-0190",
           "CSAFPID-0193",
-          "CSAFPID-0192",
-          "CSAFPID-0191",
           "CSAFPID-0194",
-          "CSAFPID-0198",
-          "CSAFPID-0197",
+          "CSAFPID-0191",
+          "CSAFPID-0192",
           "CSAFPID-0195",
           "CSAFPID-0196",
           "CSAFPID-0199",
           "CSAFPID-0200",
+          "CSAFPID-0197",
+          "CSAFPID-0198",
+          "CSAFPID-0203",
+          "CSAFPID-0202",
           "CSAFPID-0201",
-          "CSAFPID-0202"
+          "CSAFPID-0204",
+          "CSAFPID-0208",
+          "CSAFPID-0207",
+          "CSAFPID-0205",
+          "CSAFPID-0206",
+          "CSAFPID-0209",
+          "CSAFPID-0210",
+          "CSAFPID-0211",
+          "CSAFPID-0212"
         ]
       },
       "remediations": [
@@ -5063,17 +5280,17 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V2.0 or later version",
+          "details": "Update to V2.0.0 or later version",
           "product_ids": [
-            "CSAFPID-0088",
             "CSAFPID-0090",
-            "CSAFPID-0092",
             "CSAFPID-0094",
-            "CSAFPID-0096",
-            "CSAFPID-0098",
-            "CSAFPID-0100",
+            "CSAFPID-0097",
+            "CSAFPID-0099",
             "CSAFPID-0102",
-            "CSAFPID-0104"
+            "CSAFPID-0106",
+            "CSAFPID-0108",
+            "CSAFPID-0112",
+            "CSAFPID-0115"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
         },
@@ -5107,16 +5324,6 @@
           "category": "vendor_fix",
           "details": "Update to V4.4 or later version",
           "product_ids": [
-            "CSAFPID-0106",
-            "CSAFPID-0107",
-            "CSAFPID-0108",
-            "CSAFPID-0109",
-            "CSAFPID-0110",
-            "CSAFPID-0111",
-            "CSAFPID-0112",
-            "CSAFPID-0113",
-            "CSAFPID-0114",
-            "CSAFPID-0115",
             "CSAFPID-0116",
             "CSAFPID-0117",
             "CSAFPID-0118",
@@ -5156,28 +5363,38 @@
             "CSAFPID-0152",
             "CSAFPID-0153",
             "CSAFPID-0154",
+            "CSAFPID-0155",
+            "CSAFPID-0156",
+            "CSAFPID-0157",
+            "CSAFPID-0158",
+            "CSAFPID-0159",
+            "CSAFPID-0160",
             "CSAFPID-0161",
             "CSAFPID-0162",
             "CSAFPID-0163",
             "CSAFPID-0164",
-            "CSAFPID-0165",
-            "CSAFPID-0166",
-            "CSAFPID-0167",
-            "CSAFPID-0168",
-            "CSAFPID-0169",
-            "CSAFPID-0170",
             "CSAFPID-0171",
             "CSAFPID-0172",
-            "CSAFPID-0175",
-            "CSAFPID-0176",
             "CSAFPID-0173",
             "CSAFPID-0174",
+            "CSAFPID-0175",
+            "CSAFPID-0176",
             "CSAFPID-0177",
             "CSAFPID-0178",
-            "CSAFPID-0199",
-            "CSAFPID-0200",
-            "CSAFPID-0201",
-            "CSAFPID-0202"
+            "CSAFPID-0179",
+            "CSAFPID-0180",
+            "CSAFPID-0181",
+            "CSAFPID-0182",
+            "CSAFPID-0185",
+            "CSAFPID-0186",
+            "CSAFPID-0183",
+            "CSAFPID-0184",
+            "CSAFPID-0187",
+            "CSAFPID-0188",
+            "CSAFPID-0209",
+            "CSAFPID-0210",
+            "CSAFPID-0211",
+            "CSAFPID-0212"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109817768/"
         },
@@ -5185,32 +5402,32 @@
           "category": "vendor_fix",
           "details": "Update to V6.6 or later version",
           "product_ids": [
-            "CSAFPID-0155",
-            "CSAFPID-0156",
-            "CSAFPID-0157",
-            "CSAFPID-0158",
-            "CSAFPID-0159",
-            "CSAFPID-0160",
-            "CSAFPID-0179",
-            "CSAFPID-0180",
-            "CSAFPID-0183",
-            "CSAFPID-0184",
-            "CSAFPID-0181",
-            "CSAFPID-0182",
-            "CSAFPID-0185",
-            "CSAFPID-0186",
+            "CSAFPID-0165",
+            "CSAFPID-0166",
+            "CSAFPID-0167",
+            "CSAFPID-0168",
+            "CSAFPID-0169",
+            "CSAFPID-0170",
             "CSAFPID-0189",
             "CSAFPID-0190",
-            "CSAFPID-0187",
-            "CSAFPID-0188",
             "CSAFPID-0193",
-            "CSAFPID-0192",
-            "CSAFPID-0191",
             "CSAFPID-0194",
-            "CSAFPID-0198",
-            "CSAFPID-0197",
+            "CSAFPID-0191",
+            "CSAFPID-0192",
             "CSAFPID-0195",
-            "CSAFPID-0196"
+            "CSAFPID-0196",
+            "CSAFPID-0199",
+            "CSAFPID-0200",
+            "CSAFPID-0197",
+            "CSAFPID-0198",
+            "CSAFPID-0203",
+            "CSAFPID-0202",
+            "CSAFPID-0201",
+            "CSAFPID-0204",
+            "CSAFPID-0208",
+            "CSAFPID-0207",
+            "CSAFPID-0205",
+            "CSAFPID-0206"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109818003/"
         },
@@ -5247,7 +5464,7 @@
           "cvss_v3": {
             "baseScore": 5.7,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
             "version": "3.1"
           },
           "products": [
@@ -5338,24 +5555,14 @@
             "CSAFPID-0079",
             "CSAFPID-0080",
             "CSAFPID-0081",
-            "CSAFPID-0088",
             "CSAFPID-0090",
-            "CSAFPID-0092",
             "CSAFPID-0094",
-            "CSAFPID-0096",
-            "CSAFPID-0098",
-            "CSAFPID-0100",
+            "CSAFPID-0097",
+            "CSAFPID-0099",
             "CSAFPID-0102",
-            "CSAFPID-0104",
             "CSAFPID-0106",
-            "CSAFPID-0107",
             "CSAFPID-0108",
-            "CSAFPID-0109",
-            "CSAFPID-0110",
-            "CSAFPID-0111",
             "CSAFPID-0112",
-            "CSAFPID-0113",
-            "CSAFPID-0114",
             "CSAFPID-0115",
             "CSAFPID-0116",
             "CSAFPID-0117",
@@ -5414,36 +5621,46 @@
             "CSAFPID-0170",
             "CSAFPID-0171",
             "CSAFPID-0172",
-            "CSAFPID-0175",
-            "CSAFPID-0176",
             "CSAFPID-0173",
             "CSAFPID-0174",
+            "CSAFPID-0175",
+            "CSAFPID-0176",
             "CSAFPID-0177",
             "CSAFPID-0178",
             "CSAFPID-0179",
             "CSAFPID-0180",
-            "CSAFPID-0183",
-            "CSAFPID-0184",
             "CSAFPID-0181",
             "CSAFPID-0182",
             "CSAFPID-0185",
             "CSAFPID-0186",
-            "CSAFPID-0189",
-            "CSAFPID-0190",
+            "CSAFPID-0183",
+            "CSAFPID-0184",
             "CSAFPID-0187",
             "CSAFPID-0188",
+            "CSAFPID-0189",
+            "CSAFPID-0190",
             "CSAFPID-0193",
-            "CSAFPID-0192",
-            "CSAFPID-0191",
             "CSAFPID-0194",
-            "CSAFPID-0198",
-            "CSAFPID-0197",
+            "CSAFPID-0191",
+            "CSAFPID-0192",
             "CSAFPID-0195",
             "CSAFPID-0196",
             "CSAFPID-0199",
             "CSAFPID-0200",
+            "CSAFPID-0197",
+            "CSAFPID-0198",
+            "CSAFPID-0203",
+            "CSAFPID-0202",
             "CSAFPID-0201",
-            "CSAFPID-0202"
+            "CSAFPID-0204",
+            "CSAFPID-0208",
+            "CSAFPID-0207",
+            "CSAFPID-0205",
+            "CSAFPID-0206",
+            "CSAFPID-0209",
+            "CSAFPID-0210",
+            "CSAFPID-0211",
+            "CSAFPID-0212"
           ]
         }
       ],
@@ -5552,24 +5769,24 @@
           "CSAFPID-0080",
           "CSAFPID-0081",
           "CSAFPID-0088",
-          "CSAFPID-0090",
+          "CSAFPID-0089",
+          "CSAFPID-0091",
           "CSAFPID-0092",
-          "CSAFPID-0094",
+          "CSAFPID-0093",
+          "CSAFPID-0095",
           "CSAFPID-0096",
           "CSAFPID-0098",
           "CSAFPID-0100",
-          "CSAFPID-0102",
+          "CSAFPID-0101",
+          "CSAFPID-0103",
           "CSAFPID-0104",
-          "CSAFPID-0106",
+          "CSAFPID-0105",
           "CSAFPID-0107",
-          "CSAFPID-0108",
           "CSAFPID-0109",
           "CSAFPID-0110",
           "CSAFPID-0111",
-          "CSAFPID-0112",
           "CSAFPID-0113",
           "CSAFPID-0114",
-          "CSAFPID-0115",
           "CSAFPID-0116",
           "CSAFPID-0117",
           "CSAFPID-0118",
@@ -5627,36 +5844,46 @@
           "CSAFPID-0170",
           "CSAFPID-0171",
           "CSAFPID-0172",
-          "CSAFPID-0175",
-          "CSAFPID-0176",
           "CSAFPID-0173",
           "CSAFPID-0174",
+          "CSAFPID-0175",
+          "CSAFPID-0176",
           "CSAFPID-0177",
           "CSAFPID-0178",
           "CSAFPID-0179",
           "CSAFPID-0180",
-          "CSAFPID-0183",
-          "CSAFPID-0184",
           "CSAFPID-0181",
           "CSAFPID-0182",
           "CSAFPID-0185",
           "CSAFPID-0186",
-          "CSAFPID-0189",
-          "CSAFPID-0190",
+          "CSAFPID-0183",
+          "CSAFPID-0184",
           "CSAFPID-0187",
           "CSAFPID-0188",
+          "CSAFPID-0189",
+          "CSAFPID-0190",
           "CSAFPID-0193",
-          "CSAFPID-0192",
-          "CSAFPID-0191",
           "CSAFPID-0194",
-          "CSAFPID-0198",
-          "CSAFPID-0197",
+          "CSAFPID-0191",
+          "CSAFPID-0192",
           "CSAFPID-0195",
           "CSAFPID-0196",
           "CSAFPID-0199",
           "CSAFPID-0200",
+          "CSAFPID-0197",
+          "CSAFPID-0198",
+          "CSAFPID-0203",
+          "CSAFPID-0202",
           "CSAFPID-0201",
-          "CSAFPID-0202"
+          "CSAFPID-0204",
+          "CSAFPID-0208",
+          "CSAFPID-0207",
+          "CSAFPID-0205",
+          "CSAFPID-0206",
+          "CSAFPID-0209",
+          "CSAFPID-0210",
+          "CSAFPID-0211",
+          "CSAFPID-0212"
         ]
       },
       "remediations": [
@@ -5723,22 +5950,6 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V2.0 or later version",
-          "product_ids": [
-            "CSAFPID-0088",
-            "CSAFPID-0090",
-            "CSAFPID-0092",
-            "CSAFPID-0094",
-            "CSAFPID-0096",
-            "CSAFPID-0098",
-            "CSAFPID-0100",
-            "CSAFPID-0102",
-            "CSAFPID-0104"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
-        },
-        {
-          "category": "vendor_fix",
           "details": "Update to V2.3 or later version",
           "product_ids": [
             "CSAFPID-0021",
@@ -5765,18 +5976,34 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V4.4 or later version",
+          "details": "Update to V3.0.0 or later version",
           "product_ids": [
-            "CSAFPID-0106",
+            "CSAFPID-0088",
+            "CSAFPID-0089",
+            "CSAFPID-0091",
+            "CSAFPID-0092",
+            "CSAFPID-0093",
+            "CSAFPID-0095",
+            "CSAFPID-0096",
+            "CSAFPID-0098",
+            "CSAFPID-0100",
+            "CSAFPID-0101",
+            "CSAFPID-0103",
+            "CSAFPID-0104",
+            "CSAFPID-0105",
             "CSAFPID-0107",
-            "CSAFPID-0108",
             "CSAFPID-0109",
             "CSAFPID-0110",
             "CSAFPID-0111",
-            "CSAFPID-0112",
             "CSAFPID-0113",
-            "CSAFPID-0114",
-            "CSAFPID-0115",
+            "CSAFPID-0114"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109977720/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.4 or later version",
+          "product_ids": [
             "CSAFPID-0116",
             "CSAFPID-0117",
             "CSAFPID-0118",
@@ -5816,28 +6043,38 @@
             "CSAFPID-0152",
             "CSAFPID-0153",
             "CSAFPID-0154",
+            "CSAFPID-0155",
+            "CSAFPID-0156",
+            "CSAFPID-0157",
+            "CSAFPID-0158",
+            "CSAFPID-0159",
+            "CSAFPID-0160",
             "CSAFPID-0161",
             "CSAFPID-0162",
             "CSAFPID-0163",
             "CSAFPID-0164",
-            "CSAFPID-0165",
-            "CSAFPID-0166",
-            "CSAFPID-0167",
-            "CSAFPID-0168",
-            "CSAFPID-0169",
-            "CSAFPID-0170",
             "CSAFPID-0171",
             "CSAFPID-0172",
-            "CSAFPID-0175",
-            "CSAFPID-0176",
             "CSAFPID-0173",
             "CSAFPID-0174",
+            "CSAFPID-0175",
+            "CSAFPID-0176",
             "CSAFPID-0177",
             "CSAFPID-0178",
-            "CSAFPID-0199",
-            "CSAFPID-0200",
-            "CSAFPID-0201",
-            "CSAFPID-0202"
+            "CSAFPID-0179",
+            "CSAFPID-0180",
+            "CSAFPID-0181",
+            "CSAFPID-0182",
+            "CSAFPID-0185",
+            "CSAFPID-0186",
+            "CSAFPID-0183",
+            "CSAFPID-0184",
+            "CSAFPID-0187",
+            "CSAFPID-0188",
+            "CSAFPID-0209",
+            "CSAFPID-0210",
+            "CSAFPID-0211",
+            "CSAFPID-0212"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109817768/"
         },
@@ -5845,32 +6082,32 @@
           "category": "vendor_fix",
           "details": "Update to V6.6 or later version",
           "product_ids": [
-            "CSAFPID-0155",
-            "CSAFPID-0156",
-            "CSAFPID-0157",
-            "CSAFPID-0158",
-            "CSAFPID-0159",
-            "CSAFPID-0160",
-            "CSAFPID-0179",
-            "CSAFPID-0180",
-            "CSAFPID-0183",
-            "CSAFPID-0184",
-            "CSAFPID-0181",
-            "CSAFPID-0182",
-            "CSAFPID-0185",
-            "CSAFPID-0186",
+            "CSAFPID-0165",
+            "CSAFPID-0166",
+            "CSAFPID-0167",
+            "CSAFPID-0168",
+            "CSAFPID-0169",
+            "CSAFPID-0170",
             "CSAFPID-0189",
             "CSAFPID-0190",
-            "CSAFPID-0187",
-            "CSAFPID-0188",
             "CSAFPID-0193",
-            "CSAFPID-0192",
-            "CSAFPID-0191",
             "CSAFPID-0194",
-            "CSAFPID-0198",
-            "CSAFPID-0197",
+            "CSAFPID-0191",
+            "CSAFPID-0192",
             "CSAFPID-0195",
-            "CSAFPID-0196"
+            "CSAFPID-0196",
+            "CSAFPID-0199",
+            "CSAFPID-0200",
+            "CSAFPID-0197",
+            "CSAFPID-0198",
+            "CSAFPID-0203",
+            "CSAFPID-0202",
+            "CSAFPID-0201",
+            "CSAFPID-0204",
+            "CSAFPID-0208",
+            "CSAFPID-0207",
+            "CSAFPID-0205",
+            "CSAFPID-0206"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109818003/"
         },
@@ -5907,7 +6144,7 @@
           "cvss_v3": {
             "baseScore": 2.7,
             "baseSeverity": "LOW",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
             "version": "3.1"
           },
           "products": [
@@ -5999,24 +6236,24 @@
             "CSAFPID-0080",
             "CSAFPID-0081",
             "CSAFPID-0088",
-            "CSAFPID-0090",
+            "CSAFPID-0089",
+            "CSAFPID-0091",
             "CSAFPID-0092",
-            "CSAFPID-0094",
+            "CSAFPID-0093",
+            "CSAFPID-0095",
             "CSAFPID-0096",
             "CSAFPID-0098",
             "CSAFPID-0100",
-            "CSAFPID-0102",
+            "CSAFPID-0101",
+            "CSAFPID-0103",
             "CSAFPID-0104",
-            "CSAFPID-0106",
+            "CSAFPID-0105",
             "CSAFPID-0107",
-            "CSAFPID-0108",
             "CSAFPID-0109",
             "CSAFPID-0110",
             "CSAFPID-0111",
-            "CSAFPID-0112",
             "CSAFPID-0113",
             "CSAFPID-0114",
-            "CSAFPID-0115",
             "CSAFPID-0116",
             "CSAFPID-0117",
             "CSAFPID-0118",
@@ -6074,36 +6311,46 @@
             "CSAFPID-0170",
             "CSAFPID-0171",
             "CSAFPID-0172",
-            "CSAFPID-0175",
-            "CSAFPID-0176",
             "CSAFPID-0173",
             "CSAFPID-0174",
+            "CSAFPID-0175",
+            "CSAFPID-0176",
             "CSAFPID-0177",
             "CSAFPID-0178",
             "CSAFPID-0179",
             "CSAFPID-0180",
-            "CSAFPID-0183",
-            "CSAFPID-0184",
             "CSAFPID-0181",
             "CSAFPID-0182",
             "CSAFPID-0185",
             "CSAFPID-0186",
-            "CSAFPID-0189",
-            "CSAFPID-0190",
+            "CSAFPID-0183",
+            "CSAFPID-0184",
             "CSAFPID-0187",
             "CSAFPID-0188",
+            "CSAFPID-0189",
+            "CSAFPID-0190",
             "CSAFPID-0193",
-            "CSAFPID-0192",
-            "CSAFPID-0191",
             "CSAFPID-0194",
-            "CSAFPID-0198",
-            "CSAFPID-0197",
+            "CSAFPID-0191",
+            "CSAFPID-0192",
             "CSAFPID-0195",
             "CSAFPID-0196",
             "CSAFPID-0199",
             "CSAFPID-0200",
+            "CSAFPID-0197",
+            "CSAFPID-0198",
+            "CSAFPID-0203",
+            "CSAFPID-0202",
             "CSAFPID-0201",
-            "CSAFPID-0202"
+            "CSAFPID-0204",
+            "CSAFPID-0208",
+            "CSAFPID-0207",
+            "CSAFPID-0205",
+            "CSAFPID-0206",
+            "CSAFPID-0209",
+            "CSAFPID-0210",
+            "CSAFPID-0211",
+            "CSAFPID-0212"
           ]
         }
       ],
@@ -6135,10 +6382,35 @@
           "CSAFPID-0029",
           "CSAFPID-0030",
           "CSAFPID-0031",
-          "CSAFPID-0032"
+          "CSAFPID-0032",
+          "CSAFPID-0090",
+          "CSAFPID-0094",
+          "CSAFPID-0097",
+          "CSAFPID-0099",
+          "CSAFPID-0102",
+          "CSAFPID-0106",
+          "CSAFPID-0108",
+          "CSAFPID-0112",
+          "CSAFPID-0115"
         ]
       },
       "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0.0 or later version",
+          "product_ids": [
+            "CSAFPID-0090",
+            "CSAFPID-0094",
+            "CSAFPID-0097",
+            "CSAFPID-0099",
+            "CSAFPID-0102",
+            "CSAFPID-0106",
+            "CSAFPID-0108",
+            "CSAFPID-0112",
+            "CSAFPID-0115"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815650/"
+        },
         {
           "category": "vendor_fix",
           "details": "Update to V2.3 or later version",
@@ -6171,7 +6443,7 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6186,7 +6458,16 @@
             "CSAFPID-0029",
             "CSAFPID-0030",
             "CSAFPID-0031",
-            "CSAFPID-0032"
+            "CSAFPID-0032",
+            "CSAFPID-0090",
+            "CSAFPID-0094",
+            "CSAFPID-0097",
+            "CSAFPID-0099",
+            "CSAFPID-0102",
+            "CSAFPID-0106",
+            "CSAFPID-0108",
+            "CSAFPID-0112",
+            "CSAFPID-0115"
           ]
         }
       ],

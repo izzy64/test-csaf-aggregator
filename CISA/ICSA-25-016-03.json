@@ -2,10 +2,7 @@
   "document": {
     "acknowledgments": [
       {
-        "names": [
-          "Doukani Mohammed Adam"
-        ],
-        "organization": "Resilience",
+        "organization": "Milestone PSIRT",
         "summary": "reporting this vulnerability to Siemens."
       }
     ],
@@ -22,12 +19,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "A vulnerability in the login dialog box of SIMATIC WinCC could allow a local attacker to cause a denial of service condition in the runtime of the SCADA system.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "text": "Several camera device drivers in the Siveillance Video Device Pack store camera credentials in their log file when authentication fails. This could allow a local attacker to read camera credentials stored in the Recording Server under specific conditions.\n\nSiemens has released an update of the Device Pack and recommends to apply this update to all deployments of Siveillance Video. In general, Siemens recommends installing the latest Device Pack which contains the most up-to-date device drivers.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
         "title": "General Recommendations"
       },
       {
@@ -52,7 +49,7 @@
       },
       {
         "category": "other",
-        "text": "Critical Manufacturing",
+        "text": "Commercial Facilities, Critical Manufacturing",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -115,23 +112,23 @@
     "references": [
       {
         "category": "self",
-        "summary": "SSA-730482: Denial of Service Vulnerability in SIMATIC WinCC - CSAF Version",
-        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-730482.json"
+        "summary": "SSA-404759: Information Disclosure Vulnerability in Siveillance Video Camera Drivers - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-404759.json"
       },
       {
         "category": "self",
-        "summary": "SSA-730482: Denial of Service Vulnerability in SIMATIC WinCC - HTML Version",
-        "url": "https://cert-portal.siemens.com/productcert/html/ssa-730482.html"
+        "summary": "SSA-404759: Information Disclosure Vulnerability in Siveillance Video Camera Drivers - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-404759.html"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-24-102-02 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2024/icsa-24-102-02.json"
+        "summary": "ICS Advisory ICSA-25-016-03 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-016-03.json"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-24-102-02 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-24-102-02"
+        "summary": "ICS Advisory ICSA-25-016-03 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-016-03"
       },
       {
         "category": "external",
@@ -164,39 +161,33 @@
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
       }
     ],
-    "title": "Siemens SIMATIC WinCC",
+    "title": "Siemens Siveillance Video Camera",
     "tracking": {
-      "current_release_date": "2025-01-14T00:00:00.000000Z",
+      "current_release_date": "2025-01-15T00:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-24-102-02",
-      "initial_release_date": "2024-04-09T00:00:00.000000Z",
+      "id": "ICSA-25-016-03",
+      "initial_release_date": "2025-01-14T00:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2024-04-09T00:00:00.000000Z",
+          "date": "2025-01-14T00:00:00.000000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2024-07-09T00:00:00.000000Z",
+          "date": "2025-01-15T00:00:00.000000Z",
           "legacy_version": "1.1",
           "number": "2",
-          "summary": "Added fix for SIMATIC WinCC V8.0 and SIMATIC WinCC Runtime Professional V18"
-        },
-        {
-          "date": "2025-01-14T00:00:00.000000Z",
-          "legacy_version": "1.2",
-          "number": "3",
-          "summary": "Added fix for SIMATIC WinCC Runtime Professional V17"
+          "summary": "Updated CVE-2024-12569 with changed description according to https://www.cve.org/CVERecord?id=CVE-2024-12569"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -207,85 +198,15 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.1_SP2_UC04",
+                "name": "vers:all/<V13.5",
                 "product": {
-                  "name": "SIMATIC PCS 7 V9.1",
+                  "name": "Siveillance Video Device Pack",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC PCS 7 V9.1"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V17_Update_8",
-                "product": {
-                  "name": "SIMATIC WinCC Runtime Professional V17",
-                  "product_id": "CSAFPID-0002"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC Runtime Professional V17"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V18_Update_4",
-                "product": {
-                  "name": "SIMATIC WinCC Runtime Professional V18",
-                  "product_id": "CSAFPID-0003"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC Runtime Professional V18"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V19_Update_1",
-                "product": {
-                  "name": "SIMATIC WinCC Runtime Professional V19",
-                  "product_id": "CSAFPID-0004"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC Runtime Professional V19"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V7.5_SP2_Update_16",
-                "product": {
-                  "name": "SIMATIC WinCC V7.5",
-                  "product_id": "CSAFPID-0005"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC V7.5"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V8.0_Update_5",
-                "product": {
-                  "name": "SIMATIC WinCC V8.0",
-                  "product_id": "CSAFPID-0006"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinCC V8.0"
+            "name": "Siveillance Video Device Pack"
           }
         ],
         "category": "vendor",
@@ -295,105 +216,53 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2023-50821",
+      "cve": "CVE-2024-12569",
       "cwe": {
-        "id": "CWE-120",
-        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+        "id": "CWE-532",
+        "name": "Insertion of Sensitive Information into Log File"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "The affected products do not properly validate the input provided in the login dialog box. An attacker could leverage this vulnerability to cause a persistent denial of service condition.",
+          "text": "Disclosure of sensitive information in a Milestone XProtect Device Pack driver\u2019s log file for third-party cameras, allows an attacker to read camera credentials stored in the Recording Server under specific conditions.",
           "title": "Summary"
         }
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0003",
-          "CSAFPID-0004",
-          "CSAFPID-0005",
-          "CSAFPID-0006"
+          "CSAFPID-0001"
         ]
       },
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Activate SIMATIC Logon in the User Administrator of the SIMATIC PCS 7 Operator Stations",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V17 Update 8 or later version",
-          "product_ids": [
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V18 Update 4 or later version",
-          "product_ids": [
-            "CSAFPID-0003"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V19 Update 1 or later version",
-          "product_ids": [
-            "CSAFPID-0004"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V7.5 SP2 Update 16 or later version",
-          "product_ids": [
-            "CSAFPID-0005"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793460/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V8.0 Update 5 or later version",
-          "product_ids": [
-            "CSAFPID-0006"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.1 SP2 UC04 or later version",
+          "details": "Ensure that only trusted people get local access to the driver log files on the Recording Server",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V13.5 or later version",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.2,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006"
+            "CSAFPID-0001"
           ]
         }
       ],
-      "title": "CVE-2023-50821"
+      "title": "CVE-2024-12569"
     }
   ]
 }

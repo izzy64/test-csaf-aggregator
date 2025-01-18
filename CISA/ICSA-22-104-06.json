@@ -34,7 +34,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -49,7 +49,7 @@
       },
       {
         "category": "other",
-        "text": "Multiple",
+        "text": "Critical Manufacturing, Transportation Systems, Energy, Healthcare and Public Health, Financial Services, Government Services and Facilities",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -122,16 +122,6 @@
       },
       {
         "category": "self",
-        "summary": "SSA-446448: Denial of Service Vulnerability in PROFINET Stack Integrated on Interniche Stack - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-446448.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-446448: Denial of Service Vulnerability in PROFINET Stack Integrated on Interniche Stack - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-446448.txt"
-      },
-      {
-        "category": "self",
         "summary": "ICS Advisory ICSA-22-104-06 JSON",
         "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2022/icsa-22-104-06.json"
       },
@@ -173,7 +163,7 @@
     ],
     "title": "Siemens PROFINET Stack Integrated on Interniche Stack",
     "tracking": {
-      "current_release_date": "2024-07-09T00:00:00.000000Z",
+      "current_release_date": "2025-01-14T00:00:00.000000Z",
       "generator": {
         "engine": {
           "name": "CISA CSAF Generator",
@@ -260,10 +250,16 @@
           "legacy_version": "2.2",
           "number": "13",
           "summary": "Added fix for SINAMICS DCM and SINAMICS V90; clarified that no fix is planned for SINAMICS S110; listed affected products individually instead of product families (e.g., for SIMATIC ET 200AL/MP/SP/pro IM families); added affected SIPLUS devices (e.g., SIPLUS ET 200xx IM)"
+        },
+        {
+          "date": "2025-01-14T00:00:00.000000Z",
+          "legacy_version": "2.3",
+          "number": "14",
+          "summary": "Added fix for SIMATIC ET200ecoPN, CM 4x IO-Link, M12-L (6ES7148-6JE00-0BB0), SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JG00-0BB0) and SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JJ00-0BB0)"
         }
       ],
       "status": "final",
-      "version": "13"
+      "version": "14"
     }
   },
   "product_tree": {
@@ -274,7 +270,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0.0",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SIMATIC CFU DIQ (6ES7655-5PX31-1XX0)",
                   "product_id": "CSAFPID-0001",
@@ -293,7 +289,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0.0",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SIMATIC CFU PA (6ES7655-5PX11-0XX0)",
                   "product_id": "CSAFPID-0002",
@@ -312,7 +308,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1<V5.1.2",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, AI 8xRTD/TC, M12-L (6ES7144-6JF00-0BB0)",
                   "product_id": "CSAFPID-0003",
@@ -331,7 +327,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, CM 4x IO-Link, M12-L (6ES7148-6JE00-0BB0)",
                   "product_id": "CSAFPID-0004",
@@ -350,7 +346,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JG00-0BB0)",
                   "product_id": "CSAFPID-0005",
@@ -369,7 +365,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JJ00-0BB0)",
                   "product_id": "CSAFPID-0006",
@@ -388,7 +384,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1<V5.1.2",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, DI 8x24VDC, M12-L (6ES7141-6BG00-0BB0)",
                   "product_id": "CSAFPID-0007",
@@ -407,7 +403,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1<V5.1.2",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, DI 16x24VDC, M12-L (6ES7141-6BH00-0BB0)",
                   "product_id": "CSAFPID-0008",
@@ -426,7 +422,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1<V5.1.3",
+                "name": "vers:all/>=V5.1.1|<V5.1.3",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, DIQ 16x24VDC/2A, M12-L (6ES7143-6BH00-0BB0)",
                   "product_id": "CSAFPID-0009",
@@ -445,7 +441,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1<V5.1.2",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, DQ 8x24VDC/0,5A, M12-L (6ES7142-6BG00-0BB0)",
                   "product_id": "CSAFPID-0010",
@@ -464,7 +460,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V5.1.1<V5.1.2",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
                 "product": {
                   "name": "SIMATIC ET200ecoPN, DQ 8x24VDC/2A, M12-L (6ES7142-6BR00-0BB0)",
                   "product_id": "CSAFPID-0011",
@@ -502,7 +498,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIMATIC ET 200MP IM 155-5 PN HF (6ES7155-5AA00-0AC0)",
                   "product_id": "CSAFPID-0013",
@@ -521,7 +517,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC ET 200pro IM 154-8 PN/DP CPU (6ES7154-8AB01-0AB0)",
                   "product_id": "CSAFPID-0014",
@@ -540,7 +536,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC ET 200pro IM 154-8F PN/DP CPU (6ES7154-8FB01-0AB0)",
                   "product_id": "CSAFPID-0015",
@@ -559,7 +555,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC ET 200pro IM 154-8FX PN/DP CPU (6ES7154-8FX00-0AB0)",
                   "product_id": "CSAFPID-0016",
@@ -578,7 +574,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC ET 200S IM 151-8 PN/DP CPU (6ES7151-8AB01-0AB0)",
                   "product_id": "CSAFPID-0017",
@@ -597,7 +593,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC ET 200S IM 151-8F PN/DP CPU (6ES7151-8FB01-0AB0)",
                   "product_id": "CSAFPID-0018",
@@ -649,7 +645,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIMATIC ET 200SP IM 155-6 PN HF (6ES7155-6AU00-0CN0)",
                   "product_id": "CSAFPID-0021",
@@ -668,7 +664,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIMATIC ET 200SP IM 155-6 PN/2 HF (6ES7155-6AU01-0CN0)",
                   "product_id": "CSAFPID-0022",
@@ -687,7 +683,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIMATIC ET 200SP IM 155-6 PN/3 HF (6ES7155-6AU30-0CN0)",
                   "product_id": "CSAFPID-0023",
@@ -725,7 +721,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=4.2",
+                "name": "vers:all/>=4.2",
                 "product": {
                   "name": "SIMATIC PN/PN Coupler (6ES7158-3AD10-0XA0)",
                   "product_id": "CSAFPID-0025",
@@ -744,7 +740,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.3.19",
+                "name": "vers:all/<V3.3.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 314C-2 PN/DP (6ES7314-6EH04-0AB0)",
                   "product_id": "CSAFPID-0026",
@@ -763,7 +759,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 315-2 PN/DP (6ES7315-2EH14-0AB0)",
                   "product_id": "CSAFPID-0027",
@@ -782,7 +778,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 315F-2 PN/DP (6ES7315-2FJ14-0AB0)",
                   "product_id": "CSAFPID-0028",
@@ -801,7 +797,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 315T-3 PN/DP (6ES7315-7TJ10-0AB0)",
                   "product_id": "CSAFPID-0029",
@@ -820,7 +816,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 317-2 PN/DP (6ES7317-2EK14-0AB0)",
                   "product_id": "CSAFPID-0030",
@@ -839,7 +835,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 317F-2 PN/DP (6ES7317-2FK14-0AB0)",
                   "product_id": "CSAFPID-0031",
@@ -858,7 +854,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 317T-3 PN/DP (6ES7317-7TK10-0AB0)",
                   "product_id": "CSAFPID-0032",
@@ -877,7 +873,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 317TF-3 PN/DP (6ES7317-7UL10-0AB0)",
                   "product_id": "CSAFPID-0033",
@@ -896,7 +892,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 319-3 PN/DP (6ES7318-3EL01-0AB0)",
                   "product_id": "CSAFPID-0034",
@@ -915,7 +911,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIMATIC S7-300 CPU 319F-3 PN/DP (6ES7318-3FL01-0AB0)",
                   "product_id": "CSAFPID-0035",
@@ -1029,7 +1025,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V6.0.10",
+                "name": "vers:all/<V6.0.10",
                 "product": {
                   "name": "SIMATIC S7-400 H V6 CPU family (incl. SIPLUS variants)",
                   "product_id": "CSAFPID-0041"
@@ -1043,7 +1039,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V8.2.3",
+                "name": "vers:all/<V8.2.3",
                 "product": {
                   "name": "SIMATIC S7-410 V8 CPU family (incl. SIPLUS variants)",
                   "product_id": "CSAFPID-0042"
@@ -1057,7 +1053,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V10.1.1",
+                "name": "vers:all/<V10.1.1",
                 "product": {
                   "name": "SIMATIC S7-410 V10 CPU family (incl. SIPLUS variants)",
                   "product_id": "CSAFPID-0043"
@@ -1071,7 +1067,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2.0.0",
+                "name": "vers:all/<V2.0.0",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
                   "product_id": "CSAFPID-0044"
@@ -1085,7 +1081,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V1.1.10",
+                "name": "vers:all/<V1.1.10",
                 "product": {
                   "name": "SIMATIC TDC CP51M1",
                   "product_id": "CSAFPID-0045"
@@ -1099,7 +1095,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V1.2.1",
+                "name": "vers:all/<V1.2.1",
                 "product": {
                   "name": "SIMATIC TDC CPU555",
                   "product_id": "CSAFPID-0046"
@@ -1165,7 +1161,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.7.14_with_Ethernet_interface",
+                "name": "vers:all/<V4.7.14",
                 "product": {
                   "name": "SINAMICS G110M",
                   "product_id": "CSAFPID-0050"
@@ -1179,7 +1175,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V4.7.14_with_Ethernet_interface",
+                "name": "vers:all/<V4.7.14",
                 "product": {
                   "name": "SINAMICS G115D",
                   "product_id": "CSAFPID-0051"
@@ -1207,7 +1203,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V5.2.3.13",
+                "name": "vers:all/<V5.2.3.13",
                 "product": {
                   "name": "SINAMICS G130",
                   "product_id": "CSAFPID-0053"
@@ -1221,7 +1217,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V5.2.3.13",
+                "name": "vers:all/<V5.2.3.13",
                 "product": {
                   "name": "SINAMICS G150",
                   "product_id": "CSAFPID-0054"
@@ -1235,7 +1231,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All_versions_with_Ethernet_interface",
+                "name": "vers:all/*",
                 "product": {
                   "name": "SINAMICS S110",
                   "product_id": "CSAFPID-0055"
@@ -1263,7 +1259,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V5.2.3.13",
+                "name": "vers:all/<V5.2.3.13",
                 "product": {
                   "name": "SINAMICS S150",
                   "product_id": "CSAFPID-0057"
@@ -1291,7 +1287,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V1.04.04_with_Ethernet_interface",
+                "name": "vers:all/<V1.04.04",
                 "product": {
                   "name": "SINAMICS V90",
                   "product_id": "CSAFPID-0059"
@@ -1305,7 +1301,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-2AC0)",
                   "product_id": "CSAFPID-0060",
@@ -1324,7 +1320,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-7AC0)",
                   "product_id": "CSAFPID-0061",
@@ -1343,7 +1339,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200MP IM 155-5 PN HF T1 RAIL (6AG2155-5AA00-1AC0)",
                   "product_id": "CSAFPID-0062",
@@ -1362,7 +1358,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIPLUS ET 200S IM 151-8 PN/DP CPU (6AG1151-8AB01-7AB0)",
                   "product_id": "CSAFPID-0063",
@@ -1381,7 +1377,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIPLUS ET 200S IM 151-8F PN/DP CPU (6AG1151-8FB01-2AB0)",
                   "product_id": "CSAFPID-0064",
@@ -1400,7 +1396,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU00-2CN0)",
                   "product_id": "CSAFPID-0065",
@@ -1419,7 +1415,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU00-4CN0)",
                   "product_id": "CSAFPID-0066",
@@ -1438,7 +1434,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-2CN0)",
                   "product_id": "CSAFPID-0067",
@@ -1457,7 +1453,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-7CN0)",
                   "product_id": "CSAFPID-0068",
@@ -1476,7 +1472,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU00-1CN0)",
                   "product_id": "CSAFPID-0069",
@@ -1495,7 +1491,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU01-1CN0)",
                   "product_id": "CSAFPID-0070",
@@ -1514,7 +1510,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=V4.2.0",
+                "name": "vers:all/>=V4.2.0",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF TX RAIL (6AG2155-6AU01-4CN0)",
                   "product_id": "CSAFPID-0071",
@@ -1590,7 +1586,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=4.2",
+                "name": "vers:all/>=4.2",
                 "product": {
                   "name": "SIPLUS NET PN/PN Coupler (6AG2158-3AD10-4XA0)",
                   "product_id": "CSAFPID-0075",
@@ -1609,7 +1605,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.3.19",
+                "name": "vers:all/<V3.3.19",
                 "product": {
                   "name": "SIPLUS S7-300 CPU 314C-2 PN/DP (6AG1314-6EH04-7AB0)",
                   "product_id": "CSAFPID-0076",
@@ -1628,7 +1624,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIPLUS S7-300 CPU 315-2 PN/DP (6AG1315-2EH14-7AB0)",
                   "product_id": "CSAFPID-0077",
@@ -1647,7 +1643,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIPLUS S7-300 CPU 315F-2 PN/DP (6AG1315-2FJ14-2AB0)",
                   "product_id": "CSAFPID-0078",
@@ -1666,7 +1662,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIPLUS S7-300 CPU 317-2 PN/DP (6AG1317-2EK14-7AB0)",
                   "product_id": "CSAFPID-0079",
@@ -1685,7 +1681,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.2.19",
+                "name": "vers:all/<V3.2.19",
                 "product": {
                   "name": "SIPLUS S7-300 CPU 317F-2 PN/DP (6AG1317-2FK14-2AB0)",
                   "product_id": "CSAFPID-0080",
@@ -1944,9 +1940,6 @@
             "CSAFPID-0021",
             "CSAFPID-0022",
             "CSAFPID-0023",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
             "CSAFPID-0024",
             "CSAFPID-0025",
             "CSAFPID-0036",
@@ -2036,11 +2029,32 @@
           "category": "vendor_fix",
           "details": "Update to V5.1.2 or later version",
           "product_ids": [
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.1.2 or later version",
+          "product_ids": [
             "CSAFPID-0003",
             "CSAFPID-0008",
             "CSAFPID-0007",
             "CSAFPID-0010",
             "CSAFPID-0011"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.1.2 or later version",
+          "product_ids": [
+            "CSAFPID-0004"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.1.2 or later version",
+          "product_ids": [
+            "CSAFPID-0006"
           ]
         },
         {

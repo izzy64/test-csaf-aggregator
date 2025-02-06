@@ -22,6 +22,12 @@ for rolie_name, rolie_url in rolie_feeds.items():
                     if csaf:
                         with open(f"./{rolie_name}/{entry['id']}.json", "w") as outfile: # Should there be additional folders by publication year?
                             json.dump(csaf, outfile, indent=2, sort_keys=True)
+                    for link in entry["link"]:
+                        if link["rel"] == "signature":
+                            ghhg
+                        if link["rel"] == "hash":
+                            ghhg
+
             else:
                 print("ROLIE missing critical information")
     except Exception as e:

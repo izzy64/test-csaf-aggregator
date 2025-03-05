@@ -2,36 +2,58 @@ import requests
 import json
 import os 
 
-from rolie_config import rolie_feeds
+try:
+    with open("./aggregator.json", "r") as agg:
+        contents = agg.read()
+        aggregator = json.loads(contents)
+except:
+    print("aggregator.json not found")
 
-for rolie_name, rolie_url in rolie_feeds.items():
-    try:
-        rolie_response = requests.get(
-            rolie_url, allow_redirects=True, verify=True
+for provider in aggregator["csaf_providers"]:
+    pm_url = provider["metadata"]["url"]
+    publisher_name = provider["metadata"]["publisher"]["name"]
+    pm_response = requests.get(
+            pm_url, allow_redirects=True, verify=True
         )
-        rolie = rolie_response.json()["feed"]
-        if rolie:
-            if not os.path.exists("./"+rolie_name): 
-                os.makedirs("./"+rolie_name)
-            with open(f"./{rolie_name}/{rolie['id']}.json", "w") as outfile: # Should there be additional folders by publication year?
-                json.dump(rolie, outfile, indent=2, sort_keys=True)
-            if rolie["entry"]:
-                for entry in rolie["entry"]:
-                    csaf_response = requests.get(entry["content"]["src"])
-                    csaf = csaf_response.json()
-                    if csaf:
-                        with open(f"./{rolie_name}/{entry['id']}.json", "w") as outfile: # Should there be additional folders by publication year?
-                            json.dump(csaf, outfile, indent=2, sort_keys=True)
-                    for link in entry["link"]:
-                        if link["rel"] == "signature":
-                            ghhg
-                        if link["rel"] == "hash":
-                            ghhg
+    provider_metadata = pm_response.json()
+    # save the provider metadata
+    if not os.path.exists("./"+publisher_name): 
+        os.makedirs("./"+publisher_name)
+    with open(f"./{publisher_name}/provider_metadata.json", "w") as outfile:
+        json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
 
-            else:
-                print("ROLIE missing critical information")
-    except Exception as e:
-        print(e)
+    # scrape the rolie feeds
+    for distro in provider_metadata["distributions"]:
+        if "rolie" in distro.keys():
+            for feed in distro["rolie"]["feeds"]:
+                try:
+                    rolie_response = requests.get(
+                        feed["url"], allow_redirects=True, verify=True
+                    )
+                    rolie = rolie_response.json()["feed"]
+                    if rolie:
+                        with open(f"./{publisher_name}/{rolie['id']}/{rolie['id']}.json", "w") as outfile:
+                            json.dump(rolie, outfile, indent=2, sort_keys=True)
+                        if rolie["entry"]:
+                            for entry in rolie["entry"]:
+                                csaf_response = requests.get(entry["content"]["src"])
+                                csaf = csaf_response.json()
+                                if csaf:
+                                    with open(f"./{publisher_name}/{rolie['id']}/{entry['id']}.json", "w") as outfile:
+                                        json.dump(csaf, outfile, indent=2, sort_keys=True)
+                                # for link in entry["link"]:
+                                #     if link["rel"] == "signature":
+                                #         # save_sig()
+                                #     if link["rel"] == "hash":
+                                #         # save_hash()
+
+                        else:
+                            print("ROLIE missing critical information")
+                except Exception as e:
+                    print(e)
+                
+
+
 
 
 

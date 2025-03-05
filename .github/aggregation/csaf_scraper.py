@@ -25,7 +25,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     path_start = "./"+publisher_name
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
-    aggregator["csaf_providers"][i]["mirrors"][0] = f"https://raw.githubusercontent.com/{github_owner}/{repo_name}/main/{publisher_name}/provider_metadata.json"
+    aggregator["csaf_providers"][i]["mirrors"][0] = f"https://raw.githubusercontent.com/{github_owner}/{repo_name}/main/{publisher_name}/provider_metadata.json".replace(" ", "%20")
 
     # scrape the rolie feeds
     for distro in provider_metadata["distributions"]:

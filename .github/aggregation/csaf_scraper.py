@@ -12,7 +12,7 @@ try:
 except:
     print("aggregator.json not found")
 
-for i, provider in ennumerate(aggregator["csaf_providers"]):
+for i, provider in enumerate(aggregator["csaf_providers"]):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
     pm_response = requests.get(

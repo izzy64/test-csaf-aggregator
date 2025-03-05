@@ -19,7 +19,8 @@ for provider in aggregator["csaf_providers"]:
     # save the provider metadata
     if not os.path.exists("./"+publisher_name): 
         os.makedirs("./"+publisher_name)
-    with open(f"./{publisher_name}/provider_metadata.json", "w") as outfile:
+    path_start = "./"+publisher_name
+    with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
 
     # scrape the rolie feeds
@@ -32,14 +33,15 @@ for provider in aggregator["csaf_providers"]:
                     )
                     rolie = rolie_response.json()["feed"]
                     if rolie:
-                        with open(f"./{publisher_name}/{rolie['id']}/{rolie['id']}.json", "w") as outfile:
+                        path_start = path_start+"/"+rolie['id']
+                        with open(f"{path_start}/{rolie['id']}.json", "w") as outfile:
                             json.dump(rolie, outfile, indent=2, sort_keys=True)
                         if rolie["entry"]:
                             for entry in rolie["entry"]:
                                 csaf_response = requests.get(entry["content"]["src"])
                                 csaf = csaf_response.json()
                                 if csaf:
-                                    with open(f"./{publisher_name}/{rolie['id']}/{entry['id']}.json", "w") as outfile:
+                                    with open(f"{path_start}/{entry['id']}.json", "w") as outfile:
                                         json.dump(csaf, outfile, indent=2, sort_keys=True)
                                 # for link in entry["link"]:
                                 #     if link["rel"] == "signature":

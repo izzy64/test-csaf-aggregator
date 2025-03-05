@@ -35,15 +35,15 @@ for provider in aggregator["csaf_providers"]:
                     if rolie:
                         if not os.path.exists(path_start+"/"+rolie['id']): 
                             os.makedirs(path_start+"/"+rolie['id'])
-                        path_start = path_start+"/"+rolie['id']
-                        with open(f"{path_start}/{rolie['id']}.json", "w") as outfile:
+                        feed_path = path_start+"/"+rolie['id']
+                        with open(f"{feed_path}/{rolie['id']}.json", "w") as outfile:
                             json.dump(rolie, outfile, indent=2, sort_keys=True)
                         if rolie["entry"]:
                             for entry in rolie["entry"]:
                                 csaf_response = requests.get(entry["content"]["src"])
                                 csaf = csaf_response.json()
                                 if csaf:
-                                    with open(f"{path_start}/{entry['id']}.json", "w") as outfile:
+                                    with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
                                         json.dump(csaf, outfile, indent=2, sort_keys=True)
                                 # for link in entry["link"]:
                                 #     if link["rel"] == "signature":

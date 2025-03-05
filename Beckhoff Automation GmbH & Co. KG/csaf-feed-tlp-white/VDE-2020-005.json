@@ -1,0 +1,180 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "names": [
+          "Martin Menschner"
+        ],
+        "organization": "Rhebo GmbH",
+        "summary": "support and efforts within coordinated\ndisclousure."
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-GB",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The coupler\u2019s function could be inhibited by an attack.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "The coupler\u2019s function could be inhibited by a denial of service attack. The coupler will not recover after the attack has stopped.\nA reboot of the device recovers the operation.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Beckhoff will not change this behaviour.\nCustomers should configure a perimeter firewall to block traffic from untrusted networks to the device.",
+        "title": "Mitigation"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-securityincident@beckhoff.com",
+      "name": "Beckhoff Automation GmbH & Co. KG",
+      "namespace": "https://www.beckhoff.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Beckhoff Automation",
+        "url": "https://certvde.com/en/advisories/vendor/beckhoffautomation/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2020-005: Beckhoff: BK9000 couplers - Denial of service inhibits function - HTML",
+        "url": "https://certvde.com/de/advisories/VDE-2020-005/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2020-005: Beckhoff: BK9000 couplers - Denial of service inhibits function - CSAF",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2020/VDE-2020-005.json"
+      }
+    ],
+    "title": "Beckhoff: BK9000 couplers - Denial of service inhibits function",
+    "tracking": {
+      "aliases": [
+        "VDE-2020-005"
+      ],
+      "current_release_date": "2020-03-10T13:17:00.000Z",
+      "generator": {
+        "date": "2024-11-13T14:24:47.897Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.13"
+        }
+      },
+      "id": "VDE-2020-005",
+      "initial_release_date": "2020-03-10T13:17:00.000Z",
+      "revision_history": [
+        {
+          "date": "2020-03-10T13:17:00.000Z",
+          "number": "1",
+          "summary": "Initial revision."
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "all versions",
+                    "product": {
+                      "name": "Hardware BK9000 all versions",
+                      "product_id": "CSAFPID-11001"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "BK9000"
+              }
+            ],
+            "category": "product_family",
+            "name": "Hardware"
+          }
+        ],
+        "category": "product_family",
+        "name": "Beckhoff Automation"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-9464",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A Denial-of-Service vulnerability exists in BECKHOFF Ethernet TCP/IP Bus Coupler BK9000. After an attack has occurred, the device's functionality can be restored by rebooting.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-11001"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Beckhoff will not change this behaviour.\nCustomers should configure a perimeter firewall to block traffic from untrusted networks to the device.",
+          "product_ids": [
+            "CSAFPID-11001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-11001"
+          ]
+        }
+      ],
+      "title": "CVE-2020-9464"
+    }
+  ]
+}

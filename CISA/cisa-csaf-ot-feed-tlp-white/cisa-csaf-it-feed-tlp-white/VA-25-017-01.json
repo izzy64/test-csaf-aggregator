@@ -1,0 +1,191 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "All information products included in [https://github.com/cisagov/CSAF/tree/develop/csaf_files/IT/white](https://github.com/cisagov/CSAF/tree/develop/csaf_files/IT/white) are provided \\\"as is\\\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see [https://us-cert.cisa.gov/tlp/](https://us-cert.cisa.gov/tlp/).",
+        "title": "Legal Notice"
+      },
+      {
+        "category": "other",
+        "text": "United States",
+        "title": "Countries and Areas Deployed"
+      },
+      {
+        "category": "other",
+        "text": "Information Technology",
+        "title": "Critical Infrastructure Sectors"
+      },
+      {
+        "category": "summary",
+        "text": "TrueFiling trusts some client-controlled identifiers passed in URL requests to retrieve information. Platform users must self-register for an account, and once authenticated, could manipulate those identifiers to gain partial access to case information and the ability to partially change user access to case information.",
+        "title": "Risk Evaluation"
+      },
+      {
+        "category": "general",
+        "text": "This vulnerability was addressed in version 3.1.112.19 and all instances were updated by 2024-11-08. No user action is required.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "other",
+        "text": "Nashville, TN, United States",
+        "title": "Company Headquarters Location"
+      }
+    ],
+    "publisher": {
+      "category": "coordinator",
+      "contact_details": "https://www.cisa.gov/report",
+      "issuing_authority": "CISA",
+      "name": "CISA",
+      "namespace": "https://www.cisa.gov/"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "Vulnerability Advisory VA-25-017-01 CSAF",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2025/va-25-017-01.json"
+      }
+    ],
+    "title": "TrueFiling authorization bypass via user-controlled keys",
+    "tracking": {
+      "current_release_date": "2025-01-17T00:00:00Z",
+      "generator": {
+        "date": "2025-01-17T05:10:36Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.16"
+        }
+      },
+      "id": "VA-25-017-01",
+      "initial_release_date": "2025-01-17T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-01-17T00:00:00Z",
+          "number": "1.0.0",
+          "summary": "Initial publication"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.1.112.19",
+                "product": {
+                  "name": "i3 Verticals TrueFiling 0 < 3.1.112.19",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.1.112.19",
+                "product": {
+                  "name": "i3 Verticals TrueFiling 3.1.112.19",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TrueFiling"
+          }
+        ],
+        "category": "vendor",
+        "name": "i3 Verticals"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Alison Breacher"
+          ],
+          "urls": [
+            "https://infosec.exchange/@abreacher"
+          ]
+        }
+      ],
+      "cve": "CVE-2024-11146",
+      "cwe": {
+        "id": "CWE-807",
+        "name": "Reliance on Untrusted Inputs in a Security Decision"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "TrueFiling is a collaborative, web-based electronic filing system where attorneys, paralegals, court reporters and self-represented filers collect public legal documentation into cases. TrueFiling is an entirely cloud-hosted application. Prior to version 3.1.112.19, TrueFiling trusted some client-controlled identifiers passed in URL requests to retrieve information. Platform users must self-register for an account, and once authenticated, could manipulate those identifiers to gain partial access to case information and the ability to partially change user access to case information. This vulnerability was addressed in version 3.1.112.19 and all instances were updated by 2024-11-08.",
+          "title": "Description"
+        },
+        {
+          "category": "details",
+          "text": "SSVCv2/E:N/A:Y/T:P/2025-01-17T04:58:23Z/",
+          "title": "SSVC"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002"
+        ],
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "raw.githubusercontent.com",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2024/va-25-017-01.json"
+        }
+      ],
+      "release_date": "2025-01-17T00:00:00Z",
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "date": "2024-11-08T05:00:00Z",
+          "details": "This vulnerability was addressed in version 3.1.112.19 and all instances were updated by 2024-11-08.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "date": "2024-11-08T05:00:00Z",
+          "details": "This vulnerability was addressed in version 3.1.112.19 and all instances were updated by 2024-11-08.",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "title": "TrueFiling authorization bypass via user-controlled keys"
+    }
+  ]
+}

@@ -33,6 +33,8 @@ for provider in aggregator["csaf_providers"]:
                     )
                     rolie = rolie_response.json()["feed"]
                     if rolie:
+                        if not os.path.exists(path_start+"/"+rolie['id']): 
+                            os.makedirs(path_start+"/"+rolie['id'])
                         path_start = path_start+"/"+rolie['id']
                         with open(f"{path_start}/{rolie['id']}.json", "w") as outfile:
                             json.dump(rolie, outfile, indent=2, sort_keys=True)

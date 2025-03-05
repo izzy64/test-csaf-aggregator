@@ -1,6 +1,9 @@
 import requests
 import json
-import os 
+import os
+
+github_owner = "izzy64"
+repo_name = "test-csaf-aggregator"
 
 try:
     with open("./aggregator.json", "r") as agg:
@@ -9,7 +12,7 @@ try:
 except:
     print("aggregator.json not found")
 
-for provider in aggregator["csaf_providers"]:
+for i, provider in ennumerate(aggregator["csaf_providers"]):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
     pm_response = requests.get(
@@ -22,6 +25,7 @@ for provider in aggregator["csaf_providers"]:
     path_start = "./"+publisher_name
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
+    aggregator["csaf_providers"][i]["mirrors"][0] = f"https://raw.githubusercontent.com/{github_owner}/{repo_name}/main/{publisher_name}/provider_metadata.json"
 
     # scrape the rolie feeds
     for distro in provider_metadata["distributions"]:
@@ -55,7 +59,9 @@ for provider in aggregator["csaf_providers"]:
                             print("ROLIE missing critical information")
                 except Exception as e:
                     print(e)
-                
+
+with open("./aggregator.json", "w") as outfile:
+    json.dump(aggregator, outfile, indent=2, sort_keys=True)           
 
 
 

@@ -49,11 +49,13 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                 if csaf:
                                     with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
                                         json.dump(csaf, outfile, indent=2, sort_keys=True)
-                                # for link in entry["link"]:
-                                #     if link["rel"] == "signature":
-                                #         # save_sig()
-                                #     if link["rel"] == "hash":
-                                #         # save_hash()
+                                for link in entry["link"]:
+                                    if link["rel"] in ["hash", "signature"]:
+                                        link_response = requests.get(
+                                            link["href"], allow_redirects=True, verify=True
+                                        ).text
+                                        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                                            outfile.write(link_response)
 
                         else:
                             print("ROLIE missing critical information")

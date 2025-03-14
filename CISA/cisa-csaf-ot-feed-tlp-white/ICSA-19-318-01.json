@@ -2,8 +2,8 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "Siemens ProductCERT",
-        "summary": "reporting this vulnerability to CISA."
+        "organization": "Armis",
+        "summary": "reporting this vulnerability to Siemens."
       }
     ],
     "category": "csaf_security_advisory",
@@ -34,7 +34,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -49,7 +49,7 @@
       },
       {
         "category": "other",
-        "text": "Multiple",
+        "text": "Critical Manufacturing, Transportation Systems, Energy, Healthcare and Public Health, Financial Services, Government Services and Facilities",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -122,16 +122,6 @@
       },
       {
         "category": "self",
-        "summary": "SSA-434032: Input Validation Vulnerability in the DHCP Client of Nucleus RTOS - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-434032.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-434032: Input Validation Vulnerability in the DHCP Client of Nucleus RTOS - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-434032.txt"
-      },
-      {
-        "category": "self",
         "summary": "ICS Advisory ICSA-19-318-01 JSON",
         "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2019/icsa-19-318-01.json"
       },
@@ -173,8 +163,9 @@
     ],
     "title": "Siemens Mentor Nucleus Networking Module",
     "tracking": {
-      "current_release_date": "2024-02-13T00:00:00.000000Z",
+      "current_release_date": "2025-03-11T00:00:00.000000Z",
       "generator": {
+        "date": "2025-03-06T09:04:00.000000Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -194,10 +185,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Consolidated list of products; renamed Capital VSTAR to Capital Embedded AR Classic; added fix and mitigation for Capital Embedded AR Classic; added CVSSv4.0 vector and score"
+        },
+        {
+          "date": "2025-03-11T00:00:00.000000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Updated remediation of Capital Embedded AR Classic 431-422 as no fix planned"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -222,7 +219,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2303",
+                "name": "vers:all/<V2303",
                 "product": {
                   "name": "Capital Embedded AR Classic R20-11",
                   "product_id": "CSAFPID-0002"
@@ -250,7 +247,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V2017.02.3",
+                "name": "vers:all/<V2017.02.3",
                 "product": {
                   "name": "Nucleus ReadyStart V3",
                   "product_id": "CSAFPID-0004"
@@ -341,14 +338,8 @@
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
+            "CSAFPID-0001",
             "CSAFPID-0003"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "CSAFPID-0001"
           ]
         },
         {

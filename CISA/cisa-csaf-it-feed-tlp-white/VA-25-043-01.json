@@ -26,12 +26,12 @@
       },
       {
         "category": "summary",
-        "text": "Ivanti Connect Secure and Ivanti Policy Secure contain a vulnerability that allows a remote, authenticated attacker to write arbitrary files. These vulnerabilities are addressed in Ivanti Connect Secure version 22.7R2.6 and Ivanti Policy Secure version 22.7R1.3.",
+        "text": "Ivanti Connect Secure and Ivanti Policy Secure contain a vulnerability that allows a remote, authenticated attacker to write arbitrary files. These vulnerabilities are addressed in Ivanti Connect Secure version 22.7R2.4 and Ivanti Policy Secure version 22.7R1.3.",
         "title": "Risk Evaluation"
       },
       {
         "category": "general",
-        "text": "These vulnerabilities are addressed by Ivanti Connect Secure version 22.7R2.6 and Ivanti Policy Secure version 22.7R1.3. The latest version of these products can be downloaded from the [Ivanti Licensing Portal](https://portal.ivanti.com/).",
+        "text": "These vulnerabilities are addressed by Ivanti Connect Secure version 22.7R2.4 and Ivanti Policy Secure version 22.7R1.3. The latest version of these products can be downloaded from the [Ivanti Licensing Portal](https://portal.ivanti.com/).",
         "title": "Recommended Practices"
       },
       {
@@ -56,7 +56,7 @@
     ],
     "title": "Ivanti Connect Secure and Ivanti Policy Secure external file control vulnerability",
     "tracking": {
-      "current_release_date": "2025-02-12T19:44:47Z",
+      "current_release_date": "2025-02-20T00:00:00Z",
       "generator": {
         "engine": {
           "name": "VINCE-NT",
@@ -67,13 +67,18 @@
       "initial_release_date": "2025-02-12T19:44:47Z",
       "revision_history": [
         {
+          "date": "2025-02-20T00:00:00Z",
+          "number": "1.0.1",
+          "summary": "Updated remedation information"
+        },
+        {
           "date": "2025-02-12T19:44:47Z",
           "number": "1.0.0",
-          "summary": "Initial release"
+          "summary": "Initial publication"
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -84,17 +89,17 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<22.7R2.6",
+                "name": "<22.7R2.4",
                 "product": {
-                  "name": "Ivanti Connect Secure <22.7R2.6",
+                  "name": "Ivanti Connect Secure <22.7R2.4",
                   "product_id": "CSAFPID-0001"
                 }
               },
               {
                 "category": "product_version",
-                "name": "22.7R2.6",
+                "name": "22.7R2.4",
                 "product": {
-                  "name": "Ivanti Connect Secure 22.7R2.6",
+                  "name": "Ivanti Connect Secure 22.7R2.4",
                   "product_id": "CSAFPID-0002"
                 }
               }
@@ -148,7 +153,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "Ivanti Connect Secure before version 22.7R2.6 and Ivanti Policy Secure before version 22.7R1.3 allow a remote attacker with administrative privileges in the web management interface to upload and write arbitrary files in the context of the underlying operating system.",
+          "text": "Ivanti Connect Secure before version 22.7R2.4 and Ivanti Policy Secure before version 22.7R1.3 allow a remote attacker with administrative privileges in the web management interface to upload and write arbitrary files in the context of the underlying operating system.",
           "title": "Description"
         },
         {
@@ -159,12 +164,12 @@
       ],
       "product_status": {
         "fixed": [
-          "CSAFPID-0004",
-          "CSAFPID-0002"
+          "CSAFPID-0002",
+          "CSAFPID-0004"
         ],
         "known_affected": [
-          "CSAFPID-0003",
-          "CSAFPID-0001"
+          "CSAFPID-0001",
+          "CSAFPID-0003"
         ]
       },
       "references": [
@@ -176,6 +181,24 @@
       ],
       "release_date": "2025-02-11T00:00:00Z",
       "remediations": [
+        {
+          "category": "vendor_fix",
+          "date": "2025-02-11T05:00:00Z",
+          "details": "Fixed in 22.7R2.4. Ivanti recommends upgrading to the latest version at https://portal.ivanti.com/.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://forums.ivanti.com/s/article/February-Security-Advisory-Ivanti-Connect-Secure-ICS-Ivanti-Policy-Secure-IPS-and-Ivanti-Secure-Access-Client-ISAC-Multiple-CVEs?language=en_US"
+        },
+        {
+          "category": "vendor_fix",
+          "date": "2025-02-11T05:00:00Z",
+          "details": "Fixed in 22.7R2.4. Ivanti recommends upgrading to the latest version at https://portal.ivanti.com/",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "url": "https://forums.ivanti.com/s/article/February-Security-Advisory-Ivanti-Connect-Secure-ICS-Ivanti-Policy-Secure-IPS-and-Ivanti-Secure-Access-Client-ISAC-Multiple-CVEs?language=en_US"
+        },
         {
           "category": "vendor_fix",
           "date": "2025-02-11T05:00:00Z",
@@ -193,24 +216,6 @@
             "CSAFPID-0004"
           ],
           "url": "https://forums.ivanti.com/s/article/February-Security-Advisory-Ivanti-Connect-Secure-ICS-Ivanti-Policy-Secure-IPS-and-Ivanti-Secure-Access-Client-ISAC-Multiple-CVEs?language=en_US"
-        },
-        {
-          "category": "vendor_fix",
-          "date": "2025-02-11T05:00:00Z",
-          "details": "Ivanti recommends upgrading to version 22.7R2.6 at https://portal.ivanti.com/",
-          "product_ids": [
-            "CSAFPID-0001"
-          ],
-          "url": "https://forums.ivanti.com/s/article/February-Security-Advisory-Ivanti-Connect-Secure-ICS-Ivanti-Policy-Secure-IPS-and-Ivanti-Secure-Access-Client-ISAC-Multiple-CVEs?language=en_US"
-        },
-        {
-          "category": "vendor_fix",
-          "date": "2025-02-11T05:00:00Z",
-          "details": "Ivanti recommends upgrading to version 22.7R2.6 at https://portal.ivanti.com/",
-          "product_ids": [
-            "CSAFPID-0002"
-          ],
-          "url": "https://forums.ivanti.com/s/article/February-Security-Advisory-Ivanti-Connect-Secure-ICS-Ivanti-Policy-Secure-IPS-and-Ivanti-Secure-Access-Client-ISAC-Multiple-CVEs?language=en_US"
         }
       ],
       "scores": [
@@ -222,8 +227,8 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0003",
-            "CSAFPID-0001"
+            "CSAFPID-0001",
+            "CSAFPID-0003"
           ]
         }
       ],

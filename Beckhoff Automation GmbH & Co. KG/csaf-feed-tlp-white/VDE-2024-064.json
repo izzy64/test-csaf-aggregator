@@ -61,12 +61,12 @@
       "category": "vendor",
       "contact_details": "product-securityincident@beckhoff.com",
       "name": "Beckhoff Automation GmbH & Co. KG",
-      "namespace": "https://www.beckhoff.com/"
+      "namespace": "https://www.beckhoff.com"
     },
     "references": [
       {
         "category": "self",
-        "summary": "Beckhoff Security Advisory 2024-005: Local command injection via TwinCAT Package Manager - PDF version",
+        "summary": "Beckhoff Security Advisory 2024-005: Local command injection via TwinCAT Package Manager - PDF",
         "url": "https://download.beckhoff.com/download/Document/product-security/Advisories/advisory-2024-005.pdf"
       },
       {
@@ -81,13 +81,13 @@
       },
       {
         "category": "self",
-        "summary": "VDE-2024-064: Beckhoff: Local command injection via TwinCAT Package Manager - CSAF version",
+        "summary": "VDE-2024-064: Beckhoff: Local command injection via TwinCAT Package Manager - CSAF",
         "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/vde-2024-064.json"
       },
       {
         "category": "self",
-        "summary": "VDE-2024-064: Beckhoff: Local command injection via TwinCAT Package Manager - HTML version",
-        "url": "https://certvde.com/en/advisories/VDE-2024-064"
+        "summary": "VDE-2024-064: Beckhoff: Local command injection via TwinCAT Package Manager - HTML",
+        "url": "https://certvde.com/en/advisories/vde-2024-064"
       }
     ],
     "title": "Beckhoff: Local command injection via TwinCAT Package Manager",
@@ -97,10 +97,10 @@
       ],
       "current_release_date": "2024-10-31T11:00:00.000Z",
       "generator": {
-        "date": "2024-10-31T07:27:29.861Z",
+        "date": "2025-01-16T10:32:56.587Z",
         "engine": {
           "name": "Secvisogram",
-          "version": "2.5.13"
+          "version": "2.5.16"
         }
       },
       "id": "VDE-2024-064",
@@ -110,10 +110,15 @@
           "date": "2024-10-31T11:00:00.000Z",
           "number": "1",
           "summary": "initial revision"
+        },
+        {
+          "date": "2025-01-16T10:30:00.000Z",
+          "number": "2",
+          "summary": "Fix: list of branches, references"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -123,28 +128,34 @@
           {
             "branches": [
               {
-                "category": "product_version_range",
-                "name": "< 1.0.603.0",
-                "product": {
-                  "name": "TwinCAT Package Manager < 1.0.603.0",
-                  "product_id": "CSAFPID-51001"
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "1.0.603.0",
-                "product": {
-                  "name": "TwinCAT Package Manager 1.0.603.0",
-                  "product_id": "CSAFPID-52001"
-                }
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "< 1.0.603.0",
+                    "product": {
+                      "name": "TwinCAT Package Manager < 1.0.603.0",
+                      "product_id": "CSAFPID-51001"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "1.0.603.0",
+                    "product": {
+                      "name": "TwinCAT Package Manager 1.0.603.0",
+                      "product_id": "CSAFPID-52001"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "TwinCAT Package Manager"
               }
             ],
-            "category": "product_name",
-            "name": "TwinCAT Package Manager"
+            "category": "product_family",
+            "name": "Software"
           }
         ],
-        "category": "product_family",
-        "name": "Software"
+        "category": "vendor",
+        "name": "Beckhoff"
       }
     ]
   },

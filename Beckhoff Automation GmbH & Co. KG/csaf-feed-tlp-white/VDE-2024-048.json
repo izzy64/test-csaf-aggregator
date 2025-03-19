@@ -80,7 +80,7 @@
       {
         "category": "self",
         "summary": "VDE-2024-048: Beckhoff: Improper neutralization of input in IPC-Diagnostics-www package included in TwinCAT/BSD operating system - HTML",
-        "url": "https://certvde.com/en/advisories/VDE-2024-048"
+        "url": "https://certvde.com/en/advisories/vde-2024-048"
       },
       {
         "category": "external",
@@ -95,7 +95,7 @@
       {
         "category": "self",
         "summary": "VDE-2024-048: Beckhoff: Improper neutralization of input in IPC-Diagnostics-www package included in TwinCAT/BSD operating system - CSAF",
-        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/VDE-2024-048.json"
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/vde-2024-048.json"
       }
     ],
     "title": "Beckhoff: Improper neutralization of input in IPC-Diagnostics-www package included in TwinCAT/BSD operating system",
@@ -105,10 +105,10 @@
       ],
       "current_release_date": "2024-08-27T08:00:00.000Z",
       "generator": {
-        "date": "2024-08-27T09:53:45.867Z",
+        "date": "2025-01-16T10:22:56.269Z",
         "engine": {
           "name": "Secvisogram",
-          "version": "2.5.11"
+          "version": "2.5.16"
         }
       },
       "id": "VDE-2024-048",
@@ -123,10 +123,15 @@
           "date": "2024-11-06T11:27:01.000Z",
           "number": "2",
           "summary": "Fix: correct certvde domain, added self-reference"
+        },
+        {
+          "date": "2025-01-16T10:20:00.000Z",
+          "number": "3",
+          "summary": "Fix: list of branches"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -136,50 +141,56 @@
           {
             "branches": [
               {
-                "category": "product_version_range",
-                "name": "< 2.1.1.0",
-                "product": {
-                  "name": "IPC-Diagnostics-www package < 2.1.1.0",
-                  "product_id": "CSAFPID-51001"
-                }
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "< 2.1.1.0",
+                    "product": {
+                      "name": "IPC-Diagnostics-www package < 2.1.1.0",
+                      "product_id": "CSAFPID-51001"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.1.1.0",
+                    "product": {
+                      "name": "IPC-Diagnostics-www package 2.1.1.0",
+                      "product_id": "CSAFPID-52001"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "IPC-Diagnostics-www package"
               },
               {
-                "category": "product_version",
-                "name": "2.1.1.0",
-                "product": {
-                  "name": "IPC-Diagnostics-www package 2.1.1.0",
-                  "product_id": "CSAFPID-52001"
-                }
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "< 14.1.2.0_153968",
+                    "product": {
+                      "name": "TwinCAT/BSD < 14.1.2.0_153968",
+                      "product_id": "CSAFPID-51002"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "14.1.2.0_153968",
+                    "product": {
+                      "name": "TwinCAT/BSD 14.1.2.0_153968",
+                      "product_id": "CSAFPID-52002"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "TwinCAT/BSD"
               }
             ],
-            "category": "product_name",
-            "name": "IPC-Diagnostics-www package"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "< 14.1.2.0_153968",
-                "product": {
-                  "name": "TwinCAT/BSD < 14.1.2.0_153968",
-                  "product_id": "CSAFPID-51002"
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "14.1.2.0_153968",
-                "product": {
-                  "name": "TwinCAT/BSD 14.1.2.0_153968",
-                  "product_id": "CSAFPID-52002"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "TwinCAT/BSD"
+            "category": "product_family",
+            "name": "Software"
           }
         ],
-        "category": "product_family",
-        "name": "Software"
+        "category": "vendor",
+        "name": "Beckhoff"
       }
     ],
     "product_groups": [

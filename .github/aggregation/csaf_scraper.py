@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import hashlib
+import pgpy
 
 github_owner = "izzy64"
 repo_name = "test-csaf-aggregator"
@@ -74,11 +75,11 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                         # check hash
                                         if link["rel"] == "hash":
                                             if link["href"].split(".")[-1] == "sha256":
-                                                if hashlib.sha256(csaf_response.text).hexdigest() == link_response.split(" ")[0]:
+                                                if hashlib.sha256(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
                                                     with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
                                                         outfile.write(link_response)
                                             elif link["href"].split(".")[-1] == "sha512":
-                                                if hashlib.sha512(csaf_response.text).hexdigest() == link_response.split(" ")[0]:
+                                                if hashlib.sha512(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
                                                     with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
                                                         outfile.write(link_response)
                                             else:

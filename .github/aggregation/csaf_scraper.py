@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import hashlib
 
 github_owner = "izzy64"
 repo_name = "test-csaf-aggregator"

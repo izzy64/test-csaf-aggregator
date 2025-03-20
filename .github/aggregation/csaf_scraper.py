@@ -16,8 +16,8 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
     pm_response = requests.get(
-            pm_url, allow_redirects=True, verify=True
-        )
+        pm_url, allow_redirects=True, verify=True
+    )
     provider_metadata = pm_response.json()
     # save the provider metadata
     if not os.path.exists("./"+publisher_name): 
@@ -26,6 +26,13 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
     aggregator["csaf_providers"][i]["mirrors"][0] = f"https://raw.githubusercontent.com/{github_owner}/{repo_name}/main/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+
+    # save the provider public keys
+    provider_keys = provider_metadata["public_openpgp_keys"]
+    for j, key in enumerate(provider_keys):
+        provider_keys[j]["blob"] = requests.get(
+            provider_keys[j]["url"], allow_redirects=True, verify=True
+        ).text
 
     # scrape the rolie feeds
     for distro in provider_metadata["distributions"]:
@@ -54,8 +61,27 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                         link_response = requests.get(
                                             link["href"], allow_redirects=True, verify=True
                                         ).text
-                                        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                            outfile.write(link_response)
+                                        # check sig
+                                        if link["rel"] == "signature":
+                                            for key in provider_keys:
+                                                pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
+                                                if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response.text))):
+                                                    with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                                                        outfile.write(link_response)
+                                                else:
+                                                    print("Provider signature does not match")
+                                        # check hash
+                                        if link["rel"] == "hash":
+                                            if link["href"].split(".")[-1] == "sha256":
+                                                if hashlib.sha256(csaf_response.text).hexdigest() == link_response.split(" ")[0]:
+                                                    with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                                                        outfile.write(link_response)
+                                            elif link["href"].split(".")[-1] == "sha512":
+                                                if hashlib.sha512(csaf_response.text).hexdigest() == link_response.split(" ")[0]:
+                                                    with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                                                        outfile.write(link_response)
+                                            else:
+                                                print("hashing method not supported")
 
                         else:
                             print("ROLIE missing critical information")

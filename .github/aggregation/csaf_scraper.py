@@ -67,7 +67,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                         if link["rel"] == "signature":
                                             for key in provider_keys:
                                                 pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
-                                                if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response.text))):
+                                                if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response))):
                                                     with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
                                                         outfile.write(link_response)
                                                 else:

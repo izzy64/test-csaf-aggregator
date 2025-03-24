@@ -1,0 +1,849 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Esjay"
+        ],
+        "organization": "Trend Micro Zero Day Initiative",
+        "summary": "reporting these vulnerabilities to Schneider Electric and CISA"
+      },
+      {
+        "names": [
+          "Nicholas Miles"
+        ],
+        "organization": "Tenable",
+        "summary": "reporting these vulnerabilities to Schneider Electric and CISA"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://us-cert.cisa.gov/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
+        "title": "Legal Notice"
+      },
+      {
+        "category": "summary",
+        "text": "Successful exploitation of this vulnerability could result in an attacker achieving remote code execution on the underlying operating system when manipulating internal methods through the Java RMI interface. It could also result in escalation of privileges or authentication bypass, which could then result in malicious web code execution or loss of device functionality.",
+        "title": "Risk evaluation"
+      },
+      {
+        "category": "other",
+        "text": "Critical Manufacturing",
+        "title": "Critical infrastructure sectors"
+      },
+      {
+        "category": "other",
+        "text": "Worldwide",
+        "title": "Countries/areas deployed"
+      },
+      {
+        "category": "other",
+        "text": "France",
+        "title": "Company headquarters location"
+      },
+      {
+        "category": "general",
+        "text": "CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.",
+        "title": "Recommended Practices"
+      }
+    ],
+    "publisher": {
+      "category": "coordinator",
+      "contact_details": "central@cisa.dhs.gov",
+      "name": "CISA",
+      "namespace": "https://www.cisa.gov/"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "ICS Advisory ICSA-23-108-02 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2023/icsa-23-108-02.json"
+      },
+      {
+        "category": "self",
+        "summary": "ICSA Advisory ICSA-23-108-02 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-23-108-02"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Best_Practices_for_Industrial_Control_Systems.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/topics/industrial-control-systems"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/sites/default/files/publications/emailscams0905.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
+      }
+    ],
+    "title": "Schneider Electric APC Easy UPS Online Monitoring Software (Update A)",
+    "tracking": {
+      "current_release_date": "2024-06-11T06:00:00.000000Z",
+      "generator": {
+        "engine": {
+          "name": "CISA CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "ICSA-23-108-02",
+      "initial_release_date": "2023-04-18T06:00:00.000000Z",
+      "revision_history": [
+        {
+          "date": "2023-04-18T06:00:00.000000Z",
+          "legacy_version": "Initial",
+          "number": "1",
+          "summary": "Initial Publication"
+        },
+        {
+          "date": "2024-06-11T06:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - Updated CVE-2023-29412, mitigations section, and affected product version for APC version of product to reflect publicly available exploit found by Schneider."
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=v2.5-GA-01-22261",
+                "product": {
+                  "name": "Schneider Electric APC Easy UPS Online Monitoring Software: <=v2.5-GA-01-22261",
+                  "product_id": "CSAFPID-0001"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "APC Easy UPS Online Monitoring Software"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=V2.5-GA-01-22320",
+                "product": {
+                  "name": "Schneider Electric Schneider Electric Easy UPS Online Monitoring Software: <=V2.5-GA-01-22320",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Schneider Electric Easy UPS Online Monitoring Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "Schneider Electric"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-29411",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A vulnerability exists that could allow changes to administrative credentials, leading to potential remote code execution without requiring prior authentication on the Java RMI interface.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "web.nvd.nist.gov",
+          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-29411"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Schneider Electric became aware of a public PoC detailing an exploit for prior versions of the APC Easy UPS Online Monitoring Software, and strongly recommends all users take the defensive actions listed in this advisory.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "The affected software is being discontinued with the discontinuation of the Easy UPS Online SNMP Cards (APV9601, APVS9601) managed by this software. Fixed versions notwithstanding, Schneider Electric recommends users to migrate to the PowerChute series of software, including PowerChute Serial Shutdown and PowerChute Network Shutdown. For more information, please see the following sites:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "PowerChute Serial Shutdown",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.apc.com/pcss"
+        },
+        {
+          "category": "mitigation",
+          "details": "PowerChute Network Shutdown",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.apc.com/pcns"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric recommends users update their affected devices to the following versions or later:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "APC Easy UPS Online Monitoring Software: Version 2.6-GA or later",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_enDocType=Software+-+Release&p_Doc_Ref=APC_install_APC_UPS_windows"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Schneider Electric Easy UPS Online Monitoring Software: Version 2.6-GS or later",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_enDocType=Software+-+Release&p_Doc_Ref=Install_Schneider_UPS_windows"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric recommends that users use appropriate patching methodologies when applying these patches to their systems and impact evaluate these patches in a test, development, or offline infrastructure environment. Schneider Electric strongly recommends the use of backups.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Users can contact Schneider Electric's Customer Care Center for additional assistance.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.se.com/us/en/work/support/contacts.jsp"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric strongly recommends users follow cybersecurity industry best practices, including:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Locating control and safety system networks and remote devices behind firewalls and isolating them from the business network.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Installing physical controls to help prevent unauthorized users from accessing industrial control and safety systems, components, peripheral equipment, and networks.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Placing all controllers in locked cabinets, and do not leave them in the \"Program\" mode.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Only connecting programming software to the network intended for that device.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Scanning all methods of mobile data exchange with the isolated network before use in the terminals or nodes connected to these networks.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Properly sanitizing mobile devices that have connected to another network before connecting to the intended network.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Minimizing network exposure for all control system devices and systems and ensure that they are not accessible from the internet.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Using secure methods, such as virtual private networks (VPNs), when remote access is required.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, refer to the Schneider Electric Recommended Cybersecurity Best Practices document.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.se.com/us/en/download/document/7EN52-0390/"
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, see Schneider Electric security notification SEVD-2023-101-04",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2023-101-04&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2023-101-04.pdf"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-29412",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Prior versions of Schneider Electric APC Easy UPS Online contain an OS Command Injection vulnerability that could cause remote code execution when manipulating internal methods through Java RMI interface.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "web.nvd.nist.gov",
+          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-29412"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Schneider Electric became aware of a public PoC detailing an exploit for prior versions of the APC Easy UPS Online Monitoring Software, and strongly recommends all users take the defensive actions listed in this advisory.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "The affected software is being discontinued with the discontinuation of the Easy UPS Online SNMP Cards (APV9601, APVS9601) managed by this software. Fixed versions notwithstanding, Schneider Electric recommends users to migrate to the PowerChute series of software, including PowerChute Serial Shutdown and PowerChute Network Shutdown. For more information, please see the following sites:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "PowerChute Serial Shutdown",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.apc.com/pcss"
+        },
+        {
+          "category": "mitigation",
+          "details": "PowerChute Network Shutdown",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.apc.com/pcns"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric recommends users update their affected devices to the following versions or later:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "APC Easy UPS Online Monitoring Software: Version 2.6-GA or later",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_enDocType=Software+-+Release&p_Doc_Ref=APC_install_APC_UPS_windows"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Schneider Electric Easy UPS Online Monitoring Software: Version 2.6-GS or later",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_enDocType=Software+-+Release&p_Doc_Ref=Install_Schneider_UPS_windows"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric recommends that users use appropriate patching methodologies when applying these patches to their systems and impact evaluate these patches in a test, development, or offline infrastructure environment. Schneider Electric strongly recommends the use of backups.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Users can contact Schneider Electric's Customer Care Center for additional assistance.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.se.com/us/en/work/support/contacts.jsp"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric strongly recommends users follow cybersecurity industry best practices, including:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Locating control and safety system networks and remote devices behind firewalls and isolating them from the business network.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Installing physical controls to help prevent unauthorized users from accessing industrial control and safety systems, components, peripheral equipment, and networks.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Placing all controllers in locked cabinets, and do not leave them in the \"Program\" mode.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Only connecting programming software to the network intended for that device.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Scanning all methods of mobile data exchange with the isolated network before use in the terminals or nodes connected to these networks.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Properly sanitizing mobile devices that have connected to another network before connecting to the intended network.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Minimizing network exposure for all control system devices and systems and ensure that they are not accessible from the internet.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Using secure methods, such as virtual private networks (VPNs), when remote access is required.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, refer to the Schneider Electric Recommended Cybersecurity Best Practices document.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.se.com/us/en/download/document/7EN52-0390/"
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, see Schneider Electric security notification SEVD-2023-101-04",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2023-101-04&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2023-101-04.pdf"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2023-29413",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A vulnerability exists that could cause a denial-of-service condition when accessed by an unauthenticated user on the Schneider UPS Monitor service. ",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "web.nvd.nist.gov",
+          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-29413"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Schneider Electric became aware of a public PoC detailing an exploit for prior versions of the APC Easy UPS Online Monitoring Software, and strongly recommends all users take the defensive actions listed in this advisory.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "The affected software is being discontinued with the discontinuation of the Easy UPS Online SNMP Cards (APV9601, APVS9601) managed by this software. Fixed versions notwithstanding, Schneider Electric recommends users to migrate to the PowerChute series of software, including PowerChute Serial Shutdown and PowerChute Network Shutdown. For more information, please see the following sites:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "PowerChute Serial Shutdown",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.apc.com/pcss"
+        },
+        {
+          "category": "mitigation",
+          "details": "PowerChute Network Shutdown",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.apc.com/pcns"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric recommends users update their affected devices to the following versions or later:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "APC Easy UPS Online Monitoring Software: Version 2.6-GA or later",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_enDocType=Software+-+Release&p_Doc_Ref=APC_install_APC_UPS_windows"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Schneider Electric Easy UPS Online Monitoring Software: Version 2.6-GS or later",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_enDocType=Software+-+Release&p_Doc_Ref=Install_Schneider_UPS_windows"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric recommends that users use appropriate patching methodologies when applying these patches to their systems and impact evaluate these patches in a test, development, or offline infrastructure environment. Schneider Electric strongly recommends the use of backups.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Users can contact Schneider Electric's Customer Care Center for additional assistance.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.se.com/us/en/work/support/contacts.jsp"
+        },
+        {
+          "category": "mitigation",
+          "details": "Schneider Electric strongly recommends users follow cybersecurity industry best practices, including:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Locating control and safety system networks and remote devices behind firewalls and isolating them from the business network.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Installing physical controls to help prevent unauthorized users from accessing industrial control and safety systems, components, peripheral equipment, and networks.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Placing all controllers in locked cabinets, and do not leave them in the \"Program\" mode.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Only connecting programming software to the network intended for that device.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Scanning all methods of mobile data exchange with the isolated network before use in the terminals or nodes connected to these networks.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Properly sanitizing mobile devices that have connected to another network before connecting to the intended network.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Minimizing network exposure for all control system devices and systems and ensure that they are not accessible from the internet.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Using secure methods, such as virtual private networks (VPNs), when remote access is required.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, refer to the Schneider Electric Recommended Cybersecurity Best Practices document.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://www.se.com/us/en/download/document/7EN52-0390/"
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, see Schneider Electric security notification SEVD-2023-101-04",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ],
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2023-101-04&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2023-101-04.pdf"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        }
+      ]
+    }
+  ]
+}

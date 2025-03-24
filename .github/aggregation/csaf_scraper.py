@@ -7,6 +7,12 @@ import pgpy
 github_owner = "izzy64"
 repo_name = "test-csaf-aggregator"
 
+def remove_comments(key):
+    lines = key.text.splitlines()
+    filtered_list = [x for x in lines if 'Comment:' not in x]
+    filtered_key = "\n".join(filtered_list)
+    return filtered_key
+
 try:
     with open("./aggregator.json", "r") as agg:
         contents = agg.read()
@@ -29,12 +35,12 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
     aggregator["csaf_providers"][i]["mirrors"][0] = f"https://raw.githubusercontent.com/{github_owner}/{repo_name}/main/{publisher_name}/provider_metadata.json".replace(" ", "%20")
 
-    # save the provider public keys
+    # keep the provider public keys
     provider_keys = provider_metadata["public_openpgp_keys"]
     for j, key in enumerate(provider_keys):
-        provider_keys[j]["blob"] = requests.get(
+        provider_keys[j]["blob"] = remove_comments(requests.get(
             provider_keys[j]["url"], allow_redirects=True, verify=True
-        ).text
+        ).text)
 
     # scrape the rolie feeds
     for distro in provider_metadata["distributions"]:

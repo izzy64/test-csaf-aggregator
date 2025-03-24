@@ -8,7 +8,7 @@ github_owner = "izzy64"
 repo_name = "test-csaf-aggregator"
 
 def remove_comments(key):
-    lines = key.text.splitlines()
+    lines = key.splitlines()
     filtered_list = [x for x in lines if 'Comment:' not in x]
     filtered_key = "\n".join(filtered_list)
     return filtered_key

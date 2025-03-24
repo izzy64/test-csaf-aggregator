@@ -7,10 +7,10 @@ import pgpy
 github_owner = "izzy64"
 repo_name = "test-csaf-aggregator"
 
-def remove_comments(key):
+def clean_key(key):
     lines = key.splitlines()
-    filtered_list = [x for x in lines if 'Comment:' not in x]
-    filtered_key = "\n".join(filtered_list)
+    filtered_list = [x for x in lines if not any(y in x for y in ["Version", "Comment", "MessageID", "Hash", "Charset"])]
+    filtered_key = "\n".join(filtered_list).replace("\n\n", "\n")
     return filtered_key
 
 try:
@@ -38,7 +38,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     # keep the provider public keys
     provider_keys = provider_metadata["public_openpgp_keys"]
     for j, key in enumerate(provider_keys):
-        provider_keys[j]["blob"] = remove_comments(requests.get(
+        provider_keys[j]["blob"] = clean_key(requests.get(
             provider_keys[j]["url"], allow_redirects=True, verify=True
         ).text)
 

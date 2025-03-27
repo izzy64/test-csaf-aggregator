@@ -1,0 +1,197 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Stored XSS in field name data model",
+    "tracking": {
+      "current_release_date": "2024-05-20T11:00:00.000Z",
+      "id": "NN-2019:1-01",
+      "initial_release_date": "2019-11-11T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2019-11-11T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        },
+        {
+          "date": "2023-09-04T11:00:00.000Z",
+          "number": "2",
+          "summary": "Minor updates to format and metadata to improve the CSAF implementation"
+        },
+        {
+          "date": "2023-11-13T11:00:00.000Z",
+          "number": "3",
+          "summary": "Migrated to CSAF VEX format"
+        },
+        {
+          "date": "2023-11-16T11:00:00.000Z",
+          "number": "4",
+          "summary": "CSAF vers improvements"
+        },
+        {
+          "date": "2024-05-20T11:00:00.000Z",
+          "number": "5",
+          "summary": "Added CVSS v4.0 scoring where applicable"
+        }
+      ],
+      "status": "final",
+      "version": "5"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<19.0.4",
+                "product": {
+                  "name": "Nozomi Networks Guardian <19.0.4",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.0.4",
+                "product": {
+                  "name": "Nozomi Networks Guardian 19.0.4",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<19.0.4",
+                "product": {
+                  "name": "Nozomi Networks CMC <19.0.4",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "19.0.4",
+                "product": {
+                  "name": "Nozomi Networks CMC 19.0.4",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Jonas Becker"
+          ],
+          "organization": "Deloitte GmbH",
+          "summary": "finding this bug"
+        }
+      ],
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "discovery_date": "2019-11-11T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2019:1-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An attacker with admin access to the appliance can inject malicious code that will later be executed by another legitimate users. This allows an attacker to perform unauthorized actions on behalf of legitimate users. JavaScript injection was possible using the field name when adding new column to the data model section. The injected code will then be executed in the environment section under e.g. asset view.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Not required",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v19.0.4",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "Guardian/CMC starting before v19.0.4 are affected."
+        }
+      ],
+      "title": "Stored XSS in field name data model"
+    }
+  ]
+}

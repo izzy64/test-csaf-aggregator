@@ -57,9 +57,9 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                     )
                     rolie = rolie_response.json()
                     if rolie:
-                        if not os.path.exists(path_start+"/"+rolie["feed"]['id']): 
+                        if not os.path.exists("./"+publisher_name+"/"+rolie["feed"]['id']): 
                             os.makedirs(path_start+"/"+rolie["feed"]['id'])
-                        feed_path = path_start+"/"+rolie["feed"]['id']
+                        feed_path = "./"+publisher_name+"/"+rolie["feed"]['id']
                         rolie_copy = json.loads(json.dumps(rolie)) # equivalent to deep copy
                         try:
                             with open(f"{feed_path}/{rolie['feed']['id']}.json", "r") as old_file:

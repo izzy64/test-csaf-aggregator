@@ -124,8 +124,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                         if rolie_copy.get("feed",{}).get("updated",""):
                             rolie_copy["feed"]["updated"] = now.strftime(dt_format)
 
-                        with open(f"{feed_path}/{rolie['feed']['id']}.json", "w") as outfile:
-                            print(f"{feed_path}/{rolie['feed']['id']}.json")
+                        with open(f"{feed_path}/{rolie_copy['feed']['id']}.json", "w") as outfile:
                             json.dump(rolie_copy, outfile, indent=2, sort_keys=True)
 
                 except Exception as e:

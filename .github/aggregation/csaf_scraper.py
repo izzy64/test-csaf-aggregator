@@ -35,13 +35,13 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
         pm_url, allow_redirects=True, verify=True
     )
     provider_metadata = pm_response.json()
-    # update proviser metadata
+    # update provider metadata
     provider_metadata["canonical_url"] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
     provider_metadata["last_updated"] = now.strftime(dt_format)
     provider["metadata"]["last_updated"] = now.strftime(dt_format)
 
     # keep the provider public keys
-    provider_keys = provider_metadata["public_openpgp_keys"]
+    provider_keys = json.loads(json.dumps(provider_metadata["public_openpgp_keys"]))
     for j, key in enumerate(provider_keys):
         provider_keys[j]["blob"] = clean_key(requests.get(
             provider_keys[j]["url"], allow_redirects=True, verify=True
@@ -66,6 +66,8 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                 old_rolie = json.loads(old_file.read())
                         except:
                             old_rolie = {}
+
+                        feed["url"] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                         rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
 

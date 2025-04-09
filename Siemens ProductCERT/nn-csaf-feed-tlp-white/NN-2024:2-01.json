@@ -1,0 +1,203 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "MEDIUM"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Incorrect authorization for Reports configuration in Guardian/CMC before 24.2.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2024-4465"
+      ],
+      "current_release_date": "2024-09-19T11:00:00.000Z",
+      "id": "NN-2024:2-01",
+      "initial_release_date": "2024-09-11T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-09-11T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        },
+        {
+          "date": "2024-09-19T11:00:00.000Z",
+          "number": "2",
+          "summary": "Improved the issue description"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<24.2.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian <24.2.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "24.2.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian 24.2.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<24.2.0",
+                "product": {
+                  "name": "Nozomi Networks CMC <24.2.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "24.2.0",
+                "product": {
+                  "name": "Nozomi Networks CMC 24.2.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Stefano Libero"
+          ],
+          "organization": "Nozomi Networks Product Security team",
+          "summary": "finding this issue during a scheduled internal VAPT testing session"
+        }
+      ],
+      "cve": "CVE-2024-4465",
+      "cwe": {
+        "id": "CWE-863",
+        "name": "Incorrect Authorization"
+      },
+      "discovery_date": "2024-09-11T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2024:2-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An access control vulnerability was discovered in the Reports section due to a specific access restriction not being properly enforced for users with limited privileges.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4465"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2024/nn-2024_2-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2024:2-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "N/A",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v24.2.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "If a logged-in user with reporting privileges learns how to create a specific application request, they might be able to make limited changes to the reporting configuration. This could result in a partial loss of data integrity. In Guardian/CMC instances with a reporting configuration, there could be limited Denial of Service (DoS) impacts, as the reports may not reach their intended destination, and there could also be limited information disclosure impacts. Furthermore, modifying the destination SMTP server for the reports could lead to the compromise of external credentials, as they might be sent to an unauthorized server. This could expand the scope of the attack."
+        }
+      ],
+      "title": "Incorrect authorization for Reports configuration in Guardian/CMC before 24.2.0"
+    }
+  ]
+}

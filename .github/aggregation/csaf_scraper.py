@@ -38,6 +38,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     # update proviser metadata
     provider_metadata["canonical_url"] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
     provider_metadata["last_updated"] = now.strftime(dt_format)
+    provider["metadata"]["last_updated"] = now.strftime(dt_format)
 
     # keep the provider public keys
     provider_keys = provider_metadata["public_openpgp_keys"]

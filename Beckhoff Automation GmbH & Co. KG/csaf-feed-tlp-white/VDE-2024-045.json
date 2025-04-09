@@ -1,0 +1,299 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "names": [
+          "Andrea Palanca"
+        ],
+        "organization": "Nozomi Networks",
+        "summary": "Reported by",
+        "urls": [
+          "https://www.nozominetworks.com"
+        ]
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/v1/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "By default, TwinCAT/BSD-based products have a device-specific web interface for web-based management (WBM) enabled, developed by Beckhoff and known as Beckhoff Device Manager UI. It can be accessed remotely or locally. When accessed locally, the authentication mechanism for the web interface can be bypassed by any local user, regardless of their permissions, and they can act with administrative access rights via this mechanism.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "A local, low privileged attacker could bypass the authentication mechanism for the web interface and act as an administrator.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Avoid the existence of user accounts with login permission on the target other than administrator access. By default, TwinCAT/BSD has preconfigured user accounts with lower privileges, but none of them have a password, which results in them being denied login access. Avoid running third-party applications on the target that have not been properly audited, regardless of the user they are running as.",
+        "title": "Mitigation"
+      },
+      {
+        "category": "description",
+        "text": "Please update to a recent version of the affected product. In general, Beckhoff recommends updating the entire TwinCAT/BSD operating system to a current version rather than individual packages. Information on updating existing TwinCAT/BSD installations is available in [here:](https://infosys.beckhoff.com/content/1033/twincat_bsd/11780818443.html?id=4222392218353411614). There you will also find information on how to determine the operating system version via the command line. This is also visible via the Beckhoff Device Manager UI. Please note that when updating from the TwinCAT/BSD major version 12, two consecutive upgrades are required.",
+        "title": "Remediation"
+      },
+      {
+        "category": "general",
+        "text": "Beckhoff Automation welcomes responsibly coordinated reports of vulnerabilities and Beckhoff will collaborate with reporting parties to fix vulnerabilities or mitigate threats.",
+        "title": "Reporting vulnerabilities"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Beckhoff is not responsible for any side effects negatively affecting the real-time capabilities of your TwinCAT control application possibly caused by updates. Beckhoff offers updated images with qualified performance for Beckhoff hardware from time to time. TwinCAT System Manager offers tools which can be of assistance to verify real-time performance after update. A backup should be created every time before installing an update. Only administrators or IT experts should perform the backup and update procedure.",
+        "title": "Disclaimer"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-securityincident@beckhoff.com",
+      "name": "Beckhoff Automation GmbH & Co. KG",
+      "namespace": "https://www.beckhoff.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "Beckhoff Security Advisory 2024-001: Local authentication bypass in TwinCAT/BSD package \u201cIPC-Diagnostics\u201d - PDF version",
+        "url": "https://download.beckhoff.com/download/Document/product-security/Advisories/advisory-2024-001.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Additional information about the latest IPC security advisories is provided here:",
+        "url": "https://www.beckhoff.com/secinfo"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2024-045: Beckhoff: Local authentication bypass in IPC-Diagnostics package included in TwinCAT/BSD operating system - HTML",
+        "url": "https://certvde.com/en/advisories/vde-2024-045"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Beckhoff Automation GmbH & Co. KG",
+        "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
+      },
+      {
+        "category": "external",
+        "summary": "Detailed information on updating the TwinCAT/BSD operating system",
+        "url": "https://infosys.beckhoff.com/content/1033/twincat_bsd/11780818443.html?id=4222392218353411614"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2024-045: Beckhoff: Local authentication bypass in IPC-Diagnostics package included in TwinCAT/BSD operating system - CSAF",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/vde-2024-045.json"
+      }
+    ],
+    "title": "Beckhoff: Local authentication bypass in IPC-Diagnostics package included in TwinCAT/BSD operating system",
+    "tracking": {
+      "aliases": [
+        "VDE-2024-045"
+      ],
+      "current_release_date": "2024-08-27T08:00:00.000Z",
+      "generator": {
+        "date": "2025-01-16T10:47:10.787Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.16"
+        }
+      },
+      "id": "VDE-2024-045",
+      "initial_release_date": "2024-08-27T08:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-08-13T07:00:00.000Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "initial revision"
+        },
+        {
+          "date": "2024-11-06T11:27:01.000Z",
+          "number": "2",
+          "summary": "Fix: correct certvde domain, added self-reference"
+        },
+        {
+          "date": "2025-01-16T10:50:00.000Z",
+          "number": "3",
+          "summary": "Fix: list of branches, references url"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "< 2.0.0.1",
+                    "product": {
+                      "name": "IPC Diagnostics package < 2.0.0.1",
+                      "product_id": "CSAFPID-51001"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2.0.0.1",
+                    "product": {
+                      "name": "IPC Diagnostics package 2.0.0.1",
+                      "product_id": "CSAFPID-52001"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "IPC Diagnostics package"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "< 14.1.2.0_153968",
+                    "product": {
+                      "name": "TwinCAT/BSD < 14.1.2.0_153968",
+                      "product_id": "CSAFPID-51002"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "14.1.2.0_153968",
+                    "product": {
+                      "name": "TwinCAT/BSD 14.1.2.0_153968",
+                      "product_id": "CSAFPID-52002"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "TwinCAT/BSD"
+              }
+            ],
+            "category": "product_family",
+            "name": "Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "Beckhoff"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-51001",
+          "CSAFPID-51002"
+        ],
+        "summary": "Affected products."
+      },
+      {
+        "group_id": "CSAFGID-0002",
+        "product_ids": [
+          "CSAFPID-52001",
+          "CSAFPID-52002"
+        ],
+        "summary": "Fixed products."
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Andrea Palanca"
+          ],
+          "organization": "Nozomi Networks",
+          "summary": "Nozomi Networks reported the vulnerability to Beckhoff",
+          "urls": [
+            "https://www.nozominetworks.com"
+          ]
+        }
+      ],
+      "cve": "CVE-2024-41173",
+      "cwe": {
+        "id": "CWE-288",
+        "name": "Authentication Bypass Using an Alternate Path or Channel"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The IPC-Diagnostics package included in TwinCAT/BSD is vulnerable to a local authentication bypass by a low privileged attacker.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-52001",
+          "CSAFPID-52002"
+        ],
+        "known_affected": [
+          "CSAFPID-51001",
+          "CSAFPID-51002"
+        ]
+      },
+      "release_date": "2024-08-13T07:00:00.000Z",
+      "remediations": [
+        {
+          "category": "mitigation",
+          "date": "2024-08-13T07:00:00.000Z",
+          "details": "Avoid the existence of user accounts with login permission on the target other than administrator access. By default, TwinCAT/BSD has preconfigured user accounts with lower privileges, but none of them have a password, which results in them being denied login access. Avoid running third-party applications on the target that have not been properly audited, regardless of the user they are running as.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Please update to a recent version of the affected product.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 7.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-51001",
+            "CSAFPID-51002"
+          ]
+        }
+      ],
+      "title": "CVE-2024-41173"
+    }
+  ]
+}

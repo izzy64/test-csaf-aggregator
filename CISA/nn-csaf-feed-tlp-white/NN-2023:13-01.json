@@ -1,0 +1,176 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Missing authentication for local web interface in Arc before v1.6.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2023-5935"
+      ],
+      "current_release_date": "2024-05-20T11:00:00.000Z",
+      "id": "NN-2023:13-01",
+      "initial_release_date": "2024-05-15T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-05-15T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        },
+        {
+          "date": "2024-05-20T11:00:00.000Z",
+          "number": "2",
+          "summary": "Added CVSS v4.0 scoring where applicable"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<1.6.0",
+                "product": {
+                  "name": "Nozomi Networks Arc <1.6.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "1.6.0",
+                "product": {
+                  "name": "Nozomi Networks Arc 1.6.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Arc"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Diego Giubertoni"
+          ],
+          "organization": "Nozomi Networks Security Research team",
+          "summary": "finding this issue during an internal penetration testing session"
+        }
+      ],
+      "cve": "CVE-2023-5935",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "discovery_date": "2024-05-15T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2023:13-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "When configuring Arc (e.g. during the first setup), a local web interface is provided to ease the configuration process. Such web interface lacks authentication and may thus be abused by a local attacker or malware running on the machine itself.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002"
+        ],
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5935"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2024/nn-2023_13-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2023:13-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "N/A",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v1.6.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "A malicious local user or process, during a window of opportunity when the local web interface is active, may be able to extract sensitive information or change Arc's configuration. This could also lead to arbitrary code execution if a malicious update package is installed."
+        }
+      ],
+      "title": "Missing authentication for local web interface in Arc before v1.6.0"
+    }
+  ]
+}

@@ -31,6 +31,7 @@ except:
 for i, provider in enumerate(aggregator["csaf_providers"]):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
+    path_start = "./"+publisher_name
     pm_response = requests.get(
         pm_url, allow_redirects=True, verify=True
     )
@@ -57,9 +58,9 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                     )
                     rolie = rolie_response.json()
                     if rolie:
-                        if not os.path.exists("./"+publisher_name+"/"+rolie["feed"]['id']): 
+                        if not os.path.exists(path_start+"/"+rolie["feed"]['id']): 
                             os.makedirs(path_start+"/"+rolie["feed"]['id'])
-                        feed_path = "./"+publisher_name+"/"+rolie["feed"]['id']
+                        feed_path = path_start+"/"+rolie["feed"]['id']
                         rolie_copy = json.loads(json.dumps(rolie)) # equivalent to deep copy
                         try:
                             with open(f"{feed_path}/{rolie['feed']['id']}.json", "r") as old_file:
@@ -132,7 +133,6 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     # save the provider metadata
     if not os.path.exists("./"+publisher_name): 
         os.makedirs("./"+publisher_name)
-    path_start = "./"+publisher_name
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
     aggregator["csaf_providers"][i]["mirrors"][0] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")

@@ -1,0 +1,202 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SiPass integrated is affected by a directory traversal vulnerability in the third-party component DotNetZip. The vulnerability could allow an attacker to execute arbitrary code on the application server, if a specially crafted backup set is used for a restore.\n\nSiemens has released a new version for SiPass integrated and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-992434: Directory Traversal Vulnerability in Third-Party Component in SiPass integrated - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-992434.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-992434: Directory Traversal Vulnerability in Third-Party Component in SiPass integrated - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-992434.json"
+      }
+    ],
+    "title": "SSA-992434: Directory Traversal Vulnerability in Third-Party Component in SiPass integrated",
+    "tracking": {
+      "current_release_date": "2025-02-17T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-992434",
+      "initial_release_date": "2025-02-17T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-02-17T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V2.90.3.19",
+                "product": {
+                  "name": "SiPass integrated V2.90",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated V2.90"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V2.95.3.15",
+                "product": {
+                  "name": "SiPass integrated V2.95",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated V2.95"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-48510",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Directory Traversal vulnerability in DotNetZip v.1.16.0 and before allows a remote attacker to execute arbitrary code via the src/Zip.Shared/ZipEntry.Extract.cs component NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+          "title": "Summary"
+        },
+        {
+          "category": "summary",
+          "text": "The product could only be exploitable in situations where a specially crafted backup set is used for a restore.",
+          "title": "For SiPass integrated V2.90"
+        },
+        {
+          "category": "summary",
+          "text": "The product could only be exploitable in situations where a specially crafted backup set is used for a restore.",
+          "title": "For SiPass integrated V2.95"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Ensure that only trusted persons are permitted to initiate a restore via the Configuration Client",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Do not use untrusted backup files for a restore",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.90.3.19 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.95.3.15 or later version",
+          "product_ids": [
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.1,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 9.1,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2024-48510"
+    }
+  ]
+}

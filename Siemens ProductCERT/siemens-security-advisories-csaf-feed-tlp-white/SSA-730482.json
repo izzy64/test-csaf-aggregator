@@ -1,0 +1,284 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "A vulnerability in the login dialog box of SIMATIC WinCC could allow a local attacker to cause a denial of service condition in the runtime of the SCADA system.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-730482: Denial of Service Vulnerability in SIMATIC WinCC - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-730482.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-730482: Denial of Service Vulnerability in SIMATIC WinCC - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-730482.json"
+      }
+    ],
+    "title": "SSA-730482: Denial of Service Vulnerability in SIMATIC WinCC",
+    "tracking": {
+      "current_release_date": "2025-01-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-730482",
+      "initial_release_date": "2024-04-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-04-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-07-09T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for SIMATIC WinCC V8.0 and SIMATIC WinCC Runtime Professional V18"
+        },
+        {
+          "date": "2025-01-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for SIMATIC WinCC Runtime Professional V17"
+        }
+      ],
+      "status": "interim",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V9.1 SP2 UC04",
+                "product": {
+                  "name": "SIMATIC PCS 7 V9.1",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V9.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIMATIC WinCC Runtime Professional V17",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Runtime Professional V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V18 Update 4",
+                "product": {
+                  "name": "SIMATIC WinCC Runtime Professional V18",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Runtime Professional V18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V19 Update 1",
+                "product": {
+                  "name": "SIMATIC WinCC Runtime Professional V19",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Runtime Professional V19"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V7.5 SP2 Update 16",
+                "product": {
+                  "name": "SIMATIC WinCC V7.5",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V7.5"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V8.0 Update 5",
+                "product": {
+                  "name": "SIMATIC WinCC V8.0",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V8.0"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-50821",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected products do not properly validate the input provided in the login dialog box. An attacker could leverage this vulnerability to cause a persistent denial of service condition.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Activate SIMATIC Logon in the User Administrator of the SIMATIC PCS 7 Operator Stations",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 4 or later version",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V19 Update 1 or later version",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.5 SP2 Update 16 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793460/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.0 Update 5 or later version",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP2 UC04 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.2,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "title": "CVE-2023-50821"
+    }
+  ]
+}

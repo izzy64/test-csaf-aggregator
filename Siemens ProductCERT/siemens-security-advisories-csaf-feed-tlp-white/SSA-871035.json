@@ -1,0 +1,734 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Affected products do not properly sanitize user-controllable input when parsing files. This could allow an attacker to cause a type confusion and execute arbitrary code within the affected application.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-871035: Session-Memory Deserialization Vulnerability in Siemens Engineering Platforms Before V19 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-871035.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-871035: Session-Memory Deserialization Vulnerability in Siemens Engineering Platforms Before V19 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-871035.json"
+      }
+    ],
+    "title": "SSA-871035: Session-Memory Deserialization Vulnerability in Siemens Engineering Platforms Before V19",
+    "tracking": {
+      "current_release_date": "2025-01-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-871035",
+      "initial_release_date": "2024-11-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-11-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2025-01-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Clarified no fix planned for Totally Integrated Automation Portal (TIA Portal) V16"
+        }
+      ],
+      "status": "interim",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-PLCSIM V16",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-PLCSIM V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-PLCSIM V17",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-PLCSIM V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC STEP 7 Safety V16",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 Safety V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIMATIC STEP 7 Safety V17",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 Safety V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V18 Update 5",
+                "product": {
+                  "name": "SIMATIC STEP 7 Safety V18",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 Safety V18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC STEP 7 V16",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIMATIC STEP 7 V17",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V18 Update 5",
+                "product": {
+                  "name": "SIMATIC STEP 7 V18",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 V18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC WinCC Unified V16",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Unified V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIMATIC WinCC Unified V17",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Unified V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V18 SP5",
+                "product": {
+                  "name": "SIMATIC WinCC Unified V18",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Unified V18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC WinCC V16",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIMATIC WinCC V17",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V18 SP5",
+                "product": {
+                  "name": "SIMATIC WinCC V18",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC V18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMOCODE ES V16",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMOCODE ES V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIMOCODE ES V17",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMOCODE ES V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMOCODE ES V18",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMOCODE ES V18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMOTION SCOUT TIA V5.4 SP1",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMOTION SCOUT TIA V5.4 SP1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMOTION SCOUT TIA V5.4 SP3",
+                  "product_id": "19"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMOTION SCOUT TIA V5.4 SP3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMOTION SCOUT TIA V5.5 SP1",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMOTION SCOUT TIA V5.5 SP1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS Startdrive V16",
+                  "product_id": "21"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS Startdrive V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS Startdrive V17",
+                  "product_id": "22"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS Startdrive V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS Startdrive V18",
+                  "product_id": "23"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS Startdrive V18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIRIUS Safety ES V17 (TIA Portal)",
+                  "product_id": "24"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIRIUS Safety ES V17 (TIA Portal)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIRIUS Safety ES V18 (TIA Portal)",
+                  "product_id": "25"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIRIUS Safety ES V18 (TIA Portal)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "SIRIUS Soft Starter ES V17 (TIA Portal)",
+                  "product_id": "26"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIRIUS Soft Starter ES V17 (TIA Portal)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIRIUS Soft Starter ES V18 (TIA Portal)",
+                  "product_id": "27"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIRIUS Soft Starter ES V18 (TIA Portal)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "TIA Portal Cloud V16",
+                  "product_id": "28"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIA Portal Cloud V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V4.6.0.1",
+                "product": {
+                  "name": "TIA Portal Cloud V17",
+                  "product_id": "29"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIA Portal Cloud V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V4.6.1.0",
+                "product": {
+                  "name": "TIA Portal Cloud V18",
+                  "product_id": "30"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIA Portal Cloud V18"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-32736",
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected products do not properly sanitize user-controllable input when parsing user settings. This could allow an attacker to cause a type confusion and execute arbitrary code within the affected application.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Avoid opening untrusted files from unknown sources in affected products",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "6",
+            "9",
+            "12",
+            "15",
+            "18",
+            "21",
+            "28"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "26"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "24"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 5 or later version",
+          "product_ids": [
+            "5",
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 SP5 or later version",
+          "product_ids": [
+            "11",
+            "14"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "TIA Portal Cloud V4.6.1.0 or later version updated TIA Portal to V18 Update 5 or later version",
+          "product_ids": [
+            "30"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update SIMATIC STEP 7 V18 to V18 Update 5 or later version",
+          "product_ids": [
+            "17",
+            "20",
+            "23",
+            "25",
+            "27"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817218/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update SIMATIC STEP 7 V17 to V17 Update 8 or later version",
+          "product_ids": [
+            "19",
+            "22"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109784441/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "TIA Portal Cloud V4.6.0.1 or later version updated TIA Portal to V17 Update 8 or later version",
+          "product_ids": [
+            "29"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30"
+          ]
+        }
+      ],
+      "title": "CVE-2023-32736"
+    }
+  ]
+}

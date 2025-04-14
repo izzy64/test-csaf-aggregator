@@ -6,7 +6,7 @@
         "summary": "reporting these vulnerabilities to CISA."
       }
     ],
-    "category": "Siemens Security Advisory",
+    "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "distribution": {
       "text": "Disclosure is not limited",
@@ -15,15 +15,16 @@
         "url": "https://us-cert.cisa.gov/tlp/"
       }
     },
+    "lang": "en",
     "notes": [
       {
         "category": "summary",
-        "text": "Twelve vulnerabilities in the implementation of frame aggregation and fragmentation of the 802.11 standard, under the name of FragAttacks, have been published.\n\nSuccessful exploitation of these vulnerabilities could allow an attacker within Wi-Fi range to forge encrypted frames, which could result in sensitive data disclosure and possibly traffic manipulation.\n\nThe advised Siemens products are only affected by some of the published vulnerabilities.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available.",
+        "text": "Twelve vulnerabilities in the implementation of frame aggregation and fragmentation of the 802.11 standard, under the name of \nFragAttacks, have been published.\nSuccessful exploitation of these vulnerabilities could allow an attacker within Wi-Fi range to forge encrypted frames, which could result in sensitive data disclosure and possibly traffic manipulation.\n\nThe advised Siemens products are only affected by some of the published vulnerabilities.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -33,7 +34,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       },
       {
@@ -48,7 +49,7 @@
       },
       {
         "category": "other",
-        "text": "Multiple",
+        "text": "Critical Manufacturing, Transportation Systems, Energy, Healthcare and Public Health, Financial Services, Government Services and Facilities",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -116,18 +117,13 @@
       },
       {
         "category": "self",
-        "summary": "SSA-913875: Frame Aggregation and Fragmentation Vulnerabilities in 802.11 - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-913875.txt"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-913875: Frame Aggregation and Fragmentation Vulnerabilities in 802.11 - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-913875.pdf"
+        "summary": "SSA-913875: Frame Aggregation and Fragmentation Vulnerabilities in 802.11 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-913875.html"
       },
       {
         "category": "self",
         "summary": "ICS Advisory ICSA-22-104-04 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2021/icsa-22-104-04.json"
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2022/icsa-22-104-04.json"
       },
       {
         "category": "self",
@@ -167,8 +163,9 @@
     ],
     "title": "Siemens SCALANCE FragAttacks",
     "tracking": {
-      "current_release_date": "2022-04-12T00:00:00.000000Z",
+      "current_release_date": "2025-04-08T00:00:00.000000Z",
       "generator": {
+        "date": "2025-04-10T18:40:42.025399Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -187,23 +184,29 @@
           "date": "2021-10-12T00:00:00.000000Z",
           "legacy_version": "1.1",
           "number": "2",
-          "summary": "Added solution for SCALANCE W1750D"
+          "summary": "Added fix for SCALANCE W1750D"
         },
         {
           "date": "2022-02-08T00:00:00.000000Z",
           "legacy_version": "1.2",
           "number": "3",
-          "summary": "Added solution for SCALANCE W-700 IEEE 802.11ax family, updated name and split into individual products the SCALANCE W-700 and SCALANCE W-1700 families and clarified that no remediation is planned for SCALANCE W-700 IEEE 802.11n and SCALANCE W-1700 families"
+          "summary": "Added fix for SCALANCE W-700 IEEE 802.11ax family; updated name and split into individual products the SCALANCE W-700 and SCALANCE W-1700 families; clarified that no fix is planned for SCALANCE W-700 IEEE 802.11n and SCALANCE W-1700 IEEE 802.11ac families"
         },
         {
           "date": "2022-04-12T00:00:00.000000Z",
           "legacy_version": "1.3",
           "number": "4",
-          "summary": "Added solution for the SCALANCE W-1700 (11ac) family"
+          "summary": "Added fix for SCALANCE W-1700 IEEE 802.11ac family"
+        },
+        {
+          "date": "2025-04-08T00:00:00.000000Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Clarified fix version information for SCALANCE W-700 IEEE 802.11ax family"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -216,7 +219,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W721-1 RJ45",
+                  "name": "SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AA0)",
                   "product_id": "CSAFPID-0001",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -227,7 +230,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W721-1 RJ45"
+            "name": "SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AA0)"
           },
           {
             "branches": [
@@ -235,7 +238,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W721-1 RJ45",
+                  "name": "SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AB0)",
                   "product_id": "CSAFPID-0002",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -246,7 +249,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W721-1 RJ45"
+            "name": "SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AB0)"
           },
           {
             "branches": [
@@ -254,7 +257,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W722-1 RJ45",
+                  "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AA0)",
                   "product_id": "CSAFPID-0003",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -265,7 +268,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W722-1 RJ45"
+            "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AA0)"
           },
           {
             "branches": [
@@ -273,7 +276,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W722-1 RJ45",
+                  "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AB0)",
                   "product_id": "CSAFPID-0004",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -284,7 +287,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W722-1 RJ45"
+            "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AB0)"
           },
           {
             "branches": [
@@ -292,7 +295,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W722-1 RJ45",
+                  "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AC0)",
                   "product_id": "CSAFPID-0005",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -303,7 +306,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W722-1 RJ45"
+            "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AC0)"
           },
           {
             "branches": [
@@ -311,7 +314,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W734-1 RJ45",
+                  "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AA0)",
                   "product_id": "CSAFPID-0006",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -322,7 +325,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W734-1 RJ45"
+            "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AA0)"
           },
           {
             "branches": [
@@ -330,7 +333,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W734-1 RJ45",
+                  "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AA6)",
                   "product_id": "CSAFPID-0007",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -341,7 +344,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W734-1 RJ45"
+            "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AA6)"
           },
           {
             "branches": [
@@ -349,7 +352,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W734-1 RJ45",
+                  "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AB0)",
                   "product_id": "CSAFPID-0008",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -360,7 +363,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W734-1 RJ45"
+            "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AB0)"
           },
           {
             "branches": [
@@ -368,7 +371,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W734-1 RJ45 (USA)",
+                  "name": "SCALANCE W734-1 RJ45 (USA) (6GK5734-1FX00-0AB6)",
                   "product_id": "CSAFPID-0009",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -379,7 +382,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W734-1 RJ45 (USA)"
+            "name": "SCALANCE W734-1 RJ45 (USA) (6GK5734-1FX00-0AB6)"
           },
           {
             "branches": [
@@ -387,7 +390,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W738-1 M12",
+                  "name": "SCALANCE W738-1 M12 (6GK5738-1GY00-0AA0)",
                   "product_id": "CSAFPID-0010",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -398,7 +401,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W738-1 M12"
+            "name": "SCALANCE W738-1 M12 (6GK5738-1GY00-0AA0)"
           },
           {
             "branches": [
@@ -406,7 +409,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W738-1 M12",
+                  "name": "SCALANCE W738-1 M12 (6GK5738-1GY00-0AB0)",
                   "product_id": "CSAFPID-0011",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -417,7 +420,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W738-1 M12"
+            "name": "SCALANCE W738-1 M12 (6GK5738-1GY00-0AB0)"
           },
           {
             "branches": [
@@ -425,7 +428,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W748-1 M12",
+                  "name": "SCALANCE W748-1 M12 (6GK5748-1GD00-0AA0)",
                   "product_id": "CSAFPID-0012",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -436,7 +439,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W748-1 M12"
+            "name": "SCALANCE W748-1 M12 (6GK5748-1GD00-0AA0)"
           },
           {
             "branches": [
@@ -444,7 +447,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W748-1 M12",
+                  "name": "SCALANCE W748-1 M12 (6GK5748-1GD00-0AB0)",
                   "product_id": "CSAFPID-0013",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -455,7 +458,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W748-1 M12"
+            "name": "SCALANCE W748-1 M12 (6GK5748-1GD00-0AB0)"
           },
           {
             "branches": [
@@ -463,7 +466,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W748-1 RJ45",
+                  "name": "SCALANCE W748-1 RJ45 (6GK5748-1FC00-0AA0)",
                   "product_id": "CSAFPID-0014",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -474,7 +477,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W748-1 RJ45"
+            "name": "SCALANCE W748-1 RJ45 (6GK5748-1FC00-0AA0)"
           },
           {
             "branches": [
@@ -482,7 +485,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W748-1 RJ45",
+                  "name": "SCALANCE W748-1 RJ45 (6GK5748-1FC00-0AB0)",
                   "product_id": "CSAFPID-0015",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -493,7 +496,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W748-1 RJ45"
+            "name": "SCALANCE W748-1 RJ45 (6GK5748-1FC00-0AB0)"
           },
           {
             "branches": [
@@ -501,7 +504,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W761-1 RJ45",
+                  "name": "SCALANCE W761-1 RJ45 (6GK5761-1FC00-0AA0)",
                   "product_id": "CSAFPID-0016",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -512,7 +515,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W761-1 RJ45"
+            "name": "SCALANCE W761-1 RJ45 (6GK5761-1FC00-0AA0)"
           },
           {
             "branches": [
@@ -520,7 +523,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W761-1 RJ45",
+                  "name": "SCALANCE W761-1 RJ45 (6GK5761-1FC00-0AB0)",
                   "product_id": "CSAFPID-0017",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -531,7 +534,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W761-1 RJ45"
+            "name": "SCALANCE W761-1 RJ45 (6GK5761-1FC00-0AB0)"
           },
           {
             "branches": [
@@ -539,7 +542,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W774-1 M12 EEC",
+                  "name": "SCALANCE W774-1 M12 EEC (6GK5774-1FY00-0TA0)",
                   "product_id": "CSAFPID-0018",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -550,7 +553,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W774-1 M12 EEC"
+            "name": "SCALANCE W774-1 M12 EEC (6GK5774-1FY00-0TA0)"
           },
           {
             "branches": [
@@ -558,7 +561,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W774-1 M12 EEC",
+                  "name": "SCALANCE W774-1 M12 EEC (6GK5774-1FY00-0TB0)",
                   "product_id": "CSAFPID-0019",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -569,7 +572,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W774-1 M12 EEC"
+            "name": "SCALANCE W774-1 M12 EEC (6GK5774-1FY00-0TB0)"
           },
           {
             "branches": [
@@ -577,7 +580,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W774-1 RJ45",
+                  "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AA0)",
                   "product_id": "CSAFPID-0020",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -588,7 +591,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W774-1 RJ45"
+            "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AA0)"
           },
           {
             "branches": [
@@ -596,7 +599,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W774-1 RJ45",
+                  "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AA6)",
                   "product_id": "CSAFPID-0021",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -607,7 +610,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W774-1 RJ45"
+            "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AA6)"
           },
           {
             "branches": [
@@ -615,7 +618,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W774-1 RJ45",
+                  "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AB0)",
                   "product_id": "CSAFPID-0022",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -626,7 +629,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W774-1 RJ45"
+            "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AB0)"
           },
           {
             "branches": [
@@ -634,7 +637,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W774-1 RJ45",
+                  "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AC0)",
                   "product_id": "CSAFPID-0023",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -645,7 +648,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W774-1 RJ45"
+            "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AC0)"
           },
           {
             "branches": [
@@ -653,7 +656,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W774-1 RJ45 (USA)",
+                  "name": "SCALANCE W774-1 RJ45 (USA) (6GK5774-1FX00-0AB6)",
                   "product_id": "CSAFPID-0024",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -664,7 +667,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W774-1 RJ45 (USA)"
+            "name": "SCALANCE W774-1 RJ45 (USA) (6GK5774-1FX00-0AB6)"
           },
           {
             "branches": [
@@ -672,7 +675,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W778-1 M12",
+                  "name": "SCALANCE W778-1 M12 (6GK5778-1GY00-0AA0)",
                   "product_id": "CSAFPID-0025",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -683,7 +686,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W778-1 M12"
+            "name": "SCALANCE W778-1 M12 (6GK5778-1GY00-0AA0)"
           },
           {
             "branches": [
@@ -691,7 +694,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W778-1 M12",
+                  "name": "SCALANCE W778-1 M12 (6GK5778-1GY00-0AB0)",
                   "product_id": "CSAFPID-0026",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -702,7 +705,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W778-1 M12"
+            "name": "SCALANCE W778-1 M12 (6GK5778-1GY00-0AB0)"
           },
           {
             "branches": [
@@ -710,7 +713,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W778-1 M12 EEC",
+                  "name": "SCALANCE W778-1 M12 EEC (6GK5778-1GY00-0TA0)",
                   "product_id": "CSAFPID-0027",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -721,7 +724,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W778-1 M12 EEC"
+            "name": "SCALANCE W778-1 M12 EEC (6GK5778-1GY00-0TA0)"
           },
           {
             "branches": [
@@ -729,7 +732,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W778-1 M12 EEC (USA)",
+                  "name": "SCALANCE W778-1 M12 EEC (USA) (6GK5778-1GY00-0TB0)",
                   "product_id": "CSAFPID-0028",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -740,7 +743,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W778-1 M12 EEC (USA)"
+            "name": "SCALANCE W778-1 M12 EEC (USA) (6GK5778-1GY00-0TB0)"
           },
           {
             "branches": [
@@ -748,7 +751,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-1 RJ45",
+                  "name": "SCALANCE W786-1 RJ45 (6GK5786-1FC00-0AA0)",
                   "product_id": "CSAFPID-0029",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -759,7 +762,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-1 RJ45"
+            "name": "SCALANCE W786-1 RJ45 (6GK5786-1FC00-0AA0)"
           },
           {
             "branches": [
@@ -767,7 +770,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-1 RJ45",
+                  "name": "SCALANCE W786-1 RJ45 (6GK5786-1FC00-0AB0)",
                   "product_id": "CSAFPID-0030",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -778,7 +781,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-1 RJ45"
+            "name": "SCALANCE W786-1 RJ45 (6GK5786-1FC00-0AB0)"
           },
           {
             "branches": [
@@ -786,7 +789,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-2 RJ45",
+                  "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AA0)",
                   "product_id": "CSAFPID-0031",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -797,7 +800,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-2 RJ45"
+            "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AA0)"
           },
           {
             "branches": [
@@ -805,7 +808,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-2 RJ45",
+                  "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AB0)",
                   "product_id": "CSAFPID-0032",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -816,7 +819,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-2 RJ45"
+            "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AB0)"
           },
           {
             "branches": [
@@ -824,7 +827,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-2 RJ45",
+                  "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AC0)",
                   "product_id": "CSAFPID-0033",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -835,7 +838,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-2 RJ45"
+            "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AC0)"
           },
           {
             "branches": [
@@ -843,7 +846,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-2 SFP",
+                  "name": "SCALANCE W786-2 SFP (6GK5786-2FE00-0AA0)",
                   "product_id": "CSAFPID-0034",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -854,7 +857,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-2 SFP"
+            "name": "SCALANCE W786-2 SFP (6GK5786-2FE00-0AA0)"
           },
           {
             "branches": [
@@ -862,7 +865,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-2 SFP",
+                  "name": "SCALANCE W786-2 SFP (6GK5786-2FE00-0AB0)",
                   "product_id": "CSAFPID-0035",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -873,7 +876,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-2 SFP"
+            "name": "SCALANCE W786-2 SFP (6GK5786-2FE00-0AB0)"
           },
           {
             "branches": [
@@ -881,7 +884,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-2IA RJ45",
+                  "name": "SCALANCE W786-2IA RJ45 (6GK5786-2HC00-0AA0)",
                   "product_id": "CSAFPID-0036",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -892,7 +895,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-2IA RJ45"
+            "name": "SCALANCE W786-2IA RJ45 (6GK5786-2HC00-0AA0)"
           },
           {
             "branches": [
@@ -900,7 +903,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W786-2IA RJ45",
+                  "name": "SCALANCE W786-2IA RJ45 (6GK5786-2HC00-0AB0)",
                   "product_id": "CSAFPID-0037",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -911,7 +914,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W786-2IA RJ45"
+            "name": "SCALANCE W786-2IA RJ45 (6GK5786-2HC00-0AB0)"
           },
           {
             "branches": [
@@ -919,7 +922,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-1 M12",
+                  "name": "SCALANCE W788-1 M12 (6GK5788-1GD00-0AA0)",
                   "product_id": "CSAFPID-0038",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -930,7 +933,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-1 M12"
+            "name": "SCALANCE W788-1 M12 (6GK5788-1GD00-0AA0)"
           },
           {
             "branches": [
@@ -938,7 +941,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-1 M12",
+                  "name": "SCALANCE W788-1 M12 (6GK5788-1GD00-0AB0)",
                   "product_id": "CSAFPID-0039",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -949,7 +952,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-1 M12"
+            "name": "SCALANCE W788-1 M12 (6GK5788-1GD00-0AB0)"
           },
           {
             "branches": [
@@ -957,7 +960,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-1 RJ45",
+                  "name": "SCALANCE W788-1 RJ45 (6GK5788-1FC00-0AA0)",
                   "product_id": "CSAFPID-0040",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -968,7 +971,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-1 RJ45"
+            "name": "SCALANCE W788-1 RJ45 (6GK5788-1FC00-0AA0)"
           },
           {
             "branches": [
@@ -976,7 +979,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-1 RJ45",
+                  "name": "SCALANCE W788-1 RJ45 (6GK5788-1FC00-0AB0)",
                   "product_id": "CSAFPID-0041",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -987,7 +990,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-1 RJ45"
+            "name": "SCALANCE W788-1 RJ45 (6GK5788-1FC00-0AB0)"
           },
           {
             "branches": [
@@ -995,7 +998,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 M12",
+                  "name": "SCALANCE W788-2 M12 (6GK5788-2GD00-0AA0)",
                   "product_id": "CSAFPID-0042",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1006,7 +1009,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 M12"
+            "name": "SCALANCE W788-2 M12 (6GK5788-2GD00-0AA0)"
           },
           {
             "branches": [
@@ -1014,7 +1017,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 M12",
+                  "name": "SCALANCE W788-2 M12 (6GK5788-2GD00-0AB0)",
                   "product_id": "CSAFPID-0043",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1025,7 +1028,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 M12"
+            "name": "SCALANCE W788-2 M12 (6GK5788-2GD00-0AB0)"
           },
           {
             "branches": [
@@ -1033,7 +1036,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 M12 EEC",
+                  "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TA0)",
                   "product_id": "CSAFPID-0044",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1044,7 +1047,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 M12 EEC"
+            "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TA0)"
           },
           {
             "branches": [
@@ -1052,7 +1055,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 M12 EEC",
+                  "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TB0)",
                   "product_id": "CSAFPID-0045",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1063,7 +1066,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 M12 EEC"
+            "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TB0)"
           },
           {
             "branches": [
@@ -1071,7 +1074,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 M12 EEC",
+                  "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TC0)",
                   "product_id": "CSAFPID-0046",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1082,7 +1085,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 M12 EEC"
+            "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TC0)"
           },
           {
             "branches": [
@@ -1090,7 +1093,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 RJ45",
+                  "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AA0)",
                   "product_id": "CSAFPID-0047",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1101,7 +1104,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 RJ45"
+            "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AA0)"
           },
           {
             "branches": [
@@ -1109,7 +1112,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 RJ45",
+                  "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AB0)",
                   "product_id": "CSAFPID-0048",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1120,7 +1123,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 RJ45"
+            "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AB0)"
           },
           {
             "branches": [
@@ -1128,7 +1131,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SCALANCE W788-2 RJ45",
+                  "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AC0)",
                   "product_id": "CSAFPID-0049",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1139,15 +1142,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W788-2 RJ45"
+            "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AC0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.0.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE W1748-1 M12",
+                  "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0AA0)",
                   "product_id": "CSAFPID-0050",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1158,15 +1161,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W1748-1 M12"
+            "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0AA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.0.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE W1748-1 M12",
+                  "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0TA0)",
                   "product_id": "CSAFPID-0051",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1177,30 +1180,73 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W1748-1 M12"
+            "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0TA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V8.7.1.3",
+                "name": "vers:all/<V8.7.1.3",
                 "product": {
-                  "name": "SCALANCE W1750D",
-                  "product_id": "CSAFPID-0052"
+                  "name": "SCALANCE W1750D (JP) (6GK5750-2HX01-1AD0)",
+                  "product_id": "CSAFPID-0052",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5750-2HX01-1AD0"
+                    ]
+                  }
                 }
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W1750D"
+            "name": "SCALANCE W1750D (JP) (6GK5750-2HX01-1AD0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.0.0",
+                "name": "vers:all/<V8.7.1.3",
                 "product": {
-                  "name": "SCALANCE W1788-1 M12",
+                  "name": "SCALANCE W1750D (ROW) (6GK5750-2HX01-1AA0)",
                   "product_id": "CSAFPID-0053",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5750-2HX01-1AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1750D (ROW) (6GK5750-2HX01-1AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V8.7.1.3",
+                "product": {
+                  "name": "SCALANCE W1750D (USA) (6GK5750-2HX01-1AB0)",
+                  "product_id": "CSAFPID-0054",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5750-2HX01-1AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1750D (USA) (6GK5750-2HX01-1AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.0.0",
+                "product": {
+                  "name": "SCALANCE W1788-1 M12 (6GK5788-1GY01-0AA0)",
+                  "product_id": "CSAFPID-0055",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5788-1GY01-0AA0"
@@ -1210,16 +1256,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W1788-1 M12"
+            "name": "SCALANCE W1788-1 M12 (6GK5788-1GY01-0AA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.0.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE W1788-2 EEC M12",
-                  "product_id": "CSAFPID-0054",
+                  "name": "SCALANCE W1788-2 EEC M12 (6GK5788-2GY01-0TA0)",
+                  "product_id": "CSAFPID-0056",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5788-2GY01-0TA0"
@@ -1229,16 +1275,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W1788-2 EEC M12"
+            "name": "SCALANCE W1788-2 EEC M12 (6GK5788-2GY01-0TA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.0.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE W1788-2 M12",
-                  "product_id": "CSAFPID-0055",
+                  "name": "SCALANCE W1788-2 M12 (6GK5788-2GY01-0AA0)",
+                  "product_id": "CSAFPID-0057",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5788-2GY01-0AA0"
@@ -1248,16 +1294,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W1788-2 M12"
+            "name": "SCALANCE W1788-2 M12 (6GK5788-2GY01-0AA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V3.0.0",
+                "name": "vers:all/<V3.0.0",
                 "product": {
-                  "name": "SCALANCE W1788-2IA M12",
-                  "product_id": "CSAFPID-0056",
+                  "name": "SCALANCE W1788-2IA M12 (6GK5788-2HY01-0AA0)",
+                  "product_id": "CSAFPID-0058",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5788-2HY01-0AA0"
@@ -1267,16 +1313,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE W1788-2IA M12"
+            "name": "SCALANCE W1788-2IA M12 (6GK5788-2HY01-0AA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WAM763-1",
-                  "product_id": "CSAFPID-0057",
+                  "name": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)",
+                  "product_id": "CSAFPID-0059",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5763-1AL00-7DA0"
@@ -1286,16 +1332,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WAM763-1"
+            "name": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1",
-                  "product_id": "CSAFPID-0058",
+                  "name": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)",
+                  "product_id": "CSAFPID-0060",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7DA0"
@@ -1305,16 +1351,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WAM766-1"
+            "name": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1",
-                  "product_id": "CSAFPID-0059",
+                  "name": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)",
+                  "product_id": "CSAFPID-0061",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7DB0"
@@ -1324,35 +1370,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WAM766-1"
+            "name": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1 6GHz",
-                  "product_id": "CSAFPID-0060",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK5766-1JE00-7DA0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SCALANCE WAM766-1 6GHz"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SCALANCE WAM766-1 EEC",
-                  "product_id": "CSAFPID-0061",
+                  "name": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)",
+                  "product_id": "CSAFPID-0062",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7TA0"
@@ -1362,16 +1389,16 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WAM766-1 EEC"
+            "name": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1 EEC",
-                  "product_id": "CSAFPID-0062",
+                  "name": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)",
+                  "product_id": "CSAFPID-0063",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5766-1GE00-7TB0"
@@ -1381,34 +1408,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WAM766-1 EEC"
+            "name": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WAM766-1 EEC 6GHz",
-                  "product_id": "CSAFPID-0063",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK5766-1JE00-7TA0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SCALANCE WAM766-1 EEC 6GHz"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SCALANCE WUM763-1",
+                  "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)",
                   "product_id": "CSAFPID-0064",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1419,15 +1427,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WUM763-1"
+            "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WUM763-1",
+                  "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)",
                   "product_id": "CSAFPID-0065",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1438,15 +1446,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WUM763-1"
+            "name": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WUM766-1",
+                  "name": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)",
                   "product_id": "CSAFPID-0066",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1457,15 +1465,15 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WUM766-1"
+            "name": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V1.2.0",
                 "product": {
-                  "name": "SCALANCE WUM766-1",
+                  "name": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)",
                   "product_id": "CSAFPID-0067",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -1476,26 +1484,7 @@
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE WUM766-1"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SCALANCE WUM766-1 6GHz",
-                  "product_id": "CSAFPID-0068",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK5766-1JE00-3DA0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SCALANCE WUM766-1 6GHz"
+            "name": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)"
           }
         ],
         "category": "vendor",
@@ -1519,6 +1508,15 @@
       ],
       "product_status": {
         "known_affected": [
+          "CSAFPID-0050",
+          "CSAFPID-0051",
+          "CSAFPID-0052",
+          "CSAFPID-0053",
+          "CSAFPID-0054",
+          "CSAFPID-0055",
+          "CSAFPID-0056",
+          "CSAFPID-0057",
+          "CSAFPID-0058",
           "CSAFPID-0001",
           "CSAFPID-0002",
           "CSAFPID-0003",
@@ -1568,15 +1566,6 @@
           "CSAFPID-0047",
           "CSAFPID-0048",
           "CSAFPID-0049",
-          "CSAFPID-0050",
-          "CSAFPID-0051",
-          "CSAFPID-0052",
-          "CSAFPID-0053",
-          "CSAFPID-0054",
-          "CSAFPID-0055",
-          "CSAFPID-0056",
-          "CSAFPID-0057",
-          "CSAFPID-0058",
           "CSAFPID-0059",
           "CSAFPID-0060",
           "CSAFPID-0061",
@@ -1585,93 +1574,156 @@
           "CSAFPID-0064",
           "CSAFPID-0065",
           "CSAFPID-0066",
-          "CSAFPID-0067",
-          "CSAFPID-0068"
+          "CSAFPID-0067"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-24588 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE W1750D",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109802805/"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE W1788-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE W1788-2 EEC M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE W1788-2 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE W1788-2IA M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WAM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WAM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WAM766-1 EEC 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 - SCALANCE WUM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-24588 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-24588.json"
-        }
-      ],
       "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Disable A-MSDU, if possible",
+          "product_ids": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
+          "product_ids": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ]
+        },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
@@ -1729,14 +1781,30 @@
         },
         {
           "category": "vendor_fix",
+          "details": "Update to V1.2.0 or later version",
+          "product_ids": [
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805887/"
+        },
+        {
+          "category": "vendor_fix",
           "details": "Update to V3.0.0 or later version",
           "product_ids": [
             "CSAFPID-0050",
             "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
             "CSAFPID-0055",
-            "CSAFPID-0056"
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
         },
@@ -1744,176 +1812,11 @@
           "category": "vendor_fix",
           "details": "Update to V8.7.1.3 or later version",
           "product_ids": [
-            "CSAFPID-0052"
-          ],
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109802805/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V1.2 or later version",
-          "product_ids": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ],
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "category": "mitigation",
-          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
             "CSAFPID-0052",
             "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0052",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
+            "CSAFPID-0054"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109802805/"
         }
       ],
       "scores": [
@@ -1921,10 +1824,19 @@
           "cvss_v3": {
             "baseScore": 3.5,
             "baseSeverity": "LOW",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
             "version": "3.1"
           },
           "products": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
@@ -1974,15 +1886,6 @@
             "CSAFPID-0047",
             "CSAFPID-0048",
             "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0052",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -1991,8 +1894,7 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
+            "CSAFPID-0067"
           ]
         }
       ],
@@ -2013,6 +1915,12 @@
       ],
       "product_status": {
         "known_affected": [
+          "CSAFPID-0050",
+          "CSAFPID-0051",
+          "CSAFPID-0055",
+          "CSAFPID-0056",
+          "CSAFPID-0057",
+          "CSAFPID-0058",
           "CSAFPID-0001",
           "CSAFPID-0002",
           "CSAFPID-0003",
@@ -2062,14 +1970,6 @@
           "CSAFPID-0047",
           "CSAFPID-0048",
           "CSAFPID-0049",
-          "CSAFPID-0050",
-          "CSAFPID-0051",
-          "CSAFPID-0053",
-          "CSAFPID-0054",
-          "CSAFPID-0055",
-          "CSAFPID-0056",
-          "CSAFPID-0057",
-          "CSAFPID-0058",
           "CSAFPID-0059",
           "CSAFPID-0060",
           "CSAFPID-0061",
@@ -2078,89 +1978,80 @@
           "CSAFPID-0064",
           "CSAFPID-0065",
           "CSAFPID-0066",
-          "CSAFPID-0067",
-          "CSAFPID-0068"
+          "CSAFPID-0067"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26139 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE W1788-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE W1788-2 EEC M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE W1788-2 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE W1788-2IA M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WAM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WAM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WAM766-1 EEC 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 - SCALANCE WUM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26139 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26139.json"
-        }
-      ],
       "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
+          "product_ids": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ]
+        },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
@@ -2218,181 +2109,32 @@
         },
         {
           "category": "vendor_fix",
+          "details": "Update to V1.2.0 or later version",
+          "product_ids": [
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805887/"
+        },
+        {
+          "category": "vendor_fix",
           "details": "Update to V3.0.0 or later version",
           "product_ids": [
             "CSAFPID-0050",
             "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
             "CSAFPID-0055",
-            "CSAFPID-0056"
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V1.2 or later version",
-          "product_ids": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ],
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "category": "mitigation",
-          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
         }
       ],
       "scores": [
@@ -2400,10 +2142,16 @@
           "cvss_v3": {
             "baseScore": 5.3,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
@@ -2453,14 +2201,6 @@
             "CSAFPID-0047",
             "CSAFPID-0048",
             "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -2469,8 +2209,7 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
+            "CSAFPID-0067"
           ]
         }
       ],
@@ -2542,68 +2281,7 @@
           "CSAFPID-0049"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26140 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26140.json"
-        }
-      ],
       "remediations": [
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049"
-          ]
-        },
         {
           "category": "mitigation",
           "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
@@ -2660,8 +2338,8 @@
           ]
         },
         {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -2720,7 +2398,7 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
@@ -2844,68 +2522,7 @@
           "CSAFPID-0049"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26141 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26141.json"
-        }
-      ],
       "remediations": [
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049"
-          ]
-        },
         {
           "category": "mitigation",
           "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
@@ -2962,8 +2579,8 @@
           ]
         },
         {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -3022,7 +2639,7 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
@@ -3146,68 +2763,7 @@
           "CSAFPID-0049"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26143 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26143.json"
-        }
-      ],
       "remediations": [
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049"
-          ]
-        },
         {
           "category": "mitigation",
           "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
@@ -3264,8 +2820,8 @@
           ]
         },
         {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -3324,7 +2880,7 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
@@ -3446,8 +3002,6 @@
           "CSAFPID-0047",
           "CSAFPID-0048",
           "CSAFPID-0049",
-          "CSAFPID-0057",
-          "CSAFPID-0058",
           "CSAFPID-0059",
           "CSAFPID-0060",
           "CSAFPID-0061",
@@ -3456,65 +3010,138 @@
           "CSAFPID-0064",
           "CSAFPID-0065",
           "CSAFPID-0066",
-          "CSAFPID-0067",
-          "CSAFPID-0068"
+          "CSAFPID-0067"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WAM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WAM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WAM766-1 EEC 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 - SCALANCE WUM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26144 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26144.json"
-        }
-      ],
       "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Disable A-MSDU, if possible",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ]
+        },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
@@ -3572,10 +3199,8 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V1.2 or later version",
+          "details": "Update to V1.2.0 or later version",
           "product_ids": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -3584,144 +3209,9 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
+            "CSAFPID-0067"
           ],
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "category": "mitigation",
-          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805887/"
         }
       ],
       "scores": [
@@ -3729,7 +3219,7 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
@@ -3782,8 +3272,6 @@
             "CSAFPID-0047",
             "CSAFPID-0048",
             "CSAFPID-0049",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -3792,8 +3280,7 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
+            "CSAFPID-0067"
           ]
         }
       ],
@@ -3814,8 +3301,6 @@
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0057",
-          "CSAFPID-0058",
           "CSAFPID-0059",
           "CSAFPID-0060",
           "CSAFPID-0061",
@@ -3824,90 +3309,14 @@
           "CSAFPID-0064",
           "CSAFPID-0065",
           "CSAFPID-0066",
-          "CSAFPID-0067",
-          "CSAFPID-0068"
+          "CSAFPID-0067"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WAM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WAM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WAM766-1 EEC 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 - SCALANCE WUM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26145 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26145.json"
-        }
-      ],
       "remediations": [
-        {
-          "category": "vendor_fix",
-          "details": "Update to V1.2 or later version",
-          "product_ids": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ],
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
         {
           "category": "mitigation",
           "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
           "product_ids": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -3916,16 +3325,13 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
+            "CSAFPID-0067"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
+          "category": "vendor_fix",
+          "details": "Update to V1.2.0 or later version",
           "product_ids": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -3934,9 +3340,9 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
+            "CSAFPID-0067"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805887/"
         }
       ],
       "scores": [
@@ -3944,12 +3350,10 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -3958,8 +3362,7 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
+            "CSAFPID-0067"
           ]
         }
       ],
@@ -3980,6 +3383,15 @@
       ],
       "product_status": {
         "known_affected": [
+          "CSAFPID-0050",
+          "CSAFPID-0051",
+          "CSAFPID-0052",
+          "CSAFPID-0053",
+          "CSAFPID-0054",
+          "CSAFPID-0055",
+          "CSAFPID-0056",
+          "CSAFPID-0057",
+          "CSAFPID-0058",
           "CSAFPID-0001",
           "CSAFPID-0002",
           "CSAFPID-0003",
@@ -4029,15 +3441,6 @@
           "CSAFPID-0047",
           "CSAFPID-0048",
           "CSAFPID-0049",
-          "CSAFPID-0050",
-          "CSAFPID-0051",
-          "CSAFPID-0052",
-          "CSAFPID-0053",
-          "CSAFPID-0054",
-          "CSAFPID-0055",
-          "CSAFPID-0056",
-          "CSAFPID-0057",
-          "CSAFPID-0058",
           "CSAFPID-0059",
           "CSAFPID-0060",
           "CSAFPID-0061",
@@ -4046,93 +3449,83 @@
           "CSAFPID-0064",
           "CSAFPID-0065",
           "CSAFPID-0066",
-          "CSAFPID-0067",
-          "CSAFPID-0068"
+          "CSAFPID-0067"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26146 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE W1750D",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109802805/"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE W1788-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE W1788-2 EEC M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE W1788-2 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE W1788-2IA M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WAM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WAM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WAM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WAM766-1 EEC",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WAM766-1 EEC 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WUM763-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WUM766-1",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 - SCALANCE WUM766-1 6GHz",
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "summary": "CVE-2020-26146 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26146.json"
-        }
-      ],
       "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
+          "product_ids": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ]
+        },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
@@ -4190,14 +3583,30 @@
         },
         {
           "category": "vendor_fix",
+          "details": "Update to V1.2.0 or later version",
+          "product_ids": [
+            "CSAFPID-0059",
+            "CSAFPID-0060",
+            "CSAFPID-0061",
+            "CSAFPID-0062",
+            "CSAFPID-0063",
+            "CSAFPID-0064",
+            "CSAFPID-0065",
+            "CSAFPID-0066",
+            "CSAFPID-0067"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805887/"
+        },
+        {
+          "category": "vendor_fix",
           "details": "Update to V3.0.0 or later version",
           "product_ids": [
             "CSAFPID-0050",
             "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
             "CSAFPID-0055",
-            "CSAFPID-0056"
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
         },
@@ -4205,176 +3614,11 @@
           "category": "vendor_fix",
           "details": "Update to V8.7.1.3 or later version",
           "product_ids": [
-            "CSAFPID-0052"
-          ],
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109802805/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V1.2 or later version",
-          "product_ids": [
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ],
-          "url": "https://support.industry.siemens.com/cs/de/en/view/109805887"
-        },
-        {
-          "category": "mitigation",
-          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
             "CSAFPID-0052",
             "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0052",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
-            "CSAFPID-0059",
-            "CSAFPID-0060",
-            "CSAFPID-0061",
-            "CSAFPID-0062",
-            "CSAFPID-0063",
-            "CSAFPID-0064",
-            "CSAFPID-0065",
-            "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
-          ]
+            "CSAFPID-0054"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109802805/"
         }
       ],
       "scores": [
@@ -4382,10 +3626,19 @@
           "cvss_v3": {
             "baseScore": 5.3,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
@@ -4435,15 +3688,6 @@
             "CSAFPID-0047",
             "CSAFPID-0048",
             "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0052",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056",
-            "CSAFPID-0057",
-            "CSAFPID-0058",
             "CSAFPID-0059",
             "CSAFPID-0060",
             "CSAFPID-0061",
@@ -4452,8 +3696,7 @@
             "CSAFPID-0064",
             "CSAFPID-0065",
             "CSAFPID-0066",
-            "CSAFPID-0067",
-            "CSAFPID-0068"
+            "CSAFPID-0067"
           ]
         }
       ],
@@ -4474,6 +3717,12 @@
       ],
       "product_status": {
         "known_affected": [
+          "CSAFPID-0050",
+          "CSAFPID-0051",
+          "CSAFPID-0055",
+          "CSAFPID-0056",
+          "CSAFPID-0057",
+          "CSAFPID-0058",
           "CSAFPID-0001",
           "CSAFPID-0002",
           "CSAFPID-0003",
@@ -4522,46 +3771,71 @@
           "CSAFPID-0046",
           "CSAFPID-0047",
           "CSAFPID-0048",
-          "CSAFPID-0049",
-          "CSAFPID-0050",
-          "CSAFPID-0051",
-          "CSAFPID-0053",
-          "CSAFPID-0054",
-          "CSAFPID-0055",
-          "CSAFPID-0056"
+          "CSAFPID-0049"
         ]
       },
-      "references": [
-        {
-          "summary": "CVE-2020-26147 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26147 - SCALANCE W1748-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26147 - SCALANCE W1788-1 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26147 - SCALANCE W1788-2 EEC M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26147 - SCALANCE W1788-2 M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26147 - SCALANCE W1788-2IA M12",
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "summary": "CVE-2020-26147 Mitre 5.0 json",
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26147.json"
-        }
-      ],
       "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
+          "product_ids": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049"
+          ]
+        },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
@@ -4623,134 +3897,12 @@
           "product_ids": [
             "CSAFPID-0050",
             "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
             "CSAFPID-0055",
-            "CSAFPID-0056"
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
-        },
-        {
-          "category": "mitigation",
-          "details": "As these vulnerabilities can only be exploited within Wi-Fi range, when possible reduce Wi-Fi transmission power or make sure to have the devices in private areas with physical access controls",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "When possible, A-MSDU can be disabled to mitigate CVE-2020-24588 and CVE-2020-26144",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045",
-            "CSAFPID-0046",
-            "CSAFPID-0047",
-            "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056"
-          ]
         }
       ],
       "scores": [
@@ -4758,10 +3910,16 @@
           "cvss_v3": {
             "baseScore": 5.4,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:N",
             "version": "3.1"
           },
           "products": [
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058",
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
@@ -4810,13 +3968,7 @@
             "CSAFPID-0046",
             "CSAFPID-0047",
             "CSAFPID-0048",
-            "CSAFPID-0049",
-            "CSAFPID-0050",
-            "CSAFPID-0051",
-            "CSAFPID-0053",
-            "CSAFPID-0054",
-            "CSAFPID-0055",
-            "CSAFPID-0056"
+            "CSAFPID-0049"
           ]
         }
       ],

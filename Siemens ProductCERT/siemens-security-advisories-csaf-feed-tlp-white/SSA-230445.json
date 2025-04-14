@@ -1,0 +1,160 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "OZW672 and OZW772 Web Server versions before V5.2 contain a stored cross-site scripting (XSS) vulnerability that could allow an authenticated remote attacker to inject arbitrary JavaScript code that is later executed by another authenticated victim user with potential higher privileges than the attacker.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-230445: Stored XSS Vulnerability in OZW Web Servers Before V5.2 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-230445.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-230445: Stored XSS Vulnerability in OZW Web Servers Before V5.2 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-230445.json"
+      }
+    ],
+    "title": "SSA-230445: Stored XSS Vulnerability in OZW Web Servers Before V5.2",
+    "tracking": {
+      "current_release_date": "2024-11-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-230445",
+      "initial_release_date": "2024-11-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-11-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2",
+                "product": {
+                  "name": "OZW672",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OZW672"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.2",
+                "product": {
+                  "name": "OZW772",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "OZW772"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-36140",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The user accounts tab of affected devices is vulnerable to stored cross-site scripting (XSS) attacks.\r\n\r\nThis could allow an authenticated remote attacker to inject arbitrary JavaScript code that is later executed by another authenticated victim user with potential higher privileges than the attacker.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.2 or later version",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2024-36140"
+    }
+  ]
+}

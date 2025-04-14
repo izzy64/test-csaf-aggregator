@@ -51,7 +51,7 @@
     ],
     "title": "SSA-874353: Entity Enumeration Vulnerability in Mendix Runtime",
     "tracking": {
-      "current_release_date": "2025-04-10T00:00:00Z",
+      "current_release_date": "2025-04-14T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for Mendix Runtime V10.18"
+        },
+        {
+          "date": "2025-04-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for Mendix Runtime V10.12 and V10.6"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -128,7 +134,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V10.6.22",
                 "product": {
                   "name": "Mendix Runtime V10.6",
                   "product_id": "4"
@@ -142,7 +148,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V10.12.16",
                 "product": {
                   "name": "Mendix Runtime V10.12",
                   "product_id": "5"
@@ -201,9 +207,14 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "5",
-            "4",
             "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.12.16 or later version",
+          "product_ids": [
+            "5"
           ]
         },
         {
@@ -218,6 +229,13 @@
           "details": "Update to V10.21.0 or later version",
           "product_ids": [
             "3"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.6.22 or later version",
+          "product_ids": [
+            "4"
           ]
         },
         {

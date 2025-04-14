@@ -81,48 +81,48 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
 
 
 
-                        for advid, entry in rolie_dict.items():
-                            try:
-                                csaf_response = requests.get(entry["content"]["src"])
-                                csaf = csaf_response.json()
-                                if csaf:
-                                    with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
-                                        json.dump(csaf, outfile, indent=2, sort_keys=True)
-                                for link in entry["link"]:
-                                    if link["rel"] in ["hash", "signature"]:
-                                        link_response = requests.get(
-                                            link["href"], allow_redirects=True, verify=True
-                                        ).text
-                                        # check sig
-                                        if link["rel"] == "signature":
-                                            for key in provider_keys:
-                                                pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
-                                                if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response))):
-                                                    with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                                        outfile.write(link_response)
-                                                else:
-                                                    print("Provider signature does not match")
-                                        # check hash
-                                        if link["rel"] == "hash":
-                                            if link["href"].split(".")[-1] == "sha256":
-                                                if hashlib.sha256(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
-                                                    with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                                        outfile.write(link_response)
-                                            elif link["href"].split(".")[-1] == "sha512":
-                                                if hashlib.sha512(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
-                                                    with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                                        outfile.write(link_response)
-                                            else:
-                                                print("hashing method not supported")
-                            except Exception as e:
-                                print(e)
-                                pass
+                        # for advid, entry in rolie_dict.items():
+                        #     try:
+                        #         csaf_response = requests.get(entry["content"]["src"])
+                        #         csaf = csaf_response.json()
+                        #         if csaf:
+                        #             with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
+                        #                 json.dump(csaf, outfile, indent=2, sort_keys=True)
+                        #         for link in entry["link"]:
+                        #             if link["rel"] in ["hash", "signature"]:
+                        #                 link_response = requests.get(
+                        #                     link["href"], allow_redirects=True, verify=True
+                        #                 ).text
+                        #                 # check sig
+                        #                 if link["rel"] == "signature":
+                        #                     for key in provider_keys:
+                        #                         pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
+                        #                         if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response))):
+                        #                             with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                        #                                 outfile.write(link_response)
+                        #                         else:
+                        #                             print("Provider signature does not match")
+                        #                 # check hash
+                        #                 if link["rel"] == "hash":
+                        #                     if link["href"].split(".")[-1] == "sha256":
+                        #                         if hashlib.sha256(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
+                        #                             with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                        #                                 outfile.write(link_response)
+                        #                     elif link["href"].split(".")[-1] == "sha512":
+                        #                         if hashlib.sha512(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
+                        #                             with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                        #                                 outfile.write(link_response)
+                        #                     else:
+                        #                         print("hashing method not supported")
+                        #     except Exception as e:
+                        #         print(e)
+                        #         pass
 
                         if rolie_copy.get("feed",{}).get("link",[]):
                             rolie_copy["feed"]["link"] = [
                                 {
                                     "rel": "self",
-                                    "href": f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/{rolie['id']}.json"
+                                    "href": f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
                                 },
                             ]
                         if rolie_copy.get("feed",{}).get("updated",""):

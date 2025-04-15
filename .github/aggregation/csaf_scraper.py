@@ -29,6 +29,7 @@ try:
 except:
     print("aggregator.json not found")
 
+n_requests = 0
 for i, provider in enumerate(aggregator["csaf_providers"]):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
@@ -36,6 +37,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     pm_response = requests.get(
         pm_url, allow_redirects=True, verify=True
     )
+    n_requests += 1
     provider_metadata = pm_response.json()
     # update provider metadata
     provider_metadata["canonical_url"] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
@@ -48,6 +50,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
         provider_keys[j]["blob"] = clean_key(requests.get(
             provider_keys[j]["url"], allow_redirects=True, verify=True
         ).text)
+        n_requests += 1
 
     # scrape the rolie feeds
     for distro in provider_metadata["distributions"]:
@@ -57,6 +60,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                     rolie_response = requests.get(
                         feed["url"], allow_redirects=True, verify=True
                     )
+                    n_requests += 1
                     rolie = rolie_response.json()
                     if rolie:
                         if not os.path.exists(path_start+"/"+rolie["feed"]['id']): 
@@ -85,6 +89,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                             if entry["update"]:
                                 try:
                                     csaf_response = requests.get(entry["content"]["src"])
+                                    n_requests += 1
                                     csaf = csaf_response.json()
                                     if csaf:
                                         with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
@@ -94,6 +99,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                             link_response = requests.get(
                                                 link["href"], allow_redirects=True, verify=True
                                             ).text
+                                            n_requests += 1
                                             # check sig
                                             if link["rel"] == "signature":
                                                 for key in provider_keys:
@@ -142,6 +148,8 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
     aggregator["csaf_providers"][i]["mirrors"][0] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+
+print(f"The Aggregator made {n_requests} external requests")
 
 with open("./aggregator.json", "w") as outfile:
     json.dump(aggregator, outfile, indent=2, sort_keys=True)           

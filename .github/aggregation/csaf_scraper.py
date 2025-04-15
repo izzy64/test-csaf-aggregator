@@ -6,22 +6,12 @@ import pgpy
 from datetime import datetime
 import dateutil.parser as parser
 
-from helpers import time_convert
-
-github_raw_path_start = "https://raw.githubusercontent.com"
-github_owner = "izzy64"
-repo_name = "test-csaf-aggregator"
-branch = "main"
+from helpers import time_convert, clean_key
+import repo
 
 now = datetime.now()
-dt_format = "%Y-%m-%dT%H:%M:%S.%fZ"
 
-def clean_key(key):
-    lines = key.splitlines()
-    filtered_list = [x for x in lines if not any(y in x for y in ["Version", "Comment", "MessageID", "Hash", "Charset"])]
-    filtered_key = "\n".join(filtered_list).replace("\n\n", "\n")
-    return filtered_key
-
+# load aggregator.json
 try:
     with open("./aggregator.json", "r") as agg:
         contents = agg.read()
@@ -40,9 +30,9 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     n_requests += 1
     provider_metadata = pm_response.json()
     # update provider metadata
-    provider_metadata["canonical_url"] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
-    provider_metadata["last_updated"] = now.strftime(dt_format)
-    provider["metadata"]["last_updated"] = now.strftime(dt_format)
+    provider_metadata["canonical_url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+    provider_metadata["last_updated"] = now.strftime(repo.dt_format)
+    provider["metadata"]["last_updated"] = now.strftime(repo.dt_format)
 
     # keep the provider public keys
     provider_keys = json.loads(json.dumps(provider_metadata["public_openpgp_keys"]))
@@ -57,6 +47,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
         if "rolie" in distro.keys():
             for feed in distro["rolie"]["feeds"]:
                 try:
+                    # fetch rolie
                     rolie_response = requests.get(
                         feed["url"], allow_redirects=True, verify=True
                     )
@@ -73,11 +64,12 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                         except:
                             old_rolie = {}
 
-                        feed["url"] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
+                        feed["url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                         rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
                         old_rolie_dict = {item['id']:item|{"update":True} for item in old_rolie.get("feed",{}).get("entry",[])}
 
+                        # Cull already fetched csafs from fetch pool
                         if rolie.get("feed",{}).get("entry",[]):
                             for entry in rolie["feed"]["entry"]:
                                 updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
@@ -85,6 +77,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                 if updated_time > old_updated_time:
                                     rolie_dict[entry["id"]]["update"] = False
 
+                        # fetch csafs for update
                         for advid, entry in rolie_dict.items():
                             if entry["update"]:
                                 try:
@@ -125,16 +118,18 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                     print(e)
                                     pass
 
+                        # update mirrored ROLIE
                         if rolie_copy.get("feed",{}).get("link",[]):
                             rolie_copy["feed"]["link"] = [
                                 {
                                     "rel": "self",
-                                    "href": f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
+                                    "href": f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
                                 },
                             ]
                         if rolie_copy.get("feed",{}).get("updated",""):
-                            rolie_copy["feed"]["updated"] = now.strftime(dt_format)
+                            rolie_copy["feed"]["updated"] = now.strftime(repo.dt_format)
 
+                        # Save mirrored ROLIE
                         with open(f"{feed_path}/{rolie_copy['feed']['id']}.json", "w") as outfile:
                             json.dump(rolie_copy, outfile, indent=2, sort_keys=True)
 
@@ -142,15 +137,16 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                     print(e)
                     pass
                     
-    # save the provider metadata
+    # save the mirrored provider metadata
     if not os.path.exists("./"+publisher_name): 
         os.makedirs("./"+publisher_name)
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
-    aggregator["csaf_providers"][i]["mirrors"][0] = f"{github_raw_path_start}/{github_owner}/{repo_name}/{branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+    aggregator["csaf_providers"][i]["mirrors"][0] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
 
 print(f"The Aggregator made {n_requests} external requests")
 
+# Save the aggregator.json with updated provider links
 with open("./aggregator.json", "w") as outfile:
     json.dump(aggregator, outfile, indent=2, sort_keys=True)           
 

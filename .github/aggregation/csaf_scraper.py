@@ -10,6 +10,7 @@ from helpers import time_convert, clean_key
 import repo
 
 now = datetime.now()
+verify = False
 
 # load aggregator.json
 try:
@@ -25,7 +26,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     publisher_name = provider["metadata"]["publisher"]["name"]
     path_start = "./"+publisher_name
     pm_response = requests.get(
-        pm_url, allow_redirects=True, verify=True
+        pm_url, allow_redirects=True, verify=verify
     )
     n_requests += 1
     provider_metadata = pm_response.json()
@@ -38,7 +39,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     provider_keys = json.loads(json.dumps(provider_metadata["public_openpgp_keys"]))
     for j, key in enumerate(provider_keys):
         provider_keys[j]["blob"] = clean_key(requests.get(
-            provider_keys[j]["url"], allow_redirects=True, verify=True
+            provider_keys[j]["url"], allow_redirects=True, verify=verify
         ).text)
         n_requests += 1
 
@@ -49,7 +50,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                 try:
                     # fetch rolie
                     rolie_response = requests.get(
-                        feed["url"], allow_redirects=True, verify=True
+                        feed["url"], allow_redirects=True, verify=verify
                     )
                     n_requests += 1
                     rolie = rolie_response.json()
@@ -67,21 +68,28 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                         feed["url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                         rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
-                        old_rolie_dict = {item['id']:item|{"update":True} for item in old_rolie.get("feed",{}).get("entry",[])}
+                        old_rolie_dict = {it['id']:it|{"update":True} for it in old_rolie.get("feed",{}).get("entry",[])}
 
                         # Cull already fetched csafs from fetch pool
                         if rolie.get("feed",{}).get("entry",[]):
                             for entry in rolie["feed"]["entry"]:
-                                updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
-                                old_updated_time = parser.parse(old_rolie_dict.get(entry["id"],{}).get("updated",""))
-                                if updated_time > old_updated_time:
-                                    rolie_dict[entry["id"]]["update"] = False
+                                if entry["id"] in old_rolie_dict.keys():
+                                    try:
+                                        updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
+                                        old_updated_time = parser.parse(old_rolie_dict.get(entry["id"],{}).get("updated",""))
+                                    except Exception as e:
+                                        print("Error here: "+str(e))
+                                        continue
+                                    if updated_time > old_updated_time:
+                                        rolie_dict[entry["id"]]["update"] = False
 
                         # fetch csafs for update
                         for advid, entry in rolie_dict.items():
                             if entry["update"]:
                                 try:
-                                    csaf_response = requests.get(entry["content"]["src"])
+                                    csaf_response = requests.get(
+                                        entry["content"]["src"], allow_redirects=True, verify=verify
+                                    )
                                     n_requests += 1
                                     csaf = csaf_response.json()
                                     if csaf:
@@ -90,7 +98,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                     for link in entry["link"]:
                                         if link["rel"] in ["hash", "signature"]:
                                             link_response = requests.get(
-                                                link["href"], allow_redirects=True, verify=True
+                                                link["href"], allow_redirects=True, verify=verify
                                             ).text
                                             n_requests += 1
                                             # check sig

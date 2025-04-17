@@ -1,4 +1,6 @@
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
 import json
 import os
 import hashlib
@@ -8,6 +10,8 @@ import dateutil.parser as parser
 
 from helpers import time_convert, clean_key
 import repo
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 now = datetime.now()
 verify = False
@@ -65,6 +69,9 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                         except:
                             old_rolie = {}
 
+                        if rolie["feed"]["id"] == "siemens-security-advisories-csaf-feed-tlp-white":
+                            rolie = old_rolie
+
                         feed["url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                         rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
@@ -94,6 +101,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                     csaf = csaf_response.json()
                                     if csaf:
                                         with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
+                                            print(entry['id'])
                                             json.dump(csaf, outfile, indent=2, sort_keys=True)
                                     for link in entry["link"]:
                                         if link["rel"] in ["hash", "signature"]:
@@ -101,15 +109,15 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                                 link["href"], allow_redirects=True, verify=verify
                                             ).text
                                             n_requests += 1
-                                            # check sig
-                                            if link["rel"] == "signature":
-                                                for key in provider_keys:
-                                                    pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
-                                                    if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response))):
-                                                        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                                            outfile.write(link_response)
-                                                    else:
-                                                        print("Provider signature does not match")
+                                            # # check sig
+                                            # if link["rel"] == "signature":
+                                            #     for key in provider_keys:
+                                            #         pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
+                                            #         if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response))):
+                                            #             with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                                            #                 outfile.write(link_response)
+                                            #         else:
+                                            #             print("Provider signature does not match")
                                             # check hash
                                             if link["rel"] == "hash":
                                                 if link["href"].split(".")[-1] == "sha256":

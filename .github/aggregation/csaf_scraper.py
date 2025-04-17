@@ -1,4 +1,6 @@
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
 import json
 import os
 import hashlib
@@ -8,6 +10,8 @@ import dateutil.parser as parser
 
 from helpers import time_convert, clean_key
 import repo
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 now = datetime.now()
 verify = False
@@ -92,6 +96,9 @@ def aggregate_provider_files(provider):
                         except:
                             old_rolie = {}
 
+                        if rolie["feed"]["id"] == "siemens-security-advisories-csaf-feed-tlp-white":
+                            rolie = old_rolie
+
                         feed["url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                         rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
@@ -121,6 +128,7 @@ def aggregate_provider_files(provider):
                                     csaf = csaf_response.json()
                                     if csaf:
                                         with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
+                                            print(entry['id'])
                                             json.dump(csaf, outfile, indent=2, sort_keys=True)
                                     for link in entry["link"]:
                                         if link["rel"] in ["hash", "signature"]:
@@ -132,6 +140,7 @@ def aggregate_provider_files(provider):
                                             # check sig
                                             if link["rel"] == "signature":
                                                 verify_signature(link,provider_keys,link_response,csaf_response,feed_path)
+
                                             # check hash
                                             if link["rel"] == "hash":
                                                 verify_hash(link,link_response,csaf_response,feed_path)

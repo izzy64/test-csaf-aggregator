@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\nSiemens has released a new version of Fortigate NGFW for RUGGEDCOM APE1808 and recommends to update to the latest version. Siemens recommends to consult and implement the workarounds provided in Fortinet's upstream security notifications.",
+        "text": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -40,18 +40,18 @@
     "references": [
       {
         "category": "self",
-        "summary": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW Before V7.4.3 on RUGGEDCOM APE1808 Devices - HTML Version",
+        "summary": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices - HTML Version",
         "url": "https://cert-portal.siemens.com/productcert/html/ssa-832273.html"
       },
       {
         "category": "self",
-        "summary": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW Before V7.4.3 on RUGGEDCOM APE1808 Devices - CSAF Version",
+        "summary": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices - CSAF Version",
         "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-832273.json"
       }
     ],
-    "title": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW Before V7.4.3 on RUGGEDCOM APE1808 Devices",
+    "title": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-03-11T00:00:00Z",
+      "current_release_date": "2025-04-16T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -108,10 +108,16 @@
           "legacy_version": "1.7",
           "number": "8",
           "summary": "Added newly published upstream vulnerability CVE-2023-40721"
+        },
+        {
+          "date": "2025-04-16T00:00:00Z",
+          "legacy_version": "1.8",
+          "number": "9",
+          "summary": "Updated remediation for CVE-2024-21762 due to insufficient fix from Fortinet"
         }
       ],
       "status": "final",
-      "version": "8"
+      "version": "9"
     }
   },
   "product_tree": {
@@ -134,6 +140,14 @@
                 "product": {
                   "name": "RUGGEDCOM APE1808",
                   "product_id": "2"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "3"
                 }
               }
             ],
@@ -545,7 +559,7 @@
       ],
       "product_status": {
         "known_affected": [
-          "2"
+          "3"
         ]
       },
       "remediations": [
@@ -553,14 +567,14 @@
           "category": "mitigation",
           "details": "Set a non form-based authentication scheme (see \nhttps://fortiguard.fortinet.com/psirt/FG-IR-23-328)",
           "product_ids": [
-            "2"
+            "3"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update Fortigate NGFW to V7.4.3. Contact customer support to receive patch and update information.",
           "product_ids": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -573,7 +587,7 @@
             "version": "3.1"
           },
           "products": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -594,7 +608,7 @@
       ],
       "product_status": {
         "known_affected": [
-          "2"
+          "3"
         ]
       },
       "remediations": [
@@ -602,14 +616,14 @@
           "category": "mitigation",
           "details": "Set a non form-based authentication scheme (see \nhttps://fortiguard.fortinet.com/psirt/FG-IR-23-328)",
           "product_ids": [
-            "2"
+            "3"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update Fortigate NGFW to V7.4.3. Contact customer support to receive patch and update information.",
           "product_ids": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -622,7 +636,7 @@
             "version": "3.1"
           },
           "products": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -1063,22 +1077,22 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "2"
         ]
       },
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Disable SSL VPN (disable webmode is NOT a valid workaround) (see \nhttps://www.fortiguard.com/psirt/FG-IR-24-015)",
+          "details": "Refer to Fortinet Blog for mitigation measures \nhttps://www.fortinet.com/blog/psirt-blogs/analysis-of-threat-actor-activity",
           "product_ids": [
-            "1"
+            "2"
           ]
         },
         {
           "category": "vendor_fix",
-          "details": "Update Fortigate NGFW to V7.4.3. Contact customer support to receive patch and update information.",
+          "details": "Contact customer support to receive patch and update information",
           "product_ids": [
-            "1"
+            "2"
           ]
         }
       ],
@@ -1091,7 +1105,7 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "2"
           ]
         }
       ],
@@ -1330,7 +1344,7 @@
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "3"
         ]
       },
       "remediations": [
@@ -1339,7 +1353,7 @@
           "details": "Update Fortigate NGFW to V7.4.3. Contact customer support to receive patch and update information.",
           "product_ids": [
             "1",
-            "2"
+            "3"
           ]
         }
       ],
@@ -1353,7 +1367,7 @@
           },
           "products": [
             "1",
-            "2"
+            "3"
           ]
         }
       ],

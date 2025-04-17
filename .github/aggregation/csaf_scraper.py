@@ -13,15 +13,47 @@ now = datetime.now()
 verify = False
 
 # load aggregator.json
-try:
-    with open("./aggregator.json", "r") as agg:
-        contents = agg.read()
-        aggregator = json.loads(contents)
-except:
-    print("aggregator.json not found")
+def load_aggregator():
+    try:
+        with open("./aggregator.json", "r") as agg:
+            contents = agg.read()
+            aggregator = json.loads(contents)
+    except:
+        print("aggregator.json not found")
+        aggregator = {}
+    return aggregator
 
-n_requests = 0
-for i, provider in enumerate(aggregator["csaf_providers"]):
+def verify_signature(link, keys, signature, csaf, feed_path):
+    for key in keys:
+        pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
+        if bool(pub_key.verify(csaf.text, pgpy.PGPSignature.from_blob(signature))):
+            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                outfile.write(signature)
+        else:
+            print("Provider signature does not match")
+
+def verify_hash(link, hash, csaf, feed_path):
+    if link["href"].split(".")[-1] == "sha256":
+        if hashlib.sha256(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
+            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                outfile.write(hash)
+    elif link["href"].split(".")[-1] == "sha512":
+        if hashlib.sha512(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
+            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                outfile.write(hash)
+    else:
+        print("hashing method not supported")
+
+def get_provider_pgp_keys(metadata, num_requests):
+    provider_keys = json.loads(json.dumps(metadata["public_openpgp_keys"]))
+    for j, key in enumerate(provider_keys):
+        provider_keys[j]["blob"] = clean_key(requests.get(
+            provider_keys[j]["url"], allow_redirects=True, verify=verify
+        ).text)
+        num_requests += 1
+    return provider_keys, num_requests
+
+def aggregate_provider_files(provider):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
     path_start = "./"+publisher_name
@@ -36,12 +68,7 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
     provider["metadata"]["last_updated"] = now.strftime(repo.dt_format)
 
     # keep the provider public keys
-    provider_keys = json.loads(json.dumps(provider_metadata["public_openpgp_keys"]))
-    for j, key in enumerate(provider_keys):
-        provider_keys[j]["blob"] = clean_key(requests.get(
-            provider_keys[j]["url"], allow_redirects=True, verify=verify
-        ).text)
-        n_requests += 1
+    provider_keys, n_requests = get_provider_pgp_keys(provider_metadata, n_requests)
 
     # scrape the rolie feeds
     for distro in provider_metadata["distributions"]:
@@ -101,27 +128,13 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
                                                 link["href"], allow_redirects=True, verify=verify
                                             ).text
                                             n_requests += 1
+
                                             # check sig
                                             if link["rel"] == "signature":
-                                                for key in provider_keys:
-                                                    pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
-                                                    if bool(pub_key.verify(csaf_response.text, pgpy.PGPSignature.from_blob(link_response))):
-                                                        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                                            outfile.write(link_response)
-                                                    else:
-                                                        print("Provider signature does not match")
+                                                verify_signature(link,provider_keys,link_response,csaf_response,feed_path)
                                             # check hash
                                             if link["rel"] == "hash":
-                                                if link["href"].split(".")[-1] == "sha256":
-                                                    if hashlib.sha256(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
-                                                        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                                            outfile.write(link_response)
-                                                elif link["href"].split(".")[-1] == "sha512":
-                                                    if hashlib.sha512(csaf_response.text.encode('UTF-8')).hexdigest() == link_response.split(" ")[0]:
-                                                        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                                                            outfile.write(link_response)
-                                                else:
-                                                    print("hashing method not supported")
+                                                verify_hash(link,link_response,csaf_response,feed_path)
                                 except Exception as e:
                                     print(e)
                                     pass
@@ -150,14 +163,29 @@ for i, provider in enumerate(aggregator["csaf_providers"]):
         os.makedirs("./"+publisher_name)
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
-    aggregator["csaf_providers"][i]["mirrors"][0] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
 
-print(f"The Aggregator made {n_requests} external requests")
+def parse_aggregator(aggregator:dict):
+    n_requests = 0
+    for i, provider in enumerate(aggregator["csaf_providers"]):
+        aggregate_provider_files(provider)
+        publisher_name = provider["metadata"]["publisher"]["name"]
+        aggregator["csaf_providers"][i]["mirrors"][0] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+
+    print(f"The Aggregator made {n_requests} external requests")
 
 # Save the aggregator.json with updated provider links
-with open("./aggregator.json", "w") as outfile:
-    json.dump(aggregator, outfile, indent=2, sort_keys=True)           
+def update_aggregator(aggregator:dict):
+    with open("./aggregator.json", "w") as outfile:
+        json.dump(aggregator, outfile, indent=2, sort_keys=True)           
 
+def main():
+    agg = load_aggregator()
+    if agg:
+        parse_aggregator(agg)
+        update_aggregator(agg)
+
+if __name__=="__main__":
+    main()
 
 
 

@@ -1,0 +1,534 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "LOGO! V8.3 BM (incl. SIPLUS variants) devices contain a vulnerability that could allow an electromagnetic fault injection. This could allow an attacker to dump and debug the firmware, including the manipulation of memory. Further actions could allow to inject public keys of custom created key pairs which are then signed by the LOGO! V8.3 Product CA.\n\nThe vulnerability is related to the specific hardware architecture of the LOGO! V8.3 BM. Siemens has released new hardware versions with the LOGO! V8.4 BM and the SIPLUS LOGO! V8.4 BM product families for all affected devices in which the vulnerability is fixed and the Product CA private key is rotated. See the chapter \"Additional Information\" below for more details.\n\nFor more information please also refer to the related product support article: \nhttps://support.industry.siemens.com/cs/ww/en/view/109826554/.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-844582: Electromagnetic Fault Injection in LOGO! V8.3 BM Devices Results in Broken LOGO! V8.3 Product CA - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-844582.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-844582: Electromagnetic Fault Injection in LOGO! V8.3 BM Devices Results in Broken LOGO! V8.3 Product CA - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-844582.json"
+      }
+    ],
+    "title": "SSA-844582: Electromagnetic Fault Injection in LOGO! V8.3 BM Devices Results in Broken LOGO! V8.3 Product CA",
+    "tracking": {
+      "current_release_date": "2024-10-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-844582",
+      "initial_release_date": "2023-12-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-12-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-09-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added information about additional new SIPLUS LOGO! hardware versions: SIPLUS LOGO! 24CE and SIPLUS LOGO! 230RCE"
+        },
+        {
+          "date": "2024-10-08T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added information about additional new SIPLUS LOGO! hardware versions"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 12/24RCE (6ED1052-1MD08-0BA1)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-1MD08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 12/24RCE (6ED1052-1MD08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 12/24RCEo (6ED1052-2MD08-0BA1)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-2MD08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 12/24RCEo (6ED1052-2MD08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 24CE (6ED1052-1CC08-0BA1)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-1CC08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 24CE (6ED1052-1CC08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 24CEo (6ED1052-2CC08-0BA1)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-2CC08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 24CEo (6ED1052-2CC08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 24RCE (6ED1052-1HB08-0BA1)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-1HB08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 24RCE (6ED1052-1HB08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 24RCEo (6ED1052-2HB08-0BA1)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-2HB08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 24RCEo (6ED1052-2HB08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 230RCE (6ED1052-1FB08-0BA1)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-1FB08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 230RCE (6ED1052-1FB08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "LOGO! 230RCEo (6ED1052-2FB08-0BA1)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ED1052-2FB08-0BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "LOGO! 230RCEo (6ED1052-2FB08-0BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 12/24RCE (6AG1052-1MD08-7BA1)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-1MD08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 12/24RCE (6AG1052-1MD08-7BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 12/24RCEo (6AG1052-2MD08-7BA1)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-2MD08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 12/24RCEo (6AG1052-2MD08-7BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 24CE (6AG1052-1CC08-7BA1)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-1CC08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 24CE (6AG1052-1CC08-7BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 24CEo (6AG1052-2CC08-7BA1)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-2CC08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 24CEo (6AG1052-2CC08-7BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 24RCE (6AG1052-1HB08-7BA1)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-1HB08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 24RCE (6AG1052-1HB08-7BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 24RCEo (6AG1052-2HB08-7BA1)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-2HB08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 24RCEo (6AG1052-2HB08-7BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 230RCE (6AG1052-1FB08-7BA1)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-1FB08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 230RCE (6AG1052-1FB08-7BA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V8.3",
+                "product": {
+                  "name": "SIPLUS LOGO! 230RCEo (6AG1052-2FB08-7BA1)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1052-2FB08-7BA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS LOGO! 230RCEo (6AG1052-2FB08-7BA1)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-42784",
+      "cwe": {
+        "id": "CWE-1319",
+        "name": "Improper Protection against Electromagnetic Fault Injection (EM-FI)"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices are vulnerable to an electromagnetic fault injection. This could allow an attacker to dump and debug the firmware, including the manipulation of memory. Further actions could allow to inject public keys of custom created key pairs which are then signed by the product CA. The generation of a custom certificate allows communication with, and impersonation of, any device of the same version.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "7",
+          "8",
+          "3",
+          "4",
+          "5",
+          "6",
+          "9",
+          "10",
+          "15",
+          "16",
+          "11",
+          "12",
+          "13",
+          "14"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "7",
+            "8",
+            "3",
+            "4",
+            "5",
+            "6",
+            "9",
+            "10",
+            "15",
+            "16",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Use HTTPS communication only in trusted networks without unknown network devices",
+          "product_ids": [
+            "1",
+            "2",
+            "7",
+            "8",
+            "3",
+            "4",
+            "5",
+            "6",
+            "9",
+            "10",
+            "15",
+            "16",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "If possible, connect the Base Module directly with LOGO! Soft Comfort and the Web Browser",
+          "product_ids": [
+            "1",
+            "2",
+            "7",
+            "8",
+            "3",
+            "4",
+            "5",
+            "6",
+            "9",
+            "10",
+            "15",
+            "16",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "7",
+            "8",
+            "3",
+            "4",
+            "5",
+            "6",
+            "9",
+            "10",
+            "15",
+            "16",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        }
+      ],
+      "title": "CVE-2022-42784"
+    }
+  ]
+}

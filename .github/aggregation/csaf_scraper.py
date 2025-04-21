@@ -44,7 +44,7 @@ def verify_hash(link, hash, csaf, feed_path):
     else:
         print("hashing method not supported")
 
-def get_provider_pgp_keys(metadata, num_requests):
+def get_provider_pgp_keys(metadata:dict, num_requests:int):
     provider_keys = json.loads(json.dumps(metadata["public_openpgp_keys"]))
     for j, key in enumerate(provider_keys):
         provider_keys[j]["blob"] = clean_key(requests.get(
@@ -53,7 +53,7 @@ def get_provider_pgp_keys(metadata, num_requests):
         num_requests += 1
     return provider_keys, num_requests
 
-def aggregate_provider_files(provider):
+def aggregate_provider_files(provider:dict, n_requests:int=0):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
     path_start = "./"+publisher_name
@@ -163,11 +163,12 @@ def aggregate_provider_files(provider):
         os.makedirs("./"+publisher_name)
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
+    return n_requests
 
 def parse_aggregator(aggregator:dict):
     n_requests = 0
     for i, provider in enumerate(aggregator["csaf_providers"]):
-        aggregate_provider_files(provider)
+        n_requests = aggregate_provider_files(provider, n_requests)
         publisher_name = provider["metadata"]["publisher"]["name"]
         aggregator["csaf_providers"][i]["mirrors"][0] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
 

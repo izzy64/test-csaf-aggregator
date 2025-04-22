@@ -1,5 +1,6 @@
 import requests
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from urllib3.exceptions import InsecureRequestWarning
+import urllib3
 
 import json
 import os
@@ -11,7 +12,7 @@ import dateutil.parser as parser
 from helpers import time_convert, clean_key
 import repo
 
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+urllib3.disable_warnings(InsecureRequestWarning)
 
 now = datetime.now()
 verify = False
@@ -28,6 +29,7 @@ def load_aggregator():
     return aggregator
 
 def verify_signature(link, keys, signature, csaf, feed_path):
+    print(f"Verifying signature file: {link}")
     for key in keys:
         pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
         if bool(pub_key.verify(csaf.text, pgpy.PGPSignature.from_blob(signature))):
@@ -37,6 +39,7 @@ def verify_signature(link, keys, signature, csaf, feed_path):
             print("Provider signature does not match")
 
 def verify_hash(link, hash, csaf, feed_path):
+    print(f"Verifying hash file: {link}")
     if link["href"].split(".")[-1] == "sha256":
         if hashlib.sha256(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
             with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
@@ -60,6 +63,7 @@ def get_provider_pgp_keys(metadata:dict, num_requests:int):
 def aggregate_provider_files(provider:dict, n_requests:int=0):
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
+    print(f"Fetching results for provider {publisher_name}")
     path_start = "./"+publisher_name
     pm_response = requests.get(
         pm_url, allow_redirects=True, verify=verify
@@ -86,6 +90,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                     n_requests += 1
                     rolie = rolie_response.json()
                     if rolie:
+                        print(f"Fetching results for ROLIE feed {rolie['feed']['id']}")
                         if not os.path.exists(path_start+"/"+rolie["feed"]['id']): 
                             os.makedirs(path_start+"/"+rolie["feed"]['id'])
                         feed_path = path_start+"/"+rolie["feed"]['id']
@@ -95,9 +100,6 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                 old_rolie = json.loads(old_file.read())
                         except:
                             old_rolie = {}
-
-                        if rolie["feed"]["id"] == "siemens-security-advisories-csaf-feed-tlp-white":
-                            rolie = old_rolie
 
                         feed["url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
@@ -120,6 +122,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                         # fetch csafs for update
                         for advid, entry in rolie_dict.items():
                             if entry["update"]:
+                                print(f"Fetching data for {entry['id']}")
                                 try:
                                     csaf_response = requests.get(
                                         entry["content"]["src"], allow_redirects=True, verify=verify
@@ -128,7 +131,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                     csaf = csaf_response.json()
                                     if csaf:
                                         with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
-                                            print(entry['id'])
+                                            print(f"Saving {entry['id']}")
                                             json.dump(csaf, outfile, indent=2, sort_keys=True)
                                     for link in entry["link"]:
                                         if link["rel"] in ["hash", "signature"]:
@@ -160,6 +163,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
 
                         # Save mirrored ROLIE
                         with open(f"{feed_path}/{rolie_copy['feed']['id']}.json", "w") as outfile:
+                            print(f"Saving ROLIE {rolie_copy['feed']['id']}")
                             json.dump(rolie_copy, outfile, indent=2, sort_keys=True)
 
                 except Exception as e:
@@ -170,10 +174,12 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     if not os.path.exists("./"+publisher_name): 
         os.makedirs("./"+publisher_name)
     with open(f"{path_start}/provider_metadata.json", "w") as outfile:
+        print(f"Saving Provider Metadata for {publisher_name}")
         json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
     return n_requests
 
 def parse_aggregator(aggregator:dict):
+    print(f'Performing aggregation for {aggregator["aggregator"]["name"]} CSAF Aggregator')
     n_requests = 0
     for i, provider in enumerate(aggregator["csaf_providers"]):
         n_requests = aggregate_provider_files(provider, n_requests)

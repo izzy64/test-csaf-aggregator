@@ -19,7 +19,7 @@ verify = False
 # load aggregator.json
 def load_aggregator():
     try:
-        with open("./aggregator.json", "r") as agg:
+        with open(f"./{repo.aggregator_name}", "r") as agg:
             contents = agg.read()
             aggregator = json.loads(contents)
     except:
@@ -184,7 +184,7 @@ def parse_aggregator(aggregator:dict):
 
 # Save the aggregator.json with updated provider links
 def update_aggregator(aggregator:dict):
-    with open("./aggregator.json", "w") as outfile:
+    with open(f"./{repo.aggregator_name}", "w") as outfile:
         json.dump(aggregator, outfile, indent=2, sort_keys=True)           
 
 def main():

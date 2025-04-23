@@ -1,0 +1,346 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "A vulnerability in the affected products could allow an unauthorized attacker with network access to the webserver of an affected device to perform a denial-of-service attack.\n\nSiemens has released a new version for SINAMICS S210 (6SL5...) and recommends to update to the latest version. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-693975: Denial-of-Service Vulnerability in the Web Server of Industrial Products - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-693975.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-693975: Denial-of-Service Vulnerability in the Web Server of Industrial Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-693975.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-693975: Denial-of-Service Vulnerability in the Web Server of Industrial Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-693975.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-693975: Denial-of-Service Vulnerability in the Web Server of Industrial Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-693975.txt"
+      }
+    ],
+    "title": "SSA-693975: Denial-of-Service Vulnerability in the Web Server of Industrial Products",
+    "tracking": {
+      "current_release_date": "2024-03-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-693975",
+      "initial_release_date": "2023-12-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-12-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-03-12T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fixes for supported SIMATIC S7-1200 CP 1200 family, added fix version for  SIMATIC CP1200 family and  SIMATIC CP1500 family"
+        }
+      ],
+      "status": "interim",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.4.29",
+                "product": {
+                  "name": "SIMATIC CP 1242-7 V2 (incl. SIPLUS variants)",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1242-7 V2 (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.4.29",
+                "product": {
+                  "name": "SIMATIC CP 1243-1 (incl. SIPLUS variants)",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-1 (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC CP 1243-1 DNP3 (incl. SIPLUS variants)",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-1 DNP3 (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.4.29",
+                "product": {
+                  "name": "SIMATIC CP 1243-1 IEC (incl. SIPLUS variants)",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-1 IEC (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.4.29",
+                "product": {
+                  "name": "SIMATIC CP 1243-7 LTE",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-7 LTE"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.4.29",
+                "product": {
+                  "name": "SIMATIC CP 1243-8 IRC (6GK7243-8RX30-0XE0)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7243-8RX30-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-8 IRC (6GK7243-8RX30-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.37",
+                "product": {
+                  "name": "SIMATIC CP 1543-1 (6GK7543-1AX00-0XE0)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7543-1AX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1543-1 (6GK7543-1AX00-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions >= V6.1 < V6.1 HF2",
+                "product": {
+                  "name": "SINAMICS S210 (6SL5...)",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS S210 (6SL5...)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.37",
+                "product": {
+                  "name": "SIPLUS NET CP 1543-1 (6AG1543-1AX00-2XE0)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1543-1AX00-2XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS NET CP 1543-1 (6AG1543-1AX00-2XE0)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-38380",
+      "cwe": {
+        "id": "CWE-401",
+        "name": "Missing Release of Memory after Effective Lifetime"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The webserver implementation of the affected products does not correctly release allocated memory after it has been used.\r\n\r\nAn attacker with network access could use this vulnerability to cause a denial-of-service condition in the webserver of the affected product.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict network access to the integrated webserver",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0.37 or later version",
+          "product_ids": [
+            "7",
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109828349/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.4.29 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "4",
+            "5",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109823721/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1 HF2 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109825153/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2023-38380"
+    }
+  ]
+}

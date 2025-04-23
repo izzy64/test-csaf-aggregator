@@ -101,6 +101,27 @@ def get_provider_pgp_keys(metadata:dict, num_requests:int):
         ).text)
         num_requests += 1
     return provider_keys, num_requests
+def get_csaf_updated_time(path:str):
+    '''Get CSAF Updated Time
+    Load the csaf.json file and return the time it was updated.
+
+    Args:
+        path: The path of the csaf to check.
+    Returns:
+        updated_time: A datetime string.
+    '''
+    try:
+        with open(path, "r") as file:
+            contents = file.read()
+            csaf = json.loads(contents)
+            updated_time = csaf.get("document", {}).get("tracking", {}).get("current_release_date", "1980-01-01T09:00:00.000Z")
+        if not os.path.isfile(path+".asc"):
+            updated_time = "1980-01-01T09:00:00.000Z"
+        if not (os.path.isfile(path+".sha256") or os.path.exists(path+".sha512")):
+            updated_time = "1980-01-01T09:00:00.000Z"
+    except:
+        updated_time = "1980-01-01T09:00:00.000Z"
+    return updated_time
 def aggregate_provider_files(provider:dict, n_requests:int=0):
     '''Aggregate Provider Files
     Using a Provider's metadata, the aggregator will make web requests to download the ROLIE
@@ -155,26 +176,21 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                         except:
                             old_rolie = {}
 
-                        if rolie["feed"]["id"] == "siemens-security-advisories-csaf-feed-tlp-white":
-                            rolie = old_rolie
-
                         feed["url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                         rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
-                        old_rolie_dict = {it['id']:it|{"update":True} for it in old_rolie.get("feed",{}).get("entry",[])}
 
                         # Cull already fetched csafs from fetch pool
                         if rolie.get("feed",{}).get("entry",[]):
                             for entry in rolie["feed"]["entry"]:
-                                if entry["id"] in old_rolie_dict.keys():
-                                    try:
-                                        updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
-                                        old_updated_time = parser.parse(old_rolie_dict.get(entry["id"],{}).get("updated",""))
-                                    except Exception as e:
-                                        print("Error here: "+str(e))
-                                        continue
-                                    if updated_time >= old_updated_time:
-                                        rolie_dict[entry["id"]]["update"] = False
+                                try:
+                                    updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
+                                    old_updated_time = parser.parse(get_csaf_updated_time(f"{feed_path}/{entry['id']}.json"))
+                                except Exception as e:
+                                    print("Error here: "+str(e))
+                                    continue
+                                if updated_time <= old_updated_time:
+                                    rolie_dict[entry["id"]]["update"] = False
 
                         # fetch csafs for update
                         for advid, entry in rolie_dict.items():

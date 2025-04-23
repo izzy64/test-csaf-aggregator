@@ -1,0 +1,821 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The boot loader within RUGGEDCOM ROS contains two vulnerabilities in the loading process of the operating system kernel. The more severe of these vulnerabilities could allow an attacker with local access to the device to execute arbitrary code on an affected device.\n\nSiemens recommends specific countermeasures to mitigate this issue.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-618620: Vulnerabilities in Boot Loader (U-Boot) of RUGGEDCOM ROS Devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-618620.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-618620: Vulnerabilities in Boot Loader (U-Boot) of RUGGEDCOM ROS Devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-618620.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-618620: Vulnerabilities in Boot Loader (U-Boot) of RUGGEDCOM ROS Devices - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-618620.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-618620: Vulnerabilities in Boot Loader (U-Boot) of RUGGEDCOM ROS Devices - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-618620.txt"
+      }
+    ],
+    "title": "SSA-618620: Vulnerabilities in Boot Loader (U-Boot) of RUGGEDCOM ROS Devices",
+    "tracking": {
+      "current_release_date": "2023-12-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-618620",
+      "initial_release_date": "2019-12-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2019-12-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2022-09-13T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Only devices shipped with U-Boot < V2016.05RS09 are affected by CVE-2018-18440, clarify that currently no fix is planned for affected devices"
+        },
+        {
+          "date": "2023-12-12T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Removed RUGGEDCOM RSG900C and RSG900R as all products from these families are also listed in the advisory (RUGGEDCOM RSG907R, RSG908C, RSG909R and RSG910C). Readjusted product naming to reflect firmware version used (V4.X or/and V5.X). Added missing products: RUGGEDCOM RMC8388NC, RSG2488NC, RSG920PNC, RST2228P, RST916C and RST916P"
+        }
+      ],
+      "status": "interim",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RMC8388 V4.X",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RMC8388 V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RMC8388 V5.X",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RMC8388 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RMC8388NC V4.X",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RMC8388NC V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RMC8388NC V5.X",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RMC8388NC V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG907R",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG907R"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG908C",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG908C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG909R",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG909R"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG910C",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG910C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920P V4.X",
+                  "product_id": "9"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920P V4.X",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG920P V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920P V5.X",
+                  "product_id": "11"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920P V5.X",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG920P V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920PNC V4.X",
+                  "product_id": "13"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920PNC V4.X",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG920PNC V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920PNC V5.X",
+                  "product_id": "15"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG920PNC V5.X",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG920PNC V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488 V4.X",
+                  "product_id": "17"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488 V4.X",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2488 V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488 V5.X",
+                  "product_id": "19"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488 V5.X",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2488 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488NC V4.X",
+                  "product_id": "21"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488NC V4.X",
+                  "product_id": "22"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2488NC V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488NC V5.X",
+                  "product_id": "23"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488NC V5.X",
+                  "product_id": "24"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2488NC V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSL910",
+                  "product_id": "25"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSL910"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RSL910NC",
+                  "product_id": "26"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSL910NC"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RST916C",
+                  "product_id": "27"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST916C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RST916P",
+                  "product_id": "28"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST916P"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RST2228",
+                  "product_id": "29"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RST2228",
+                  "product_id": "30"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST2228"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot < V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RST2228P",
+                  "product_id": "31"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "All versions with U-Boot >= V2016.05RS09",
+                "product": {
+                  "name": "RUGGEDCOM RST2228P",
+                  "product_id": "32"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST2228P"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2018-18440",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The embedded DENX U-Boot boot loader has a locally exploitable buffer overflow via a crafted kernel image because filesystem loading is mishandled.\n\nThe security vulnerability could be exploited by an attacker with local access to the affected systems. The vulnerability could allow an attacker to compromise confidentiality, integrity and availability of the system.\n\nAt the time of advisory publication no public exploitation of this security vulnerability was known.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "17",
+          "19",
+          "21",
+          "23",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "11",
+          "13",
+          "15",
+          "25",
+          "26",
+          "29",
+          "31",
+          "27",
+          "28"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Disable boot interface access during boot up via the 'bootoption.txt' file parameter 'Security = yes' to mitigate CVE-2018-18440.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "17",
+            "19",
+            "21",
+            "23",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "11",
+            "13",
+            "15",
+            "25",
+            "26",
+            "29",
+            "31",
+            "27",
+            "28"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable access to the removable media via 'bootoption.txt' file parameter 'Disableautoaccessremovable = Yes' to mitigate CVE-2019-13103. Note that this vulnerability only applies to RUGGEDCOM ROS, if the device boots from removable media.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "17",
+            "19",
+            "21",
+            "23",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "11",
+            "13",
+            "15",
+            "25",
+            "26",
+            "29",
+            "31",
+            "27",
+            "28"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "4",
+            "17",
+            "19",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "11",
+            "25",
+            "26",
+            "29",
+            "27",
+            "28"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "2",
+            "3",
+            "21",
+            "23",
+            "13",
+            "15",
+            "31"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "17",
+            "19",
+            "21",
+            "23",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "11",
+            "13",
+            "15",
+            "25",
+            "26",
+            "29",
+            "31",
+            "27",
+            "28"
+          ]
+        }
+      ],
+      "title": "CVE-2018-18440"
+    },
+    {
+      "cve": "CVE-2019-13103",
+      "cwe": {
+        "id": "CWE-674",
+        "name": "Uncontrolled Recursion"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The embedded DENX U-Boot boot loader has a physically exploitable vulnerability. A crafted self-referential DOS partition table will cause the bootloader to infinitely recurse, causing the stack to grow infinitely and eventually crash.\r\n\r\nThe security vulnerability could be exploited by an attacker with physical access to the affected systems. The vulnerability could allow an attacker to compromise the availability of the system.\r\n\r\nAt the time of advisory publication no public exploitation of this security vulnerability was known.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "29",
+          "30",
+          "31",
+          "32"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Disable boot interface access during boot up via the 'bootoption.txt' file parameter 'Security = yes' to mitigate CVE-2018-18440.",
+          "product_ids": [
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "29",
+            "30",
+            "31",
+            "32"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable access to the removable media via 'bootoption.txt' file parameter 'Disableautoaccessremovable = Yes' to mitigate CVE-2019-13103. Note that this vulnerability only applies to RUGGEDCOM ROS, if the device boots from removable media.",
+          "product_ids": [
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "29",
+            "30",
+            "31",
+            "32"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "17",
+            "18",
+            "19",
+            "20",
+            "22",
+            "24",
+            "9",
+            "10",
+            "11",
+            "12",
+            "14",
+            "16",
+            "29",
+            "30",
+            "32"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "21",
+            "23",
+            "13",
+            "15",
+            "31"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "29",
+            "30",
+            "31",
+            "32"
+          ]
+        }
+      ],
+      "title": "CVE-2019-13103"
+    }
+  ]
+}

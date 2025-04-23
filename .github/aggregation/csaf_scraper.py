@@ -201,7 +201,10 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                         entry["content"]["src"], allow_redirects=True, verify=env.verify
                                     )
                                     n_requests += 1
-                                    csaf = csaf_response.json()
+                                    try:
+                                        csaf = csaf_response.json()
+                                    except:
+                                        break
                                     if csaf:
                                         with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
                                             print(f"Saving {entry['id']}")

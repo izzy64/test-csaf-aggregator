@@ -173,7 +173,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                     except Exception as e:
                                         print("Error here: "+str(e))
                                         continue
-                                    if updated_time > old_updated_time:
+                                    if updated_time >= old_updated_time:
                                         rolie_dict[entry["id"]]["update"] = False
 
                         # fetch csafs for update

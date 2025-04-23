@@ -42,7 +42,8 @@ def load_aggregator():
     return aggregator
 def verify_signature(link, keys, signature, csaf, feed_path):
     '''Verify Signature
-    Using a CSAF Provider's OpenPGP Public Key, verify a signature file for a given CSAF.
+    Using a CSAF Provider's OpenPGP Public Key, save a signature file for a given CSAF
+    if it passes verification.
 
     Args:
         link: The URL from a CSAF Provider's ROLIE feed.
@@ -62,7 +63,7 @@ def verify_signature(link, keys, signature, csaf, feed_path):
             print("Provider signature does not match")
 def verify_hash(link, hash, csaf, feed_path):
     '''Verify Hash
-    Verify the hash files to a given CSAF file.
+    Verify the hash files to a given CSAF file, saving if valid.
 
     Args:
         link: The URL from a CSAF Provider's ROLIE feed.
@@ -230,10 +231,10 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     return n_requests
 def parse_aggregator(aggregator:dict):
     '''Parse Aggregator
-    Read through the Aggregator.json file and then aggregate and mirror the following files 
+    Read through the Aggregator.json file and then fetch the following resources 
     from a mirrored CSAF Provider listed in the json file:
-    > Metadata
-    > OpenPGP Public Keys
+    > Provider Metadata
+    > OpenPGP Public Keys (not mirrored)
     > ROLIE feed
     > CSAF files, hashs, signatures
 
@@ -251,7 +252,7 @@ def parse_aggregator(aggregator:dict):
     print(f"The Aggregator made {n_requests} external requests")
 def update_aggregator(aggregator:dict):
     '''Update Aggregator
-    Update the aggregator.json file with any updated links to the mirrored folder locations.
+    Update the aggregator.json file with new links to the mirrored folder locations.
 
     Args:
         aggregator: a dictionary holding the data from the aggregator.json

@@ -5,4 +5,8 @@ branch = "main"
 
 dt_format = "%Y-%m-%dT%H:%M:%S.%fZ"
 
-aggregator_name = "aggregator_non_Siemens.json"
+verify=False
+
+# aggregator_name = "aggregator_non_Siemens.json"
+# aggregator_name = "aggregator_Siemens.json"
+aggregator_name = "aggregator.json"

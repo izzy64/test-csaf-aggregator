@@ -10,7 +10,7 @@ from datetime import datetime
 import dateutil.parser as parser
 
 from helpers import time_convert, clean_key
-import repo
+import env
 
 ####################################################################
 # Title: CSAF Scraper for CSAF Aggregator
@@ -18,10 +18,10 @@ import repo
 # Org: Idaho National Laboratory on behalf of 
 #       Cypersecurity and Infrastructure Security Agency (CISA)
 ####################################################################
-urllib3.disable_warnings(InsecureRequestWarning)
+if not env.verify:
+    urllib3.disable_warnings(InsecureRequestWarning)
 
 now = datetime.now()
-verify = False
 
 def load_aggregator():
     '''Load Aggregator
@@ -33,7 +33,7 @@ def load_aggregator():
         aggregator: as a dictionary object.
     '''
     try:
-        with open(f"./{repo.aggregator_name}", "r") as agg:
+        with open(f"./{env.aggregator_name}", "r") as agg:
             contents = agg.read()
             aggregator = json.loads(contents)
     except:
@@ -124,9 +124,9 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     n_requests += 1
     provider_metadata = pm_response.json()
     # update provider metadata
-    provider_metadata["canonical_url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
-    provider_metadata["last_updated"] = now.strftime(repo.dt_format)
-    provider["metadata"]["last_updated"] = now.strftime(repo.dt_format)
+    provider_metadata["canonical_url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+    provider_metadata["last_updated"] = now.strftime(env.dt_format)
+    provider["metadata"]["last_updated"] = now.strftime(env.dt_format)
 
     # keep the provider public keys
     provider_keys, n_requests = get_provider_pgp_keys(provider_metadata, n_requests)
@@ -156,7 +156,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                         if rolie["feed"]["id"] == "siemens-security-advisories-csaf-feed-tlp-white":
                             rolie = old_rolie
 
-                        feed["url"] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
+                        feed["url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                         rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
                         old_rolie_dict = {it['id']:it|{"update":True} for it in old_rolie.get("feed",{}).get("entry",[])}
@@ -209,11 +209,11 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                             rolie_copy["feed"]["link"] = [
                                 {
                                     "rel": "self",
-                                    "href": f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
+                                    "href": f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
                                 },
                             ]
                         if rolie_copy.get("feed",{}).get("updated",""):
-                            rolie_copy["feed"]["updated"] = now.strftime(repo.dt_format)
+                            rolie_copy["feed"]["updated"] = now.strftime(env.dt_format)
 
                         # Save mirrored ROLIE
                         with open(f"{feed_path}/{rolie_copy['feed']['id']}.json", "w") as outfile:
@@ -247,7 +247,7 @@ def parse_aggregator(aggregator:dict):
     for i, provider in enumerate(aggregator["csaf_providers"]):
         n_requests = aggregate_provider_files(provider, n_requests)
         publisher_name = provider["metadata"]["publisher"]["name"]
-        aggregator["csaf_providers"][i]["mirrors"][0] = f"{repo.github_raw_path_start}/{repo.github_owner}/{repo.repo_name}/{repo.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+        aggregator["csaf_providers"][i]["mirrors"][0] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
 
     print(f"The Aggregator made {n_requests} external requests")
 def update_aggregator(aggregator:dict):
@@ -259,7 +259,7 @@ def update_aggregator(aggregator:dict):
     Returns:
         None
     '''
-    with open(f"./{repo.aggregator_name}", "w") as outfile:
+    with open(f"./{env.aggregator_name}", "w") as outfile:
         json.dump(aggregator, outfile, indent=2, sort_keys=True)           
 def main():
     '''Main

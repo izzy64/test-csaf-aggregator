@@ -14,7 +14,7 @@ import repo
 
 ####################################################################
 # Title: CSAF Scraper for CSAF Aggregator
-# Author: Israel Bentley
+# Author: Israel Bentley & Matthew Stradling
 # Org: Idaho National Laboratory on behalf of 
 #       Cypersecurity and Infrastructure Security Agency (CISA)
 ####################################################################

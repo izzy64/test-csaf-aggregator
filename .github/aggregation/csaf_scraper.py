@@ -97,7 +97,7 @@ def get_provider_pgp_keys(metadata:dict, num_requests:int):
     provider_keys = json.loads(json.dumps(metadata["public_openpgp_keys"]))
     for j, key in enumerate(provider_keys):
         provider_keys[j]["blob"] = clean_key(requests.get(
-            provider_keys[j]["url"], allow_redirects=True, verify=verify
+            provider_keys[j]["url"], allow_redirects=True, verify=env.verify
         ).text)
         num_requests += 1
     return provider_keys, num_requests
@@ -119,7 +119,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     publisher_name = provider["metadata"]["publisher"]["name"]
     path_start = "./"+publisher_name
     pm_response = requests.get(
-        pm_url, allow_redirects=True, verify=verify
+        pm_url, allow_redirects=True, verify=env.verify
     )
     n_requests += 1
     provider_metadata = pm_response.json()
@@ -138,7 +138,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                 try:
                     # fetch rolie
                     rolie_response = requests.get(
-                        feed["url"], allow_redirects=True, verify=verify
+                        feed["url"], allow_redirects=True, verify=env.verify
                     )
                     n_requests += 1
                     rolie = rolie_response.json()
@@ -179,7 +179,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                             if entry["update"]:
                                 try:
                                     csaf_response = requests.get(
-                                        entry["content"]["src"], allow_redirects=True, verify=verify
+                                        entry["content"]["src"], allow_redirects=True, verify=env.verify
                                     )
                                     n_requests += 1
                                     csaf = csaf_response.json()
@@ -190,7 +190,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                     for link in entry["link"]:
                                         if link["rel"] in ["hash", "signature"]:
                                             link_response = requests.get(
-                                                link["href"], allow_redirects=True, verify=verify
+                                                link["href"], allow_redirects=True, verify=env.verify
                                             ).text
                                             n_requests += 1
 

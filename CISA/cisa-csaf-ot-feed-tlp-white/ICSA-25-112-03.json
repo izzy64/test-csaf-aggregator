@@ -39,13 +39,8 @@
       },
       {
         "category": "summary",
-        "text": "Schneider Electric is aware of a vulnerability within the VxWorks Operating System from Wind\r\nRiver. Many vendors, including Schneider Electric, embed VxWorks in their offers.\r\nIf successfully exploited, these vulnerabilities could result in loss of confidentiality, integrity and\r\ndenial of service in the BMENOC0321 https://www.se.com/ww/en/product/BMENOC0321/m580-noc-control/ , BMECRA https://www.se.com/ww/en/product/BMECRA31210 and 140CRA products which are\r\ncommunication modules for Modicon M580 and Quantum controllers.\r\nFailure to apply the mitigations and remediations provided below may risk stack overflow attack, \r\nwhich could result in loss of confidentiality, integrity and denial of service of the device. ",
+        "text": "Schneider Electric is aware of a vulnerability in its Wiser Home Controller WHC-5918A product. \r\nThe Wiser Home Controller WHC-5918A, a C-Bus based home automation controller, was \r\ndiscontinued on December 31, 2015.\r\nFailure to apply the mitigations provided below may risk credentials being stolen, which could \r\nresult in the Wiser Home Controller WHC-5918A being compromised. ",
         "title": "Overview"
-      },
-      {
-        "category": "general",
-        "text": "Vulnerabilities disclosed by Wind River VxWorks product impact Schneider Electric Communication modules. Additional information about the vulnerability can be found at: https://support2.windriver.com/index.php?page=cve&on=view&id=CVE-2021-29999",
-        "title": "Vulnerability Details"
       },
       {
         "category": "legal_disclaimer",
@@ -59,7 +54,7 @@
       },
       {
         "category": "other",
-        "text": "Commercial Facilities, Critical Manufacturing, Energy",
+        "text": "Energy",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -122,28 +117,28 @@
     "references": [
       {
         "category": "self",
-        "summary": "Wind River VxWorks DHCP Server Vulnerability - SEVD-2025-014-03 CSAF Version",
-        "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-014-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2025-014-03.json"
+        "summary": "Wiser Home Controller WHC-5918A - SEVD-2024-191-01 CSAF Version",
+        "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-191-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2024-191-01.json"
       },
       {
         "category": "self",
-        "summary": "Wind River VxWorks DHCP Server Vulnerability - SEVD-2025-014-03 PDF Version",
-        "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-014-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2025-014-03.pdf"
+        "summary": "Wiser Home Controller WHC-5918A - SEVD-2024-191-01 PDF Version",
+        "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-191-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2024-191-01.pdf"
       },
       {
         "category": "external",
         "summary": "Recommended Cybersecurity Best Practices",
-        "url": "https://www.se.com/us/en/download/document/7EN52-0390"
+        "url": "https://www.se.com/us/en/download/document/7EN52-0390/"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-25-058-01 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-058-01.json"
+        "summary": "ICS Advisory ICSA-25-112-03 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-112-03.json"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-25-058-01 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-058-01"
+        "summary": "ICS Advisory ICSA-25-112-03 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-112-03"
       },
       {
         "category": "external",
@@ -176,32 +171,27 @@
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
       }
     ],
-    "title": "Schneider Electric Communication Modules for Modicon M580 and Quantum Controllers (Update A)",
+    "title": "Schneider Electric Wiser Home Controller WHC-5918A",
     "tracking": {
-      "current_release_date": "2025-04-08T04:00:00.000000Z",
+      "current_release_date": "2024-07-09T00:00:00.000000Z",
       "generator": {
-        "date": "2025-04-16T23:13:05.357721Z",
+        "date": "2025-04-22T17:50:31.766931Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-25-058-01",
-      "initial_release_date": "2025-01-14T05:00:00.000000Z",
+      "id": "ICSA-25-112-03",
+      "initial_release_date": "2024-07-09T00:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2025-01-14T05:00:00.000000Z",
+          "date": "2024-07-09T00:00:00.000000Z",
           "number": "1.0.0",
           "summary": "Original Release"
-        },
-        {
-          "date": "2025-04-08T04:00:00.000000Z",
-          "number": "2.0.0",
-          "summary": "A remediation is now available for \r\nBMECRA31210, BMXCRA31200, and \r\nBMXCRA31210"
         }
       ],
       "status": "final",
-      "version": "2.0.0"
+      "version": "1.0.0"
     }
   },
   "product_tree": {
@@ -212,149 +202,15 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<SV1.10",
+                "name": "vers:all/",
                 "product": {
-                  "name": "Schneider Electric Modicon M580 communication modules BMENOC BMENOC0321 versions prior to SV1.10",
-                  "product_id": "CSAFPID-0001",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMENOC0321"
-                    ]
-                  }
-                }
-              },
-              {
-                "category": "product_version",
-                "name": "SV1.10",
-                "product": {
-                  "name": "Schneider Electric Modicon M580 communication modules BMENOC BMENOC0321 Version SV1.10",
-                  "product_id": "CSAFPID-0002",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMENOC0321"
-                    ]
-                  }
+                  "name": "Schneider Electric Wiser Home Controller WHC-5918A All Versions",
+                  "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Modicon M580 communication modules BMENOC"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<SV02.80",
-                "product": {
-                  "name": "Schneider Electric Modicon M580 communication modules BMECRA BMECRA31210 versions prior to SV02.80",
-                  "product_id": "CSAFPID-0003",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMECRA31210"
-                    ]
-                  }
-                }
-              },
-              {
-                "category": "product_version_range",
-                "name": "SV02.80",
-                "product": {
-                  "name": "Schneider Electric Modicon M580 communication modules BMECRA BMECRA31210 Version SV02.80",
-                  "product_id": "CSAFPID-0004",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMECRA31210"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Modicon M580 communication modules BMECRA"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<SV02.80",
-                "product": {
-                  "name": "Schneider Electric Modicon M580/Quantum communication modules BMXCRA BMXCRA31200 versions prior to SV02.80",
-                  "product_id": "CSAFPID-0005",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMXCRA31200"
-                    ]
-                  }
-                }
-              },
-              {
-                "category": "product_version_range",
-                "name": "SV02.80",
-                "product": {
-                  "name": "Schneider Electric Modicon M580/Quantum communication modules BMXCRA BMXCRA31200 Version SV02.80",
-                  "product_id": "CSAFPID-0006",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMXCRA31200"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Modicon M580/Quantum communication modules BMXCRA"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<SV02.80",
-                "product": {
-                  "name": "Schneider Electric Modicon M580/Quantum communication modules BMXCRA BMXCRA31210 versions prior to SV02.80",
-                  "product_id": "CSAFPID-0007",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMXCRA31210"
-                    ]
-                  }
-                }
-              },
-              {
-                "category": "product_version_range",
-                "name": "SV02.80",
-                "product": {
-                  "name": "Schneider Electric Modicon M580/Quantum communication modules BMXCRA BMXCRA31210 Version SV02.80",
-                  "product_id": "CSAFPID-0008",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMXCRA31210"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Modicon M580/Quantum communication modules BMXCRA"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "Schneider Electric Modicon Quantum communication modules 140CRA 140CRA31200 & 140CRA31908 All versions",
-                  "product_id": "CSAFPID-0009",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "140CRA31200",
-                      "140CRA31908"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Modicon Quantum communication modules 140CRA"
+            "name": "Wiser Home Controller WHC-5918A"
           }
         ],
         "category": "vendor",
@@ -364,76 +220,29 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2021-29999",
+      "cve": "CVE-2024-6407",
       "cwe": {
-        "id": "CWE-787",
-        "name": "Out-of-bounds Write"
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
       },
       "notes": [
         {
           "category": "description",
-          "text": "An issue was discovered in Wind River VxWorks through 6.8. There is a possible stack overflow in dhcp server.",
+          "text": "CWE-200: Information Exposure vulnerability exists that could cause disclosure of \r\ncredentials when a specially crafted message is sent to the device.",
           "title": "CVE Description"
         }
       ],
       "product_status": {
-        "fixed": [
-          "CSAFPID-0002",
-          "CSAFPID-0004",
-          "CSAFPID-0006",
-          "CSAFPID-0008"
-        ],
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0003",
-          "CSAFPID-0005",
-          "CSAFPID-0007",
-          "CSAFPID-0009"
+          "CSAFPID-0001"
         ]
       },
       "remediations": [
         {
-          "category": "vendor_fix",
-          "details": "Version SV1.10 of BMENOC0321 includes a fix for this \r\nvulnerability and is available for download here:\r\nhttps://www.se.com/ww/en/product/BMENOC0321/m580-\r\nnoc-control/",
+          "category": "mitigation",
+          "details": "The Wiser Home Controller WHC-5918A product has been \r\ndiscontinued and is out of support. Customers should consider \r\nupgrading to the latest product offering, C-Bus, Home Controller, \r\nSpaceLogic IP, Free Standing, 24V DC, 5200WHC2, or removing \r\nthe Wiser Home Controller WHC-5918A from service. \r\n",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "restart_required": {
-            "category": "none"
-          },
-          "url": "https://www.se.com/ww/en/product/BMENOC0321/m580-noc-control/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Version SV02.80 of BMECRA31210, BMXCRA31200, \r\nBMXCRA31210 includes a fix for these vulnerabilities and \r\nis available for download here:\r\nhttps://www.se.com/ww/en/product-country-selector/?pageType=product&sourceId=BMXCRA31210",
-          "product_ids": [
-            "CSAFPID-0003",
-            "CSAFPID-0005",
-            "CSAFPID-0007"
-          ],
-          "restart_required": {
-            "category": "none"
-          },
-          "url": "https://www.se.com/ww/en/product-country-selector/?pageType=product&sourceId=BMXCRA31210"
-        },
-        {
-          "category": "mitigation",
-          "details": "Schneider Electric is establishing a remediation plan for all \r\nfuture versions of 140CRA that will include a fix for this \r\nvulnerability. We will update this document when the \r\nremediation is available. Until then, customers should \r\nimmediately apply the following mitigations to reduce the \r\nrisk of exploit:\r\n\u2022 Implement a firewall to allow only authorized traffic \r\non 67/UDP and 68/UDP ports",
-          "product_ids": [
-            "CSAFPID-0009"
-          ],
-          "restart_required": {
-            "category": "none"
-          }
-        },
-        {
-          "category": "mitigation",
-          "details": "If customers choose not to apply the remediation provided above, they should immediately apply the following mitigations to reduce the risk of exploit: \r\n\u2022 Implement a firewall to allow only authorized traffic \r\non 67/UDP and 68/UDP ports",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0003",
-            "CSAFPID-0005",
-            "CSAFPID-0007"
           ],
           "restart_required": {
             "category": "none"
@@ -457,15 +266,11 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0003",
-            "CSAFPID-0005",
-            "CSAFPID-0007",
-            "CSAFPID-0009"
+            "CSAFPID-0001"
           ]
         }
       ],
-      "title": "CVE-2021-29999"
+      "title": "CVE-2024-6407"
     }
   ]
 }

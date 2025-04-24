@@ -1,0 +1,202 @@
+{
+  "document": {
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SCALANCE XM-400 and XR-500 devices contain a vulnerability in the OSPF protocol implementation that could allow an unauthenticated remote attacker to create a permanent denial-of-service condition.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-116379: Denial-of-Service Vulnerability in OSPF Packet Handling of SCALANCE XM-400 and XR-500 Devices - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-116379.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-116379: Denial-of-Service Vulnerability in OSPF Packet Handling of SCALANCE XM-400 and XR-500 Devices - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-116379.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-116379: Denial-of-Service Vulnerability in OSPF Packet Handling of SCALANCE XM-400 and XR-500 Devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-116379.json"
+      }
+    ],
+    "title": "SSA-116379: Denial-of-Service Vulnerability in OSPF Packet Handling of SCALANCE XM-400 and XR-500 Devices",
+    "tracking": {
+      "current_release_date": "2021-05-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-116379",
+      "initial_release_date": "2021-05-11T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-05-11T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V6.4",
+                "product": {
+                  "name": "SCALANCE XM-400 Family",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XM-400 Family"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V6.4",
+                "product": {
+                  "name": "SCALANCE XR-500 Family",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR-500 Family"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-28393",
+      "cwe": {
+        "id": "CWE-682",
+        "name": "Incorrect Calculation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The OSPF protocol implementation in affected devices incorrectly handles the number of LSA fields in combination with other modified fields.\n\nAn unauthenticated remote attacker could create a permanent denial-of-service condition by sending specially crafted OSPF packets. Successful exploitation requires OSPF to be enabled on an affected device.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2020-28393 - SCALANCE XM-400 Family",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109796319/"
+        },
+        {
+          "summary": "CVE-2020-28393 - SCALANCE XR-500 Family",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109796317/"
+        },
+        {
+          "summary": "CVE-2020-28393 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-28393.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.4 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109796319/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109796317/"
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable OSPF in the layer 3 configuration menu (note that OSPF is disabled by default). The vulnerability is not exploitable, when OSPF is disabled.",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "If OSPF is used, set a password for the OSPF interface and enable MD5 authentication",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2020-28393"
+    }
+  ]
+}

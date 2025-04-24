@@ -56,11 +56,15 @@ def verify_signature(link, keys, signature, csaf, feed_path):
     '''
     for key in keys:
         pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
-        if bool(pub_key.verify(csaf.text, pgpy.PGPSignature.from_blob(signature))):
-            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                outfile.write(signature)
-        else:
-            print("Provider signature does not match")
+        try:
+            if bool(pub_key.verify(csaf.text, pgpy.PGPSignature.from_blob(signature))):
+                with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                    outfile.write(signature)
+            else:
+                print("Provider signature does not match")
+        except Exception as e:
+            print(e)
+            continue
 def verify_hash(link, hash, csaf, feed_path):
     '''Verify Hash
     Verify the hash files to a given CSAF file, saving if valid.
@@ -111,12 +115,15 @@ def get_csaf_updated_time(path:str):
         updated_time: A datetime string.
     '''
     try:
-        with open(path, "r") as file:
-            contents = file.read()
-            csaf = json.loads(contents)
-            updated_time = csaf.get("document", {}).get("tracking", {}).get("current_release_date", "1980-01-01T09:00:00.000Z")
-        if not os.path.isfile(path+".asc"):
+        if os.path.isfile(path):
+            with open(path, "r") as file:
+                contents = file.read()
+                csaf = json.loads(contents)
+                updated_time = csaf.get("document", {}).get("tracking", {}).get("current_release_date", "1980-01-01T09:00:00.000Z")
+        else:
             updated_time = "1980-01-01T09:00:00.000Z"
+        # if not os.path.isfile(path+".asc"):
+        #     updated_time = "1980-01-01T09:00:00.000Z"
         if not (os.path.isfile(path+".sha256") or os.path.exists(path+".sha512")):
             updated_time = "1980-01-01T09:00:00.000Z"
     except:

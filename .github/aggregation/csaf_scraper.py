@@ -54,17 +54,26 @@ def verify_signature(link, keys, signature, csaf, feed_path):
     Returns:
         None
     '''
+    verified = False
     for key in keys:
         pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
         try:
             if bool(pub_key.verify(csaf.text, pgpy.PGPSignature.from_blob(signature))):
-                with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
-                    outfile.write(signature)
+                verified = True
             else:
-                print("Provider signature does not match")
+                continue
         except Exception as e:
             print(e)
             continue
+    if verified:
+        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+            outfile.write(signature)
+    else:
+        print(f"PGP signature verification failed for CSAF {link['href'].split('/')[-1]}\n")
+        with open("./logs.txt", "a") as f:
+            f.write(f"PGP signature verification failed for CSAF {link['href'].split('/')[-1]}\n")
+        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+            outfile.write(signature)
 def verify_hash(link, hash, csaf, feed_path):
     '''Verify Hash
     Verify the hash files to a given CSAF file, saving if valid.
@@ -81,8 +90,21 @@ def verify_hash(link, hash, csaf, feed_path):
         if hashlib.sha256(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
             with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
                 outfile.write(hash)
+        else:
+            print(f"sha256 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
+            with open("./logs.txt", "a") as f:
+                f.write(f"sha256 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
+            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                outfile.write(hash)
+
     elif link["href"].split(".")[-1] == "sha512":
         if hashlib.sha512(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
+            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+                outfile.write(hash)
+        else:
+            print(f"sha512 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
+            with open("./logs.txt", "a") as f:
+                f.write(f"sha512 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
             with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
                 outfile.write(hash)
     else:
@@ -122,8 +144,8 @@ def get_csaf_updated_time(path:str):
                 updated_time = csaf.get("document", {}).get("tracking", {}).get("current_release_date", "1980-01-01T09:00:00.000Z")
         else:
             updated_time = "1980-01-01T09:00:00.000Z"
-        # if not os.path.isfile(path+".asc"):
-        #     updated_time = "1980-01-01T09:00:00.000Z"
+        if not os.path.isfile(path+".asc"):
+            updated_time = "1980-01-01T09:00:00.000Z"
         if not (os.path.isfile(path+".sha256") or os.path.exists(path+".sha512")):
             updated_time = "1980-01-01T09:00:00.000Z"
     except:
@@ -213,8 +235,8 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                     except:
                                         break
                                     if csaf:
-                                        with open(f"{feed_path}/{entry['id']}.json", "w") as outfile:
-                                            print(f"Saving {entry['id']}")
+                                        with open(f"{feed_path}/{entry['id'].lower()}.json", "w") as outfile:
+                                            print(f"Saving {entry['id'].lower()}")
                                             json.dump(csaf, outfile, indent=2, sort_keys=True)
                                     for link in entry["link"]:
                                         if link["rel"] in ["hash", "signature"]:

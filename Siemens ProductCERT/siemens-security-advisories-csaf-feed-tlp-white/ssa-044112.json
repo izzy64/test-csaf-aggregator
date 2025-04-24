@@ -1,0 +1,1334 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Yuval Halaban",
+          "Uriel Malin",
+          "Tal Zohar"
+        ],
+        "organization": "Medigate",
+        "summary": "coordinated disclosure"
+      },
+      {
+        "names": [
+          "Daniel dos Santos",
+          "Amine Amri",
+          "Stanislav Dashevskyi"
+        ],
+        "organization": "Forescout Technologies",
+        "summary": "coordinated disclosure"
+      }
+    ],
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The TCP/IP stack and related services (FTP, TFTP) of the networking component (Nucleus NET) in Nucleus Real-Time Operating System (RTOS) contain several vulnerabilities, also known as \"NUCLEUS:13\" and as documented below.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where updates are not available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-044112: Multiple Vulnerabilities (NUCLEUS:13) in the TCP/IP Stack of Nucleus RTOS - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-044112.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-044112: Multiple Vulnerabilities (NUCLEUS:13) in the TCP/IP Stack of Nucleus RTOS - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-044112.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-044112: Multiple Vulnerabilities (NUCLEUS:13) in the TCP/IP Stack of Nucleus RTOS - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-044112.json"
+      }
+    ],
+    "title": "SSA-044112: Multiple Vulnerabilities (NUCLEUS:13) in the TCP/IP Stack of Nucleus RTOS",
+    "tracking": {
+      "current_release_date": "2021-12-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-044112",
+      "initial_release_date": "2021-11-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-11-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-12-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Moved product CAPITAL VSTAR to a separate advisory (SSA-620288)"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Nucleus NET",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus NET"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2017.02.4",
+                "product": {
+                  "name": "Nucleus ReadyStart V3",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus ReadyStart V3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.1.1",
+                "product": {
+                  "name": "Nucleus ReadyStart V4",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus ReadyStart V4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Nucleus Source Code",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Nucleus Source Code"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-31344",
+      "cwe": {
+        "id": "CWE-843",
+        "name": "Access of Resource Using Incompatible Type ('Type Confusion')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "ICMP echo packets with fake IP options allow sending ICMP echo reply messages to arbitrary hosts on the network. (FSMD-2021-0004)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31344 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31344 - Nucleus ReadyStart V4",
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "summary": "CVE-2021-31344 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31344.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.1 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31344"
+    },
+    {
+      "cve": "CVE-2021-31345",
+      "cwe": {
+        "id": "CWE-1284",
+        "name": "Improper Validation of Specified Quantity in Input"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The total length of an UDP payload (set in the IP header) is unchecked. This may lead to various side effects, including Information Leak and Denial-of-Service conditions, depending on a user-defined applications that runs on top of the UDP protocol. (FSMD-2021-0006)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31345 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31345 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31345.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31345"
+    },
+    {
+      "cve": "CVE-2021-31346",
+      "cwe": {
+        "id": "CWE-1284",
+        "name": "Improper Validation of Specified Quantity in Input"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The total length of an ICMP payload (set in the IP header) is unchecked. This may lead to various side effects, including Information Leak and Denial-of-Service conditions, depending on the network buffer organization in memory. (FSMD-2021-0007)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31346 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31346 - Nucleus ReadyStart V4",
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "summary": "CVE-2021-31346 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31346.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.1 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31346"
+    },
+    {
+      "cve": "CVE-2021-31881",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "When processing a DHCP OFFER message, the DHCP client application does not validate the length of the Vendor option(s), leading to Denial-of-Service conditions. (FSMD-2021-0008)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31881 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31881 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31881.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31881"
+    },
+    {
+      "cve": "CVE-2021-31882",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The DHCP client application does not validate the length of the Domain Name Server IP option(s) (0x06) when processing DHCP ACK packets. This may lead to Denial-of-Service conditions. (FSMD-2021-0011)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31882 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31882 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31882.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31882"
+    },
+    {
+      "cve": "CVE-2021-31883",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "When processing a DHCP ACK message, the DHCP client application does not validate the length of the Vendor option(s), leading to Denial-of-Service conditions. (FSMD-2021-0013)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31883 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31883 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31883.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31883"
+    },
+    {
+      "cve": "CVE-2021-31884",
+      "cwe": {
+        "id": "CWE-170",
+        "name": "Improper Null Termination"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The DHCP client application assumes that the data supplied with the \u201cHostname\u201d DHCP option is NULL terminated. In cases when global hostname variable is not defined, this may lead to Out-of-bound reads, writes, and Denial-of-service conditions. (FSMD-2021-0014)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31884 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31884 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31884.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31884"
+    },
+    {
+      "cve": "CVE-2021-31885",
+      "cwe": {
+        "id": "CWE-805",
+        "name": "Buffer Access with Incorrect Length Value"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "TFTP server application allows for reading the contents of the TFTP memory buffer via sending malformed TFTP commands. (FSMD-2021-0009)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31885 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31885 - Nucleus ReadyStart V4",
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "summary": "CVE-2021-31885 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31885.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.1 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31885"
+    },
+    {
+      "cve": "CVE-2021-31886",
+      "cwe": {
+        "id": "CWE-170",
+        "name": "Improper Null Termination"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "FTP server does not properly validate the length of the \u201cUSER\u201d command, leading to stack-based buffer overflows. This may result in Denial-of-Service conditions and Remote Code Execution. (FSMD-2021-0010)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31886 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31886 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31886.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31886"
+    },
+    {
+      "cve": "CVE-2021-31887",
+      "cwe": {
+        "id": "CWE-170",
+        "name": "Improper Null Termination"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "FTP server does not properly validate the length of the \u201cPWD/XPWD\u201d command, leading to stack-based buffer overflows. This may result in Denial-of-Service conditions and Remote Code Execution. (FSMD-2021-0016)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31887 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31887 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31887.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31887"
+    },
+    {
+      "cve": "CVE-2021-31888",
+      "cwe": {
+        "id": "CWE-170",
+        "name": "Improper Null Termination"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "FTP server does not properly validate the length of the \u201cMKD/XMKD\u201d command, leading to stack-based buffer overflows. This may result in Denial-of-Service conditions and Remote Code Execution. (FSMD-2021-0018)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31888 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31888 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31888.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31888"
+    },
+    {
+      "cve": "CVE-2021-31889",
+      "cwe": {
+        "id": "CWE-191",
+        "name": "Integer Underflow (Wrap or Wraparound)"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Malformed TCP packets with a corrupted SACK option leads to Information Leaks and Denial-of-Service conditions. (FSMD-2021-0015)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31889 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31889 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31889.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31889"
+    },
+    {
+      "cve": "CVE-2021-31890",
+      "cwe": {
+        "id": "CWE-240",
+        "name": "Improper Handling of Inconsistent Structural Elements"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The total length of an TCP payload (set in the IP header) is unchecked. This may lead to various side effects, including Information Leak and Denial-of-Service conditions, depending on the network buffer organization in memory. (FSMD-2021-0017)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-31890 - Nucleus ReadyStart V3",
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "summary": "CVE-2021-31890 - Nucleus ReadyStart V4",
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "summary": "CVE-2021-31890 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31890.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update to the latest version of Nucleus ReadyStart V3 or V4",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Contact customer support or your local Nucleus Sales team for mitigation advice",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2017.02.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1009925838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.1 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.sw.siemens.com/en-US/product/1336134128/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31890"
+    }
+  ]
+}

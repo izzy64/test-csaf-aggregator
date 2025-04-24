@@ -1,0 +1,332 @@
+{
+  "document": {
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The latest updates for the below mentioned products fix a vulnerability that allows an unauthenticated attacker to read PLC variables from affected devices without proper authentication under certain circumstances.\n\nSiemens has released updates for some of the affected products, is working on updates for the remaining affected products and recommends specific countermeasures until fixes are available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-865327: Incorrect Authorization Vulnerability in Industrial Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-865327.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-865327: Incorrect Authorization Vulnerability in Industrial Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-865327.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-865327: Incorrect Authorization Vulnerability in Industrial Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-865327.json"
+      }
+    ],
+    "title": "SSA-865327: Incorrect Authorization Vulnerability in Industrial Products",
+    "tracking": {
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-865327",
+      "initial_release_date": "2021-08-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-08-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-09-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for SIMATIC ET 200SP Open Controller CPU 1515SP PC2 and SIMATIC S7-1500 Software Controller"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.9.2",
+                "product": {
+                  "name": "SIMATIC Drive Controller family",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Drive Controller family"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V21.9",
+                "product": {
+                  "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants)",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "> V2 < V4",
+                "product": {
+                  "name": "SIMATIC S7 PLCSIM Advanced",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7 PLCSIM Advanced"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Version V4.4",
+                "product": {
+                  "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "> V2.5 < V2.9.2",
+                "product": {
+                  "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "> V2.5 < V21.9",
+                "product": {
+                  "name": "SIMATIC S7-1500 Software Controller",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 Software Controller"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "Version V2.1",
+                "product": {
+                  "name": "TIM 1531 IRC (incl. SIPLUS NET variants)",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIM 1531 IRC (incl. SIPLUS NET variants)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-28397",
+      "cwe": {
+        "id": "CWE-863",
+        "name": "Incorrect Authorization"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Due to an incorrect authorization check in the affected component, an attacker could extract information about access protected PLC program variables over port 102/tcp from an affected device when reading multiple attributes at once.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2020-28397 - SIMATIC Drive Controller family",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109773914/"
+        },
+        {
+          "summary": "CVE-2020-28397 - SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759122/"
+        },
+        {
+          "summary": "CVE-2020-28397 - SIMATIC S7 PLCSIM Advanced",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109795016"
+        },
+        {
+          "summary": "CVE-2020-28397 - SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793280"
+        },
+        {
+          "summary": "CVE-2020-28397 - SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "summary": "CVE-2020-28397 - SIMATIC S7-1500 Software Controller",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109478528/"
+        },
+        {
+          "summary": "CVE-2020-28397 - TIM 1531 IRC (incl. SIPLUS NET variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109798331"
+        },
+        {
+          "summary": "CVE-2020-28397 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-28397.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.9.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109773914/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.9 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759122/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Updated to V4 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109795016"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.4.1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793280"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.9.2 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.9 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109478528/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.2 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109798331"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2020-28397"
+    }
+  ]
+}

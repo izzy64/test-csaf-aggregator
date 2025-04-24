@@ -1,0 +1,165 @@
+{
+  "document": {
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SICAM PQ Analyzer uses an unquoted registry entry and is thus vulnerable to an unquoted search path vulnerability.\n\nSiemens has released an update for the SICAM PQ Analyzer and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\n\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment.\n\nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-173318: Unquoted Search Path Vulnerability in SICAM PQ Analyzer - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-173318.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-173318: Unquoted Search Path Vulnerability in SICAM PQ Analyzer - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-173318.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-173318: Unquoted Search Path Vulnerability in SICAM PQ Analyzer - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-173318.json"
+      }
+    ],
+    "title": "SSA-173318: Unquoted Search Path Vulnerability in SICAM PQ Analyzer",
+    "tracking": {
+      "current_release_date": "2022-01-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-173318",
+      "initial_release_date": "2022-01-11T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-01-11T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.18",
+                "product": {
+                  "name": "SICAM PQ Analyzer",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM PQ Analyzer"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-45460",
+      "cwe": {
+        "id": "CWE-428",
+        "name": "Unquoted Search Path or Element"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A service is started by an unquoted registry entry. As there are spaces in this path, attackers with write privilege to those directories might be able to plant executables that will run in place of the legitimate process.\n\nAttackers might achieve persistence on the system (\"backdoors\") or cause a denial of service.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-45460 - SICAM PQ Analyzer",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804322"
+        },
+        {
+          "summary": "CVE-2021-45460 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-45460.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.18 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804322"
+        },
+        {
+          "category": "mitigation",
+          "details": "Make sure these executables do not exist, cannot be created or cannot be executed (e.g. by Group Policy Software Restriction):\n\n-   C:\\Program.*\n-   C:\\Program Files.*\n-   C:\\Program Files (x86)\\Siemens.*\n-   C:\\Program Files (x86)\\Siemens Energy\\SICAM\\PQ.*\n\nPlease note that blocking of e.g. \"C:\\Program.exe\" is not sufficient, as the attacker might be able to plant \"C:\\Program.com\", \"C:\\Program.msi\" or an executable with any other extension there.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.4,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2021-45460"
+    }
+  ]
+}

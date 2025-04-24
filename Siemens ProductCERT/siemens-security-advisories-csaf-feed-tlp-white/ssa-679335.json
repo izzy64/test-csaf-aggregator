@@ -1,0 +1,296 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SIMATIC CP 1543-1 and CP 1545-1 devices are affected by multiple vulnerabilities in ProFTPD, a third party component, that could allow a remote attacker to access sensitive information and execute arbitrary code.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-679335: Multiple Vulnerabilities in Embedded FTP Server of SIMATIC CP Modules - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-679335.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-679335: Multiple Vulnerabilities in Embedded FTP Server of SIMATIC CP Modules - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-679335.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-679335: Multiple Vulnerabilities in Embedded FTP Server of SIMATIC CP Modules - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-679335.json"
+      }
+    ],
+    "title": "SSA-679335: Multiple Vulnerabilities in Embedded FTP Server of SIMATIC CP Modules",
+    "tracking": {
+      "current_release_date": "2022-06-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-679335",
+      "initial_release_date": "2021-08-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-08-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2022-06-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for SIMATIC CP 1545-1"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.0",
+                "product": {
+                  "name": "SIMATIC CP 1543-1 (incl. SIPLUS variants)",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1543-1 (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.1",
+                "product": {
+                  "name": "SIMATIC CP 1545-1",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7545-1GX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1545-1"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-9272",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "ProFTPD 1.3.7 has an out-of-bounds (OOB) read vulnerability in mod_cap via the cap_text.c cap_to_text function, that could lead to information disclosure.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2020-9272 - SIMATIC CP 1543-1 (incl. SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800773/"
+        },
+        {
+          "summary": "CVE-2020-9272 - SIMATIC CP 1545-1",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811116/"
+        },
+        {
+          "summary": "CVE-2020-9272 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-9272.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800773/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.1 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811116/"
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable the embedded FTP server. The server is deactivated in the default configuration",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Limit access to port 21/tcp to trusted IP addresses",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:U/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2020-9272"
+    },
+    {
+      "cve": "CVE-2020-9273",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "In ProFTPD 1.3.7, it is possible to corrupt the memory pool by interrupting the data transfer channel. This triggers a use-after-free in alloc_pool in pool.c, and possible remote code execution.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2020-9273 - SIMATIC CP 1543-1 (incl. SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800773/"
+        },
+        {
+          "summary": "CVE-2020-9273 - SIMATIC CP 1545-1",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811116/"
+        },
+        {
+          "summary": "CVE-2020-9273 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-9273.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800773/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.1 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811116/"
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable the embedded FTP server. The server is deactivated in the default configuration",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Limit access to port 21/tcp to trusted IP addresses",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2020-9273"
+    }
+  ]
+}

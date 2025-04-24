@@ -1,0 +1,202 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The products listed below contain a local privilege escalation vulnerability (CVE-2021-4034) found on polkit's pkexec utility, that could allow an unprivileged user to gain administrative rights.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-330556: PwnKit Vulnerability in SCALANCE LPE9403 and SINUMERIK Edge Products (CVE-2021-4034) - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-330556.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-330556: PwnKit Vulnerability in SCALANCE LPE9403 and SINUMERIK Edge Products (CVE-2021-4034) - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-330556.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-330556: PwnKit Vulnerability in SCALANCE LPE9403 and SINUMERIK Edge Products (CVE-2021-4034) - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-330556.json"
+      }
+    ],
+    "title": "SSA-330556: PwnKit Vulnerability in SCALANCE LPE9403 and SINUMERIK Edge Products (CVE-2021-4034)",
+    "tracking": {
+      "current_release_date": "2022-06-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-330556",
+      "initial_release_date": "2022-06-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-06-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.0",
+                "product": {
+                  "name": "SCALANCE LPE9403",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5998-3GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE LPE9403"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.3.0",
+                "product": {
+                  "name": "SINUMERIK Edge",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINUMERIK Edge"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-4034",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A local privilege escalation vulnerability was found on polkit's pkexec utility. The pkexec application is a setuid tool designed to allow unprivileged users to run commands as privileged users according predefined policies. The current version of pkexec doesn't handle the calling parameters count correctly and ends trying to execute environment variables as commands. An attacker can leverage this by crafting environment variables in such a way it'll induce pkexec to execute arbitrary code. When successfully executed the attack can cause a local privilege escalation given unprivileged users administrative rights on the target machine.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-4034 - SCALANCE LPE9403",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811123/"
+        },
+        {
+          "summary": "CVE-2021-4034 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-4034.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811123/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.3.0 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Restrict system access to authorized personnel and follow a least privilege approach",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Temporary mitigation exists at the expense of pkexec\u2019s capabilities. By removing SUID permissions, the program cannot run processes as root. However, any processes that rely on it for normal operation will be affected\n\n- SUID permission can be removed with chmod, as follows: chmod 0755 /usr/bin/pkexec",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2021-4034"
+    }
+  ]
+}

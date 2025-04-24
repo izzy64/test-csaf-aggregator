@@ -1,0 +1,266 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Multiple SIMATIC software products are affected by a vulnerability\nthat could allow an attacker to change the content of certain\nmetafiles and subsequently manipulate parameters or behaviour of\ndevices configured by the affected software products.\n\nSiemens has released updates for several affected products and\nrecommends to update to the latest versions. Siemens is preparing\nfurther updates and recommends specific countermeasures for products\nwhere updates are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect\nnetwork access to devices with appropriate mechanisms. In order to\noperate the devices in a protected IT environment, Siemens recommends\nto configure the environment according to Siemens' operational\nguidelines for Industrial Security (Download:\nhttps://www.siemens.com/cert/operational-guidelines-industrial-\nsecurity), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found\nat: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-661034: Incorrect Permission Assignment in Multiple SIMATIC Software Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-661034.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-661034: Incorrect Permission Assignment in Multiple SIMATIC Software Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-661034.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-661034: Incorrect Permission Assignment in Multiple SIMATIC Software Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-661034.json"
+      }
+    ],
+    "title": "SSA-661034: Incorrect Permission Assignment in Multiple SIMATIC Software Products",
+    "tracking": {
+      "current_release_date": "2022-08-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-661034",
+      "initial_release_date": "2021-07-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-07-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-09-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for SINAMICS STARTER"
+        },
+        {
+          "date": "2022-08-09T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added solution to SIMATIC PCS 7 V9.X and SIMATIC PDM"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC PCS 7 V8.2 and earlier",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V8.2 and earlier"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V9.1 SP2",
+                "product": {
+                  "name": "SIMATIC PCS 7 V9.X",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 V9.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V9.2 SP2",
+                "product": {
+                  "name": "SIMATIC PDM",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PDM"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V5.7",
+                "product": {
+                  "name": "SIMATIC STEP 7 V5.X",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<  V5.4 SP2 HF1",
+                "product": {
+                  "name": "SINAMICS STARTER (containing STEP 7 OEM version)",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS STARTER (containing STEP 7 OEM version)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-31894",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A directory containing metafiles relevant to devices' configurations has write permissions.\nAn attacker could leverage this vulnerability by changing the content of certain metafiles and subsequently manipulate parameters or behavior of devices that would be later configured by the affected software.\n\n\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access on the engineering station to trusted users only",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.7 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109794088/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.4 SP2 HF1 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800526/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP2 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812240/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.2 SP2 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811911/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:L/E:U/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31894"
+    }
+  ]
+}

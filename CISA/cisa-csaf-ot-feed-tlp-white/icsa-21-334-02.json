@@ -1,0 +1,5043 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "Mitsubishi Electric",
+        "summary": "reporting these vulnerabilities to CISA"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://us-cert.cisa.gov/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
+        "title": "Legal Notice"
+      },
+      {
+        "category": "summary",
+        "text": "Successful exploitation of these vulnerabilities could allow a remote attacker to cause a denial-of-service condition. Recovery requires a system reset.",
+        "title": "Risk evaluation"
+      },
+      {
+        "category": "other",
+        "text": "Critical Manufacturing",
+        "title": "Critical infrastructure sectors"
+      },
+      {
+        "category": "other",
+        "text": "Worldwide",
+        "title": "Countries/areas deployed"
+      },
+      {
+        "category": "other",
+        "text": "Japan",
+        "title": "Company headquarters location"
+      },
+      {
+        "category": "general",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities. Specifically, users should:",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the Internet.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "When remote access is required, use secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as its connected devices.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "CISA also provides a section for control systems security recommended practices on the ICS webpage at cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time.",
+        "title": "Recommended Practices"
+      }
+    ],
+    "publisher": {
+      "category": "coordinator",
+      "contact_details": "central@cisa.dhs.gov",
+      "name": "CISA",
+      "namespace": "https://www.cisa.gov/"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "ICS Advisory ICSA-21-334-02 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2021/icsa-21-334-02.json"
+      },
+      {
+        "category": "self",
+        "summary": "ICSA Advisory ICSA-21-334-02 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-21-334-02"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://us-cert.cisa.gov/ics/Recommended-Practices"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://cisa.gov/ics"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/topics/industrial-control-systems"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Best_Practices_for_Industrial_Control_Systems.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+      }
+    ],
+    "title": "Mitsubishi Electric MELSEC and MELIPC Series (Update G)",
+    "tracking": {
+      "current_release_date": "2023-11-09T07:00:00.000000Z",
+      "generator": {
+        "engine": {
+          "name": "CISA CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "ICSA-21-334-02",
+      "initial_release_date": "2021-11-30T07:00:00.000000Z",
+      "revision_history": [
+        {
+          "date": "2021-11-30T07:00:00.000000Z",
+          "legacy_version": "Initial",
+          "number": "1",
+          "summary": "Initial Publication"
+        },
+        {
+          "date": "2022-01-27T07:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - ICSA-21-334-02 Mitsubishi MELSEC and MELIPC Series (Update A)"
+        },
+        {
+          "date": "2022-04-26T06:00:00.000000Z",
+          "legacy_version": "Update B",
+          "number": "3",
+          "summary": "Update B - ICSA-21-334-02 Mitsubishi MELSEC and MELIPC Series (Update B)"
+        },
+        {
+          "date": "2022-06-07T06:00:00.000000Z",
+          "legacy_version": "Update C",
+          "number": "4",
+          "summary": "Update C - ICSA-21-334-02 Mitsubishi MELSEC and MELIPC Series (Update C)"
+        },
+        {
+          "date": "2022-08-01T06:00:00.000000Z",
+          "legacy_version": "Update D",
+          "number": "5",
+          "summary": "Update D - ICSA-21-334-02 Mitsubishi MELSEC and MELIPC Series (Update D)"
+        },
+        {
+          "date": "2022-11-29T07:00:00.000000Z",
+          "legacy_version": "Update E",
+          "number": "6",
+          "summary": "Update E - ICSA-21-334-02 Mitsubishi MELSEC and MELIPC Series (Update E)"
+        },
+        {
+          "date": "2023-05-09T06:00:00.000000Z",
+          "legacy_version": "Update F",
+          "number": "7",
+          "summary": "Update F - Added additional products and mitigations"
+        },
+        {
+          "date": "2023-11-09T07:00:00.000000Z",
+          "legacy_version": "Update G",
+          "number": "8",
+          "summary": "Update G - Added modules that have been fixed"
+        }
+      ],
+      "status": "final",
+      "version": "8"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24",
+                "product": {
+                  "name": "MELSEC iQ-R Series R00CPU Firmware: <=24",
+                  "product_id": "CSAFPID-0001"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R00CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24",
+                "product": {
+                  "name": "MELSEC iQ-R Series R01CPU Firmware: <=24",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R01CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24",
+                "product": {
+                  "name": "MELSEC iQ-R Series R02CPU Firmware: <=24",
+                  "product_id": "CSAFPID-0003"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R02CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=57",
+                "product": {
+                  "name": "MELSEC iQ-R Series R04(EN)CPU Firmware: <=57",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R04(EN)CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=57",
+                "product": {
+                  "name": "MELSEC iQ-R Series R08(EN)CPU Firmware: <=57",
+                  "product_id": "CSAFPID-0005"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R08(EN)CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=57",
+                "product": {
+                  "name": "MELSEC iQ-R Series R16(EN)CPU Firmware: <=57",
+                  "product_id": "CSAFPID-0006"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R16(EN)CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=57",
+                "product": {
+                  "name": "MELSEC iQ-R Series R32(EN)CPU Firmware: <=57",
+                  "product_id": "CSAFPID-0007"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R32(EN)CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=57",
+                "product": {
+                  "name": "MELSEC iQ-R Series R120(EN)CPU Firmware: <=57",
+                  "product_id": "CSAFPID-0008"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R120(EN)CPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=26",
+                "product": {
+                  "name": "MELSEC iQ-R Series R08SFCPU Firmware: <=26",
+                  "product_id": "CSAFPID-0009"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R08SFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=26",
+                "product": {
+                  "name": "MELSEC iQ-R Series R16SFCPU Firmware: <=26",
+                  "product_id": "CSAFPID-0010"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R16SFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=26",
+                "product": {
+                  "name": "MELSEC iQ-R Series R32SFCPU Firmware: <=26",
+                  "product_id": "CSAFPID-0011"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R32SFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=26",
+                "product": {
+                  "name": "MELSEC iQ-R Series R120SFCPU Firmware: <=26",
+                  "product_id": "CSAFPID-0012"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R120SFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=29",
+                "product": {
+                  "name": "MELSEC iQ-R Series R08PCPU Firmware: <=29",
+                  "product_id": "CSAFPID-0013"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R08PCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=29",
+                "product": {
+                  "name": "MELSEC iQ-R Series R16PCPU Firmware: <=29",
+                  "product_id": "CSAFPID-0014"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R16PCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=29",
+                "product": {
+                  "name": "MELSEC iQ-R Series R32PCPU Firmware: <=29",
+                  "product_id": "CSAFPID-0015"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R32PCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=29",
+                "product": {
+                  "name": "MELSEC iQ-R Series R120PCPU Firmware: <=29",
+                  "product_id": "CSAFPID-0016"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R120PCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=08",
+                "product": {
+                  "name": "MELSEC iQ-R Series R08PSFCPU Firmware: <=08",
+                  "product_id": "CSAFPID-0017"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R08PSFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=08",
+                "product": {
+                  "name": "MELSEC iQ-R Series R16PSFCPU Firmware: <=08",
+                  "product_id": "CSAFPID-0018"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R16PSFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=08",
+                "product": {
+                  "name": "MELSEC iQ-R Series R32PSFCPU Firmware: <=08",
+                  "product_id": "CSAFPID-0019"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R32PSFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=08",
+                "product": {
+                  "name": "MELSEC iQ-R Series R120PSFCPU Firmware: <=08",
+                  "product_id": "CSAFPID-0020"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R120PSFCPU Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23",
+                "product": {
+                  "name": "MELSEC iQ-R Series R16MTCPU Operating system: <=23",
+                  "product_id": "CSAFPID-0021"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R16MTCPU Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23",
+                "product": {
+                  "name": "MELSEC iQ-R Series R32MTCPU Operating system: <=23",
+                  "product_id": "CSAFPID-0022"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R32MTCPU Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23",
+                "product": {
+                  "name": "MELSEC iQ-R Series R64MTCPU Operating system: <=23",
+                  "product_id": "CSAFPID-0023"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R64MTCPU Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=16",
+                "product": {
+                  "name": "MELSEC iQ-R Series R12CCPU-V Firmware: <=16",
+                  "product_id": "CSAFPID-0024"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC iQ-R Series R12CCPU-V Firmware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q03UDECPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0025"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q03UDECPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q04UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0026"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q04UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q06UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0027"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q06UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q10UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0028"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q10UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q13UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0029"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q13UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q20UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0030"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q20UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q26UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0031"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q26UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q50UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0032"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q50UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC Q Series Q100UDEHCPU The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0033"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q100UDEHCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q03UDVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0034"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q03UDVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q04UDVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0035"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q04UDVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q06UDVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0036"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q06UDVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q13UDVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0037"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q13UDVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q26UDVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0038"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q26UDVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q04UDPVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0039"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q04UDPVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q06UDPVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0040"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q06UDPVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q13UDPVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0041"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q13UDPVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23071",
+                "product": {
+                  "name": "MELSEC Q Series Q26UDPVCPU The first 5 digits of serial No.: <=23071",
+                  "product_id": "CSAFPID-0042"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q26UDPVCPU The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24031",
+                "product": {
+                  "name": "MELSEC Q Series Q12DCCPU-V The first 5 digits of serial No.: <=24031",
+                  "product_id": "CSAFPID-0043"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q12DCCPU-V The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24031",
+                "product": {
+                  "name": "MELSEC Q Series Q24DHCCPU-V(G) The first 5 digits of serial No.: <=24031",
+                  "product_id": "CSAFPID-0044"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q24DHCCPU-V(G) The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24031",
+                "product": {
+                  "name": "MELSEC Q Series Q24DHCCPU-LS The first 5 digits of serial No.: <=24031",
+                  "product_id": "CSAFPID-0045"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q24DHCCPU-LS The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=24031",
+                "product": {
+                  "name": "MELSEC Q Series Q26DHCCPU-LS The first 5 digits of serial No.: <=24031",
+                  "product_id": "CSAFPID-0046"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q26DHCCPU-LS The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=F",
+                "product": {
+                  "name": "MELSEC Q Series MR-MQ100 Operating system: <=F",
+                  "product_id": "CSAFPID-0047"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series MR-MQ100 Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=W",
+                "product": {
+                  "name": "MELSEC Q Series Q172DCPU-S1 Operating system: <=W",
+                  "product_id": "CSAFPID-0048"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q172DCPU-S1 Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=W",
+                "product": {
+                  "name": "MELSEC Q Series Q173DCPU-S1 Operating system: <=W",
+                  "product_id": "CSAFPID-0049"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q173DCPU-S1 Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=Y",
+                "product": {
+                  "name": "MELSEC Q Series Q172DSCPU Operating system: <=Y",
+                  "product_id": "CSAFPID-0050"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q172DSCPU Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=Y",
+                "product": {
+                  "name": "MELSEC Q Series Q173DSCPU Operating system: <=Y",
+                  "product_id": "CSAFPID-0051"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q173DSCPU Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=W",
+                "product": {
+                  "name": "MELSEC Q Series Q170MCPU Operating system: <=W",
+                  "product_id": "CSAFPID-0052"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q170MCPU Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=Y",
+                "product": {
+                  "name": "MELSEC Q Series Q170MSCPU(-S1) Operating system: <=Y",
+                  "product_id": "CSAFPID-0053"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC Q Series Q170MSCPU(-S1) Operating system"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC L Series L02CPU(-P) The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0054"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC L Series L02CPU(-P) The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC L Series L06CPU(-P) The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0055"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC L Series L06CPU(-P) The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC L Series L26CPU(-P) The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0056"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC L Series L26CPU(-P) The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=23121",
+                "product": {
+                  "name": "MELSEC L Series L26CPU-(P)BT The first 5 digits of serial No.: <=23121",
+                  "product_id": "CSAFPID-0057"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELSEC L Series L26CPU-(P)BT The first 5 digits of serial No."
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=05",
+                "product": {
+                  "name": "MELIPC Series MI5122-VW Firmware: <=05",
+                  "product_id": "CSAFPID-0058"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MELIPC Series MI5122-VW Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Mitsubishi Electric"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-20609",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The product does not properly control the allocation and maintenance of a limited resource, and could thereby enable an actor to influence resource consumption, eventually leading to the exhaustion of available resources.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002",
+          "CSAFPID-0003",
+          "CSAFPID-0004",
+          "CSAFPID-0005",
+          "CSAFPID-0006",
+          "CSAFPID-0007",
+          "CSAFPID-0008",
+          "CSAFPID-0009",
+          "CSAFPID-0010",
+          "CSAFPID-0011",
+          "CSAFPID-0012",
+          "CSAFPID-0013",
+          "CSAFPID-0014",
+          "CSAFPID-0015",
+          "CSAFPID-0016",
+          "CSAFPID-0017",
+          "CSAFPID-0018",
+          "CSAFPID-0019",
+          "CSAFPID-0020",
+          "CSAFPID-0021",
+          "CSAFPID-0022",
+          "CSAFPID-0023",
+          "CSAFPID-0024",
+          "CSAFPID-0025",
+          "CSAFPID-0026",
+          "CSAFPID-0027",
+          "CSAFPID-0028",
+          "CSAFPID-0029",
+          "CSAFPID-0030",
+          "CSAFPID-0031",
+          "CSAFPID-0032",
+          "CSAFPID-0033",
+          "CSAFPID-0034",
+          "CSAFPID-0035",
+          "CSAFPID-0036",
+          "CSAFPID-0037",
+          "CSAFPID-0038",
+          "CSAFPID-0039",
+          "CSAFPID-0040",
+          "CSAFPID-0041",
+          "CSAFPID-0042",
+          "CSAFPID-0043",
+          "CSAFPID-0044",
+          "CSAFPID-0045",
+          "CSAFPID-0046",
+          "CSAFPID-0047",
+          "CSAFPID-0048",
+          "CSAFPID-0049",
+          "CSAFPID-0050",
+          "CSAFPID-0051",
+          "CSAFPID-0052",
+          "CSAFPID-0053",
+          "CSAFPID-0054",
+          "CSAFPID-0055",
+          "CSAFPID-0056",
+          "CSAFPID-0057",
+          "CSAFPID-0058"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "web.nvd.nist.gov",
+          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-20609"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Mitsubishi Electric corrected the vulnerabilities in the following products and intends to do the same with other products.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R00CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R01CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R02CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R04(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0004"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0006"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0007"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0008"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0009"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0010"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0011"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0012"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0013"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0014"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0016"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0017"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0018"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0019"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0020"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0021"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0022"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R64MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0023"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R12CCPU-V Firmware: Versions 17 or later",
+          "product_ids": [
+            "CSAFPID-0024"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q03UDECPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0025"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0026"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0027"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q10UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0028"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0029"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q20UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0030"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0031"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q50UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0032"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q100UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0033"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q03UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0034"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0035"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0036"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0037"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0038"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0039"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0040"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0041"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0042"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q12DCCPU-V The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0043"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q24DHCCPU-V(G) The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0044"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q24DHCCPU-LS The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0045"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26DHCCPU-LS The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0046"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series MR-MQ100 Operating system: software version G or later",
+          "product_ids": [
+            "CSAFPID-0047"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q172DCPU-S1 Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0048"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q173DCPU-S1 Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0049"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q172DSCPU Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0050"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q173DSCPU Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0051"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q170MCPU Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0052"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q170MSCPU(-S1) Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0053"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L02CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0054"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L06CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0055"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L26CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0056"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L26CPU-(P)BT The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0057"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELIPC Series MI5122-VW Firmware: Versions 06 or later",
+          "product_ids": [
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Mitsubishi Electric recommends users take the following mitigation measures to minimize the risk of an attacker exploiting these vulnerabilities:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use a firewall or virtual private network (VPN), etc. to prevent unauthorized access when Internet access is required.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use a LAN and block access from untrusted networks and hosts through firewalls.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use the remote password function or IP filter function to block access from untrusted hosts. For details on the remote password function and IP filter function, please refer to the following manual for each product.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R Ethernet User's Manual (Application) 1.13 Security \"Remote password\" \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R Motion Controller Programming Manual (Common) 6.2 Security Function \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R C Controller Module User's Manual (Application) 6.6 Security Function \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "QnUCPU User's Manual (Communication via Built-in Ethernet Port) CHAPTER 10 REMOTE PASSWORD",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC-L CPU Module User's Manual (Built-In Ethernet Function) CHAPTER 11 REMOTE PASSWORD",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELIPC MI5000 Series User's Manual (Application) 11.3 IP Filter Function",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For specific update instructions and additional details, see the [Mitsubishi Electric advisory].(https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2021-019_en.pdf).",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ],
+          "url": "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2021-019_en.pdf"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-20610",
+      "cwe": {
+        "id": "CWE-130",
+        "name": "Improper Handling of Length Parameter Inconsistency"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The product parses a formatted message or structure, but does not handle or incorrectly handles a length field inconsistent with the actual length of the associated data.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002",
+          "CSAFPID-0003",
+          "CSAFPID-0004",
+          "CSAFPID-0005",
+          "CSAFPID-0006",
+          "CSAFPID-0007",
+          "CSAFPID-0008",
+          "CSAFPID-0009",
+          "CSAFPID-0010",
+          "CSAFPID-0011",
+          "CSAFPID-0012",
+          "CSAFPID-0013",
+          "CSAFPID-0014",
+          "CSAFPID-0015",
+          "CSAFPID-0016",
+          "CSAFPID-0017",
+          "CSAFPID-0018",
+          "CSAFPID-0019",
+          "CSAFPID-0020",
+          "CSAFPID-0021",
+          "CSAFPID-0022",
+          "CSAFPID-0023",
+          "CSAFPID-0024",
+          "CSAFPID-0025",
+          "CSAFPID-0026",
+          "CSAFPID-0027",
+          "CSAFPID-0028",
+          "CSAFPID-0029",
+          "CSAFPID-0030",
+          "CSAFPID-0031",
+          "CSAFPID-0032",
+          "CSAFPID-0033",
+          "CSAFPID-0034",
+          "CSAFPID-0035",
+          "CSAFPID-0036",
+          "CSAFPID-0037",
+          "CSAFPID-0038",
+          "CSAFPID-0039",
+          "CSAFPID-0040",
+          "CSAFPID-0041",
+          "CSAFPID-0042",
+          "CSAFPID-0043",
+          "CSAFPID-0044",
+          "CSAFPID-0045",
+          "CSAFPID-0046",
+          "CSAFPID-0047",
+          "CSAFPID-0048",
+          "CSAFPID-0049",
+          "CSAFPID-0050",
+          "CSAFPID-0051",
+          "CSAFPID-0052",
+          "CSAFPID-0053",
+          "CSAFPID-0054",
+          "CSAFPID-0055",
+          "CSAFPID-0056",
+          "CSAFPID-0057",
+          "CSAFPID-0058"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "web.nvd.nist.gov",
+          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-20610"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Mitsubishi Electric corrected the vulnerabilities in the following products and intends to do the same with other products.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R00CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R01CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R02CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R04(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0004"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0006"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0007"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0008"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0009"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0010"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0011"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0012"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0013"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0014"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0016"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0017"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0018"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0019"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0020"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0021"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0022"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R64MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0023"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R12CCPU-V Firmware: Versions 17 or later",
+          "product_ids": [
+            "CSAFPID-0024"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q03UDECPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0025"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0026"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0027"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q10UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0028"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0029"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q20UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0030"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0031"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q50UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0032"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q100UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0033"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q03UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0034"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0035"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0036"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0037"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0038"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0039"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0040"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0041"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0042"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q12DCCPU-V The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0043"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q24DHCCPU-V(G) The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0044"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q24DHCCPU-LS The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0045"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26DHCCPU-LS The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0046"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series MR-MQ100 Operating system: software version G or later",
+          "product_ids": [
+            "CSAFPID-0047"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q172DCPU-S1 Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0048"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q173DCPU-S1 Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0049"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q172DSCPU Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0050"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q173DSCPU Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0051"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q170MCPU Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0052"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q170MSCPU(-S1) Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0053"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L02CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0054"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L06CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0055"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L26CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0056"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L26CPU-(P)BT The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0057"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELIPC Series MI5122-VW Firmware: Versions 06 or later",
+          "product_ids": [
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Mitsubishi Electric recommends users take the following mitigation measures to minimize the risk of an attacker exploiting these vulnerabilities:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use a firewall or virtual private network (VPN), etc. to prevent unauthorized access when Internet access is required.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use a LAN and block access from untrusted networks and hosts through firewalls.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use the remote password function or IP filter function to block access from untrusted hosts. For details on the remote password function and IP filter function, please refer to the following manual for each product.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R Ethernet User's Manual (Application) 1.13 Security \"Remote password\" \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R Motion Controller Programming Manual (Common) 6.2 Security Function \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R C Controller Module User's Manual (Application) 6.6 Security Function \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "QnUCPU User's Manual (Communication via Built-in Ethernet Port) CHAPTER 10 REMOTE PASSWORD",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC-L CPU Module User's Manual (Built-In Ethernet Function) CHAPTER 11 REMOTE PASSWORD",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELIPC MI5000 Series User's Manual (Application) 11.3 IP Filter Function",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For specific update instructions and additional details, see the [Mitsubishi Electric advisory].(https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2021-019_en.pdf).",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ],
+          "url": "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2021-019_en.pdf"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2021-20611",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The product receives input or data, but does not validate or incorrectly validates that the input has the properties required to process the data safely and correctly.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002",
+          "CSAFPID-0003",
+          "CSAFPID-0004",
+          "CSAFPID-0005",
+          "CSAFPID-0006",
+          "CSAFPID-0007",
+          "CSAFPID-0008",
+          "CSAFPID-0009",
+          "CSAFPID-0010",
+          "CSAFPID-0011",
+          "CSAFPID-0012",
+          "CSAFPID-0013",
+          "CSAFPID-0014",
+          "CSAFPID-0015",
+          "CSAFPID-0016",
+          "CSAFPID-0017",
+          "CSAFPID-0018",
+          "CSAFPID-0019",
+          "CSAFPID-0020",
+          "CSAFPID-0021",
+          "CSAFPID-0022",
+          "CSAFPID-0023",
+          "CSAFPID-0024",
+          "CSAFPID-0025",
+          "CSAFPID-0026",
+          "CSAFPID-0027",
+          "CSAFPID-0028",
+          "CSAFPID-0029",
+          "CSAFPID-0030",
+          "CSAFPID-0031",
+          "CSAFPID-0032",
+          "CSAFPID-0033",
+          "CSAFPID-0034",
+          "CSAFPID-0035",
+          "CSAFPID-0036",
+          "CSAFPID-0037",
+          "CSAFPID-0038",
+          "CSAFPID-0039",
+          "CSAFPID-0040",
+          "CSAFPID-0041",
+          "CSAFPID-0042",
+          "CSAFPID-0043",
+          "CSAFPID-0044",
+          "CSAFPID-0045",
+          "CSAFPID-0046",
+          "CSAFPID-0047",
+          "CSAFPID-0048",
+          "CSAFPID-0049",
+          "CSAFPID-0050",
+          "CSAFPID-0051",
+          "CSAFPID-0052",
+          "CSAFPID-0053",
+          "CSAFPID-0054",
+          "CSAFPID-0055",
+          "CSAFPID-0056",
+          "CSAFPID-0057",
+          "CSAFPID-0058"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "web.nvd.nist.gov",
+          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-20611"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Mitsubishi Electric corrected the vulnerabilities in the following products and intends to do the same with other products.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R00CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R01CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R02CPU Firmware: Versions 25 or later",
+          "product_ids": [
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R04(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0004"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0006"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0007"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120(EN)CPU Firmware: Versions 58 or later",
+          "product_ids": [
+            "CSAFPID-0008"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0009"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0010"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0011"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120SFCPU Firmware: Versions 27 or later",
+          "product_ids": [
+            "CSAFPID-0012"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0013"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0014"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120PCPU Firmware: Versions 30 or later",
+          "product_ids": [
+            "CSAFPID-0016"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R08PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0017"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0018"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0019"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R120PSFCPU Firmware: Versions 09 or later",
+          "product_ids": [
+            "CSAFPID-0020"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R16MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0021"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R32MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0022"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R64MTCPU Operating system: software Version 24 or later",
+          "product_ids": [
+            "CSAFPID-0023"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC iQ-R Series R12CCPU-V Firmware: Versions 17 or later",
+          "product_ids": [
+            "CSAFPID-0024"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q03UDECPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0025"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0026"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0027"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q10UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0028"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0029"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q20UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0030"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0031"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q50UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0032"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q100UDEHCPU The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0033"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q03UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0034"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0035"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0036"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0037"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0038"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q04UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0039"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q06UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0040"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q13UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0041"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26UDPVCPU The first 5 digits of serial No.: 23072 or later",
+          "product_ids": [
+            "CSAFPID-0042"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q12DCCPU-V The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0043"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q24DHCCPU-V(G) The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0044"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q24DHCCPU-LS The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0045"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q26DHCCPU-LS The first 5 digits of serial No.: 24032 or later",
+          "product_ids": [
+            "CSAFPID-0046"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series MR-MQ100 Operating system: software version G or later",
+          "product_ids": [
+            "CSAFPID-0047"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q172DCPU-S1 Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0048"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q173DCPU-S1 Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0049"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q172DSCPU Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0050"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q173DSCPU Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0051"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q170MCPU Operating system: software version X or later",
+          "product_ids": [
+            "CSAFPID-0052"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC Q Series Q170MSCPU(-S1) Operating system: software version Z or later",
+          "product_ids": [
+            "CSAFPID-0053"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L02CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0054"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L06CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0055"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L26CPU(-P) The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0056"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELSEC L Series L26CPU-(P)BT The first 5 digits of serial No.: 23122 or later",
+          "product_ids": [
+            "CSAFPID-0057"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "MELIPC Series MI5122-VW Firmware: Versions 06 or later",
+          "product_ids": [
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Mitsubishi Electric recommends users take the following mitigation measures to minimize the risk of an attacker exploiting these vulnerabilities:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use a firewall or virtual private network (VPN), etc. to prevent unauthorized access when Internet access is required.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use a LAN and block access from untrusted networks and hosts through firewalls.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use the remote password function or IP filter function to block access from untrusted hosts. For details on the remote password function and IP filter function, please refer to the following manual for each product.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R Ethernet User's Manual (Application) 1.13 Security \"Remote password\" \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R Motion Controller Programming Manual (Common) 6.2 Security Function \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC iQ-R C Controller Module User's Manual (Application) 6.6 Security Function \"IP filter\"",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "QnUCPU User's Manual (Communication via Built-in Ethernet Port) CHAPTER 10 REMOTE PASSWORD",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELSEC-L CPU Module User's Manual (Built-In Ethernet Function) CHAPTER 11 REMOTE PASSWORD",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "MELIPC MI5000 Series User's Manual (Application) 11.3 IP Filter Function",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For specific update instructions and additional details, see the [Mitsubishi Electric advisory].(https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2021-019_en.pdf).",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ],
+          "url": "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2021-019_en.pdf"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.0"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015",
+            "CSAFPID-0016",
+            "CSAFPID-0017",
+            "CSAFPID-0018",
+            "CSAFPID-0019",
+            "CSAFPID-0020",
+            "CSAFPID-0021",
+            "CSAFPID-0022",
+            "CSAFPID-0023",
+            "CSAFPID-0024",
+            "CSAFPID-0025",
+            "CSAFPID-0026",
+            "CSAFPID-0027",
+            "CSAFPID-0028",
+            "CSAFPID-0029",
+            "CSAFPID-0030",
+            "CSAFPID-0031",
+            "CSAFPID-0032",
+            "CSAFPID-0033",
+            "CSAFPID-0034",
+            "CSAFPID-0035",
+            "CSAFPID-0036",
+            "CSAFPID-0037",
+            "CSAFPID-0038",
+            "CSAFPID-0039",
+            "CSAFPID-0040",
+            "CSAFPID-0041",
+            "CSAFPID-0042",
+            "CSAFPID-0043",
+            "CSAFPID-0044",
+            "CSAFPID-0045",
+            "CSAFPID-0046",
+            "CSAFPID-0047",
+            "CSAFPID-0048",
+            "CSAFPID-0049",
+            "CSAFPID-0050",
+            "CSAFPID-0051",
+            "CSAFPID-0052",
+            "CSAFPID-0053",
+            "CSAFPID-0054",
+            "CSAFPID-0055",
+            "CSAFPID-0056",
+            "CSAFPID-0057",
+            "CSAFPID-0058"
+          ]
+        }
+      ]
+    }
+  ]
+}

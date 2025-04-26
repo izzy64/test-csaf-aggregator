@@ -1,0 +1,217 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "High",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Information disclosure via audit records for OpenAPI requests in Guardian/CMC before 23.4.1",
+    "tracking": {
+      "aliases": [
+        "CVE-2023-6916"
+      ],
+      "current_release_date": "2024-09-19T11:00:00.000Z",
+      "id": "NN-2023:17-01",
+      "initial_release_date": "2024-04-10T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-04-10T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        },
+        {
+          "date": "2024-04-10T11:00:00.000Z",
+          "number": "2",
+          "summary": "updated the acknowledgements section"
+        },
+        {
+          "date": "2024-04-11T11:00:00.000Z",
+          "number": "3",
+          "summary": "technical update"
+        },
+        {
+          "date": "2024-05-20T11:00:00.000Z",
+          "number": "4",
+          "summary": "Added CVSS v4.0 scoring where applicable"
+        },
+        {
+          "date": "2024-09-19T11:00:00.000Z",
+          "number": "5",
+          "summary": "Revised CWE mapping"
+        }
+      ],
+      "status": "final",
+      "version": "5"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<23.4.1",
+                "product": {
+                  "name": "Nozomi Networks Guardian <23.4.1",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "23.4.1",
+                "product": {
+                  "name": "Nozomi Networks Guardian 23.4.1",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<23.4.1",
+                "product": {
+                  "name": "Nozomi Networks CMC <23.4.1",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "23.4.1",
+                "product": {
+                  "name": "Nozomi Networks CMC 23.4.1",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Maciej Kosz"
+          ],
+          "summary": "reporting this issue"
+        }
+      ],
+      "cve": "CVE-2023-6916",
+      "cwe": {
+        "id": "CWE-201",
+        "name": "Insertion of Sensitive Information Into Sent Data"
+      },
+      "discovery_date": "2024-04-10T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2023:17-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Audit records for OpenAPI requests may include sensitive information.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6916"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2024/nn-2023_17-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2023:17-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Nozomi Networks recommends creating specific users for OpenAPI usage, with only the necessary permissions to access the required data sources. Additionally, it is advised to limit API keys to allowed IP addresses whenever possible. Finally, it is also suggested to regenerate existing API keys periodically and to review sign-ins via API keys in the audit records.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v23.4.1 or later.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "Unauthorized access, privilege escalation."
+        }
+      ],
+      "title": "Information disclosure via audit records for OpenAPI requests in Guardian/CMC before 23.4.1"
+    }
+  ]
+}

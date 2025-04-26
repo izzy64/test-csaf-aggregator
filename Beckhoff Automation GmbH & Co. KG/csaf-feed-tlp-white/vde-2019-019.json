@@ -1,0 +1,241 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "names": [
+          "Andreas Galauner"
+        ],
+        "organization": "Rapid7",
+        "summary": "coordination"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-GB",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "In case TwinCAT is configured to use the Profinet driver, a denial of service of the controller could be reached by sending special packets to the device.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "TwinCAT includes a Profinet driver, which could be configured in the engineering environment to use Profinet connections to the controller.\n\nIn case this is configured and the controller is started, a specially crafted Profinet DCP packet could be sent to the TwinCAT device, which will lead to a denial of service of the device.\n\nOperation can be resumed by restarting the device.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Profinet could be blocked in perimeter firewall to block PROFINET DCP packets from untrusted networks to the device.\n\nBeckhoff will provide updates for the mentioned TwinCAT Versions.",
+        "title": "Remediation"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-securityincident@beckhoff.com",
+      "name": "Beckhoff Automation GmbH & Co. KG",
+      "namespace": "https://www.beckhoff.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Beckhoff",
+        "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2019-019: Beckhoff: TwinCAT Denial-of-Service in Profinet driver - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2019-019"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2019-019: Beckhoff: TwinCAT Denial-of-Service in Profinet driver - CSAF",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2019/vde-2019-019.json"
+      }
+    ],
+    "title": "Beckhoff: TwinCAT Denial-of-Service in Profinet driver",
+    "tracking": {
+      "aliases": [
+        "VDE-2019-019"
+      ],
+      "current_release_date": "2025-04-11T07:00:00.000Z",
+      "generator": {
+        "date": "2025-04-11T07:14:12.685Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.23"
+        }
+      },
+      "id": "VDE-2019-019",
+      "initial_release_date": "2019-10-09T10:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2019-10-09T10:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision."
+        },
+        {
+          "date": "2024-11-06T11:27:01.000Z",
+          "number": "2",
+          "summary": "Fix: correct certvde domain, added self-reference"
+        },
+        {
+          "date": "2025-04-11T07:00:00.000Z",
+          "number": "3",
+          "summary": "Fix: version range"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=2304",
+                    "product": {
+                      "name": "TwinCAT <=2304",
+                      "product_id": "CSAFPID-11001"
+                    }
+                  },
+                  {
+                    "category": "product_version_range",
+                    "name": "<=4204.0",
+                    "product": {
+                      "name": "TwinCAT <=4204.0",
+                      "product_id": "CSAFPID-11002"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "2305",
+                    "product": {
+                      "name": "TwinCAT 2305",
+                      "product_id": "CSAFPID-12001"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "4204.1",
+                    "product": {
+                      "name": "TwinCAT 4204.1",
+                      "product_id": "CSAFPID-12002"
+                    }
+                  }
+                ],
+                "category": "product_family",
+                "name": "TwinCAT"
+              }
+            ],
+            "category": "product_family",
+            "name": "Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "Beckhoff"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-11001",
+          "CSAFPID-11002"
+        ],
+        "summary": "Affected products."
+      },
+      {
+        "group_id": "CSAFGID-0002",
+        "product_ids": [
+          "CSAFPID-12001",
+          "CSAFPID-12002"
+        ],
+        "summary": "Fixed products."
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2019-5637",
+      "cwe": {
+        "id": "CWE-369",
+        "name": "Divide By Zero"
+      },
+      "notes": [
+        {
+          "audience": "all",
+          "category": "description",
+          "text": "When Beckhoff TwinCAT is configured to use the Profinet driver, a denial of service of the controller could be reached by sending a malformed UDP packet to the device. This issue affects TwinCAT 2 version 2304 (and prior) and TwinCAT 3.1 version 4204.0 (and prior).",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-12001",
+          "CSAFPID-12002"
+        ],
+        "known_affected": [
+          "CSAFPID-11001",
+          "CSAFPID-11002"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Profinet could be blocked in perimeter firewall to block PROFINET DCP packets from untrusted networks to the device.\n\nBeckhoff will provide updates for the mentioned TwinCAT Versions.",
+          "entitlements": [
+            "Please contact your support representative for this particular firmware package and update the corresponding product."
+          ],
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-11001",
+            "CSAFPID-11002"
+          ]
+        }
+      ],
+      "title": "CVE-2019-5637"
+    }
+  ]
+}

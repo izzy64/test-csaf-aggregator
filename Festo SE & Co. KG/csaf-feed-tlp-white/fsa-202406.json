@@ -1,0 +1,343 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination and support with this publication",
+        "urls": [
+          "https://certvde.com/"
+        ]
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "general",
+        "text": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits: \n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside \n- Use firewalls to protect and separate the control system network from other networks \n- Use VPN (Virtual Private Networks) tunnels if remote access is required \n- Activate and apply user management and password features \n- Use encrypted communication links \n- Limit the access to both development and control system by physical means, operating system features, etc. \n- Protect both development and control system by using up to date virus detecting solutions \n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes. \nFor a secure operation follow the recommendations in the product manuals.",
+        "title": "General Recommendation"
+      },
+      {
+        "category": "summary",
+        "text": "An unauthenticated attacker would be able to send crafted requests to cause the CODESYS Gateway Server V2 to allocate excessive memory or consume all available TCP client connections. Besides, passwords are insufficiently checked during login.\n\nAll versions of the following CODESYS V2 product prior version V2.3.9.38 are affected:\n\n\u2022 CODESYS Gateway Server",
+        "title": "Summary"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment or liability on the part of Festo. Note: In no case does these information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\n\n\nIn addition, the actual general terms and conditions of Festo for delivery, payment and software use shall apply, available under http://www.festo.com.",
+        "title": "Disclaimer"
+      },
+      {
+        "category": "description",
+        "text": "The identified vulnerabilities  could lead to denial-of-service attacks, exhaustion of TCP connections, and unauthorized access to the system.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "For all CVEs: Enable password protection at login in case no password is set at the controller. Please note that the password configuration file is not covered via default FFT backup & Restore mechanism, you must select the related file manually.",
+        "title": "Mitigation"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "psirt@festo.com",
+      "name": "Festo SE",
+      "namespace": "https://festo.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "For further security-related issues in Festo products please contact the Festo Product Security Incident Response Team (PSIRT)",
+        "url": "https://festo.com/psirt"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories",
+        "url": "https://certvde.com/en/advisories/vendor/festo/"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202406: Several Codesys Gateway v2 vulnerabilities in Codesys provided by Festo - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2024/fsa-202406.json"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202406: Several Codesys Gateway v2 vulnerabilities in Codesys provided by Festo - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2024-059"
+      }
+    ],
+    "title": "Several Codesys Gateway v2 vulnerabilities in Codesys provided by Festo",
+    "tracking": {
+      "aliases": [
+        "VDE-2024-059"
+      ],
+      "current_release_date": "2024-12-03T11:00:00.000Z",
+      "generator": {
+        "date": "2024-12-03T14:34:47.564Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.15"
+        }
+      },
+      "id": "FSA-202406",
+      "initial_release_date": "2024-12-03T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-12-03T11:00:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial version"
+        },
+        {
+          "date": "2024-12-03T14:00:00.000Z",
+          "number": "2.0.0",
+          "summary": "One reference has been corrected"
+        }
+      ],
+      "status": "final",
+      "version": "2.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "CODESYS provided by Festo all versions",
+                      "product_id": "prod1-CodesysV2"
+                    }
+                  }
+                ],
+                "category": "product_family",
+                "name": "CODESYS provided by Festo"
+              }
+            ],
+            "category": "product_family",
+            "name": "Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "FESTO"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-31802",
+      "cwe": {
+        "id": "CWE-187",
+        "name": "Partial String Comparison"
+      },
+      "notes": [
+        {
+          "audience": "all",
+          "category": "description",
+          "text": "In CODESYS Gateway Server V2 for versions prior to V2.3.9.38 only a part of the the specified password is been compared to the real CODESYS Gateway password. An attacker may perform authentication by specifying a small password that matches the corresponding part of the longer real CODESYS Gateway password.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "prod1-CodesysV2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Enable password protection at login in case no password is set at the controller. Please note that the password configuration file is not covered by the default FFT backup and restore mechanism. You must select the related file manually.",
+          "product_ids": [
+            "prod1-CodesysV2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "accessComplexity": "LOW",
+            "accessVector": "NETWORK",
+            "authentication": "NONE",
+            "availabilityImpact": "PARTIAL",
+            "baseScore": 7.5,
+            "confidentialityImpact": "PARTIAL",
+            "environmentalScore": 7.5,
+            "integrityImpact": "PARTIAL",
+            "temporalScore": 7.5,
+            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "version": "2.0"
+          },
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "prod1-CodesysV2"
+          ]
+        }
+      ],
+      "title": "CVE-2022-31802"
+    },
+    {
+      "cve": "CVE-2022-31803",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "audience": "all",
+          "category": "description",
+          "text": "In CODESYS Gateway Server V2 an insufficient check for the activity of TCP client connections allows an unauthenticated attacker to consume all available TCP connections and prevent legitimate users or clients from establishing a new connection to the CODESYS Gateway Server V2. Existing connections are not affected and therefore remain intact.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "prod1-CodesysV2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Enable password protection at login in case no password is set at the controller. Please note that the password configuration file is not covered by the default FFT backup and restore mechanism. You must select the related file manually.",
+          "product_ids": [
+            "prod1-CodesysV2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "accessComplexity": "LOW",
+            "accessVector": "NETWORK",
+            "authentication": "NONE",
+            "availabilityImpact": "PARTIAL",
+            "baseScore": 5,
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 5,
+            "integrityImpact": "NONE",
+            "temporalScore": 5,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 5.3,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 5.3,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "prod1-CodesysV2"
+          ]
+        }
+      ],
+      "title": "CVE-2022-31803"
+    },
+    {
+      "cve": "CVE-2022-31804",
+      "cwe": {
+        "id": "CWE-789",
+        "name": "Memory Allocation with Excessive Size Value"
+      },
+      "notes": [
+        {
+          "audience": "all",
+          "category": "description",
+          "text": "The CODESYS Gateway Server V2 does not verifiy that the size of a request is within expected limits. An unauthenticated attacker may allocate an arbitrary amount of memory, which may lead to a crash of the Gateway due to an out-of-memory condition.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "prod1-CodesysV2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Enable password protection at login in case no password is set at the controller. Please note that the password configuration file is not covered by the default FFT backup and restore mechanism. You must select the related file manually.",
+          "product_ids": [
+            "prod1-CodesysV2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v2": {
+            "accessComplexity": "LOW",
+            "accessVector": "NETWORK",
+            "authentication": "NONE",
+            "availabilityImpact": "PARTIAL",
+            "baseScore": 5,
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 5,
+            "integrityImpact": "NONE",
+            "temporalScore": 5,
+            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+            "version": "2.0"
+          },
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "prod1-CodesysV2"
+          ]
+        }
+      ],
+      "title": "CVE-2022-31804"
+    }
+  ]
+}

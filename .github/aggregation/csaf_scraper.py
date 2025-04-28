@@ -13,11 +13,7 @@ from helpers import time_convert, clean_key
 import env
 ####################################################################
 # TODO:
-# Siemens throttle when breaks on hash/sig SSA-331112 - DONE
-# (Maybe redownload Siemens)
 # Double check the code when a file is not new/updated (ICSAs are being redownloaded) - Manually appears to be working
-# Nozomi colon url issues (pass ID name and base filename on it) - DONE
-# Update saving ROLIE feeds with local links - DONE
 ####################################################################
 
 ####################################################################

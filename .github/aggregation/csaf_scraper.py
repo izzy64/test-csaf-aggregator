@@ -146,18 +146,24 @@ def get_csaf_updated_time(path:str):
         updated_time: A datetime string.
     '''
     try:
+        print("TEST: "+path)
         if os.path.isfile(path):
             with open(path, "r") as file:
+                print("TEST: Read file successfully")
                 contents = file.read()
                 csaf = json.loads(contents)
                 updated_time = csaf.get("document", {}).get("tracking", {}).get("current_release_date", "1980-01-01T09:00:00.000Z")
         else:
+            print("TEST: Failed to find path")
             updated_time = "1980-01-01T09:00:00.000Z"
         if not os.path.isfile(path+".asc"):
+            print("TEST: Failed to find signature")
             updated_time = "1980-01-01T09:00:00.000Z"
         if not (os.path.isfile(path+".sha256") or os.path.exists(path+".sha512")):
+            print("TEST: Failed to find hash")
             updated_time = "1980-01-01T09:00:00.000Z"
     except:
+        print("TEST: Failed parsing")
         updated_time = "1980-01-01T09:00:00.000Z"
     return updated_time
 def updateROLIEURLs(rolie_copy:dict,feed_path:str):

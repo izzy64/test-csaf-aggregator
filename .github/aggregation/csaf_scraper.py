@@ -300,8 +300,8 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                             with open("./logs.txt", "a") as f:
                                                 f.write(f"{publisher_name} CSAF File Fetch requests for {advid} FAILED due to error: {str(e)}\n")
                                             continue
-                                    else:
-                                        print(f"{entry['id']} data already present")
+                                    # else:
+                                    #     print(f"{entry['id']} data already present")
 
                                 # update mirrored ROLIE
                                 if rolie_copy.get("feed",{}).get("link",[]):

@@ -257,6 +257,8 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
 
                                 # fetch csafs for update
                                 for advid, entry in rolie_dict.items():
+                                    print(f"Old: {old_updated_time}, New: {updated_time}")
+                                    print(f"{entry['id']} {entry['update']}")
                                     if entry["update"]:
                                         print(f"Fetching data for {entry['id']}")
                                         try:

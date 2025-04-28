@@ -280,12 +280,13 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                             ).text
                                             n_requests += 1
 
-                                            # check sig
-                                            if link["rel"] == "signature":
-                                                verify_signature(link,provider_keys,link_response,csaf_response,feed_path)
-                                            # check hash
-                                            if link["rel"] == "hash":
-                                                verify_hash(link,link_response,csaf_response,feed_path)
+                                            if not "you made too many requests" in link_response.lower():
+                                                # check sig
+                                                if link["rel"] == "signature":
+                                                    verify_signature(link,provider_keys,link_response,csaf_response,feed_path)
+                                                # check hash
+                                                if link["rel"] == "hash":
+                                                    verify_hash(link,link_response,csaf_response,feed_path)
                                 except Exception as e:
                                     print(e)
                                     pass

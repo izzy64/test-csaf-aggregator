@@ -1,0 +1,274 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERTVDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-GB",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Through specific nodes of the server configuration interface of the TwinCAT OPC UA Server administrators are able to remotely create and delete any files on the system which the server is running on, though this access should have been restricted to specific directories. In case that configuration interface is combined with not recommended settings to allow anonymous access via the TwinCAT OPC UA Server then this kind of file access is even possible for any unauthenticated user from remote.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "The OPC UA server called \u201cTcOpcUaServer\u201d provides specific nodes within a specifc namespace which allow to configure features of that OPC UA server. By accessing some of these nodes an OPC UA client can create and delete configuration files for these features on behalf of the administrator of the \u201cTcOpcUaServer\u201d. For these files dedicated directories are used on the file system of the computer where the \u201cTcOpcUaServer\u201d is running. Affected versions were missing specific sanity checks for the file names used and an attacker could add relative paths to the file names to create and delete files outside of the dedicated directories.\n\nThe specific nodes reside within the OPC UA namespace which is identified by the following namespace URI:\n\nhttp://beckhoff.com/TwinCAT/TF6100/Server/Configuration\nWith the default configuration the dedicated directories are the following on the system partition of the system where \u201cTcOpcUAServer\u201d is running:\n\nTwinCAT\\Functions\\TF6100-OPC-UA\\Server\\res\nTwinCAT\\Functions\\TF6100-OPC-UA\\Server\\xmlnodesets\nTwinCAT\\Functions\\TF6100-OPC-UA\\Server\\symbolfiles\nPlease note that the default installation of the \u201cTcOpcUAServer\u201d does allow anonymous access even to the administrative nodes within the namespace described above. However, Beckhoff recommends to restrict access with the help of the various security features of the \u201cTcOpcUaServer\u201d as described with \"Configuring security settings - Beckhoff Information System external link\" . This is why operating the \u201cTcOpcUAServer\u201d with allowing anonymous access to the administrative nodes is not considered the intended use here.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Consider restricting access to the nodes of the \u201cTcOpcUAServer\u201d with the methods described by https://infosys.beckhoff.com/content/1033/tcopcuaserver/5930038411-1.html such that the administrative interface can only be accessed by administrative users of well known OPC UA clients.",
+        "title": "Mitigation"
+      },
+      {
+        "category": "description",
+        "text": "Please update to a recent version of the affected product.",
+        "title": "Remediation"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-securityincident@beckhoff.com",
+      "name": "Beckhoff Automation GmbH & Co. KG",
+      "namespace": "https://www.beckhoff.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "Beckhoff Automation GmbH & Co. KG",
+        "url": "https://infosys.beckhoff.com/index.php?content=../content/1031/ipc_security/976057355.html&id="
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories",
+        "url": "https://certvde.com/en/advisories/vendor/Beckhoff/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2021-051: Beckhoff: Relative path traversal vulnerability through TwinCAT OPC UA Server - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2021-051/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2021-051: Beckhoff: Relative path traversal vulnerability through TwinCAT OPC UA Server - CSAF",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2021/vde-2021-051.json"
+      }
+    ],
+    "title": "Beckhoff: Relative path traversal vulnerability through TwinCAT OPC UA Server",
+    "tracking": {
+      "aliases": [
+        "VDE-2021-051"
+      ],
+      "current_release_date": "2021-11-04T07:00:00.000Z",
+      "generator": {
+        "date": "2025-03-12T10:03:53.568Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.18"
+        }
+      },
+      "id": "VDE-2021-051",
+      "initial_release_date": "2021-11-04T07:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2021-11-04T07:00:00.000Z",
+          "number": "1",
+          "summary": "initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "TwinCAT OPC UA Server in TF6100 < 4.3.48.0",
+                "product": {
+                  "name": "TwinCAT OPC UA Server in TF6100 < 4.3.48.0",
+                  "product_id": "CSAFPID-11001"
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "TwinCAT OPC UA Server in TS6100 < 4.3.48.0",
+                "product": {
+                  "name": "TwinCAT OPC UA Server in TS6100 < 4.3.48.0",
+                  "product_id": "CSAFPID-11002"
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Hardware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<3.2.0.194",
+                "product": {
+                  "name": "Firmware <3.2.0.194",
+                  "product_id": "CSAFPID-21001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.2.0.194",
+                "product": {
+                  "name": "Firmware 3.2.0.194",
+                  "product_id": "CSAFPID-22001"
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Beckhoff Automation GmbH & Co. KG"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-31001",
+          "CSAFPID-31002"
+        ],
+        "summary": "affected products"
+      },
+      {
+        "group_id": "CSAFGID-0002",
+        "product_ids": [
+          "CSAFPID-32001",
+          "CSAFPID-32002"
+        ],
+        "summary": "fixed products"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <3.2.0.194 installed on TwinCAT OPC UA Server in TF6100 < 4.3.48.0",
+          "product_id": "CSAFPID-31001"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.2.0.194 installed on TwinCAT OPC UA Server in TF6100 < 4.3.48.0",
+          "product_id": "CSAFPID-32001"
+        },
+        "product_reference": "CSAFPID-22001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <3.2.0.194 installed on TwinCAT OPC UA Server in TS6100 < 4.3.48.0",
+          "product_id": "CSAFPID-31002"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.2.0.194 installed on TwinCAT OPC UA Server in TS6100 < 4.3.48.0",
+          "product_id": "CSAFPID-32002"
+        },
+        "product_reference": "CSAFPID-22001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-34594",
+      "cwe": {
+        "id": "CWE-23",
+        "name": "Relative Path Traversal"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "TwinCAT OPC UA Server in TF6100 and TS6100 in product versions before 4.3.48.0 or with TcOpcUaServer versions below 3.2.0.194 are prone to a relative path traversal that allow administrators to create or delete any files on the system."
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-32001",
+          "CSAFPID-32002"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Consider restricting access to the nodes of the \u201cTcOpcUAServer\u201d with the methods described by https://infosys.beckhoff.com/content/1033/tcopcuaserver/5930038411-1.html such that the administrative interface can only be accessed by administrative users of well known OPC UA clients.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Please update to a recent version of the affected product.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 6.5,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "HIGH",
+            "scope": "UNCHANGED",
+            "temporalScore": 6.5,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002"
+          ]
+        }
+      ],
+      "title": "CVE-2021-34594"
+    }
+  ]
+}

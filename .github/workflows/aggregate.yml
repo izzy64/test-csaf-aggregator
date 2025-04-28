@@ -9,8 +9,10 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - name: checkout repo
+      uses: actions/checkout@v2
+    - name: setup python
+      uses: actions/setup-python@v2
       with:
         python-version: '3.9'
     - run: pip install requests pgpy python-dateutil

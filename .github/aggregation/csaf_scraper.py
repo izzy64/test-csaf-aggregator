@@ -277,16 +277,18 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                         if link["rel"] in ["hash", "signature"]:
                                             link_response = requests.get(
                                                 link["href"], allow_redirects=True, verify=env.verify
-                                            ).text
+                                            )
                                             n_requests += 1
 
-                                            if not "you made too many requests" in link_response.lower():
+                                            if not "you made too many requests" in link_response.text.lower():
                                                 # check sig
                                                 if link["rel"] == "signature":
-                                                    verify_signature(link,provider_keys,link_response,csaf_response,feed_path)
+                                                    verify_signature(link,provider_keys,link_response.text,csaf_response,feed_path)
                                                 # check hash
                                                 if link["rel"] == "hash":
-                                                    verify_hash(link,link_response,csaf_response,feed_path)
+                                                    verify_hash(link,link_response.text,csaf_response,feed_path)
+                                            else:
+                                                print("found one")
                                 except Exception as e:
                                     print(e)
                                     pass

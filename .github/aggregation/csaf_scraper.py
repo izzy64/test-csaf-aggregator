@@ -39,6 +39,7 @@ def load_aggregator():
         aggregator: as a dictionary object.
     '''
     try:
+        print(workingdir)
         with open(workingdir+os.sep+f"{env.aggregator_name}", "r") as agg:
             contents = agg.read()
             aggregator = json.loads(contents)

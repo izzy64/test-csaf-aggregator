@@ -240,7 +240,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
 
                                 feed["url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
-                                rolie_dict = {item['id']:item|{"update":True} for item in rolie.get("feed",{}).get("entry",[])}
+                                rolie_dict = {item['id']:item|{"update":False} for item in rolie.get("feed",{}).get("entry",[])}
 
                                 # Cull already fetched csafs from fetch pool
                                 if rolie.get("feed",{}).get("entry",[]):
@@ -251,8 +251,8 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                         except Exception as e:
                                             print("Error here: "+str(e))
                                             continue
-                                        if updated_time <= old_updated_time:
-                                            rolie_dict[entry["id"]]["update"] = False
+                                        if updated_time > old_updated_time:
+                                            rolie_dict[entry["id"]]["update"] = True
 
                                 # fetch csafs for update
                                 for advid, entry in rolie_dict.items():
@@ -299,7 +299,9 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                             print(e)
                                             with open("./logs.txt", "a") as f:
                                                 f.write(f"{publisher_name} CSAF File Fetch requests for {advid} FAILED due to error: {str(e)}\n")
-                                            pass
+                                            continue
+                                    else:
+                                        print(f"{entry['id']} data already present")
 
                                 # update mirrored ROLIE
                                 if rolie_copy.get("feed",{}).get("link",[]):
@@ -323,7 +325,9 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                 f.write(f"{publisher_name} ROLIE request FAILED with code [{rolie_response.status_code}] and message: {rolie_response.text}\n")
                     except Exception as e:
                         print(e)
-                        pass
+                        with open("./logs.txt", "a") as f:
+                            f.write(f"{publisher_name} ROLIE request FAILED due to error: {str(e)}\n")
+                        continue
                         
         # save the mirrored provider metadata
         if not os.path.exists("./"+publisher_name): 

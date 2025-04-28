@@ -27,7 +27,8 @@ if not env.verify:
 
 now = datetime.now()
 workingdir = "." # Manual run
-workingdir = ".github" # Automatic run
+# workingdir = ".github" # Automatic run
+workingdir = os.path.dirname(os.path.abspath(__file__))
 
 def load_aggregator():
     '''Load Aggregator

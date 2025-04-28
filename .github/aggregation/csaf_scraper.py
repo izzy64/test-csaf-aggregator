@@ -63,6 +63,8 @@ def verify_signature(link, keys, signature, csaf, feed_path):
         None
     '''
     verified = False
+    csaf_data = json.loads(csaf.text)
+    save_name = csaf_data['document']['tracking']['id'].lower()
     for key in keys:
         pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
         try:
@@ -74,13 +76,13 @@ def verify_signature(link, keys, signature, csaf, feed_path):
             print(e)
             continue
     if verified:
-        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+        with open(f"{feed_path}/{save_name}"+".json.asc", "w") as outfile:
             outfile.write(signature)
     else:
         print(f"PGP signature verification failed for CSAF {link['href'].split('/')[-1]}\n")
         with open("./logs.txt", "a") as f:
             f.write(f"PGP signature verification failed for CSAF {link['href'].split('/')[-1]}\n")
-        with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+        with open(f"{feed_path}/{save_name}"+".json.asc", "w") as outfile:
             outfile.write(signature)
 def verify_hash(link, hash, csaf, feed_path):
     '''Verify Hash
@@ -94,26 +96,28 @@ def verify_hash(link, hash, csaf, feed_path):
     Returns:
         None
     '''
+    csaf_data = json.loads(csaf.text)
+    save_name = csaf_data['document']['tracking']['id'].lower()
     if link["href"].split(".")[-1] == "sha256":
         if hashlib.sha256(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
-            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+            with open(f"{feed_path}/{save_name}"+".json.sha256", "w") as outfile:
                 outfile.write(hash)
         else:
             print(f"sha256 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
             with open("./logs.txt", "a") as f:
                 f.write(f"sha256 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
-            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+            with open(f"{feed_path}/{save_name}"+".json.sha256", "w") as outfile:
                 outfile.write(hash)
 
     elif link["href"].split(".")[-1] == "sha512":
         if hashlib.sha512(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
-            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+            with open(f"{feed_path}/{save_name}"+".json.sha512", "w") as outfile:
                 outfile.write(hash)
         else:
             print(f"sha512 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
             with open("./logs.txt", "a") as f:
                 f.write(f"sha512 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
-            with open(f"{feed_path}/{link['href'].split('/')[-1]}", "w") as outfile:
+            with open(f"{feed_path}/{save_name}"+".json.sha512", "w") as outfile:
                 outfile.write(hash)
     else:
         print("hashing method not supported")

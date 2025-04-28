@@ -248,7 +248,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                     for entry in rolie["feed"]["entry"]:
                                         try:
                                             updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
-                                            old_updated_time = parser.parse(get_csaf_updated_time(f"{feed_path}/{entry['id']}.json"))
+                                            old_updated_time = parser.parse(get_csaf_updated_time(f"{feed_path}"+os.sep+f"{entry['id']}.json"))
                                         except Exception as e:
                                             print("Error here: "+str(e))
                                             continue

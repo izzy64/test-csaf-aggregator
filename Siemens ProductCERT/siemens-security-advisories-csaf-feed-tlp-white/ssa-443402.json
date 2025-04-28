@@ -1,0 +1,3451 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "TeleControl Server Basic before V3.1.2.2 contains multiple SQL Injection vulnerabilities that could allow an attacker to read and write to the application's DB, cause denial of service and execute code in an OS shell with limited \"NT AUTHORITY\\NetworkService\" permissions.\n\nSiemens has conducted a root-cause analysis for potential SQL injection vulnerabilities and has identified the locations in the code base where the underlying legacy design pattern has been used in. TeleControl Server Basic V3.1.2.2 has fixed all occurrences in the affected product.\n\nSiemens has released a new version for TeleControl Server Basic and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-443402: Multiple SQL Injection Vulnerabilities in TeleControl Server Basic before V3.1.2.2 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-443402.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-443402: Multiple SQL Injection Vulnerabilities in TeleControl Server Basic before V3.1.2.2 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-443402.json"
+      }
+    ],
+    "title": "SSA-443402: Multiple SQL Injection Vulnerabilities in TeleControl Server Basic before V3.1.2.2",
+    "tracking": {
+      "current_release_date": "2025-04-16T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-443402",
+      "initial_release_date": "2025-04-16T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-04-16T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1.2.2",
+                "product": {
+                  "name": "TeleControl Server Basic",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TeleControl Server Basic"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-27495",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'CreateTrace' method. This could allow an unauthenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25911)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-27495"
+    },
+    {
+      "cve": "CVE-2025-27539",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'VerifyUser' method. This could allow an unauthenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.  (ZDI-CAN-25914)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-27539"
+    },
+    {
+      "cve": "CVE-2025-27540",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'Authenticate' method. This could allow an unauthenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25913)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-27540"
+    },
+    {
+      "cve": "CVE-2025-29905",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'RestoreFromBackup' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25923)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-29905"
+    },
+    {
+      "cve": "CVE-2025-30002",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateConnectionVariables' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25909)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-30002"
+    },
+    {
+      "cve": "CVE-2025-30003",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateProjectConnections' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25910)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-30003"
+    },
+    {
+      "cve": "CVE-2025-30030",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'ImportDatabase' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25924)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-30030"
+    },
+    {
+      "cve": "CVE-2025-30031",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateUsers' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25922)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-30031"
+    },
+    {
+      "cve": "CVE-2025-30032",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateDatabaseSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25921)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-30032"
+    },
+    {
+      "cve": "CVE-2025-31343",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateTcmSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25920)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31343"
+    },
+    {
+      "cve": "CVE-2025-31349",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateSmtpSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25919)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31349"
+    },
+    {
+      "cve": "CVE-2025-31350",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateBufferingSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25918)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31350"
+    },
+    {
+      "cve": "CVE-2025-31351",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'CreateProject' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25917)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31351"
+    },
+    {
+      "cve": "CVE-2025-31352",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateGateways' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25915)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31352"
+    },
+    {
+      "cve": "CVE-2025-31353",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateOpcSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25916)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31353"
+    },
+    {
+      "cve": "CVE-2025-32475",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateProject' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on. (ZDI-CAN-25912)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32475"
+    },
+    {
+      "cve": "CVE-2025-32822",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'DeleteProject' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32822"
+    },
+    {
+      "cve": "CVE-2025-32823",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockProject' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32823"
+    },
+    {
+      "cve": "CVE-2025-32824",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockProject' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32824"
+    },
+    {
+      "cve": "CVE-2025-32825",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetProjects' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32825"
+    },
+    {
+      "cve": "CVE-2025-32826",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetActiveProjects' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32826"
+    },
+    {
+      "cve": "CVE-2025-32827",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'ActivateProject' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32827"
+    },
+    {
+      "cve": "CVE-2025-32828",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateProjectCrossCommunications' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32828"
+    },
+    {
+      "cve": "CVE-2025-32829",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockProjectCrossCommunications' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32829"
+    },
+    {
+      "cve": "CVE-2025-32830",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockProject' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32830"
+    },
+    {
+      "cve": "CVE-2025-32831",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateProjectUserRights' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32831"
+    },
+    {
+      "cve": "CVE-2025-32832",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockProjectUserRights' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32832"
+    },
+    {
+      "cve": "CVE-2025-32833",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockProjectUserRights' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32833"
+    },
+    {
+      "cve": "CVE-2025-32834",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateConnectionVariablesWithImport' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32834"
+    },
+    {
+      "cve": "CVE-2025-32835",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateConnectionVariableArchivingBuffering' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32835"
+    },
+    {
+      "cve": "CVE-2025-32836",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetConnectionVariables' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32836"
+    },
+    {
+      "cve": "CVE-2025-32837",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetActiveConnectionVariables' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32837"
+    },
+    {
+      "cve": "CVE-2025-32838",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'ImportConnectionVariables' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32838"
+    },
+    {
+      "cve": "CVE-2025-32839",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetGateways' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32839"
+    },
+    {
+      "cve": "CVE-2025-32840",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockGateway' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32840"
+    },
+    {
+      "cve": "CVE-2025-32841",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockGateway' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32841"
+    },
+    {
+      "cve": "CVE-2025-32842",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetUsers' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32842"
+    },
+    {
+      "cve": "CVE-2025-32843",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockUser' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32843"
+    },
+    {
+      "cve": "CVE-2025-32844",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockUser' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32844"
+    },
+    {
+      "cve": "CVE-2025-32845",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateGeneralSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32845"
+    },
+    {
+      "cve": "CVE-2025-32846",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockGeneralSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32846"
+    },
+    {
+      "cve": "CVE-2025-32847",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockGeneralSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32847"
+    },
+    {
+      "cve": "CVE-2025-32848",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockSmtpSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32848"
+    },
+    {
+      "cve": "CVE-2025-32849",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockSmtpSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32849"
+    },
+    {
+      "cve": "CVE-2025-32850",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockTcmSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32850"
+    },
+    {
+      "cve": "CVE-2025-32851",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockTcmSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32851"
+    },
+    {
+      "cve": "CVE-2025-32852",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockDatabaseSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32852"
+    },
+    {
+      "cve": "CVE-2025-32853",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockDatabaseSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32853"
+    },
+    {
+      "cve": "CVE-2025-32854",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockOpcSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32854"
+    },
+    {
+      "cve": "CVE-2025-32855",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockOpcSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32855"
+    },
+    {
+      "cve": "CVE-2025-32856",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockBufferingSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32856"
+    },
+    {
+      "cve": "CVE-2025-32857",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockBufferingSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32857"
+    },
+    {
+      "cve": "CVE-2025-32858",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateWebServerGatewaySettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32858"
+    },
+    {
+      "cve": "CVE-2025-32859",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockWebServerGatewaySettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32859"
+    },
+    {
+      "cve": "CVE-2025-32860",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockWebServerGatewaySettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32860"
+    },
+    {
+      "cve": "CVE-2025-32861",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UpdateTraceLevelSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32861"
+    },
+    {
+      "cve": "CVE-2025-32862",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'LockTraceLevelSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32862"
+    },
+    {
+      "cve": "CVE-2025-32863",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'UnlockTraceLevelSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32863"
+    },
+    {
+      "cve": "CVE-2025-32864",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32864"
+    },
+    {
+      "cve": "CVE-2025-32865",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'CreateLog' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32865"
+    },
+    {
+      "cve": "CVE-2025-32866",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetLogs' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32866"
+    },
+    {
+      "cve": "CVE-2025-32867",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'CreateBackup' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32867"
+    },
+    {
+      "cve": "CVE-2025-32868",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'ExportCertificate' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32868"
+    },
+    {
+      "cve": "CVE-2025-32869",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'ImportCertificate' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32869"
+    },
+    {
+      "cve": "CVE-2025-32870",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetTraces' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32870"
+    },
+    {
+      "cve": "CVE-2025-32871",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'MigrateDatabase' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32871"
+    },
+    {
+      "cve": "CVE-2025-32872",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to SQL injection through the internally used 'GetOverview' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 8000 on the affected systems to trusted IP addresses only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987362/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-32872"
+    }
+  ]
+}

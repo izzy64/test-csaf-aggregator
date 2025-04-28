@@ -1,0 +1,166 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Nozomi Networks has published information on vulnerabilities in \nNozomi Guardian/CMC before 23.3.0. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version. Customers are advised to consult and implement the workarounds provided in Nozomi Network's upstream security notifications.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-665034: Vulnerability in Nozomi Guardian/CMC before 23.3.0 on RUGGEDCOM APE1808 devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-665034.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-665034: Vulnerability in Nozomi Guardian/CMC before 23.3.0 on RUGGEDCOM APE1808 devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-665034.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-665034: Vulnerability in Nozomi Guardian/CMC before 23.3.0 on RUGGEDCOM APE1808 devices - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-665034.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-665034: Vulnerability in Nozomi Guardian/CMC before 23.3.0 on RUGGEDCOM APE1808 devices - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-665034.txt"
+      }
+    ],
+    "title": "SSA-665034: Vulnerability in Nozomi Guardian/CMC before 23.3.0 on RUGGEDCOM APE1808 devices",
+    "tracking": {
+      "current_release_date": "2024-05-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-665034",
+      "initial_release_date": "2024-02-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-02-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-05-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added specific product version to remediations"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with Nozomi Guardian / CMC before 23.3.0",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM APE1808"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-5253",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A missing authentication check in the WebSocket channel used for the Check Point IoT integration in Nozomi Networks Guardian and CMC, may allow an unauthenticated attacker to obtain assets data without authentication.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Nozomi Guardian / CMC to V23.4.1. Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Use internal firewall features to limit access to the web management interface",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-5253"
+    }
+  ]
+}

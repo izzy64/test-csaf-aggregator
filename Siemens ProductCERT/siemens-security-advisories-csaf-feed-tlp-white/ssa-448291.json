@@ -1,0 +1,218 @@
+{
+  "document": {
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "A Denial-of-Service vulnerability was found affecting the ARP protocol on RWG Universal Controller devices.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-448291: Denial-of-Service Vulnerability in ARP Protocol of RWG Universal Controllers - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-448291.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-448291: Denial-of-Service Vulnerability in ARP Protocol of RWG Universal Controllers - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-448291.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-448291: Denial-of-Service Vulnerability in ARP Protocol of RWG Universal Controllers - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-448291.json"
+      }
+    ],
+    "title": "SSA-448291: Denial-of-Service Vulnerability in ARP Protocol of RWG Universal Controllers",
+    "tracking": {
+      "current_release_date": "2021-07-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-448291",
+      "initial_release_date": "2021-07-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-07-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.16.16",
+                "product": {
+                  "name": "RWG1.M8",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RWG1.M8"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.16.16",
+                "product": {
+                  "name": "RWG1.M12",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RWG1.M12"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V1.16.16",
+                "product": {
+                  "name": "RWG1.M12D",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RWG1.M12D"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-25671",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Sending specially crafted ARP packets to an affected device could cause a partial denial-of-service, preventing the device to operate normally. A restart is needed to restore normal operations.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2021-25671 - RWG1.M8",
+          "url": "https://www.ubc.siemens.com.cn/"
+        },
+        {
+          "summary": "CVE-2021-25671 - RWG1.M12",
+          "url": "https://www.ubc.siemens.com.cn/"
+        },
+        {
+          "summary": "CVE-2021-25671 - RWG1.M12D",
+          "url": "https://www.ubc.siemens.com.cn/"
+        },
+        {
+          "summary": "CVE-2021-25671 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-25671.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Login to the RWG Controller Graphical programming platform, generate a new project file and download the new project file to the device",
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "url": "https://www.ubc.siemens.com.cn/"
+        },
+        {
+          "category": "workaround",
+          "details": "Ensure that only trusted systems are connected to the same Layer 2 domain as the affected devices",
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to systems in the same Layer 2 domain as the affected devices to trusted persons only",
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2021-25671"
+    }
+  ]
+}

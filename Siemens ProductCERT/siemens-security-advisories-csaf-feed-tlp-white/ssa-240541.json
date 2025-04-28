@@ -1,0 +1,519 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "WIBU Systems published information about a heap buffer overflow vulnerability and associated fix releases of CodeMeter Runtime, a product provided by WIBU Systems and used in several Siemens industrial products for license management.\n\nThe vulnerability is described in the section 'Vulnerability Classification' below and got assigned the CVE ID CVE-2023-3935.\nSuccessful exploitation of this vulnerability could allow\n\n- an unauthenticated remote attacker to execute code on vulnerable products, where CodeMeter Runtime (i.e., CodeMeter.exe) is configured as a server, or\n- an authenticated local attacker to gain root/admin privileges on vulnerable products, where CodeMeter Runtime is configured as a client.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-240541: WIBU Systems CodeMeter Heap Buffer Overflow Vulnerability in Industrial Products - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-240541.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-240541: WIBU Systems CodeMeter Heap Buffer Overflow Vulnerability in Industrial Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-240541.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-240541: WIBU Systems CodeMeter Heap Buffer Overflow Vulnerability in Industrial Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-240541.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-240541: WIBU Systems CodeMeter Heap Buffer Overflow Vulnerability in Industrial Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-240541.txt"
+      }
+    ],
+    "title": "SSA-240541: WIBU Systems CodeMeter Heap Buffer Overflow Vulnerability in Industrial Products",
+    "tracking": {
+      "current_release_date": "2024-05-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-240541",
+      "initial_release_date": "2023-09-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-09-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2023-10-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for PSS(R)E V35, SIMATIC WinCC OA V3.17 and SIMATIC WinCC OA V3.18; no fix planned for SIMATIC PCS neo V4.0"
+        },
+        {
+          "date": "2023-12-12T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for SINEC INS"
+        },
+        {
+          "date": "2024-05-14T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added fix for SIMIT Simulation Platform"
+        }
+      ],
+      "status": "interim",
+      "version": "4"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V14.2023-08-23",
+                "product": {
+                  "name": "PSS(R)CAPE V14",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)CAPE V14"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V15.0.22",
+                "product": {
+                  "name": "PSS(R)CAPE V15",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)CAPE V15"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V34.9.6",
+                "product": {
+                  "name": "PSS(R)E V34",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)E V34"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V35.6.1",
+                "product": {
+                  "name": "PSS(R)E V35",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)E V35"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "PSS(R)ODMS V13.0",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)ODMS V13.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V13.1.12.1",
+                "product": {
+                  "name": "PSS(R)ODMS V13.1",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PSS(R)ODMS V13.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC PCS neo V3",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS neo V3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC PCS neo V4.0",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS neo V4.0"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V3.17 P030",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.17",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V3.18 P021",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.18",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V3.19 P006",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.19",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.19"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V10.0<V11.2",
+                "product": {
+                  "name": "SIMIT Simulation Platform",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMIT Simulation Platform"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V1.0 SP2 Update 2",
+                "product": {
+                  "name": "SINEC INS",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINEC INS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINEMA Remote Connect",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINEMA Remote Connect"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-3935",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "In CodeMeter Runtime versions up to 7.60b, there is a heap buffer overflow vulnerability which can potentially lead to a remote code execution. Currently, no PoC is known to us. To\r\nexploit the heap overflow, additional protection mechanisms need to be broken. Remote access is only possible if CodeMeter is configured as a server. If CodeMeter is not configured as a server, the adversary would need to log in to the machine where the CodeMeter Runtime is running or trick the user into sending a malicious request to CodeMeter. This might result in an escalation of privilege. (WIBU-230704-01)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "If CodeMeter Runtime is configured as server: Limit remote access to systems where the CodeMeter Runtime network server is running",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For affected versions: Install WIBU Systems CodeMeter Runtime V7.60c or later version manually to fix the issue: Download the package from \nhttps://www.wibu.com/support/user/user-software.html  and follow the installation instructions from WIBU Systems.",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For affected versions: Install WIBU Systems CodeMeter Runtime V7.60c or later version manually to fix the issue: Download the package from \nhttps://www.wibu.com/support/user/user-software.html and follow the installation instructions from WIBU Systems.",
+          "product_ids": [
+            "2",
+            "3",
+            "6"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "7",
+            "8",
+            "14"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.0 SP2 Update 2 or later version",
+          "product_ids": [
+            "13"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109825710/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V11.2 or later version",
+          "product_ids": [
+            "12"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109954445/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V13.1.12.1 or later version",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V15.0.22 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.17 P030 or later version",
+          "product_ids": [
+            "9"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-patches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.18 P021 or later version",
+          "product_ids": [
+            "10"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-patches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.19 P006 or later version",
+          "product_ids": [
+            "11"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-patches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V34.9.6 or later version",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V35.6.1 or later version",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "CAPE V14 installations installed from material dated 2023-08-23 or later are not affected, as they contain a fixed version of CodeMeter Runtime.\n\nFor installations of CAPE V14 using material earlier than 2023-08-23: Install WIBU Systems CodeMeter Runtime V7.60c or later version manually to fix the issue: Download the package from \nhttps://www.wibu.com/support/user/user-software.html and follow the installation instructions from WIBU Systems.",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Install WIBU Systems CodeMeter Runtime V7.60c or later version manually to \ufb01x the issue: Download the package from \nhttps://www.wibu.com/support/user/user-software.html and follow the installation instructions from WIBU Systems.",
+          "product_ids": [
+            "5"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "If CodeMeter Runtime is configured as client only in the affected product: Ensure that only trusted persons have access to the system and avoid the configuration of additional local accounts",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"
+          ]
+        }
+      ],
+      "title": "CVE-2023-3935"
+    }
+  ]
+}

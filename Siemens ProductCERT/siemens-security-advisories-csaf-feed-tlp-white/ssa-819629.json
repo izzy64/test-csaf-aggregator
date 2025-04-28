@@ -1,0 +1,330 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Users of Industrial Edge Devices are advised to consult the respective Security Advisories for their devices (for Siemens Industrial Edge devices see Additional Information).\n\nIndustrial Edge Device Kit contains a weak authentication vulnerability that could facilitate an unauthenticated remote attacker to circumvent authentication and impersonate a legitimate user.\n\nIndustrial Edge Device Builders integrate Industrial Edge Device Kit into their offerings within the open Industrial Edge ecosystem. See further details about affected Industrial Edge Devices in the Additional Information section.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-819629: Weak Authentication Vulnerability in Industrial Edge Device Kit - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-819629.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-819629: Weak Authentication Vulnerability in Industrial Edge Device Kit - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-819629.json"
+      }
+    ],
+    "title": "SSA-819629: Weak Authentication Vulnerability in Industrial Edge Device Kit",
+    "tracking": {
+      "current_release_date": "2025-04-17T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-819629",
+      "initial_release_date": "2025-04-08T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-04-08T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2025-04-17T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Clarified that this advisory pertains to the Industrial Edge Device Kit only and that version lines can be updated"
+        }
+      ],
+      "status": "interim",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Industrial Edge Device Kit - arm64 V1.17",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - arm64 V1.17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Industrial Edge Device Kit - arm64 V1.18",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - arm64 V1.18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Industrial Edge Device Kit - arm64 V1.19",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - arm64 V1.19"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V1.20.2-1",
+                "product": {
+                  "name": "Industrial Edge Device Kit - arm64 V1.20",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - arm64 V1.20"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V1.21.1-1",
+                "product": {
+                  "name": "Industrial Edge Device Kit - arm64 V1.21",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - arm64 V1.21"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Industrial Edge Device Kit - x86-64 V1.17",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - x86-64 V1.17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Industrial Edge Device Kit - x86-64 V1.18",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - x86-64 V1.18"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Industrial Edge Device Kit - x86-64 V1.19",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - x86-64 V1.19"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V1.20.2-1",
+                "product": {
+                  "name": "Industrial Edge Device Kit - x86-64 V1.20",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - x86-64 V1.20"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V1.21.1-1",
+                "product": {
+                  "name": "Industrial Edge Device Kit - x86-64 V1.21",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Industrial Edge Device Kit - x86-64 V1.21"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-54092",
+      "cwe": {
+        "id": "CWE-1390",
+        "name": "Weak Authentication"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly enforce user authentication on specific API endpoints when identity federation is used. This could facilitate an unauthenticated remote attacker to circumvent authentication and impersonate a legitimate user. Successful exploitation requires that identity federation is currently or has previously been used and the attacker has learned the identity of a legitimate user.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Ensure network access to affected products is limited to trusted parties only",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.20.2-1 or later version",
+          "product_ids": [
+            "4",
+            "9"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.21.1-1 or later version",
+          "product_ids": [
+            "5",
+            "10"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        }
+      ],
+      "title": "CVE-2024-54092"
+    }
+  ]
+}

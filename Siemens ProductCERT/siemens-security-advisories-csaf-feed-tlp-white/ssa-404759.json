@@ -1,0 +1,156 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Several camera device drivers in the Siveillance Video Device Pack store camera credentials in their log file when authentication fails. This could allow a local attacker to read camera credentials stored in the Recording Server under specific conditions.\n\nSiemens has released an update of the Device Pack and recommends to apply this update to all deployments of Siveillance Video. In general, Siemens recommends installing the latest Device Pack which contains the most up-to-date device drivers.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-404759: Information Disclosure Vulnerability in Siveillance Video Camera Drivers - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-404759.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-404759: Information Disclosure Vulnerability in Siveillance Video Camera Drivers - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-404759.json"
+      }
+    ],
+    "title": "SSA-404759: Information Disclosure Vulnerability in Siveillance Video Camera Drivers",
+    "tracking": {
+      "current_release_date": "2025-01-15T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-404759",
+      "initial_release_date": "2025-01-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-01-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2025-01-15T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Updated CVE-2024-12569 with changed description according to https://www.cve.org/CVERecord?id=CVE-2024-12569"
+        }
+      ],
+      "status": "interim",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V13.5",
+                "product": {
+                  "name": "Siveillance Video Device Pack",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video Device Pack"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-12569",
+      "cwe": {
+        "id": "CWE-532",
+        "name": "Insertion of Sensitive Information into Log File"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Disclosure of sensitive information in a Milestone XProtect Device Pack driver\u2019s log file for third-party cameras, allows an attacker to read camera credentials stored in the Recording Server under specific conditions.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Ensure that only trusted people get local access to the driver log files on the Recording Server",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V13.5 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-12569"
+    }
+  ]
+}

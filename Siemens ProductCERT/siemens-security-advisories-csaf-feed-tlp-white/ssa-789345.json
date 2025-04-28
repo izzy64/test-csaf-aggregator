@@ -1,0 +1,435 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Both the Event Server and the Management Server components of Siveillance Video deserialize data without sufficient validations. This could allow an authenticated remote attacker to execute code on the affected system.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions. The provided cumulative hotfix releases include the fixes for both Event Server (ES) and Management Server (MS). Ensure to apply the fixes on all relevant servers in your deployment.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-789345: Code Execution Vulnerabilities in Siveillance Video Event and Management Servers - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-789345.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-789345: Code Execution Vulnerabilities in Siveillance Video Event and Management Servers - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-789345.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-789345: Code Execution Vulnerabilities in Siveillance Video Event and Management Servers - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-789345.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-789345: Code Execution Vulnerabilities in Siveillance Video Event and Management Servers - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-789345.txt"
+      }
+    ],
+    "title": "SSA-789345: Code Execution Vulnerabilities in Siveillance Video Event and Management Servers",
+    "tracking": {
+      "current_release_date": "2023-05-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-789345",
+      "initial_release_date": "2023-05-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-05-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V20.2 HotfixRev14",
+                "product": {
+                  "name": "Siveillance Video 2020 R2",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2020 R2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V20.3 HotfixRev12",
+                "product": {
+                  "name": "Siveillance Video 2020 R3",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2020 R3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V21.1 HotfixRev12",
+                "product": {
+                  "name": "Siveillance Video 2021 R1",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2021 R1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V21.2 HotfixRev8",
+                "product": {
+                  "name": "Siveillance Video 2021 R2",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2021 R2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V22.1 HotfixRev7",
+                "product": {
+                  "name": "Siveillance Video 2022 R1",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2022 R1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V22.2 HotfixRev5",
+                "product": {
+                  "name": "Siveillance Video 2022 R2",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2022 R2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V22.3 HotfixRev2",
+                "product": {
+                  "name": "Siveillance Video 2022 R3",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2022 R3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V23.1 HotfixRev1",
+                "product": {
+                  "name": "Siveillance Video 2023 R1",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video 2023 R1"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-30898",
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The Event Server component of affected applications deserializes data without sufficient validations. This could allow an authenticated remote attacker to execute code on the affected system.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V20.2 HotfixRev14 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109781128/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V20.3 HotfixRev12 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791980/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.1 HotfixRev12 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801904/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.2 HotfixRev8 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805466/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V22.1 HotfixRev7 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109810201/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V22.2 HotfixRev5 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812608/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V22.3 HotfixRev2 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815353/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V23.1 HotfixRev1 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109820659/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.9,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        }
+      ],
+      "title": "CVE-2023-30898"
+    },
+    {
+      "cve": "CVE-2023-30899",
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The Management Server component of affected applications deserializes data without sufficient validations. This could allow an authenticated remote attacker to execute code on the affected system.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V20.2 HotfixRev14 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109781128/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V20.3 HotfixRev12 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791980/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.1 HotfixRev12 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801904/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.2 HotfixRev8 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805466/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V22.1 HotfixRev7 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109810201/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V22.2 HotfixRev5 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812608/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V22.3 HotfixRev2 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109815353/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V23.1 HotfixRev1 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109820659/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.9,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        }
+      ],
+      "title": "CVE-2023-30899"
+    }
+  ]
+}

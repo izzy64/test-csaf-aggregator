@@ -1,0 +1,556 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SIMATIC S7-200 SMART devices contain an information disclosure vulnerability which leaves the system susceptible to a family of attacks which rely on the use of predictable IP ID sequence numbers as their base method of attack and eventually could allow an attacker to create a denial of service condition.\n\nSiemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-481506: Information Disclosure Vulnerability in SIMATIC S7-200 SMART Devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-481506.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-481506: Information Disclosure Vulnerability in SIMATIC S7-200 SMART Devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-481506.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-481506: Information Disclosure Vulnerability in SIMATIC S7-200 SMART Devices - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-481506.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-481506: Information Disclosure Vulnerability in SIMATIC S7-200 SMART Devices - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-481506.txt"
+      }
+    ],
+    "title": "SSA-481506: Information Disclosure Vulnerability in SIMATIC S7-200 SMART Devices",
+    "tracking": {
+      "current_release_date": "2024-06-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-481506",
+      "initial_release_date": "2024-06-11T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-06-11T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU CR40 (6ES7288-1CR40-0AA0)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1CR40-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU CR40 (6ES7288-1CR40-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU CR60 (6ES7288-1CR60-0AA0)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1CR60-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU CR60 (6ES7288-1CR60-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR20 (6ES7288-1SR20-0AA0)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR20-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR20 (6ES7288-1SR20-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR20 (6ES7288-1SR20-0AA1)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR20-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR20 (6ES7288-1SR20-0AA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR30 (6ES7288-1SR30-0AA0)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR30-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR30 (6ES7288-1SR30-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR30 (6ES7288-1SR30-0AA1)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR30-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR30 (6ES7288-1SR30-0AA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR40 (6ES7288-1SR40-0AA0)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR40-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR40 (6ES7288-1SR40-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR40 (6ES7288-1SR40-0AA1)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR40-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR40 (6ES7288-1SR40-0AA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR60 (6ES7288-1SR60-0AA0)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR60-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR60 (6ES7288-1SR60-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU SR60 (6ES7288-1SR60-0AA1)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1SR60-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU SR60 (6ES7288-1SR60-0AA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST20 (6ES7288-1ST20-0AA0)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST20-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST20 (6ES7288-1ST20-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST20 (6ES7288-1ST20-0AA1)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST20-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST20 (6ES7288-1ST20-0AA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST30 (6ES7288-1ST30-0AA0)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST30-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST30 (6ES7288-1ST30-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST30 (6ES7288-1ST30-0AA1)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST30-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST30 (6ES7288-1ST30-0AA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST40 (6ES7288-1ST40-0AA0)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST40-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST40 (6ES7288-1ST40-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST40 (6ES7288-1ST40-0AA1)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST40-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST40 (6ES7288-1ST40-0AA1)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST60 (6ES7288-1ST60-0AA0)",
+                  "product_id": "17",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST60-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST60 (6ES7288-1ST60-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-200 SMART CPU ST60 (6ES7288-1ST60-0AA1)",
+                  "product_id": "18",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7288-1ST60-0AA1"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-200 SMART CPU ST60 (6ES7288-1ST60-0AA1)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-35292",
+      "cwe": {
+        "id": "CWE-330",
+        "name": "Use of Insufficiently Random Values"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices are using a predictable IP ID sequence number. This leaves the system susceptible to a family of attacks which rely on the use of predictable IP ID sequence numbers as their base method of attack and eventually could allow an attacker to create a denial of service condition.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to the network where the affected products are located by introducing strict access control mechanisms",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:T/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ]
+        }
+      ],
+      "title": "CVE-2024-35292"
+    }
+  ]
+}

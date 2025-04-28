@@ -1,0 +1,326 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The RUGGEDCOM CROSSBOW server application before V5.4 contains multiple vulnerabilities that could allow an attacker to execute arbitrary database queries via SQL injection attacks, to create a denial of service condition, or to write arbitrary files to the application's file system.\n\nSiemens has released an update for RUGGEDCOM CROSSBOW and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-472630: Security Vulnerabilities Fixed in RUGGEDCOM CROSSBOW V5.4 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-472630.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-472630: Security Vulnerabilities Fixed in RUGGEDCOM CROSSBOW V5.4 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-472630.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-472630: Security Vulnerabilities Fixed in RUGGEDCOM CROSSBOW V5.4 - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-472630.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-472630: Security Vulnerabilities Fixed in RUGGEDCOM CROSSBOW V5.4 - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-472630.txt"
+      }
+    ],
+    "title": "SSA-472630: Security Vulnerabilities Fixed in RUGGEDCOM CROSSBOW V5.4",
+    "tracking": {
+      "current_release_date": "2023-08-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-472630",
+      "initial_release_date": "2023-08-08T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-08-08T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V5.4",
+                "product": {
+                  "name": "RUGGEDCOM CROSSBOW",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM CROSSBOW"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-31239",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An issue found in SQLite SQLite3 v.3.35.4 that could allow a remote attacker to cause a denial of service via the appendvfs.c function.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.4 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109822716/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2021-31239"
+    },
+    {
+      "cve": "CVE-2022-37971",
+      "cwe": {
+        "id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Microsoft Windows Defender Elevation of Privilege Vulnerability. An attacker who successfully exploited this vulnerability could gain specific limited SYSTEM privileges. This vulnerability could allow an attacker to delete data that could include data that results in the service being unavailable.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.4 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109822716/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H/E:U/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2022-37971"
+    },
+    {
+      "cve": "CVE-2023-27411",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected applications is vulnerable to SQL injection. This could allow an authenticated remote attackers to execute arbitrary SQL queries on the server database and escalate privileges.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.4 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109822716/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-27411"
+    },
+    {
+      "cve": "CVE-2023-37372",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected applications is vulnerable to SQL injection. This could allow an unauthenticated remote attackers to execute arbitrary SQL queries on the server database.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.4 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109822716/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-37372"
+    },
+    {
+      "cve": "CVE-2023-37373",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected applications accept unauthenticated file write messages. An unauthenticated remote attacker could write arbitrary files to the affected application's file system.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.4 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109822716/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-37373"
+    }
+  ]
+}

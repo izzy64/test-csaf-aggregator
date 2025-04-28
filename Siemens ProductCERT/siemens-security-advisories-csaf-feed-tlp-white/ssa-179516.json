@@ -1,0 +1,658 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Several Siemens industrial products are affected by a vulnerability in\nOpenSSL, that could result in data being sent out unencrypted by the\nSSL/TLS record layer.    Siemens has released updates for the affected\nproducts and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect\nnetwork access to devices with appropriate mechanisms. In order to\noperate the devices in a protected IT environment, Siemens recommends\nto configure the environment according to Siemens' operational\nguidelines for Industrial Security (Download:\nhttps://www.siemens.com/cert/operational-guidelines-industrial-\nsecurity), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found\nat: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-179516 OpenSSL Vulnerability in Industrial Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-179516.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-179516 OpenSSL Vulnerability in Industrial Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-179516.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-179516 OpenSSL Vulnerability in Industrial Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-179516.json"
+      }
+    ],
+    "title": "SSA-179516 OpenSSL Vulnerability in Industrial Products",
+    "tracking": {
+      "current_release_date": "2022-09-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-179516",
+      "initial_release_date": "2018-08-07T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2018-08-07T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2018-09-11T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added WinCC OA patches, removed OC1 variant indicator as F is also affected"
+        },
+        {
+          "date": "2018-10-09T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added update for SIMATIC S7-1200 CPU, SIMATIC STEP 7 (TIA Portal) V13, SIMATIC WinCC (TIA Portal) V13"
+        },
+        {
+          "date": "2018-11-13T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added update for SIMATIC HMI WinCC Flexible, SIMATIC IPC DiagMonitor"
+        },
+        {
+          "date": "2019-02-12T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Added update for SIMATIC S7-1500 Software Controller, SIMATIC ET 200SP Open Controller CPU 1515SP PC"
+        },
+        {
+          "date": "2019-04-09T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added update for SIMATIC IPC DiagBase and SIMATIC WinCC (TIA Portal) V14"
+        },
+        {
+          "date": "2020-02-10T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "SIPLUS devices now explicitly mentioned in the list of affected products"
+        },
+        {
+          "date": "2022-09-13T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Added fix for SIMATIC STEP 7 (TIA Portal) V14; updated fix information for SIMATIC IPC DiagBase and DiagMonitor"
+        }
+      ],
+      "status": "final",
+      "version": "8"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V03.01",
+                "product": {
+                  "name": "MindConnect IoT2040",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MindConnect IoT2040"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V03.01",
+                "product": {
+                  "name": "MindConnect Nano (IPC227D)",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MindConnect Nano (IPC227D)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">= V2.0 < V2.1.6",
+                "product": {
+                  "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants)",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V15.1",
+                "product": {
+                  "name": "SIMATIC HMI WinCC Flexible",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC HMI WinCC Flexible"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.1.1.0",
+                "product": {
+                  "name": "SIMATIC IPC DiagBase",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC DiagBase"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V5.0.3",
+                "product": {
+                  "name": "SIMATIC IPC DiagMonitor",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC DiagMonitor"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.2.3",
+                "product": {
+                  "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.5.2",
+                "product": {
+                  "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">= V2.0 and < V2.6",
+                "product": {
+                  "name": "SIMATIC S7-1500 Software Controller",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 Software Controller"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V13 SP2 Update 2",
+                "product": {
+                  "name": "SIMATIC STEP 7 (TIA Portal) V13",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 (TIA Portal) V13"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V14 SP1 Update 6",
+                "product": {
+                  "name": "SIMATIC STEP 7 (TIA Portal) V14",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 (TIA Portal) V14"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V15 Update 2",
+                "product": {
+                  "name": "SIMATIC STEP 7 (TIA Portal) V15",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC STEP 7 (TIA Portal) V15"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V13 SP2 Update 2",
+                "product": {
+                  "name": "SIMATIC WinCC (TIA Portal) V13",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC (TIA Portal) V13"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V14 SP1 Upd 6",
+                "product": {
+                  "name": "SIMATIC WinCC (TIA Portal) V14",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC (TIA Portal) V14"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V15 Update 2",
+                "product": {
+                  "name": "SIMATIC WinCC (TIA Portal) V15",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC (TIA Portal) V15"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.14 P021",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.14",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.14"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.15 P014",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.15",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.15"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V3.16 P002",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.16",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.1.8",
+                "product": {
+                  "name": "SINUMERIK Integrate Access MyMachine service engineer client as part of Sinumerik Integrate Product suite",
+                  "product_id": "19"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINUMERIK Integrate Access MyMachine service engineer client as part of Sinumerik Integrate Product suite"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<= 2.0.11 / 3.0.11",
+                "product": {
+                  "name": "SINUMERIK Integrate Operate Client as part of Sinumerik Integrate Product suite",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINUMERIK Integrate Operate Client as part of Sinumerik Integrate Product suite"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2017-3737",
+      "cwe": {
+        "id": "CWE-388",
+        "name": "7PK - Errors"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "In OpenSSL 1.0.2 an \"error state\" mechanism was introduced. This \"error state\" mechanism does not work correctly if SSL_read() or SSL_write() is called directly by an application. This could result in data being sent out unencrypted by the SSL/TLS record layer.\r\n\r\nSuccessful exploitation requires an attacker to cause a fatal error in the victim's SSL/TLS handshake algorithm, and that the targeted application calls SSL_read() or SSL_write() after having already received a fatal error. No user interaction or privileges are required to exploit this security vulnerability. The vulnerability could allow to compromise confidentiality of data by transmitting it unencrypted over the network.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Limit network access using appropriate mechanisms (e.g., firewalls)",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable web server within the device configuration if it is not used\nor limit access to the web server on a particular Ethernet/PROFINET\nport/interface if possible (setting is under General / Web server\naccess).",
+          "product_ids": [
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.14 P021 or later version",
+          "product_ids": [
+            "16"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-\npatches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.15 P014 or later version",
+          "product_ids": [
+            "17"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-\npatches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.16 P002 or later version",
+          "product_ids": [
+            "18"
+          ],
+          "url": "https://www.winccoa.com/downloads/category/versions-\npatches.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0.12 / 3.0.12, installing latest Sinumerik Integrate\nProduct suite.",
+          "product_ids": [
+            "20"
+          ],
+          "url": "The update can be obtained from your local service organization. If\nassistance in identifying your local service organization is required,\nplease contact a local Siemens hotline center:\nhttps://w3.siemens.com/aspa_app"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1.8, installing latest Sinumerik Integrate Product suite.",
+          "product_ids": [
+            "19"
+          ],
+          "url": "The update can be obtained from your local service organization. If\nassistance in identifying your local service organization is required,\nplease contact a local Siemens hotline center:\nhttps://w3.siemens.com/aspa_app"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.6 or later version",
+          "product_ids": [
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109478528"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V03.01 or later version",
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "url": "Use the Mindsphere web frontend to update"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V15.1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109758794"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.1.0 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109792891"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.0.3 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109740915"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V13 SP2 Update 2 or later version",
+          "product_ids": [
+            "10",
+            "13"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759753"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V14 SP1 Update 6 or later version",
+          "product_ids": [
+            "11"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109747387"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V14 SP1 Upd 6 or later version",
+          "product_ids": [
+            "14"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109747387"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V15 Update 2 or later version",
+          "product_ids": [
+            "12",
+            "15"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109755826"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.5.2 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2.3 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109741461"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.6 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109759122"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ]
+        }
+      ],
+      "title": "CVE-2017-3737"
+    }
+  ]
+}

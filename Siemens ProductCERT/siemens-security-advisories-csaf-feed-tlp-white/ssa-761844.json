@@ -1,0 +1,759 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The advisory informs about multiple vulnerabilities in the Central Control Server (CCS) application, as initially\nreported in SSA-761617 (\nhttps://cert-portal.siemens.com/productcert/html/ssa-761617.html) on 2019-12-10\nand SSA-844761 (https://cert-portal.siemens.com/productcert/html/ssa-844761.html) on 2020-03-10.\nThe vulnerabilities involve authentication bypass (CVE-2019-18337, CVE-2019-18341),\npath traversal (CVE-2019-18338, CVE-2019-19290), information disclosure (CVE-2019-13947, CVE-2019-18340, CVE-2019-19291),\nprivilege escalation (CVE-2019-18342), SQL injection (CVE-2019-19292), cross-site scripting (CVE-2019-19293, CVE-2019-19294), and\ninsufficient logging (CVE-2019-19295).\n\nPKE has released an update for CCS that fixes the reported vulnerabilities, except for CVE-2019-18340. For details contact PKE (\nhttps://pke.at/).\nSiemens recommends to update to the latest version and recommends specific countermeasures to mitigate the vulnerabilities.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-761844: Multiple Vulnerabilities in Control Center Server (CCS) - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-761844.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-761844: Multiple Vulnerabilities in Control Center Server (CCS) - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-761844.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-761844: Multiple Vulnerabilities in Control Center Server (CCS) - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-761844.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-761844: Multiple Vulnerabilities in Control Center Server (CCS) - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-761844.txt"
+      }
+    ],
+    "title": "SSA-761844: Multiple Vulnerabilities in Control Center Server (CCS)",
+    "tracking": {
+      "current_release_date": "2024-01-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-761844",
+      "initial_release_date": "2021-04-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-04-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-01-09T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Cleanup: removed orphaned links to vendor advisories and software downloads"
+        }
+      ],
+      "status": "interim",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V1.5.0",
+                "product": {
+                  "name": "Control Center Server (CCS)",
+                  "product_id": "1"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": ">=V1.5.0",
+                "product": {
+                  "name": "Control Center Server (CCS)",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Control Center Server (CCS)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2019-13947",
+      "cwe": {
+        "id": "CWE-317",
+        "name": "Cleartext Storage of Sensitive Information in GUI"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The user configuration menu in the web interface of the\nControl Center Server (CCS) transfers user passwords in clear to the\nclient (browser).\n\nAn attacker with administrative privileges for the web interface could be\nable to read (and not only reset) passwords of other CCS users.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N/E:F/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-13947"
+    },
+    {
+      "cve": "CVE-2019-18337",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The Control Center Server (CCS) contains an authentication bypass\nvulnerability in its XML-based communication protocol as provided by default\non ports 5444/tcp and 5440/tcp.\n\nA remote attacker with network access to the CCS server could\nexploit this vulnerability to read the CCS users database, including\nthe passwords of all users in obfuscated cleartext.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:F/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-18337"
+    },
+    {
+      "cve": "CVE-2019-18338",
+      "cwe": {
+        "id": "CWE-23",
+        "name": "Relative Path Traversal"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The Control Center Server (CCS) contains a directory traversal\nvulnerability in its XML-based communication protocol as provided by default\non ports 5444/tcp and 5440/tcp.\n\nAn authenticated remote attacker with network access to the CCS server\ncould exploit this vulnerability to list arbitrary directories\nor read files outside of the CCS application context.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.7,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N/E:F/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-18338"
+    },
+    {
+      "cve": "CVE-2019-18340",
+      "cwe": {
+        "id": "CWE-327",
+        "name": "Use of a Broken or Risky Cryptographic Algorithm"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Both the SiVMS/SiNVR Video Server and the Control Center Server (CCS) store\nuser and device passwords by applying weak cryptography.\n\nA local attacker could exploit this vulnerability to extract\nthe passwords from the user database and/or the device configuration files\nto conduct further attacks.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "CVE-2019-18340: Harden the CCS server to prevent local access by unauthorized users",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N/E:F/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2019-18340"
+    },
+    {
+      "cve": "CVE-2019-18341",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The SFTP service (default port 22/tcp) of the Control Center Server\n(CCS) contains an authentication bypass vulnerability.\n\nA remote attacker with network access to the CCS server could\nexploit this vulnerability to read data from the EDIR directory\n(for example, the list of all configured stations).\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:F/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-18341"
+    },
+    {
+      "cve": "CVE-2019-18342",
+      "cwe": {
+        "id": "CWE-749",
+        "name": "Exposed Dangerous Method or Function"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The SFTP service (default port 22/tcp) of the Control Center Server\n(CCS) does not properly limit its capabilities to the specified purpose.\n\nIn conjunction with CVE-2019-18341, an unauthenticated remote attacker with\nnetwork access to the CCS server could exploit this vulnerability\nto read or delete arbitrary files, or access other resources on the same\nserver.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.9,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H/E:F/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-18342"
+    },
+    {
+      "cve": "CVE-2019-19290",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The DOWNLOADS section in the web interface of the Control Center\nServer (CCS) contains a path traversal vulnerability\nthat could allow an authenticated remote attacker to access and download\narbitrary files from the server where CCS is installed.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "CVE-2019-19290, CVE-2019-19293, CVE-2019-19294: Disable the web interface of CCS if not used. Alternatively, restrict access from localhost only, or only to trusted hosts of CCS administrators. Enable TLS for the web interface of CCS.",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-19290"
+    },
+    {
+      "cve": "CVE-2019-19291",
+      "cwe": {
+        "id": "CWE-313",
+        "name": "Cleartext Storage in a File or on Disk"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The FTP services of the SiVMS/SiNVR Video Server and the Control Center Server (CCS) maintain\nlog files that store login credentials in cleartext.\nIn configurations where the FTP service is enabled, authenticated remote\nattackers could extract login credentials of other users of the service.\n\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "CVE-2019-19291: Disable the FTP service of the CCS",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-19291"
+    },
+    {
+      "cve": "CVE-2019-19292",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The Control Center Server (CCS) contains an SQL injection\nvulnerability in its XML-based communication protocol as provided by default\non ports 5444/tcp and 5440/tcp.\nAn authenticated remote attacker could exploit this vulnerability to\nread or modify the CCS database and potentially execute administrative\ndatabase operations or operating system commands.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-19292"
+    },
+    {
+      "cve": "CVE-2019-19293",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The web interface of the Control Center Server (CCS) contains a\nreflected Cross-site Scripting (XSS) vulnerability\nthat could allow an unauthenticated remote attacker to steal sensitive data\nor execute administrative actions on behalf of a legitimate administrator\nof the CCS web interface.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "CVE-2019-19290, CVE-2019-19293, CVE-2019-19294: Disable the web interface of CCS if not used. Alternatively, restrict access from localhost only, or only to trusted hosts of CCS administrators. Enable TLS for the web interface of CCS.",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:N/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-19293"
+    },
+    {
+      "cve": "CVE-2019-19294",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The web interface of the Control Center Server (CCS) contains\nmultiple stored Cross-site Scripting (XSS) vulnerabilities in several input\nfields.\nThis could allow an authenticated remote attacker to inject malicious\nJavaScript code into the CCS web application that is later executed\nin the browser context of any other user who views the relevant CCS\nweb content.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "CVE-2019-19290, CVE-2019-19293, CVE-2019-19294: Disable the web interface of CCS if not used. Alternatively, restrict access from localhost only, or only to trusted hosts of CCS administrators. Enable TLS for the web interface of CCS.",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:N/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-19294"
+    },
+    {
+      "cve": "CVE-2019-19295",
+      "cwe": {
+        "id": "CWE-778",
+        "name": "Insufficient Logging"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The Control Center Server (CCS) does not enforce logging of\nsecurity-relevant activities in its XML-based communication protocol\nas provided by default on ports 5444/tcp and 5440/tcp.\nAn authenticated remote attacker could exploit this vulnerability to\nperform covert actions that are not visible in the application log.\n",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Apply ACL/firewall configuration on the CCS server to ensure that only legitimate systems are able to access the configured CCS server ports. Harden the CCS server accordingly to prevent unauthorized access. Consider to apply encryption and authentication on the network (e.g., via TLS on application level or via IPSec on host level).",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.0 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2019-19295"
+    }
+  ]
+}

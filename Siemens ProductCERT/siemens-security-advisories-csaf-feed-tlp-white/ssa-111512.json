@@ -1,0 +1,224 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Daniel dos Santos",
+          "Jos Wetzels"
+        ],
+        "organization": "Forescout Technologies",
+        "summary": "coordinated disclosure"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SIMATIC WinCC OA implements client-side only authentication, when neither server-side authentication (SSA) nor Kerberos authentication is enabled. In this configuration, attackers could impersonate other users or exploit the client-server protocol without being authenticated.\n\nSiemens recommends to enable server-side authentication (SSA) or Kerberos authentication for all WinCC OA projects, as documented in the WinCC OA Security Guideline. In SIMATIC WinCC OA server-side authentication is available since V3.15 (and offered as the default configuration since V3.17). Additional information can be found at: https://cert-portal.siemens.com/productcert/news.html?id=21.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-111512: Client-side Authentication in SIMATIC WinCC OA - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-111512.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-111512: Client-side Authentication in SIMATIC WinCC OA - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-111512.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-111512: Client-side Authentication in SIMATIC WinCC OA - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-111512.json"
+      }
+    ],
+    "title": "SSA-111512: Client-side Authentication in SIMATIC WinCC OA",
+    "tracking": {
+      "current_release_date": "2022-06-21T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-111512",
+      "initial_release_date": "2022-06-21T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-06-21T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions in default configuration",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.16",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions in non-default configuration",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.17",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions in non-default configuration",
+                "product": {
+                  "name": "SIMATIC WinCC OA V3.18",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC OA V3.18"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-33139",
+      "cwe": {
+        "id": "CWE-603",
+        "name": "Use of Client-Side Authentication"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected applications use client-side only authentication, when neither server-side authentication (SSA) nor Kerberos authentication is enabled.\n\nIn this configuration, attackers could impersonate other users or exploit the client-server protocol without being authenticated.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2022-33139 - SIMATIC WinCC OA V3.16",
+          "url": "https://www.winccoa.com/downloads/detail/security-guideline-wincc-oa-v316-1.html"
+        },
+        {
+          "summary": "CVE-2022-33139 - SIMATIC WinCC OA V3.17",
+          "url": "https://www.winccoa.com/downloads/detail/security-guideline-wincc-oa-v317.html"
+        },
+        {
+          "summary": "CVE-2022-33139 - SIMATIC WinCC OA V3.18",
+          "url": "https://www.winccoa.com/downloads/detail/security-guideline-wincc-oa-v318.html"
+        },
+        {
+          "summary": "CVE-2022-33139 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-33139.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Enable server-side authentication (SSA) or Kerberos authentication for your WinCC OA project",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://www.winccoa.com/downloads/detail/security-guideline-wincc-oa-v316-1.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Ensure that server-side authentication (SSA) is enabled for your WinCC OA project (which is the default configuration); alternatively enable Kerberos authentication",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://www.winccoa.com/downloads/detail/security-guideline-wincc-oa-v317.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Ensure that server-side authentication (SSA) is enabled for your WinCC OA project (which is the default configuration); alternatively enable Kerberos authentication",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://www.winccoa.com/downloads/detail/security-guideline-wincc-oa-v318.html"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2022-33139"
+    }
+  ]
+}

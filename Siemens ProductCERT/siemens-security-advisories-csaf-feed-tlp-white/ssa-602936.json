@@ -1,0 +1,926 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SCALANCE SC-600 Family before V3.1 is affected by multiple vulnerabilities.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-602936: Multiple Vulnerabilities in SCALANCE SC-600 Family before V3.1 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-602936.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-602936: Multiple Vulnerabilities in SCALANCE SC-600 Family before V3.1 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-602936.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-602936: Multiple Vulnerabilities in SCALANCE SC-600 Family before V3.1 - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-602936.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-602936: Multiple Vulnerabilities in SCALANCE SC-600 Family before V3.1 - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-602936.txt"
+      }
+    ],
+    "title": "SSA-602936: Multiple Vulnerabilities in SCALANCE SC-600 Family before V3.1",
+    "tracking": {
+      "current_release_date": "2024-02-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-602936",
+      "initial_release_date": "2024-02-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-02-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.2",
+                "product": {
+                  "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5622-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5622-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5622-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.2",
+                "product": {
+                  "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5626-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5626-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5626-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.2",
+                "product": {
+                  "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5632-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5632-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5632-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.2",
+                "product": {
+                  "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5636-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5636-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5636-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.2",
+                "product": {
+                  "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5642-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5642-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5642-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.0.2",
+                "product": {
+                  "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5646-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
+                  "product_id": "17",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5646-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
+                  "product_id": "18",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5646-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-44317",
+      "cwe": {
+        "id": "CWE-349",
+        "name": "Acceptance of Extraneous Untrusted Data With Trusted Data"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected products do not properly validate the content of uploaded X509 certificates which could allow an attacker with administrative privileges to execute arbitrary code on the device.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "4",
+          "7",
+          "10",
+          "13",
+          "16"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0.2 or later version",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109821991/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "title": "CVE-2023-44317"
+    },
+    {
+      "cve": "CVE-2023-44319",
+      "cwe": {
+        "id": "CWE-328",
+        "name": "Use of Weak Hash"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices use a weak checksum algorithm to protect the configuration backup that an administrator can export from the device. This could allow an authenticated attacker with administrative privileges or an attacker that tricks a legitimate administrator to upload a modified configuration file to change the configuration of an affected device.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2",
+          "5",
+          "8",
+          "11",
+          "14",
+          "17"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 or later version",
+          "product_ids": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109827038/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ]
+        }
+      ],
+      "title": "CVE-2023-44319"
+    },
+    {
+      "cve": "CVE-2023-44320",
+      "cwe": {
+        "id": "CWE-425",
+        "name": "Direct Request ('Forced Browsing')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly validate the authentication when performing certain modifications in the web interface allowing an authenticated attacker to influence the user interface configured by an administrator.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2",
+          "5",
+          "8",
+          "11",
+          "14",
+          "17"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 or later version",
+          "product_ids": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109827038/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ]
+        }
+      ],
+      "title": "CVE-2023-44320"
+    },
+    {
+      "cve": "CVE-2023-44321",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly validate the length of inputs when performing certain configuration changes in the web interface allowing an authenticated attacker to cause a denial of service condition. The device needs to be restarted for the web interface to become available again.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "3",
+          "6",
+          "9",
+          "12",
+          "15",
+          "18"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "3",
+            "6",
+            "9",
+            "12",
+            "15",
+            "18"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "3",
+            "6",
+            "9",
+            "12",
+            "15",
+            "18"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "3",
+            "6",
+            "9",
+            "12",
+            "15",
+            "18"
+          ]
+        }
+      ],
+      "title": "CVE-2023-44321"
+    },
+    {
+      "cve": "CVE-2023-44322",
+      "cwe": {
+        "id": "CWE-252",
+        "name": "Unchecked Return Value"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices can be configured to send emails when certain events occur on the device. When presented with an invalid response from the SMTP server, the device triggers an error that disrupts email sending. An attacker with access to the network can use this to do disable notification of users when certain events occur.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2",
+          "5",
+          "8",
+          "11",
+          "14",
+          "17"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 or later version",
+          "product_ids": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109827038/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "2",
+            "5",
+            "8",
+            "11",
+            "14",
+            "17"
+          ]
+        }
+      ],
+      "title": "CVE-2023-44322"
+    },
+    {
+      "cve": "CVE-2023-44373",
+      "cwe": {
+        "id": "CWE-74",
+        "name": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly sanitize an input field.  This could allow an authenticated remote attacker with administrative privileges to inject code or spawn a system root shell. Follow-up of CVE-2022-36323.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "4",
+          "7",
+          "10",
+          "13",
+          "16"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0.2 or later version",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109821991/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.1,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "title": "CVE-2023-44373"
+    },
+    {
+      "cve": "CVE-2023-49691",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Improper Neutralization of Special Elements used in an OS Command with root privileges vulnerability exists in the handling of the DDNS configuration. This could allow malicious local administrators to issue commands on system level after a successful IP address update.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "4",
+          "7",
+          "10",
+          "13",
+          "16"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0.2 or later version",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109821991/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "title": "CVE-2023-49691"
+    },
+    {
+      "cve": "CVE-2023-49692",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Improper Neutralization of Special Elements used in an OS Command with root privileges vulnerability exists in the parsing of the IPSEC configuration. This could allow malicious local administrators to issue commands on system level after a new connection is established.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "4",
+          "7",
+          "10",
+          "13",
+          "16"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0.2 or later version",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109821991/"
+        },
+        {
+          "category": "workaround",
+          "details": "Restrict access to application webserver for trusted users only",
+          "product_ids": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ]
+        }
+      ],
+      "title": "CVE-2023-49692"
+    }
+  ]
+}

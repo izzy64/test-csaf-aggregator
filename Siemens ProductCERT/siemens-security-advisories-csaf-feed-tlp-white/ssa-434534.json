@@ -1,0 +1,401 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "names": [
+          "Tal Keren"
+        ],
+        "organization": "Claroty",
+        "summary": "coordinated disclosure"
+      }
+    ],
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SIMATIC S7-1200 and S7-1500 CPU products contain a memory protection bypass vulnerability that could allow an attacker to write arbitrary data and code to protected memory areas or read sensitive data to launch further attacks.\n\nSiemens has released updates for several affected products and strongly recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-434534: Memory Protection Bypass Vulnerability in SIMATIC S7-1200 and S7-1500 CPU Families - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-434534.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-434534: Memory Protection Bypass Vulnerability in SIMATIC S7-1200 and S7-1500 CPU Families - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-434534.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-434534: Memory Protection Bypass Vulnerability in SIMATIC S7-1200 and S7-1500 CPU Families - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-434534.json"
+      }
+    ],
+    "title": "SSA-434534: Memory Protection Bypass Vulnerability in SIMATIC S7-1200 and S7-1500 CPU Families",
+    "tracking": {
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-434534",
+      "initial_release_date": "2021-05-28T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-05-28T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-09-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for SIMATIC ET 200SP Open Controller CPU 1515SP PC2 and for SIMATIC S7-1500 Software Controller"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.9.2",
+                "product": {
+                  "name": "SIMATIC Drive Controller family",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Drive Controller family"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V21.9",
+                "product": {
+                  "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants)",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants)",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.5.0",
+                "product": {
+                  "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.9.2",
+                "product": {
+                  "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V21.9",
+                "product": {
+                  "name": "SIMATIC S7-1500 Software Controller",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 Software Controller"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V4.0",
+                "product": {
+                  "name": "SIMATIC S7-PLCSIM Advanced",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-PLCSIM Advanced"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-15782",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices are vulnerable to a memory protection bypass through a specific operation.\n\nA remote unauthenticated attacker with network access to port 102/tcp could potentially write arbitrary data and code to protected memory areas or read sensitive data to launch further attacks.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "references": [
+        {
+          "summary": "CVE-2020-15782 - SIMATIC Drive Controller family",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109773914/"
+        },
+        {
+          "summary": "CVE-2020-15782 - SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759122/"
+        },
+        {
+          "summary": "CVE-2020-15782 - SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793280/"
+        },
+        {
+          "summary": "CVE-2020-15782 - SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "summary": "CVE-2020-15782 - SIMATIC S7-1500 Software Controller",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478528/"
+        },
+        {
+          "summary": "CVE-2020-15782 - SIMATIC S7-PLCSIM Advanced",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109795016/"
+        },
+        {
+          "summary": "CVE-2020-15782 Mitre 5.0 json",
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-15782.json"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.9.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109773914/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.9 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759122/"
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no remediation is available",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.5.0 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793280/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.9.2 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21.9 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478528/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.0 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109795016/"
+        },
+        {
+          "category": "mitigation",
+          "details": "Apply password protection for S7 communication",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disallow client connections via the ENDIS_PW instruction of the S7-1200 or S7-1500 CPU (This blocks remote client connections, even when the client can provide the correct password)",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use the display to configure additional access protection of the S7-1500 CPU (This blocks remote client connections, even when the client can provide the correct password)",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Apply \"defense in depth\" as outlined on pages 12ff of the operational guidelines for Industrial Security, especially:\n\n-   Plant security: Physical prevention of access to critical components\n-   Network security: Ensure that PLC systems are not connected to untrusted networks\n\n* System integrity: Configure, maintain and protect your device by applying applicable compensating controls and using built-in security capabilities",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Update your entire solution to TIA Portal V17 and use TLS communication using individual certificates between PLC, HMIs and PG/PC",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2020-15782"
+    }
+  ]
+}

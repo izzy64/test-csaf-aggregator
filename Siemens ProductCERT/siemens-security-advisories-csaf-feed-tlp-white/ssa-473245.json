@@ -1,0 +1,3130 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "A vulnerability in affected devices could allow an attacker to perform a denial of service attack if a large amount of specially crafted UDP packets are sent to the device.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-473245: Denial of Service Vulnerability in Profinet Devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-473245.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-473245: Denial of Service Vulnerability in Profinet Devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-473245.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-473245: Denial of Service Vulnerability in Profinet Devices - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-473245.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-473245: Denial of Service Vulnerability in Profinet Devices - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-473245.txt"
+      }
+    ],
+    "title": "SSA-473245: Denial of Service Vulnerability in Profinet Devices",
+    "tracking": {
+      "current_release_date": "2024-07-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-473245",
+      "initial_release_date": "2019-10-08T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2019-10-08T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2019-11-12T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added solution for SINAMICS S120 V4.7, SINAMICS S150, SINAMICS G130 V4.7, SINAMICS G150 and SINAMICS SL150 V4.7"
+        },
+        {
+          "date": "2020-01-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added solution for SIMATIC S7-1200 and S7-1500 Software and Open Controller. SIPLUS devices now explicitly mentioned in the list of affected products"
+        },
+        {
+          "date": "2020-02-11T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added solution for SINAMICS DCP"
+        },
+        {
+          "date": "2020-03-10T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Added solution for SIMATIC S7-300 CPU family"
+        },
+        {
+          "date": "2020-04-14T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added solution for SIMATIC ET200MP IM155-5 PN HF"
+        },
+        {
+          "date": "2020-07-14T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "Added SIMATIC TDC CP51M1 and CPU555 to the list of affected products"
+        },
+        {
+          "date": "2020-08-11T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Added solution for SIMATIC PN/PN Coupler. Added SIMATIC ET200ecoPN product variants (MLFB IDs) that are not affected"
+        },
+        {
+          "date": "2020-09-08T00:00:00Z",
+          "legacy_version": "1.8",
+          "number": "9",
+          "summary": "Added solution for EK-ERTEC 200P and S7-410 V8"
+        },
+        {
+          "date": "2021-01-12T00:00:00Z",
+          "legacy_version": "1.9",
+          "number": "10",
+          "summary": "Added solution for SIMATIC ET200SP IM155-6 PN HA and added ecoPN model (6ES7148-6JG00-0BB0) as not affected"
+        },
+        {
+          "date": "2021-06-08T00:00:00Z",
+          "legacy_version": "2.0",
+          "number": "11",
+          "summary": "Added solution for SIMATIC ET200SP IM155-6 PN HS"
+        },
+        {
+          "date": "2021-10-12T00:00:00Z",
+          "legacy_version": "2.1",
+          "number": "12",
+          "summary": "Clarified affected ET200ecoPN models"
+        },
+        {
+          "date": "2022-02-08T00:00:00Z",
+          "legacy_version": "2.2",
+          "number": "13",
+          "summary": "Clarified that no remediation is planned for ET200 devices"
+        },
+        {
+          "date": "2022-08-09T00:00:00Z",
+          "legacy_version": "2.3",
+          "number": "14",
+          "summary": "No fix planned for SIMATIC S7-400 PN/DP V6 and below CPU family"
+        },
+        {
+          "date": "2022-12-13T00:00:00Z",
+          "legacy_version": "2.4",
+          "number": "15",
+          "summary": "Added fix for SINUMERK 840D sl; no fix planned for PROFINET development/evaluation kits - DK Standard Ethernet Controller and EK-ERTEC 200; SIMATIC S7-300 CPU family expanded with product specific designations, patch links and MLFBs"
+        },
+        {
+          "date": "2023-01-10T00:00:00Z",
+          "legacy_version": "2.5",
+          "number": "16",
+          "summary": "No fix planned for remaining products"
+        },
+        {
+          "date": "2023-05-09T00:00:00Z",
+          "legacy_version": "2.6",
+          "number": "17",
+          "summary": "Expanded SIMATIC S7-400 V7 CPU family (incl. SIPLUS variants) to individual products and MLFBs; added fix for SIMATIC S7-400 PN/DP V7 CPUs; clarified that other S7-400 V7 CPUs are not affected"
+        },
+        {
+          "date": "2024-07-09T00:00:00Z",
+          "legacy_version": "2.7",
+          "number": "18",
+          "summary": "Listed affected products individually instead of product families (e.g., for SIMATIC ET 200AL/MP/SP/pro IM families); added affected SIPLUS devices (e.g., SIPLUS ET 200xx IM)"
+        }
+      ],
+      "status": "interim",
+      "version": "18"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Development/Evaluation Kits for PROFINET IO: DK Standard Ethernet Controller",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Development/Evaluation Kits for PROFINET IO: DK Standard Ethernet Controller"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Development/Evaluation Kits for PROFINET IO: EK-ERTEC 200",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Development/Evaluation Kits for PROFINET IO: EK-ERTEC 200"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.6 Patch 01",
+                "product": {
+                  "name": "Development/Evaluation Kits for PROFINET IO: EK-ERTEC 200P",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Development/Evaluation Kits for PROFINET IO: EK-ERTEC 200P"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V1.2.0",
+                "product": {
+                  "name": "SIMATIC CFU PA (6ES7655-5PX11-0XX0)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7655-5PX11-0XX0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CFU PA (6ES7655-5PX11-0XX0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 4AO U/I 4xM12 (6ES7145-6HD00-0AB0)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7145-6HD00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 4AO U/I 4xM12 (6ES7145-6HD00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8 DIO, DC24V/1,3A, 8xM12 (6ES7147-6BG00-0AB0)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7147-6BG00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8 DIO, DC24V/1,3A, 8xM12 (6ES7147-6BG00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8 DO, DC24V/2A, 8xM12 (6ES7142-6BR00-0AB0)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7142-6BR00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8 DO, DC24V/2A, 8xM12 (6ES7142-6BR00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8AI RTD/TC 8xM12 (6ES7144-6KD50-0AB0)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7144-6KD50-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8AI RTD/TC 8xM12 (6ES7144-6KD50-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8AI; 4 U/I; 4 RTD/TC 8xM12 (6ES7144-6KD00-0AB0)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7144-6KD00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8AI; 4 U/I; 4 RTD/TC 8xM12 (6ES7144-6KD00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8DI, DC24V, 4xM12 (6ES7141-6BF00-0AB0)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7141-6BF00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8DI, DC24V, 4xM12 (6ES7141-6BF00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8DI, DC24V, 8xM12 (6ES7141-6BG00-0AB0)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7141-6BG00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8DI, DC24V, 8xM12 (6ES7141-6BG00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8DO, DC24V/0,5A, 4xM12 (6ES7142-6BF50-0AB0)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7142-6BF50-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8DO, DC24V/0,5A, 4xM12 (6ES7142-6BF50-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8DO, DC24V/1,3A, 4xM12 (6ES7142-6BF00-0AB0)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7142-6BF00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8DO, DC24V/1,3A, 4xM12 (6ES7142-6BF00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 8DO, DC24V/1,3A, 8xM12 (6ES7142-6BG00-0AB0)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7142-6BG00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 8DO, DC24V/1,3A, 8xM12 (6ES7142-6BG00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 16DI, DC24V, 8xM12 (6ES7141-6BH00-0AB0)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7141-6BH00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 16DI, DC24V, 8xM12 (6ES7141-6BH00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN, 16DO DC24V/1,3A, 8xM12 (6ES7142-6BH00-0AB0)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7142-6BH00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN, 16DO DC24V/1,3A, 8xM12 (6ES7142-6BH00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200ecoPN: IO-Link Master (6ES7148-6JA00-0AB0)",
+                  "product_id": "17",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7148-6JA00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200ecoPN: IO-Link Master (6ES7148-6JA00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET200S (incl. SIPLUS variants)",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET200S (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200AL IM 157-1 PN (6ES7157-1AB00-0AB0)",
+                  "product_id": "19",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7157-1AB00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200AL IM 157-1 PN (6ES7157-1AB00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200M (incl. SIPLUS variants)",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200M (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.0",
+                "product": {
+                  "name": "SIMATIC ET 200MP IM 155-5 PN BA (6ES7155-5AA00-0AA0)",
+                  "product_id": "21",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-5AA00-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200MP IM 155-5 PN BA (6ES7155-5AA00-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.4.0",
+                "product": {
+                  "name": "SIMATIC ET 200MP IM 155-5 PN HF (6ES7155-5AA00-0AC0)",
+                  "product_id": "22",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-5AA00-0AC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200MP IM 155-5 PN HF (6ES7155-5AA00-0AC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200MP IM 155-5 PN ST (6ES7155-5AA00-0AB0)",
+                  "product_id": "23",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-5AA00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200MP IM 155-5 PN ST (6ES7155-5AA00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200MP IM 155-5 PN ST (6ES7155-5AA01-0AB0)",
+                  "product_id": "24",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-5AA01-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200MP IM 155-5 PN ST (6ES7155-5AA01-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200pro IM 154-3 PN HF (6ES7154-3AB00-0AB0)",
+                  "product_id": "25",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7154-3AB00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200pro IM 154-3 PN HF (6ES7154-3AB00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200pro IM 154-4 PN HF (6ES7154-4AB10-0AB0)",
+                  "product_id": "26",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7154-4AB10-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200pro IM 154-4 PN HF (6ES7154-4AB10-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC ET 200pro IM 154-8 PN/DP CPU (6ES7154-8AB01-0AB0)",
+                  "product_id": "27",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7154-8AB01-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200pro IM 154-8 PN/DP CPU (6ES7154-8AB01-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC ET 200pro IM 154-8F PN/DP CPU (6ES7154-8FB01-0AB0)",
+                  "product_id": "28",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7154-8FB01-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200pro IM 154-8F PN/DP CPU (6ES7154-8FB01-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC ET 200pro IM 154-8FX PN/DP CPU (6ES7154-8FX00-0AB0)",
+                  "product_id": "29",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7154-8FX00-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200pro IM 154-8FX PN/DP CPU (6ES7154-8FX00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC ET 200S IM 151-8 PN/DP CPU (6ES7151-8AB01-0AB0)",
+                  "product_id": "30",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7151-8AB01-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200S IM 151-8 PN/DP CPU (6ES7151-8AB01-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC ET 200S IM 151-8F PN/DP CPU (6ES7151-8FB01-0AB0)",
+                  "product_id": "31",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7151-8FB01-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200S IM 151-8F PN/DP CPU (6ES7151-8FB01-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN BA (6ES7155-6AR00-0AN0)",
+                  "product_id": "32",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AR00-0AN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN BA (6ES7155-6AR00-0AN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V1.2.1",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN HA (incl. SIPLUS variants)",
+                  "product_id": "33"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN HA (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN HF (6ES7155-6AU00-0CN0)",
+                  "product_id": "34",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AU00-0CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN HF (6ES7155-6AU00-0CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.0.1",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN HS (6ES7155-6AU00-0DN0)",
+                  "product_id": "35",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AU00-0DN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN HS (6ES7155-6AU00-0DN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN ST (6ES7155-6AU00-0BN0)",
+                  "product_id": "36",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AU00-0BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN ST (6ES7155-6AU00-0BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN ST (6ES7155-6AU01-0BN0)",
+                  "product_id": "37",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AU01-0BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN ST (6ES7155-6AU01-0BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN ST BA (6ES7155-6AA00-0BN0)",
+                  "product_id": "38",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AA00-0BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN ST BA (6ES7155-6AA00-0BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN ST BA (6ES7155-6AA01-0BN0)",
+                  "product_id": "39",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AA01-0BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN ST BA (6ES7155-6AA01-0BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN/2 HF (6ES7155-6AU01-0CN0)",
+                  "product_id": "40",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AU01-0CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN/2 HF (6ES7155-6AU01-0CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.1",
+                "product": {
+                  "name": "SIMATIC ET 200SP IM 155-6 PN/3 HF (6ES7155-6AU30-0CN0)",
+                  "product_id": "41",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7155-6AU30-0CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP IM 155-6 PN/3 HF (6ES7155-6AU30-0CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants)",
+                  "product_id": "42"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC HMI Comfort Outdoor Panels (incl. SIPLUS variants)",
+                  "product_id": "43"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC HMI Comfort Outdoor Panels (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC HMI Comfort Panels (incl. SIPLUS variants)",
+                  "product_id": "44"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC HMI Comfort Panels (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC HMI KTP Mobile Panels",
+                  "product_id": "45"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC HMI KTP Mobile Panels"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.1",
+                "product": {
+                  "name": "SIMATIC PN/PN Coupler (6ES7158-3AD10-0XA0)",
+                  "product_id": "46",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7158-3AD10-0XA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PN/PN Coupler (6ES7158-3AD10-0XA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.1",
+                "product": {
+                  "name": "SIMATIC PROFINET Driver",
+                  "product_id": "47"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PROFINET Driver"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 314C-2 PN/DP (6ES7314-6EH04-0AB0)",
+                  "product_id": "48",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7314-6EH04-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 314C-2 PN/DP (6ES7314-6EH04-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 315-2 PN/DP (6ES7315-2EH14-0AB0)",
+                  "product_id": "49",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7315-2EH14-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 315-2 PN/DP (6ES7315-2EH14-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 315F-2 PN/DP (6ES7315-2FJ14-0AB0)",
+                  "product_id": "50",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7315-2FJ14-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 315F-2 PN/DP (6ES7315-2FJ14-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 315T-3 PN/DP (6ES7315-7TJ10-0AB0)",
+                  "product_id": "51",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7315-7TJ10-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 315T-3 PN/DP (6ES7315-7TJ10-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 317-2 PN/DP (6ES7317-2EK14-0AB0)",
+                  "product_id": "52",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7317-2EK14-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 317-2 PN/DP (6ES7317-2EK14-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 317F-2 PN/DP (6ES7317-2FK14-0AB0)",
+                  "product_id": "53",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7317-2FK14-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 317F-2 PN/DP (6ES7317-2FK14-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 317T-3 PN/DP (6ES7317-7TK10-0AB0)",
+                  "product_id": "54",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7317-7TK10-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 317T-3 PN/DP (6ES7317-7TK10-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 317TF-3 PN/DP (6ES7317-7UL10-0AB0)",
+                  "product_id": "55",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7317-7UL10-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 317TF-3 PN/DP (6ES7317-7UL10-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 319-3 PN/DP (6ES7318-3EL01-0AB0)",
+                  "product_id": "56",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7318-3EL01-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 319-3 PN/DP (6ES7318-3EL01-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIMATIC S7-300 CPU 319F-3 PN/DP (6ES7318-3FL01-0AB0)",
+                  "product_id": "57",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7318-3FL01-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-300 CPU 319F-3 PN/DP (6ES7318-3FL01-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.0.3",
+                "product": {
+                  "name": "SIMATIC S7-400 CPU 412-2 PN V7 (6ES7412-2EK07-0AB0)",
+                  "product_id": "58",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7412-2EK07-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-400 CPU 412-2 PN V7 (6ES7412-2EK07-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.0.3",
+                "product": {
+                  "name": "SIMATIC S7-400 CPU 414-3 PN/DP V7 (6ES7414-3EM07-0AB0)",
+                  "product_id": "59",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7414-3EM07-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-400 CPU 414-3 PN/DP V7 (6ES7414-3EM07-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.0.3",
+                "product": {
+                  "name": "SIMATIC S7-400 CPU 414F-3 PN/DP V7 (6ES7414-3FM07-0AB0)",
+                  "product_id": "60",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7414-3FM07-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-400 CPU 414F-3 PN/DP V7 (6ES7414-3FM07-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.0.3",
+                "product": {
+                  "name": "SIMATIC S7-400 CPU 416-3 PN/DP V7 (6ES7416-3ES07-0AB0)",
+                  "product_id": "61",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7416-3ES07-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-400 CPU 416-3 PN/DP V7 (6ES7416-3ES07-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.0.3",
+                "product": {
+                  "name": "SIMATIC S7-400 CPU 416F-3 PN/DP V7 (6ES7416-3FS07-0AB0)",
+                  "product_id": "62",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7416-3FS07-0AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-400 CPU 416F-3 PN/DP V7 (6ES7416-3FS07-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V6.0.9",
+                "product": {
+                  "name": "SIMATIC S7-400 H V6 CPU family (incl. SIPLUS variants)",
+                  "product_id": "63"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-400 H V6 CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC S7-400 PN/DP V6 and below CPU family (incl. SIPLUS variants)",
+                  "product_id": "64"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-400 PN/DP V6 and below CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V8.2.2",
+                "product": {
+                  "name": "SIMATIC S7-410 V8 CPU family (incl. SIPLUS variants)",
+                  "product_id": "65"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-410 V8 CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.4.0",
+                "product": {
+                  "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+                  "product_id": "66"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+                  "product_id": "67"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC S7-1500 Software Controller",
+                  "product_id": "68"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 Software Controller"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V1.1.8",
+                "product": {
+                  "name": "SIMATIC TDC CP51M1",
+                  "product_id": "69"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC TDC CP51M1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V1.1.1",
+                "product": {
+                  "name": "SIMATIC TDC CPU555",
+                  "product_id": "70"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC TDC CPU555"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V2010 SP3",
+                "product": {
+                  "name": "SIMATIC WinAC RTX 2010 (6ES7671-0RC08-0YA0)",
+                  "product_id": "71",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7671-0RC08-0YA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinAC RTX 2010 (6ES7671-0RC08-0YA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V2010 SP3",
+                "product": {
+                  "name": "SIMATIC WinAC RTX F 2010 (6ES7671-1RC08-0YA0)",
+                  "product_id": "72",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7671-1RC08-0YA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinAC RTX F 2010 (6ES7671-1RC08-0YA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V1.5 HF1",
+                "product": {
+                  "name": "SINAMICS DCM",
+                  "product_id": "73"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS DCM"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V1.3",
+                "product": {
+                  "name": "SINAMICS DCP",
+                  "product_id": "74"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS DCP"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.7 SP10 HF5",
+                "product": {
+                  "name": "SINAMICS G110M V4.7 PN Control Unit",
+                  "product_id": "75"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS G110M V4.7 PN Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.7 SP10 HF5",
+                "product": {
+                  "name": "SINAMICS G120 V4.7 PN Control Unit (incl. SIPLUS variants)",
+                  "product_id": "76"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS G120 V4.7 PN Control Unit (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.8",
+                "product": {
+                  "name": "SINAMICS G130 V4.7 Control Unit",
+                  "product_id": "77"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS G130 V4.7 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.8",
+                "product": {
+                  "name": "SINAMICS G150 Control Unit",
+                  "product_id": "78"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS G150 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS GH150 V4.7 Control Unit",
+                  "product_id": "79"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS GH150 V4.7 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS GL150 V4.7 Control Unit",
+                  "product_id": "80"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS GL150 V4.7 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS GM150 V4.7 Control Unit",
+                  "product_id": "81"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS GM150 V4.7 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS S110 Control Unit",
+                  "product_id": "82"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS S110 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS S120 V4.7 Control Unit (incl. SIPLUS variants)",
+                  "product_id": "83"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS S120 V4.7 Control Unit (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<4.8",
+                "product": {
+                  "name": "SINAMICS S150 Control Unit",
+                  "product_id": "84"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS S150 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.7 HF33",
+                "product": {
+                  "name": "SINAMICS SL150 V4.7 Control Unit",
+                  "product_id": "85"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS SL150 V4.7 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS SM120 V4.7 Control Unit",
+                  "product_id": "86"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS SM120 V4.7 Control Unit"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.8 SP5",
+                "product": {
+                  "name": "SINUMERIK 828D",
+                  "product_id": "87"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINUMERIK 828D"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.8 SP6",
+                "product": {
+                  "name": "SINUMERIK 840D sl",
+                  "product_id": "88"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINUMERIK 840D sl"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.4.0",
+                "product": {
+                  "name": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-2AC0)",
+                  "product_id": "89",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-5AA00-2AC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-2AC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.4.0",
+                "product": {
+                  "name": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-7AC0)",
+                  "product_id": "90",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-5AA00-7AC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-7AC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.4.0",
+                "product": {
+                  "name": "SIPLUS ET 200MP IM 155-5 PN HF T1 RAIL (6AG2155-5AA00-1AC0)",
+                  "product_id": "91",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-5AA00-1AC0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200MP IM 155-5 PN HF T1 RAIL (6AG2155-5AA00-1AC0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200MP IM 155-5 PN ST (6AG1155-5AA00-7AB0)",
+                  "product_id": "92",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-5AA00-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200MP IM 155-5 PN ST (6AG1155-5AA00-7AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200MP IM 155-5 PN ST (6AG1155-5AA01-7AB0)",
+                  "product_id": "93",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-5AA01-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200MP IM 155-5 PN ST (6AG1155-5AA01-7AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200MP IM 155-5 PN ST TX RAIL (6AG2155-5AA00-4AB0)",
+                  "product_id": "94",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-5AA00-4AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200MP IM 155-5 PN ST TX RAIL (6AG2155-5AA00-4AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200MP IM 155-5 PN ST TX RAIL (6AG2155-5AA01-4AB0)",
+                  "product_id": "95",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-5AA01-4AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200MP IM 155-5 PN ST TX RAIL (6AG2155-5AA01-4AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIPLUS ET 200S IM 151-8 PN/DP CPU (6AG1151-8AB01-7AB0)",
+                  "product_id": "96",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1151-8AB01-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200S IM 151-8 PN/DP CPU (6AG1151-8AB01-7AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIPLUS ET 200S IM 151-8F PN/DP CPU (6AG1151-8FB01-2AB0)",
+                  "product_id": "97",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1151-8FB01-2AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200S IM 151-8F PN/DP CPU (6AG1151-8FB01-2AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU00-2CN0)",
+                  "product_id": "98",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AU00-2CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU00-2CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU00-4CN0)",
+                  "product_id": "99",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AU00-4CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU00-4CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-2CN0)",
+                  "product_id": "100",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AU01-2CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-2CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-7CN0)",
+                  "product_id": "101",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AU01-7CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-7CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU00-1CN0)",
+                  "product_id": "102",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-6AU00-1CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU00-1CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU01-1CN0)",
+                  "product_id": "103",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-6AU01-1CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU01-1CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.2",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN HF TX RAIL (6AG2155-6AU01-4CN0)",
+                  "product_id": "104",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-6AU01-4CN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN HF TX RAIL (6AG2155-6AU01-4CN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST (6AG1155-6AU00-7BN0)",
+                  "product_id": "105",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AU00-7BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST (6AG1155-6AU00-7BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST (6AG1155-6AU01-7BN0)",
+                  "product_id": "106",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AU01-7BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST (6AG1155-6AU01-7BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST BA (6AG1155-6AA00-7BN0)",
+                  "product_id": "107",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AA00-7BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST BA (6AG1155-6AA00-7BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST BA (6AG1155-6AA01-7BN0)",
+                  "product_id": "108",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1155-6AA01-7BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST BA (6AG1155-6AA01-7BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST BA TX RAIL (6AG2155-6AA00-4BN0)",
+                  "product_id": "109",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-6AA00-4BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST BA TX RAIL (6AG2155-6AA00-4BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST BA TX RAIL (6AG2155-6AA01-4BN0)",
+                  "product_id": "110",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-6AA01-4BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST BA TX RAIL (6AG2155-6AA01-4BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST TX RAIL (6AG2155-6AU00-4BN0)",
+                  "product_id": "111",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-6AU00-4BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST TX RAIL (6AG2155-6AU00-4BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPLUS ET 200SP IM 155-6 PN ST TX RAIL (6AG2155-6AU01-4BN0)",
+                  "product_id": "112",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2155-6AU01-4BN0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP IM 155-6 PN ST TX RAIL (6AG2155-6AU01-4BN0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.2.1",
+                "product": {
+                  "name": "SIPLUS NET PN/PN Coupler (6AG2158-3AD10-4XA0)",
+                  "product_id": "113",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2158-3AD10-4XA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS NET PN/PN Coupler (6AG2158-3AD10-4XA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.3.17",
+                "product": {
+                  "name": "SIPLUS S7-300 CPU 314C-2 PN/DP (6AG1314-6EH04-7AB0)",
+                  "product_id": "114",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1314-6EH04-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-300 CPU 314C-2 PN/DP (6AG1314-6EH04-7AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIPLUS S7-300 CPU 315-2 PN/DP (6AG1315-2EH14-7AB0)",
+                  "product_id": "115",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1315-2EH14-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-300 CPU 315-2 PN/DP (6AG1315-2EH14-7AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIPLUS S7-300 CPU 315F-2 PN/DP (6AG1315-2FJ14-2AB0)",
+                  "product_id": "116",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1315-2FJ14-2AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-300 CPU 315F-2 PN/DP (6AG1315-2FJ14-2AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIPLUS S7-300 CPU 317-2 PN/DP (6AG1317-2EK14-7AB0)",
+                  "product_id": "117",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1317-2EK14-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-300 CPU 317-2 PN/DP (6AG1317-2EK14-7AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.2.17",
+                "product": {
+                  "name": "SIPLUS S7-300 CPU 317F-2 PN/DP (6AG1317-2FK14-2AB0)",
+                  "product_id": "118",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1317-2FK14-2AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-300 CPU 317F-2 PN/DP (6AG1317-2FK14-2AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.0.3",
+                "product": {
+                  "name": "SIPLUS S7-400 CPU 414-3 PN/DP V7 (6AG1414-3EM07-7AB0)",
+                  "product_id": "119",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1414-3EM07-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-400 CPU 414-3 PN/DP V7 (6AG1414-3EM07-7AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.0.3",
+                "product": {
+                  "name": "SIPLUS S7-400 CPU 416-3 PN/DP V7 (6AG1416-3ES07-7AB0)",
+                  "product_id": "120",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1416-3ES07-7AB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-400 CPU 416-3 PN/DP V7 (6AG1416-3ES07-7AB0)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2019-10936",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices improperly handle large amounts of specially crafted UDP packets.\r\n\r\nThis could allow an unauthenticated remote attacker to trigger a denial of service condition.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "15",
+          "16",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "17",
+          "18",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "66",
+          "67",
+          "68",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98",
+          "99",
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106",
+          "107",
+          "108",
+          "109",
+          "110",
+          "111",
+          "112",
+          "113",
+          "114",
+          "115",
+          "116",
+          "117",
+          "118",
+          "119",
+          "120"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict network access to affected devices",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "15",
+            "16",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "17",
+            "18",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "66",
+            "67",
+            "68",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109",
+            "110",
+            "111",
+            "112",
+            "113",
+            "114",
+            "115",
+            "116",
+            "117",
+            "118",
+            "119",
+            "120"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "19",
+            "20",
+            "23",
+            "24",
+            "25",
+            "26",
+            "32",
+            "36",
+            "37",
+            "38",
+            "39",
+            "15",
+            "16",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "17",
+            "18",
+            "43",
+            "44",
+            "45",
+            "67",
+            "64",
+            "82",
+            "86",
+            "92",
+            "93",
+            "94",
+            "95",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109",
+            "110",
+            "111",
+            "112"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.1.1 or later version",
+          "product_ids": [
+            "70"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109740119/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.1.8 or later version",
+          "product_ids": [
+            "69"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/27049282/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.2.0 or later version",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "42"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.0.1 or later version",
+          "product_ids": [
+            "35"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2.1 or later version",
+          "product_ids": [
+            "41"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2.2 or later version",
+          "product_ids": [
+            "34",
+            "98",
+            "99",
+            "102"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2.2 or later version",
+          "product_ids": [
+            "40",
+            "100",
+            "101",
+            "103",
+            "104"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.3.0 or later version",
+          "product_ids": [
+            "21"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.4.0 or later version",
+          "product_ids": [
+            "22",
+            "89",
+            "90",
+            "91"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.0.9 or later version",
+          "product_ids": [
+            "63"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.0.3 or later version",
+          "product_ids": [
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "119",
+            "120"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "68"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109764666/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1 or later version",
+          "product_ids": [
+            "47"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109768047/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5 HF1 or later version",
+          "product_ids": [
+            "73"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/44029688/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.3 or later version",
+          "product_ids": [
+            "74"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109773826/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.8 SP5 or later version\nThe update can be obtained from your Siemens representative or via Siemens customer service.",
+          "product_ids": [
+            "87"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.8 SP6 or later version\nThe update can be obtained from your Siemens representative or via Siemens customer service.",
+          "product_ids": [
+            "88"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.6 Patch 01 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109781345/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.2.2 or later version",
+          "product_ids": [
+            "65"
+          ],
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109476571/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.4.0 or later version",
+          "product_ids": [
+            "66"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763919/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.2.1 or later version",
+          "product_ids": [
+            "33"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763483/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to V5.2 HF4",
+          "product_ids": [
+            "83"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109762626/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to V5.2 HF1",
+          "product_ids": [
+            "77",
+            "78",
+            "84"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109764679/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.7 SP10 HF5 or later version",
+          "product_ids": [
+            "75",
+            "76"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109756820/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to V4.8 SP2 HF9\nThe update can be obtained from your Siemens representative or via Siemens customer service.",
+          "product_ids": [
+            "79",
+            "80",
+            "81"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.7 HF33 or later version\nThe update can be obtained from your Siemens representative or via Siemens customer service.",
+          "product_ids": [
+            "85"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2.1 or later version",
+          "product_ids": [
+            "46",
+            "113"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109760973/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "49",
+            "115"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/40360647/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "52",
+            "117"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/40362228/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "56"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/44442927/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "57"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/44443101/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "48"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/51466769/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "50",
+            "116"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/40944925/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "53",
+            "118"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/40945128/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "54"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/85059804/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "51"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/85049260/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "55"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/85063017/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "30",
+            "96"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/47353723/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "31",
+            "97"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/47354354/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "27"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/47354502/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "28"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/47354578/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.17 or later version",
+          "product_ids": [
+            "29"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/62612377/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.3.17 or later version",
+          "product_ids": [
+            "114"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/51466769/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2010 SP3 or later version and apply BIOS and Microsoft Windows updates",
+          "product_ids": [
+            "71",
+            "72"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109765109/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "15",
+            "16",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "17",
+            "18",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "66",
+            "67",
+            "68",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109",
+            "110",
+            "111",
+            "112",
+            "113",
+            "114",
+            "115",
+            "116",
+            "117",
+            "118",
+            "119",
+            "120"
+          ]
+        }
+      ],
+      "title": "CVE-2019-10936"
+    }
+  ]
+}

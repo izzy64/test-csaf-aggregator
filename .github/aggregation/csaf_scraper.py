@@ -26,7 +26,8 @@ if not env.verify:
     urllib3.disable_warnings(InsecureRequestWarning)
 
 now = datetime.now()
-workingdir = "."
+workingdir = "." # Manual run
+workingdir = ".github" # Automatic run
 
 def load_aggregator():
     '''Load Aggregator

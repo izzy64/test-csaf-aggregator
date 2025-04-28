@@ -1,15 +1,28 @@
-import requests
-from urllib3.exceptions import InsecureRequestWarning
-import urllib3
-
+##########################
+# Python Standard Library
+##########################
 import json
 import os
-import hashlib
-import pgpy
 from datetime import datetime
-import dateutil.parser as parser
-
-from helpers import time_convert, clean_key
+import hashlib
+##########################
+# Apache Software License
+##########################
+import requests
+##########################
+# BSD License
+##########################
+import pgpy
+import dateutil.parser as parser # Apache Software License also
+##########################
+# MIT License
+##########################
+from urllib3.exceptions import InsecureRequestWarning
+import urllib3
+##########################
+# Custom Local Files
+##########################
+from helpers import clean_key
 import env
 ####################################################################
 # TODO:

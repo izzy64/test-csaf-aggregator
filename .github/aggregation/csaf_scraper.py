@@ -15,9 +15,9 @@ import env
 # TODO:
 # Siemens throttle when breaks on hash/sig SSA-331112
 # (Maybe redownload Siemens)
-# Double check the code when a file is not new/updated (ICSAs are being redownloaded)
-# Nozomi colon url issues (pass ID name and base filename on it)
-# Update saving ROLIE feeds with local links
+# Double check the code when a file is not new/updated (ICSAs are being redownloaded) - Manually appears to be working
+# Nozomi colon url issues (pass ID name and base filename on it) - DONE
+# Update saving ROLIE feeds with local links - DONE
 ####################################################################
 
 ####################################################################
@@ -163,6 +163,29 @@ def get_csaf_updated_time(path:str):
     except:
         updated_time = "1980-01-01T09:00:00.000Z"
     return updated_time
+def updateROLIEURLs(rolie_copy:dict,feed_path:str):
+    for i, entry in enumerate(rolie_copy["feed"]["entry"]):
+        advid = entry['id'].lower()
+        baseURL = feed_path+advid+'.json'
+        # Update Content URL
+        entry['content']['src']=baseURL
+        # Update Links
+        for j, link in enumerate(entry["link"]):
+            # Update Self Link
+            if link['rel']=='self' or link['href'].endswith('.json'):
+                entry["link"][j]['href']=baseURL
+            # Update Signature Link
+            if link['rel']=='signature' or link['href'].endswith('.asc'):
+                entry["link"][j]['href']=baseURL+'.asc'
+            # Update Hash Links
+            if link['rel']=='hash':
+                if link['href'].endswith('.sha256'):
+                    entry["link"][j]['href']=baseURL+'.sha256'
+                if link['href'].endswith('.sha512'):
+                    entry["link"][j]['href']=baseURL+'.sha512'
+        # Save
+        rolie_copy["feed"]["entry"][i]=entry
+    return rolie_copy
 def aggregate_provider_files(provider:dict, n_requests:int=0):
     '''Aggregate Provider Files
     Using a Provider's metadata, the aggregator will make web requests to download the ROLIE
@@ -272,13 +295,15 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                             rolie_copy["feed"]["link"] = [
                                 {
                                     "rel": "self",
-                                    "href": f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
+                                    "href": f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie_copy['feed']['id']}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
                                 },
                             ]
                         if rolie_copy.get("feed",{}).get("updated",""):
                             rolie_copy["feed"]["updated"] = now.strftime(env.dt_format)
 
-                        # Save mirrored ROLIE
+                        mirrorURL = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}".replace(" ", "%20")
+                        updateROLIEURLs(rolie_copy,f"{mirrorURL}/{rolie_copy['feed']['id']}/")
+
                         with open(f"{feed_path}/{rolie_copy['feed']['id']}.json", "w") as outfile:
                             print(f"Saving ROLIE {rolie_copy['feed']['id']}")
                             json.dump(rolie_copy, outfile, indent=2, sort_keys=True)

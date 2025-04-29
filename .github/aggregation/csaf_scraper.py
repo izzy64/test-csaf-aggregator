@@ -30,10 +30,6 @@ import urllib3
 ##########################
 from helpers import clean_key
 import env
-####################################################################
-# TODO:
-# Double check the code when a file is not new/updated (ICSAs are being redownloaded) - Manually appears to be working
-####################################################################
 
 if not env.verify:
     urllib3.disable_warnings(InsecureRequestWarning)

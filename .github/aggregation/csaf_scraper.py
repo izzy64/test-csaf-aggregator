@@ -40,7 +40,7 @@ if not env.verify:
 
 now = datetime.now()
 workingdir = "." # Manual run
-# workingdir = os.path.dirname(os.path.abspath(__file__))+os.sep+".."+os.sep+".."
+workingdir = os.path.dirname(os.path.abspath(__file__))+os.sep+".."+os.sep+".."
 
 def load_aggregator():
     '''Load Aggregator

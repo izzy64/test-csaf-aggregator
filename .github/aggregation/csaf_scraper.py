@@ -47,7 +47,7 @@ def load_aggregator():
         aggregator: as a dictionary object.
     '''
     try:
-        # print(workingdir)
+        # Read in Aggregator.json
         with open(workingdir+os.sep+f"{env.aggregator_name}", "r") as agg:
             contents = agg.read()
             aggregator = json.loads(contents)
@@ -70,11 +70,14 @@ def verify_signature(link, keys, signature, csaf, feed_path):
         None
     '''
     verified = False
+    # Load CSAF content
     csaf_data = json.loads(csaf.text)
     save_name = csaf_data['document']['tracking']['id'].lower()
     for key in keys:
+        # Grab public PGP Key
         pub_key, _ = pgpy.PGPKey.from_blob(key["blob"])
         try:
+            # Attempt to verify PGP signature against CSAF contents
             if bool(pub_key.verify(csaf.text, pgpy.PGPSignature.from_blob(signature))):
                 verified = True
             else:
@@ -82,10 +85,11 @@ def verify_signature(link, keys, signature, csaf, feed_path):
         except Exception as e:
             print(e)
             continue
-    if verified:
+    if verified: # Save signature file to mirror folder if verified
         with open(f"{feed_path}"+os.sep+f"{save_name}"+".json.asc", "w") as outfile:
             outfile.write(signature)
     else:
+        # Save provider's signature file but log that it is unverified
         print(f"PGP signature verification failed for CSAF {link['href'].split('/')[-1]}\n")
         with open("logs.txt", "a") as f:
             f.write(f"PGP signature verification failed for CSAF {link['href'].split('/')[-1]}\n")
@@ -103,27 +107,34 @@ def verify_hash(link, hash, csaf, feed_path):
     Returns:
         None
     '''
+    # Load CSAF content
     csaf_data = json.loads(csaf.text)
     save_name = csaf_data['document']['tracking']['id'].lower()
-    if link["href"].split(".")[-1] == "sha256":
+    if link["href"].split(".")[-1] == "sha256": # SHA 256 Hash
+        # Verify checksum
         if hashlib.sha256(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
             with open(f"{feed_path}"+os.sep+f"{save_name}"+".json.sha256", "w") as outfile:
                 outfile.write(hash)
         else:
+            # Log that the verification failed
             print(f"sha256 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
             with open("logs.txt", "a") as f:
                 f.write(f"sha256 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
+            # Save provider's hash
             with open(f"{feed_path}"+os.sep+f"{save_name}"+".json.sha256", "w") as outfile:
                 outfile.write(hash)
 
-    elif link["href"].split(".")[-1] == "sha512":
+    elif link["href"].split(".")[-1] == "sha512": # SHA 512 Hash
+        # Verify checksum
         if hashlib.sha512(csaf.text.encode('UTF-8')).hexdigest() == hash.split(" ")[0]:
             with open(f"{feed_path}"+os.sep+f"{save_name}"+".json.sha512", "w") as outfile:
                 outfile.write(hash)
         else:
+            # Log that the verification failed
             print(f"sha512 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
             with open("logs.txt", "a") as f:
                 f.write(f"sha512 Hash match failed for CSAF {link['href'].split('/')[-1]}\n")
+            # Save provider's hash
             with open(f"{feed_path}"+os.sep+f"{save_name}"+".json.sha512", "w") as outfile:
                 outfile.write(hash)
     else:
@@ -139,12 +150,13 @@ def get_provider_pgp_keys(metadata:dict, num_requests:int):
         provider_keys: list of dictionaries containing the Provider's OpenPGP Keys
         num_requests: An updated count of web requests made.
     '''
+    # Request the provider's Public PGP Keys
     provider_keys = json.loads(json.dumps(metadata["public_openpgp_keys"]))
     for j, key in enumerate(provider_keys):
         provider_keys[j]["blob"] = clean_key(requests.get(
             provider_keys[j]["url"], allow_redirects=True, verify=env.verify
         ).text)
-        num_requests += 1
+        num_requests += 1 # Keep track of number of requests
     return provider_keys, num_requests
 def get_csaf_updated_time(path:str):
     '''Get CSAF Updated Time
@@ -156,24 +168,23 @@ def get_csaf_updated_time(path:str):
         updated_time: A datetime string.
     '''
     try:
-        # print("TEST: "+path)
+        # Grab timestamp of local copy of CSAF
         if os.path.isfile(path):
             with open(path, "r") as file:
-                # print("TEST: Read file successfully")
                 contents = file.read()
                 csaf = json.loads(contents)
                 updated_time = csaf.get("document", {}).get("tracking", {}).get("current_release_date", "1980-01-01T09:00:00.000Z")
         else:
-            # print("TEST: Failed to find path")
+            # If file isn't present, force a fresh download/update
             updated_time = "1980-01-01T09:00:00.000Z"
         if not os.path.isfile(path+".asc"):
-            # print("TEST: Failed to find signature")
+            # If signature file is missing, force a fresh download/update
             updated_time = "1980-01-01T09:00:00.000Z"
         if not (os.path.isfile(path+".sha256") or os.path.exists(path+".sha512")):
-            # print("TEST: Failed to find hash")
+            # If hash files are missing, force a fresh download/update
             updated_time = "1980-01-01T09:00:00.000Z"
     except:
-        # print("TEST: Failed parsing")
+        # If there are errors during parsing, force a fresh download/update
         updated_time = "1980-01-01T09:00:00.000Z"
     return updated_time
 def updateROLIEURLs(rolie_copy:dict,feed_path:str):
@@ -213,6 +224,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     Returns:
         n_requests: an updated integer of the number of web requests made.
     '''
+    # Fetch the Provider's metadata
     pm_url = provider["metadata"]["url"]
     publisher_name = provider["metadata"]["publisher"]["name"]
     print(f"Fetching results for provider {publisher_name}")
@@ -220,6 +232,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     pm_response = requests.get(
         pm_url, allow_redirects=True, verify=env.verify
     )
+    # If the fetch was successful, continue parsing and retrieving needed files.
     if pm_response.status_code == 200:
         n_requests += 1
         provider_metadata = pm_response.json()
@@ -240,6 +253,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                         rolie_response = requests.get(
                             feed["url"], allow_redirects=True, verify=env.verify
                         )
+                        # If rolie is successful, continue parsing and retrieving needed files.
                         if rolie_response.status_code == 200:
                             n_requests += 1
                             rolie = rolie_response.json()
@@ -255,6 +269,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                 except:
                                     old_rolie = {}
 
+                                # Mirror URL for local copy of rolie feed
                                 feed["url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
 
                                 rolie_dict = {item['id']:item|{"update":False} for item in rolie.get("feed",{}).get("entry",[])}
@@ -268,26 +283,28 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                         except Exception as e:
                                             print("Error here: "+str(e))
                                             continue
+                                        # If timestamp is newer than what is stored locally, mark for update
                                         if updated_time > old_updated_time:
                                             rolie_dict[entry["id"]]["update"] = True
 
                                 # fetch csafs for update
                                 for advid, entry in rolie_dict.items():
-                                    # print(f"Old: {old_updated_time}, New: {updated_time}")
-                                    # print(f"{entry['id']} {entry['update']}")
                                     if entry["update"]:
                                         print(f"Fetching data for {entry['id']}")
                                         try:
+                                            # Fetch new/updated CSAFs
                                             csaf_response = requests.get(
                                                 entry["content"]["src"], allow_redirects=True, verify=env.verify
                                             )
                                             n_requests += 1
+                                            # If fetch is successful, fetch signatures and hashes
                                             if csaf_response.status_code == 200:
                                                 try:
                                                     csaf = csaf_response.json()
                                                 except:
                                                     break
                                                 if csaf:
+                                                    # Save CSAF
                                                     with open(f"{feed_path}"+os.sep+f"{entry['id'].lower()}.json", "w") as outfile:
                                                         print(f"Saving {entry['id'].lower()}")
                                                         json.dump(csaf, outfile, indent=2, sort_keys=True)
@@ -296,7 +313,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                                         link_response = requests.get(
                                                             link["href"], allow_redirects=True, verify=env.verify
                                                         )
-
+                                                        # If fetch is successful, attempt to verify.
                                                         if link_response.status_code == 200:
                                                             n_requests += 1
                                                             # check sig
@@ -306,6 +323,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                                             if link["rel"] == "hash":
                                                                 verify_hash(link,link_response.text,csaf_response,feed_path)
                                                         else:
+                                                            # Record issues in log file.
                                                             with open("logs.txt", "a") as f:
                                                                 if link["rel"] == "signature":
                                                                     f.write(f"{publisher_name} CSAF Signature File request for {advid} FAILED with code [{link_response.status_code}] and message: {link_response.text}\n")
@@ -319,8 +337,6 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                             with open("logs.txt", "a") as f:
                                                 f.write(f"{publisher_name} CSAF File Fetch requests for {advid} FAILED due to error: {str(e)}\n")
                                             continue
-                                    # else:
-                                    #     print(f"{entry['id']} data already present")
 
                                 # update mirrored ROLIE
                                 if rolie_copy.get("feed",{}).get("link",[]):
@@ -340,6 +356,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                     print(f"Saving ROLIE {rolie_copy['feed']['id']}")
                                     json.dump(rolie_copy, outfile, indent=2, sort_keys=True)
                         else:
+                            # A failed fetch is recorded in a log file.
                             with open("logs.txt", "a") as f:
                                 f.write(f"{publisher_name} ROLIE request FAILED with code [{rolie_response.status_code}] and message: {rolie_response.text}\n")
                     except Exception as e:
@@ -348,13 +365,14 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                             f.write(f"{publisher_name} ROLIE request FAILED due to error: {str(e)}\n")
                         continue
                         
-        # save the mirrored provider metadata
+        # Save the mirrored provider metadata
         if not os.path.exists(workingdir+os.sep+publisher_name): 
             os.makedirs(workingdir+os.sep+publisher_name)
         with open(f"{path_start}"+os.sep+"provider_metadata.json", "w") as outfile:
             print(f"Saving Provider Metadata for {publisher_name}")
             json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
     else:
+        # A failed fetch is recorded in a log file.
         with open("logs.txt", "a") as f:
             f.write(f"{publisher_name} Provider-Metadata request FAILED with code [{pm_response.status_code}] and message: {pm_response.text}\n")
     return n_requests
@@ -373,9 +391,12 @@ def parse_aggregator(aggregator:dict):
         None
     '''
     n_requests = 0
+    # Loop through each provider identified to mirror in the aggregator
     for i, provider in enumerate(aggregator["csaf_providers"]):
+        # Aggregate the files of each provider and record number of requests
         n_requests = aggregate_provider_files(provider, n_requests)
         publisher_name = provider["metadata"]["publisher"]["name"]
+        # Update the local mirror URL to the mirrored repo
         aggregator["csaf_providers"][i]["mirrors"][0] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
 
     print(f"The Aggregator made {n_requests} external requests")
@@ -388,6 +409,7 @@ def update_aggregator(aggregator:dict):
     Returns:
         None
     '''
+    # Update and save the aggregator.json file
     with open(f"{env.aggregator_name}", "w") as outfile:
         json.dump(aggregator, outfile, indent=2, sort_keys=True)           
 def main():
@@ -401,9 +423,12 @@ def main():
     Returns:
         None
     '''
+    # Load the local aggregator.json
     agg = load_aggregator()
     if agg:
+        # Parse the contents of the aggregator
         parse_aggregator(agg)
+        # Update links and timestamps of the aggregator
         update_aggregator(agg)
 
 if __name__=="__main__":

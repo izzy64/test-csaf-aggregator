@@ -2,7 +2,7 @@
 # Title: CSAF Scraper for CSAF Aggregator
 # Author: Israel Bentley & Matthew Stradling
 # Org: Idaho National Laboratory on behalf of 
-#       Cypersecurity and Infrastructure Security Agency (CISA)
+#       Cybersecurity and Infrastructure Security Agency (CISA)
 ####################################################################
 ##########################
 # Python Standard Library

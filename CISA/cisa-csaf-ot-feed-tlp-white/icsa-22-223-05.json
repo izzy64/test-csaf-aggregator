@@ -1,344 +1,344 @@
 {
-  "document": {
-    "acknowledgments": [
-      {
-        "organization": "Siemens ProductCERT",
-        "summary": "reporting this vulnerability to CISA."
-      },
-      {
-        "organization": "CybExer Technologies",
-        "summary": "reporting the vulnerability"
-      }
-    ],
-    "category": "csaf_security_advisory",
-    "csaf_version": "2.0",
-    "distribution": {
-      "text": "Disclosure is not limited",
-      "tlp": {
-        "label": "WHITE",
-        "url": "https://us-cert.cisa.gov/tlp/"
-      }
-    },
-    "notes": [
-      {
-        "category": "summary",
-        "text": "A vulnerability was identified in the web server module used in the\nSICAM A8000 CP-8000, CP-8021 and CP-8022 devices' protocol firmwares.\n- AGPMT0 (AGP Master)  - DNPiT1 (DNP3 TCP/IP Server)  - DNPiT2 (DNP3\nTCP/IP Client)  - DNPMT0 (DNP3 Master seriell)  - DNPST0 (DNP3 Slave\nseriell)  - ET83 (61850 Ed.1)  - ET85 (61850 Ed.2)  - MBCiT0 (MODBUS\nTCP/IP Client)  - MBSiT0 (MODBUS TCP/IP Server)  - MODMT2 (MODBUS\nMaster seriell)  - OPUPT0 (OPCUA Pub/Sub)  - OPUPT1 (Mindconnect)\nThe vulnerability could allow unauthenticated access to the web\ninterface of the affected web server module. The module is used for\ndiagnostic purposes as well as commissioning and has to be activated\nmanually within the protocol firmwares. For this reason the protocol\nfirmwares are secure by default. Siemens updated the manual to make\nthe situation transparent and raise awareness for operators.\nSiemens recommends countermeasures for products where updates are not,\nor not yet available.",
-        "title": "Summary"
-      },
-      {
-        "category": "general",
-        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are\nusually required by regulations to build resilience into the power\ngrids by applying multi-level redundant secondary protection schemes.\nIt is therefore recommended that the operators check whether\nappropriate resilient protection measures are in place. The risk of\ncyber incidents impacting the grid's reliability can thus be minimized\nby virtue of the grid design.\n\nSiemens strongly recommends applying the provided security updates\nusing the corresponding tooling and documented procedures made\navailable with the product. If supported by the product, an automated\nmeans to apply the security updates across multiple product instances\nmay be used. Siemens strongly recommends prior validation of any\nsecurity update before being applied, and supervision by trained staff\nof the update process in the target environment.\n\nAs a general security measure Siemens strongly recommends to protect\nnetwork access with appropriate mechanisms (e.g. firewalls,\nsegmentation, VPN). It is advised to configure the environment\naccording to our operational guidelines in order to run the devices in\na protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity",
-        "title": "General Recommendations"
-      },
-      {
-        "category": "general",
-        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
-        "title": "Additional Resources"
-      },
-      {
-        "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
-        "title": "Terms of Use"
-      },
-      {
-        "category": "legal_disclaimer",
-        "text": "All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
-        "title": "Legal Notice"
-      },
-      {
-        "category": "other",
-        "text": "This CISA CSAF advisory was converted from Siemens ProductCERT's CSAF advisory.",
-        "title": "Advisory Conversion Disclaimer"
-      },
-      {
-        "category": "other",
-        "text": "Multiple",
-        "title": "Critical infrastructure sectors"
-      },
-      {
-        "category": "other",
-        "text": "Worldwide",
-        "title": "Countries/areas deployed"
-      },
-      {
-        "category": "other",
-        "text": "Germany",
-        "title": "Company headquarters location"
-      },
-      {
-        "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
-        "title": "Recommended Practices"
-      }
-    ],
-    "publisher": {
-      "category": "other",
-      "contact_details": "central@cisa.dhs.gov",
-      "name": "CISA",
-      "namespace": "https://www.cisa.gov/"
-    },
-    "references": [
-      {
-        "category": "self",
-        "summary": "SSA-185638: Authentication Bypass Vulnerability in SICAM A8000 Web Server Module - CSAF Version",
-        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-185638.json"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-185638: Authentication Bypass Vulnerability in SICAM A8000 Web Server Module - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-185638.txt"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-185638: Authentication Bypass Vulnerability in SICAM A8000 Web Server Module - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-185638.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "ICS Advisory ICSA-22-223-05 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2022/icsa-22-223-05.json"
-      },
-      {
-        "category": "self",
-        "summary": "ICS Advisory ICSA-22-223-05 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-22-223-05"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/topics/industrial-control-systems"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Best_Practices_for_Industrial_Control_Systems.pdf"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
-      }
-    ],
-    "title": "Siemens SICAM A8000 Web Server Module",
-    "tracking": {
-      "current_release_date": "2022-08-09T00:00:00.000000Z",
-      "generator": {
-        "engine": {
-          "name": "CISA CSAF Generator",
-          "version": "1.0.0"
-        }
-      },
-      "id": "ICSA-22-223-05",
-      "initial_release_date": "2022-08-09T00:00:00.000000Z",
-      "revision_history": [
-        {
-          "date": "2022-08-09T00:00:00.000000Z",
-          "legacy_version": "1.0",
-          "number": "1",
-          "summary": "Publication Date"
-        }
-      ],
-      "status": "final",
-      "version": "1"
-    }
-  },
-  "product_tree": {
-    "branches": [
-      {
-        "branches": [
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "CP-8000 MASTER MODULE WITH I/O -25/+70\u00b0C",
-                  "product_id": "CSAFPID-0001",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6MF2101-0AB10-0AA0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "CP-8000 MASTER MODULE WITH I/O -25/+70\u00b0C"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "CP-8000 MASTER MODULE WITH I/O -40/+70\u00b0C",
-                  "product_id": "CSAFPID-0002",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6MF2101-1AB10-0AA0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "CP-8000 MASTER MODULE WITH I/O -40/+70\u00b0C"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "CP-8021 MASTER MODULE",
-                  "product_id": "CSAFPID-0003",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6MF2802-1AA00"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "CP-8021 MASTER MODULE"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "CP-8022 MASTER MODULE WITH GPRS",
-                  "product_id": "CSAFPID-0004",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6MF2802-2AA00"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "CP-8022 MASTER MODULE WITH GPRS"
-          }
+    "document": {
+        "acknowledgments": [
+            {
+                "organization": "Siemens ProductCERT",
+                "summary": "reporting this vulnerability to CISA."
+            },
+            {
+                "organization": "CybExer Technologies",
+                "summary": "reporting the vulnerability"
+            }
         ],
-        "category": "vendor",
-        "name": "Siemens"
-      }
-    ]
-  },
-  "vulnerabilities": [
-    {
-      "cve": "CVE-2021-46304",
-      "cwe": {
-        "id": "CWE-284",
-        "name": "Improper Access Control"
-      },
-      "notes": [
-        {
-          "category": "summary",
-          "text": "The component allows to activate a web server module which provides unauthenticated access to its web pages. This could allow an attacker to retrieve debug-level information from the component such as internal network topology or connected systems.",
-          "title": "Summary"
-        }
-      ],
-      "product_status": {
-        "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0003",
-          "CSAFPID-0004"
-        ]
-      },
-      "remediations": [
-        {
-          "category": "mitigation",
-          "details": "Operate the affected web server module only when required and consider\nthe security instructions provided in the updated manual (see also\nAdditional Information chapter)",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004"
-          ]
+        "category": "csaf_security_advisory",
+        "csaf_version": "2.0",
+        "distribution": {
+            "text": "Disclosure is not limited",
+            "tlp": {
+                "label": "WHITE",
+                "url": "https://us-cert.cisa.gov/tlp/"
+            }
         },
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004"
-          ]
+        "notes": [
+            {
+                "category": "summary",
+                "text": "A vulnerability was identified in the web server module used in the\nSICAM A8000 CP-8000, CP-8021 and CP-8022 devices' protocol firmwares.\n- AGPMT0 (AGP Master)  - DNPiT1 (DNP3 TCP/IP Server)  - DNPiT2 (DNP3\nTCP/IP Client)  - DNPMT0 (DNP3 Master seriell)  - DNPST0 (DNP3 Slave\nseriell)  - ET83 (61850 Ed.1)  - ET85 (61850 Ed.2)  - MBCiT0 (MODBUS\nTCP/IP Client)  - MBSiT0 (MODBUS TCP/IP Server)  - MODMT2 (MODBUS\nMaster seriell)  - OPUPT0 (OPCUA Pub/Sub)  - OPUPT1 (Mindconnect)\nThe vulnerability could allow unauthenticated access to the web\ninterface of the affected web server module. The module is used for\ndiagnostic purposes as well as commissioning and has to be activated\nmanually within the protocol firmwares. For this reason the protocol\nfirmwares are secure by default. Siemens updated the manual to make\nthe situation transparent and raise awareness for operators.\nSiemens recommends countermeasures for products where updates are not,\nor not yet available.",
+                "title": "Summary"
+            },
+            {
+                "category": "general",
+                "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are\nusually required by regulations to build resilience into the power\ngrids by applying multi-level redundant secondary protection schemes.\nIt is therefore recommended that the operators check whether\nappropriate resilient protection measures are in place. The risk of\ncyber incidents impacting the grid's reliability can thus be minimized\nby virtue of the grid design.\n\nSiemens strongly recommends applying the provided security updates\nusing the corresponding tooling and documented procedures made\navailable with the product. If supported by the product, an automated\nmeans to apply the security updates across multiple product instances\nmay be used. Siemens strongly recommends prior validation of any\nsecurity update before being applied, and supervision by trained staff\nof the update process in the target environment.\n\nAs a general security measure Siemens strongly recommends to protect\nnetwork access with appropriate mechanisms (e.g. firewalls,\nsegmentation, VPN). It is advised to configure the environment\naccording to our operational guidelines in order to run the devices in\na protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity",
+                "title": "General Recommendations"
+            },
+            {
+                "category": "general",
+                "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+                "title": "Additional Resources"
+            },
+            {
+                "category": "legal_disclaimer",
+                "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+                "title": "Terms of Use"
+            },
+            {
+                "category": "legal_disclaimer",
+                "text": "All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
+                "title": "Legal Notice"
+            },
+            {
+                "category": "other",
+                "text": "This CISA CSAF advisory was converted from Siemens ProductCERT's CSAF advisory.",
+                "title": "Advisory Conversion Disclaimer"
+            },
+            {
+                "category": "other",
+                "text": "Multiple",
+                "title": "Critical infrastructure sectors"
+            },
+            {
+                "category": "other",
+                "text": "Worldwide",
+                "title": "Countries/areas deployed"
+            },
+            {
+                "category": "other",
+                "text": "Germany",
+                "title": "Company headquarters location"
+            },
+            {
+                "category": "general",
+                "text": "CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+                "title": "Recommended Practices"
+            }
+        ],
+        "publisher": {
+            "category": "other",
+            "contact_details": "central@cisa.dhs.gov",
+            "name": "CISA",
+            "namespace": "https://www.cisa.gov/"
+        },
+        "references": [
+            {
+                "category": "self",
+                "summary": "SSA-185638: Authentication Bypass Vulnerability in SICAM A8000 Web Server Module - CSAF Version",
+                "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-185638.json"
+            },
+            {
+                "category": "self",
+                "summary": "SSA-185638: Authentication Bypass Vulnerability in SICAM A8000 Web Server Module - TXT Version",
+                "url": "https://cert-portal.siemens.com/productcert/txt/ssa-185638.txt"
+            },
+            {
+                "category": "self",
+                "summary": "SSA-185638: Authentication Bypass Vulnerability in SICAM A8000 Web Server Module - PDF Version",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-185638.pdf"
+            },
+            {
+                "category": "self",
+                "summary": "ICS Advisory ICSA-22-223-05 JSON",
+                "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2022/icsa-22-223-05.json"
+            },
+            {
+                "category": "self",
+                "summary": "ICS Advisory ICSA-22-223-05 - Web Version",
+                "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-22-223-05"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/topics/industrial-control-systems"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Best_Practices_for_Industrial_Control_Systems.pdf"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+            }
+        ],
+        "title": "Siemens SICAM A8000 Web Server Module",
+        "tracking": {
+            "current_release_date": "2022-08-09T00:00:00.000000Z",
+            "generator": {
+                "engine": {
+                    "name": "CISA CSAF Generator",
+                    "version": "1.0.0"
+                }
+            },
+            "id": "ICSA-22-223-05",
+            "initial_release_date": "2022-08-09T00:00:00.000000Z",
+            "revision_history": [
+                {
+                    "date": "2022-08-09T00:00:00.000000Z",
+                    "legacy_version": "1.0",
+                    "number": "1",
+                    "summary": "Publication Date"
+                }
+            ],
+            "status": "final",
+            "version": "1"
         }
-      ],
-      "scores": [
+    },
+    "product_tree": {
+        "branches": [
+            {
+                "branches": [
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/*",
+                                "product": {
+                                    "name": "CP-8000 MASTER MODULE WITH I/O -25/+70\u00b0C",
+                                    "product_id": "CSAFPID-0001",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6MF2101-0AB10-0AA0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "CP-8000 MASTER MODULE WITH I/O -25/+70\u00b0C"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/*",
+                                "product": {
+                                    "name": "CP-8000 MASTER MODULE WITH I/O -40/+70\u00b0C",
+                                    "product_id": "CSAFPID-0002",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6MF2101-1AB10-0AA0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "CP-8000 MASTER MODULE WITH I/O -40/+70\u00b0C"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/*",
+                                "product": {
+                                    "name": "CP-8021 MASTER MODULE",
+                                    "product_id": "CSAFPID-0003",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6MF2802-1AA00"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "CP-8021 MASTER MODULE"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/*",
+                                "product": {
+                                    "name": "CP-8022 MASTER MODULE WITH GPRS",
+                                    "product_id": "CSAFPID-0004",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6MF2802-2AA00"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "CP-8022 MASTER MODULE WITH GPRS"
+                    }
+                ],
+                "category": "vendor",
+                "name": "Siemens"
+            }
+        ]
+    },
+    "vulnerabilities": [
         {
-          "cvss_v3": {
-            "baseScore": 4.3,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004"
-          ]
+            "cve": "CVE-2021-46304",
+            "cwe": {
+                "id": "CWE-284",
+                "name": "Improper Access Control"
+            },
+            "notes": [
+                {
+                    "category": "summary",
+                    "text": "The component allows to activate a web server module which provides unauthenticated access to its web pages. This could allow an attacker to retrieve debug-level information from the component such as internal network topology or connected systems.",
+                    "title": "Summary"
+                }
+            ],
+            "product_status": {
+                "known_affected": [
+                    "CSAFPID-0001",
+                    "CSAFPID-0002",
+                    "CSAFPID-0003",
+                    "CSAFPID-0004"
+                ]
+            },
+            "remediations": [
+                {
+                    "category": "mitigation",
+                    "details": "Operate the affected web server module only when required and consider\nthe security instructions provided in the updated manual (see also\nAdditional Information chapter)",
+                    "product_ids": [
+                        "CSAFPID-0001",
+                        "CSAFPID-0002",
+                        "CSAFPID-0003",
+                        "CSAFPID-0004"
+                    ]
+                },
+                {
+                    "category": "no_fix_planned",
+                    "details": "Currently no fix is planned",
+                    "product_ids": [
+                        "CSAFPID-0001",
+                        "CSAFPID-0002",
+                        "CSAFPID-0003",
+                        "CSAFPID-0004"
+                    ]
+                }
+            ],
+            "scores": [
+                {
+                    "cvss_v3": {
+                        "baseScore": 4.3,
+                        "baseSeverity": "MEDIUM",
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C",
+                        "version": "3.1"
+                    },
+                    "products": [
+                        "CSAFPID-0001",
+                        "CSAFPID-0002",
+                        "CSAFPID-0003",
+                        "CSAFPID-0004"
+                    ]
+                }
+            ],
+            "title": "CVE-2021-46304"
         }
-      ],
-      "title": "CVE-2021-46304"
-    }
-  ]
+    ]
 }

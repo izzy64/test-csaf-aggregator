@@ -158,7 +158,7 @@
     "tracking": {
       "current_release_date": "2025-04-24T06:00:00.000000Z",
       "generator": {
-        "date": "2025-04-24T20:20:11.647633Z",
+        "date": "2025-05-01T21:54:42.051656Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -186,9 +186,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<=1.0b211018",
+                "name": "<=1.0b211018",
                 "product": {
-                  "name": "Planet Technology UNI-NMS-Lite: vers:all/<=1.0b211018",
+                  "name": "Planet Technology UNI-NMS-Lite: <=1.0b211018",
                   "product_id": "CSAFPID-0001"
                 }
               }
@@ -228,9 +228,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<=2.305b250121",
+                "name": "<=2.305b250121",
                 "product": {
-                  "name": "Planet Technology WGS-804HPT-V2: vers:all/<=2.305b250121",
+                  "name": "Planet Technology WGS-804HPT-V2: <=2.305b250121",
                   "product_id": "CSAFPID-0004"
                 }
               }
@@ -242,9 +242,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<=1.305b241115",
+                "name": "<=1.305b241115",
                 "product": {
-                  "name": "Planet Technology WGS-4215-8T2S: vers:all/<=1.305b241115",
+                  "name": "Planet Technology WGS-4215-8T2S: <=1.305b241115",
                   "product_id": "CSAFPID-0005"
                 }
               }
@@ -268,7 +268,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "UNI-NMS-Lite is vulnerable to a command injection attack that could allow an unauthenticated attacker to read or manipulate device data.",
+          "text": "UNI-NMS-Lite, NMS-500 and NMS-1000 are vulnerable to a command injection attack that could allow an unauthenticated attacker to read or manipulate device data.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -276,9 +276,7 @@
         "known_affected": [
           "CSAFPID-0001",
           "CSAFPID-0002",
-          "CSAFPID-0003",
-          "CSAFPID-0004",
-          "CSAFPID-0005"
+          "CSAFPID-0003"
         ]
       },
       "references": [
@@ -305,40 +303,14 @@
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0003"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "WGS-804HPT (v2)",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
-          ],
-          "url": "https://www.planet.com.tw/en/product/wgs-804hpt-v2"
-        },
-        {
           "category": "vendor_fix",
-          "details": "WGS-4215-8T2S",
+          "details": "UNI-NMS-Lite",
           "product_ids": [
-            "CSAFPID-0005"
-          ],
-          "url": "https://www.planet.com.tw/en/product/wgs-4215-8t2s"
-        },
-        {
-          "category": "mitigation",
-          "details": "UNI-NMS",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0001"
           ],
           "url": "https://www.planet.com.tw/en/product/uni-nms"
         },
@@ -370,9 +342,7 @@
           "products": [
             "CSAFPID-0001",
             "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0003"
           ]
         }
       ]
@@ -392,9 +362,6 @@
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0003",
           "CSAFPID-0004",
           "CSAFPID-0005"
         ]
@@ -421,22 +388,15 @@
           "category": "mitigation",
           "details": "Planet Technology has released patches for the following devices:",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
             "CSAFPID-0004",
             "CSAFPID-0005"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "WGS-804HPT (v2)",
+          "category": "vendor_fix",
+          "details": "WGS-804HPT-V2",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0004"
           ],
           "url": "https://www.planet.com.tw/en/product/wgs-804hpt-v2"
         },
@@ -447,34 +407,6 @@
             "CSAFPID-0005"
           ],
           "url": "https://www.planet.com.tw/en/product/wgs-4215-8t2s"
-        },
-        {
-          "category": "mitigation",
-          "details": "UNI-NMS",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
-          ],
-          "url": "https://www.planet.com.tw/en/product/uni-nms"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "NMS-500",
-          "product_ids": [
-            "CSAFPID-0002"
-          ],
-          "url": "https://www.planet.com.tw/en/product/nms-500"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "NMS-1000V",
-          "product_ids": [
-            "CSAFPID-0003"
-          ],
-          "url": "https://www.planet.com.tw/en/product/nms-1000v"
         }
       ],
       "scores": [
@@ -486,9 +418,6 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
             "CSAFPID-0004",
             "CSAFPID-0005"
           ]
@@ -504,7 +433,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "UNI-NMS-Lite uses hard-coded credentials that could allow an unauthenticated attacker to gain administrative privileges to all UNI-NMS managed devices.",
+          "text": "All affected products use hard-coded credentials that could allow an unauthenticated attacker to gain administrative privileges to all UNI-NMS managed devices.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -547,14 +476,10 @@
           ]
         },
         {
-          "category": "mitigation",
-          "details": "WGS-804HPT (v2)",
+          "category": "vendor_fix",
+          "details": "WGS-804HPT-V2",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0004"
           ],
           "url": "https://www.planet.com.tw/en/product/wgs-804hpt-v2"
         },
@@ -567,14 +492,10 @@
           "url": "https://www.planet.com.tw/en/product/wgs-4215-8t2s"
         },
         {
-          "category": "mitigation",
-          "details": "UNI-NMS",
+          "category": "vendor_fix",
+          "details": "UNI-NMS-Lite",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0001"
           ],
           "url": "https://www.planet.com.tw/en/product/uni-nms"
         },
@@ -622,7 +543,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "UNI-NMS-Lite uses hard-coded credentials that could allow an unauthenticated attacker to read, manipulate and create entries in the managed database.",
+          "text": "UNI-NMS-Lite, NMS-500 and NMS-1000 use hard-coded credentials that could allow an unauthenticated attacker to read, manipulate and create entries in the managed database.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -630,9 +551,7 @@
         "known_affected": [
           "CSAFPID-0001",
           "CSAFPID-0002",
-          "CSAFPID-0003",
-          "CSAFPID-0004",
-          "CSAFPID-0005"
+          "CSAFPID-0003"
         ]
       },
       "references": [
@@ -659,40 +578,14 @@
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0003"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "WGS-804HPT (v2)",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
-          ],
-          "url": "https://www.planet.com.tw/en/product/wgs-804hpt-v2"
-        },
-        {
           "category": "vendor_fix",
-          "details": "WGS-4215-8T2S",
+          "details": "UNI-NMS-Lite",
           "product_ids": [
-            "CSAFPID-0005"
-          ],
-          "url": "https://www.planet.com.tw/en/product/wgs-4215-8t2s"
-        },
-        {
-          "category": "mitigation",
-          "details": "UNI-NMS",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0001"
           ],
           "url": "https://www.planet.com.tw/en/product/uni-nms"
         },
@@ -724,9 +617,7 @@
           "products": [
             "CSAFPID-0001",
             "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0003"
           ]
         }
       ]
@@ -746,9 +637,6 @@
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0003",
           "CSAFPID-0004",
           "CSAFPID-0005"
         ]
@@ -775,22 +663,15 @@
           "category": "mitigation",
           "details": "Planet Technology has released patches for the following devices:",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
             "CSAFPID-0004",
             "CSAFPID-0005"
           ]
         },
         {
-          "category": "mitigation",
-          "details": "WGS-804HPT (v2)",
+          "category": "vendor_fix",
+          "details": "WGS-804HPT-V2",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
+            "CSAFPID-0004"
           ],
           "url": "https://www.planet.com.tw/en/product/wgs-804hpt-v2"
         },
@@ -801,34 +682,6 @@
             "CSAFPID-0005"
           ],
           "url": "https://www.planet.com.tw/en/product/wgs-4215-8t2s"
-        },
-        {
-          "category": "mitigation",
-          "details": "UNI-NMS",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005"
-          ],
-          "url": "https://www.planet.com.tw/en/product/uni-nms"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "NMS-500",
-          "product_ids": [
-            "CSAFPID-0002"
-          ],
-          "url": "https://www.planet.com.tw/en/product/nms-500"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "NMS-1000V",
-          "product_ids": [
-            "CSAFPID-0003"
-          ],
-          "url": "https://www.planet.com.tw/en/product/nms-1000v"
         }
       ],
       "scores": [
@@ -840,9 +693,6 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
             "CSAFPID-0004",
             "CSAFPID-0005"
           ]

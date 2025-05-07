@@ -2,8 +2,9 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "Schneider Electric CPCERT",
-        "summary": "reporting this vulnerability to CISA."
+        "names": ["Sangjun Park", "Jongseoung Kim", "Byunghyun Kang", "Yunjin Park", "Kwon Yul", "Seungchan Kim"],
+                  "organization": "today-0day",
+        "summary": "reporting this vulnerability to Schneider Electric."
       }
     ],
     "category": "csaf_security_advisory",
@@ -214,25 +215,25 @@
           },
           {
             "category": "product_name",
-            "name": "EcoStruxure\u2122 Control Expert",
+            "name": "EcoStruxure Control Expert",
             "product": {
-              "name": "EcoStruxure\u2122 Control Expert",
+              "name": "EcoStruxure Control Expert",
               "product_id": "CSAFPID-0002"
             }
           },
           {
             "category": "product_name",
-            "name": "EcoStruxure\u2122 Process Expert",
+            "name": "EcoStruxure Process Expert",
             "product": {
-              "name": "EcoStruxure\u2122 Process Expert",
+              "name": "EcoStruxure Process Expert",
               "product_id": "CSAFPID-0003"
             }
           },
           {
             "category": "product_name",
-            "name": "EcoStruxure\u2122 Process Expert for AVEVA System Platform",
+            "name": "EcoStruxure Process Expert for AVEVA System Platform",
             "product": {
-              "name": "EcoStruxure\u2122 Process Expert for AVEVA System Platform",
+              "name": "EcoStruxure Process Expert for AVEVA System Platform",
               "product_id": "CSAFPID-0004"
             }
           },
@@ -253,7 +254,7 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "Schneider Electric Uni-Telway driver All versions installed on EcoStruxure\u2122 Control Expert",
+          "name": "Schneider Electric Uni-Telway driver All versions installed on EcoStruxure Control Expert",
           "product_id": "CSAFPID-0006"
         },
         "product_reference": "CSAFPID-0001",
@@ -262,7 +263,7 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "Schneider Electric Uni-Telway driver All versions installed on EcoStruxure\u2122 Process Expert",
+          "name": "Schneider Electric Uni-Telway driver All versions installed on EcoStruxure Process Expert",
           "product_id": "CSAFPID-0007"
         },
         "product_reference": "CSAFPID-0001",
@@ -271,7 +272,7 @@
       {
         "category": "installed_on",
         "full_product_name": {
-          "name": "Schneider Electric Uni-Telway driver All versions installed on EcoStruxure\u2122 Process Expert for AVEVA System Platform",
+          "name": "Schneider Electric Uni-Telway driver All versions installed on EcoStruxure Process Expert for AVEVA System Platform",
           "product_id": "CSAFPID-0008"
         },
         "product_reference": "CSAFPID-0001",
@@ -312,7 +313,7 @@
       "notes": [
         {
           "category": "description",
-          "text": "CWE-20: Improper Input Validation vulnerability exists that could cause denial of service of engineering\r\nworkstation when specific driver interface is invoked locally by an authenticated user with crafted input.",
+          "text": "CWE-20: Improper Input Validation vulnerability exists that could cause denial of service of engineering workstation when specific driver interface is invoked locally by an authenticated user with crafted input.",
           "title": "CVE Description"
         }
       ],
@@ -328,7 +329,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "For customers requiring the use of Uni-Telway driver, Schneider Electric \r\nrecommends using following mitigations to reduce the risk of exploit:\r\n\n\u2022 McAfee Application and Change Control software for application \r\ncontrol. Refer to the Cybersecurity Application Note available\nhttps://www.se.com/ww/en/download/document/EIO0000004778/.\r\n\n\u2022 Follow workstation, network and site-hardening guidelines in the \r\nSchneider Electric Recommended Cybersecurity Best Practices\r\ndocument.\r\n\nFor customers not requiring the use of Uni-Telway driver, Schneider \r\nElectric recommends uninstalling the driver.\r\n\nVersion 16.1 of EcoStruxureTM Control Expert does not include Uni-Telway driver by default anymore. This vulnerability is only affecting \r\ncustomers who have installed Uni-Telway driver.\r\n\n To ensure you are informed of all updates, including details on affected \r\nproducts and remediation plans, subscribe to Schneider Electric\u2019s \r\nsecurity notification service here: \r\nhttps://www.se.com/en/work/support/cybersecurity/security\u0002notifications.jsp",
+          "details": "For customers requiring the use of Uni-Telway driver, Schneider Electric recommends using following mitigations to reduce the risk of exploit:\r\n\n\u2022 McAfee Application and Change Control software for application control. Refer to the Cybersecurity Application Note available\nhttps://www.se.com/ww/en/download/document/EIO0000004778/.\r\n\n\u2022 Follow workstation, network and site-hardening guidelines in the \r\nSchneider Electric Recommended Cybersecurity Best Practices\r\ndocument.\r\n\nFor customers not requiring the use of Uni-Telway driver, Schneider \r\nElectric recommends uninstalling the driver.\r\n\nVersion 16.1 of EcoStruxureTM Control Expert does not include Uni-Telway driver by default anymore. This vulnerability is only affecting \r\ncustomers who have installed Uni-Telway driver.\r\n\n To ensure you are informed of all updates, including details on affected \r\nproducts and remediation plans, subscribe to Schneider Electric\u2019s \r\nsecurity notification service here: \r\nhttps://www.se.com/en/work/support/cybersecurity/security\u0002notifications.jsp",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0006",

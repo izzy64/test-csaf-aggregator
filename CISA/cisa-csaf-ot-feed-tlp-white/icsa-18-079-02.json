@@ -1,1477 +1,1477 @@
 {
-  "document": {
-    "acknowledgments": [
-      {
-        "organization": "Siemens ProductCERT",
-        "summary": "reporting this vulnerability to CISA."
-      }
-    ],
-    "category": "csaf_security_advisory",
-    "csaf_version": "2.0",
-    "distribution": {
-      "text": "Disclosure is not limited",
-      "tlp": {
-        "label": "WHITE",
-        "url": "https://us-cert.cisa.gov/tlp/"
-      }
-    },
-    "lang": "en",
-    "notes": [
-      {
-        "category": "summary",
-        "text": "Several industrial controllers are affected by a security vulnerability that could allow an attacker to cause a denial of service condition via PROFINET DCP network packets under certain circumstances. Precondition for this scenario is a direct OSI Layer 2 access to the affected products. PROFIBUS interfaces are not affected. \n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available.",
-        "title": "Summary"
-      },
-      {
-        "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
-        "title": "General Recommendations"
-      },
-      {
-        "category": "general",
-        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
-        "title": "Additional Resources"
-      },
-      {
-        "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
-        "title": "Terms of Use"
-      },
-      {
-        "category": "legal_disclaimer",
-        "text": "All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
-        "title": "Legal Notice"
-      },
-      {
-        "category": "other",
-        "text": "This CISA CSAF advisory was converted from Siemens ProductCERT's CSAF advisory.",
-        "title": "Advisory Conversion Disclaimer"
-      },
-      {
-        "category": "other",
-        "text": "Multiple",
-        "title": "Critical infrastructure sectors"
-      },
-      {
-        "category": "other",
-        "text": "Worldwide",
-        "title": "Countries/areas deployed"
-      },
-      {
-        "category": "other",
-        "text": "Germany",
-        "title": "Company headquarters location"
-      },
-      {
-        "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
-        "title": "Recommended Practices"
-      }
-    ],
-    "publisher": {
-      "category": "other",
-      "contact_details": "central@cisa.dhs.gov",
-      "name": "CISA",
-      "namespace": "https://www.cisa.gov/"
-    },
-    "references": [
-      {
-        "category": "self",
-        "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - CSAF Version",
-        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-592007.json"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - HTML Version",
-        "url": "https://cert-portal.siemens.com/productcert/html/ssa-592007.html"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-592007.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-592007.txt"
-      },
-      {
-        "category": "self",
-        "summary": "ICS Advisory ICSA-18-079-02 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2018/icsa-18-079-02.json"
-      },
-      {
-        "category": "self",
-        "summary": "ICS Advisory ICSA-18-079-02 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-18-079-02"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/topics/industrial-control-systems"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Best_Practices_for_Industrial_Control_Systems.pdf"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
-      }
-    ],
-    "title": "Siemens SIMATIC, SINUMERIK, and PROFINET IO (Update D)",
-    "tracking": {
-      "current_release_date": "2023-05-09T00:00:00.000000Z",
-      "generator": {
-        "engine": {
-          "name": "CISA CSAF Generator",
-          "version": "1.0.0"
-        }
-      },
-      "id": "ICSA-18-079-02",
-      "initial_release_date": "2018-03-20T00:00:00.000000Z",
-      "revision_history": [
-        {
-          "date": "2018-03-20T00:00:00.000000Z",
-          "legacy_version": "1.0",
-          "number": "1",
-          "summary": "Publication Date"
-        },
-        {
-          "date": "2018-03-27T00:00:00.000000Z",
-          "legacy_version": "1.1",
-          "number": "2",
-          "summary": "Removed SINUMERIK 840D sl from affected products"
-        },
-        {
-          "date": "2018-10-09T00:00:00.000000Z",
-          "legacy_version": "1.2",
-          "number": "3",
-          "summary": "Added update for SINUMERIK 828D"
-        },
-        {
-          "date": "2019-01-08T00:00:00.000000Z",
-          "legacy_version": "1.3",
-          "number": "4",
-          "summary": "Added update for SIMATIC S7-300 incl. F and T"
-        },
-        {
-          "date": "2019-05-14T00:00:00.000000Z",
-          "legacy_version": "1.4",
-          "number": "5",
-          "summary": "Added update for S7-400 H V6"
-        },
-        {
-          "date": "2019-10-08T00:00:00.000000Z",
-          "legacy_version": "1.5",
-          "number": "6",
-          "summary": "Renamed SIMATIC WinAC RTX 2010 incl. F to SIMATIC WinAC RTX (F) 2010 and added update information for SIMATIC WinAC RTX (F) 2010"
-        },
-        {
-          "date": "2020-02-10T00:00:00.000000Z",
-          "legacy_version": "1.6",
-          "number": "7",
-          "summary": "SIPLUS devices now explicitly mentioned in the list of affected products"
-        },
-        {
-          "date": "2022-06-14T00:00:00.000000Z",
-          "legacy_version": "1.7",
-          "number": "8",
-          "summary": "No fix planned for SIMATIC CP 343-1 and SIMATIC CP 443-1 Advanced"
-        },
-        {
-          "date": "2022-08-09T00:00:00.000000Z",
-          "legacy_version": "1.8",
-          "number": "9",
-          "summary": "Clarify no fix planned for SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)"
-        },
-        {
-          "date": "2023-01-10T00:00:00.000000Z",
-          "legacy_version": "1.9",
-          "number": "10",
-          "summary": "SIMATIC S7-300 CPU family expanded with product specific designations, patch links and MLFBs; No fix planned for SIMATIC S7-400 PN/DP V7 CPU family (incl. SIPLUS variants)"
-        },
-        {
-          "date": "2023-04-11T00:00:00.000000Z",
-          "legacy_version": "2.0",
-          "number": "11",
-          "summary": "Added fix for SIMATIC CP 443-1 and CP 443-1 Advanced"
-        },
-        {
-          "date": "2023-05-09T00:00:00.000000Z",
-          "legacy_version": "2.1",
-          "number": "12",
-          "summary": "Added fix for SIMATIC S7-400 PN/DP V7 CPU family (incl. SIPLUS variants); expanded SIMATIC S7-400 PN/DP V7 CPU family (incl. SIPLUS variants) to individual products and MLFBs; reviewed CVSS score and description of CVE-2018-4843"
-        }
-      ],
-      "status": "final",
-      "version": "12"
-    }
-  },
-  "product_tree": {
-    "branches": [
-      {
-        "branches": [
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V7.0.3",
-                "product": {
-                  "name": " SIMATIC S7-400 CPU 414-3 PN/DP V7 (6ES7414-3EM07-0AB0)",
-                  "product_id": "CSAFPID-0001",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7414-3EM07-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": " SIMATIC S7-400 CPU 414-3 PN/DP V7 (6ES7414-3EM07-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V7.0.3",
-                "product": {
-                  "name": " SIMATIC S7-400 CPU 414F-3 PN/DP V7 (6ES7414-3FM07-0AB0)",
-                  "product_id": "CSAFPID-0002",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7414-3FM07-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": " SIMATIC S7-400 CPU 414F-3 PN/DP V7 (6ES7414-3FM07-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V7.0.3",
-                "product": {
-                  "name": " SIMATIC S7-400 CPU 416-3 PN/DP V7 (6ES7416-3ES07-0AB0)",
-                  "product_id": "CSAFPID-0003",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7416-3ES07-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": " SIMATIC S7-400 CPU 416-3 PN/DP V7 (6ES7416-3ES07-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V7.0.3",
-                "product": {
-                  "name": " SIMATIC S7-400 CPU 416F-3 PN/DP V7 (6ES7416-3FS07-0AB0)",
-                  "product_id": "CSAFPID-0004",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7416-3FS07-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": " SIMATIC S7-400 CPU 416F-3 PN/DP V7 (6ES7416-3FS07-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC CP 343-1 (incl. SIPLUS variants)",
-                  "product_id": "CSAFPID-0005"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC CP 343-1 (incl. SIPLUS variants)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)",
-                  "product_id": "CSAFPID-0006"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.3",
-                "product": {
-                  "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE0)",
-                  "product_id": "CSAFPID-0007",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK7443-1EX30-0XE0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.3",
-                "product": {
-                  "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE1)",
-                  "product_id": "CSAFPID-0008",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK7443-1EX30-0XE1"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE1)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.3",
-                "product": {
-                  "name": "SIMATIC CP 443-1 Advanced (6GK7443-1GX30-0XE0)",
-                  "product_id": "CSAFPID-0009",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK7443-1GX30-0XE0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC CP 443-1 Advanced (6GK7443-1GX30-0XE0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC ET 200pro IM154-8 PN/DP CPU (6ES7154-8AB01-0AB0)",
-                  "product_id": "CSAFPID-0010",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7154-8AB01-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET 200pro IM154-8 PN/DP CPU (6ES7154-8AB01-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC ET 200pro IM154-8F PN/DP CPU (6ES7154-8FB01-0AB0)",
-                  "product_id": "CSAFPID-0011",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7154-8FB01-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET 200pro IM154-8F PN/DP CPU (6ES7154-8FB01-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC ET 200pro IM154-8FX PN/DP CPU (6ES7154-8FX00-0AB0)",
-                  "product_id": "CSAFPID-0012",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7154-8FX00-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET 200pro IM154-8FX PN/DP CPU (6ES7154-8FX00-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC ET 200S IM151-8 PN/DP CPU (6ES7151-8AB01-0AB0)",
-                  "product_id": "CSAFPID-0013",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7151-8AB01-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET 200S IM151-8 PN/DP CPU (6ES7151-8AB01-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC ET 200S IM151-8F PN/DP CPU (6ES7151-8FB01-0AB0)",
-                  "product_id": "CSAFPID-0014",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7151-8FB01-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET 200S IM151-8F PN/DP CPU (6ES7151-8FB01-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V1.7.0",
-                "product": {
-                  "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
-                  "product_id": "CSAFPID-0015"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V1.7.0",
-                "product": {
-                  "name": "SIMATIC S7-1500 Software Controller",
-                  "product_id": "CSAFPID-0016"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 Software Controller"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.3.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 314C-2 PN/DP (6ES7314-6EH04-0AB0)",
-                  "product_id": "CSAFPID-0017",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7314-6EH04-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 314C-2 PN/DP (6ES7314-6EH04-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 315-2 PN/DP (6ES7315-2EH14-0AB0)",
-                  "product_id": "CSAFPID-0018",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7315-2EH14-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 315-2 PN/DP (6ES7315-2EH14-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 315F-2 PN/DP (6ES7315-2FJ14-0AB0)",
-                  "product_id": "CSAFPID-0019",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7315-2FJ14-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 315F-2 PN/DP (6ES7315-2FJ14-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 315T-3 PN/DP (6ES7315-7TJ10-0AB0)",
-                  "product_id": "CSAFPID-0020",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7315-7TJ10-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 315T-3 PN/DP (6ES7315-7TJ10-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 317-2 PN/DP (6ES7317-2EK14-0AB0)",
-                  "product_id": "CSAFPID-0021",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7317-2EK14-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 317-2 PN/DP (6ES7317-2EK14-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 317F-2 PN/DP (6ES7317-2FK14-0AB0)",
-                  "product_id": "CSAFPID-0022",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7317-2FK14-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 317F-2 PN/DP (6ES7317-2FK14-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 317T-3 PN/DP (6ES7317-7TK10-0AB0)",
-                  "product_id": "CSAFPID-0023",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7317-7TK10-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 317T-3 PN/DP (6ES7317-7TK10-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 317TF-3 PN/DP (6ES7317-7UL10-0AB0)",
-                  "product_id": "CSAFPID-0024",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7317-7UL10-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 317TF-3 PN/DP (6ES7317-7UL10-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 319-3 PN/DP (6ES7318-3EL01-0AB0)",
-                  "product_id": "CSAFPID-0025",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7318-3EL01-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 319-3 PN/DP (6ES7318-3EL01-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIMATIC S7-300 CPU 319F-3 PN/DP (6ES7318-3FL01-0AB0)",
-                  "product_id": "CSAFPID-0026",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7318-3FL01-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-300 CPU 319F-3 PN/DP (6ES7318-3FL01-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V7.0.3",
-                "product": {
-                  "name": "SIMATIC S7-400 CPU 412-2 PN V7 (6ES7412-2EK07-0AB0)",
-                  "product_id": "CSAFPID-0027",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7412-2EK07-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-400 CPU 412-2 PN V7 (6ES7412-2EK07-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V6.0.9",
-                "product": {
-                  "name": "SIMATIC S7-400 H V6 CPU family (incl. SIPLUS variants)",
-                  "product_id": "CSAFPID-0028"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-400 H V6 CPU family (incl. SIPLUS variants)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V6.0.7",
-                "product": {
-                  "name": "SIMATIC S7-400 PN/DP V6 CPU family (incl. SIPLUS variants)",
-                  "product_id": "CSAFPID-0029"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-400 PN/DP V6 CPU family (incl. SIPLUS variants)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V8.1",
-                "product": {
-                  "name": "SIMATIC S7-410 CPU family (incl. SIPLUS variants)",
-                  "product_id": "CSAFPID-0030"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-410 CPU family (incl. SIPLUS variants)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V2010_SP3",
-                "product": {
-                  "name": "SIMATIC WinAC RTX 2010 (6ES7671-0RC08-0YA0)",
-                  "product_id": "CSAFPID-0031",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7671-0RC08-0YA0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinAC RTX 2010 (6ES7671-0RC08-0YA0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V2010_SP3",
-                "product": {
-                  "name": "SIMATIC WinAC RTX F 2010 (6ES7671-1RC08-0YA0)",
-                  "product_id": "CSAFPID-0032",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7671-1RC08-0YA0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC WinAC RTX F 2010 (6ES7671-1RC08-0YA0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<V4.7_SP6_HF1",
-                "product": {
-                  "name": "SINUMERIK 828D",
-                  "product_id": "CSAFPID-0033"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SINUMERIK 828D"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIPLUS ET 200S IM151-8 PN/DP CPU (6AG1151-8AB01-7AB0)",
-                  "product_id": "CSAFPID-0034",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1151-8AB01-7AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS ET 200S IM151-8 PN/DP CPU (6AG1151-8AB01-7AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIPLUS ET 200S IM151-8F PN/DP CPU (6AG1151-8FB01-2AB0)",
-                  "product_id": "CSAFPID-0035",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1151-8FB01-2AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS ET 200S IM151-8F PN/DP CPU (6AG1151-8FB01-2AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.3",
-                "product": {
-                  "name": "SIPLUS NET CP 443-1 (6AG1443-1EX30-4XE0)",
-                  "product_id": "CSAFPID-0036",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1443-1EX30-4XE0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS NET CP 443-1 (6AG1443-1EX30-4XE0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.3",
-                "product": {
-                  "name": "SIPLUS NET CP 443-1 Advanced (6AG1443-1GX30-4XE0)",
-                  "product_id": "CSAFPID-0037",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1443-1GX30-4XE0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS NET CP 443-1 Advanced (6AG1443-1GX30-4XE0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.3.16",
-                "product": {
-                  "name": "SIPLUS S7-300 CPU 314C-2 PN/DP (6AG1314-6EH04-7AB0)",
-                  "product_id": "CSAFPID-0038",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1314-6EH04-7AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-300 CPU 314C-2 PN/DP (6AG1314-6EH04-7AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIPLUS S7-300 CPU 315-2 PN/DP (6AG1315-2EH14-7AB0)",
-                  "product_id": "CSAFPID-0039",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1315-2EH14-7AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-300 CPU 315-2 PN/DP (6AG1315-2EH14-7AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIPLUS S7-300 CPU 315F-2 PN/DP (6AG1315-2FJ14-2AB0)",
-                  "product_id": "CSAFPID-0040",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1315-2FJ14-2AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-300 CPU 315F-2 PN/DP (6AG1315-2FJ14-2AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIPLUS S7-300 CPU 317-2 PN/DP (6AG1317-2EK14-7AB0)",
-                  "product_id": "CSAFPID-0041",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1317-2EK14-7AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-300 CPU 317-2 PN/DP (6AG1317-2EK14-7AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V3.2.16",
-                "product": {
-                  "name": "SIPLUS S7-300 CPU 317F-2 PN/DP (6AG1317-2FK14-2AB0)",
-                  "product_id": "CSAFPID-0042",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1317-2FK14-2AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-300 CPU 317F-2 PN/DP (6AG1317-2FK14-2AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V7.0.3",
-                "product": {
-                  "name": "SIPLUS S7-400 CPU 414-3 PN/DP V7 (6AG1414-3EM07-7AB0)",
-                  "product_id": "CSAFPID-0043",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1414-3EM07-7AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-400 CPU 414-3 PN/DP V7 (6AG1414-3EM07-7AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V7.0.3",
-                "product": {
-                  "name": "SIPLUS S7-400 CPU 416-3 PN/DP V7 (6AG1416-3ES07-7AB0)",
-                  "product_id": "CSAFPID-0044",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1416-3ES07-7AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-400 CPU 416-3 PN/DP V7 (6AG1416-3ES07-7AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "Softnet PROFINET IO for PC-based Windows systems",
-                  "product_id": "CSAFPID-0045"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Softnet PROFINET IO for PC-based Windows systems"
-          }
+    "document": {
+        "acknowledgments": [
+            {
+                "organization": "Siemens ProductCERT",
+                "summary": "reporting this vulnerability to CISA."
+            }
         ],
-        "category": "vendor",
-        "name": "Siemens"
-      }
-    ]
-  },
-  "vulnerabilities": [
-    {
-      "cve": "CVE-2018-4843",
-      "cwe": {
-        "id": "CWE-20",
-        "name": "Improper Input Validation"
-      },
-      "notes": [
-        {
-          "category": "summary",
-          "text": "Responding to a PROFINET DCP request with a specially crafted PROFINET DCP packet could cause a denial of service condition of the requesting system.\r\n\r\nThe security vulnerability could be exploited by an attacker located on the same Ethernet segment (OSI Layer 2) as the targeted device. A manual restart is required to recover the system.",
-          "title": "Summary"
+        "category": "csaf_security_advisory",
+        "csaf_version": "2.0",
+        "distribution": {
+            "text": "Disclosure is not limited",
+            "tlp": {
+                "label": "WHITE",
+                "url": "https://us-cert.cisa.gov/tlp/"
+            }
+        },
+        "lang": "en",
+        "notes": [
+            {
+                "category": "summary",
+                "text": "Several industrial controllers are affected by a security vulnerability that could allow an attacker to cause a denial of service condition via PROFINET DCP network packets under certain circumstances. Precondition for this scenario is a direct OSI Layer 2 access to the affected products. PROFIBUS interfaces are not affected. \n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available.",
+                "title": "Summary"
+            },
+            {
+                "category": "general",
+                "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+                "title": "General Recommendations"
+            },
+            {
+                "category": "general",
+                "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+                "title": "Additional Resources"
+            },
+            {
+                "category": "legal_disclaimer",
+                "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+                "title": "Terms of Use"
+            },
+            {
+                "category": "legal_disclaimer",
+                "text": "All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
+                "title": "Legal Notice"
+            },
+            {
+                "category": "other",
+                "text": "This CISA CSAF advisory was converted from Siemens ProductCERT's CSAF advisory.",
+                "title": "Advisory Conversion Disclaimer"
+            },
+            {
+                "category": "other",
+                "text": "Multiple",
+                "title": "Critical infrastructure sectors"
+            },
+            {
+                "category": "other",
+                "text": "Worldwide",
+                "title": "Countries/areas deployed"
+            },
+            {
+                "category": "other",
+                "text": "Germany",
+                "title": "Company headquarters location"
+            },
+            {
+                "category": "general",
+                "text": "CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "Locate control system networks and remote devices behind firewalls and isolate them from business networks.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies.",
+                "title": "Recommended Practices"
+            },
+            {
+                "category": "general",
+                "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+                "title": "Recommended Practices"
+            }
+        ],
+        "publisher": {
+            "category": "other",
+            "contact_details": "central@cisa.dhs.gov",
+            "name": "CISA",
+            "namespace": "https://www.cisa.gov/"
+        },
+        "references": [
+            {
+                "category": "self",
+                "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - CSAF Version",
+                "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-592007.json"
+            },
+            {
+                "category": "self",
+                "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - HTML Version",
+                "url": "https://cert-portal.siemens.com/productcert/html/ssa-592007.html"
+            },
+            {
+                "category": "self",
+                "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - PDF Version",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-592007.pdf"
+            },
+            {
+                "category": "self",
+                "summary": "SSA-592007: Denial of Service Vulnerability in Industrial Products - TXT Version",
+                "url": "https://cert-portal.siemens.com/productcert/txt/ssa-592007.txt"
+            },
+            {
+                "category": "self",
+                "summary": "ICS Advisory ICSA-18-079-02 JSON",
+                "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2018/icsa-18-079-02.json"
+            },
+            {
+                "category": "self",
+                "summary": "ICS Advisory ICSA-18-079-02 - Web Version",
+                "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-18-079-02"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/topics/industrial-control-systems"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Best_Practices_for_Industrial_Control_Systems.pdf"
+            },
+            {
+                "category": "external",
+                "summary": "Recommended Practices",
+                "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+            }
+        ],
+        "title": "Siemens SIMATIC, SINUMERIK, and PROFINET IO (Update D)",
+        "tracking": {
+            "current_release_date": "2023-05-09T00:00:00.000000Z",
+            "generator": {
+                "engine": {
+                    "name": "CISA CSAF Generator",
+                    "version": "1.0.0"
+                }
+            },
+            "id": "ICSA-18-079-02",
+            "initial_release_date": "2018-03-20T00:00:00.000000Z",
+            "revision_history": [
+                {
+                    "date": "2018-03-20T00:00:00.000000Z",
+                    "legacy_version": "1.0",
+                    "number": "1",
+                    "summary": "Publication Date"
+                },
+                {
+                    "date": "2018-03-27T00:00:00.000000Z",
+                    "legacy_version": "1.1",
+                    "number": "2",
+                    "summary": "Removed SINUMERIK 840D sl from affected products"
+                },
+                {
+                    "date": "2018-10-09T00:00:00.000000Z",
+                    "legacy_version": "1.2",
+                    "number": "3",
+                    "summary": "Added update for SINUMERIK 828D"
+                },
+                {
+                    "date": "2019-01-08T00:00:00.000000Z",
+                    "legacy_version": "1.3",
+                    "number": "4",
+                    "summary": "Added update for SIMATIC S7-300 incl. F and T"
+                },
+                {
+                    "date": "2019-05-14T00:00:00.000000Z",
+                    "legacy_version": "1.4",
+                    "number": "5",
+                    "summary": "Added update for S7-400 H V6"
+                },
+                {
+                    "date": "2019-10-08T00:00:00.000000Z",
+                    "legacy_version": "1.5",
+                    "number": "6",
+                    "summary": "Renamed SIMATIC WinAC RTX 2010 incl. F to SIMATIC WinAC RTX (F) 2010 and added update information for SIMATIC WinAC RTX (F) 2010"
+                },
+                {
+                    "date": "2020-02-10T00:00:00.000000Z",
+                    "legacy_version": "1.6",
+                    "number": "7",
+                    "summary": "SIPLUS devices now explicitly mentioned in the list of affected products"
+                },
+                {
+                    "date": "2022-06-14T00:00:00.000000Z",
+                    "legacy_version": "1.7",
+                    "number": "8",
+                    "summary": "No fix planned for SIMATIC CP 343-1 and SIMATIC CP 443-1 Advanced"
+                },
+                {
+                    "date": "2022-08-09T00:00:00.000000Z",
+                    "legacy_version": "1.8",
+                    "number": "9",
+                    "summary": "Clarify no fix planned for SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)"
+                },
+                {
+                    "date": "2023-01-10T00:00:00.000000Z",
+                    "legacy_version": "1.9",
+                    "number": "10",
+                    "summary": "SIMATIC S7-300 CPU family expanded with product specific designations, patch links and MLFBs; No fix planned for SIMATIC S7-400 PN/DP V7 CPU family (incl. SIPLUS variants)"
+                },
+                {
+                    "date": "2023-04-11T00:00:00.000000Z",
+                    "legacy_version": "2.0",
+                    "number": "11",
+                    "summary": "Added fix for SIMATIC CP 443-1 and CP 443-1 Advanced"
+                },
+                {
+                    "date": "2023-05-09T00:00:00.000000Z",
+                    "legacy_version": "2.1",
+                    "number": "12",
+                    "summary": "Added fix for SIMATIC S7-400 PN/DP V7 CPU family (incl. SIPLUS variants); expanded SIMATIC S7-400 PN/DP V7 CPU family (incl. SIPLUS variants) to individual products and MLFBs; reviewed CVSS score and description of CVE-2018-4843"
+                }
+            ],
+            "status": "final",
+            "version": "12"
         }
-      ],
-      "product_status": {
-        "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0003",
-          "CSAFPID-0004",
-          "CSAFPID-0005",
-          "CSAFPID-0006",
-          "CSAFPID-0007",
-          "CSAFPID-0008",
-          "CSAFPID-0009",
-          "CSAFPID-0010",
-          "CSAFPID-0011",
-          "CSAFPID-0012",
-          "CSAFPID-0013",
-          "CSAFPID-0014",
-          "CSAFPID-0015",
-          "CSAFPID-0016",
-          "CSAFPID-0017",
-          "CSAFPID-0018",
-          "CSAFPID-0019",
-          "CSAFPID-0020",
-          "CSAFPID-0021",
-          "CSAFPID-0022",
-          "CSAFPID-0023",
-          "CSAFPID-0024",
-          "CSAFPID-0025",
-          "CSAFPID-0026",
-          "CSAFPID-0027",
-          "CSAFPID-0028",
-          "CSAFPID-0029",
-          "CSAFPID-0030",
-          "CSAFPID-0031",
-          "CSAFPID-0032",
-          "CSAFPID-0033",
-          "CSAFPID-0034",
-          "CSAFPID-0035",
-          "CSAFPID-0036",
-          "CSAFPID-0037",
-          "CSAFPID-0038",
-          "CSAFPID-0039",
-          "CSAFPID-0040",
-          "CSAFPID-0041",
-          "CSAFPID-0042",
-          "CSAFPID-0043",
-          "CSAFPID-0044",
-          "CSAFPID-0045"
+    },
+    "product_tree": {
+        "branches": [
+            {
+                "branches": [
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V7.0.3",
+                                "product": {
+                                    "name": " SIMATIC S7-400 CPU 414-3 PN/DP V7 (6ES7414-3EM07-0AB0)",
+                                    "product_id": "CSAFPID-0001",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7414-3EM07-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": " SIMATIC S7-400 CPU 414-3 PN/DP V7 (6ES7414-3EM07-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V7.0.3",
+                                "product": {
+                                    "name": " SIMATIC S7-400 CPU 414F-3 PN/DP V7 (6ES7414-3FM07-0AB0)",
+                                    "product_id": "CSAFPID-0002",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7414-3FM07-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": " SIMATIC S7-400 CPU 414F-3 PN/DP V7 (6ES7414-3FM07-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V7.0.3",
+                                "product": {
+                                    "name": " SIMATIC S7-400 CPU 416-3 PN/DP V7 (6ES7416-3ES07-0AB0)",
+                                    "product_id": "CSAFPID-0003",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7416-3ES07-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": " SIMATIC S7-400 CPU 416-3 PN/DP V7 (6ES7416-3ES07-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V7.0.3",
+                                "product": {
+                                    "name": " SIMATIC S7-400 CPU 416F-3 PN/DP V7 (6ES7416-3FS07-0AB0)",
+                                    "product_id": "CSAFPID-0004",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7416-3FS07-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": " SIMATIC S7-400 CPU 416F-3 PN/DP V7 (6ES7416-3FS07-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/*",
+                                "product": {
+                                    "name": "SIMATIC CP 343-1 (incl. SIPLUS variants)",
+                                    "product_id": "CSAFPID-0005"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC CP 343-1 (incl. SIPLUS variants)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/*",
+                                "product": {
+                                    "name": "SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)",
+                                    "product_id": "CSAFPID-0006"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.3",
+                                "product": {
+                                    "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE0)",
+                                    "product_id": "CSAFPID-0007",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6GK7443-1EX30-0XE0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.3",
+                                "product": {
+                                    "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE1)",
+                                    "product_id": "CSAFPID-0008",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6GK7443-1EX30-0XE1"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC CP 443-1 (6GK7443-1EX30-0XE1)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.3",
+                                "product": {
+                                    "name": "SIMATIC CP 443-1 Advanced (6GK7443-1GX30-0XE0)",
+                                    "product_id": "CSAFPID-0009",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6GK7443-1GX30-0XE0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC CP 443-1 Advanced (6GK7443-1GX30-0XE0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC ET 200pro IM154-8 PN/DP CPU (6ES7154-8AB01-0AB0)",
+                                    "product_id": "CSAFPID-0010",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7154-8AB01-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC ET 200pro IM154-8 PN/DP CPU (6ES7154-8AB01-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC ET 200pro IM154-8F PN/DP CPU (6ES7154-8FB01-0AB0)",
+                                    "product_id": "CSAFPID-0011",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7154-8FB01-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC ET 200pro IM154-8F PN/DP CPU (6ES7154-8FB01-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC ET 200pro IM154-8FX PN/DP CPU (6ES7154-8FX00-0AB0)",
+                                    "product_id": "CSAFPID-0012",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7154-8FX00-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC ET 200pro IM154-8FX PN/DP CPU (6ES7154-8FX00-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC ET 200S IM151-8 PN/DP CPU (6ES7151-8AB01-0AB0)",
+                                    "product_id": "CSAFPID-0013",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7151-8AB01-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC ET 200S IM151-8 PN/DP CPU (6ES7151-8AB01-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC ET 200S IM151-8F PN/DP CPU (6ES7151-8FB01-0AB0)",
+                                    "product_id": "CSAFPID-0014",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7151-8FB01-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC ET 200S IM151-8F PN/DP CPU (6ES7151-8FB01-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V1.7.0",
+                                "product": {
+                                    "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+                                    "product_id": "CSAFPID-0015"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V1.7.0",
+                                "product": {
+                                    "name": "SIMATIC S7-1500 Software Controller",
+                                    "product_id": "CSAFPID-0016"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-1500 Software Controller"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.3.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 314C-2 PN/DP (6ES7314-6EH04-0AB0)",
+                                    "product_id": "CSAFPID-0017",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7314-6EH04-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 314C-2 PN/DP (6ES7314-6EH04-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 315-2 PN/DP (6ES7315-2EH14-0AB0)",
+                                    "product_id": "CSAFPID-0018",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7315-2EH14-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 315-2 PN/DP (6ES7315-2EH14-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 315F-2 PN/DP (6ES7315-2FJ14-0AB0)",
+                                    "product_id": "CSAFPID-0019",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7315-2FJ14-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 315F-2 PN/DP (6ES7315-2FJ14-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 315T-3 PN/DP (6ES7315-7TJ10-0AB0)",
+                                    "product_id": "CSAFPID-0020",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7315-7TJ10-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 315T-3 PN/DP (6ES7315-7TJ10-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 317-2 PN/DP (6ES7317-2EK14-0AB0)",
+                                    "product_id": "CSAFPID-0021",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7317-2EK14-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 317-2 PN/DP (6ES7317-2EK14-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 317F-2 PN/DP (6ES7317-2FK14-0AB0)",
+                                    "product_id": "CSAFPID-0022",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7317-2FK14-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 317F-2 PN/DP (6ES7317-2FK14-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 317T-3 PN/DP (6ES7317-7TK10-0AB0)",
+                                    "product_id": "CSAFPID-0023",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7317-7TK10-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 317T-3 PN/DP (6ES7317-7TK10-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 317TF-3 PN/DP (6ES7317-7UL10-0AB0)",
+                                    "product_id": "CSAFPID-0024",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7317-7UL10-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 317TF-3 PN/DP (6ES7317-7UL10-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 319-3 PN/DP (6ES7318-3EL01-0AB0)",
+                                    "product_id": "CSAFPID-0025",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7318-3EL01-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 319-3 PN/DP (6ES7318-3EL01-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIMATIC S7-300 CPU 319F-3 PN/DP (6ES7318-3FL01-0AB0)",
+                                    "product_id": "CSAFPID-0026",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7318-3FL01-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-300 CPU 319F-3 PN/DP (6ES7318-3FL01-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V7.0.3",
+                                "product": {
+                                    "name": "SIMATIC S7-400 CPU 412-2 PN V7 (6ES7412-2EK07-0AB0)",
+                                    "product_id": "CSAFPID-0027",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7412-2EK07-0AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-400 CPU 412-2 PN V7 (6ES7412-2EK07-0AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V6.0.9",
+                                "product": {
+                                    "name": "SIMATIC S7-400 H V6 CPU family (incl. SIPLUS variants)",
+                                    "product_id": "CSAFPID-0028"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-400 H V6 CPU family (incl. SIPLUS variants)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V6.0.7",
+                                "product": {
+                                    "name": "SIMATIC S7-400 PN/DP V6 CPU family (incl. SIPLUS variants)",
+                                    "product_id": "CSAFPID-0029"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-400 PN/DP V6 CPU family (incl. SIPLUS variants)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V8.1",
+                                "product": {
+                                    "name": "SIMATIC S7-410 CPU family (incl. SIPLUS variants)",
+                                    "product_id": "CSAFPID-0030"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC S7-410 CPU family (incl. SIPLUS variants)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "<V2010_SP3",
+                                "product": {
+                                    "name": "SIMATIC WinAC RTX 2010 (6ES7671-0RC08-0YA0)",
+                                    "product_id": "CSAFPID-0031",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7671-0RC08-0YA0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC WinAC RTX 2010 (6ES7671-0RC08-0YA0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "<V2010_SP3",
+                                "product": {
+                                    "name": "SIMATIC WinAC RTX F 2010 (6ES7671-1RC08-0YA0)",
+                                    "product_id": "CSAFPID-0032",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6ES7671-1RC08-0YA0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIMATIC WinAC RTX F 2010 (6ES7671-1RC08-0YA0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "<V4.7_SP6_HF1",
+                                "product": {
+                                    "name": "SINUMERIK 828D",
+                                    "product_id": "CSAFPID-0033"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SINUMERIK 828D"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIPLUS ET 200S IM151-8 PN/DP CPU (6AG1151-8AB01-7AB0)",
+                                    "product_id": "CSAFPID-0034",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1151-8AB01-7AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS ET 200S IM151-8 PN/DP CPU (6AG1151-8AB01-7AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIPLUS ET 200S IM151-8F PN/DP CPU (6AG1151-8FB01-2AB0)",
+                                    "product_id": "CSAFPID-0035",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1151-8FB01-2AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS ET 200S IM151-8F PN/DP CPU (6AG1151-8FB01-2AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.3",
+                                "product": {
+                                    "name": "SIPLUS NET CP 443-1 (6AG1443-1EX30-4XE0)",
+                                    "product_id": "CSAFPID-0036",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1443-1EX30-4XE0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS NET CP 443-1 (6AG1443-1EX30-4XE0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.3",
+                                "product": {
+                                    "name": "SIPLUS NET CP 443-1 Advanced (6AG1443-1GX30-4XE0)",
+                                    "product_id": "CSAFPID-0037",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1443-1GX30-4XE0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS NET CP 443-1 Advanced (6AG1443-1GX30-4XE0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.3.16",
+                                "product": {
+                                    "name": "SIPLUS S7-300 CPU 314C-2 PN/DP (6AG1314-6EH04-7AB0)",
+                                    "product_id": "CSAFPID-0038",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1314-6EH04-7AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS S7-300 CPU 314C-2 PN/DP (6AG1314-6EH04-7AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIPLUS S7-300 CPU 315-2 PN/DP (6AG1315-2EH14-7AB0)",
+                                    "product_id": "CSAFPID-0039",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1315-2EH14-7AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS S7-300 CPU 315-2 PN/DP (6AG1315-2EH14-7AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIPLUS S7-300 CPU 315F-2 PN/DP (6AG1315-2FJ14-2AB0)",
+                                    "product_id": "CSAFPID-0040",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1315-2FJ14-2AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS S7-300 CPU 315F-2 PN/DP (6AG1315-2FJ14-2AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIPLUS S7-300 CPU 317-2 PN/DP (6AG1317-2EK14-7AB0)",
+                                    "product_id": "CSAFPID-0041",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1317-2EK14-7AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS S7-300 CPU 317-2 PN/DP (6AG1317-2EK14-7AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V3.2.16",
+                                "product": {
+                                    "name": "SIPLUS S7-300 CPU 317F-2 PN/DP (6AG1317-2FK14-2AB0)",
+                                    "product_id": "CSAFPID-0042",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1317-2FK14-2AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS S7-300 CPU 317F-2 PN/DP (6AG1317-2FK14-2AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V7.0.3",
+                                "product": {
+                                    "name": "SIPLUS S7-400 CPU 414-3 PN/DP V7 (6AG1414-3EM07-7AB0)",
+                                    "product_id": "CSAFPID-0043",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1414-3EM07-7AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS S7-400 CPU 414-3 PN/DP V7 (6AG1414-3EM07-7AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/<V7.0.3",
+                                "product": {
+                                    "name": "SIPLUS S7-400 CPU 416-3 PN/DP V7 (6AG1416-3ES07-7AB0)",
+                                    "product_id": "CSAFPID-0044",
+                                    "product_identification_helper": {
+                                        "model_numbers": [
+                                            "6AG1416-3ES07-7AB0"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "SIPLUS S7-400 CPU 416-3 PN/DP V7 (6AG1416-3ES07-7AB0)"
+                    },
+                    {
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "vers:all/*",
+                                "product": {
+                                    "name": "Softnet PROFINET IO for PC-based Windows systems",
+                                    "product_id": "CSAFPID-0045"
+                                }
+                            }
+                        ],
+                        "category": "product_name",
+                        "name": "Softnet PROFINET IO for PC-based Windows systems"
+                    }
+                ],
+                "category": "vendor",
+                "name": "Siemens"
+            }
         ]
-      },
-      "remediations": [
+    },
+    "vulnerabilities": [
         {
-          "category": "mitigation",
-          "details": "Use VPN for protecting network communication between cells.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045"
-          ]
-        },
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0045"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.3 or later version",
-          "product_ids": [
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0036",
-            "CSAFPID-0037"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817938/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V7.0.3 or later version",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0027",
-            "CSAFPID-0043",
-            "CSAFPID-0044"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109752685/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.7 SP6 HF1 or later version\nSINUMERIK software can be obtained from your local Siemens account manager",
-          "product_ids": [
-            "CSAFPID-0033"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V6.0.7",
-          "product_ids": [
-            "CSAFPID-0029"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109474874"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V6.0.9",
-          "product_ids": [
-            "CSAFPID-0028"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109474550"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V8.1 or later version",
-          "product_ids": [
-            "CSAFPID-0030"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109476571"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V1.7.0 or later version",
-          "product_ids": [
-            "CSAFPID-0015"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V1.7.0 or later version",
-          "product_ids": [
-            "CSAFPID-0016"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478528/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V2010 SP3 or later version and apply BIOS and Microsoft Windows updates",
-          "product_ids": [
-            "CSAFPID-0031",
-            "CSAFPID-0032"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109765109/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0010"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/47354502/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0011"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/47354578/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0012"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/62612377/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0013",
-            "CSAFPID-0034"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/47353723/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0014",
-            "CSAFPID-0035"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/47354354/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.3.16 or later version",
-          "product_ids": [
-            "CSAFPID-0017",
-            "CSAFPID-0038"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/51466769/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0018",
-            "CSAFPID-0039"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/40360647/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0019",
-            "CSAFPID-0040"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/40944925/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0020"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/85049260/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0021",
-            "CSAFPID-0041"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/40362228/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0022",
-            "CSAFPID-0042"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/40945128/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0023"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/85059804/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0024"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/85063017/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0025"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/44442927/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2.16 or later version",
-          "product_ids": [
-            "CSAFPID-0026"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/44443101/"
+            "cve": "CVE-2018-4843",
+            "cwe": {
+                "id": "CWE-20",
+                "name": "Improper Input Validation"
+            },
+            "notes": [
+                {
+                    "category": "summary",
+                    "text": "Responding to a PROFINET DCP request with a specially crafted PROFINET DCP packet could cause a denial of service condition of the requesting system.\r\n\r\nThe security vulnerability could be exploited by an attacker located on the same Ethernet segment (OSI Layer 2) as the targeted device. A manual restart is required to recover the system.",
+                    "title": "Summary"
+                }
+            ],
+            "product_status": {
+                "known_affected": [
+                    "CSAFPID-0001",
+                    "CSAFPID-0002",
+                    "CSAFPID-0003",
+                    "CSAFPID-0004",
+                    "CSAFPID-0005",
+                    "CSAFPID-0006",
+                    "CSAFPID-0007",
+                    "CSAFPID-0008",
+                    "CSAFPID-0009",
+                    "CSAFPID-0010",
+                    "CSAFPID-0011",
+                    "CSAFPID-0012",
+                    "CSAFPID-0013",
+                    "CSAFPID-0014",
+                    "CSAFPID-0015",
+                    "CSAFPID-0016",
+                    "CSAFPID-0017",
+                    "CSAFPID-0018",
+                    "CSAFPID-0019",
+                    "CSAFPID-0020",
+                    "CSAFPID-0021",
+                    "CSAFPID-0022",
+                    "CSAFPID-0023",
+                    "CSAFPID-0024",
+                    "CSAFPID-0025",
+                    "CSAFPID-0026",
+                    "CSAFPID-0027",
+                    "CSAFPID-0028",
+                    "CSAFPID-0029",
+                    "CSAFPID-0030",
+                    "CSAFPID-0031",
+                    "CSAFPID-0032",
+                    "CSAFPID-0033",
+                    "CSAFPID-0034",
+                    "CSAFPID-0035",
+                    "CSAFPID-0036",
+                    "CSAFPID-0037",
+                    "CSAFPID-0038",
+                    "CSAFPID-0039",
+                    "CSAFPID-0040",
+                    "CSAFPID-0041",
+                    "CSAFPID-0042",
+                    "CSAFPID-0043",
+                    "CSAFPID-0044",
+                    "CSAFPID-0045"
+                ]
+            },
+            "remediations": [
+                {
+                    "category": "mitigation",
+                    "details": "Use VPN for protecting network communication between cells.",
+                    "product_ids": [
+                        "CSAFPID-0001",
+                        "CSAFPID-0002",
+                        "CSAFPID-0003",
+                        "CSAFPID-0004",
+                        "CSAFPID-0005",
+                        "CSAFPID-0006",
+                        "CSAFPID-0007",
+                        "CSAFPID-0008",
+                        "CSAFPID-0009",
+                        "CSAFPID-0010",
+                        "CSAFPID-0011",
+                        "CSAFPID-0012",
+                        "CSAFPID-0013",
+                        "CSAFPID-0014",
+                        "CSAFPID-0015",
+                        "CSAFPID-0016",
+                        "CSAFPID-0017",
+                        "CSAFPID-0018",
+                        "CSAFPID-0019",
+                        "CSAFPID-0020",
+                        "CSAFPID-0021",
+                        "CSAFPID-0022",
+                        "CSAFPID-0023",
+                        "CSAFPID-0024",
+                        "CSAFPID-0025",
+                        "CSAFPID-0026",
+                        "CSAFPID-0027",
+                        "CSAFPID-0028",
+                        "CSAFPID-0029",
+                        "CSAFPID-0030",
+                        "CSAFPID-0031",
+                        "CSAFPID-0032",
+                        "CSAFPID-0033",
+                        "CSAFPID-0034",
+                        "CSAFPID-0035",
+                        "CSAFPID-0036",
+                        "CSAFPID-0037",
+                        "CSAFPID-0038",
+                        "CSAFPID-0039",
+                        "CSAFPID-0040",
+                        "CSAFPID-0041",
+                        "CSAFPID-0042",
+                        "CSAFPID-0043",
+                        "CSAFPID-0044",
+                        "CSAFPID-0045"
+                    ]
+                },
+                {
+                    "category": "no_fix_planned",
+                    "details": "Currently no fix is planned",
+                    "product_ids": [
+                        "CSAFPID-0005",
+                        "CSAFPID-0006",
+                        "CSAFPID-0045"
+                    ]
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.3 or later version",
+                    "product_ids": [
+                        "CSAFPID-0007",
+                        "CSAFPID-0008",
+                        "CSAFPID-0009",
+                        "CSAFPID-0036",
+                        "CSAFPID-0037"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109817938/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V7.0.3 or later version",
+                    "product_ids": [
+                        "CSAFPID-0001",
+                        "CSAFPID-0002",
+                        "CSAFPID-0003",
+                        "CSAFPID-0004",
+                        "CSAFPID-0027",
+                        "CSAFPID-0043",
+                        "CSAFPID-0044"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109752685/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V4.7 SP6 HF1 or later version\nSINUMERIK software can be obtained from your local Siemens account manager",
+                    "product_ids": [
+                        "CSAFPID-0033"
+                    ]
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V6.0.7",
+                    "product_ids": [
+                        "CSAFPID-0029"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109474874"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V6.0.9",
+                    "product_ids": [
+                        "CSAFPID-0028"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109474550"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V8.1 or later version",
+                    "product_ids": [
+                        "CSAFPID-0030"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109476571"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V1.7.0 or later version",
+                    "product_ids": [
+                        "CSAFPID-0015"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V1.7.0 or later version",
+                    "product_ids": [
+                        "CSAFPID-0016"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109478528/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V2010 SP3 or later version and apply BIOS and Microsoft Windows updates",
+                    "product_ids": [
+                        "CSAFPID-0031",
+                        "CSAFPID-0032"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/109765109/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0010"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/47354502/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0011"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/47354578/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0012"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/62612377/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0013",
+                        "CSAFPID-0034"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/47353723/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0014",
+                        "CSAFPID-0035"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/47354354/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.3.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0017",
+                        "CSAFPID-0038"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/51466769/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0018",
+                        "CSAFPID-0039"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/40360647/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0019",
+                        "CSAFPID-0040"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/40944925/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0020"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/85049260/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0021",
+                        "CSAFPID-0041"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/40362228/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0022",
+                        "CSAFPID-0042"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/40945128/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0023"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/85059804/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0024"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/85063017/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0025"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/44442927/"
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to V3.2.16 or later version",
+                    "product_ids": [
+                        "CSAFPID-0026"
+                    ],
+                    "url": "https://support.industry.siemens.com/cs/ww/en/view/44443101/"
+                }
+            ],
+            "scores": [
+                {
+                    "cvss_v3": {
+                        "baseScore": 6.5,
+                        "baseSeverity": "MEDIUM",
+                        "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+                        "version": "3.1"
+                    },
+                    "products": [
+                        "CSAFPID-0001",
+                        "CSAFPID-0002",
+                        "CSAFPID-0003",
+                        "CSAFPID-0004",
+                        "CSAFPID-0005",
+                        "CSAFPID-0006",
+                        "CSAFPID-0007",
+                        "CSAFPID-0008",
+                        "CSAFPID-0009",
+                        "CSAFPID-0010",
+                        "CSAFPID-0011",
+                        "CSAFPID-0012",
+                        "CSAFPID-0013",
+                        "CSAFPID-0014",
+                        "CSAFPID-0015",
+                        "CSAFPID-0016",
+                        "CSAFPID-0017",
+                        "CSAFPID-0018",
+                        "CSAFPID-0019",
+                        "CSAFPID-0020",
+                        "CSAFPID-0021",
+                        "CSAFPID-0022",
+                        "CSAFPID-0023",
+                        "CSAFPID-0024",
+                        "CSAFPID-0025",
+                        "CSAFPID-0026",
+                        "CSAFPID-0027",
+                        "CSAFPID-0028",
+                        "CSAFPID-0029",
+                        "CSAFPID-0030",
+                        "CSAFPID-0031",
+                        "CSAFPID-0032",
+                        "CSAFPID-0033",
+                        "CSAFPID-0034",
+                        "CSAFPID-0035",
+                        "CSAFPID-0036",
+                        "CSAFPID-0037",
+                        "CSAFPID-0038",
+                        "CSAFPID-0039",
+                        "CSAFPID-0040",
+                        "CSAFPID-0041",
+                        "CSAFPID-0042",
+                        "CSAFPID-0043",
+                        "CSAFPID-0044",
+                        "CSAFPID-0045"
+                    ]
+                }
+            ],
+            "title": "CVE-2018-4843"
         }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 6.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010",
-            "CSAFPID-0011",
-            "CSAFPID-0012",
-            "CSAFPID-0013",
-            "CSAFPID-0014",
-            "CSAFPID-0015",
-            "CSAFPID-0016",
-            "CSAFPID-0017",
-            "CSAFPID-0018",
-            "CSAFPID-0019",
-            "CSAFPID-0020",
-            "CSAFPID-0021",
-            "CSAFPID-0022",
-            "CSAFPID-0023",
-            "CSAFPID-0024",
-            "CSAFPID-0025",
-            "CSAFPID-0026",
-            "CSAFPID-0027",
-            "CSAFPID-0028",
-            "CSAFPID-0029",
-            "CSAFPID-0030",
-            "CSAFPID-0031",
-            "CSAFPID-0032",
-            "CSAFPID-0033",
-            "CSAFPID-0034",
-            "CSAFPID-0035",
-            "CSAFPID-0036",
-            "CSAFPID-0037",
-            "CSAFPID-0038",
-            "CSAFPID-0039",
-            "CSAFPID-0040",
-            "CSAFPID-0041",
-            "CSAFPID-0042",
-            "CSAFPID-0043",
-            "CSAFPID-0044",
-            "CSAFPID-0045"
-          ]
-        }
-      ],
-      "title": "CVE-2018-4843"
-    }
-  ]
+    ]
 }

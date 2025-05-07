@@ -179,11 +179,11 @@
     "tracking": {
       "current_release_date": "2024-12-03T07:00:00.000000Z",
       "generator": {
-        "date": "2024-12-03T22:50:52.079Z",
         "engine": {
           "name": "Secvisogram",
           "version": "2.5.16"
-        }
+        },
+        "date": "2024-12-03T22:50:52.079Z"
       },
       "id": "ICSA-24-184-03",
       "initial_release_date": "2024-07-02T06:00:00.000000Z",
@@ -270,8 +270,12 @@
         "name": "ICONICS"
       },
       {
+        "name": "Mitsubishi Electric",
+        "category": "vendor",
         "branches": [
           {
+            "category": "product_name",
+            "name": "Mitsubishi Electric MC Works64",
             "branches": [
               {
                 "category": "product_version_range",
@@ -281,13 +285,9 @@
                   "product_id": "CSAFPID-0005"
                 }
               }
-            ],
-            "category": "product_name",
-            "name": "Mitsubishi Electric MC Works64"
+            ]
           }
-        ],
-        "category": "vendor",
-        "name": "Mitsubishi Electric"
+        ]
       }
     ]
   },
@@ -685,7 +685,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "Use of externally-controlled input to select classes or code (\u2018unsafe reflection') condition in the licensing service (used by ICONICS licensing) can result in an improper authorization condition.    ",
+          "text": "Use of externally-controlled input to select classes or code (‘unsafe reflection') condition in the licensing service (used by ICONICS licensing) can result in an improper authorization condition.    ",
           "title": "Vulnerability Summary"
         }
       ],

@@ -31,12 +31,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "By default, TwinCAT/BSD-based products have a device-specific web interface for web-based management (WBM) enabled, developed by Beckhoff and known as Beckhoff Device Manager UI. It can be accessed remotely or locally. When accessed locally, a user can post specifically crafted input which then causes a buffer overflow on stack which in turn lets the process \u201cMDPService\u201d crash such that the web interface becomes unavailable until next restart or even execute code in the context of user \u201croot\u201d. ",
+        "text": "By default, TwinCAT/BSD-based products have a device-specific web interface for web-based management (WBM) enabled, developed by Beckhoff and known as Beckhoff Device Manager UI. It can be accessed remotely or locally. When accessed locally, a user can post specifically crafted input which then causes a buffer overflow on stack which in turn lets the process “MDPService” crash such that the web interface becomes unavailable until next restart or even execute code in the context of user “root”. ",
         "title": "Summary"
       },
       {
         "category": "description",
-        "text": "A local attacker could cause a denial-of-service or execute code in the context of user \u201croot\u201d via a crafted HTTP request.",
+        "text": "A local attacker could cause a denial-of-service or execute code in the context of user “root” via a crafted HTTP request.",
         "title": "Impact"
       },
       {
@@ -69,7 +69,7 @@
     "references": [
       {
         "category": "self",
-        "summary": "Beckhoff Security Advisory 2024-004: Local Denial of Service issue in TwinCAT/BSD package \u201cMDP\u201d - PDF version",
+        "summary": "Beckhoff Security Advisory 2024-004: Local Denial of Service issue in TwinCAT/BSD package “MDP” - PDF version",
         "url": "https://download.beckhoff.com/download/Document/product-security/Advisories/advisory-2024-004.pdf"
       },
       {
@@ -239,7 +239,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "The MPD package included in TwinCAT/BSD allows an authenticated, low-privileged local\nattacker to induce a Denial-of-Service (DoS) condition on the daemon and execute code in\nthe context of user \u201croot\u201d via a crafted HTTP request.",
+          "text": "The MPD package included in TwinCAT/BSD allows an authenticated, low-privileged local\nattacker to induce a Denial-of-Service (DoS) condition on the daemon and execute code in\nthe context of user “root” via a crafted HTTP request.",
           "title": "Summary"
         }
       ],

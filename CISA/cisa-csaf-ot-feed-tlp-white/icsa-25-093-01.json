@@ -6,6 +6,10 @@
         "summary": "reporting these vulnerabilities to CISA."
       }
     ],
+    "aggregate_severity": {
+      "namespace": "https://www.first.org/cvss/specification-document",
+      "text": "HIGH"
+    },
     "category": "csaf_security_advisory",
     "csaf_version": "2.0",
     "distribution": {
@@ -34,7 +38,7 @@
       },
       {
         "category": "general",
-        "text": "Recommended security practices and firewall configurations can help protect a process control network from attacks that originate from outside the network. Such practices include that process control systems are physically protected from direct access by unauthorized personnel, have no direct connections to the Internet, and are separated from other networks by means of a firewall system that has a minimal number of ports exposed, and others that have to be evaluated case by case. Process control systems should not be used for Internet surfing, instant messaging, or receiving e-mails. Portable computers and removable storage media should be carefully scanned for viruses before they are connected to a control system.\n",
+        "text": "Recommended security practices and firewall configurations can help protect a process control network from attacks that originate from outside the network. Such practices include that process control systems are physically protected from direct access by unauthorized personnel, have no direct connections to the Internet, and are separated from other networks by means of a firewall system that has a minimal number of ports exposed, and others that have to be evaluated case by case. Process control systems should not be used for Internet surfing, instant messaging, or receiving e-mails. Portable computers and removable storage media should be carefully scanned for viruses before they are connected to a control system.",
         "title": "General Mitigation Factors"
       },
       {
@@ -117,8 +121,8 @@
       },
       {
         "category": "self",
-        "summary": "Cybersecurity Advisory - Multiple Denial-of-Service Vulnerabilities in Hitachi Energy\u2019s RTU500 Series Product",
-        "url": "https://search.abb.com/library/Download.aspx?DocumentID=8DBD000207&LanguageCode=en&DocumentPartId=&Action=Launch"
+        "summary": "Cybersecurity Advisory - Multiple Denial-of-Service Vulnerabilities in Hitachi Energy’s RTU500 Series Product",
+        "url": "https://publisher.hitachienergy.com/preview?DocumentID=8DBD000207&LanguageCode=en&DocumentPartId=&Action=launch"
       },
       {
         "category": "self",
@@ -156,11 +160,11 @@
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
       }
     ],
-    "title": "Hitachi Energy RTU500 Series",
+    "title": "Hitachi Energy RTU500 Series (Update A)",
     "tracking": {
-      "current_release_date": "2025-03-25T12:30:00.000000Z",
+      "current_release_date": "2025-04-29T12:30:00.000000Z",
       "generator": {
-        "date": "2025-03-24T13:48:27.912000Z",
+        "date": "2025-05-08T16:28:03.714153Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -173,10 +177,15 @@
           "date": "2025-03-25T12:30:00.000000Z",
           "number": "1",
           "summary": "Initial version."
+        },
+        {
+          "date": "2025-04-29T12:30:00.000000Z",
+          "number": "2",
+          "summary": "Updated Recommended Action with fixed version 13.7.6"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -200,7 +209,7 @@
                 "category": "product_version_range",
                 "name": ">=12.0.1|<=12.0.14",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.0.1 \u2013 12.0.14",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.0.1 – 12.0.14",
                   "product_id": "CSAFPID-0002",
                   "product_identification_helper": {
                     "cpe": "cpe:2.3:o:hitachienergy:rtu500cmu:12.00.*:*:*:*:*:*:*:*"
@@ -211,7 +220,7 @@
                 "category": "product_version_range",
                 "name": ">=12.2.1|<=12.2.12",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.2.1 \u2013 12.2.12",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.2.1 – 12.2.12",
                   "product_id": "CSAFPID-0003",
                   "product_identification_helper": {
                     "cpe": "cpe:2.3:o:hitachienergy:rtu500cmu:12.02.*:*:*:*:*:*:*:*"
@@ -222,7 +231,7 @@
                 "category": "product_version_range",
                 "name": ">=12.4.1|<=12.4.11",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.4.1 \u2013 12.4.11",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.4.1 – 12.4.11",
                   "product_id": "CSAFPID-0004",
                   "product_identification_helper": {
                     "cpe": "cpe:2.3:o:hitachienergy:rtu500cmu:12.04.*:*:*:*:*:*:*:*"
@@ -233,7 +242,7 @@
                 "category": "product_version_range",
                 "name": ">=12.6.1|<=12.6.10",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.6.1 \u2013 12.6.10",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.6.1 – 12.6.10",
                   "product_id": "CSAFPID-0005",
                   "product_identification_helper": {
                     "cpe": "cpe:2.3:a:hitachienergy:rtu500cmu:12.06.*:*:*:*:*:*:*:*"
@@ -244,7 +253,7 @@
                 "category": "product_version_range",
                 "name": ">=12.7.1|<=12.7.7",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.7.1 \u2013 12.7.7",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 12.7.1 – 12.7.7",
                   "product_id": "CSAFPID-0006",
                   "product_identification_helper": {
                     "cpe": "cpe:2.3:a:hitachienergy:rtu500cmu:12.07.*:*:*:*:*:*:*:*"
@@ -255,7 +264,7 @@
                 "category": "product_version_range",
                 "name": ">=13.2.1|<=13.2.7",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 13.2.1 \u2013 13.2.7",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 13.2.1 – 13.2.7",
                   "product_id": "CSAFPID-0007",
                   "product_identification_helper": {
                     "cpe": "cpe:2.3:a:hitachienergy:rtu500cmu:13.02.*:*:*:*:*:*:*:*"
@@ -266,7 +275,7 @@
                 "category": "product_version_range",
                 "name": ">=13.4.1|<=13.4.4",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 13.4.1 \u2013 13.4.4",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 13.4.1 – 13.4.4",
                   "product_id": "CSAFPID-0008"
                 }
               },
@@ -274,7 +283,7 @@
                 "category": "product_version_range",
                 "name": ">=13.5.1|<=13.5.3",
                 "product": {
-                  "name": "Hitachi Energy RTU500 series CMU Firmware version 13.5.1 \u2013 13.5.3",
+                  "name": "Hitachi Energy RTU500 series CMU Firmware version 13.5.1 – 13.5.3",
                   "product_id": "CSAFPID-0009"
                 }
               },
@@ -290,7 +299,7 @@
                 "category": "product_version_range",
                 "name": ">=13.7.1|<=13.7.4",
                 "product": {
-                  "name": "RTU500 series CMU Firmware version 13.7.1 \u2013 13.7.4",
+                  "name": "RTU500 series CMU Firmware version 13.7.1 – 13.7.4",
                   "product_id": "CSAFPID-0011"
                 }
               },
@@ -373,6 +382,9 @@
           "CSAFPID-0008",
           "CSAFPID-0009",
           "CSAFPID-0010"
+        ],
+        "recommended": [
+          "CSAFPID-0014"
         ]
       },
       "references": [
@@ -403,7 +415,7 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to CMU Firmware version 13.7.1",
+          "details": "Fixed in version 13.7.1. Update to CMU Firmware version 13.7.6",
           "product_ids": [
             "CSAFPID-0007",
             "CSAFPID-0008",

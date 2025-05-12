@@ -1,0 +1,188 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "MaxView Storage Manager shipped with affected SIMATIC IPCs contains a Redfish Server Vulnerability that could provide unauthorized access.\n\nMicrochip has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-702935: Redfish Server Vulnerability in maxView Storage Manager - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-702935.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-702935: Redfish Server Vulnerability in maxView Storage Manager - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-702935.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-702935: Redfish Server Vulnerability in maxView Storage Manager - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-702935.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-702935: Redfish Server Vulnerability in maxView Storage Manager - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-702935.txt"
+      }
+    ],
+    "title": "SSA-702935: Redfish Server Vulnerability in maxView Storage Manager",
+    "tracking": {
+      "current_release_date": "2024-01-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-702935",
+      "initial_release_date": "2024-01-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-01-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with maxView Storage Manager < V4.14.00.26068 on Windows",
+                "product": {
+                  "name": "SIMATIC IPC647E",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC647E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with maxView Storage Manager < V4.14.00.26068 on Windows",
+                "product": {
+                  "name": "SIMATIC IPC847E",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC847E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions with maxView Storage Manager < V4.14.00.26068 on Windows",
+                "product": {
+                  "name": "SIMATIC IPC1047E",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC1047E"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-51438",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "In default installations of maxView Storage Manager where Redfish\u00ae server is configured for remote system management, a vulnerability has been identified that can provide unauthorized access.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "3",
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update maxView Storage Manager to V4.14.00.26068 or later version",
+          "product_ids": [
+            "3",
+            "1",
+            "2"
+          ],
+          "url": "https://storage.microsemi.com/en-us/support/raid/sas_raid/asr-3151-4i/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "3",
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2023-51438"
+    }
+  ]
+}

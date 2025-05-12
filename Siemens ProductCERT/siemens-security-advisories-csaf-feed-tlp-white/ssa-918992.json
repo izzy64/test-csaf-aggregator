@@ -1,0 +1,165 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SENTRON 3KC ATC6 Expansion Module Ethernet exposes an unused, unstable http service at port 80/tcp on the Modbus-TCP Ethernet, which could allow an attacker on the same Modbus network to create a denial of service condition that forces the device to reboot.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-918992: Unused HTTP Service on SENTRON 3KC ATC6 Ethernet Module - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-918992.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-918992: Unused HTTP Service on SENTRON 3KC ATC6 Ethernet Module - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-918992.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-918992: Unused HTTP Service on SENTRON 3KC ATC6 Ethernet Module - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-918992.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-918992: Unused HTTP Service on SENTRON 3KC ATC6 Ethernet Module - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-918992.txt"
+      }
+    ],
+    "title": "SSA-918992: Unused HTTP Service on SENTRON 3KC ATC6 Ethernet Module",
+    "tracking": {
+      "current_release_date": "2024-03-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-918992",
+      "initial_release_date": "2024-03-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-03-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SENTRON 3KC ATC6 Expansion Module Ethernet (3KC9000-8TL75)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "3KC9000-8TL75"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SENTRON 3KC ATC6 Expansion Module Ethernet (3KC9000-8TL75)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-22044",
+      "cwe": {
+        "id": "CWE-912",
+        "name": "Hidden Functionality"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices expose an unused, unstable http service at port 80/tcp on the Modbus-TCP Ethernet. This could allow an attacker on the same Modbus network to create a denial of service condition that forces the device to reboot.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to the Modbus-TCP network by blocking incoming connections to port 80/tcp, e.g. in a firewall",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-22044"
+    }
+  ]
+}

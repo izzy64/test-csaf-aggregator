@@ -1,0 +1,161 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Siveillance Control does not properly check the list of access groups that are assigned to an individual user. This could enable a locally logged on user to gain write privileges for objects where they only have read privileges.\n\nSiemens has released a new version for Siveillance Control and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-145196: Authorization Bypass Vulnerability in Siveillance Control - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-145196.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-145196: Authorization Bypass Vulnerability in Siveillance Control - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-145196.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-145196: Authorization Bypass Vulnerability in Siveillance Control - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-145196.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-145196: Authorization Bypass Vulnerability in Siveillance Control - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-145196.txt"
+      }
+    ],
+    "title": "SSA-145196: Authorization Bypass Vulnerability in Siveillance Control",
+    "tracking": {
+      "current_release_date": "2024-03-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-145196",
+      "initial_release_date": "2024-03-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-03-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.8<V3.1.1",
+                "product": {
+                  "name": "Siveillance Control",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Control"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-45793",
+      "cwe": {
+        "id": "CWE-863",
+        "name": "Incorrect Authorization"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected product does not properly check the list of access groups that are assigned to an individual user. This could enable a locally logged on user to gain write privileges for objects where they only have read privileges.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to the machine where the Siveillance Control frontend is installed",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.1 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109827073/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-45793"
+    }
+  ]
+}

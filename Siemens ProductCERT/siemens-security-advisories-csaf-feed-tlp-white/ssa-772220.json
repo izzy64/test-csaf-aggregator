@@ -1,0 +1,2424 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "OpenSSL has published a security advisory [0] about a vulnerability in OpenSSL versions 1.1.1 < 1.1.1k, that allows\nan unauthenticated attacker to cause a Denial-of-Service (DoS) if a maliciously crafted renegotiation message is sent.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.\n\n[0] \nhttps://www.openssl.org/news/secadv/20210325.txt",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-772220: OpenSSL Vulnerabilities in Industrial Products - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-772220.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-772220: OpenSSL Vulnerabilities in Industrial Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-772220.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-772220: OpenSSL Vulnerabilities in Industrial Products - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-772220.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-772220: OpenSSL Vulnerabilities in Industrial Products - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-772220.txt"
+      }
+    ],
+    "title": "SSA-772220: OpenSSL Vulnerabilities in Industrial Products",
+    "tracking": {
+      "current_release_date": "2024-01-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-772220",
+      "initial_release_date": "2021-07-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-07-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2021-08-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Removed RUGGEDCOM CloudConnect APE/VPE as it is not affected, added solution for SIMATIC NET CP 1543-1"
+        },
+        {
+          "date": "2021-09-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added solution for SIMATIC S7-1500 CPU 1518-4 PN/DP MFP, SIMATIC PCS neo, SIMATIC Process Historian OPC UA Server, SINEMA Server, and TIA Administrator, removed SIMATIC HMI Basic Panels 2nd Generation as the product is not affected"
+        },
+        {
+          "date": "2021-11-09T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added solution for SCALANCE SC-600, SIMATIC WinCC Runtime Advanced, SIMATIC CP 1242-7 GPRS V2, SIMATIC CP 1243-7 LTE and SIMATIC Cloud Connect 7; split SCALANCE SC-600 into individual products; removed SINEC PNI as it is not affected"
+        },
+        {
+          "date": "2021-12-14T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Added solution for SIMATIC MV500 family and SINUMERIK OPC UA Server"
+        },
+        {
+          "date": "2022-01-11T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added solution for SIMATIC HMI Panels, SIMATIC Logon and SIMATIC PDM, clarified that no remediation is planned for SCALANCE W-700 IEEE 802.11n family"
+        },
+        {
+          "date": "2022-02-08T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "Added solution for SCALANCE LPE9403; clarified that no remediation is planned for SCALANCE W-1700 IEEE 802.11ac family; added RUGGEDCOM CROSSBOW Station Access Controller as affected product ; fixed affected versions for SINEC NMS"
+        },
+        {
+          "date": "2022-02-17T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Added solution for SIMATIC S7-1200 CPU family"
+        },
+        {
+          "date": "2022-04-12T00:00:00Z",
+          "legacy_version": "1.8",
+          "number": "9",
+          "summary": "No fix planned for SINAMICS Connect 300; Added solution for SCALANCE M-800 / S615 family, RUGGEDCOM RM1224, and SCALANCE W-1700 IEEE 802.11ac family; Added SIMATIC RF600R family"
+        },
+        {
+          "date": "2022-05-10T00:00:00Z",
+          "legacy_version": "1.9",
+          "number": "10",
+          "summary": "Added solution for SIMATIC READER RF1xxC family and SIMATIC Reader RF360R and SIMATIC PCS 7 TeleControl"
+        },
+        {
+          "date": "2022-06-14T00:00:00Z",
+          "legacy_version": "2.0",
+          "number": "11",
+          "summary": "Added fix for SIMATIC CP 1545-1"
+        },
+        {
+          "date": "2022-08-09T00:00:00Z",
+          "legacy_version": "2.1",
+          "number": "12",
+          "summary": "Added or corrected fix information for SIMATIC CP 1242-7 V2, CP 1243-7, CP 1243-1, CP 1243-8"
+        },
+        {
+          "date": "2023-03-14T00:00:00Z",
+          "legacy_version": "2.2",
+          "number": "13",
+          "summary": "Updated fix information for RUGGEDCOM CROSSBOW SAC, added fix for SIMATIC CP 1542SP-1 IRC, and SIMATIC CP 1543SP-1"
+        },
+        {
+          "date": "2024-01-09T00:00:00Z",
+          "legacy_version": "2.3",
+          "number": "14",
+          "summary": "Added fix for SIMATIC WinCC TeleControl"
+        }
+      ],
+      "status": "interim",
+      "version": "14"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions >= V5.2.0 < V5.3 only when running on ROX II V2.14.0",
+                "product": {
+                  "name": "RUGGEDCOM CROSSBOW Station Access Controller (SAC)",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM CROSSBOW Station Access Controller (SAC)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "RUGGEDCOM RM1224 LTE(4G) EU (6GK6108-4AM00-2BA2)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK6108-4AM00-2BA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RM1224 LTE(4G) EU (6GK6108-4AM00-2BA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "RUGGEDCOM RM1224 LTE(4G) NAM (6GK6108-4AM00-2DA2)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK6108-4AM00-2DA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RM1224 LTE(4G) NAM (6GK6108-4AM00-2DA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V1.1",
+                "product": {
+                  "name": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5998-3GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M804PB (6GK5804-0AP00-2AA2)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5804-0AP00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M804PB (6GK5804-0AP00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M812-1 ADSL-Router (Annex A) (6GK5812-1AA00-2AA2)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5812-1AA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M812-1 ADSL-Router (Annex A) (6GK5812-1AA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M812-1 ADSL-Router (Annex B) (6GK5812-1BA00-2AA2)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5812-1BA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M812-1 ADSL-Router (Annex B) (6GK5812-1BA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M816-1 ADSL-Router (Annex A) (6GK5816-1AA00-2AA2)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5816-1AA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M816-1 ADSL-Router (Annex A) (6GK5816-1AA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M816-1 ADSL-Router (Annex B) (6GK5816-1BA00-2AA2)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5816-1BA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M816-1 ADSL-Router (Annex B) (6GK5816-1BA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5826-2AB00-2AB2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M874-2 (6GK5874-2AA00-2AA2)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5874-2AA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M874-2 (6GK5874-2AA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M874-3 (6GK5874-3AA00-2AA2)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5874-3AA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M874-3 (6GK5874-3AA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M876-3 (EVDO) (6GK5876-3AA02-2BA2)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5876-3AA02-2BA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M876-3 (EVDO) (6GK5876-3AA02-2BA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5876-3AA02-2EA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5876-4AA00-2BA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5876-4AA00-2DA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V4.1",
+                "product": {
+                  "name": "SCALANCE S602",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S602"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V4.1",
+                "product": {
+                  "name": "SCALANCE S612",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S612"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.2<V7.1",
+                "product": {
+                  "name": "SCALANCE S615 (6GK5615-0AA00-2AA2)",
+                  "product_id": "19",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5615-0AA00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S615 (6GK5615-0AA00-2AA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V4.1",
+                "product": {
+                  "name": "SCALANCE S623",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S623"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V4.1",
+                "product": {
+                  "name": "SCALANCE S627-2M",
+                  "product_id": "21"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE S627-2M"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V2.1.4",
+                "product": {
+                  "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
+                  "product_id": "22",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5622-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V2.1.4",
+                "product": {
+                  "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
+                  "product_id": "23",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5632-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V2.1.4",
+                "product": {
+                  "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
+                  "product_id": "24",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5636-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V2.1.4",
+                "product": {
+                  "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
+                  "product_id": "25",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5642-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V2.1.4",
+                "product": {
+                  "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
+                  "product_id": "26",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5646-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V3.0",
+                "product": {
+                  "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0AA0)",
+                  "product_id": "27",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5748-1GY01-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V3.0",
+                "product": {
+                  "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0TA0)",
+                  "product_id": "28",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5748-1GY01-0TA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1748-1 M12 (6GK5748-1GY01-0TA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V3.0",
+                "product": {
+                  "name": "SCALANCE W1788-1 M12 (6GK5788-1GY01-0AA0)",
+                  "product_id": "29",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5788-1GY01-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1788-1 M12 (6GK5788-1GY01-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V3.0",
+                "product": {
+                  "name": "SCALANCE W1788-2 EEC M12 (6GK5788-2GY01-0TA0)",
+                  "product_id": "30",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5788-2GY01-0TA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1788-2 EEC M12 (6GK5788-2GY01-0TA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V3.0",
+                "product": {
+                  "name": "SCALANCE W1788-2 M12 (6GK5788-2GY01-0AA0)",
+                  "product_id": "31",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5788-2GY01-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1788-2 M12 (6GK5788-2GY01-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V3.0",
+                "product": {
+                  "name": "SCALANCE W1788-2IA M12 (6GK5788-2HY01-0AA0)",
+                  "product_id": "32",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5788-2HY01-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W1788-2IA M12 (6GK5788-2HY01-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V6.5",
+                "product": {
+                  "name": "SCALANCE W-700 IEEE 802.11n family",
+                  "product_id": "33"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE W-700 IEEE 802.11n family"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3",
+                "product": {
+                  "name": "SCALANCE XB-200",
+                  "product_id": "34"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XB-200"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3",
+                "product": {
+                  "name": "SCALANCE XC-200",
+                  "product_id": "35"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC-200"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3",
+                "product": {
+                  "name": "SCALANCE XF-200BA",
+                  "product_id": "36"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF-200BA"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V6.4",
+                "product": {
+                  "name": "SCALANCE XM-400",
+                  "product_id": "37"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XM-400"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3",
+                "product": {
+                  "name": "SCALANCE XP-200",
+                  "product_id": "38"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP-200"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3",
+                "product": {
+                  "name": "SCALANCE XR-300WG",
+                  "product_id": "39"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR-300WG"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V6.4",
+                "product": {
+                  "name": "SCALANCE XR-500 Family",
+                  "product_id": "40"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR-500 Family"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V1.1<V1.6",
+                "product": {
+                  "name": "SIMATIC Cloud Connect 7 CC712 (6GK1411-1AC00)",
+                  "product_id": "41",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK1411-1AC00"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Cloud Connect 7 CC712 (6GK1411-1AC00)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V1.1<V1.6",
+                "product": {
+                  "name": "SIMATIC Cloud Connect 7 CC716 (6GK1411-5AC00)",
+                  "product_id": "42",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK1411-5AC00"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Cloud Connect 7 CC716 (6GK1411-5AC00)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIMATIC CP 1242-7 V2 (6GK7242-7KX31-0XE0)",
+                  "product_id": "43",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7242-7KX31-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1242-7 V2 (6GK7242-7KX31-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIMATIC CP 1243-1 (6GK7243-1BX30-0XE0)",
+                  "product_id": "44",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7243-1BX30-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-1 (6GK7243-1BX30-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIMATIC CP 1243-7 LTE EU (6GK7243-7KX30-0XE0)",
+                  "product_id": "45",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7243-7KX30-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-7 LTE EU (6GK7243-7KX30-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIMATIC CP 1243-7 LTE US (6GK7243-7SX30-0XE0)",
+                  "product_id": "46",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7243-7SX30-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-7 LTE US (6GK7243-7SX30-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIMATIC CP 1243-8 IRC (6GK7243-8RX30-0XE0)",
+                  "product_id": "47",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7243-8RX30-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1243-8 IRC (6GK7243-8RX30-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.1<V2.2.28",
+                "product": {
+                  "name": "SIMATIC CP 1542SP-1 IRC (6GK7542-6VX00-0XE0)",
+                  "product_id": "48",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7542-6VX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1542SP-1 IRC (6GK7542-6VX00-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.2<V3.0",
+                "product": {
+                  "name": "SIMATIC CP 1543-1 (6GK7543-1AX00-0XE0)",
+                  "product_id": "49",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7543-1AX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1543-1 (6GK7543-1AX00-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.1<V2.2.28",
+                "product": {
+                  "name": "SIMATIC CP 1543SP-1 (6GK7543-6WX00-0XE0)",
+                  "product_id": "50",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7543-6WX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1543SP-1 (6GK7543-6WX00-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V1.0<V1.1",
+                "product": {
+                  "name": "SIMATIC CP 1545-1 (6GK7545-1GX00-0XE0)",
+                  "product_id": "51",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7545-1GX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC CP 1545-1 (6GK7545-1GX00-0XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17.0 Upd 2",
+                "product": {
+                  "name": "SIMATIC HMI Comfort Outdoor Panels (incl. SIPLUS variants)",
+                  "product_id": "52"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC HMI Comfort Outdoor Panels (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17.0 Upd 2",
+                "product": {
+                  "name": "SIMATIC HMI Comfort Panels (incl. SIPLUS variants)",
+                  "product_id": "53"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC HMI Comfort Panels (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17.0 Upd 2",
+                "product": {
+                  "name": "SIMATIC HMI KTP Mobile Panels",
+                  "product_id": "54"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC HMI KTP Mobile Panels"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions >= V1.6 Upd2 < V1.6 Upd5",
+                "product": {
+                  "name": "SIMATIC Logon V1.6",
+                  "product_id": "55"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Logon V1.6"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SIMATIC MV540 H (6GF3540-0GE10)",
+                  "product_id": "56",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GF3540-0GE10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC MV540 H (6GF3540-0GE10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SIMATIC MV540 S (6GF3540-0CD10)",
+                  "product_id": "57",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GF3540-0CD10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC MV540 S (6GF3540-0CD10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SIMATIC MV550 H (6GF3550-0GE10)",
+                  "product_id": "58",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GF3550-0GE10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC MV550 H (6GF3550-0GE10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SIMATIC MV550 S (6GF3550-0CD10)",
+                  "product_id": "59",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GF3550-0CD10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC MV550 S (6GF3550-0CD10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SIMATIC MV560 U (6GF3560-0LE10)",
+                  "product_id": "60",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GF3560-0LE10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC MV560 U (6GF3560-0LE10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SIMATIC MV560 X (6GF3560-0HE10)",
+                  "product_id": "61",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GF3560-0HE10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC MV560 X (6GF3560-0HE10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V9.1",
+                "product": {
+                  "name": "SIMATIC PCS 7 TeleControl",
+                  "product_id": "62"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS 7 TeleControl"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V3.1",
+                "product": {
+                  "name": "SIMATIC PCS neo",
+                  "product_id": "63"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS neo"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions >= V9.1 SP7 < V9.2 SP1",
+                "product": {
+                  "name": "SIMATIC PDM",
+                  "product_id": "64"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PDM"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions >= 2019 < 2020 Upd1",
+                "product": {
+                  "name": "SIMATIC Process Historian OPC UA Server",
+                  "product_id": "65"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Process Historian OPC UA Server"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC RF166C (6GT2002-0EE20)",
+                  "product_id": "66",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0EE20"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF166C (6GT2002-0EE20)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC RF185C (6GT2002-0JE10)",
+                  "product_id": "67",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JE10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF185C (6GT2002-0JE10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC RF186C (6GT2002-0JE20)",
+                  "product_id": "68",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JE20"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF186C (6GT2002-0JE20)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC RF186CI (6GT2002-0JE50)",
+                  "product_id": "69",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JE50"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF186CI (6GT2002-0JE50)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC RF188C (6GT2002-0JE40)",
+                  "product_id": "70",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JE40"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF188C (6GT2002-0JE40)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC RF188CI (6GT2002-0JE60)",
+                  "product_id": "71",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JE60"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF188CI (6GT2002-0JE60)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.0",
+                "product": {
+                  "name": "SIMATIC RF360R (6GT2801-5BA30)",
+                  "product_id": "72",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2801-5BA30"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF360R (6GT2801-5BA30)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.0",
+                "product": {
+                  "name": "SIMATIC RF610R (6GT2811-6BC10)",
+                  "product_id": "73",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2811-6BC10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF610R (6GT2811-6BC10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.0",
+                "product": {
+                  "name": "SIMATIC RF615R (6GT2811-6CC10)",
+                  "product_id": "74",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2811-6CC10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF615R (6GT2811-6CC10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.0",
+                "product": {
+                  "name": "SIMATIC RF650R (6GT2811-6AB20)",
+                  "product_id": "75",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2811-6AB20"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF650R (6GT2811-6AB20)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.0",
+                "product": {
+                  "name": "SIMATIC RF680R (6GT2811-6AA10)",
+                  "product_id": "76",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2811-6AA10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF680R (6GT2811-6AA10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.0",
+                "product": {
+                  "name": "SIMATIC RF685R (6GT2811-6CA10)",
+                  "product_id": "77",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2811-6CA10"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC RF685R (6GT2811-6CA10)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.5.2",
+                "product": {
+                  "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+                  "product_id": "78"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V2.9.3",
+                "product": {
+                  "name": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP family (incl. SIPLUS variant)",
+                  "product_id": "79"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP family (incl. SIPLUS variant)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 1",
+                "product": {
+                  "name": "SIMATIC WinCC Runtime Advanced",
+                  "product_id": "80"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC Runtime Advanced"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V7.5",
+                "product": {
+                  "name": "SIMATIC WinCC TeleControl",
+                  "product_id": "81"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC WinCC TeleControl"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS Connect 300",
+                  "product_id": "82"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS Connect 300"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V1.0.1<V1.0.2",
+                "product": {
+                  "name": "SINEC NMS",
+                  "product_id": "83"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINEC NMS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions V14 < V14 SP3",
+                "product": {
+                  "name": "SINEMA Server",
+                  "product_id": "84"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINEMA Server"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V3.1 SP1",
+                "product": {
+                  "name": "SINUMERIK OPC UA Server",
+                  "product_id": "85"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINUMERIK OPC UA Server"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.1<V2.2.28",
+                "product": {
+                  "name": "SIPLUS ET 200SP CP 1542SP-1 IRC TX RAIL (6AG2542-6VX00-4XE0)",
+                  "product_id": "86",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2542-6VX00-4XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP CP 1542SP-1 IRC TX RAIL (6AG2542-6VX00-4XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.1<V2.2.28",
+                "product": {
+                  "name": "SIPLUS ET 200SP CP 1543SP-1 ISEC (6AG1543-6WX00-7XE0)",
+                  "product_id": "87",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1543-6WX00-7XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP CP 1543SP-1 ISEC (6AG1543-6WX00-7XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.1<V2.2.28",
+                "product": {
+                  "name": "SIPLUS ET 200SP CP 1543SP-1 ISEC TX RAIL (6AG2543-6WX00-4XE0)",
+                  "product_id": "88",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2543-6WX00-4XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS ET 200SP CP 1543SP-1 ISEC TX RAIL (6AG2543-6WX00-4XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIPLUS NET CP 1242-7 V2 (6AG1242-7KX31-7XE0)",
+                  "product_id": "89",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1242-7KX31-7XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS NET CP 1242-7 V2 (6AG1242-7KX31-7XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.2<V3.0",
+                "product": {
+                  "name": "SIPLUS NET CP 1543-1 (6AG1543-1AX00-2XE0)",
+                  "product_id": "90",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1543-1AX00-2XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS NET CP 1543-1 (6AG1543-1AX00-2XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIPLUS S7-1200 CP 1243-1 (6AG1243-1BX30-2AX0)",
+                  "product_id": "91",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1243-1BX30-2AX0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-1200 CP 1243-1 (6AG1243-1BX30-2AX0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V3.1<V3.3.46",
+                "product": {
+                  "name": "SIPLUS S7-1200 CP 1243-1 RAIL (6AG2243-1BX30-1XE0)",
+                  "product_id": "92",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG2243-1BX30-1XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS S7-1200 CP 1243-1 RAIL (6AG2243-1BX30-1XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V2.2",
+                "product": {
+                  "name": "SIPLUS TIM 1531 IRC (6AG1543-1MX00-7XE0)",
+                  "product_id": "93",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1543-1MX00-7XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPLUS TIM 1531 IRC (6AG1543-1MX00-7XE0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V1.0 SP4",
+                "product": {
+                  "name": "TIA Administrator",
+                  "product_id": "94"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIA Administrator"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=V2.0<V2.2",
+                "product": {
+                  "name": "TIM 1531 IRC (6GK7543-1MX00-0XE0)",
+                  "product_id": "95",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7543-1MX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIM 1531 IRC (6GK7543-1MX00-0XE0)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-3449",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j).",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "33",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to Remote Access service, if used, to mitigate this issue. This service is disabled by default.",
+          "product_ids": [
+            "55"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Restrict access to the command interface, if used, to mitigate this issue. This interface is disabled by default.",
+          "product_ids": [
+            "64"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Update ROX II to V2.14.1 (\nhttps://support.industry.siemens.com/cs/ww/en/view/109800780/) or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "use TLS v1.3 only",
+          "product_ids": [
+            "2",
+            "3",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "19"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "17",
+            "18",
+            "20",
+            "21",
+            "33",
+            "82"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.2.28 or later version",
+          "product_ids": [
+            "48",
+            "50",
+            "86",
+            "87",
+            "88"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817067/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 or later version",
+          "product_ids": [
+            "63"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801424/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.5 or later version",
+          "product_ids": [
+            "81"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109814522/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17.0 Upd 2 or later version",
+          "product_ids": [
+            "52",
+            "53",
+            "54"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109746530/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.0 SP2",
+          "product_ids": [
+            "83"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V14 SP3 or later version",
+          "product_ids": [
+            "84"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801374/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.5.2 or later version",
+          "product_ids": [
+            "78"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793280/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.0 or later version",
+          "product_ids": [
+            "73",
+            "74",
+            "75",
+            "76",
+            "77"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808361"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.2 or later version",
+          "product_ids": [
+            "93",
+            "95"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109798331"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.1 or later version",
+          "product_ids": [
+            "51"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109811116/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to  V17 Update 1 or later version",
+          "product_ids": [
+            "80"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800912"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.1 or later version",
+          "product_ids": [
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "19"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109807276"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808633"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.3.46 or later version",
+          "product_ids": [
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "89",
+            "91",
+            "92"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812218"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.9.3 or later version",
+          "product_ids": [
+            "79"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 SP1 or later version",
+          "product_ids": [
+            "85"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801292"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6 Upd5 or later version",
+          "product_ids": [
+            "55"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109794407/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.2 SP 1 or later version",
+          "product_ids": [
+            "64"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "49",
+            "90"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800773"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.4 or later version",
+          "product_ids": [
+            "40"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109796317"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.3 or later version",
+          "product_ids": [
+            "34",
+            "35",
+            "36",
+            "38",
+            "39"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799569"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.0 SP4 or later version",
+          "product_ids": [
+            "94"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/114358/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 or later version",
+          "product_ids": [
+            "62"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805072/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update SIMATIC PCS neo to V3.1 or later version\nTo obtain SIMATIC PCS neo V3.1 contact your local support.",
+          "product_ids": [
+            "65"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.4 or later version",
+          "product_ids": [
+            "37"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109796319"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805118/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "product_ids": [
+            "72"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808759"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.4 or later version",
+          "product_ids": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "26"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797244"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.6 or later version",
+          "product_ids": [
+            "41",
+            "42"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109803418/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 or later version",
+          "product_ids": [
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804366"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.1 or later version",
+          "product_ids": [
+            "2",
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109807276/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808629/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.3 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109813558/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "15",
+            "10",
+            "94",
+            "71",
+            "57",
+            "39",
+            "8",
+            "92",
+            "30",
+            "60",
+            "83",
+            "70",
+            "76",
+            "4",
+            "62",
+            "9",
+            "59",
+            "87",
+            "17",
+            "37",
+            "69",
+            "51",
+            "74",
+            "23",
+            "29",
+            "26",
+            "36",
+            "81",
+            "88",
+            "19",
+            "89",
+            "80",
+            "2",
+            "16",
+            "25",
+            "75",
+            "14",
+            "78",
+            "52",
+            "67",
+            "84",
+            "7",
+            "13",
+            "28",
+            "6",
+            "3",
+            "40",
+            "72",
+            "50",
+            "21",
+            "31",
+            "66",
+            "68",
+            "54",
+            "79",
+            "12",
+            "43",
+            "47",
+            "48",
+            "34",
+            "41",
+            "86",
+            "82",
+            "44",
+            "45",
+            "61",
+            "95",
+            "38",
+            "55",
+            "24",
+            "58",
+            "64",
+            "91",
+            "22",
+            "35",
+            "18",
+            "1",
+            "63",
+            "32",
+            "20",
+            "27",
+            "85",
+            "77",
+            "33",
+            "93",
+            "5",
+            "42",
+            "90",
+            "56",
+            "46",
+            "53",
+            "73",
+            "49",
+            "65",
+            "11"
+          ]
+        }
+      ],
+      "title": "CVE-2021-3449"
+    }
+  ]
+}

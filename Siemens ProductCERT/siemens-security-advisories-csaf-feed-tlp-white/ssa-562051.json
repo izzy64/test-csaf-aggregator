@@ -1,0 +1,205 @@
+{
+  "document": {
+    "title": "SSA-562051: Cross-Site Scripting Vulnerability in Polarion ALM",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-562051",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-03-08T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2022-04-12T00:00:00Z",
+          "summary": "Corrected list of affected versions; clarified difference between Polarion ALM and the freeware (WebClient for SVN)"
+        }
+      ],
+      "initial_release_date": "2022-03-08T00:00:00Z",
+      "current_release_date": "2022-04-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The Subversion Webclient in Polarion ALM contains a cross-site scripting vulnerability, that could be triggered by an attacker by sending crafted links to an administrator user of Polarion ALM.\n\nSiemens has released an update for the Subversion Webclient in Polarion ALM and recommends to update to the latest version."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-562051.pdf",
+        "summary": "SSA-562051: Cross-Site Scripting Vulnerability in Polarion ALM - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-562051.txt",
+        "summary": "SSA-562051: Cross-Site Scripting Vulnerability in Polarion ALM - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-562051.json",
+        "summary": "SSA-562051: Cross-Site Scripting Vulnerability in Polarion ALM - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Nicolas Briand"
+        ],
+        "organization": "Thales Digital Factory",
+        "summary": "coordinated disclosure"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Polarion ALM",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V21 R2 P2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Polarion ALM"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Polarion WebClient for SVN",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Polarion WebClient for SVN"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-44478",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A cross-site scripting is present due to improper neutralization of data sent to the web page through the SVN WebClient in the affected product.\n\nAn attacker could exploit this to execute arbitrary code and extract sensitive information by sending a specially crafted link to users with administrator privileges."
+        }
+      ],
+      "cve": "CVE-2021-44478",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V21 R2 P2 or later version",
+          "url": "https://support.sw.siemens.com/knowledge-base/PL8613685"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Do not open links from untrusted sources while working on Polarion Subversion webclient"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.sw.siemens.com/knowledge-base/PL8613685",
+          "summary": "CVE-2021-44478 - Polarion ALM"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-44478.json",
+          "summary": "CVE-2021-44478 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

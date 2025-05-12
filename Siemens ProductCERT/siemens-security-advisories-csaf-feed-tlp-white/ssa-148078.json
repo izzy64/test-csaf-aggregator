@@ -1,0 +1,424 @@
+{
+  "document": {
+    "title": "SSA-148078: Multiple Vulnerabilities in APOGEE/TALON Field Panels",
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-148078",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2017-10-12T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2022-06-14T00:00:00Z",
+          "summary": "Added APOGEE PXC Series (P2 Ethernet) devices"
+        }
+      ],
+      "initial_release_date": "2017-10-12T00:00:00Z",
+      "current_release_date": "2022-06-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Multiple vulnerabilities in the APOGEE PXC and TALON TC series of products could allow unauthenticated attackers to download sensitive information through the integrated webserver.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment."
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-148078.pdf",
+        "summary": "SSA-148078: Multiple Vulnerabilities in APOGEE/TALON Field Panels - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-148078.txt",
+        "summary": "SSA-148078: Multiple Vulnerabilities in APOGEE/TALON Field Panels - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-148078.json",
+        "summary": "SSA-148078: Multiple Vulnerabilities in APOGEE/TALON Field Panels - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "RoseSecurity",
+        "summary": "reporting the vulnerabilities for APOGEE PXC Series (P2 Ethernet) devices."
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "APOGEE PXC Compact (BACnet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "APOGEE PXC Compact (BACnet)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "APOGEE PXC Compact (P2 Ethernet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "APOGEE PXC Compact (P2 Ethernet)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "APOGEE PXC Modular (BACnet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "APOGEE PXC Modular (BACnet)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "APOGEE PXC Modular (P2 Ethernet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "APOGEE PXC Modular (P2 Ethernet)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "TALON TC Compact (BACnet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "TALON TC Compact (BACnet)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "TALON TC Modular (BACnet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "TALON TC Modular (BACnet)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2017-9946",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with network access to the integrated web server (80/tcp and 443/tcp) could bypass the authentication and download sensitive information from the device."
+        }
+      ],
+      "cve": "CVE-2017-9946",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "3",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.5 or later version",
+          "url": "https://partnerportal.extranet.dc.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "2",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Disable the integrated webserver"
+        },
+        {
+          "product_ids": [
+            "2",
+            "4"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Siemens recommends to disable the integrated webserver when not in use"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Please contact your local Siemens office for additional support"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9946 - APOGEE PXC Compact (BACnet)"
+        },
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9946 - APOGEE PXC Modular (BACnet)"
+        },
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9946 - TALON TC Compact (BACnet)"
+        },
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9946 - TALON TC Modular (BACnet)"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2017-9946.json",
+          "summary": "CVE-2017-9946 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2017-9947",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A directory traversal vulnerability could allow a remote attacker with network access to the integrated web server (80/tcp and 443/tcp) to obtain information on the structure of the file system of the affected devices."
+        }
+      ],
+      "cve": "CVE-2017-9947",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "3",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.5 or later version",
+          "url": "https://partnerportal.extranet.dc.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "2",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Disable the integrated webserver"
+        },
+        {
+          "product_ids": [
+            "2",
+            "4"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Siemens recommends to disable the integrated webserver when not in use"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Please contact your local Siemens office for additional support"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9947 - APOGEE PXC Compact (BACnet)"
+        },
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9947 - APOGEE PXC Modular (BACnet)"
+        },
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9947 - TALON TC Compact (BACnet)"
+        },
+        {
+          "url": "https://partnerportal.extranet.dc.siemens.com/",
+          "summary": "CVE-2017-9947 - TALON TC Modular (BACnet)"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2017-9947.json",
+          "summary": "CVE-2017-9947 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

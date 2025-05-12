@@ -1,0 +1,275 @@
+{
+  "document": {
+    "title": "SSA-693555: Memory Corruption Vulnerability in EN100 Ethernet Module",
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-693555",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-06-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-06-14T00:00:00Z",
+      "current_release_date": "2022-06-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "EN100 Ethernet module is affected by memory corruption vulnerability (CVE-2022-30937).\n\nSiemens has released an update for the EN100 Ethernet module IEC 61850 variant and recommends to update to the latest version. Siemens recommends specific countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\n\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment.\n\nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-693555.pdf",
+        "summary": "SSA-693555: Memory Corruption Vulnerability in EN100 Ethernet Module - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-693555.txt",
+        "summary": "SSA-693555: Memory Corruption Vulnerability in EN100 Ethernet Module - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-693555.json",
+        "summary": "SSA-693555: Memory Corruption Vulnerability in EN100 Ethernet Module - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Michael Messner"
+        ],
+        "organization": "Siemens Energy",
+        "summary": "reporting the vulnerabilities"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "EN100 Ethernet module DNP3 IP variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "EN100 Ethernet module DNP3 IP variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module IEC 104 variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "EN100 Ethernet module IEC 104 variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module IEC 61850 variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.37",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "EN100 Ethernet module IEC 61850 variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module Modbus TCP variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "EN100 Ethernet module Modbus TCP variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module PROFINET IO variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "EN100 Ethernet module PROFINET IO variant"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2022-30937",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications contains a memory corruption vulnerability while parsing specially crafted HTTP packets to /txtrace endpoint. This could allow an attacker to crash the affected application leading to a denial of service condition."
+        }
+      ],
+      "cve": "CVE-2022-30937",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "4",
+            "5"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.37 or later version",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "category": "mitigation",
+          "details": "Disable web service within the device configuration if it is not used"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "category": "workaround",
+          "details": "Block access to port 80/tcp and 443/tcp e.g. with an external firewall"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "category": "workaround",
+          "details": "Apply secure substation concept and Defense-in-Depth (see https://www.siemens.com/gridsecurity) or contact customer care to find specific solutions"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821/",
+          "summary": "CVE-2022-30937 - EN100 Ethernet module IEC 61850 variant"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-30937.json",
+          "summary": "CVE-2022-30937 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

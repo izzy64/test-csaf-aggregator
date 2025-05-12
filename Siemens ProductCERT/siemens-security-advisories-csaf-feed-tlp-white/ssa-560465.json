@@ -1,0 +1,2767 @@
+{
+  "document": {
+    "title": "SSA-560465: DHCP Client Vulnerability in VxWorks-based Industrial Products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-560465",
+      "status": "final",
+      "version": "3",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-07-13T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2022-04-12T00:00:00Z",
+          "summary": "Clarified that no remediation is planned for some products; Clarified product names; Added SIMATIC RF180C; Added solution for SCALANCE X-300/X408 family"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2022-05-10T00:00:00Z",
+          "summary": "ERRATA: Removed solution for SCALANCE X-300/X408 family"
+        }
+      ],
+      "initial_release_date": "2021-07-13T00:00:00Z",
+      "current_release_date": "2022-05-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Various industry products are affected by a DHCP client vulnerability in Wind River VxWorks, that could allow an attacker to cause a heap-based buffer overflow.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-560465.pdf",
+        "summary": "SSA-560465: DHCP Client Vulnerability in VxWorks-based Industrial Products - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-560465.txt",
+        "summary": "SSA-560465: DHCP Client Vulnerability in VxWorks-based Industrial Products - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-560465.json",
+        "summary": "SSA-560465: DHCP Client Vulnerability in VxWorks-based Industrial Products - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "RUGGEDCOM WIN5100 series subscriber unit",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "RUGGEDCOM WIN5100 series subscriber unit"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM WIN5200 series subscriber unit",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "RUGGEDCOM WIN5200 series subscriber unit"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X200-4P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SCALANCE X200-4P IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5200-4AH00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X201-3P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SCALANCE X201-3P IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5201-3BH00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X201-3P IRT PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "SCALANCE X201-3P IRT PRO",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5201-3BH00-2BD2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X202-2IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "SCALANCE X202-2IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2BB00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X202-2P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "SCALANCE X202-2P IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2BH00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X202-2P IRT PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "SCALANCE X202-2P IRT PRO",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2JR00-2BA6"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "9",
+                  "name": "SCALANCE X204-2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BB10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2FM",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "10",
+                  "name": "SCALANCE X204-2FM",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BB11-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "11",
+                  "name": "SCALANCE X204-2LD",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BC10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2LD TS",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "12",
+                  "name": "SCALANCE X204-2LD TS",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BC10-2CA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2TS",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "13",
+                  "name": "SCALANCE X204-2TS",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BB10-2CA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "14",
+                  "name": "SCALANCE X204IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2BA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204IRT PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "15",
+                  "name": "SCALANCE X204IRT PRO",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0JA00-2BA6"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X206-1",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "16",
+                  "name": "SCALANCE X206-1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-1BB10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X206-1LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "17",
+                  "name": "SCALANCE X206-1LD",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-1BC10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X208",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "18",
+                  "name": "SCALANCE X208",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X208PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "19",
+                  "name": "SCALANCE X208PRO",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA10-2AA6"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X212-2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "20",
+                  "name": "SCALANCE X212-2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5212-2BB00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X212-2LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "21",
+                  "name": "SCALANCE X212-2LD",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5212-2BC00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X216",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "22",
+                  "name": "SCALANCE X216",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0BA00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X224",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "23",
+                  "name": "SCALANCE X224",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5224-0BA00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (2x 24V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "24",
+                  "name": "SCALANCE X302-7 EEC (2x 24V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-2EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (2x 24V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "25",
+                  "name": "SCALANCE X302-7 EEC (2x 24V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-2GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (2x 230V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "26",
+                  "name": "SCALANCE X302-7 EEC (2x 230V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-4EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (2x 230V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "27",
+                  "name": "SCALANCE X302-7 EEC (2x 230V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-4GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (24V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "28",
+                  "name": "SCALANCE X302-7 EEC (24V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-1EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (24V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "29",
+                  "name": "SCALANCE X302-7 EEC (24V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-1GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (230V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "30",
+                  "name": "SCALANCE X302-7 EEC (230V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-3EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X302-7 EEC (230V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "31",
+                  "name": "SCALANCE X302-7 EEC (230V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5302-7GD00-3GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X304-2FE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "32",
+                  "name": "SCALANCE X304-2FE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5304-2BD00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X306-1LD FE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "33",
+                  "name": "SCALANCE X306-1LD FE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5306-1BF00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (2x 24V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "34",
+                  "name": "SCALANCE X307-2 EEC (2x 24V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-2EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (2x 24V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "35",
+                  "name": "SCALANCE X307-2 EEC (2x 24V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-2GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (2x 230V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "36",
+                  "name": "SCALANCE X307-2 EEC (2x 230V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-4EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (2x 230V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "37",
+                  "name": "SCALANCE X307-2 EEC (2x 230V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-4GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (24V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "38",
+                  "name": "SCALANCE X307-2 EEC (24V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-1EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (24V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "39",
+                  "name": "SCALANCE X307-2 EEC (24V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-1GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (230V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "40",
+                  "name": "SCALANCE X307-2 EEC (230V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-3EA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-2 EEC (230V, coated)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "41",
+                  "name": "SCALANCE X307-2 EEC (230V, coated)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-2FD00-3GA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "42",
+                  "name": "SCALANCE X307-3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-3BL00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "43",
+                  "name": "SCALANCE X307-3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-3BL10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-3LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "44",
+                  "name": "SCALANCE X307-3LD",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-3BM00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X307-3LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "45",
+                  "name": "SCALANCE X307-3LD",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5307-3BM10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "46",
+                  "name": "SCALANCE X308-2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FL00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "47",
+                  "name": "SCALANCE X308-2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FL10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "48",
+                  "name": "SCALANCE X308-2LD",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FM00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "49",
+                  "name": "SCALANCE X308-2LD",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FM10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2LH",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "50",
+                  "name": "SCALANCE X308-2LH",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FN00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2LH",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "51",
+                  "name": "SCALANCE X308-2LH",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FN10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2LH+",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "52",
+                  "name": "SCALANCE X308-2LH+",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FP00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2LH+",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "53",
+                  "name": "SCALANCE X308-2LH+",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2FP10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2M",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "54",
+                  "name": "SCALANCE X308-2M",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2GG00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2M",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "55",
+                  "name": "SCALANCE X308-2M",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2GG10-2AA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2M PoE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "56",
+                  "name": "SCALANCE X308-2M PoE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2QG00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2M PoE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "57",
+                  "name": "SCALANCE X308-2M PoE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2QG10-2AA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2M TS",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "58",
+                  "name": "SCALANCE X308-2M TS",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2GG00-2CA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X308-2M TS",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "59",
+                  "name": "SCALANCE X308-2M TS",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5308-2GG10-2CA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X310",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "60",
+                  "name": "SCALANCE X310",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5310-0FA00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X310",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "61",
+                  "name": "SCALANCE X310",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5310-0FA10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X310FE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "62",
+                  "name": "SCALANCE X310FE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5310-0BA00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X310FE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "63",
+                  "name": "SCALANCE X310FE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5310-0BA10-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X320-1 FE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "64",
+                  "name": "SCALANCE X320-1 FE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5320-1BD00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X320-1-2LD FE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "65",
+                  "name": "SCALANCE X320-1-2LD FE",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5320-3BF00-2AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X408-2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "66",
+                  "name": "SCALANCE X408-2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5408-2FD00-2AA2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF201-3P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "67",
+                  "name": "SCALANCE XF201-3P IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5201-3JR00-2BA6"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF202-2P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "68",
+                  "name": "SCALANCE XF202-2P IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5202-2BH00-2BD2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "69",
+                  "name": "SCALANCE XF204",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204-2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "70",
+                  "name": "SCALANCE XF204-2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2BC00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204-2BA IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "71",
+                  "name": "SCALANCE XF204-2BA IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2AA00-2BD2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "72",
+                  "name": "SCALANCE XF204IRT",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2BF2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF206-1",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "73",
+                  "name": "SCALANCE XF206-1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-1BC00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF208",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "74",
+                  "name": "SCALANCE XF208",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA00-2AF2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "75",
+                  "name": "SCALANCE XR324-4M EEC (2x 24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-2ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "76",
+                  "name": "SCALANCE XR324-4M EEC (2x 24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-2ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 24V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "77",
+                  "name": "SCALANCE XR324-4M EEC (2x 24V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-2JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 24V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "78",
+                  "name": "SCALANCE XR324-4M EEC (2x 24V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-2JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "79",
+                  "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-4ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "80",
+                  "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-4ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "81",
+                  "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-4JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "82",
+                  "name": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-4JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "83",
+                  "name": "SCALANCE XR324-4M EEC (24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-1ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "84",
+                  "name": "SCALANCE XR324-4M EEC (24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-1ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (24V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "85",
+                  "name": "SCALANCE XR324-4M EEC (24V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-1JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (24V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "86",
+                  "name": "SCALANCE XR324-4M EEC (24V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-1JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "87",
+                  "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-3ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "88",
+                  "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-3ER2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "89",
+                  "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG00-3JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "90",
+                  "name": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4GG10-3JR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M PoE (24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "91",
+                  "name": "SCALANCE XR324-4M PoE (24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4QG00-1AR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M PoE (24V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "92",
+                  "name": "SCALANCE XR324-4M PoE (24V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4QG00-1HR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M PoE (230V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "93",
+                  "name": "SCALANCE XR324-4M PoE (230V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4QG00-3AR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M PoE (230V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "94",
+                  "name": "SCALANCE XR324-4M PoE (230V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4QG00-3HR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-4M PoE TS (24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "95",
+                  "name": "SCALANCE XR324-4M PoE TS (24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-4QG00-1CR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "96",
+                  "name": "SCALANCE XR324-12M (24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG00-1AR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (24V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "97",
+                  "name": "SCALANCE XR324-12M (24V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG10-1AR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (24V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "98",
+                  "name": "SCALANCE XR324-12M (24V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG00-1HR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (24V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "99",
+                  "name": "SCALANCE XR324-12M (24V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG10-1HR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (230V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "100",
+                  "name": "SCALANCE XR324-12M (230V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG00-3AR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (230V, ports on front)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "101",
+                  "name": "SCALANCE XR324-12M (230V, ports on front)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG10-3AR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (230V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "102",
+                  "name": "SCALANCE XR324-12M (230V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG00-3HR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M (230V, ports on rear)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "103",
+                  "name": "SCALANCE XR324-12M (230V, ports on rear)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG10-3HR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M TS (24V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "104",
+                  "name": "SCALANCE XR324-12M TS (24V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG00-1CR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XR324-12M TS (24V)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "105",
+                  "name": "SCALANCE XR324-12M TS (24V)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0GG10-1CR2"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC RF180C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "106",
+                  "name": "SIMATIC RF180C",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JD00"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC RF182C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "107",
+                  "name": "SIMATIC RF182C",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JD10"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC RFID 181EIP",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "108",
+                  "name": "SIMATIC RFID 181EIP",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GT2002-0JD20"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPLUS NET SCALANCE X308-2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "109",
+                  "name": "SIPLUS NET SCALANCE X308-2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1308-2FL10-4AA3"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-29998",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "There is a DHCP vulnerability in Wind River VxWorks, for versions prior to 6.5. The vulnerability could cause a possible heap overflow if exploited."
+        }
+      ],
+      "cve": "CVE-2021-29998",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98",
+          "99",
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106",
+          "107",
+          "108",
+          "109"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109"
+          ],
+          "category": "workaround",
+          "details": "Avoid the use of the DHCP client if unnecessary to your environment."
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "109"
+          ],
+          "category": "workaround",
+          "details": "If the DHCP client is enabled, it is recommended to disable it."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-29998.json",
+          "summary": "CVE-2021-29998 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

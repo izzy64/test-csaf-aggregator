@@ -1,0 +1,622 @@
+{
+  "document": {
+    "title": "SSA-162506: DHCP Client Vulnerability in SIMOTICS CONNECT 400, Desigo PXC/PXM, APOGEE MEC/MBC/PXC, APOGEE PXC Series, and TALON TC Series",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-162506",
+      "status": "interim",
+      "version": "4",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-04-14T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2021-01-12T00:00:00Z",
+          "summary": "Added solution for Desigo PXC and PXM20"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2022-04-12T00:00:00Z",
+          "summary": "Listed all affected Desigo PXC and PXM20 products explicitly. Added solution for APOGEE PXC Series (BACnet) and TALON TC Series (BACnet)"
+        },
+        {
+          "number": "4",
+          "legacy_version": "1.3",
+          "date": "2022-05-10T00:00:00Z",
+          "summary": "Added solution for APOGEE PXC Series (P2)"
+        }
+      ],
+      "initial_release_date": "2020-04-14T00:00:00Z",
+      "current_release_date": "2022-05-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIMOTICS CONNECT 400, Desigo (Power PC-based), APOGEE MEC/MBC/PXC and TALON TC products are affected by a DHCP Client vulnerability as initially reported in SSA-434032 for the Mentor Nucleus Networking Module.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-162506.pdf",
+        "summary": "SSA-162506: DHCP Client Vulnerability in SIMOTICS CONNECT 400, Desigo PXC/PXM, APOGEE MEC/MBC/PXC, APOGEE PXC Series, and TALON TC Series - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-162506.txt",
+        "summary": "SSA-162506: DHCP Client Vulnerability in SIMOTICS CONNECT 400, Desigo PXC/PXM, APOGEE MEC/MBC/PXC, APOGEE PXC Series, and TALON TC Series - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-162506.json",
+        "summary": "SSA-162506: DHCP Client Vulnerability in SIMOTICS CONNECT 400, Desigo PXC/PXM, APOGEE MEC/MBC/PXC, APOGEE PXC Series, and TALON TC Series - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "APOGEE MEC/MBC/PXC (P2)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.8.2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "APOGEE MEC/MBC/PXC (P2)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "APOGEE PXC Series (BACnet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.5.3",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "APOGEE PXC Series (BACnet)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "APOGEE PXC Series (P2)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.8.2 and < V2.8.19",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "APOGEE PXC Series (P2)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC00-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "Desigo PXC00-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC00-U",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "Desigo PXC00-U"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC001-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "Desigo PXC001-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC12-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "Desigo PXC12-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC22-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "Desigo PXC22-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC22.1-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "9",
+                  "name": "Desigo PXC22.1-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC36.1-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "10",
+                  "name": "Desigo PXC36.1-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC50-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "11",
+                  "name": "Desigo PXC50-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC64-U",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "12",
+                  "name": "Desigo PXC64-U"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC100-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "13",
+                  "name": "Desigo PXC100-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC128-U",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "14",
+                  "name": "Desigo PXC128-U"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXC200-E.D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "15",
+                  "name": "Desigo PXC200-E.D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Desigo PXM20-E",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3x and < V6.00.327",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "16",
+                  "name": "Desigo PXM20-E"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMOTICS CONNECT 400",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V0.3.0.330",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "17",
+                  "name": "SIMOTICS CONNECT 400"
+                }
+              }
+            ]
+          },
+          {
+            "name": "TALON TC Series (BACnet)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.5.3",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "18",
+                  "name": "TALON TC Series (BACnet)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-13939",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "By sending specially crafted DHCP packets to a device where the DHCP client is enabled, an attacker could change the IP address of the device to an invalid value.\n\nThe vulnerability could affect availability and integrity of the device. Adjacent network access is required, but no authentication and no user interaction is needed to conduct an attack."
+        }
+      ],
+      "cve": "CVE-2019-13939",
+      "cwe": {
+        "id": "CWE-840",
+        "name": "Business Logic Errors"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Use static IP address configuration"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned"
+        },
+        {
+          "product_ids": [
+            "2",
+            "18"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.5.3 or later version"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V2.8.19 or later version"
+        },
+        {
+          "product_ids": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V6.00.327 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/"
+        },
+        {
+          "product_ids": [
+            "17"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V0.3.0.330 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ],
+          "category": "mitigation",
+          "details": "Disable the DHCP client and use static IP address configuration instead (Note that the DHCP client is disabled by default on APOGEE/TALON and Desigo products.)"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ],
+          "category": "mitigation",
+          "details": "APOGEE MEC, MBC, PXC (versions prior to V2.8.2): Use static IP address configuration as described above"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ],
+          "category": "mitigation",
+          "details": "APOGEE PXC Series and TALON TC Series products: If using static IP address is not possible, update to the fix version listed above or contact your local Siemens office for support"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC00-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC00-U"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC001-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC12-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC22-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC22.1-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC36.1-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC50-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC64-U"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC100-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC128-U"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXC200-E.D"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109791941/",
+          "summary": "CVE-2019-13939 - Desigo PXM20-E"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/",
+          "summary": "CVE-2019-13939 - SIMOTICS CONNECT 400"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-13939.json",
+          "summary": "CVE-2019-13939 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

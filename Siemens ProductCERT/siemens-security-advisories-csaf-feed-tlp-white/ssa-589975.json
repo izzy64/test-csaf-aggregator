@@ -1,0 +1,169 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The default installation of the Windows version of the CoreShield One-\nWay Gateway (OWG) software sets insecure file permissions that could\nallow a local attacker to escalate privileges to local administrator.\nSiemens Mobility has released an update for the CoreShield OWG\nsoftware and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens Mobility strongly recommends to\nprotect network access to affected products with appropriate\nmechanisms. It is advised to follow recommended security practices in\norder to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-589975 Improper Access Control Vulnerability in CoreShield OWG Software - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-589975.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-589975 Improper Access Control Vulnerability in CoreShield OWG Software - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-589975.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-589975 Improper Access Control Vulnerability in CoreShield OWG Software - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-589975.json"
+      }
+    ],
+    "title": "SSA-589975 Improper Access Control Vulnerability in CoreShield OWG Software",
+    "tracking": {
+      "current_release_date": "2022-09-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-589975",
+      "initial_release_date": "2022-09-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-09-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.2",
+                "product": {
+                  "name": "CoreShield One-Way Gateway (OWG) Software",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CoreShield One-Way Gateway (OWG) Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-38466",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The default installation sets insecure file permissions that could allow a local attacker to escalate privileges to local administrator.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Install CoreShield OWG software on a dedicated machine",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Migrate the operating system (OS) of the affected machines to Linux",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Remove modify and write permissions from installed executables for\nlocal users",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "Contact your Siemens Mobility customer service organization to obtain\nthe update"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2022-38466"
+    }
+  ]
+}

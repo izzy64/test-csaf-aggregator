@@ -1,0 +1,683 @@
+{
+  "document": {
+    "title": "SSA-553086: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-553086",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-05-10T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-05-10T00:00:00Z",
+      "current_release_date": "2022-05-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Siemens has released updates for JT2Go and Teamcenter Visualization to fix multiple file parsing vulnerabilities. If a user is tricked to open a malicious file (crafted as CGM, TIFF or TG4) with any of the affected products, this could lead the application to crash or potentially lead to arbitrary code execution.\n\nSiemens has released updates for some of the affected products and recommends to update to the latest versions. Siemens is preparing further updates and recommends specific countermeasures for products where updates are not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-553086.pdf",
+        "summary": "SSA-553086: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-553086.txt",
+        "summary": "SSA-553086: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-553086.json",
+        "summary": "SSA-553086: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Jin Huang"
+        ],
+        "organization": "ADLab of Venustech",
+        "summary": "reporting the vulnerabilities"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "JT2Go",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V13.3.0.3",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "JT2Go"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Visualization V13.3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V13.3.0.3",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Teamcenter Visualization V13.3"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Visualization V14.0",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V14.0.0.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "Teamcenter Visualization V14.0"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2022-29028",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The Tiff_Loader.dll is vulnerable to infinite loop condition while parsing specially crafted TIFF files. An attacker could leverage this vulnerability to crash the application causing denial of service condition."
+        }
+      ],
+      "cve": "CVE-2022-29028",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V14.0.0.1 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in affected products"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2022-29028 - JT2Go"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29028 - Teamcenter Visualization V13.3"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29028 - Teamcenter Visualization V14.0"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-29028.json",
+          "summary": "CVE-2022-29028 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2022-29029",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The CGM_NIST_Loader.dll contains a null pointer dereference vulnerability while parsing specially crafted CGM files. An attacker could leverage this vulnerability to crash the application causing denial of service condition."
+        }
+      ],
+      "cve": "CVE-2022-29029",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V14.0.0.1 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in affected products"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2022-29029 - JT2Go"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29029 - Teamcenter Visualization V13.3"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29029 - Teamcenter Visualization V14.0"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-29029.json",
+          "summary": "CVE-2022-29029 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2022-29030",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The Mono_Loader.dll library is vulnerable to integer overflow condition while parsing specially crafted TG4 files. An attacker could leverage this vulnerability to crash the application causing denial of service condition."
+        }
+      ],
+      "cve": "CVE-2022-29030",
+      "cwe": {
+        "id": "CWE-680",
+        "name": "Integer Overflow to Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V14.0.0.1 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in affected products"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2022-29030 - JT2Go"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29030 - Teamcenter Visualization V13.3"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29030 - Teamcenter Visualization V14.0"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-29030.json",
+          "summary": "CVE-2022-29030 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2022-29031",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The CGM_NIST_Loader.dll contains a null pointer dereference vulnerability while parsing specially crafted CGM files. An attacker could leverage this vulnerability to crash the application causing denial of service condition."
+        }
+      ],
+      "cve": "CVE-2022-29031",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V14.0.0.1 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in affected products"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2022-29031 - JT2Go"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29031 - Teamcenter Visualization V13.3"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29031 - Teamcenter Visualization V14.0"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-29031.json",
+          "summary": "CVE-2022-29031 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2022-29032",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The CGM_NIST_Loader.dll library contains a double free vulnerability while parsing specially crafted CGM files. An attacker could leverage this vulnerability to execute code in the context of the current process."
+        }
+      ],
+      "cve": "CVE-2022-29032",
+      "cwe": {
+        "id": "CWE-415",
+        "name": "Double Free"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V14.0.0.1 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in affected products"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2022-29032 - JT2Go"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29032 - Teamcenter Visualization V13.3"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29032 - Teamcenter Visualization V14.0"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-29032.json",
+          "summary": "CVE-2022-29032 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2022-29033",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The CGM_NIST_Loader.dll library is vulnerable to uninitialized pointer free while parsing specially crafted CGM files. An attacker could leverage this vulnerability to execute code in the context of the current process."
+        }
+      ],
+      "cve": "CVE-2022-29033",
+      "cwe": {
+        "id": "CWE-824",
+        "name": "Access of Uninitialized Pointer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.3.0.3 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V14.0.0.1 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in affected products"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2022-29033 - JT2Go"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29033 - Teamcenter Visualization V13.3"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-29033 - Teamcenter Visualization V14.0"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-29033.json",
+          "summary": "CVE-2022-29033 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

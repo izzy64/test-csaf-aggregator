@@ -1,0 +1,197 @@
+{
+  "document": {
+    "title": "SSA-480937: Denial of Service Vulnerability in CP 44x-1 RNA before V1.5.18",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-480937",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-05-10T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-05-10T00:00:00Z",
+      "current_release_date": "2022-05-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Siemens has released a new version for the communication processor modules CP 44x-1 RNA that fixes a vulnerability that could allow an attacker to cause a denial of service condition.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-480937.pdf",
+        "summary": "SSA-480937: Denial of Service Vulnerability in CP 44x-1 RNA before V1.5.18 - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-480937.txt",
+        "summary": "SSA-480937: Denial of Service Vulnerability in CP 44x-1 RNA before V1.5.18 - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-480937.json",
+        "summary": "SSA-480937: Denial of Service Vulnerability in CP 44x-1 RNA before V1.5.18 - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC CP 442-1 RNA",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V1.5.18",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC CP 442-1 RNA",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7442-1RX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC CP 443-1 RNA",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V1.5.18",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMATIC CP 443-1 RNA",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7443-1RX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2022-27640",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected devices improperly handles excessive ARP broadcast requests.\n\nThis could allow an attacker to create a denial of service condition by performing ARP storming attacks, which can cause the device to reboot."
+        }
+      ],
+      "cve": "CVE-2022-27640",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V1.5.18 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808794/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V1.5.18 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808796/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808794/",
+          "summary": "CVE-2022-27640 - SIMATIC CP 442-1 RNA"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808796/",
+          "summary": "CVE-2022-27640 - SIMATIC CP 443-1 RNA"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-27640.json",
+          "summary": "CVE-2022-27640 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

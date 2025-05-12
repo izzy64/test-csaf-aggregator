@@ -1,0 +1,228 @@
+{
+  "document": {
+    "title": "SSA-350757: Improper Access Control Vulnerability in TIA Portal Affecting S7-1200 and S7-1500 CPUs Web Server (Incl. Related ET200 CPUs and SIPLUS variants)",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-350757",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-04-12T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-04-12T00:00:00Z",
+      "current_release_date": "2022-04-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "An attacker could achieve privilege escalation on the web server of certain devices configured by SIMATIC STEP 7 (TIA Portal) due to incorrect handling of the webserver's user management configuration during downloading. This only affects the S7-1200 and S7-1500 CPUs' (incl. related ET200 CPUs and SIPLUS variants) web server, when activated.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-350757.pdf",
+        "summary": "SSA-350757: Improper Access Control Vulnerability in TIA Portal Affecting S7-1200 and S7-1500 CPUs Web Server (Incl. Related ET200 CPUs and SIPLUS variants) - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-350757.txt",
+        "summary": "SSA-350757: Improper Access Control Vulnerability in TIA Portal Affecting S7-1200 and S7-1500 CPUs Web Server (Incl. Related ET200 CPUs and SIPLUS variants) - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-350757.json",
+        "summary": "SSA-350757: Improper Access Control Vulnerability in TIA Portal Affecting S7-1200 and S7-1500 CPUs Web Server (Incl. Related ET200 CPUs and SIPLUS variants) - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC STEP 7 (TIA Portal) V15",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC STEP 7 (TIA Portal) V15"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC STEP 7 (TIA Portal) V16",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V16 Update 5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMATIC STEP 7 (TIA Portal) V16"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC STEP 7 (TIA Portal) V17",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V17 Update 2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SIMATIC STEP 7 (TIA Portal) V17"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-42029",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker could achieve privilege escalation on the web server of certain devices due to improper access control vulnerability in the engineering system software. The attacker needs to have direct access to the impacted web server."
+        }
+      ],
+      "cve": "CVE-2021-42029",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:L/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V16 Update 5 or later version",
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109775861/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 2 or later version",
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109784441/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Whenever changes of the web server's user configuration are performed with one of the affected versions for S7-1200 or S7-1500 CPUs (incl. related ET200 CPUs and SIPLUS variants), validate web server permissions for unauthenticated users by directly accessing the web server in an unauthenticated manner. In case unauthenticated access is unintentionally possible, the web server's user configuration needs to be removed and reconfigured again using a TIA-Portal V16 Update 5 or V17 Update 2 or later"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "In case a new TIA-Portal version is not available, updating the web server's user configuration is not effective in this situation. Instead\n\n-   the PLC must be deleted and reconfigured with a new project. WARNING: The PLC-program should be copied before deleting the PLC. Or\n\n- the original project (one that was not uploaded by a PLC) should be used to update the web server's user management and to download the changed configuration"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109775861/",
+          "summary": "CVE-2021-42029 - SIMATIC STEP 7 (TIA Portal) V16"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109784441/",
+          "summary": "CVE-2021-42029 - SIMATIC STEP 7 (TIA Portal) V17"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-42029.json",
+          "summary": "CVE-2021-42029 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

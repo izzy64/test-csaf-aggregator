@@ -1,0 +1,204 @@
+{
+  "document": {
+    "title": "SSA-401167: Cross-site scripting Vulnerability in Teamcenter Active Workspace",
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-401167",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-06-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-06-14T00:00:00Z",
+      "current_release_date": "2022-06-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Teamcenter Active Workspace is affected by a cross site scripting vulnerability. Siemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-401167.pdf",
+        "summary": "SSA-401167: Cross-site scripting Vulnerability in Teamcenter Active Workspace - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-401167.txt",
+        "summary": "SSA-401167: Cross-site scripting Vulnerability in Teamcenter Active Workspace - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-401167.json",
+        "summary": "SSA-401167: Cross-site scripting Vulnerability in Teamcenter Active Workspace - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Han Lee"
+        ],
+        "organization": "Apple Information Security",
+        "summary": "reporting the vulnerability"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Teamcenter Active Workspace V5.2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Teamcenter Active Workspace V5.2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Active Workspace V6.0",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V6.0.3",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Teamcenter Active Workspace V6.0"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2022-32145",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A reflected cross-site scripting (XSS) vulnerability exists in the web interface of the affected application that could allow an attacker to execute malicious code by tricking users into accessing a malicious link."
+        }
+      ],
+      "cve": "CVE-2022-32145",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.2.9 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V6.0.3 or later version",
+          "url": "https://support.sw.siemens.com/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Utilize a modern web browser with integrated XSS filtering mechanisms"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-32145 - Teamcenter Active Workspace V5.2"
+        },
+        {
+          "url": "https://support.sw.siemens.com/",
+          "summary": "CVE-2022-32145 - Teamcenter Active Workspace V6.0"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-32145.json",
+          "summary": "CVE-2022-32145 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

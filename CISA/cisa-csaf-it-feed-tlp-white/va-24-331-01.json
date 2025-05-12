@@ -1,0 +1,233 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "publisher": {
+      "category": "coordinator",
+      "contact_details": "https://www.cisa.gov/report",
+      "issuing_authority": "CISA",
+      "name": "CISA",
+      "namespace": "https://www.cisa.gov"
+    },
+    "title": "Valor Apps Easy Folder Listing Pro Joomla! extension deserialization vulnerability",
+    "tracking": {
+      "current_release_date": "2024-11-26T18:15:49Z",
+      "generator": {
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.15"
+        },
+        "date": "2024-11-26T19:07:59Z"
+      },
+      "id": "VA-24-331-01",
+      "initial_release_date": "2024-11-26T18:15:49Z",
+      "status": "final",
+      "version": "1.0.0",
+      "revision_history": [
+        {
+          "number": "1.0.0",
+          "summary": "Initial publication",
+          "date": "2024-11-26T18:15:49Z"
+        }
+      ]
+    },
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "text": "Valor Apps Easy Folder Listing Pro has a deserialization vulnerability that allows any external user can gain console access to vulnerable web servers that could potentially lead to total compromise of the web server, potential privilege escalation, and initial access into organizations' internal networks.",
+        "title": "Risk Evaluation",
+        "category": "summary"
+      },
+      {
+        "text": "All information products included in https://github.com/cisagov/CSAF/tree/develop/csaf_files/IT/white are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
+        "title": "Legal Notice",
+        "category": "legal_disclaimer"
+      },
+      {
+        "text": "Worldwide",
+        "title": "Countries and Areas Deployed",
+        "category": "other"
+      },
+      {
+        "text": "This vulnerability is addressed in versions 3.8 (Joomla 3.10 or lower) and 4.5 (Joomla 5+).",
+        "title": "Recommended Practices",
+        "category": "general"
+      },
+      {
+        "text": "Antigua and Barbuda",
+        "title": "Company Headquarters Location",
+        "category": "other"
+      },
+      {
+        "text": "Information Technology",
+        "title": "Critical Infrastructure Sectors",
+        "category": "description"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2024/va-24-331-01.json",
+        "summary": "Vulnerability Advisory VA-24-331-01 CSAF",
+        "category": "self"
+      }
+    ],
+    "lang": "en-US"
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "vendor",
+        "name": "Valor Apps",
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Easy Folder Listing Pro",
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=3.7|<3.8",
+                "product": {
+                  "name": "Valor Apps Easy Folder Listing Pro 3.7 < 3.8",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.8",
+                "product": {
+                  "name": "Valor Apps Easy Folder Listing Pro 3.8",
+                  "product_id": "CSAFPID-0002"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": ">=4.4|<4.5",
+                "product": {
+                  "name": "Valor Apps Easy Folder Listing Pro 4.4 < 4.5",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "4.5",
+                "product": {
+                  "name": "Valor Apps Easy Folder Listing Pro 4.5",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-11145",
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Valor Apps Easy Folder Listing Pro has a deserialization vulnerability that allows an unauthenticated, remote attacker to execute arbitrary code with the privileges of the Joomla! application. Fixed in versions 3.8 and 4.5.",
+          "title": "Description"
+        },
+        {
+          "category": "details",
+          "title": "SSVC",
+          "text": "SSVCv2/E:P/A:Y/T:T/2024-11-26T18:45:42Z/"
+        }
+      ],
+      "title": "Easy Folder Listing Pro deserialization vulnerability",
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ],
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "www.valorapps.com",
+          "url": "https://www.valorapps.com/web-products/easy-folder-listing-pro.html"
+        },
+        {
+          "category": "external",
+          "summary": "github.com",
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/IT/white/2024/va-24-331-01.json"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Fixed in versions 3.8 and 4.5.",
+          "url": "https://www.valorapps.com/web-products/easy-folder-listing-pro.html",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "date": "2024-11-12T05:00:00Z"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Fixed in versions 3.8 and 4.5.",
+          "url": "https://www.valorapps.com/web-products/easy-folder-listing-pro.html",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "date": "2024-11-12T05:00:00Z"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Fixed in versions 3.8 and 4.5.",
+          "url": "https://www.valorapps.com/web-products/easy-folder-listing-pro.html",
+          "product_ids": [
+            "CSAFPID-0003"
+          ],
+          "date": "2024-11-12T05:00:00Z"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Fixed in versions 3.8 and 4.5.",
+          "url": "https://www.valorapps.com/web-products/easy-folder-listing-pro.html",
+          "product_ids": [
+            "CSAFPID-0004"
+          ],
+          "date": "2024-11-12T05:00:00Z"
+        }
+      ],
+      "acknowledgments": [
+        {
+          "names": [
+            "Ishan Brown"
+          ],
+          "organization": "CISA"
+        }
+      ],
+      "release_date": "2024-11-11T00:00:00Z"
+    }
+  ]
+}

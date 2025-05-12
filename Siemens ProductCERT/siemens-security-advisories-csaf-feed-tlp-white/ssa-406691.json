@@ -1,0 +1,380 @@
+{
+  "document": {
+    "title": "SSA-406691: Buffer Vulnerabilities in DHCP function of RUGGEDCOM ROX products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-406691",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-03-08T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-03-08T00:00:00Z",
+      "current_release_date": "2022-03-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "A vulnerability in the RUGGEDCOM ROX devices' third party component, ISC DHCP, could allow an attacker to cause a buffer overrun due to a bug when reading a stored DHCP lease containing certain option information, eventually leading to a denial-of-service condition, or cause a remote-code execution.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-406691.pdf",
+        "summary": "SSA-406691: Buffer Vulnerabilities in DHCP function of RUGGEDCOM ROX products - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-406691.txt",
+        "summary": "SSA-406691: Buffer Vulnerabilities in DHCP function of RUGGEDCOM ROX products - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-406691.json",
+        "summary": "SSA-406691: Buffer Vulnerabilities in DHCP function of RUGGEDCOM ROX products - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "RUGGEDCOM ROX MX5000",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3.0 and < V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "RUGGEDCOM ROX MX5000"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1400",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "RUGGEDCOM ROX RX1400"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1500",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3.0 and < V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "RUGGEDCOM ROX RX1500"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1501",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3.0 and < V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "RUGGEDCOM ROX RX1501"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1510",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3.0 and < V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "RUGGEDCOM ROX RX1510"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1511",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3.0 and < V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "RUGGEDCOM ROX RX1511"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1512",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3.0 and < V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "RUGGEDCOM ROX RX1512"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1524",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "RUGGEDCOM ROX RX1524"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX1536",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "9",
+                  "name": "RUGGEDCOM ROX RX1536"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROX RX5000",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V2.3.0 and < V2.15.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "10",
+                  "name": "RUGGEDCOM ROX RX5000"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-25217",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected products contain the third party component, ISC DHCP, that possesses a vulnerability if used as a DHCP client or server. The vulnerability affects the DHCP package when storing and reading DHCP lease information containing particular option information.\n\nAn attacker could exploit this vulnerability to affect the availability of the DHCP client or server, or in the worst case affect the confidentiality or integrity of device through a buffer overflow or cause a remote-code execution."
+        }
+      ],
+      "cve": "CVE-2021-25217",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V2.15.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/document/109805782/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "category": "workaround",
+          "details": "Disable the DHCP server if not needed for operations"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "category": "workaround",
+          "details": "Disable the DHCP client if not needed for operations"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX MX5000"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1400"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1500"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1501"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1510"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1511"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1512"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1524"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX1536"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109805782/",
+          "summary": "CVE-2021-25217 - RUGGEDCOM ROX RX5000"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-25217.json",
+          "summary": "CVE-2021-25217 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,437 @@
+{
+  "document": {
+    "title": "SSA-334944: Vulnerability in SINEMA Remote Connect Server",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-334944",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-09-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-09-14T00:00:00Z",
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Multiple vulnerabilities in SINEMA Remote Connect Server could allow an unauthorized remote attacker to retrieve or manipulate sensitive information from the affected software. In addition, the attacker could also cause a Denial-of-Service condition in devices controlled by the affected software.\n\nSiemens has released an update for the SINEMA Remote Connect Server and recommends to update to the latest version."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-334944.pdf",
+        "summary": "SSA-334944: Vulnerability in SINEMA Remote Connect Server - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-334944.txt",
+        "summary": "SSA-334944: Vulnerability in SINEMA Remote Connect Server - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-334944.json",
+        "summary": "SSA-334944: Vulnerability in SINEMA Remote Connect Server - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Cybersecurity and Infrastructure Security Agency (CISA)",
+        "summary": "coordination efforts"
+      },
+      {
+        "names": [
+          "Sharon Brizinov"
+        ],
+        "organization": "Claroty",
+        "summary": "coordinated disclosure"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SINEMA Remote Connect Server",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.0 SP2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SINEMA Remote Connect Server"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-37177",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The status provided by the syslog clients managed by the affected software can be manipulated by an unauthenticated attacker in the same network of the affected system."
+        }
+      ],
+      "cve": "CVE-2021-37177",
+      "cwe": {
+        "id": "CWE-471",
+        "name": "Modification of Assumed-Immutable Data (MAID)"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0 SP2 or later version",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/",
+          "summary": "CVE-2021-37177 - SINEMA Remote Connect Server"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37177.json",
+          "summary": "CVE-2021-37177 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-37183",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected software allows sending send-to-sleep notifications to the managed devices. An unauthenticated attacker in the same network of the affected system can abuse these notifications to cause a Denial-of-Service condition in the managed devices."
+        }
+      ],
+      "cve": "CVE-2021-37183",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0 SP2 or later version",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/",
+          "summary": "CVE-2021-37183 - SINEMA Remote Connect Server"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37183.json",
+          "summary": "CVE-2021-37183 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-37190",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected software has an information disclosure vulnerability that could allow an attacker to retrieve VPN connection for a known user."
+        }
+      ],
+      "cve": "CVE-2021-37190",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0 SP2 or later version",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/",
+          "summary": "CVE-2021-37190 - SINEMA Remote Connect Server"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37190.json",
+          "summary": "CVE-2021-37190 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-37191",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated attacker in the same network of the affected system could brute force the usernames from the affected software."
+        }
+      ],
+      "cve": "CVE-2021-37191",
+      "cwe": {
+        "id": "CWE-799",
+        "name": "Improper Control of Interaction Frequency"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.1,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0 SP2 or later version",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/",
+          "summary": "CVE-2021-37191 - SINEMA Remote Connect Server"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37191.json",
+          "summary": "CVE-2021-37191 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-37192",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected software has an information disclosure vulnerability that could allow an attacker to retrieve a list of network devices a known user can manage."
+        }
+      ],
+      "cve": "CVE-2021-37192",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0 SP2 or later version",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/",
+          "summary": "CVE-2021-37192 - SINEMA Remote Connect Server"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37192.json",
+          "summary": "CVE-2021-37192 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-37193",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An unauthenticated attacker in the same network of the affected system could manipulate certain parameters and set a valid user of the affected software as invalid (or vice-versa)."
+        }
+      ],
+      "cve": "CVE-2021-37193",
+      "cwe": {
+        "id": "CWE-471",
+        "name": "Modification of Assumed-Immutable Data (MAID)"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0 SP2 or later version",
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/de/en/view/109793790/",
+          "summary": "CVE-2021-37193 - SINEMA Remote Connect Server"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37193.json",
+          "summary": "CVE-2021-37193 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

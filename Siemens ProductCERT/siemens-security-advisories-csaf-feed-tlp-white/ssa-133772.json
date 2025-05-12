@@ -1,0 +1,233 @@
+{
+  "document": {
+    "title": "SSA-133772: Zip Path Traversal Vulnerability in Teamcenter Active Workspace",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-133772",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-12-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-12-14T00:00:00Z",
+      "current_release_date": "2021-12-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "A zip path traversal vulnerability in Teamcenter Active Workspace could allow an attacker to achieve remote code execution.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-133772.pdf",
+        "summary": "SSA-133772: Zip Path Traversal Vulnerability in Teamcenter Active Workspace - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-133772.txt",
+        "summary": "SSA-133772: Zip Path Traversal Vulnerability in Teamcenter Active Workspace - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-133772.json",
+        "summary": "SSA-133772: Zip Path Traversal Vulnerability in Teamcenter Active Workspace - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Teamcenter Active Workspace V4.3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.11",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Teamcenter Active Workspace V4.3"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Active Workspace V5.0",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.0.10",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Teamcenter Active Workspace V5.0"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Active Workspace V5.1",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.1.6",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "Teamcenter Active Workspace V5.1"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Active Workspace V5.2",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.3",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "Teamcenter Active Workspace V5.2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-41547",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The application contains an unsafe unzipping pattern that could lead to a zip path traversal attack. This could allow and attacker to execute a remote shell with admin rights."
+        }
+      ],
+      "cve": "CVE-2021-41547",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.8,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.3.11 or later version"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.0.10 or later version"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.1.6 or later version"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.2.3 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Harden the application host to prevent local access by untrusted personnel"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-41547.json",
+          "summary": "CVE-2021-41547 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

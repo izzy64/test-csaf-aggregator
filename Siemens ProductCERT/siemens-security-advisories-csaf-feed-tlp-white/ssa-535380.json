@@ -1,0 +1,279 @@
+{
+  "document": {
+    "title": "SSA-535380: Command Injection Vulnerability in Siveillance OIS Affecting Several Building Management Systems",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-535380",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-09-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-09-14T00:00:00Z",
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The Siveillance Open Interface Services (OIS) application used for integration of different subsystems to several Siemens building management systems contains a command injection vulnerability that could allow a remote unauthenticated attacker to execute code on the affected system with root privileges.\n\nSiemens has released patches and updates for Siveillance OIS to apply to the products that incorporate the OIS service, and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment."
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-535380.pdf",
+        "summary": "SSA-535380: Command Injection Vulnerability in Siveillance OIS Affecting Several Building Management Systems - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-535380.txt",
+        "summary": "SSA-535380: Command Injection Vulnerability in Siveillance OIS Affecting Several Building Management Systems - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-535380.json",
+        "summary": "SSA-535380: Command Injection Vulnerability in Siveillance OIS Affecting Several Building Management Systems - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Desigo CC",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions with OIS Extension Module",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Desigo CC"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GMA-Manager",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions with OIS running on Debian 9 or earlier",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "GMA-Manager"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Operation Scheduler",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions with OIS running on Debian 9 or earlier",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "Operation Scheduler"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Siveillance Control",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "All versions with OIS running on Debian 9 or earlier",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "Siveillance Control"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Siveillance Control Pro",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "Siveillance Control Pro"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-31891",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected application incorrectly neutralizes special elements in a specific HTTP GET request which could lead to command injection.\n\nAn unauthenticated remote attacker could exploit this vulnerability to execute arbitrary code on the system with root privileges."
+        }
+      ],
+      "cve": "CVE-2021-31891",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update the OIS to V2.5.3 or apply the patch",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update the OIS to V2.5.3 or V2.6.1, or apply the patch",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/"
+        },
+        {
+          "product_ids": [
+            "5"
+          ],
+          "category": "vendor_fix",
+          "details": "Update the OIS to V2.5.3 or V2.6.0, or apply the patch",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "category": "mitigation",
+          "details": "Ensure that the systems where Siveillance OIS is installed are only accessible by trusted personnel"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "category": "mitigation",
+          "details": "Restrict access to the affected systems, especially to port 443/tcp, to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/",
+          "summary": "CVE-2021-31891 - Desigo CC"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/",
+          "summary": "CVE-2021-31891 - GMA-Manager"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/",
+          "summary": "CVE-2021-31891 - Operation Scheduler"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/",
+          "summary": "CVE-2021-31891 - Siveillance Control"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799908/",
+          "summary": "CVE-2021-31891 - Siveillance Control Pro"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31891.json",
+          "summary": "CVE-2021-31891 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

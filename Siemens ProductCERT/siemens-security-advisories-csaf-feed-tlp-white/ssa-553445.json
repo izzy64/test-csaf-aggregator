@@ -1,0 +1,282 @@
+{
+  "document": {
+    "title": "SSA-553445: DNS \"Name:Wreck\" Vulnerabilities in Multiple Siemens Energy AGT and SGT solutions",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-553445",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-08-10T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-08-10T00:00:00Z",
+      "current_release_date": "2021-08-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "One of the DNS-related vulnerabilities that were reported as \"Name:Wreck\" may affect the following Siemens Energy products:\n\n-   Industrial Gas Turbines SGT-100, SGT-200, SGT-300 and SGT-400 with Allen Bradley control systems\n-   Aeroderivative Gas Turbines SGT-A20, SGT-A35 and SGT-A65 with FT125 control systems"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\n\nSiemens Energy strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens Energy strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment.\n\nAs a general security measure Siemens Energy strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment."
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-553445.pdf",
+        "summary": "SSA-553445: DNS \"Name:Wreck\" Vulnerabilities in Multiple Siemens Energy AGT and SGT solutions - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-553445.txt",
+        "summary": "SSA-553445: DNS \"Name:Wreck\" Vulnerabilities in Multiple Siemens Energy AGT and SGT solutions - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-553445.json",
+        "summary": "SSA-553445: DNS \"Name:Wreck\" Vulnerabilities in Multiple Siemens Energy AGT and SGT solutions - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SGT-100",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SGT-100"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SGT-200",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SGT-200"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SGT-300",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SGT-300"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SGT-400",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SGT-400"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SGT-A20",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "SGT-A20"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SGT-A35",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "SGT-A35"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SGT-A65",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "SGT-A65"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2016-20009",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "** UNSUPPORTED WHEN ASSIGNED ** A DNS client stack-based buffer overflow in ipdnsc_decode_name() affects Wind River VxWorks 6.5 through 7. NOTE: This vulnerability only affects products that are no longer supported by the maintainer."
+        }
+      ],
+      "cve": "CVE-2016-20009",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "category": "vendor_fix",
+          "details": "As only Rockwell Automation / Allen Bradley components are affected, please see Rockwell Security Advisory PN1564 for affected parts and software/firmware updates. Some updates may not be compatible with other components in the system. Contact Siemens Energy for further support."
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "category": "mitigation",
+          "details": "While firmware updates are suggested in the original advisory as solutions, the updates may not be compatible with the software or other components in the system. Please contact your local Siemens Energy representative for an assessment."
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "category": "mitigation",
+          "details": "For more details on how to mitigate this vulnerability, see Rockwell Security Advisory PN1564 (https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1131196, Login required)"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-20009.json",
+          "summary": "CVE-2016-20009 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

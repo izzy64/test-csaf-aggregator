@@ -1,0 +1,397 @@
+{
+  "document": {
+    "title": "SSA-752103: Telnet Authentication Vulnerability in SINAMICS Medium Voltage Products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-752103",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-05-11T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2021-08-10T00:00:00Z",
+          "summary": "Updated information for SINAMICS SL150, SINAMICS SM150 and SINAMICS SM150i"
+        }
+      ],
+      "initial_release_date": "2021-05-11T00:00:00Z",
+      "current_release_date": "2021-08-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SINAMICS medium voltage products, with telnet enabled on SIMATIC comfort HMI Panels, are affected by a remote access vulnerability that could allow an attacker, under certain conditions, to gain full remote access to the HMI. Note that by default telnet is disabled, but it can be enabled by the system integrator on request.\n\nSiemens has released updates for the affected products, and recommends to update them to the latest version."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-752103.pdf",
+        "summary": "SSA-752103: Telnet Authentication Vulnerability in SINAMICS Medium Voltage Products - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-752103.txt",
+        "summary": "SSA-752103: Telnet Authentication Vulnerability in SINAMICS Medium Voltage Products - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-752103.json",
+        "summary": "SSA-752103: Telnet Authentication Vulnerability in SINAMICS Medium Voltage Products - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SINAMICS GH150",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SINAMICS GH150"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINAMICS GL150 (with option X30)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SINAMICS GL150 (with option X30)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINAMICS GM150 (with option X30)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SINAMICS GM150 (with option X30)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINAMICS SH150",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SINAMICS SH150"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINAMICS SL150",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "SINAMICS SL150"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINAMICS SM120",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "SINAMICS SM120"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINAMICS SM150",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "SINAMICS SM150"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINAMICS SM150i",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "SINAMICS SM150i"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-15798",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected devices with enabled telnet service do not require authentication for this service. This could allow a remote attacker to gain full access to the device. (ZDI-CAN-12046)"
+        }
+      ],
+      "cve": "CVE-2020-15798",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "As only HMI image versions < V16 Update 3a are affected, please update the HMI Panel images as included in your installation of SINAMICS GH150 to V16 Update 4 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "https://support.industry.siemens.com/cs/ww/en/view/109746530/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "category": "none_available",
+          "details": "Currently no remediation is available"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "As only HMI image versions < V16 Update 3a are affected, please update the HMI Panel images as included in your installation of SINAMICS GL150 (with option X30) to V16 Update 4 or later version"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "As only HMI image versions < V16 Update 3a are affected, please update the HMI Panel images as included in your installation of SINAMICS GM150 (with option X30) to V16 Update 4 or later version"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "As only HMI image versions < V16 Update 3a are affected, please update the HMI Panel images as included in your installation of SINAMICS SH150 to V16 Update 4 or later version"
+        },
+        {
+          "product_ids": [
+            "5"
+          ],
+          "category": "mitigation",
+          "details": "As only SIMATIC HMI image versions < V15 SP1 Update 6 are affected, please update the HMI Panel image as included in your installation of SINAMICS SL150 to V15 SP1 Update 6 or later version"
+        },
+        {
+          "product_ids": [
+            "5",
+            "7",
+            "8"
+          ],
+          "category": "mitigation",
+          "details": "https://support.industry.siemens.com/cs/ww/en/view/109763890/"
+        },
+        {
+          "product_ids": [
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "As only HMI image versions < V16 Update 3a are affected, please update the HMI Panel images as included in your installation of SINAMICS SM120 to V16 Update 4 or later version"
+        },
+        {
+          "product_ids": [
+            "7"
+          ],
+          "category": "mitigation",
+          "details": "As only SIMATIC HMI image versions < V15 SP1 Update 6 are affected, please update the HMI Panel image as included in your installation of SINAMICS SM150 to V15 SP1 Update 6 or later version"
+        },
+        {
+          "product_ids": [
+            "8"
+          ],
+          "category": "mitigation",
+          "details": "As only SIMATIC HMI image versions < V15 SP1 Update 6 are affected, please update the HMI Panel image as included in your installation of SINAMICS SM150i to V15 SP1 Update 6 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "category": "mitigation",
+          "details": "Follow SINAMICS MV Industrial Security guidelines"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "category": "mitigation",
+          "details": "Disable telnet on the HMI Panels if enabled. If this is not possible, Defense-in-Depth should be used. Note: By default telnet is disabled, but it can be enabled by the system integrator on request."
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "category": "mitigation",
+          "details": "For any questions regarding update, please contact Siemens customer service or your system integrator."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-15798.json",
+          "summary": "CVE-2020-15798 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

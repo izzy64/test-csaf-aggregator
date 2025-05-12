@@ -1,0 +1,185 @@
+{
+  "document": {
+    "title": "SSA-434536: Memory Protection Bypass Vulnerability in SINUMERIK ONE and SINUMERIK MC",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-434536",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-07-13T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2021-09-14T00:00:00Z",
+          "summary": "Added solution for SINUMERIK MC and SINUMERIK ONE"
+        }
+      ],
+      "initial_release_date": "2021-07-13T00:00:00Z",
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SINUMERIK ONE and SINUMERIK MC products are affected by a memory protection bypass vulnerability in the integrated S7-1500 CPU that could allow an attacker to write arbitrary data and code to protected memory areas or read sensitive data to launch further attacks on the CPU.\n\nSiemens has released updates for the affected products and recommends that customers update to the new version."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-434536.pdf",
+        "summary": "SSA-434536: Memory Protection Bypass Vulnerability in SINUMERIK ONE and SINUMERIK MC - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-434536.txt",
+        "summary": "SSA-434536: Memory Protection Bypass Vulnerability in SINUMERIK ONE and SINUMERIK MC - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-434536.json",
+        "summary": "SSA-434536: Memory Protection Bypass Vulnerability in SINUMERIK ONE and SINUMERIK MC - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SINUMERIK MC",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V6.15",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SINUMERIK MC"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINUMERIK ONE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V6.15",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SINUMERIK ONE"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-15782",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected devices are vulnerable to a memory protection bypass through a specific operation.\n\nA remote unauthenticated attacker with network access to port 102/tcp could potentially write arbitrary data and code to protected memory areas or read sensitive data to launch further attacks."
+        }
+      ],
+      "cve": "CVE-2020-15782",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V6.15 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Limit access to port 102/tcp to trusted users and systems only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-15782.json",
+          "summary": "CVE-2020-15782 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

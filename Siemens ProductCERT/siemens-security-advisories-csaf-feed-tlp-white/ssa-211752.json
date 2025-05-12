@@ -1,0 +1,1047 @@
+{
+  "document": {
+    "title": "SSA-211752: Multiple NTP-Client Related Vulnerabilities in SIMATIC CP 443-1 OPC UA",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-211752",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-06-08T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2022-02-08T00:00:00Z",
+          "summary": "No remediation planned for SIMATIC CP 443-1 OPC UA"
+        }
+      ],
+      "initial_release_date": "2021-06-08T00:00:00Z",
+      "current_release_date": "2022-02-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "All versions of the SIMATIC CP 443-1 OPC UA contain multiple vulnerabilities in the underlying third party component NTP.\n\nSiemens recommends specific countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-211752.pdf",
+        "summary": "SSA-211752: Multiple NTP-Client Related Vulnerabilities in SIMATIC CP 443-1 OPC UA - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-211752.txt",
+        "summary": "SSA-211752: Multiple NTP-Client Related Vulnerabilities in SIMATIC CP 443-1 OPC UA - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-211752.json",
+        "summary": "SSA-211752: Multiple NTP-Client Related Vulnerabilities in SIMATIC CP 443-1 OPC UA - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC CP 443-1 OPC UA",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC CP 443-1 OPC UA (6GK7443-1UX00-0XE0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7443-1UX00-0XE0"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2015-7705",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The rate limiting feature in NTP 4.x before 4.2.8p4 and 4.3.x before 4.3.77 allows remote attackers to have unspecified impact via a large number of crafted requests."
+        }
+      ],
+      "cve": "CVE-2015-7705",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7705.json",
+          "summary": "CVE-2015-7705 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2015-7853",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The datalen parameter in the refclock driver in NTP 4.2.x before 4.2.8p4, and 4.3.x before 4.3.77 allows remote attackers to execute arbitrary code or cause a denial of service (crash) via a negative input value."
+        }
+      ],
+      "cve": "CVE-2015-7853",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7853.json",
+          "summary": "CVE-2015-7853 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2015-8138",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "NTP before 4.2.8p6 and 4.3.x before 4.3.90 allows remote attackers to bypass the origin timestamp validation via a packet with an origin timestamp set to zero."
+        }
+      ],
+      "cve": "CVE-2015-8138",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-8138.json",
+          "summary": "CVE-2015-8138 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-1547",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An off-path attacker can cause a preemptible client association to be demobilized in NTP 4.2.8p4 and earlier and NTPSec a5fb34b9cc89b92a8fef2f459004865c93bb7f92 by sending a crypto NAK packet to a victim client with a spoofed source address of an existing associated peer. This is true even if authentication is enabled."
+        }
+      ],
+      "cve": "CVE-2016-1547",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-1547.json",
+          "summary": "CVE-2016-1547 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-1548",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker can spoof a packet from a legitimate ntpd server with an origin timestamp that matches the peer->dst timestamp recorded for that server. After making this switch, the client in NTP 4.2.8p4 and earlier and NTPSec aa48d001683e5b791a743ec9c575aaf7d867a2b0c will reject all future legitimate server responses. It is possible to force the victim client to move time after the mode has been changed. ntpq gives no indication that the mode has been switched."
+        }
+      ],
+      "cve": "CVE-2016-1548",
+      "cwe": {
+        "id": "CWE-19",
+        "name": "Data Processing Errors"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-1548.json",
+          "summary": "CVE-2016-1548 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-1550",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An exploitable vulnerability exists in the message authentication functionality of libntp in ntp 4.2.8p4 and NTPSec a5fb34b9cc89b92a8fef2f459004865c93bb7f92. An attacker can send a series of crafted messages to attempt to recover the message digest key."
+        }
+      ],
+      "cve": "CVE-2016-1550",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-1550.json",
+          "summary": "CVE-2016-1550 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-2518",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The MATCH_ASSOC function in NTP before version 4.2.8p9 and 4.3.x before 4.3.92 allows remote attackers to cause an out-of-bounds reference via an addpeer request with a large hmode value."
+        }
+      ],
+      "cve": "CVE-2016-2518",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-2518.json",
+          "summary": "CVE-2016-2518 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-4953",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "ntpd in NTP 4.x before 4.2.8p8 allows remote attackers to cause a denial of service (ephemeral-association demobilization) by sending a spoofed crypto-NAK packet with incorrect authentication data at a certain time."
+        }
+      ],
+      "cve": "CVE-2016-4953",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-4953.json",
+          "summary": "CVE-2016-4953 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-4954",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The process_packet function in ntp_proto.c in ntpd in NTP 4.x before 4.2.8p8 allows remote attackers to cause a denial of service (peer-variable modification) by sending spoofed packets from many source IP addresses in a certain scenario, as demonstrated by triggering an incorrect leap indication."
+        }
+      ],
+      "cve": "CVE-2016-4954",
+      "cwe": {
+        "id": "CWE-362",
+        "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-4954.json",
+          "summary": "CVE-2016-4954 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-4955",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "ntpd in NTP 4.x before 4.2.8p8, when autokey is enabled, allows remote attackers to cause a denial of service (peer-variable clearing and association outage) by sending (1) a spoofed crypto-NAK packet or (2) a packet with an incorrect MAC value at a certain time."
+        }
+      ],
+      "cve": "CVE-2016-4955",
+      "cwe": {
+        "id": "CWE-362",
+        "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-4955.json",
+          "summary": "CVE-2016-4955 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-4956",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "ntpd in NTP 4.x before 4.2.8p8 allows remote attackers to cause a denial of service (interleaved-mode transition and time change) via a spoofed broadcast packet. NOTE: this vulnerability exists because of an incomplete fix for CVE-2016-1548."
+        }
+      ],
+      "cve": "CVE-2016-4956",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-4956.json",
+          "summary": "CVE-2016-4956 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-7431",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "NTP before 4.2.8p9 allows remote attackers to bypass the origin timestamp protection mechanism via an origin timestamp of zero. NOTE: this vulnerability exists because of a CVE-2015-8138 regression."
+        }
+      ],
+      "cve": "CVE-2016-7431",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-7431.json",
+          "summary": "CVE-2016-7431 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-7433",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "NTP before 4.2.8p9 does not properly perform the initial sync calculations, which allows remote attackers to unspecified impact via unknown vectors, related to a \"root distance that did not include the peer dispersion.\""
+        }
+      ],
+      "cve": "CVE-2016-7433",
+      "cwe": {
+        "id": "CWE-682",
+        "name": "Incorrect Calculation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-7433.json",
+          "summary": "CVE-2016-7433 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2016-9042",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An exploitable denial of service vulnerability exists in the origin timestamp check functionality of ntpd 4.2.8p9. A specially crafted unauthenticated network packet can be used to reset the expected origin timestamp for target peers. Legitimate replies from targeted peers will fail the origin timestamp check (TEST2) causing the reply to be dropped and creating a denial of service condition."
+        }
+      ],
+      "cve": "CVE-2016-9042",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-9042.json",
+          "summary": "CVE-2016-9042 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2017-6458",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Multiple buffer overflows in the ctl_put* functions in NTP before 4.2.8p10 and 4.3.x before 4.3.94 allow remote authenticated users to have unspecified impact via a long variable."
+        }
+      ],
+      "cve": "CVE-2017-6458",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "no_fix_planned",
+          "details": "Currently no remediation is planned"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Deactivate NTP-based time synchronization of the device, if enabled. The feature is disabled by default"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Configure an additional firewall to prevent communication to port udp/123 of an affected device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2017-6458.json",
+          "summary": "CVE-2017-6458 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

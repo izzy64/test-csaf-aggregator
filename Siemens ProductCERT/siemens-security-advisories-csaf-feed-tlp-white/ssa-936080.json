@@ -1,0 +1,231 @@
+{
+  "document": {
+    "title": "SSA-936080: Multiple Vulnerabilities in Third-Party Component libcurl",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-936080",
+      "status": "final",
+      "version": "3",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-03-09T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2021-05-11T00:00:00Z",
+          "summary": "Added SIMATIC CP 343-1 Advanced (incl. SIPLUS variants) to the list of affected products"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2021-09-14T00:00:00Z",
+          "summary": "Added solution for SIMATIC CM 1542-1"
+        }
+      ],
+      "initial_release_date": "2021-03-09T00:00:00Z",
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIMATIC CM 1542-1, SCALANCE SC600 family and SIMATIC CP 343-1 Advanced devices are vulnerable to a vulnerability in the third party component libcurl that could allow an attacker to cause a Denial-of-Service condition on the affected devices.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where updates are not, or not yet available.\n\nThe impact of additional libcurl vulnerabilities is described in Siemens Security Advisory SSA-436177."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-936080.pdf",
+        "summary": "SSA-936080: Multiple Vulnerabilities in Third-Party Component libcurl - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-936080.txt",
+        "summary": "SSA-936080: Multiple Vulnerabilities in Third-Party Component libcurl - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-936080.json",
+        "summary": "SSA-936080: Multiple Vulnerabilities in Third-Party Component libcurl - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SCALANCE SC600 Family",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SCALANCE SC600 Family"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC CM 1542-1",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMATIC CM 1542-1"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "V3.0.33, V3.0.44 and V3.0.53",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SIMATIC CP 343-1 Advanced (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-3823",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The libcurl library versions 7.34.0 to and including 7.63.0 are vulnerable to a heap out-of-bounds read in the code handling the end-of-response for SMTP.\n\nThis vulnerability could allow an attacker to trigger a Denial-of-Service condition on the affected devices."
+        }
+      ],
+      "cve": "CVE-2019-3823",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109769665/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801629/"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "none_available",
+          "details": "Currently no remediation is available"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Disable the SMTP Client function on affected devices or use VPN for protecting SMTP traffic to trusted email servers only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109769665/",
+          "summary": "CVE-2019-3823 - SCALANCE SC600 Family"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801629/",
+          "summary": "CVE-2019-3823 - SIMATIC CM 1542-1"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-3823.json",
+          "summary": "CVE-2019-3823 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

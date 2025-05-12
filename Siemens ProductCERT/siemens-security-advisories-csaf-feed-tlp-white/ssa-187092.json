@@ -1,0 +1,1086 @@
+{
+  "document": {
+    "title": "SSA-187092: Several Buffer-Overflow Vulnerabilities in Web Server of SCALANCE X-200",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-187092",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-04-13T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2021-09-14T00:00:00Z",
+          "summary": "Added solution for SCALANCE X-200 switch family"
+        }
+      ],
+      "initial_release_date": "2021-04-13T00:00:00Z",
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Several SCALANCE X-200 switches contain buffer overflow vulnerabilities in the web server.\n\nIn the most severe case an attacker could potentially remotely execute code.\n\nSiemens is preparing updates and recommends specific countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-187092.pdf",
+        "summary": "SSA-187092: Several Buffer-Overflow Vulnerabilities in Web Server of SCALANCE X-200 - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-187092.txt",
+        "summary": "SSA-187092: Several Buffer-Overflow Vulnerabilities in Web Server of SCALANCE X-200 - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-187092.json",
+        "summary": "SSA-187092: Several Buffer-Overflow Vulnerabilities in Web Server of SCALANCE X-200 - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SCALANCE X200-4P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SCALANCE X200-4P IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X201-3P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SCALANCE X201-3P IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X201-3P IRT PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SCALANCE X201-3P IRT PRO"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X202-2 IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SCALANCE X202-2 IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X202-2P IRT (incl. SIPLUS NET variant)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "SCALANCE X202-2P IRT (incl. SIPLUS NET variant)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X202-2P IRT PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "SCALANCE X202-2P IRT PRO"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204 IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "SCALANCE X204 IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204 IRT PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "SCALANCE X204 IRT PRO"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2 (incl. SIPLUS NET variant)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "9",
+                  "name": "SCALANCE X204-2 (incl. SIPLUS NET variant)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2FM",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "10",
+                  "name": "SCALANCE X204-2FM"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2LD (incl. SIPLUS NET variant)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "11",
+                  "name": "SCALANCE X204-2LD (incl. SIPLUS NET variant)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2LD TS",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "12",
+                  "name": "SCALANCE X204-2LD TS"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X204-2TS",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "13",
+                  "name": "SCALANCE X204-2TS"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X206-1",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "14",
+                  "name": "SCALANCE X206-1"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X206-1LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "15",
+                  "name": "SCALANCE X206-1LD"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X208 (incl. SIPLUS NET variant)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "16",
+                  "name": "SCALANCE X208 (incl. SIPLUS NET variant)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X208PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "17",
+                  "name": "SCALANCE X208PRO"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X212-2 (incl. SIPLUS NET variant)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "18",
+                  "name": "SCALANCE X212-2 (incl. SIPLUS NET variant)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X212-2LD",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "19",
+                  "name": "SCALANCE X212-2LD"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X216",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "20",
+                  "name": "SCALANCE X216"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE X224",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "21",
+                  "name": "SCALANCE X224"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF201-3P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "22",
+                  "name": "SCALANCE XF201-3P IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF202-2P IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "23",
+                  "name": "SCALANCE XF202-2P IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "24",
+                  "name": "SCALANCE XF204"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204 IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "25",
+                  "name": "SCALANCE XF204 IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204-2 (incl. SIPLUS NET variant)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "26",
+                  "name": "SCALANCE XF204-2 (incl. SIPLUS NET variant)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF204-2BA IRT",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "27",
+                  "name": "SCALANCE XF204-2BA IRT"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF206-1",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "28",
+                  "name": "SCALANCE XF206-1"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE XF208",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.2.5",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "29",
+                  "name": "SCALANCE XF208"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-25668",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Incorrect processing of POST requests in the webserver may result in write out of bounds in heap. An attacker might leverage this to cause denial-of-service on the device and potentially remotely execute code."
+        }
+      ],
+      "cve": "CVE-2021-25668",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "22",
+            "23",
+            "25",
+            "27"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.5.1 or later version",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/"
+        },
+        {
+          "product_ids": [
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "24",
+            "26",
+            "28",
+            "29"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.2.5 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29"
+          ],
+          "category": "mitigation",
+          "details": "Limit network traffic of web servers of SCALANCE X switches to trusted connections by firewall rules (port 443/tcp and 80/tcp)."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X200-4P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X201-3P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X201-3P IRT PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X202-2 IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X202-2P IRT (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X202-2P IRT PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X204 IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE X204 IRT PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X204-2 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X204-2FM"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X204-2LD (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X204-2LD TS"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X204-2TS"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X206-1"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X206-1LD"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X208 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X208PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X212-2 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X212-2LD"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X216"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE X224"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE XF201-3P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE XF202-2P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE XF204"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE XF204 IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE XF204-2 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25668 - SCALANCE XF204-2BA IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE XF206-1"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25668 - SCALANCE XF208"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-25668.json",
+          "summary": "CVE-2021-25668 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-25669",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Incorrect processing of POST requests in the web server may write out of bounds in stack. An attacker might leverage this to denial-of-service of the device or remote code execution."
+        }
+      ],
+      "cve": "CVE-2021-25669",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "22",
+            "23",
+            "25",
+            "27"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.5.1 or later version",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/"
+        },
+        {
+          "product_ids": [
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "24",
+            "26",
+            "28",
+            "29"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.2.5 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29"
+          ],
+          "category": "mitigation",
+          "details": "Limit network traffic of web servers of SCALANCE X switches to trusted connections by firewall rules (port 443/tcp and 80/tcp)."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X200-4P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X201-3P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X201-3P IRT PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X202-2 IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X202-2P IRT (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X202-2P IRT PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X204 IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE X204 IRT PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X204-2 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X204-2FM"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X204-2LD (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X204-2LD TS"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X204-2TS"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X206-1"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X206-1LD"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X208 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X208PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X212-2 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X212-2LD"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X216"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE X224"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE XF201-3P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE XF202-2P IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE XF204"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE XF204 IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE XF204-2 (incl. SIPLUS NET variant)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109793952/",
+          "summary": "CVE-2021-25669 - SCALANCE XF204-2BA IRT"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE XF206-1"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109801131/",
+          "summary": "CVE-2021-25669 - SCALANCE XF208"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-25669.json",
+          "summary": "CVE-2021-25669 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

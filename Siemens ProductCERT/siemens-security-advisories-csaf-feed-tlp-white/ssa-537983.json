@@ -1,0 +1,175 @@
+{
+  "document": {
+    "title": "SSA-537983: Local Code Execution Vulnerability in SENTRON powermanager V3",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-537983",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-11-09T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-11-09T00:00:00Z",
+      "current_release_date": "2021-11-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SENTRON powermanager V3 is affected by a vulnerability that could allow a local attacker to inject arbitrary code and escalate privileges.\n\nSiemens has released a security patch for SENTRON powermanager V3.6 HF1 and recommends to update to the latest version and apply this patch."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-537983.pdf",
+        "summary": "SSA-537983: Local Code Execution Vulnerability in SENTRON powermanager V3 - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-537983.txt",
+        "summary": "SSA-537983: Local Code Execution Vulnerability in SENTRON powermanager V3 - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-537983.json",
+        "summary": "SSA-537983: Local Code Execution Vulnerability in SENTRON powermanager V3 - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Noam Moshe"
+        ],
+        "organization": "Claroty",
+        "summary": "coordinated disclosure"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SENTRON powermanager V3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SENTRON powermanager V3"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-37207",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected application assigns improper access rights to a specific folder containing configuration files.\n\nThis could allow an authenticated local attacker to inject arbitrary code and escalate privileges."
+        }
+      ],
+      "cve": "CVE-2021-37207",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.6 HF1 and apply the security patch",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/64850998/"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Harden the application server to prevent local access by untrusted personnel"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/64850998/",
+          "summary": "CVE-2021-37207 - SENTRON powermanager V3"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37207.json",
+          "summary": "CVE-2021-37207 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

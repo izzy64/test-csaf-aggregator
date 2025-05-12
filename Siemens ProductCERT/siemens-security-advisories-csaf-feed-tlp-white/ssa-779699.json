@@ -1,0 +1,270 @@
+{
+  "document": {
+    "title": "SSA-779699: Two Incorrect Authorization Vulnerabilities in Mendix",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-779699",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-11-09T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-11-09T00:00:00Z",
+      "current_release_date": "2021-11-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Applications built with affected versions of Mendix Studio Pro do not properly control read or write access for certain client actions. This could allow authenticated attackers to manipulate the content of System.FileDocument objects or to retrieve the changedDate attribute of arbitrary objects.\n\nMendix has released updates for the affected product lines, recommends to update to the latest versions and to redeploy the applications."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-779699.pdf",
+        "summary": "SSA-779699: Two Incorrect Authorization Vulnerabilities in Mendix - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-779699.txt",
+        "summary": "SSA-779699: Two Incorrect Authorization Vulnerabilities in Mendix - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-779699.json",
+        "summary": "SSA-779699: Two Incorrect Authorization Vulnerabilities in Mendix - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Mendix Applications using Mendix 8",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V8.18.13",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Mendix Applications using Mendix 8"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Mendix Applications using Mendix 9",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V9.6.2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Mendix Applications using Mendix 9"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-42025",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Applications built with affected versions of Mendix Studio Pro do not properly control write access for certain client actions. This could allow authenticated attackers to manipulate the content of System.FileDocument objects in some cases, regardless whether they have write access to it."
+        }
+      ],
+      "cve": "CVE-2021-42025",
+      "cwe": {
+        "id": "CWE-863",
+        "name": "Incorrect Authorization"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V8.18.13 or later version and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/8"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V9.6.2 or V9.7.0 or later version and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "workaround",
+          "details": "In applications that were built with affected versions of Mendix Studio Pro: avoid using file documents that contain sensitive information"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/8",
+          "summary": "CVE-2021-42025 - Mendix Applications using Mendix 8"
+        },
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9",
+          "summary": "CVE-2021-42025 - Mendix Applications using Mendix 9"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-42025.json",
+          "summary": "CVE-2021-42025 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-42026",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Applications built with affected versions of Mendix Studio Pro do not properly control read access for certain client actions. This could allow authenticated attackers to retrieve the changedDate attribute of arbitrary objects, even when they don't have read access to them."
+        }
+      ],
+      "cve": "CVE-2021-42026",
+      "cwe": {
+        "id": "CWE-863",
+        "name": "Incorrect Authorization"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.1,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V8.18.13 or later version and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/8"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V9.6.2 or V9.7.0 or later version and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "workaround",
+          "details": "In applications that were built with affected versions of Mendix Studio Pro: avoid using file documents that contain sensitive information"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/8",
+          "summary": "CVE-2021-42026 - Mendix Applications using Mendix 8"
+        },
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9",
+          "summary": "CVE-2021-42026 - Mendix Applications using Mendix 9"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-42026.json",
+          "summary": "CVE-2021-42026 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

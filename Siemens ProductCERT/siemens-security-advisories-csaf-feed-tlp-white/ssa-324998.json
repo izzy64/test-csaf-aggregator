@@ -1,0 +1,325 @@
+{
+  "document": {
+    "title": "SSA-324998: Multiple Vulnerabilities in SICAM A8000",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-324998",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-01-11T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-01-11T00:00:00Z",
+      "current_release_date": "2022-01-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SICAM A8000 devices are impacted by two vulnerabilities. The first one could allow a privileged user to enable a debug port with default credentials. The second vulnerability could allow unauthenticated access to certain previously created log files.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-324998.pdf",
+        "summary": "SSA-324998: Multiple Vulnerabilities in SICAM A8000 - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-324998.txt",
+        "summary": "SSA-324998: Multiple Vulnerabilities in SICAM A8000 - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-324998.json",
+        "summary": "SSA-324998: Multiple Vulnerabilities in SICAM A8000 - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Michael Messner"
+        ],
+        "organization": "Siemens Energy",
+        "summary": "reporting the vulnerabilities"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "CP-8000 MASTER MODULE WITH I/O -25/+70°C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V16.20",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "CP-8000 MASTER MODULE WITH I/O -25/+70°C (6MF2101-0AB10-0AA0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6MF2101-0AB10-0AA0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "CP-8000 MASTER MODULE WITH I/O -40/+70°C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V16.20",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "CP-8000 MASTER MODULE WITH I/O -40/+70°C (6MF2101-1AB10-0AA0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6MF2101-1AB10-0AA0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "CP-8021 MASTER MODULE",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V16.20",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "CP-8021 MASTER MODULE (6MF2802-1AA00)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6MF2802-1AA00"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "CP-8022 MASTER MODULE WITH GPRS",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V16.20",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "CP-8022 MASTER MODULE WITH GPRS (6MF2802-2AA00)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6MF2802-2AA00"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-45033",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An undocumented debug port uses hard-coded default credentials. If this port is enabled by a privileged user, an attacker aware of the credentials could access an administrative debug shell on the affected device."
+        }
+      ],
+      "cve": "CVE-2021-45033",
+      "cwe": {
+        "id": "CWE-798",
+        "name": "Use of Hard-coded Credentials"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.9,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V16.20 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45033 - CP-8000 MASTER MODULE WITH I/O -25/+70°C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45033 - CP-8000 MASTER MODULE WITH I/O -40/+70°C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45033 - CP-8021 MASTER MODULE"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45033 - CP-8022 MASTER MODULE WITH GPRS"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-45033.json",
+          "summary": "CVE-2021-45033 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-45034",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The web server of the affected system allows access to logfiles and diagnostic data generated by a privileged user. An unauthenticated attacker could access the files by knowing the corresponding download links."
+        }
+      ],
+      "cve": "CVE-2021-45034",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V16.20 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45034 - CP-8000 MASTER MODULE WITH I/O -25/+70°C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45034 - CP-8000 MASTER MODULE WITH I/O -40/+70°C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45034 - CP-8021 MASTER MODULE"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109805670",
+          "summary": "CVE-2021-45034 - CP-8022 MASTER MODULE WITH GPRS"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-45034.json",
+          "summary": "CVE-2021-45034 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

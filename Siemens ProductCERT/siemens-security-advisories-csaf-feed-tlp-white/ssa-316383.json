@@ -1,0 +1,307 @@
+{
+  "document": {
+    "title": "SSA-316383: NumberJack Vulnerability in LOGO! CMR and SIMATIC RTU 3000 devices",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-316383",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-09-14T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2022-02-08T00:00:00Z",
+          "summary": "Expanded SIMATIC RTU 3000 family to specific individual affected products and added remediation for all the entries"
+        }
+      ],
+      "initial_release_date": "2021-09-14T00:00:00Z",
+      "current_release_date": "2022-02-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "A vulnerability has been identified in the underlying TCP/IP stack of LOGO! CMR and SIMATIC RTU 3000 devices. It could allow an attacker with network access to the LAN interface of an affected device to hijack an ongoing connection or spoof a new one. The WAN interface, however, is not affected.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-316383.pdf",
+        "summary": "SSA-316383: NumberJack Vulnerability in LOGO! CMR and SIMATIC RTU 3000 devices - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-316383.txt",
+        "summary": "SSA-316383: NumberJack Vulnerability in LOGO! CMR and SIMATIC RTU 3000 devices - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-316383.json",
+        "summary": "SSA-316383: NumberJack Vulnerability in LOGO! CMR and SIMATIC RTU 3000 devices - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "LOGO! CMR2020",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "LOGO! CMR2020 (6GK7142-7BX00-0AX0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7142-7BX00-0AX0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "LOGO! CMR2040",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "LOGO! CMR2040 (6GK7142-7EX00-0AX0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK7142-7EX00-0AX0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC RTU3010C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.0.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SIMATIC RTU3010C (6NH3112-0BA00-0XX0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6NH3112-0BA00-0XX0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC RTU3030C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.0.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SIMATIC RTU3030C (6NH3112-3BA00-0XX0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6NH3112-3BA00-0XX0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC RTU3031C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.0.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "SIMATIC RTU3031C (6NH3112-3BB00-0XX0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6NH3112-3BB00-0XX0"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC RTU3041C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.0.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "SIMATIC RTU3041C (6NH3112-4BB00-0XX0)",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6NH3112-4BB00-0XX0"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-37186",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The underlying TCP/IP stack does not properly calculate the random numbers used as ISN (Initial Sequence Numbers). An adjacent attacker with network access to the LAN interface could interfere with traffic, spoof the connection and gain access to sensitive information."
+        }
+      ],
+      "cve": "CVE-2021-37186",
+      "cwe": {
+        "id": "CWE-330",
+        "name": "Use of Insufficiently Random Values"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V2.2 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800267/"
+        },
+        {
+          "product_ids": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.0.9 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109802779/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800267/",
+          "summary": "CVE-2021-37186 - LOGO! CMR2020"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800267/",
+          "summary": "CVE-2021-37186 - LOGO! CMR2040"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109802779/",
+          "summary": "CVE-2021-37186 - SIMATIC RTU3010C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109802779/",
+          "summary": "CVE-2021-37186 - SIMATIC RTU3030C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109802779/",
+          "summary": "CVE-2021-37186 - SIMATIC RTU3031C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109802779/",
+          "summary": "CVE-2021-37186 - SIMATIC RTU3041C"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37186.json",
+          "summary": "CVE-2021-37186 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,2076 @@
+{
+  "document": {
+    "title": "SSA-390195: LibVNC Vulnerabilities in SIMATIC ITC Products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-390195",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-12-14T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-12-14T00:00:00Z",
+      "current_release_date": "2021-12-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Multiple LibVNC vulnerabilities in the affected products listed below could allow remote code execution, information disclosure and Denial-of-Service attacks under certain conditions.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-390195.pdf",
+        "summary": "SSA-390195: LibVNC Vulnerabilities in SIMATIC ITC Products - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-390195.txt",
+        "summary": "SSA-390195: LibVNC Vulnerabilities in SIMATIC ITC Products - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-390195.json",
+        "summary": "SSA-390195: LibVNC Vulnerabilities in SIMATIC ITC Products - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC ITC1500 V3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC ITC1500 V3"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC ITC1500 V3 PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMATIC ITC1500 V3 PRO"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC ITC1900 V3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SIMATIC ITC1900 V3"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC ITC1900 V3 PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SIMATIC ITC1900 V3 PRO"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC ITC2200 V3",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "SIMATIC ITC2200 V3"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC ITC2200 V3 PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "SIMATIC ITC2200 V3 PRO"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2017-18922",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "websockets.c in LibVNCServer prior to 0.9.12 did not properly decode certain WebSocket frames. A malicious attacker could exploit this by sending specially crafted WebSocket frames to a server, causing a heap-based buffer overflow."
+        }
+      ],
+      "cve": "CVE-2017-18922",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2017-18922 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2017-18922 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2017-18922 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2017-18922 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2017-18922 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2017-18922 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2017-18922.json",
+          "summary": "CVE-2017-18922 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2018-20019",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "LibVNC before commit a83439b9fbe0f03c48eb94ed05729cb016f8b72f contains multiple heap out-of-bound write vulnerabilities in VNC client code that can result remote code execution."
+        }
+      ],
+      "cve": "CVE-2018-20019",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20019 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20019 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20019 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20019 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20019 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20019 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-20019.json",
+          "summary": "CVE-2018-20019 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2018-20748",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "LibVNC before 0.9.12 contains multiple heap out-of-bounds write vulnerabilities in libvncclient/rfbproto.c. The fix for CVE-2018-20019 was incomplete."
+        }
+      ],
+      "cve": "CVE-2018-20748",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20748 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20748 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20748 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20748 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20748 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20748 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-20748.json",
+          "summary": "CVE-2018-20748 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2018-20749",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "LibVNC before 0.9.12 contains a heap out-of-bounds write vulnerability in libvncserver/rfbserver.c. The fix for CVE-2018-15127 was incomplete."
+        }
+      ],
+      "cve": "CVE-2018-20749",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20749 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20749 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20749 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20749 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20749 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20749 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-20749.json",
+          "summary": "CVE-2018-20749 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2018-20750",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "LibVNC through 0.9.12 contains a heap out-of-bounds write vulnerability in libvncserver/rfbserver.c. The fix for CVE-2018-15127 was incomplete."
+        }
+      ],
+      "cve": "CVE-2018-20750",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20750 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20750 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20750 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20750 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20750 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-20750 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-20750.json",
+          "summary": "CVE-2018-20750 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2018-21247",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. There is an information leak (of uninitialized memory contents) in the libvncclient/rfbproto.c ConnectToRFBRepeater function."
+        }
+      ],
+      "cve": "CVE-2018-21247",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-21247 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-21247 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-21247 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-21247 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-21247 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2018-21247 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-21247.json",
+          "summary": "CVE-2018-21247 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2019-15681",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "LibVNC commit before d01e1bb4246323ba6fcee3b82ef1faa9b1dac82a contains a memory leak (CWE-655) in VNC server code, which allow an attacker to read stack memory and can be abused for information disclosure. Combined with another vulnerability, it can be used to leak stack memory and bypass ASLR. This attack appear to be exploitable via network connectivity. These vulnerabilities have been fixed in commit d01e1bb4246323ba6fcee3b82ef1faa9b1dac82a."
+        }
+      ],
+      "cve": "CVE-2019-15681",
+      "cwe": {
+        "id": "CWE-665",
+        "name": "Improper Initialization"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15681 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15681 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15681 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15681 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15681 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15681 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-15681.json",
+          "summary": "CVE-2019-15681 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2019-15690",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A flaw was found in libvncserver. An integer overflow within the HandleCursorShape() function can be exploited to cause a heap-based buffer overflow by tricking a user or application using libvncserver to connect to an unstrusted server and subsequently send cursor shapes with specially crafted dimensions. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability."
+        }
+      ],
+      "cve": "CVE-2019-15690",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15690 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15690 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15690 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15690 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15690 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-15690 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-15690.json",
+          "summary": "CVE-2019-15690 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2019-20788",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "libvncclient/cursor.c in LibVNCServer through 0.9.12 has a HandleCursorShape integer overflow and heap-based buffer overflow via a large height or width value. NOTE: this may overlap CVE-2019-15690."
+        }
+      ],
+      "cve": "CVE-2019-20788",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20788 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20788 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20788 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20788 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20788 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20788 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-20788.json",
+          "summary": "CVE-2019-20788 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2019-20839",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "libvncclient/sockets.c in LibVNCServer before 0.9.13 has a buffer overflow via a long socket filename."
+        }
+      ],
+      "cve": "CVE-2019-20839",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20839 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20839 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20839 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20839 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20839 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20839 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-20839.json",
+          "summary": "CVE-2019-20839 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2019-20840",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncserver/ws_decode.c can lead to a crash because of unaligned accesses in hybiReadAndDecode."
+        }
+      ],
+      "cve": "CVE-2019-20840",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20840 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20840 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20840 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20840 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20840 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2019-20840 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-20840.json",
+          "summary": "CVE-2019-20840 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14396",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncclient/tls_openssl.c has a NULL pointer dereference."
+        }
+      ],
+      "cve": "CVE-2020-14396",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14396 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14396 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14396 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14396 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14396 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14396 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14396.json",
+          "summary": "CVE-2020-14396 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14397",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncserver/rfbregion.c has a NULL pointer dereference."
+        }
+      ],
+      "cve": "CVE-2020-14397",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14397 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14397 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14397 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14397 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14397 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14397 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14397.json",
+          "summary": "CVE-2020-14397 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14398",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. An improperly closed TCP connection causes an infinite loop in libvncclient/sockets.c."
+        }
+      ],
+      "cve": "CVE-2020-14398",
+      "cwe": {
+        "id": "CWE-835",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14398 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14398 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14398 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14398 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14398 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14398 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14398.json",
+          "summary": "CVE-2020-14398 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14401",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncserver/scale.c has a pixel_value integer overflow."
+        }
+      ],
+      "cve": "CVE-2020-14401",
+      "cwe": {
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14401 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14401 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14401 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14401 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14401 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14401 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14401.json",
+          "summary": "CVE-2020-14401 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14402",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncserver/corre.c allows out-of-bounds access via encodings."
+        }
+      ],
+      "cve": "CVE-2020-14402",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14402 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14402 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14402 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14402 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14402 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14402 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14402.json",
+          "summary": "CVE-2020-14402 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14403",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncserver/hextile.c allows out-of-bounds access via encodings."
+        }
+      ],
+      "cve": "CVE-2020-14403",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14403 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14403 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14403 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14403 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14403 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14403 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14403.json",
+          "summary": "CVE-2020-14403 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14404",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncserver/rre.c allows out-of-bounds access via encodings."
+        }
+      ],
+      "cve": "CVE-2020-14404",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14404 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14404 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14404 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14404 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14404 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14404 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14404.json",
+          "summary": "CVE-2020-14404 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-14405",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An issue was discovered in LibVNCServer before 0.9.13. libvncclient/rfbproto.c does not limit TextChat size."
+        }
+      ],
+      "cve": "CVE-2020-14405",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.1.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Monitor and restrict access to port 5900/tcp to trusted IP addresses only"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14405 - SIMATIC ITC1500 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14405 - SIMATIC ITC1500 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14405 - SIMATIC ITC1900 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14405 - SIMATIC ITC1900 V3 PRO"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14405 - SIMATIC ITC2200 V3"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109804128/",
+          "summary": "CVE-2020-14405 - SIMATIC ITC2200 V3 PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-14405.json",
+          "summary": "CVE-2020-14405 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

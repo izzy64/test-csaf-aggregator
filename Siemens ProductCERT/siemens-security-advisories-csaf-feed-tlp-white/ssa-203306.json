@@ -1,0 +1,657 @@
+{
+  "document": {
+    "title": "SSA-203306: Password Vulnerabilities in SIPROTEC 4 and SIPROTEC Compact Relay Families",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-203306",
+      "status": "final",
+      "version": "6",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2018-03-08T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2018-03-08T00:00:00Z",
+          "summary": "Corrected product name SIPROTEC 4 7SJ66"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2018-04-17T00:00:00Z",
+          "summary": "Added update for DNP3 TCP"
+        },
+        {
+          "number": "4",
+          "legacy_version": "1.3",
+          "date": "2018-05-15T00:00:00Z",
+          "summary": "Added update for 7SD80"
+        },
+        {
+          "number": "5",
+          "legacy_version": "1.4",
+          "date": "2019-03-12T00:00:00Z",
+          "summary": "Added updates for 7SJ61, 7SJ62 and 7SJ64, and recommendation to contact customer care for products without solution"
+        },
+        {
+          "number": "6",
+          "legacy_version": "1.5",
+          "date": "2021-07-13T00:00:00Z",
+          "summary": "Corrected update version for DNP3"
+        }
+      ],
+      "initial_release_date": "2018-03-08T00:00:00Z",
+      "current_release_date": "2021-07-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIPROTEC 4 and SIPROTEC Compact devices could allow access authorization passwords to be reconstructed or overwritten via engineering mechanisms that involve DIGSI 4 and EN100 Ethernet communication modules.\n\nSiemens has released updates for several affected products, and recommends specific countermeasures for the remaining products."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\n\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment.\n\nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-203306.pdf",
+        "summary": "SSA-203306: Password Vulnerabilities in SIPROTEC 4 and SIPROTEC Compact Relay Families - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-203306.txt",
+        "summary": "SSA-203306: Password Vulnerabilities in SIPROTEC 4 and SIPROTEC Compact Relay Families - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-203306.json",
+        "summary": "SSA-203306: Password Vulnerabilities in SIPROTEC 4 and SIPROTEC Compact Relay Families - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Ilya Karpov",
+          "Dmitry Sklyarov"
+        ],
+        "organization": "Positive Technologies",
+        "summary": "coordinated disclosure"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "DIGSI 4",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.92",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "DIGSI 4"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module DNP3 variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V1.05.00",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "EN100 Ethernet module DNP3 variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module IEC 104 variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "EN100 Ethernet module IEC 104 variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module IEC 61850 variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.30",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "EN100 Ethernet module IEC 61850 variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module Modbus TCP variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "EN100 Ethernet module Modbus TCP variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "EN100 Ethernet module PROFINET IO variant",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "EN100 Ethernet module PROFINET IO variant"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Other SIPROTEC 4 relays",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "Other SIPROTEC 4 relays"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Other SIPROTEC Compact relays",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "Other SIPROTEC Compact relays"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPROTEC 4 7SD80",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.70",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "9",
+                  "name": "SIPROTEC 4 7SD80"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPROTEC 4 7SJ61",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.96",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "10",
+                  "name": "SIPROTEC 4 7SJ61"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPROTEC 4 7SJ62",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.96",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "11",
+                  "name": "SIPROTEC 4 7SJ62"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPROTEC 4 7SJ64",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.96",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "12",
+                  "name": "SIPROTEC 4 7SJ64"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPROTEC 4 7SJ66",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.30",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "13",
+                  "name": "SIPROTEC 4 7SJ66"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPROTEC Compact 7SJ80",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.77",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "14",
+                  "name": "SIPROTEC Compact 7SJ80"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIPROTEC Compact 7SK80",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.77",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "15",
+                  "name": "SIPROTEC Compact 7SK80"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2018-4839",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "An attacker with local access to the engineering system or in a privileged network position and able to obtain certain network traffic could possibly reconstruct access authorization passwords."
+        }
+      ],
+      "cve": "CVE-2018-4839",
+      "cwe": {
+        "id": "CWE-326",
+        "name": "Inadequate Encryption Strength"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.0,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.92",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109740980"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V1.05.00 and configure DIGSI 4 connection password",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821"
+        },
+        {
+          "product_ids": [
+            "3",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "category": "none_available",
+          "details": "Currently no remediation is available"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.30 and configure DIGSI 4 connection password",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821"
+        },
+        {
+          "product_ids": [
+            "9"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.70",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109742758"
+        },
+        {
+          "product_ids": [
+            "10",
+            "11",
+            "12"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.96",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109743551"
+        },
+        {
+          "product_ids": [
+            "13"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.30",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109743555"
+        },
+        {
+          "product_ids": [
+            "14"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.77",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109742699"
+        },
+        {
+          "product_ids": [
+            "15"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.77",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109742712"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ],
+          "category": "mitigation",
+          "details": "Apply secure substation concept and Defense-in-Depth (see https://www.siemens.com/gridsecurity) or contact customer care to find specific solutions."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109740980",
+          "summary": "CVE-2018-4839 - DIGSI 4"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821",
+          "summary": "CVE-2018-4839 - EN100 Ethernet module DNP3 variant"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821",
+          "summary": "CVE-2018-4839 - EN100 Ethernet module IEC 61850 variant"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109742758",
+          "summary": "CVE-2018-4839 - SIPROTEC 4 7SD80"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109743551",
+          "summary": "CVE-2018-4839 - SIPROTEC 4 7SJ61"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109743551",
+          "summary": "CVE-2018-4839 - SIPROTEC 4 7SJ62"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109743551",
+          "summary": "CVE-2018-4839 - SIPROTEC 4 7SJ64"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109743555",
+          "summary": "CVE-2018-4839 - SIPROTEC 4 7SJ66"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109742699",
+          "summary": "CVE-2018-4839 - SIPROTEC Compact 7SJ80"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109742712",
+          "summary": "CVE-2018-4839 - SIPROTEC Compact 7SK80"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-4839.json",
+          "summary": "CVE-2018-4839 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2018-4840",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The device engineering mechanism allows an unauthenticated remote user to upload a modified device configuration overwriting access authorization passwords."
+        }
+      ],
+      "cve": "CVE-2018-4840",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.92",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109740980"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V1.05.00 and configure DIGSI 4 connection password",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821"
+        },
+        {
+          "product_ids": [
+            "3",
+            "5",
+            "6"
+          ],
+          "category": "none_available",
+          "details": "Currently no remediation is available"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.30 and configure DIGSI 4 connection password",
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "category": "mitigation",
+          "details": "Apply secure substation concept and Defense-in-Depth (see https://www.siemens.com/gridsecurity) or contact customer care to find specific solutions."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109740980",
+          "summary": "CVE-2018-4840 - DIGSI 4"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821",
+          "summary": "CVE-2018-4840 - EN100 Ethernet module DNP3 variant"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/us/en/view/109745821",
+          "summary": "CVE-2018-4840 - EN100 Ethernet module IEC 61850 variant"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2018-4840.json",
+          "summary": "CVE-2018-4840 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,357 @@
+{
+  "document": {
+    "title": "SSA-655554: Multiple Vulnerabilities in SIMATIC Energy Manager before V7.3 Update 1",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-655554",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-04-12T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-04-12T00:00:00Z",
+      "current_release_date": "2022-04-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIMATIC Energy Manager is affected by multiple vulnerabilities that could allow an attacker to gain local privilege escalation, local code execution or remote code execution.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-655554.pdf",
+        "summary": "SSA-655554: Multiple Vulnerabilities in SIMATIC Energy Manager before V7.3 Update 1 - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-655554.txt",
+        "summary": "SSA-655554: Multiple Vulnerabilities in SIMATIC Energy Manager before V7.3 Update 1 - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-655554.json",
+        "summary": "SSA-655554: Multiple Vulnerabilities in SIMATIC Energy Manager before V7.3 Update 1 - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Noam Moshe"
+        ],
+        "organization": "Claroty",
+        "summary": "coordinated disclosure"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC Energy Manager Basic",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V7.3 Update 1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC Energy Manager Basic"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC Energy Manager PRO",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V7.3 Update 1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMATIC Energy Manager PRO"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2022-23448",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications improperly assign permissions to critical directories and files used by the application processes. This could allow a local unprivileged attacker to achieve code execution with ADMINISTRATOR or even NT AUTHORITY/SYSTEM privileges."
+        }
+      ],
+      "cve": "CVE-2022-23448",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V7.3 Update 1 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Restrict access to the affected systems, especially to port 4444/tcp, to trusted IP addresses only"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Enable encryption in the SIMATIC Energy Manager configuration"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/",
+          "summary": "CVE-2022-23448 - SIMATIC Energy Manager Basic"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/",
+          "summary": "CVE-2022-23448 - SIMATIC Energy Manager PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-23448.json",
+          "summary": "CVE-2022-23448 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2022-23449",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A DLL Hijacking vulnerability could allow a local attacker to execute code with elevated privileges by placing a malicious DLL in one of the directories on the DLL search path."
+        }
+      ],
+      "cve": "CVE-2022-23449",
+      "cwe": {
+        "id": "CWE-427",
+        "name": "Uncontrolled Search Path Element"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V7.3 Update 1 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Restrict access to the affected systems, especially to port 4444/tcp, to trusted IP addresses only"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Enable encryption in the SIMATIC Energy Manager configuration"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/",
+          "summary": "CVE-2022-23449 - SIMATIC Energy Manager Basic"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/",
+          "summary": "CVE-2022-23449 - SIMATIC Energy Manager PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-23449.json",
+          "summary": "CVE-2022-23449 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2022-23450",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected system allows remote users to send maliciously crafted objects. Due to insecure deserialization of user-supplied content by the affected software, an unauthenticated attacker could exploit this vulnerability by sending a maliciously crafted serialized object. This could allow the attacker to execute arbitrary code on the device with SYSTEM privileges."
+        }
+      ],
+      "cve": "CVE-2022-23450",
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V7.3 Update 1 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Restrict access to the affected systems, especially to port 4444/tcp, to trusted IP addresses only"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Enable encryption in the SIMATIC Energy Manager configuration"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/",
+          "summary": "CVE-2022-23450 - SIMATIC Energy Manager Basic"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808211/",
+          "summary": "CVE-2022-23450 - SIMATIC Energy Manager PRO"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-23450.json",
+          "summary": "CVE-2022-23450 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

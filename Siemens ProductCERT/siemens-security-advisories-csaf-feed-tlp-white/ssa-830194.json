@@ -1,0 +1,180 @@
+{
+  "document": {
+    "title": "SSA-830194: Missing Authentication Vulnerability in S7-1200 Devices",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-830194",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-08-10T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2021-09-14T00:00:00Z",
+          "summary": "Clarified that the use of TIA Portal V13 or later (not only V17 or later) could allow a successful attack"
+        }
+      ],
+      "initial_release_date": "2021-08-10T00:00:00Z",
+      "current_release_date": "2021-09-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIMATIC S7-1200 PLC, version V4.5.0 fails to authenticate against configured passwords when the affected device was provisioned using TIA Portal V13. This could allow an attacker using TIA Portal V13 or later versions to bypass authentication and download arbitrary programs to the PLC.\n\nSiemens has released an update for SIMATIC S7-1200 and recommends to update to the latest version."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-830194.pdf",
+        "summary": "SSA-830194: Missing Authentication Vulnerability in S7-1200 Devices - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-830194.txt",
+        "summary": "SSA-830194: Missing Authentication Vulnerability in S7-1200 Devices - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-830194.json",
+        "summary": "SSA-830194: Missing Authentication Vulnerability in S7-1200 Devices - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Gao Jian"
+        ],
+        "summary": "reporting the vulnerability"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "V4.5.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC S7-1200 CPU family (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-37172",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected devices fail to authenticate against configured passwords when provisioned using TIA Portal V13. This could allow an attacker using TIA Portal V13 or later versions to bypass authentication and download arbitrary programs to the PLC. The vulnerability does not occur when TIA Portal V13 SP1 or any later version was used to provision the device."
+        }
+      ],
+      "cve": "CVE-2021-37172",
+      "cwe": {
+        "id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.5.1 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793280/"
+        },
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "mitigation",
+          "details": "Update to TIA Portal V13 SP1 or any later version before provisioning S7-1200 V4.5.0 devices"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793280/",
+          "summary": "CVE-2021-37172 - SIMATIC S7-1200 CPU family (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37172.json",
+          "summary": "CVE-2021-37172 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

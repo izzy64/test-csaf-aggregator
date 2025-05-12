@@ -1,0 +1,253 @@
+{
+  "document": {
+    "title": "SSA-870917: Improper Access Control Vulnerability in Mendix",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-870917",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-04-12T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-04-12T00:00:00Z",
+      "current_release_date": "2022-04-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "When querying the database, it is possible to sort the results using a protected field. With this an authenticated attacker could extract information about the contents of a protected field.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-870917.pdf",
+        "summary": "SSA-870917: Improper Access Control Vulnerability in Mendix - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-870917.txt",
+        "summary": "SSA-870917: Improper Access Control Vulnerability in Mendix - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-870917.json",
+        "summary": "SSA-870917: Improper Access Control Vulnerability in Mendix - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Mendix Applications using Mendix 7",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V7.23.27",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Mendix Applications using Mendix 7"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Mendix Applications using Mendix 8",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V8.18.14",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Mendix Applications using Mendix 8"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Mendix Applications using Mendix 9",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V9.12.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "Mendix Applications using Mendix 9"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Mendix Applications using Mendix 9 (V9.6)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V9.6.3",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "Mendix Applications using Mendix 9 (V9.6)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2022-25650",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "When querying the database, it is possible to sort the results using a protected field. With this an authenticated attacker could extract information about the contents of a protected field."
+        }
+      ],
+      "cve": "CVE-2022-25650",
+      "cwe": {
+        "id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 3.1,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update your Mendix Project to V7.23.27 or later version and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/7.23"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update your Mendix Project to V8.18.14 or later version and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/8.18"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update your Mendix Project to V9.12.0 or later version and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9.12"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update your Mendix Project to V9.6.3 or later (preferably to the latest V9.12 version) and redeploy your application",
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9.6"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "The behavior of sorting by non-accessible attributes can be changed by changing the value of the DataStorage.EnableOrderByEntityAccess custom runtime setting to true. Starting with version 9.12 it is turned on by default with the new, improved behavior."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/7.23",
+          "summary": "CVE-2022-25650 - Mendix Applications using Mendix 7"
+        },
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/8.18",
+          "summary": "CVE-2022-25650 - Mendix Applications using Mendix 8"
+        },
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9.12",
+          "summary": "CVE-2022-25650 - Mendix Applications using Mendix 9"
+        },
+        {
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9.6",
+          "summary": "CVE-2022-25650 - Mendix Applications using Mendix 9 (V9.6)"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-25650.json",
+          "summary": "CVE-2022-25650 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

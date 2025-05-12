@@ -1,0 +1,165 @@
+{
+  "document": {
+    "title": "SSA-654775: Open Redirect Vulnerability in SINEMA Remote Connect Server",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-654775",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2022-02-08T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2022-02-08T00:00:00Z",
+      "current_release_date": "2022-02-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "An open redirect vulnerability in SINEMA Remote Connect Server could allow an attacker to steal logon credentials with a specially crafted malicious link.\n\nSiemens has released software update for the SINEMA Remote Connect Server and recommends to update to the latest version."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-654775.pdf",
+        "summary": "SSA-654775: Open Redirect Vulnerability in SINEMA Remote Connect Server - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-654775.txt",
+        "summary": "SSA-654775: Open Redirect Vulnerability in SINEMA Remote Connect Server - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-654775.json",
+        "summary": "SSA-654775: Open Redirect Vulnerability in SINEMA Remote Connect Server - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "SEC Consult Vulnerability Lab",
+        "summary": "coordinated disclosure"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SINEMA Remote Connect Server",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SINEMA Remote Connect Server"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2022-23102",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected products contain an open redirect vulnerability.\n\nAn attacker could trick a valid authenticated user to the device into clicking a malicious link there by leading to phishing attacks."
+        }
+      ],
+      "cve": "CVE-2022-23102",
+      "cwe": {
+        "id": "CWE-601",
+        "name": "URL Redirection to Untrusted Site ('Open Redirect')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V2.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/document/109793790/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/document/109793790/",
+          "summary": "CVE-2022-23102 - SINEMA Remote Connect Server"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2022-23102.json",
+          "summary": "CVE-2022-23102 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

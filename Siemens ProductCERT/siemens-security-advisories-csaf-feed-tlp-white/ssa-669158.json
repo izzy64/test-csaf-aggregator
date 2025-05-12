@@ -1,0 +1,361 @@
+{
+  "document": {
+    "title": "SSA-669158: DNS Client Vulnerabilities in SIMOTICS CONNECT 400",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-669158",
+      "status": "final",
+      "version": "2",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-04-13T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2022-03-08T00:00:00Z",
+          "summary": "Added solution for CVE-2021-25677"
+        }
+      ],
+      "initial_release_date": "2021-04-13T00:00:00Z",
+      "current_release_date": "2022-03-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIMOTICS CONNECT 400 is affected by DNS Client vulnerabilities as initially reported in Siemens Security Advisory SSA-705111 (https://cert-portal.siemens.com/productcert/pdf/ssa-705111.pdf) for the DNS Module in Nucleus RTOS.\n\nSiemens has released updates for the SIMOTICS CONNECT 400 and recommends to update to the latest version."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-669158.pdf",
+        "summary": "SSA-669158: DNS Client Vulnerabilities in SIMOTICS CONNECT 400 - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-669158.txt",
+        "summary": "SSA-669158: DNS Client Vulnerabilities in SIMOTICS CONNECT 400 - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-669158.json",
+        "summary": "SSA-669158: DNS Client Vulnerabilities in SIMOTICS CONNECT 400 - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Daniel dos Santos"
+        ],
+        "organization": "Forescout Technologies Inc.",
+        "summary": "coordinated disclosure"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMOTICS CONNECT 400",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V0.5.0.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMOTICS CONNECT 400"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMOTICS CONNECT 400",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V0.5.0.0 < V1.0.0.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMOTICS CONNECT 400"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-27736",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The DNS domain name label parsing functionality does not properly validate the null-terminated name in DNS-responses. The parsing of malformed responses could result in a read past the end of an allocated structure. An attacker with a privileged position in the network could leverage this vulnerability to cause a denial-of-service condition or leak the read memory."
+        }
+      ],
+      "cve": "CVE-2020-27736",
+      "cwe": {
+        "id": "CWE-170",
+        "name": "Improper Null Termination"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V0.5.0.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/",
+          "summary": "CVE-2020-27736 - SIMOTICS CONNECT 400"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-27736.json",
+          "summary": "CVE-2020-27736 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-27737",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The DNS response parsing functionality does not properly validate various length and counts of the records. The parsing of malformed responses could result in a read past the end of an allocated structure. An attacker with a privileged position in the network could leverage this vulnerability to cause a denial-of-service condition or leak the memory past the allocated structure."
+        }
+      ],
+      "cve": "CVE-2020-27737",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V0.5.0.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/",
+          "summary": "CVE-2020-27737 - SIMOTICS CONNECT 400"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-27737.json",
+          "summary": "CVE-2020-27737 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-27738",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The DNS domain name record decompression functionality does not properly validate the pointer offset values. The parsing of malformed responses could result in a read access past the end of an allocated structure. An attacker with a privileged position in the network could leverage this vulnerability to cause a denial-of-service condition."
+        }
+      ],
+      "cve": "CVE-2020-27738",
+      "cwe": {
+        "id": "CWE-788",
+        "name": "Access of Memory Location After End of Buffer"
+      },
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V0.5.0.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/",
+          "summary": "CVE-2020-27738 - SIMOTICS CONNECT 400"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-27738.json",
+          "summary": "CVE-2020-27738 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-25677",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The DNS client does not properly randomize DNS transaction IDs. That could allow an attacker to poison the DNS cache or spoof DNS resolving."
+        }
+      ],
+      "cve": "CVE-2021-25677",
+      "cwe": {
+        "id": "CWE-330",
+        "name": "Use of Insufficiently Random Values"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V0.5.0.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V1.0.0.0 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/",
+          "summary": "CVE-2021-25677 - SIMOTICS CONNECT 400"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109778383/",
+          "summary": "CVE-2021-25677 - SIMOTICS CONNECT 400"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-25677.json",
+          "summary": "CVE-2021-25677 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

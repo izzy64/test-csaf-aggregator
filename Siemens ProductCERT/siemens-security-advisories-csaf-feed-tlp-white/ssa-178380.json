@@ -1,0 +1,199 @@
+{
+  "document": {
+    "title": "SSA-178380: Denial-of-Service Vulnerability in SINUMERIK Controllers",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-178380",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-10-12T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-10-12T00:00:00Z",
+      "current_release_date": "2021-10-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "A Denial-of-Service vulnerability found in SINUMERIK Controllers could allow an unauthenticated attacker with network access to the affected devices to cause system failure with total loss of availability.\n\nSiemens has released an update for the SINUMERIK 828D and recommends to update to the latest version. Siemens recommends specific countermeasures for products where updates are not, or not yet available."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-178380.pdf",
+        "summary": "SSA-178380: Denial-of-Service Vulnerability in SINUMERIK Controllers - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-178380.txt",
+        "summary": "SSA-178380: Denial-of-Service Vulnerability in SINUMERIK Controllers - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-178380.json",
+        "summary": "SSA-178380: Denial-of-Service Vulnerability in SINUMERIK Controllers - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Industrial Control Security Laboratory of Qi An Xin Group Inc.",
+        "summary": "reporting the vulnerability and coordination efforts"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SINUMERIK 808D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SINUMERIK 808D"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SINUMERIK 828D",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.95",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SINUMERIK 828D"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-37199",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected devices don't process correctly certain special crafted packets sent to port 102/tcp, which could allow an attacker to cause a denial-of-service in the device."
+        }
+      ],
+      "cve": "CVE-2021-37199",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "none_available",
+          "details": "Currently no remediation is available"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.95 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Restrict access to port 102/tcp to trusted systems e.g. with an external firewall"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "workaround",
+          "details": "Apply general workarounds."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-37199.json",
+          "summary": "CVE-2021-37199 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

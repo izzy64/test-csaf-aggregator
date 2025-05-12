@@ -1,0 +1,384 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Several Intel-CPU based SIMATIC IPCs are affected by an information exposure vulnerability (CVE-2022-40982) in the CPU that could allow an authenticated local user to potentially read other users' data [1].\n\nThe issue is also known as \"Gather Data Sampling\" (GDS) or Downfall Attacks. For details refer to the chapter \"Additional Information\".\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.\n\n[1] \nhttps://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00828.html",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-981975: Information Disclosure Vulnerability in Intel-CPUs (CVE-2022-40982) Impacting SIMATIC IPCs - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-981975.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-981975: Information Disclosure Vulnerability in Intel-CPUs (CVE-2022-40982) Impacting SIMATIC IPCs - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-981975.json"
+      }
+    ],
+    "title": "SSA-981975: Information Disclosure Vulnerability in Intel-CPUs (CVE-2022-40982) Impacting SIMATIC IPCs",
+    "tracking": {
+      "current_release_date": "2024-12-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-981975",
+      "initial_release_date": "2023-09-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-09-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2023-11-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added SIMATIC IPC 1047/1047E"
+        },
+        {
+          "date": "2024-07-09T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for SIMATIC IPC627E / IPC647E / IPC677E / IPC847E and for SIMATIC IPC RW-543A"
+        },
+        {
+          "date": "2024-08-13T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added fix for SIMATIC Field PG M6 and SIMATIC IPC BX-39A / IPC PX-39A / IPC PX-39A PRO"
+        },
+        {
+          "date": "2024-12-10T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Added fix for SIMATIC IPC1047E"
+        }
+      ],
+      "status": "interim",
+      "version": "5"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V26.01.11",
+                "product": {
+                  "name": "SIMATIC Field PG M6",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Field PG M6"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC627E",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC627E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC647E",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC647E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC677E",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC677E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V25.02.14",
+                "product": {
+                  "name": "SIMATIC IPC847E",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC847E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC1047",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC1047"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V4.2",
+                "product": {
+                  "name": "SIMATIC IPC1047E",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC1047E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V29.01.04",
+                "product": {
+                  "name": "SIMATIC IPC BX-39A",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC BX-39A"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V29.01.04",
+                "product": {
+                  "name": "SIMATIC IPC PX-39A",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC PX-39A"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V29.01.04",
+                "product": {
+                  "name": "SIMATIC IPC PX-39A PRO",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC PX-39A PRO"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V1.1.2",
+                "product": {
+                  "name": "SIMATIC IPC RW-543A",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC RW-543A"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-40982",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Information exposure through microarchitectural state after transient execution in certain vector execution units for some Intel(R) Processors may allow an authenticated user to potentially enable information disclosure via local access.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "8",
+          "9",
+          "10",
+          "11",
+          "6",
+          "7",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Ensure that only trusted persons have access to the system and avoid the configuration of additional accounts",
+          "product_ids": [
+            "1",
+            "8",
+            "9",
+            "10",
+            "11",
+            "6",
+            "7",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.1.2 or later version",
+          "product_ids": [
+            "11"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V25.02.14 or later version",
+          "product_ids": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V26.01.11 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V29.01.04 or later version",
+          "product_ids": [
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2 or later version",
+          "product_ids": [
+            "7"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "8",
+            "9",
+            "10",
+            "11",
+            "6",
+            "7",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        }
+      ],
+      "title": "CVE-2022-40982"
+    }
+  ]
+}

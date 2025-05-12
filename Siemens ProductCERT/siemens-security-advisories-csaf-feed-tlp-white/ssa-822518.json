@@ -1,0 +1,449 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Palo Alto Networks has published [1] information on vulnerabilities in PAN-OS. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\n\nSiemens is preparing updates and recommends specific countermeasures for products where updates are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications.\n\n[1] https://security.paloaltonetworks.com/?version=10.2.2&product=PAN-OS",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-822518: Multiple Vulnerabilities in Palo Alto Networks Virtual NGFW Before V11.0.1 on RUGGEDCOM APE1808 Devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-822518.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-822518: Multiple Vulnerabilities in Palo Alto Networks Virtual NGFW Before V11.0.1 on RUGGEDCOM APE1808 Devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-822518.json"
+      }
+    ],
+    "title": "SSA-822518: Multiple Vulnerabilities in Palo Alto Networks Virtual NGFW Before V11.0.1 on RUGGEDCOM APE1808 Devices",
+    "tracking": {
+      "current_release_date": "2024-12-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-822518",
+      "initial_release_date": "2024-04-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2024-04-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-08-13T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added newly published CVE-2024-5911"
+        },
+        {
+          "date": "2024-12-10T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added newly published CVE-2024-5917"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM APE1808"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-0028",
+      "cwe": {
+        "id": "CWE-406",
+        "name": "Insufficient Control of Network Message Volume (Network Amplification)"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A PAN-OS URL filtering policy misconfiguration could allow a network-based attacker to conduct reflected and amplified TCP denial-of-service (RDoS) attacks. The DoS attack would appear to originate from a Palo Alto Networks PA-Series (hardware), VM-Series (virtual) and CN-Series (container) firewall against an attacker-specified target. To be misused by an external attacker, the firewall configuration must have a URL filtering profile with one or more blocked categories assigned to a source zone that has an external facing interface. This configuration is not typical for URL filtering and, if set, is likely unintended by the administrator. If exploited, this issue would not impact the confidentiality, integrity, or availability of our products. However, the resulting denial-of-service (DoS) attack may help obfuscate the identity of the attacker and implicate the firewall as the source of the attack. We have taken prompt action to address this issue in our PAN-OS software. All software updates for this issue are expected to be released no later than the week of August 15, 2022. This issue does not impact Panorama M-Series or Panorama virtual appliances. This issue has been resolved for all Cloud NGFW and Prisma Access customers and no additional action is required from them.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2022-0028"
+    },
+    {
+      "cve": "CVE-2023-0005",
+      "cwe": {
+        "id": "CWE-497",
+        "name": "Exposure of Sensitive System Information to an Unauthorized Control Sphere"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A vulnerability in Palo Alto Networks PAN-OS software enables an authenticated administrator to expose the plaintext values of secrets stored in the device configuration and encrypted API keys.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-0005"
+    },
+    {
+      "cve": "CVE-2023-0008",
+      "cwe": {
+        "id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A file disclosure vulnerability in Palo Alto Networks PAN-OS software enables an authenticated read-write administrator with access to the web interface to export local files from the firewall through a race condition.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-0008"
+    },
+    {
+      "cve": "CVE-2023-6790",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A DOM-Based cross-site scripting (XSS) vulnerability in Palo Alto Networks PAN-OS software enables a remote attacker to execute a JavaScript payload in the context of an administrator\u2019s browser when they view a specifically crafted link to the PAN-OS web interface.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-6790"
+    },
+    {
+      "cve": "CVE-2023-6791",
+      "cwe": {
+        "id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A credential disclosure vulnerability in Palo Alto Networks PAN-OS software enables an authenticated read-only administrator to obtain the plaintext credentials of stored external system integrations such as LDAP, SCP, RADIUS, TACACS+, and SNMP from the web interface.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-6791"
+    },
+    {
+      "cve": "CVE-2023-38046",
+      "cwe": {
+        "id": "CWE-610",
+        "name": "Externally Controlled Reference to a Resource in Another Sphere"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A vulnerability exists in Palo Alto Networks PAN-OS software that enables an authenticated administrator with the privilege to commit a specifically created configuration to read local files and resources from the system.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-38046"
+    },
+    {
+      "cve": "CVE-2024-5911",
+      "cwe": {
+        "id": "CWE-434",
+        "name": "Unrestricted Upload of File with Dangerous Type"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An arbitrary file upload vulnerability in Palo Alto Networks Panorama software enables an authenticated read-write administrator with access to the web interface to disrupt system processes and crash the Panorama. Repeated attacks eventually cause the Panorama to enter maintenance mode, which requires manual intervention to bring the Panorama back online.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-5911"
+    },
+    {
+      "cve": "CVE-2024-5917",
+      "cwe": {
+        "id": "CWE-918",
+        "name": "Server-Side Request Forgery (SSRF)"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "server-side request forgery in PAN-OS software enables an unauthenticated attacker to use the administrative web interface as a proxy, which enables the attacker to view internal network resources not otherwise accessible.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.0.1. Contact Siemens customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-5917"
+    }
+  ]
+}

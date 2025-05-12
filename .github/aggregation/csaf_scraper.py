@@ -307,7 +307,8 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                                     # Save CSAF
                                                     with open(f"{feed_path}"+os.sep+f"{entry['id'].lower()}.json", "w", encoding='utf-8') as outfile:
                                                         print(f"Saving {entry['id'].lower()}")
-                                                        json.dump(csaf, outfile, indent=2, sort_keys=True, ensure_ascii=False)
+                                                        outfile.write(csaf_response.text)
+                                                        # json.dump(csaf, outfile, indent=2, sort_keys=True, ensure_ascii=False)
                                                 for link in entry["link"]:
                                                     if link["rel"] in ["hash", "signature"]:
                                                         link_response = requests.get(

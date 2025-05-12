@@ -9,13 +9,13 @@
         ]
       },
       {
-        "names": [
-          "Andrea Palanca"
-        ],
         "organization": "Nozomi Networks",
         "summary": "Reported by",
         "urls": [
           "https://www.nozominetworks.com"
+        ],
+        "names": [
+          "Andrea Palanca"
         ]
       }
     ],
@@ -93,9 +93,9 @@
         "url": "https://infosys.beckhoff.com/content/1033/twincat_bsd/11780818443.html?id=4222392218353411614"
       },
       {
-        "category": "self",
         "summary": "VDE-2024-049: Beckhoff: Denial-of-Service vulnerability in the IPC-Diagnostics package included in TwinCAT/BSD operating system - CSAF",
-        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/vde-2024-049.json"
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/vde-2024-049.json",
+        "category": "self"
       }
     ],
     "title": "Beckhoff: Denial-of-Service vulnerability in the IPC-Diagnostics package included in TwinCAT/BSD operating system",
@@ -125,14 +125,14 @@
           "summary": "Fix: correct certvde domain, added self-reference"
         },
         {
+          "summary": "Fix: list of branches, references url",
           "date": "2025-01-16T10:40:00.000Z",
-          "number": "3",
-          "summary": "Fix: list of branches, references url"
+          "number": "3"
         },
         {
-          "date": "2025-04-11T07:00:00.000Z",
           "number": "4",
-          "summary": "Fix: version range"
+          "summary": "Fix: version range",
+          "date": "2025-04-11T07:00:00.000Z"
         }
       ],
       "status": "final",
@@ -142,60 +142,60 @@
   "product_tree": {
     "branches": [
       {
+        "name": "Beckhoff",
+        "category": "vendor",
         "branches": [
           {
+            "name": "Software",
+            "category": "product_family",
             "branches": [
               {
+                "name": "IPC Diagnostics package",
+                "category": "product_name",
                 "branches": [
                   {
-                    "category": "product_version_range",
                     "name": "<2.0.0.1",
+                    "category": "product_version_range",
                     "product": {
                       "name": "IPC Diagnostics package <2.0.0.1",
                       "product_id": "CSAFPID-51001"
                     }
                   },
                   {
-                    "category": "product_version",
                     "name": "2.0.0.1",
+                    "category": "product_version",
                     "product": {
                       "name": "IPC Diagnostics package 2.0.0.1",
                       "product_id": "CSAFPID-52001"
                     }
                   }
-                ],
-                "category": "product_name",
-                "name": "IPC Diagnostics package"
+                ]
               },
               {
+                "name": "TwinCAT/BSD",
+                "category": "product_name",
                 "branches": [
                   {
-                    "category": "product_version_range",
                     "name": "<14.1.2.0_153968",
+                    "category": "product_version_range",
                     "product": {
-                      "name": "TwinCAT/BSD <14.1.2.0_153968",
-                      "product_id": "CSAFPID-51002"
+                      "product_id": "CSAFPID-51002",
+                      "name": "TwinCAT/BSD <14.1.2.0_153968"
                     }
                   },
                   {
-                    "category": "product_version",
                     "name": "14.1.2.0_153968",
+                    "category": "product_version",
                     "product": {
-                      "name": "TwinCAT/BSD 14.1.2.0_153968",
-                      "product_id": "CSAFPID-52002"
+                      "product_id": "CSAFPID-52002",
+                      "name": "TwinCAT/BSD 14.1.2.0_153968"
                     }
                   }
-                ],
-                "category": "product_name",
-                "name": "TwinCAT/BSD"
+                ]
               }
-            ],
-            "category": "product_family",
-            "name": "Software"
+            ]
           }
-        ],
-        "category": "vendor",
-        "name": "Beckhoff"
+        ]
       }
     ],
     "product_groups": [
@@ -221,13 +221,13 @@
     {
       "acknowledgments": [
         {
-          "names": [
-            "Andrea Palanca"
-          ],
           "organization": "Nozomi Networks",
           "summary": "Nozomi Networks reported the vulnerability to Beckhoff",
           "urls": [
             "https://www.nozominetworks.com"
+          ],
+          "names": [
+            "Andrea Palanca"
           ]
         }
       ],

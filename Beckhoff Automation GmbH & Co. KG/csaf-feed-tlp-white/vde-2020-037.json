@@ -1,5 +1,38 @@
 {
   "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "tracking": {
+      "generator": {
+        "date": "2025-03-20T10:25:06.803Z",
+        "engine": {
+          "version": "2.5.21",
+          "name": "Secvisogram"
+        }
+      },
+      "current_release_date": "2021-11-11T07:28:00.000Z",
+      "id": "VDE-2020-037",
+      "initial_release_date": "2020-11-19T13:41:00.000Z",
+      "version": "2",
+      "status": "final",
+      "revision_history": [
+        {
+          "number": "1",
+          "date": "2020-11-19T13:41:00.000Z",
+          "summary": "Initial revision."
+        },
+        {
+          "date": "2021-11-11T07:28:00.000Z",
+          "number": "2",
+          "summary": "Update A"
+        }
+      ],
+      "aliases": [
+        "VDE-2020-037"
+      ]
+    },
+    "title": "Beckhoff: Privilege Escalation through TwinCat System Tray (TcSysUI.exe)",
+    "lang": "en-GB",
     "acknowledgments": [
       {
         "organization": "CERT@VDE",
@@ -10,132 +43,100 @@
         "summary": "reported"
       }
     ],
-    "category": "csaf_security_advisory",
-    "csaf_version": "2.0",
-    "distribution": {
-      "tlp": {
-        "label": "WHITE"
-      }
-    },
-    "lang": "en-GB",
     "notes": [
       {
         "category": "summary",
-        "text": "The default installation path and its permissions for the TwinCAT runtime allow a local user to replace or modify executables other users of the same system might execute. The issue does not apply for installations underneath C:\\Program Files.",
-        "title": "Summary"
+        "title": "Summary",
+        "text": "The default installation path and its permissions for the TwinCAT runtime allow a local user to replace or modify executables other users of the same system might execute. The issue does not apply for installations underneath C:\\Program Files."
       },
       {
+        "title": "Impact",
         "category": "description",
-        "text": "The default installation path of the TwinCAT software is underneath C:\\TwinCAT. If the directory does not exist it and further subdirectories are created with permissions which allow every local user to modify the content. The default installation registers TcSysUI.exe for automatic execution upon log in of a user. If a less privileged user has a local account he or she can replace TcSysUI.exe. It will be executed automatically by another user during login. This is also true for users with administrative access. Consequently, a less privileged user can trick a higher privileged user into executing code he or she modified this way. By default Beckhoff’s IPCs are shipped with TwinCAT software installed this way and with just a single local user configured. Thus the vulnerability exists if further less privileged users have been added.",
-        "title": "Impact"
+        "text": "The default installation path of the TwinCAT software is underneath C:\\TwinCAT. If the directory does not exist it and further subdirectories are created with permissions which allow every local user to modify the content. The default installation registers TcSysUI.exe for automatic execution upon log in of a user. If a less privileged user has a local account he or she can replace TcSysUI.exe. It will be executed automatically by another user during login. This is also true for users with administrative access. Consequently, a less privileged user can trick a higher privileged user into executing code he or she modified this way. By default Beckhoff’s IPCs are shipped with TwinCAT software installed this way and with just a single local user configured. Thus the vulnerability exists if further less privileged users have been added."
       },
       {
-        "category": "description",
         "text": "Please consider the solution described with the next section (title “Solution”) for new installations only and installations for which it is acceptable to reinstall TwinCAT.\n\nFor existing installations a script is provided for download at the following link:\nhttps://download.beckhoff.com/download/Document/product-security/Advisories/advisory-2020-003/cve-2020-12510.zip external link\n\nIt changes the permissions of a directory of an already installed TwinCAT 3.1 installation. More precisely, it reads the current permissions of “C:\\Program Files” and copies them to the directory “3.1\\System” underneath the installation path of TwinCAT (default “C:\\TwinCAT\\3.1\\System”).\n\nThe procedure to use that script is as follows:\n\n1. Download the script, unzip it, and copy it to the IPC.\n2. On the IPC log in as administrator and open a PowerShell (Windows-Key + R + “PowerShell”).\n3. At the PowerShell enter the following command to temporarily allow the execution of scripts: set-executionpolicy -ExecutionPolicy Unrestricted -Scope Process (The effect of this is limited to the life-time of the current shell window because of “-Scope Process”.)\n4. Then change to the path to where you downloaded the script and execute it: .\\cve-2020-12510.ps1 The expected output is “Copied the permissions from C:\\Program Files to \\3.1\\System”.\n5. Close the PowerShell and log out from the IPC as needed.\nIt is safe to apply the script several times. It is safe to run it during full operation of TwinCAT XAR 3.1. There is no need to reboot the IPC afterwards.\n\nThere is no need to periodically run the script. Future updates of TwinCAT 3.1 will either not touch the permissions which are set by the script or apply more appropriate ones.\n\nTo apply the procedure to a set of IPCs you can prepare a USB stick with the content of the ZIP file “cve-2020- 12510.zip” (see download URL above). Then the procedure for each IPC is:\n\n1. Log in as administrator on the IPC.\n2. Open the USB stick with the File Explorer (formerly known as Windows Explorer).\n3. Double click on the file “run-cve-2020-12510.bat”. (This simply invokes the PowerShell to execute the script already described above.)",
-        "title": "Mitigation"
+        "title": "Mitigation",
+        "category": "description"
       },
       {
+        "title": "Remediation",
         "category": "description",
-        "text": "Please consider the mitigation described with the section above for existing installations for operation.\n\nPlease consider to choose “C:\\Program Files\\TwinCAT” during installation of TwinCAT 3.1. If you have installed it already then please uninstall and re-install it with the changed path. Please use the custom installation for this. That will automatically protect the binaries such that they can only be modified by an administrator.\n\nPlease mind that already installed projects underneath C:\\TwinCAT need to be moved. It is recommended to perform a backup of the complete device before such action. For security reasons, please remove the former content of C:\\TwinCAT at the end of this sequence. This will also prevent confusion.\n\nUpdate A (25.11.2020): Split into Mitigation and Solution",
-        "title": "Remediation"
+        "text": "Please consider the mitigation described with the section above for existing installations for operation.\n\nPlease consider to choose “C:\\Program Files\\TwinCAT” during installation of TwinCAT 3.1. If you have installed it already then please uninstall and re-install it with the changed path. Please use the custom installation for this. That will automatically protect the binaries such that they can only be modified by an administrator.\n\nPlease mind that already installed projects underneath C:\\TwinCAT need to be moved. It is recommended to perform a backup of the complete device before such action. For security reasons, please remove the former content of C:\\TwinCAT at the end of this sequence. This will also prevent confusion.\n\nUpdate A (25.11.2020): Split into Mitigation and Solution"
       }
     ],
     "publisher": {
-      "category": "vendor",
       "contact_details": "product-securityincident@beckhoff.com",
+      "category": "vendor",
       "name": "Beckhoff Automation GmbH & Co. KG",
       "namespace": "https://www.beckhoff.com"
     },
     "references": [
       {
-        "category": "external",
         "summary": "CERT@VDE Security Advisories for Beckhoff Automation GmbH & Co. KG",
-        "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
+        "url": "https://certvde.com/en/advisories/vendor/beckhoff/",
+        "category": "external"
       },
       {
-        "category": "self",
         "summary": "VDE-2020-037: Beckhoff: Privilege Escalation through TwinCat System Tray (TcSysUI.exe) - HTML",
-        "url": "https://certvde.com/en/advisories/VDE-2020-037/"
+        "url": "https://certvde.com/en/advisories/VDE-2020-037/",
+        "category": "self"
       },
       {
-        "category": "self",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2020/vde-2020-037.json",
         "summary": "VDE-2020-037: Beckhoff: Privilege Escalation through TwinCat System Tray (TcSysUI.exe) - CSAF",
-        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2020/vde-2020-037.json"
+        "category": "self"
       }
     ],
-    "title": "Beckhoff: Privilege Escalation through TwinCat System Tray (TcSysUI.exe)",
-    "tracking": {
-      "aliases": [
-        "VDE-2020-037"
-      ],
-      "current_release_date": "2021-11-11T07:28:00.000Z",
-      "generator": {
-        "date": "2025-03-20T10:25:06.803Z",
-        "engine": {
-          "name": "Secvisogram",
-          "version": "2.5.21"
-        }
-      },
-      "id": "VDE-2020-037",
-      "initial_release_date": "2020-11-19T13:41:00.000Z",
-      "revision_history": [
-        {
-          "date": "2020-11-19T13:41:00.000Z",
-          "number": "1",
-          "summary": "Initial revision."
-        },
-        {
-          "date": "2021-11-11T07:28:00.000Z",
-          "number": "2",
-          "summary": "Update A"
-        }
-      ],
-      "status": "final",
-      "version": "2"
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
     }
   },
   "product_tree": {
     "branches": [
       {
+        "name": "Beckhoff",
+        "category": "vendor",
         "branches": [
           {
+            "name": "Software",
+            "category": "product_family",
             "branches": [
               {
+                "name": "TwinCAT XAR with default installation path",
+                "category": "product_name",
                 "branches": [
                   {
-                    "category": "product_version",
                     "name": "3.1",
+                    "category": "product_version",
                     "product": {
                       "name": "TwinCAT XAR with default installation path 3.1",
                       "product_id": "CSAFPID-51001"
                     }
                   }
-                ],
-                "category": "product_name",
-                "name": "TwinCAT XAR with default installation path"
+                ]
               }
-            ],
-            "category": "product_family",
-            "name": "Software"
+            ]
           }
-        ],
-        "category": "vendor",
-        "name": "Beckhoff"
+        ]
       }
     ]
   },
   "vulnerabilities": [
     {
       "cve": "CVE-2020-12510",
+      "title": "CVE-2020-12510",
       "cwe": {
         "id": "CWE-276",
         "name": "Incorrect Default Permissions"
       },
       "notes": [
         {
-          "category": "description",
+          "title": "Vulnerability Description",
           "text": "The default installation path of the TwinCAT XAR 3.1 software in all versions is underneath C:\\TwinCAT. If the directory does not exist it and further subdirectories are created with permissions which allow every local user to modify the content. The default installation registers TcSysUI.exe for automatic execution upon log in of a user. If a less privileged user has a local account he or she can replace TcSysUI.exe. It will be executed automatically by another user during login. This is also true for users with administrative access. Consequently, a less privileged user can trick a higher privileged user into executing code he or she modified this way. By default Beckhoff’s IPCs are shipped with TwinCAT software installed this way and with just a single local user configured. Thus the vulnerability exists if further less privileged users have been added.",
-          "title": "Vulnerability Description"
+          "category": "description"
         }
       ],
       "product_status": {
@@ -145,8 +146,8 @@
       },
       "remediations": [
         {
-          "category": "mitigation",
           "details": "Please consider the solution described with the next section (title “Solution”) for new installations only and installations for which it is acceptable to reinstall TwinCAT.\n\nFor existing installations a script is provided for download at the following link:\nhttps://download.beckhoff.com/download/Document/product-security/Advisories/advisory-2020-003/cve-2020-12510.zip external link\n\nIt changes the permissions of a directory of an already installed TwinCAT 3.1 installation. More precisely, it reads the current permissions of “C:\\Program Files” and copies them to the directory “3.1\\System” underneath the installation path of TwinCAT (default “C:\\TwinCAT\\3.1\\System”).\n\nThe procedure to use that script is as follows:\n\n1. Download the script, unzip it, and copy it to the IPC.\n2. On the IPC log in as administrator and open a PowerShell (Windows-Key + R + “PowerShell”).\n3. At the PowerShell enter the following command to temporarily allow the execution of scripts: set-executionpolicy -ExecutionPolicy Unrestricted -Scope Process (The effect of this is limited to the life-time of the current shell window because of “-Scope Process”.)\n4. Then change to the path to where you downloaded the script and execute it: .\\cve-2020-12510.ps1 The expected output is “Copied the permissions from C:\\Program Files to \\3.1\\System”.\n5. Close the PowerShell and log out from the IPC as needed.\nIt is safe to apply the script several times. It is safe to run it during full operation of TwinCAT XAR 3.1. There is no need to reboot the IPC afterwards.\n\nThere is no need to periodically run the script. Future updates of TwinCAT 3.1 will either not touch the permissions which are set by the script or apply more appropriate ones.\n\nTo apply the procedure to a set of IPCs you can prepare a USB stick with the content of the ZIP file “cve-2020- 12510.zip” (see download URL above). Then the procedure for each IPC is:\n\n1. Log in as administrator on the IPC.\n2. Open the USB stick with the File Explorer (formerly known as Windows Explorer).\n3. Double click on the file “run-cve-2020-12510.bat”. (This simply invokes the PowerShell to execute the script already described above.)",
+          "category": "mitigation",
           "product_ids": [
             "CSAFPID-51001"
           ]
@@ -162,29 +163,28 @@
       "scores": [
         {
           "cvss_v3": {
-            "attackComplexity": "LOW",
             "attackVector": "LOCAL",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
             "availabilityImpact": "HIGH",
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
             "baseScore": 7.3,
             "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "environmentalScore": 7.3,
-            "environmentalSeverity": "HIGH",
-            "integrityImpact": "HIGH",
-            "privilegesRequired": "LOW",
-            "scope": "UNCHANGED",
             "temporalScore": 7.3,
             "temporalSeverity": "HIGH",
-            "userInteraction": "REQUIRED",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-            "version": "3.1"
+            "environmentalScore": 7.3,
+            "environmentalSeverity": "HIGH"
           },
           "products": [
             "CSAFPID-51001"
           ]
         }
-      ],
-      "title": "CVE-2020-12510"
+      ]
     }
   ]
 }

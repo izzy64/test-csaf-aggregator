@@ -9,11 +9,11 @@
         ]
       },
       {
+        "organization": "Rapid7",
+        "summary": "coordination",
         "names": [
           "Andreas Galauner"
-        ],
-        "organization": "Rapid7",
-        "summary": "coordination"
+        ]
       }
     ],
     "category": "csaf_security_advisory",
@@ -43,9 +43,9 @@
     ],
     "publisher": {
       "category": "vendor",
-      "contact_details": "product-securityincident@beckhoff.com",
       "name": "Beckhoff Automation GmbH & Co. KG",
-      "namespace": "https://www.beckhoff.com"
+      "namespace": "https://www.beckhoff.com",
+      "contact_details": "product-securityincident@beckhoff.com"
     },
     "references": [
       {
@@ -59,9 +59,9 @@
         "url": "https://certvde.com/en/advisories/VDE-2019-019"
       },
       {
-        "category": "self",
         "summary": "VDE-2019-019: Beckhoff: TwinCAT Denial-of-Service in Profinet driver - CSAF",
-        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2019/vde-2019-019.json"
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2019/vde-2019-019.json",
+        "category": "self"
       }
     ],
     "title": "Beckhoff: TwinCAT Denial-of-Service in Profinet driver",
@@ -91,9 +91,9 @@
           "summary": "Fix: correct certvde domain, added self-reference"
         },
         {
-          "date": "2025-04-11T07:00:00.000Z",
           "number": "3",
-          "summary": "Fix: version range"
+          "summary": "Fix: version range",
+          "date": "2025-04-11T07:00:00.000Z"
         }
       ],
       "status": "final",
@@ -105,31 +105,35 @@
       {
         "branches": [
           {
+            "category": "product_family",
+            "name": "Software",
             "branches": [
               {
+                "category": "product_family",
+                "name": "TwinCAT",
                 "branches": [
                   {
-                    "category": "product_version_range",
-                    "name": "<=2304",
                     "product": {
-                      "name": "TwinCAT <=2304",
-                      "product_id": "CSAFPID-11001"
-                    }
+                      "product_id": "CSAFPID-11001",
+                      "name": "TwinCAT <=2304"
+                    },
+                    "category": "product_version_range",
+                    "name": "<=2304"
                   },
                   {
-                    "category": "product_version_range",
                     "name": "<=4204.0",
                     "product": {
-                      "name": "TwinCAT <=4204.0",
-                      "product_id": "CSAFPID-11002"
-                    }
+                      "product_id": "CSAFPID-11002",
+                      "name": "TwinCAT <=4204.0"
+                    },
+                    "category": "product_version_range"
                   },
                   {
                     "category": "product_version",
                     "name": "2305",
                     "product": {
-                      "name": "TwinCAT 2305",
-                      "product_id": "CSAFPID-12001"
+                      "product_id": "CSAFPID-12001",
+                      "name": "TwinCAT 2305"
                     }
                   },
                   {
@@ -140,13 +144,9 @@
                       "product_id": "CSAFPID-12002"
                     }
                   }
-                ],
-                "category": "product_family",
-                "name": "TwinCAT"
+                ]
               }
-            ],
-            "category": "product_family",
-            "name": "Software"
+            ]
           }
         ],
         "category": "vendor",
@@ -175,10 +175,6 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2019-5637",
-      "cwe": {
-        "id": "CWE-369",
-        "name": "Divide By Zero"
-      },
       "notes": [
         {
           "audience": "all",
@@ -235,7 +231,11 @@
           ]
         }
       ],
-      "title": "CVE-2019-5637"
+      "title": "CVE-2019-5637",
+      "cwe": {
+        "id": "CWE-369",
+        "name": "Divide By Zero"
+      }
     }
   ]
 }

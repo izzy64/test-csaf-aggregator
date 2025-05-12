@@ -1,0 +1,860 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Siemens User Management Component (UMC) before V2.11.2 is affected by multiple vulnerabilities where the most severe could lead to a restart of the UMC server.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-999588: Multiple Vulnerabilities in User Management Component (UMC) Before V2.11.2 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-999588.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-999588: Multiple Vulnerabilities in User Management Component (UMC) Before V2.11.2 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-999588.json"
+      }
+    ],
+    "title": "SSA-999588: Multiple Vulnerabilities in User Management Component (UMC) Before V2.11.2",
+    "tracking": {
+      "current_release_date": "2025-01-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-999588",
+      "initial_release_date": "2023-12-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-12-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2024-01-09T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for Totally Integrated Automation Portal (TIA Portal) V17"
+        },
+        {
+          "date": "2024-02-13T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for Opcenter Quality as well as product and fix for SINEC NMS"
+        },
+        {
+          "date": "2024-05-14T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Removed unaffected product SINUMERIK Integrate RunMyHMI /Automotive"
+        },
+        {
+          "date": "2024-08-13T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Errata: Removed fix for Totally Integrated Automation Portal (TIA Portal) V17"
+        },
+        {
+          "date": "2024-09-10T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added fix for Totally Integrated Automation Portal (TIA Portal) V17"
+        },
+        {
+          "date": "2024-10-08T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "Added affected product and fix for Opcenter Execution Foundation"
+        },
+        {
+          "date": "2025-01-14T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Clarified no more fixes planned for Totally Integrated Automation Portal (TIA Portal) V16"
+        }
+      ],
+      "status": "interim",
+      "version": "8"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V2407",
+                "product": {
+                  "name": "Opcenter Execution Foundation",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter Execution Foundation"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V2312",
+                "product": {
+                  "name": "Opcenter Quality",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter Quality"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V4.1",
+                "product": {
+                  "name": "SIMATIC PCS neo",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC PCS neo"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V2.0 SP1",
+                "product": {
+                  "name": "SINEC NMS",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINEC NMS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Totally Integrated Automation Portal (TIA Portal) V14",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Totally Integrated Automation Portal (TIA Portal) V14"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Totally Integrated Automation Portal (TIA Portal) V15.1",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Totally Integrated Automation Portal (TIA Portal) V15.1"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Totally Integrated Automation Portal (TIA Portal) V16",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Totally Integrated Automation Portal (TIA Portal) V16"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V17 Update 8",
+                "product": {
+                  "name": "Totally Integrated Automation Portal (TIA Portal) V17",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Totally Integrated Automation Portal (TIA Portal) V17"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V18 Update 3",
+                "product": {
+                  "name": "Totally Integrated Automation Portal (TIA Portal) V18",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Totally Integrated Automation Portal (TIA Portal) V18"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-46281",
+      "cwe": {
+        "id": "CWE-942",
+        "name": "Permissive Cross-domain Policy with Untrusted Domains"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "When accessing the UMC Web-UI from affected products, UMC uses an overly permissive CORS policy. This could allow an attacker to trick a legitimate user to trigger unwanted behavior.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 3 or later version",
+          "product_ids": [
+            "9"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 SP1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109826954/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2312 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2407 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 or later version",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "CVE-2023-46281, CVE-2023-46282: Do not access links from untrusted sources",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2023-46281"
+    },
+    {
+      "cve": "CVE-2023-46282",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A reflected cross-site scripting (XSS) vulnerability exists in the web interface of the affected applications that could allow an attacker to inject arbitrary JavaScript code. The code could be potentially executed later by another (possibly privileged) user.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 3 or later version",
+          "product_ids": [
+            "9"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 SP1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109826954/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2312 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2407 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 or later version",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "CVE-2023-46281, CVE-2023-46282: Do not access links from untrusted sources",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2023-46282"
+    },
+    {
+      "cve": "CVE-2023-46283",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application contains an out of bounds write past the end of an allocated buffer when handling specific requests on port 4002/tcp. This could allow an attacker to crash the application. The corresponding service is auto-restarted after the crash.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 3 or later version",
+          "product_ids": [
+            "9"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 SP1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109826954/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2312 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2407 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 or later version",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "CVE-2023-46283, CVE-2023-46284: If only one UMC server is used, block access to port 4002/tcp e.g. with an external firewall",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2023-46283"
+    },
+    {
+      "cve": "CVE-2023-46284",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application contains an out of bounds write past the end of an allocated buffer when handling specific requests on port 4002/tcp and 4004/tcp. This could allow an attacker to crash the application. The corresponding service is auto-restarted after the crash.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 3 or later version",
+          "product_ids": [
+            "9"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 SP1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109826954/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2312 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2407 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 or later version",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "CVE-2023-46283, CVE-2023-46284: If only one UMC server is used, block access to port 4002/tcp e.g. with an external firewall",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "CVE-2023-46284, CVE-2023-46285: If only one RT server is used, block access to port 4004/tcp e.g. with an external firewall. If the deployment contains no RT-Servers, block the port in the local firewall.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2023-46284"
+    },
+    {
+      "cve": "CVE-2023-46285",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application contains an improper input validation vulnerability that could allow an attacker to bring the service into a Denial-of-Service state by sending a specifically crafted message to 4004/tcp. The corresponding service is auto-restarted after the crash is detected by a watchdog.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 8 or later version",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 3 or later version",
+          "product_ids": [
+            "9"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 SP1 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109826954/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2312 or later version",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2407 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 or later version",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "CVE-2023-46284, CVE-2023-46285: If only one RT server is used, block access to port 4004/tcp e.g. with an external firewall. If the deployment contains no RT-Servers, block the port in the local firewall.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2023-46285"
+    }
+  ]
+}

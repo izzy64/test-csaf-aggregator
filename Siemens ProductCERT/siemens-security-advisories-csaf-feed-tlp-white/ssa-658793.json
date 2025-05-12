@@ -1,0 +1,188 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SiPass integrated ACC (Advanced Central Controller) devices improperly sanitize user input on the telnet command line interface. This could allow an authenticated user to escalate privileges by injecting arbitrary commands that are executed with root privileges.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-658793: Command Injection Vulnerability in SiPass integrated AC5102 / ACC-G2 and ACC-AP - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-658793.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-658793: Command Injection Vulnerability in SiPass integrated AC5102 / ACC-G2 and ACC-AP - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-658793.txt"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-658793: Command Injection Vulnerability in SiPass integrated AC5102 / ACC-G2 and ACC-AP - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-658793.json"
+      }
+    ],
+    "title": "SSA-658793: Command Injection Vulnerability in SiPass integrated AC5102 / ACC-G2 and ACC-AP",
+    "tracking": {
+      "current_release_date": "2023-02-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-658793",
+      "initial_release_date": "2023-02-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2023-02-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.85.44",
+                "product": {
+                  "name": "SiPass integrated AC5102 (ACC-G2)",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated AC5102 (ACC-G2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "< V2.85.43",
+                "product": {
+                  "name": "SiPass integrated ACC-AP",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated ACC-AP"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-31808",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices improperly sanitize user input on the telnet command line interface.\r\n\r\nThis could allow an authenticated user to escalate privileges by injecting arbitrary commands that are executed with root privileges.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Set individual passwords for the main accounts provided in the ACC firmware (SIEMENS, OPERATOR)",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable telnet access",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.85.44 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109814044/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.85.43 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109814044/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2022-31808"
+    }
+  ]
+}

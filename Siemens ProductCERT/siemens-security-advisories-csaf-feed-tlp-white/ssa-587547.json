@@ -1,0 +1,166 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "QMS Automotive contains a vulnerability that stores user credentials in plantext within the user database. This could allow an attacker to read credentials from memory. \n\nSiemens has released an update for QMS Automotive and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-587547: Unencrypted Storage of User Credentials in QMS Automotive - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-587547.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-587547: Unencrypted Storage of User Credentials in QMS Automotive - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-587547.json"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-587547: Unencrypted Storage of User Credentials in QMS Automotive - PDF Version",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-587547.pdf"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-587547: Unencrypted Storage of User Credentials in QMS Automotive - TXT Version",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-587547.txt"
+      }
+    ],
+    "title": "SSA-587547: Unencrypted Storage of User Credentials in QMS Automotive",
+    "tracking": {
+      "current_release_date": "2023-09-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-587547",
+      "initial_release_date": "2022-11-08T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2022-11-08T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2023-09-12T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for QMS Automotive and updated CWE information of CVE-2022-43958"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V12.39",
+                "product": {
+                  "name": "QMS Automotive",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QMS Automotive"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-43958",
+      "cwe": {
+        "id": "CWE-256",
+        "name": "Plaintext Storage of a Password"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "User credentials are stored in plaintext in the database without any hashing mechanism. This could allow an attacker to gain access to credentials and impersonate other users.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Enable encryption for user passwords. See user manual under \u2018Administration\u2019 for further details",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V12.39 or later version. The patch is available upon request from customer support",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L/E:P/RL:U/RC:C",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2022-43958"
+    }
+  ]
+}

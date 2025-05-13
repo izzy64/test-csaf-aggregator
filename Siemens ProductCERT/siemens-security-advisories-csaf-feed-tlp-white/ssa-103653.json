@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "A vulnerability was identified in the Automation License Manager software that could be triggered by sending specially crafted packets to port\n4410/tcp of an affected system. This could cause a denial-of-service preventing legitimate users from using the system.\n\nSiemens has released a new version for Automation License Manager V6.2 and recommends to update to the latest version. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "A vulnerability was identified in the Automation License Manager software that could be triggered by sending specially crafted packets to port\n4410/tcp of an affected system. This could cause a denial-of-service preventing legitimate users from using the system.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       }
     ],
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-103653: Denial-of-Service Vulnerability in Automation License Manager",
     "tracking": {
-      "current_release_date": "2024-09-10T00:00:00Z",
+      "current_release_date": "2025-05-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-05-13T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for Automation License Manager V6.0"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -94,7 +100,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V6.0 SP12 Upd3",
                 "product": {
                   "name": "Automation License Manager V6.0",
                   "product_id": "2"
@@ -168,16 +174,24 @@
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
-            "1",
-            "2"
+            "1"
           ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.0 SP12 Upd3 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/114358/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V6.2 Upd3 or later version",
           "product_ids": [
             "3"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/114358/"
         }
       ],
       "scores": [

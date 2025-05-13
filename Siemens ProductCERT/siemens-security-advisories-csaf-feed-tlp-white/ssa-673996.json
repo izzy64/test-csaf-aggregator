@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Multiple SICAM products are affected by buffer overflow vulnerability in the IEC 61850 Client libraries from Triangle MicroWorks that could allow an unauthenticated remote attacker to create a denial of service condition by sending specially crafted MMS messages.\n\nAffected SICAM and SITIPE products:\n\n- \nSICAM A8000 Device firmware \n\n- ET85 for CP-8000/CP-8021/CP-8022\n- ETI5 for CP-8031/CP-8050\n\n\n- \nSICAM EGS Device firmware \n\n- ETI5\n\n\n- \nSICAM 8 Software Solution \n\n- ETI5 \n\n\n- \nSICAM SCC\n\n\n- SITIPE AT\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "Multiple SICAM products are affected by buffer overflow vulnerability in the IEC 61850 Client libraries from Triangle MicroWorks that could allow an unauthenticated remote attacker to create a denial of service condition by sending specially crafted MMS messages.\n\nAffected SICAM and SITIPE products:\n\n- \nSICAM A8000 Device firmware \n\n- ET85 for CP-8000/CP-8021/CP-8022\n- ETI5 for CP-8031/CP-8050\n\n\n- \nSICAM EGS Device firmware \n\n- ETI5\n\n\n- \nSICAM S8000\n\n- ETI5 \n\n\n- \nSICAM SCC\n\n\n- SITIPE AT\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-673996: Buffer Overflow Vulnerability in Third-Party Component in SICAM and SITIPE Products",
     "tracking": {
-      "current_release_date": "2024-12-10T00:00:00Z",
+      "current_release_date": "2025-05-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Changed fix version for SICAM SCC from V10.0 to V9.14 HF2, which is now also released; Added ET85 for SICAM A8000 CP-8000/CP-8021/CP-8022 as affected product; Updated CVE data from meanwhile published official source (https://cveawg.mitre.org/api/cve/CVE-2024-34057)"
+        },
+        {
+          "date": "2025-05-13T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for SITIPE AT and updated product name of \"SICAM 8 Software Solution\" to \"SICAM S8000\""
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -128,7 +134,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V3.21",
                 "product": {
                   "name": "SITIPE AT",
                   "product_id": "4"
@@ -171,8 +177,7 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "1",
-            "4"
+            "1"
           ]
         },
         {
@@ -180,7 +185,16 @@
           "details": "Update to V9.14 HF2 or later version",
           "product_ids": [
             "3"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109745469/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.21 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109895930/"
         },
         {
           "category": "vendor_fix",

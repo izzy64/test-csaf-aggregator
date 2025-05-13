@@ -51,7 +51,7 @@
     ],
     "title": "SSA-928984: Heap-based Buffer Overflow Vulnerability in User Management Component (UMC)",
     "tracking": {
-      "current_release_date": "2025-03-11T00:00:00Z",
+      "current_release_date": "2025-05-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for SIMATIC PCS neo V4.1"
+        },
+        {
+          "date": "2025-05-13T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added remediations Totally Integrated Automation Portal (TIA Portal) V17, V18 and V19. Updated remediation for SINEC NMS to point directly to the update of UMC"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -338,10 +344,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "10",
-            "11",
-            "12"
+            "4"
           ]
         },
         {
@@ -362,9 +365,12 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update SINEC NMS to V3.0 SP2 or later version and UMC to V2.15 or later version. Contact customer support to receive patch and update information.",
+          "details": "Update UMC to V2.15.1.1 or later compatible version \nhttps://support.industry.siemens.com/cs/ww/en/view/109987708/",
           "product_ids": [
-            "8"
+            "8",
+            "10",
+            "11",
+            "12"
           ]
         }
       ],

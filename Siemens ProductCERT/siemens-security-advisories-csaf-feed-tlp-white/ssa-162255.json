@@ -1,0 +1,331 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Polarion before V2410 contains multiple vulnerabilities that could allow attackers to extract data, conduct cross-site scripting attacks or find out valid usernames.\n\nSiemens strongly recommends to update Polarion to V2410 or later versions, not only to fix the documented vulnerabilities, but also to benefit from all the other improvements and fixes. For Polarion V2404 patch releases can be applied.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-162255: Multiple Vulnerabilities in Polarion Before V2410 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-162255.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-162255: Multiple Vulnerabilities in Polarion Before V2410 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-162255.json"
+      }
+    ],
+    "title": "SSA-162255: Multiple Vulnerabilities in Polarion Before V2410",
+    "tracking": {
+      "current_release_date": "2025-05-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-162255",
+      "initial_release_date": "2025-05-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-05-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Polarion V2310",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Polarion V2310"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V2404.4",
+                "product": {
+                  "name": "Polarion V2404",
+                  "product_id": "2"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V2404.2",
+                "product": {
+                  "name": "Polarion V2404",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Polarion V2404"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-51444",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The application insufficiently validates user input for database read queries. This could allow an authenticated remote attacker to conduct an SQL injection attack that bypasses authorization controls and allows to download any data from the application's database.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2404.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/product/230235217/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2024-51444"
+    },
+    {
+      "cve": "CVE-2024-51445",
+      "cwe": {
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application contains a XML External Entity Injection (XXE) vulnerability in the docx import feature. This could allow an authenticated remote attacker to read arbitrary data from the application server.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2404.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/product/230235217/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2024-51445"
+    },
+    {
+      "cve": "CVE-2024-51446",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The file upload feature of the affected application improperly sanitizes xml files. This could allow an authenticated remote attacker to conduct a stored cross-site scripting attack by uploading specially crafted xml files that are later downloaded and viewed by other users of the application.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2404.4 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/product/230235217/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2024-51446"
+    },
+    {
+      "cve": "CVE-2024-51447",
+      "cwe": {
+        "id": "CWE-204",
+        "name": "Observable Response Discrepancy"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The login implementation of the affected application contains an observable response discrepancy vulnerability when validating usernames. This could allow an unauthenticated remote attacker to distinguish between valid and invalid usernames.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2404.2 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.sw.siemens.com/product/230235217/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2024-51447"
+    }
+  ]
+}

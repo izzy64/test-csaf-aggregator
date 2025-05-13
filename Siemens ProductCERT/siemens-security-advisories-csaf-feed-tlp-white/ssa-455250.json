@@ -51,7 +51,7 @@
     ],
     "title": "SSA-455250: Multiple Vulnerabilities in Palo Alto Networks Virtual NGFW on RUGGEDCOM APE1808 Devices Before V11.1.2-h3",
     "tracking": {
-      "current_release_date": "2024-12-10T00:00:00Z",
+      "current_release_date": "2025-05-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -96,10 +96,16 @@
           "legacy_version": "1.5",
           "number": "6",
           "summary": "Added newly published upstream vulnerabilities CVE-2024-2551, CVE-2024-5918, CVE-2024-5919"
+        },
+        {
+          "date": "2025-05-13T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "Added newly published upstream vulnerability CVE-2025-0127"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -122,6 +128,14 @@
                 "product": {
                   "name": "RUGGEDCOM APE1808",
                   "product_id": "2"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "3"
                 }
               }
             ],
@@ -335,7 +349,7 @@
           "cvss_v3": {
             "baseScore": 9.8,
             "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -558,8 +572,8 @@
     {
       "cve": "CVE-2023-0286",
       "cwe": {
-        "id": "CWE-20",
-        "name": "Improper Input Validation"
+        "id": "CWE-843",
+        "name": "Access of Resource Using Incompatible Type ('Type Confusion')"
       },
       "notes": [
         {
@@ -575,6 +589,13 @@
       },
       "remediations": [
         {
+          "category": "mitigation",
+          "details": "Disable CRL (certification revocation list) checking, if possible",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
           "category": "vendor_fix",
           "details": "Upgrade Palo Alto Networks Virtual NGFW V11.1.2-h3. Contact customer support to receive patch and update information",
           "product_ids": [
@@ -587,7 +608,7 @@
           "cvss_v3": {
             "baseScore": 7.4,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -690,7 +711,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "FRRouting FRR 7.5.1 through 9.0 and Pica8 PICOS 4.3.3.2 allow a remote attacker to cause a denial of service via a crafted BGP update with a corrupted attribute 23 (Tunnel Encapsulation)",
+          "text": "FRRouting FRR 7.5.1 through 9.0 and Pica8 PICOS 4.3.3.2 allow a remote attacker to cause a denial of service via a crafted BGP update with a corrupted attribute 23 (Tunnel Encapsulation).",
           "title": "Summary"
         }
       ],
@@ -1154,6 +1175,48 @@
         }
       ],
       "title": "CVE-2024-8688"
+    },
+    {
+      "cve": "CVE-2025-0127",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A command injection vulnerability in Palo Alto Networks PAN-OS software enables an authenticated administrator to bypass system restrictions and run arbitrary commands as a root user. This issue is only applicable to PAN-OS VM-Series. This issue does not affect firewalls that are already deployed.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.1.2-h3. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "3"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2025-0127"
     }
   ]
 }

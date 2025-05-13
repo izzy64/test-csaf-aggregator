@@ -1,0 +1,177 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Desigo CC deployments that use Installed Client are impacted by an information disclosure vulnerability which could result in information leak from the Desigo CC server. The other Desigo CC client options, Windows App Client and Flex Client, are not affected by this vulnerability.\n\nSiemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-523418: Information Disclosure Vulnerability in Desigo CC - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-523418.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-523418: Information Disclosure Vulnerability in Desigo CC - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-523418.json"
+      }
+    ],
+    "title": "SSA-523418: Information Disclosure Vulnerability in Desigo CC",
+    "tracking": {
+      "current_release_date": "2025-05-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-523418",
+      "initial_release_date": "2025-05-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-05-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC",
+                  "product_id": "1"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-23815",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected server application fails to authenticate specific client requests. Modification of the client binary could allow an unauthenticated remote attacker to execute arbitrary SQL queries on the server database via the event port (default: 4998/tcp)",
+          "title": "Summary"
+        },
+        {
+          "category": "summary",
+          "text": "If access from Installed Clients to Desigo CC server is only allowed within highly protected zones:\r\nExploitation of this issue requires an attacker to get access to an Installed Client application in the \"highly protected zone\" (i.e. a physically separated private network), and bypass the hardening measures as described by Desigo CC Cybersecurity Guideline.",
+          "title": "For Desigo CC"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to the server's event port (default: 4998/tcp)",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "On the Desigo CC server, disable the support for Installed Clients",
+          "product_ids": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 5.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2024-23815"
+    }
+  ]
+}

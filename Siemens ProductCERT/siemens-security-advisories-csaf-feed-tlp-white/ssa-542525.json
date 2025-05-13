@@ -1,0 +1,343 @@
+{
+  "document": {
+    "title": "SSA-542525: Authentication Vulnerabilities in SIMATIC HMI Products",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-542525",
+      "status": "final",
+      "version": "4",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-09-08T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2020-10-13T00:00:00Z",
+          "summary": "Added mitigations and fix dates"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2020-12-08T00:00:00Z",
+          "summary": "Added patch links for SIMATIC HMI Basic (2nd generation), Comfort (including SIPLUS variants) and Mobile Panels"
+        },
+        {
+          "number": "4",
+          "legacy_version": "1.3",
+          "date": "2021-06-08T00:00:00Z",
+          "summary": "Added patch link for Unified Comfort Panel, and mitigation for components that will not be remediated due to limitations."
+        }
+      ],
+      "initial_release_date": "2020-09-08T00:00:00Z",
+      "current_release_date": "2021-06-08T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "SIMATIC HMI Products are affected by two vulnerabilities that could allow a remote attacker to discover user passwords and obtain access to the Sm@rt Server via a brute-force attack.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions. Siemens also suggests following the listed mitigations for the Unified Comfort Panels."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-542525.pdf",
+        "summary": "SSA-542525: Authentication Vulnerabilities in SIMATIC HMI Products - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-542525.txt",
+        "summary": "SSA-542525: Authentication Vulnerabilities in SIMATIC HMI Products - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-542525.json",
+        "summary": "SSA-542525: Authentication Vulnerabilities in SIMATIC HMI Products - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Joseph Gardiner"
+        ],
+        "organization": "Bristol Cyber Security Group - University of Bristol",
+        "summary": "reporting the vulnerabilities"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC HMI Basic Panels 2nd Generation (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V16",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC HMI Basic Panels 2nd Generation (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC HMI Comfort Panels (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "<= V16",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMATIC HMI Comfort Panels (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC HMI Mobile Panels",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "<= V16",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SIMATIC HMI Mobile Panels"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC HMI Unified Comfort Panels",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "<= V16",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SIMATIC HMI Unified Comfort Panels"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-15786",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected devices insufficiently block excessive authentication attempts.\n\nThis could allow a remote attacker to discover user passwords and obtain access to the Sm@rt Server via a brute-force attack."
+        }
+      ],
+      "cve": "CVE-2020-15786",
+      "cwe": {
+        "id": "CWE-307",
+        "name": "Improper Restriction of Excessive Authentication Attempts"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V16 Update 3",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109775861"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V16 Update 5",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109746530"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Apply Defense-in-Depth: https://www.siemens.com/cert/operational-guidelines-industrial-security"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "For Unified Comfort Panels using SmartClient: The password truncation (CVE-2020-15787) cannot be resolved due to RFC 6143 and is limited to 8 characters. It is recommended to use complex passwords"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109775861",
+          "summary": "CVE-2020-15786 - SIMATIC HMI Basic Panels 2nd Generation (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109775861",
+          "summary": "CVE-2020-15786 - SIMATIC HMI Comfort Panels (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109775861",
+          "summary": "CVE-2020-15786 - SIMATIC HMI Mobile Panels"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109746530",
+          "summary": "CVE-2020-15786 - SIMATIC HMI Unified Comfort Panels"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-15786.json",
+          "summary": "CVE-2020-15786 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-15787",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected devices insufficiently validate authentication attempts as the information given can be truncated to match only a set number of characters versus the whole provided string.\n\nThis could allow a remote attacker to discover user passwords and obtain access to the Sm@rt Server via a brute-force attack."
+        }
+      ],
+      "cve": "CVE-2020-15787",
+      "cwe": {
+        "id": "CWE-305",
+        "name": "Authentication Bypass by Primary Weakness"
+      },
+      "product_status": {
+        "known_affected": [
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:U/RC:C"
+          },
+          "products": [
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V16 Update 5",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109746530"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Apply Defense-in-Depth: https://www.siemens.com/cert/operational-guidelines-industrial-security"
+        },
+        {
+          "product_ids": [
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "For Unified Comfort Panels using SmartClient: The password truncation (CVE-2020-15787) cannot be resolved due to RFC 6143 and is limited to 8 characters. It is recommended to use complex passwords"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109746530",
+          "summary": "CVE-2020-15787 - SIMATIC HMI Unified Comfort Panels"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-15787.json",
+          "summary": "CVE-2020-15787 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

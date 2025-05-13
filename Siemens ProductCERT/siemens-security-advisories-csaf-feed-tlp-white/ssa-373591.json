@@ -1,0 +1,1721 @@
+{
+  "document": {
+    "title": "SSA-373591: Buffer Overflow Vulnerability in RUGGEDCOM ROS Devices",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-373591",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-07-13T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-07-13T00:00:00Z",
+      "current_release_date": "2021-07-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The latest update for RUGGEDCOM ROS devices fixes a buffer overflow vulnerability in the third party component that could allow an attacker with network access to an affected device to cause a remote code execution condition.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-373591.pdf",
+        "summary": "SSA-373591: Buffer Overflow Vulnerability in RUGGEDCOM ROS Devices - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-373591.txt",
+        "summary": "SSA-373591: Buffer Overflow Vulnerability in RUGGEDCOM ROS Devices - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-373591.json",
+        "summary": "SSA-373591: Buffer Overflow Vulnerability in RUGGEDCOM ROS Devices - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "RUGGEDCOM ROS i800",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "RUGGEDCOM ROS i800"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS i801",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "RUGGEDCOM ROS i801"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS i802",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "RUGGEDCOM ROS i802"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS i803",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "RUGGEDCOM ROS i803"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS M969",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "RUGGEDCOM ROS M969"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS M2100",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "RUGGEDCOM ROS M2100"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS M2200",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "RUGGEDCOM ROS M2200"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RMC",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "RUGGEDCOM ROS RMC"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RMC20",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "9",
+                  "name": "RUGGEDCOM ROS RMC20"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RMC30",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "10",
+                  "name": "RUGGEDCOM ROS RMC30"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RMC40",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "11",
+                  "name": "RUGGEDCOM ROS RMC40"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RMC41",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "12",
+                  "name": "RUGGEDCOM ROS RMC41"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RMC8388 V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "13",
+                  "name": "RUGGEDCOM ROS RMC8388 V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RMC8388 V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "14",
+                  "name": "RUGGEDCOM ROS RMC8388 V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RP110",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "15",
+                  "name": "RUGGEDCOM ROS RP110"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS400",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "16",
+                  "name": "RUGGEDCOM ROS RS400"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS401",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "17",
+                  "name": "RUGGEDCOM ROS RS401"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS416",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "18",
+                  "name": "RUGGEDCOM ROS RS416"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS416v2 V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "19",
+                  "name": "RUGGEDCOM ROS RS416v2 V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS416v2 V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< 5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "20",
+                  "name": "RUGGEDCOM ROS RS416v2 V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900 (32M) V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "21",
+                  "name": "RUGGEDCOM ROS RS900 (32M) V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900 (32M) V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "22",
+                  "name": "RUGGEDCOM ROS RS900 (32M) V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900G",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "23",
+                  "name": "RUGGEDCOM ROS RS900G"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900G (32M) V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "24",
+                  "name": "RUGGEDCOM ROS RS900G (32M) V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900G (32M) V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "25",
+                  "name": "RUGGEDCOM ROS RS900G (32M) V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900GP",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "26",
+                  "name": "RUGGEDCOM ROS RS900GP"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900L",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "27",
+                  "name": "RUGGEDCOM ROS RS900L"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS900W",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "28",
+                  "name": "RUGGEDCOM ROS RS900W"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS910",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "29",
+                  "name": "RUGGEDCOM ROS RS910"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS910L",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "30",
+                  "name": "RUGGEDCOM ROS RS910L"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS910W",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "31",
+                  "name": "RUGGEDCOM ROS RS910W"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS920L",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "32",
+                  "name": "RUGGEDCOM ROS RS920L"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS920W",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "33",
+                  "name": "RUGGEDCOM ROS RS920W"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS930L",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "34",
+                  "name": "RUGGEDCOM ROS RS930L"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS930W",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "35",
+                  "name": "RUGGEDCOM ROS RS930W"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS940G",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "36",
+                  "name": "RUGGEDCOM ROS RS940G"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS969",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "37",
+                  "name": "RUGGEDCOM ROS RS969"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS8000",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "38",
+                  "name": "RUGGEDCOM ROS RS8000"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS8000A",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "39",
+                  "name": "RUGGEDCOM ROS RS8000A"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS8000H",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "40",
+                  "name": "RUGGEDCOM ROS RS8000H"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RS8000T",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "41",
+                  "name": "RUGGEDCOM ROS RS8000T"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG900 V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "42",
+                  "name": "RUGGEDCOM ROS RSG900 V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG900 V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "43",
+                  "name": "RUGGEDCOM ROS RSG900 V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG900C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "44",
+                  "name": "RUGGEDCOM ROS RSG900C"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG900G V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "45",
+                  "name": "RUGGEDCOM ROS RSG900G V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG900G V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "46",
+                  "name": "RUGGEDCOM ROS RSG900G V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG900R",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "47",
+                  "name": "RUGGEDCOM ROS RSG900R"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG920P V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "48",
+                  "name": "RUGGEDCOM ROS RSG920P V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG920P V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "49",
+                  "name": "RUGGEDCOM ROS RSG920P V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2100 (32M) V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "50",
+                  "name": "RUGGEDCOM ROS RSG2100 (32M) V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2100 (32M) V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "51",
+                  "name": "RUGGEDCOM ROS RSG2100 (32M) V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2100 V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "52",
+                  "name": "RUGGEDCOM ROS RSG2100 V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2100P",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "53",
+                  "name": "RUGGEDCOM ROS RSG2100P"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2100P (32M) V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "54",
+                  "name": "RUGGEDCOM ROS RSG2100P (32M) V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2100P (32M) V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "55",
+                  "name": "RUGGEDCOM ROS RSG2100P (32M) V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2200",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "56",
+                  "name": "RUGGEDCOM ROS RSG2200"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2288 V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "57",
+                  "name": "RUGGEDCOM ROS RSG2288 V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2288 V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "58",
+                  "name": "RUGGEDCOM ROS RSG2288 V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2300 V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "59",
+                  "name": "RUGGEDCOM ROS RSG2300 V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2300 V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "60",
+                  "name": "RUGGEDCOM ROS RSG2300 V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2300P V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "61",
+                  "name": "RUGGEDCOM ROS RSG2300P V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2300P V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "62",
+                  "name": "RUGGEDCOM ROS RSG2300P V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2488 V4.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "63",
+                  "name": "RUGGEDCOM ROS RSG2488 V4.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSG2488 V5.X",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "64",
+                  "name": "RUGGEDCOM ROS RSG2488 V5.X"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RSL910",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "65",
+                  "name": "RUGGEDCOM ROS RSL910"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RST916C",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "66",
+                  "name": "RUGGEDCOM ROS RST916C"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RST916P",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "67",
+                  "name": "RUGGEDCOM ROS RST916P"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RUGGEDCOM ROS RST2228",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.5.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "68",
+                  "name": "RUGGEDCOM ROS RST2228"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-31895",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The DHCP client in affected devices fails to properly sanitize incoming DHCP packets. This could allow an unauthenticated remote attacker to cause memory to be overwritten, potentially allowing remote code execution."
+        }
+      ],
+      "cve": "CVE-2021-31895",
+      "cwe": {
+        "id": "CWE-120",
+        "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "21",
+            "23",
+            "24",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "45",
+            "48",
+            "50",
+            "52",
+            "53",
+            "54",
+            "56",
+            "57",
+            "59",
+            "61",
+            "63"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.3.7 or later version",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
+        },
+        {
+          "product_ids": [
+            "14",
+            "20",
+            "22",
+            "25",
+            "43",
+            "44",
+            "46",
+            "47",
+            "49",
+            "51",
+            "55",
+            "58",
+            "60",
+            "62",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.5.4 or later version",
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68"
+          ],
+          "category": "mitigation",
+          "details": "Enabling DHCP snooping ensures that the DHCP client in the affected devices will only accept DHCP requests from trusted DHCP servers"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68"
+          ],
+          "category": "workaround",
+          "details": "Disable DHCP and configure a static IP address to the device"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS i800"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS i801"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS i802"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS i803"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS M969"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS M2100"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS M2200"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RMC"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RMC20"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RMC30"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RMC40"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RMC41"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RMC8388 V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RMC8388 V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RP110"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS400"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS401"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS416"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS416v2 V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS416v2 V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900 (32M) V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900 (32M) V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900G"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900G (32M) V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900G (32M) V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900GP"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900L"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS900W"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS910"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS910L"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS910W"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS920L"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS920W"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS930L"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS930W"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS940G"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS969"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS8000"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS8000A"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS8000H"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RS8000T"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG900 V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG900 V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG900C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG900G V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG900G V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG900R"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG920P V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG920P V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2100 (32M) V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2100 (32M) V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2100 V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2100P"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2100P (32M) V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2100P (32M) V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2200"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2288 V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2288 V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2300 V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2300 V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2300P V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2300P V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2488 V4.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSG2488 V5.X"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RSL910"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RST916C"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RST916P"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/gb/en/view/109797844/",
+          "summary": "CVE-2021-31895 - RUGGEDCOM ROS RST2228"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-31895.json",
+          "summary": "CVE-2021-31895 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

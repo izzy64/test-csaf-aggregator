@@ -1,0 +1,505 @@
+{
+  "document": {
+    "title": "SSA-119468: Luxion KeyShot Vulnerabilities in Solid Edge",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-119468",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-05-25T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-05-25T00:00:00Z",
+      "current_release_date": "2021-05-25T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The Solid Edge installation package includes a specific version of the third-party product KeyShot from Luxion, which may not contain the latest security fixes provided by Luxion.\n\nSiemens recommends to update KeyShot according to the information in the Luxion Security Advisory LSA-394129."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-119468.pdf",
+        "summary": "SSA-119468: Luxion KeyShot Vulnerabilities in Solid Edge - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-119468.txt",
+        "summary": "SSA-119468: Luxion KeyShot Vulnerabilities in Solid Edge - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-119468.json",
+        "summary": "SSA-119468: Luxion KeyShot Vulnerabilities in Solid Edge - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Luxion",
+        "summary": "coordination efforts"
+      },
+      {
+        "organization": "Cybersecurity and Infrastructure Security Agency (CISA)",
+        "summary": "coordination efforts"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Solid Edge SE2020",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Solid Edge SE2020"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Solid Edge SE2021",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Solid Edge SE2021"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-27488",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of CATPart files. This could result in an out of bounds write past the end of an allocated structure. An attacker could leverage this vulnerability to execute code in the context of the current process (ZDI-CAN-11950)."
+        }
+      ],
+      "cve": "CVE-2021-27488",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V8 (as bundled with SE2020) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V9 (as bundled with SE2021) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27488 - Solid Edge SE2020"
+        },
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27488 - Solid Edge SE2021"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-27488.json",
+          "summary": "CVE-2021-27488 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-27490",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected products are vulnerable to an out-of-bounds read, which may allow an attacker to execute arbitrary code (ZDI-CAN-12084)."
+        }
+      ],
+      "cve": "CVE-2021-27490",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:U/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V8 (as bundled with SE2020) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V9 (as bundled with SE2021) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27490 - Solid Edge SE2020"
+        },
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27490 - Solid Edge SE2021"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-27490.json",
+          "summary": "CVE-2021-27490 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-27492",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "When opening a specially crafted 3DXML file, the application could disclose arbitrary files to remote attackers. This is because of the passing of specially crafted content to the underlying XML parser without taking proper restrictions such as prohibiting an external dtd (ZDI-CAN-11952)."
+        }
+      ],
+      "cve": "CVE-2021-27492",
+      "cwe": {
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N/E:P/RL:U/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V8 (as bundled with SE2020) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V9 (as bundled with SE2021) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27492 - Solid Edge SE2020"
+        },
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27492 - Solid Edge SE2021"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-27492.json",
+          "summary": "CVE-2021-27492 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-27494",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of STP files. This could result in a stack based buffer overflow. An attacker could leverage this vulnerability to execute code in the context of the current process (ZDI-CAN-11953)."
+        }
+      ],
+      "cve": "CVE-2021-27494",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:U/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V8 (as bundled with SE2020) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V9 (as bundled with SE2021) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27494 - Solid Edge SE2020"
+        },
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27494 - Solid Edge SE2021"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-27494.json",
+          "summary": "CVE-2021-27494 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-27496",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing PRT files. This could lead to pointer dereferences of a value obtained from untrusted source. An attacker could leverage this vulnerability to execute code in the context of the current process (ZDI-CAN-11962)."
+        }
+      ],
+      "cve": "CVE-2021-27496",
+      "cwe": {
+        "id": "CWE-822",
+        "name": "Untrusted Pointer Dereference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:U/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V8 (as bundled with SE2020) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update KeyShot V9 (as bundled with SE2021) to V10.2 or later version",
+          "url": "https://www.keyshot.com/resources/downloads/"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27496 - Solid Edge SE2020"
+        },
+        {
+          "url": "https://www.keyshot.com/resources/downloads/",
+          "summary": "CVE-2021-27496 - Solid Edge SE2021"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-27496.json",
+          "summary": "CVE-2021-27496 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

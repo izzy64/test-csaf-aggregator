@@ -1,0 +1,1129 @@
+{
+  "document": {
+    "title": "SSA-622830: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization before V13.1.0",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-622830",
+      "status": "final",
+      "version": "3",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-01-12T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2021-02-09T00:00:00Z",
+          "summary": "Included fix information for CVE-2020-26989, CVE-2020-26990 and CVE-2020-26991, and reference to new advisory SSA-663999"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2021-05-17T00:00:00Z",
+          "summary": "Moved vulnerabilities CVE-2020-26989, CVE-2020-26990, and CVE-2020-28383 to advisory SSA-663999; moved CVE-2020-26991 to SSA-695540"
+        }
+      ],
+      "initial_release_date": "2021-01-12T00:00:00Z",
+      "current_release_date": "2021-05-17T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Siemens has released version V13.1.0 for JT2Go and Teamcenter Visualization to fix multiple vulnerabilities that could be triggered when the products read files in different file formats (JT, XML, CG4, CGM, PDF, RGB, SGI, TGA, PAR, PCX). If a user is tricked to opening of a malicious file with the affected products, this could lead to application crash, or potentially arbitrary code execution or data extraction on the target host system.\n\nSiemens recommends to update to the latest versions and to limit opening of untrusted files from unknown sources in the affected products. Please refer to SSA-663999 [0] and SSA-695540 [1] for further information regarding later version updates.\n\nNote: Previous versions of this advisory also contained the vulnerabilities CVE-2020-26989, CVE-2020-26990, and CVE-2020-28383 (now addressed in [0]) and CVE-2020-26991 (now addressed in [1]).\n\n[0] https://cert-portal.siemens.com/productcert/pdf/ssa-663999.pdf\n\n[1] https://cert-portal.siemens.com/productcert/pdf/ssa-695540.pdf"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-622830.pdf",
+        "summary": "SSA-622830: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization before V13.1.0 - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-622830.txt",
+        "summary": "SSA-622830: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization before V13.1.0 - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-622830.json",
+        "summary": "SSA-622830: Multiple File Parsing Vulnerabilities in JT2Go and Teamcenter Visualization before V13.1.0 - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "organization": "Trend Micro Zero Day Initiative",
+        "summary": "coordinated disclosure of CVE-2020-26980 through CVE-2020-26991, CVE-2020-26995, CVE-2020-26996 and CVE-2020-28383"
+      },
+      {
+        "names": [
+          "Carsten Eiram"
+        ],
+        "organization": "Risk Based Security",
+        "summary": "coordinated disclosure of CVE-2020-26992, CVE-2020-26993, CVE-2020-26980 and CVE-2020-26986"
+      },
+      {
+        "organization": "Cybersecurity and Infrastructure Security Agency (CISA)",
+        "summary": "coordination efforts"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "JT2Go",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V13.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "JT2Go"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Visualization",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V13.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Teamcenter Visualization"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2020-26980",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing JT files. A crafted JT file could trigger a type confusion condition. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-11881)"
+        }
+      ],
+      "cve": "CVE-2020-26980",
+      "cwe": {
+        "id": "CWE-843",
+        "name": "Access of Resource Using Incompatible Type ('Type Confusion')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26980 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26980.json",
+          "summary": "CVE-2020-26980 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26981",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "When opening a specially crafted xml file, the application could disclose arbitrary files to remote attackers. This is because of the passing of specially crafted content to the underlying XML parser without taking proper restrictions such as prohibiting an external dtd. (ZDI-CAN-11890)"
+        }
+      ],
+      "cve": "CVE-2020-26981",
+      "cwe": {
+        "id": "CWE-611",
+        "name": "Improper Restriction of XML External Entity Reference"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:L/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26981 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26981.json",
+          "summary": "CVE-2020-26981 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26982",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing CG4 and CGM files. This could result in an out of bounds write past the end of an allocated structure. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-11898)"
+        }
+      ],
+      "cve": "CVE-2020-26982",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26982 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26982.json",
+          "summary": "CVE-2020-26982 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26983",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing PDF files. This could result in an out of bounds write past the end of an allocated structure. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-11900)"
+        }
+      ],
+      "cve": "CVE-2020-26983",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26983 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26983.json",
+          "summary": "CVE-2020-26983 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26984",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of JT files. This could result in an out of bounds write past the end of an allocated structure. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-11972)"
+        }
+      ],
+      "cve": "CVE-2020-26984",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26984 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26984.json",
+          "summary": "CVE-2020-26984 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26985",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of RGB and SGI files. This could result in a heap-based buffer overflow. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-11986, ZDI-CAN-11994)"
+        }
+      ],
+      "cve": "CVE-2020-26985",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26985 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26985.json",
+          "summary": "CVE-2020-26985 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26986",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of JT files. This could lead to a heap-based buffer overflow. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-12014)"
+        }
+      ],
+      "cve": "CVE-2020-26986",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26986 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26986.json",
+          "summary": "CVE-2020-26986 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26987",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of TGA files. This could lead to a heap-based buffer overflow. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-12016, ZDI-CAN-12017)"
+        }
+      ],
+      "cve": "CVE-2020-26987",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26987 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26987.json",
+          "summary": "CVE-2020-26987 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26988",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of PAR files. This could result in an out of bounds write past the end of an allocated structure. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-11891)"
+        }
+      ],
+      "cve": "CVE-2020-26988",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26988 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26988.json",
+          "summary": "CVE-2020-26988 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26992",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing CGM files. This could lead to a stack based buffer overflow while trying to copy to a buffer during font string handling. An attacker could leverage this vulnerability to execute code in the context of the current process."
+        }
+      ],
+      "cve": "CVE-2020-26992",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26992 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26992.json",
+          "summary": "CVE-2020-26992 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26993",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing CGM files. This could lead to a stack based buffer overflow while trying to copy to a buffer in the font index handling function. An attacker could leverage this vulnerability to execute code in the context of the current process."
+        }
+      ],
+      "cve": "CVE-2020-26993",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26993 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26993.json",
+          "summary": "CVE-2020-26993 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26994",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of PCX files. This could result in a heap-based buffer overflow. An attacker could leverage this vulnerability to execute code in the context of the current process."
+        }
+      ],
+      "cve": "CVE-2020-26994",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26994 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26994.json",
+          "summary": "CVE-2020-26994 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26995",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of SGI and RGB files. This could result in an out of bounds write past the end of an allocated structure. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-11992)"
+        }
+      ],
+      "cve": "CVE-2020-26995",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26995 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26995.json",
+          "summary": "CVE-2020-26995 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2020-26996",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Affected applications lack proper validation of user-supplied data when parsing of CG4 files. This could result in a memory access past the end of an allocated buffer. An attacker could leverage this vulnerability to execute code in the context of the current process. (ZDI-CAN-12027)"
+        }
+      ],
+      "cve": "CVE-2020-26996",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version",
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V13.1.0 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in JT2Go and Teamcenter Visualization"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://www.plm.automation.siemens.com/global/en/products/plm-components/jt2go.html",
+          "summary": "CVE-2020-26996 - JT2Go"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2020-26996.json",
+          "summary": "CVE-2020-26996 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

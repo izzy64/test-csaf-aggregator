@@ -1,0 +1,359 @@
+{
+  "document": {
+    "title": "SSA-622535: Multiple Vulnerabilities in Teamcenter Active Workspace",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-622535",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-07-13T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-07-13T00:00:00Z",
+      "current_release_date": "2021-07-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Multiple vulnerabilities affecting Teamcenter Active Workspace could lead to sensitive information disclosure and reflected cross site scripting.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-622535.pdf",
+        "summary": "SSA-622535: Multiple Vulnerabilities in Teamcenter Active Workspace - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-622535.txt",
+        "summary": "SSA-622535: Multiple Vulnerabilities in Teamcenter Active Workspace - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-622535.json",
+        "summary": "SSA-622535: Multiple Vulnerabilities in Teamcenter Active Workspace - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Teamcenter Active Workspace V4",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V4.3.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Teamcenter Active Workspace V4"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Active Workspace V5.0",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.0.7",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "Teamcenter Active Workspace V5.0"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Teamcenter Active Workspace V5.1",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V5.1.4",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "Teamcenter Active Workspace V5.1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-33709",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "By sending malformed requests, a remote attacker could leak an application token due to an error not properly handled by the system."
+        }
+      ],
+      "cve": "CVE-2021-33709",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.3.9 or later version"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.0.7 or later version"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.1.4 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in Teamcenter Active Workspace"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-33709.json",
+          "summary": "CVE-2021-33709 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-33710",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A reflected cross-site scripting (XSS) vulnerability exists in the web interface of the affected devices that could allow an attacker to execute malicious JavaScript code by tricking users into accessing a malicious link."
+        }
+      ],
+      "cve": "CVE-2021-33710",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 6.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.3.9 or later version"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.0.7 or later version"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.1.4 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in Teamcenter Active Workspace"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-33710.json",
+          "summary": "CVE-2021-33710 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2021-33711",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The affected application allows verbose error messages which allow leaking of sensitive information, such as full paths."
+        }
+      ],
+      "cve": "CVE-2021-33711",
+      "cwe": {
+        "id": "CWE-209",
+        "name": "Generation of Error Message Containing Sensitive Information"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.3.9 or later version"
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.0.7 or later version"
+        },
+        {
+          "product_ids": [
+            "3"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V5.1.4 or later version"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3"
+          ],
+          "category": "mitigation",
+          "details": "Avoid to open untrusted files from unknown sources in Teamcenter Active Workspace"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-33711.json",
+          "summary": "CVE-2021-33711 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

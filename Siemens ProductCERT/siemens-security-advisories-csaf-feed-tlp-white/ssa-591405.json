@@ -1,0 +1,399 @@
+{
+  "document": {
+    "title": "SSA-591405: Web Vulnerabilities in SCALANCE S-600 Family",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-591405",
+      "status": "final",
+      "version": "3",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2020-02-11T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2020-08-11T00:00:00Z",
+          "summary": "Informed about successor products for the SCALANCE S-600 family"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2021-04-13T00:00:00Z",
+          "summary": "Added solution for SCALANCE S602, SCALANCE S612, SCALANCE S623, and SCALANCE S627-2M"
+        }
+      ],
+      "initial_release_date": "2020-02-11T00:00:00Z",
+      "current_release_date": "2021-04-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "The firmware for SCALANCE S-600 family devices contains multiple web vulnerabilities. The vulnerabilities could allow an remote attacker to conduct Denial-of-Service attacks or perform Cross-Site Scripting attacks.\n\nSiemens has released updates for the affected products and recommends to update to the latest versions, or to upgrade to a successor product."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-591405.pdf",
+        "summary": "SSA-591405: Web Vulnerabilities in SCALANCE S-600 Family - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-591405.txt",
+        "summary": "SSA-591405: Web Vulnerabilities in SCALANCE S-600 Family - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-591405.json",
+        "summary": "SSA-591405: Web Vulnerabilities in SCALANCE S-600 Family - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Melih Berk Ekşioğlu"
+        ],
+        "summary": "coordinated disclosure of CVE-2019-6585"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SCALANCE S602",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V3.0 and < V4.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SCALANCE S602"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE S612",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V3.0 and < V4.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SCALANCE S612"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE S623",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V3.0 and < V4.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SCALANCE S623"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SCALANCE S627-2M",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": ">= V3.0 and < V4.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SCALANCE S627-2M"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2019-6585",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The integrated configuration web server of the affected devices could allow Cross-Site Scripting (XSS) attacks if unsuspecting users are tricked into accessing a malicious link.\n\nUser interaction is required for a successful exploitation. The user must be logged into the web interface in order for the exploitation to succeed."
+        }
+      ],
+      "cve": "CVE-2019-6585",
+      "cwe": {
+        "id": "CWE-80",
+        "name": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.1"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Upgrade hardware to successor product from SCALANCE SC-600 family (https://support.industry.siemens.com/cs/document/109756957) and apply patches when available, or follow recommendations from section Workarounds and Mitigations"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Only access links from trusted sources in the browser you use to access the SCALANCE S-600 administration website."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-6585.json",
+          "summary": "CVE-2019-6585 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2019-13925",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Specially crafted packets sent to port 443/tcp of affected devices could cause a Denial-of-Service condition of the web server."
+        }
+      ],
+      "cve": "CVE-2019-13925",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.1"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Upgrade hardware to successor product from SCALANCE SC-600 family (https://support.industry.siemens.com/cs/document/109756957) and apply patches when available, or follow recommendations from section Workarounds and Mitigations"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Only access links from trusted sources in the browser you use to access the SCALANCE S-600 administration website."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-13925.json",
+          "summary": "CVE-2019-13925 Mitre 5.0 json"
+        }
+      ]
+    },
+    {
+      "title": "CVE-2019-13926",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "Specially crafted packets sent to port 443/tcp of affected devices could cause a Denial-of-Service condition of the web server. A cold reboot is required to restore the functionality of the device."
+        }
+      ],
+      "cve": "CVE-2019-13926",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V4.1"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Upgrade hardware to successor product from SCALANCE SC-600 family (https://support.industry.siemens.com/cs/document/109756957) and apply patches when available, or follow recommendations from section Workarounds and Mitigations"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "category": "mitigation",
+          "details": "Only access links from trusted sources in the browser you use to access the SCALANCE S-600 administration website."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2019-13926.json",
+          "summary": "CVE-2019-13926 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

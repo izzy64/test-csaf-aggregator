@@ -1,0 +1,469 @@
+{
+  "document": {
+    "title": "SSA-763427: Authentication Bypass Vulnerability in SIMATIC NET CP Modules and TIM Devices",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-763427",
+      "status": "final",
+      "version": "6",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2015-11-27T00:00:00Z",
+          "summary": "Publication Date"
+        },
+        {
+          "number": "2",
+          "legacy_version": "1.1",
+          "date": "2016-01-29T00:00:00Z",
+          "summary": "Added fix information for SIMATIC TIM 3V-IE and TIM 4R-IE modules"
+        },
+        {
+          "number": "3",
+          "legacy_version": "1.2",
+          "date": "2016-02-01T00:00:00Z",
+          "summary": "Added fix information for SIMATIC CP 443-1 / CP 443-1 Advanced"
+        },
+        {
+          "number": "4",
+          "legacy_version": "1.3",
+          "date": "2016-04-29T00:00:00Z",
+          "summary": "Added fix information for SIMATIC CP343-1 Lean / CP 343-1"
+        },
+        {
+          "number": "5",
+          "legacy_version": "1.4",
+          "date": "2020-02-10T00:00:00Z",
+          "summary": "SIPLUS devices now explicitly mentioned in the list of affected products"
+        },
+        {
+          "number": "6",
+          "legacy_version": "1.5",
+          "date": "2021-04-13T00:00:00Z",
+          "summary": "Clarified product names and added SIMATIC NET CP PROFIBUS devices"
+        }
+      ],
+      "initial_release_date": "2015-11-27T00:00:00Z",
+      "current_release_date": "2021-04-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Siemens has released updates for Communication Processor (CP) module families CP 343-1/TIM 3V-IE/TIM 4R-IE/CP 443-1 to resolve an authentication bypass vulnerability that could allow unauthenticated users to perform administrative operations under certain conditions.\n\n2021-04-13: Siemens has also added Profibus devices (CP 342-5 / CP 443-5) to this advisory. For these additional devices, the attacker must have network access to S7 Protocol Interface of the affected device and the configuration data of the CP must be stored on the CPU. Therefore, in this case the adapted CVSS Vector is CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H (9.6)"
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-763427.pdf",
+        "summary": "SSA-763427: Authentication Bypass Vulnerability in SIMATIC NET CP Modules and TIM Devices - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-763427.txt",
+        "summary": "SSA-763427: Authentication Bypass Vulnerability in SIMATIC NET CP Modules and TIM Devices - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-763427.json",
+        "summary": "SSA-763427: Authentication Bypass Vulnerability in SIMATIC NET CP Modules and TIM Devices - CSAF Version"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "names": [
+          "Lei ChengLin (Z-0ne)"
+        ],
+        "organization": "Fengtai Technologies' Security Research Team",
+        "summary": "coordinated disclosure"
+      },
+      {
+        "organization": "Industrial Control System Cyber Emergency Response Team (ICS-CERT)",
+        "summary": "coordination efforts"
+      },
+      {
+        "names": [
+          "Artem Zinenko"
+        ],
+        "organization": "Kaspersky",
+        "summary": "pointing out that SIPLUS should also be mentioned"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "SIMATIC NET CP 342-5 (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "SIMATIC NET CP 342-5 (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC NET CP 343-1 Advanced (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.0.44",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "SIMATIC NET CP 343-1 Advanced (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC NET CP 343-1 Lean (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.1.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "3",
+                  "name": "SIMATIC NET CP 343-1 Lean (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC NET CP 343-1 Standard (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.1.1",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "4",
+                  "name": "SIMATIC NET CP 343-1 Standard (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC NET CP 443-1 Advanced (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "5",
+                  "name": "SIMATIC NET CP 443-1 Advanced (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC NET CP 443-1 Standard (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.2.9",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "6",
+                  "name": "SIMATIC NET CP 443-1 Standard (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC NET CP 443-5 Basic (incl. SIPLUS variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "7",
+                  "name": "SIMATIC NET CP 443-5 Basic (incl. SIPLUS variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "SIMATIC NET CP 443-5 Extended",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "vers:all/*",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "8",
+                  "name": "SIMATIC NET CP 443-5 Extended"
+                }
+              }
+            ]
+          },
+          {
+            "name": "TIM 3V-IE / TIM 3V-IE Advanced (incl. SIPLUS NET variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.6.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "9",
+                  "name": "TIM 3V-IE / TIM 3V-IE Advanced (incl. SIPLUS NET variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "TIM 3V-IE DNP3 (incl. SIPLUS NET variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "10",
+                  "name": "TIM 3V-IE DNP3 (incl. SIPLUS NET variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "TIM 4R-IE (incl. SIPLUS NET variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V2.6.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "11",
+                  "name": "TIM 4R-IE (incl. SIPLUS NET variants)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "TIM 4R-IE DNP3 (incl. SIPLUS NET variants)",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V3.1.0",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "12",
+                  "name": "TIM 4R-IE DNP3 (incl. SIPLUS NET variants)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2015-8214",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "The implemented access protection level enforcement of the affected communication processors (CP) could possibly allow unauthenticated users to perform administrative operations on the CPs if network access (port 102/TCP) is available and the CPs' configuration was stored on their corresponding CPUs."
+        }
+      ],
+      "cve": "CVE-2015-8214",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "7",
+            "8"
+          ],
+          "category": "vendor_fix",
+          "details": "The attacker must have network access to S7 Protocol Interface of the affected device and the configuration data of the CP must be stored on the CPU."
+        },
+        {
+          "product_ids": [
+            "2"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.0.44",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109480765"
+        },
+        {
+          "product_ids": [
+            "3",
+            "4"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.1.1",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109486101"
+        },
+        {
+          "product_ids": [
+            "5",
+            "6"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.2.9",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109482246"
+        },
+        {
+          "product_ids": [
+            "9",
+            "11"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V2.6.0",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109481769"
+        },
+        {
+          "product_ids": [
+            "10"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.1.0",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109481766"
+        },
+        {
+          "product_ids": [
+            "12"
+          ],
+          "category": "vendor_fix",
+          "details": "Update to V3.1.0",
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109482246"
+        }
+      ],
+      "references": [
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109480765",
+          "summary": "CVE-2015-8214 - SIMATIC NET CP 343-1 Advanced (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109486101",
+          "summary": "CVE-2015-8214 - SIMATIC NET CP 343-1 Lean (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109486101",
+          "summary": "CVE-2015-8214 - SIMATIC NET CP 343-1 Standard (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109482246",
+          "summary": "CVE-2015-8214 - SIMATIC NET CP 443-1 Advanced (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109482246",
+          "summary": "CVE-2015-8214 - SIMATIC NET CP 443-1 Standard (incl. SIPLUS variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109481769",
+          "summary": "CVE-2015-8214 - TIM 3V-IE / TIM 3V-IE Advanced (incl. SIPLUS NET variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109481766",
+          "summary": "CVE-2015-8214 - TIM 3V-IE DNP3 (incl. SIPLUS NET variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109481769",
+          "summary": "CVE-2015-8214 - TIM 4R-IE (incl. SIPLUS NET variants)"
+        },
+        {
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109482246",
+          "summary": "CVE-2015-8214 - TIM 4R-IE DNP3 (incl. SIPLUS NET variants)"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-8214.json",
+          "summary": "CVE-2015-8214 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

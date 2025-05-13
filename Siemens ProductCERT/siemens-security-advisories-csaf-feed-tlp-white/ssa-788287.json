@@ -1,0 +1,195 @@
+{
+  "document": {
+    "title": "SSA-788287: Disclosure of Private Data",
+    "category": "Siemens Security Advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "name": "Siemens ProductCERT",
+      "contact_details": "productcert@siemens.com",
+      "category": "vendor",
+      "namespace": "https://www.siemens.com"
+    },
+    "distribution": {
+      "text": "Disclosure is not limited.",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "tracking": {
+      "id": "SSA-788287",
+      "status": "final",
+      "version": "1",
+      "revision_history": [
+        {
+          "number": "1",
+          "legacy_version": "1.0",
+          "date": "2021-04-13T00:00:00Z",
+          "summary": "Publication Date"
+        }
+      ],
+      "initial_release_date": "2021-04-13T00:00:00Z",
+      "current_release_date": "2021-04-13T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      }
+    },
+    "notes": [
+      {
+        "title": "Summary",
+        "category": "summary",
+        "text": "Due to SmartClient Installation technology (ClickOnce) a customer/integrator needs to create a customer specific Smartclient installer. The mentioned products delivered a trusted but yet expired codesigning certificate.\n\nAn attacker could have exploited the vulnerability by spoofing the code-signing certificate and signing a malicious executable resulting in having a trusted digital signature from a trusted provider.\n\nThe certificate was revoked immediately."
+      },
+      {
+        "title": "General Recommendations",
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
+      },
+      {
+        "title": "Additional Resources",
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
+      },
+      {
+        "title": "Terms of Use",
+        "category": "legal_disclaimer",
+        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
+      }
+    ],
+    "references": [
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-788287.pdf",
+        "summary": "SSA-788287: Disclosure of Private Data - PDF Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-788287.txt",
+        "summary": "SSA-788287: Disclosure of Private Data - TXT Version"
+      },
+      {
+        "category": "self",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-788287.json",
+        "summary": "SSA-788287: Disclosure of Private Data - CSAF Version"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Siemens",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Opcenter Quality",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V12.2",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "1",
+                  "name": "Opcenter Quality"
+                }
+              }
+            ]
+          },
+          {
+            "name": "QMS Automotive",
+            "category": "product_name",
+            "branches": [
+              {
+                "name": "< V12.30",
+                "category": "product_version_range",
+                "product": {
+                  "product_id": "2",
+                  "name": "QMS Automotive"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "title": "CVE-2021-27389",
+      "notes": [
+        {
+          "title": "Summary",
+          "category": "summary",
+          "text": "A private sign key is shipped with the product without adequate protection."
+        }
+      ],
+      "cve": "CVE-2021-27389",
+      "cwe": {
+        "id": "CWE-321",
+        "name": "Use of Hard-coded Cryptographic Key"
+      },
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "scores": [
+        {
+          "cvss_v3": {
+            "version": "3.1",
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:U/RC:C"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "none_available",
+          "details": "Currently no remediation is available"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Explicitly distrust the certificate with the fingerprint FA:53:A4:74:FC:1E:16:6F:E6:6A:D2:5A:C1:E6: 8B:B1:91:CB:38:E9:85:7E:07:79:C1:A5:C3:59:1A:5A:04:96"
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "The certificate expired on 7th March 2021 and was not renewed."
+        },
+        {
+          "product_ids": [
+            "1",
+            "2"
+          ],
+          "category": "mitigation",
+          "details": "Make sure to use correct Certificate validation (CRL / OSCP) when validating certificates."
+        }
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2021-27389.json",
+          "summary": "CVE-2021-27389 Mitre 5.0 json"
+        }
+      ]
+    }
+  ]
+}
+

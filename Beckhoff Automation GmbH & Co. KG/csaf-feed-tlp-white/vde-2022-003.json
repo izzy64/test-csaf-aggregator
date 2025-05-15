@@ -1,0 +1,394 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "organization": "OPC Foundation",
+        "summary": "reporting"
+      },
+      {
+        "organization": "Unified Automation",
+        "summary": "reporting"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-GB",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "By tricking clients of the mentioned products into contacting malicious OPC UA servers and thereby acting as OPC UA clients, a crash of the component can be provoked.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "The mentioned products can be used as clients which contact an OPC UA server. If such connection is made with SecurityMode=None for the connection then the client can receive a malformed message during the conversation which provokes a null pointer dereference within the OPC UA stack of the product. The product crashes then by memory access violation. Though this is uncommon and not recommended, such connections with SecurityMode=None may even be used by OPC UA Servers, for example if they act as client to register at a Discovery Server.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Have your applications configured to use other than SecurityMode=None for all OPC UA connections. Avoid that these connect to an unknown OPC UA server with SecurityMode=None. In particular, avoid that your applications connect to servers which they discover via mDNS, a Local Discovery Server (LDS), an untrusted Global Discovery Server (GDS) or even trusted GDS using SecurityMode=none. Especially in the latter case an adversary might be able to apply the “man in the middle” pattern to attack the connection and inject a bad message which triggers the vulnerability.",
+        "title": "Mitigation"
+      },
+      {
+        "category": "description",
+        "text": "Please update to a recent version of the affected product.",
+        "title": "Remediation"
+      }
+    ],
+    "publisher": {
+      "contact_details": "product-securityincident@beckhoff.com",
+      "name": "Beckhoff Automation GmbH & Co. KG",
+      "namespace": "https://www.beckhoff.com",
+      "category": "vendor"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "VDE-2022-003: BECKHOFF: Null Pointer Dereference vulnerability in products with OPC UA technology - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2022-003/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2022-003: BECKHOFF: Null Pointer Dereference vulnerability in products with OPC UA technology - CSAF",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2022/vde-2022-003.json"
+      },
+      {
+        "category": "external",
+        "summary": "Vendor PSIRT",
+        "url": "https://www.beckhoff.com"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Beckhoff Automation GmbH & Co. KG",
+        "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
+      }
+    ],
+    "title": "BECKHOFF: Null Pointer Dereference vulnerability in products with OPC UA technology",
+    "tracking": {
+      "aliases": [
+        "VDE-2022-003"
+      ],
+      "current_release_date": "2022-03-01T12:34:00.000Z",
+      "generator": {
+        "date": "2025-05-08T11:17:51.310Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.25"
+        }
+      },
+      "id": "VDE-2022-003",
+      "initial_release_date": "2022-03-01T12:34:00.000Z",
+      "revision_history": [
+        {
+          "date": "2022-03-01T12:34:00.000Z",
+          "number": "1",
+          "summary": "Initial revision."
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "BECKHOFF",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Software",
+            "category": "product_family",
+            "branches": [
+              {
+                "name": "EK9160 (TcOpcUaServer)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<3.2.0.239",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "EK9160 (TcOpcUaServer) <3.2.0.239",
+                      "product_id": "CSAFPID-51001"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "IPC Diagnostic UA Server on windows images (MDP UA Server)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<3.1.0.8",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "IPC Diagnostic UA Server on windows images (MDP UA Server) <3.1.0.8",
+                      "product_id": "CSAFPID-51002"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TF2110 (Setup)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<1.12.754.0",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TF2110 (Setup) <1.12.754.0",
+                      "product_id": "CSAFPID-51003"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TF6100-OPC-UA-Client (TcOpcUaClient)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<2.2.9.1",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TF6100-OPC-UA-Client (TcOpcUaClient) <2.2.9.1",
+                      "product_id": "CSAFPID-51004"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TF6100-OPC-UA-Gateway (TcOpcUaGateway)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<1.5.8.454",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TF6100-OPC-UA-Gateway (TcOpcUaGateway) <1.5.8.454",
+                      "product_id": "CSAFPID-51005"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TF6100-OPC-UA-Server (TcOpcUaServer)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<3.2.0.240",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TF6100-OPC-UA-Server (TcOpcUaServer) <3.2.0.240",
+                      "product_id": "CSAFPID-51006"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TS6100-0030-OPC-UA (TcOpcUaClient)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<2.2.9.1",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TS6100-0030-OPC-UA (TcOpcUaClient) <2.2.9.1",
+                      "product_id": "CSAFPID-51007"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TS6100-0030-OPC-UA (TcOpcUaGateway)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<1.5.8.454",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TS6100-0030-OPC-UA (TcOpcUaGateway) <1.5.8.454",
+                      "product_id": "CSAFPID-51008"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TS6100-0030-OPC-UA (TcOpcUaServer)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<3.2.0.240",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TS6100-0030-OPC-UA (TcOpcUaServer) <3.2.0.240",
+                      "product_id": "CSAFPID-51009"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TS6100-OPC-UA (TcOpcUaClient)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<2.2.9.1",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TS6100-OPC-UA (TcOpcUaClient) <2.2.9.1",
+                      "product_id": "CSAFPID-510010"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TS6100-OPC-UA (TcOpcUaGateway)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<1.5.8.454",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TS6100-OPC-UA (TcOpcUaGateway) <1.5.8.454",
+                      "product_id": "CSAFPID-510011"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TS6100-OPC-UA (TcOpcUaServer)",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<3.2.0.240",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TS6100-OPC-UA (TcOpcUaServer) <3.2.0.240",
+                      "product_id": "CSAFPID-510012"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-51001",
+          "CSAFPID-51002",
+          "CSAFPID-51003",
+          "CSAFPID-51004",
+          "CSAFPID-51005",
+          "CSAFPID-51006",
+          "CSAFPID-51007",
+          "CSAFPID-51008",
+          "CSAFPID-51009",
+          "CSAFPID-510010",
+          "CSAFPID-510011",
+          "CSAFPID-510012"
+        ],
+        "summary": "Affected products."
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-45117",
+      "cwe": {
+        "id": "CWE-476",
+        "name": "NULL Pointer Dereference"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "The OPC autogenerated ANSI C stack stubs (in the NodeSets) do not handle all error cases. This can lead to a NULL pointer dereference.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-51001",
+          "CSAFPID-51002",
+          "CSAFPID-51003",
+          "CSAFPID-51004",
+          "CSAFPID-51005",
+          "CSAFPID-51006",
+          "CSAFPID-51007",
+          "CSAFPID-51008",
+          "CSAFPID-51009",
+          "CSAFPID-510010",
+          "CSAFPID-510011",
+          "CSAFPID-510012"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Have your applications configured to use other than SecurityMode=None for all OPC UA connections. Avoid that these connect to an unknown OPC UA server with SecurityMode=None. In particular, avoid that your applications connect to servers which they discover via mDNS, a Local Discovery Server (LDS), an untrusted Global Discovery Server (GDS) or even trusted GDS using SecurityMode=none. Especially in the latter case an adversary might be able to apply the “man in the middle” pattern to attack the connection and inject a bad message which triggers the vulnerability.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Please update to a recent version of the affected product.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 6.5,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 6.5,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-51001",
+            "CSAFPID-51002",
+            "CSAFPID-51003",
+            "CSAFPID-51004",
+            "CSAFPID-51005",
+            "CSAFPID-51006",
+            "CSAFPID-51007",
+            "CSAFPID-51008",
+            "CSAFPID-51009",
+            "CSAFPID-510010",
+            "CSAFPID-510011",
+            "CSAFPID-510012"
+          ]
+        }
+      ],
+      "title": "CVE-2021-45117"
+    }
+  ]
+}

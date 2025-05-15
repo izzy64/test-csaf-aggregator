@@ -9,6 +9,68 @@
     "entry": [
       {
         "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-552330.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-552330",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-552330.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-552330.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-552330.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2025-05-14T00:00:00Z",
+        "summary": {
+          "content": "The installer of Siveillance Video V2024 R1 resets the system configuration password when updating from older versions of Siveillance Video. This could  inadvertently remove the password protection from system configuration files, also affecting backup data sets that were created after the update to V2024 R1.\r\n\r\nSiemens recommends to change the system configuration password settings for systems that were updated from any older version to V2024 R1."
+        },
+        "title": "System Configuration Password Reset in Siveillance Video V2024 R1",
+        "updated": "2025-05-14T00:00:00Z"
+      },
+      {
+        "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-556937",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2025-05-13T00:00:00Z",
+        "summary": {
+          "content": "VersiCharge AC Series EV Chargers contain two vulnerabilities that could allow an attacker to gain control of the chargers through default Modbus port or execute arbitrary code by manipulating the M0 firmware. \r\n\r\nSiemens recommends countermeasures for products where fixes are not, or not yet available."
+        },
+        "title": "Multiple Vulnerabilities in VersiCharge AC Series EV Chargers",
+        "updated": "2025-05-14T00:00:00Z"
+      },
+      {
+        "content": {
           "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-039007.json",
           "type": "application/json"
         },
@@ -501,37 +563,6 @@
           "content": "Siemens Teamcenter Visualization contains a out-of-bound read vulnerability that could be triggered when the application reads files in WRL format. If a user is tricked to open a malicious file with any of the affected products, this could lead the application to crash or potentially lead to arbitrary code execution.\r\n\r\nSiemens has released new versions for the affected products and recommends to update to the latest versions."
         },
         "title": "Out of Bounds Read Vulnerability in Teamcenter Visualization",
-        "updated": "2025-05-13T00:00:00Z"
-      },
-      {
-        "content": {
-          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json",
-          "type": "application/json"
-        },
-        "format": {
-          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
-          "version": "2.0"
-        },
-        "id": "SSA-556937",
-        "link": [
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json",
-            "rel": "self"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json.sha512",
-            "rel": "hash"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-556937.json.asc",
-            "rel": "signature"
-          }
-        ],
-        "published": "2025-05-13T00:00:00Z",
-        "summary": {
-          "content": "VersiCharge AC Series EV Chargers contain two vulnerabilities that could allow an attacker to gain control of the chargers through default Modbus port or execute arbitrary code by manipulating the M0 firmware. \r\n\r\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available."
-        },
-        "title": "Multiple Vulnerabilities in VersiCharge AC Series EV Chargers",
         "updated": "2025-05-13T00:00:00Z"
       },
       {
@@ -20910,6 +20941,6 @@
       }
     ],
     "title": "Siemens Security Advisories CSAF feed (TLP:WHITE)",
-    "updated": "2025-05-14T08:30:24.203338Z"
+    "updated": "2025-05-15T08:30:42.236865Z"
   }
 }

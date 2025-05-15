@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "VersiCharge AC Series EV Chargers contain two vulnerabilities that could allow an attacker to gain control of the chargers through default Modbus port or execute arbitrary code by manipulating the M0 firmware. \n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "VersiCharge AC Series EV Chargers contain two vulnerabilities that could allow an attacker to gain control of the chargers through default Modbus port or execute arbitrary code by manipulating the M0 firmware. \n\nSiemens recommends countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-556937: Multiple Vulnerabilities in VersiCharge AC Series EV Chargers",
     "tracking": {
-      "current_release_date": "2025-05-13T00:00:00Z",
+      "current_release_date": "2025-05-14T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-05-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Corrected the remediation for CVE-2025-31930"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -1482,7 +1488,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update to V2.135 or later version. The latest version will be pushed to the device OTA if the charger is completely commissioned and connected to Siemens Device Management. Contact our Customer Service for further assistance or troubleshooting",
+          "details": "Commission the charger and associate it to a VersiCloud group with Modbus configured to be off. If you are uncertain about whether the Modbus setting is on or off in the group you wish to use, contact Siemens support.",
           "product_ids": [
             "2",
             "4",

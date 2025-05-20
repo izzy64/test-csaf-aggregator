@@ -1,0 +1,458 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "publisher": {
+      "category": "vendor",
+      "name": "Festo SE & Co. KG",
+      "contact_details": "psirt@festo.com",
+      "namespace": "https://festo.com"
+    },
+    "title": "Festo: Vulnerable WIBU-SYSTEMS CodeMeter Runtime in several products",
+    "tracking": {
+      "current_release_date": "2025-05-13T10:00:00.000Z",
+      "id": "FSA-202305",
+      "initial_release_date": "2023-11-28T07:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2023-11-28T07:00:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial version"
+        },
+        {
+          "date": "2023-12-05T08:00:00.000Z",
+          "number": "1.1.0",
+          "summary": "Removed 'MES4 (v3)', 'MES4 (<=v2)' and 'Energy-PC' from affected products as they do not install WIBU CodeMeter Runtime."
+        },
+        {
+          "date": "2025-05-13T10:00:00.000Z",
+          "number": "1.1.1",
+          "summary": "Adjusted to VDE template and updated information on fixed version of the Festo Automation Suite. Changed document title from 'Vulnerable Wibu CodeMeter Runtime in Several Festo Products' to 'Festo: Vulnerable WIBU-SYSTEMS CodeMeter Runtime in several products'. Updated legal disclaimer to add references to special provisions."
+        }
+      ],
+      "status": "final",
+      "version": "1.1.1",
+      "generator": {
+        "date": "2023-08-31T10:00:00.000Z",
+        "engine": {
+          "version": "1.14.0",
+          "name": "Secvisogram"
+        }
+      },
+      "aliases": [
+        "VDE-2023-036"
+      ]
+    },
+    "lang": "en-US",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "notes": [
+      {
+        "category": "general",
+        "text": "Users running communication over an untrusted network who require full protection should switch to an alternative solution such as running the communication over a VPN.\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes. \n\nAs part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits: \n- Use devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside \n- Use firewalls to protect and separate the control system network from other networks \n- Use VPN (Virtual Private Networks) tunnels if remote access is required \n- Activate and apply user management and password features \n- Use encrypted communication links \n- Limit the access to both development and control system by physical means, operating system features, etc. \n- Protect both development and control system by using up to date virus detecting solutions",
+        "title": "General Recommendation"
+      },
+      {
+        "category": "summary",
+        "text": "A vulnerability in the Wibu CodeMeter Runtime, which is part of the installation packages of several Festo products, was found. An attacker exploiting the vulnerability in WIBU CodeMeter Runtime in server mode could gain full access to the affected server via network access without any user interaction. This could lead to remote code execution and escalation of privileges giving full admin access on the host system for an already authenticated user (logged in locally to the PC).",
+        "title": "Summary"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\n\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\n\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply.",
+        "title": "Disclaimer"
+      },
+      {
+        "category": "description",
+        "text": "An attacker exploiting the vulnerability in WIBU CodeMeter Runtime in server mode could gain full access to the affected server via network access without any user interaction.\nExploiting the vulnerability in WIBU CodeMeter Runtime in non-networked workstation mode could lead to a privilege elevation and full access on this workstation for an already authenticated user (logged in locally to the PC).",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Festo Automation Suite: Update to version 2.8.0 and use with CODESYS version >= 3.5.19.30.\n All other affected products: Update Codemeter to version >= 7.60c.",
+        "title": "Remediation"
+      }
+    ],
+    "acknowledgments": [
+      {
+        "urls": [
+          "https://certvde.com/"
+        ],
+        "organization": "CERT@VDE",
+        "summary": "coordination and support with this publication"
+      }
+    ],
+    "references": [
+      {
+        "summary": "For further security-related issues in Festo products please contact the Festo Product Security Incident Response Team (PSIRT)",
+        "url": "https://festo.com/psirt",
+        "category": "external"
+      },
+      {
+        "summary": "CERT@VDE Security Advisories",
+        "url": "https://certvde.com/en/advisories/vendor/festo/",
+        "category": "external"
+      },
+      {
+        "summary": "FSA-202305: Festo: Vulnerable WIBU-SYSTEMS CodeMeter Runtime in several products - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2023/fsa-202305.json",
+        "category": "self"
+      },
+      {
+        "summary": "FSA-202305: Festo: Vulnerable WIBU-SYSTEMS CodeMeter Runtime in several products - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2023-036",
+        "category": "self"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "vendor",
+        "name": "FESTO",
+        "branches": [
+          {
+            "category": "product_family",
+            "name": "Software",
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Festo Automation Suite",
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "product": {
+                      "product_id": "CSAFPID-0001",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:FestoAutomationSuite"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:8074657"
+                          }
+                        ]
+                      },
+                      "name": "Festo Automation Suite < 2.8.0"
+                    },
+                    "name": "<2.8.0"
+                  }
+                ]
+              },
+              {
+                "category": "product_name",
+                "name": "FluidDraw",
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "product": {
+                      "product_id": "CSAFPID-0002",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:FluidDraw"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:8085496"
+                          }
+                        ]
+                      },
+                      "name": "FESTO FluidDraw P6 <= 6.2k"
+                    },
+                    "name": "<=6.2k"
+                  },
+                  {
+                    "category": "product_version_range",
+                    "product": {
+                      "product_id": "CSAFPID-0003",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:FluidDraw"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:8085497"
+                          }
+                        ]
+                      },
+                      "name": "FESTO FluidDraw 365 <= 7.0a"
+                    },
+                    "name": "<=7.0a"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "vendor",
+        "name": "FESTO Didactic",
+        "branches": [
+          {
+            "category": "product_family",
+            "name": "Software",
+            "branches": [
+              {
+                "name": "CIROS Studio / Education",
+                "branches": [
+                  {
+                    "name": "6.0.0<=6.4.6",
+                    "category": "product_version_range",
+                    "product": {
+                      "product_id": "CIROS6",
+                      "name": "FESTO Didactic CIROS Studio / Education 6.0.0 <= 6.4.6",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Partnumber:8038980",
+                            "namespace": "Festo:Partnumber"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version_range",
+                    "name": "7.0.0<=7.1.7",
+                    "product": {
+                      "name": "FESTO Didactic CIROS Studio / Education 7.0.0 <= 7.1.7",
+                      "product_id": "CIROS7",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Partnumber:8140772",
+                            "namespace": "Festo:Partnumber"
+                          },
+                          {
+                            "uri": "Festo:Partnumber:8140773",
+                            "namespace": "Festo:Partnumber"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name"
+              },
+              {
+                "name": "FluidSIM",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "product": {
+                      "name": "FESTO Didactic FluidSIM 5 all versions",
+                      "product_id": "FluidSIM5"
+                    },
+                    "category": "product_version_range",
+                    "name": "vers:all/*"
+                  },
+                  {
+                    "category": "product_version_range",
+                    "name": "<=6.1c",
+                    "product": {
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:8148657"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:8148658"
+                          },
+                          {
+                            "uri": "Festo:Partnumber:8148659",
+                            "namespace": "Festo:Partnumber"
+                          },
+                          {
+                            "uri": "Festo:Partnumber:8148812",
+                            "namespace": "Festo:Partnumber"
+                          },
+                          {
+                            "uri": "Festo:Partnumber:8148813",
+                            "namespace": "Festo:Partnumber"
+                          },
+                          {
+                            "uri": "Festo:Partnumber:8148814",
+                            "namespace": "Festo:Partnumber"
+                          }
+                        ]
+                      },
+                      "name": "FESTO Didactic FluidSIM 6 <= 6.1c",
+                      "product_id": "FluidSIM6"
+                    }
+                  }
+                ]
+              },
+              {
+                "category": "product_name",
+                "name": "MES-PC Firmware",
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<2023.12",
+                    "product": {
+                      "name": "FESTO Didactic MES-PC shipped before December 2023",
+                      "product_id": "MES-PC Firmware"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "product_family",
+            "name": "Hardware",
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "MES-PC",
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "FESTO Didactic MES-PC shipped before December 2023",
+                      "product_id": "MES-PC"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "MES-PC with Firmware <2023.12",
+          "product_id": "MES-PC with Firmware"
+        },
+        "product_reference": "MES-PC Firmware",
+        "relates_to_product_reference": "MES-PC"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-affected-0001",
+        "product_ids": [
+          "CIROS6",
+          "FluidSIM5",
+          "FluidSIM6",
+          "CIROS7",
+          "MES-PC with Firmware",
+          "CSAFPID-0002",
+          "CSAFPID-0003"
+        ],
+        "summary": "Affected products."
+      },
+      {
+        "group_id": "CSAFGID-fixed-0001",
+        "product_ids": [
+          "CIROS6",
+          "FluidSIM5",
+          "FluidSIM6",
+          "CIROS7",
+          "MES-PC with Firmware",
+          "CSAFPID-0002",
+          "CSAFPID-0003"
+        ],
+        "summary": "Fixed products."
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002",
+          "CSAFPID-0003",
+          "CIROS6",
+          "FluidSIM5",
+          "MES-PC with Firmware",
+          "CIROS7",
+          "FluidSIM6"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update CodeMeter Runtime to version >= 7.60c\nThe latest version of CodeMeter Runtime can be downloaded from WIBU System's web site.",
+          "group_ids": [
+            "CSAFGID-affected-0001"
+          ],
+          "date": "2023-08-14T10:00:00.000Z",
+          "url": "https://www.wibu.com/support/user/user-software.html"
+        },
+        {
+          "category": "vendor_fix",
+          "date": "2024-10-07T10:00:00.000Z",
+          "details": "Update to version 2.8.0 and use with CODESYS version >= 3.5.19.30",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "cve": "CVE-2023-3935",
+      "scores": [
+        {
+          "products": [
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0001",
+            "FluidSIM5",
+            "FluidSIM6",
+            "CIROS6",
+            "CIROS7",
+            "MES-PC with Firmware"
+          ],
+          "cvss_v3": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "HIGH",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL"
+          }
+        }
+      ],
+      "notes": [
+        {
+          "title": "Vulnerability Description",
+          "audience": "all",
+          "category": "description",
+          "text": "A heap buffer overflow vulnerability in Wibu CodeMeter Runtime network service up to version 7.60b allows an unauthenticated, remote attacker to achieve RCE and gain full access of the host system."
+        }
+      ],
+      "title": "CVE-2023-3935"
+    }
+  ]
+}

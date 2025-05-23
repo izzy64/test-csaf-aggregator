@@ -9,6 +9,37 @@
     "entry": [
       {
         "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-726617",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2025-05-13T00:00:00Z",
+        "summary": {
+          "content": "The Mendix OIDC SSO module grants read and write access to all tokens exclusively to the Administrator role and could result in privilege misuse by an adversary modifying the module during Mendix development.\r\n\r\nSiemens has released a new version for Mendix OIDC SSO (Mendix 10 compatible) and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available."
+        },
+        "title": "Incorrect Privilege Assignment Vulnerability in Mendix OIDC SSO Module",
+        "updated": "2025-05-22T00:00:00Z"
+      },
+      {
+        "content": {
           "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-552330.json",
           "type": "application/json"
         },
@@ -687,37 +718,6 @@
           "content": "APOGEE PXC and TALON TC Series (BACnet) Devices devices start sending unsolicited BACnet broadcast messages after processing a specific BACnet createObject request. This could allow an attacker residing in the same BACnet network to send a specially crafted message that results in a partial denial of service condition of the targeted device, and potentially reduce the availability of BACnet network. A power cycle is required to restore the device's normal operation.\r\n\r\nSiemens recommends countermeasures for products where fixes are not, or not yet available."
         },
         "title": "Partial Denial of Service Vulnerability in APOGEE PXC and TALON TC Series (BACnet) Devices",
-        "updated": "2025-05-13T00:00:00Z"
-      },
-      {
-        "content": {
-          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json",
-          "type": "application/json"
-        },
-        "format": {
-          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
-          "version": "2.0"
-        },
-        "id": "SSA-726617",
-        "link": [
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json",
-            "rel": "self"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json.sha512",
-            "rel": "hash"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-726617.json.asc",
-            "rel": "signature"
-          }
-        ],
-        "published": "2025-05-13T00:00:00Z",
-        "summary": {
-          "content": "The Mendix OIDC SSO module grants read and write access to all tokens exclusively to the Administrator role and could result in privilege misuse by an adversary modifying the module during Mendix development.\r\n\r\nSiemens has released a new version for Mendix OIDC SSO and recommends to update to the latest version."
-        },
-        "title": "Incorrect Privilege Assignment Vulnerability in Mendix OIDC SSO Module",
         "updated": "2025-05-13T00:00:00Z"
       },
       {
@@ -20941,6 +20941,6 @@
       }
     ],
     "title": "Siemens Security Advisories CSAF feed (TLP:WHITE)",
-    "updated": "2025-05-22T08:30:23.029222Z"
+    "updated": "2025-05-23T08:30:43.275783Z"
   }
 }

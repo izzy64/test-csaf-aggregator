@@ -1,558 +1,563 @@
 {
-  "document": {
-    "acknowledgments": [
-      {
-        "organization": "CERT@VDE",
-        "summary": "coordination",
-        "urls": [
-          "https://certvde.com"
-        ]
-      }
-    ],
-    "category": "csaf_security_advisory",
-    "csaf_version": "2.0",
-    "distribution": {
-      "tlp": {
-        "label": "WHITE",
-        "url": "https://www.first.org/tlp/"
-      }
-    },
-    "lang": "en-GB",
-    "notes": [
-      {
-        "category": "summary",
-        "text": "The affected products can act as OPC UA client or server and are vulnerable to two different kind of attacks via\nthe OPC UA protocol. For both cases the attacker can send packets via the OPC UA protocol without the need to\nauthenticate and\n\n1. provoke a stack overflow resulting in denial of service of the product or\n2. make the product disclose information to the attacker without authorization.",
-        "title": "Summary"
-      },
-      {
-        "category": "description",
-        "text": "For both kinds of attacks the attacker needs to use a specifically crafted OPC UA client when attacking an OPC UA server respectively needs to use a specifically crafted OPC UA server when attacking an OPC UA client. For attacking a server the attacker needs to be able to establish a TCP connection to that server. For attacking a client the attacker needs to be able to make the client connect to the attacker’s server. For all cases it is sufficient if after the establishment of the TCP connection the attacker lets the specifically crafted application (client or server) respond with a sequence of specifically crafted network packets. No authentication is required by the attacker.\n\nFor the first kind of attack the specifically crafted network packets cause a stack overflow as consequence of an uncontrolled recursion when the attacked application (client or server) processes them. With the components of the product described above, this attack results in a denial of service because the components become unavailable and need to be restarted manually after the attack.\n\nFor the second kind of attack the specifically crafted network packets cause the attacked application to resolve XML entities which allows the inclusion of contents from files on disk as far as they are accessible to the attacked application. Further processing of XML entities allow the resulting XML content to be posted to an HTTP server of the attackers choice. This allows the disclosure of file content from the computer the attacked application is running on even though the attacker is not required to authenticate nor to have access to these files.\n\nThe second attack is possible only if an outdated version of a .NET Framework from Microsoft is used. For more information like vulnerable and fixed versions of the .NET Framework, please see CVE-2015-6096 external link.\n\nSince TCP connections are routable the attacker may perform all these kinds of exploits from remote if there is no firewall set up which limits the access for example to the TCP ports which the OPC UA application is using. The attacker does not need to have a local account at the device or OPC UA server nor is any authentication required for the attack.",
-        "title": "Impact"
-      },
-      {
-        "category": "description",
-        "text": "Consider limiting access to the network communication ports of affected server products. Also consider limiting where the affected client products are allowed to connect to. For example, this can be achived with Windows’ built-in firewall by incoming rules for servers and outgoing rules for clients. Consider to minimize the ability of an attacker to hijack communication establishment from a client to a server. For example this can be achieved with the help of zones and conduits: Try to keep servers and clients within the same network zone and prevent intrusion into that zone. Try to enclose communication establishment within conduits like VPN channels (where one conduit can serve for many OPC UA connections) and prevent attackers from intruding into such channels. Consider updating the .NET Framework.",
-        "title": "Mitigation"
-      },
-      {
-        "category": "description",
-        "text": "Update to a recent version of the affected product and update the .NET Framework.",
-        "title": "Remediation"
-      }
-    ],
-    "publisher": {
-      "category": "vendor",
-      "contact_details": "product-securityincident@beckhoff.com",
-      "name": "Beckhoff Automation GmbH & Co. KG",
-      "namespace": "https://www.beckhoff.com"
-    },
-    "references": [
-      {
-        "category": "external",
-        "summary": "CERT@VDE Security Advisories for Beckhoff",
-        "url": "https://certvde.com/de/advisories/vendor/beckhoff/"
-      },
-      {
-        "category": "self",
-        "summary": "VDE-2021-008: Beckhoff: Stack Overflow and XXE vulnerability in various OPC UA products - HTML",
-        "url": "https://certvde.com/de/advisories/vde-2021-008/"
-      },
-      {
-        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/vde-2021-008.json",
-        "category": "self",
-        "summary": "VDE-2021-008: Beckhoff: Stack Overflow and XXE vulnerability in various OPC UA products - CSAF"
-      }
-    ],
-    "title": "Beckhoff: Stack Overflow and XXE vulnerability in various OPC UA products",
-    "tracking": {
-      "aliases": [
-        "VDE-2021-008"
-      ],
-      "current_release_date": "2025-04-11T07:00:00.000Z",
-      "generator": {
-        "date": "2025-04-11T07:25:35.560Z",
-        "engine": {
-          "name": "Secvisogram",
-          "version": "2.5.23"
-        }
-      },
-      "id": "VDE-2021-008",
-      "initial_release_date": "2024-10-21T08:00:00.000Z",
-      "revision_history": [
-        {
-          "date": "2021-05-19T09:04:00.000Z",
-          "number": "1",
-          "summary": "Initial revision."
+    "document": {
+        "acknowledgments": [
+            {
+                "organization": "CERT@VDE",
+                "summary": "coordination",
+                "urls": [
+                    "https://certvde.com"
+                ]
+            }
+        ],
+        "category": "csaf_security_advisory",
+        "csaf_version": "2.0",
+        "distribution": {
+            "tlp": {
+                "label": "WHITE",
+                "url": "https://www.first.org/tlp/"
+            }
         },
-        {
-          "number": "2",
-          "date": "2025-01-16T11:40:00.000Z",
-          "summary": "Fix: list of branches, references "
+        "lang": "en-GB",
+        "notes": [
+            {
+                "category": "summary",
+                "text": "The affected products can act as OPC UA client or server and are vulnerable to two different kind of attacks via\nthe OPC UA protocol. For both cases the attacker can send packets via the OPC UA protocol without the need to\nauthenticate and\n\n1. provoke a stack overflow resulting in denial of service of the product or\n2. make the product disclose information to the attacker without authorization.",
+                "title": "Summary"
+            },
+            {
+                "category": "description",
+                "text": "For both kinds of attacks the attacker needs to use a specifically crafted OPC UA client when attacking an OPC UA server respectively needs to use a specifically crafted OPC UA server when attacking an OPC UA client. For attacking a server the attacker needs to be able to establish a TCP connection to that server. For attacking a client the attacker needs to be able to make the client connect to the attacker's server. For all cases it is sufficient if after the establishment of the TCP connection the attacker lets the specifically crafted application (client or server) respond with a sequence of specifically crafted network packets. No authentication is required by the attacker.\n\nFor the first kind of attack the specifically crafted network packets cause a stack overflow as consequence of an uncontrolled recursion when the attacked application (client or server) processes them. With the components of the product described above, this attack results in a denial of service because the components become unavailable and need to be restarted manually after the attack.\n\nFor the second kind of attack the specifically crafted network packets cause the attacked application to resolve XML entities which allows the inclusion of contents from files on disk as far as they are accessible to the attacked application. Further processing of XML entities allow the resulting XML content to be posted to an HTTP server of the attackers choice. This allows the disclosure of file content from the computer the attacked application is running on even though the attacker is not required to authenticate nor to have access to these files.\n\nThe second attack is possible only if an outdated version of a .NET Framework from Microsoft is used. For more information like vulnerable and fixed versions of the .NET Framework, please see CVE-2015-6096 external link.\n\nSince TCP connections are routable the attacker may perform all these kinds of exploits from remote if there is no firewall set up which limits the access for example to the TCP ports which the OPC UA application is using. The attacker does not need to have a local account at the device or OPC UA server nor is any authentication required for the attack.",
+                "title": "Impact"
+            },
+            {
+                "category": "description",
+                "text": "Consider limiting access to the network communication ports of affected server products. Also consider limiting where the affected client products are allowed to connect to. For example, this can be achived with Windows' built-in firewall by incoming rules for servers and outgoing rules for clients. Consider to minimize the ability of an attacker to hijack communication establishment from a client to a server. For example this can be achieved with the help of zones and conduits: Try to keep servers and clients within the same network zone and prevent intrusion into that zone. Try to enclose communication establishment within conduits like VPN channels (where one conduit can serve for many OPC UA connections) and prevent attackers from intruding into such channels. Consider updating the .NET Framework.",
+                "title": "Mitigation"
+            },
+            {
+                "category": "description",
+                "text": "Update to a recent version of the affected product and update the .NET Framework.",
+                "title": "Remediation"
+            }
+        ],
+        "publisher": {
+            "category": "vendor",
+            "contact_details": "product-securityincident@beckhoff.com",
+            "name": "Beckhoff Automation GmbH & Co. KG",
+            "namespace": "https://www.beckhoff.com"
         },
-        {
-          "number": "3",
-          "date": "2025-04-11T07:00:00.000Z",
-          "summary": "Fix: version range"
-        }
-      ],
-      "status": "final",
-      "version": "3"
-    }
-  },
-  "product_tree": {
-    "branches": [
-      {
-        "branches": [
-          {
-            "branches": [
-              {
-                "category": "product_name",
-                "name": "TwinCAT OPC UA Client System Manager Extension included in TF6100",
-                "branches": [
-                  {
-                    "name": "<4.3.46.0",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT OPC UA Client System Manager Extension included in TF6100 <4.3.46.0",
-                      "product_id": "CSAFPID-51001"
-                    }
-                  },
-                  {
-                    "name": "4.3.46.0",
-                    "category": "product_version",
-                    "product": {
-                      "name": "TwinCAT OPC UA Client System Manager Extension included in TF6100 4.3.46.0",
-                      "product_id": "CSAFPID-52001"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT OPC UA Configurator (Standalone) included in TF6100",
-                "branches": [
-                  {
-                    "name": "<4.3.46.0",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT OPC UA Configurator (Standalone) included in TF6100 <4.3.46.0",
-                      "product_id": "CSAFPID-51002"
-                    }
-                  },
-                  {
-                    "name": "4.3.46.0",
-                    "category": "product_version",
-                    "product": {
-                      "name": "TwinCAT OPC UA Configurator (Standalone) included in TF6100 4.3.46.0",
-                      "product_id": "CSAFPID-52002"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT OPC UA Configurator (Standalone) included in TS6100",
-                "branches": [
-                  {
-                    "name": "<4.3.46.0",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT OPC UA Configurator (Standalone) included in TS6100 <4.3.46.0",
-                      "product_id": "CSAFPID-51003"
-                    }
-                  },
-                  {
-                    "name": "4.3.46.0",
-                    "category": "product_version",
-                    "product": {
-                      "name": "TwinCAT OPC UA Configurator (Standalone) included in TS6100 4.3.46.0",
-                      "product_id": "CSAFPID-52003"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT OPC UA Configurator (Visual Studio) included in TF6100",
-                "branches": [
-                  {
-                    "name": "<4.3.46.0",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT OPC UA Configurator (Visual Studio) included in TF6100 <4.3.46.0",
-                      "product_id": "CSAFPID-51004"
-                    }
-                  },
-                  {
-                    "name": "4.3.46.0",
-                    "category": "product_version",
-                    "product": {
-                      "name": "TwinCAT OPC UA Configurator (Visual Studio) included in TF6100 4.3.46.0",
-                      "product_id": "CSAFPID-52004"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT OPC UA Sample Client included in TF6100",
-                "branches": [
-                  {
-                    "name": "<4.3.46.0",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT OPC UA Sample Client included in TF6100 <4.3.46.0",
-                      "product_id": "CSAFPID-51005"
-                    }
-                  },
-                  {
-                    "category": "product_version",
-                    "name": "4.3.46.0",
-                    "product": {
-                      "name": "TwinCAT OPC UA Sample Client included in TF6100 4.3.46.0",
-                      "product_id": "CSAFPID-52005"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "TwinCAT OPC UA Sample Client included in TS6100",
-                "category": "product_name",
-                "branches": [
-                  {
-                    "name": "<4.3.46.0",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT OPC UA Sample Client included in TS6100 <4.3.46.0",
-                      "product_id": "CSAFPID-51006"
-                    }
-                  },
-                  {
-                    "category": "product_version",
-                    "name": "4.3.46.0",
-                    "product": {
-                      "name": "TwinCAT OPC UA Sample Client included in TS6100 4.3.46.0",
-                      "product_id": "CSAFPID-52006"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT Scope Server in TF3300",
-                "branches": [
-                  {
-                    "category": "product_version_range",
-                    "name": "<3.4.3144.11",
-                    "product": {
-                      "name": "TwinCAT Scope Server in TF3300 <3.4.3144.11",
-                      "product_id": "CSAFPID-51007"
-                    }
-                  },
-                  {
-                    "category": "product_version",
-                    "name": " 3.4.3144.11",
-                    "product": {
-                      "name": "TwinCAT Scope Server in TF3300  3.4.3144.11",
-                      "product_id": "CSAFPID-52007"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT Target Browser OPC UA Extension included in TF3300",
-                "branches": [
-                  {
-                    "name": "<3.4.3144.11",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT Target Browser OPC UA Extension included in TF3300 <3.4.3144.11",
-                      "product_id": "CSAFPID-51008"
-                    }
-                  },
-                  {
-                    "category": "product_version",
-                    "name": " 3.4.3144.11",
-                    "product": {
-                      "name": "TwinCAT Target Browser OPC UA Extension included in TF3300  3.4.3144.11",
-                      "product_id": "CSAFPID-52008"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT Target Browser OPC UA Extension included in TF6100",
-                "branches": [
-                  {
-                    "name": "<4.3.46.0",
-                    "category": "product_version_range",
-                    "product": {
-                      "name": "TwinCAT Target Browser OPC UA Extension included in TF6100 <4.3.46.0",
-                      "product_id": "CSAFPID-51009"
-                    }
-                  },
-                  {
-                    "name": "4.3.46.0",
-                    "category": "product_version",
-                    "product": {
-                      "name": "TwinCAT Target Browser OPC UA Extension included in TF6100 4.3.46.0",
-                      "product_id": "CSAFPID-52009"
-                    }
-                  }
-                ]
-              },
-              {
-                "category": "product_name",
-                "name": "TwinCAT Target Browser OPC UA Extension included in TF6720",
-                "branches": [
-                  {
-                    "name": "<1.1.68.0",
-                    "product": {
-                      "name": "TwinCAT Target Browser OPC UA Extension included in TF6720 <1.1.68.0",
-                      "product_id": "CSAFPID-510010"
-                    },
-                    "category": "product_version_range"
-                  },
-                  {
-                    "category": "product_version",
-                    "name": "1.1.68.0",
-                    "product": {
-                      "name": "TwinCAT Target Browser OPC UA Extension included in TF6720 1.1.68.0",
-                      "product_id": "CSAFPID-52010"
-                    }
-                  }
-                ]
-              }
+        "references": [
+            {
+                "category": "external",
+                "summary": "CERT@VDE Security Advisories for Beckhoff",
+                "url": "https://certvde.com/de/advisories/vendor/beckhoff/"
+            },
+            {
+                "category": "self",
+                "summary": "VDE-2021-008: Beckhoff: Stack Overflow and XXE vulnerability in various OPC UA products - HTML",
+                "url": "https://certvde.com/de/advisories/vde-2021-008/"
+            },
+            {
+                "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2024/vde-2021-008.json",
+                "category": "self",
+                "summary": "VDE-2021-008: Beckhoff: Stack Overflow and XXE vulnerability in various OPC UA products - CSAF"
+            }
+        ],
+        "title": "Beckhoff: Stack Overflow and XXE vulnerability in various OPC UA products",
+        "tracking": {
+            "aliases": [
+                "VDE-2021-008"
             ],
-            "category": "product_family",
-            "name": "Software"
-          }
-        ],
-        "category": "vendor",
-        "name": "Beckhoff"
-      }
-    ],
-    "product_groups": [
-      {
-        "group_id": "CSAFGID-0001",
-        "product_ids": [
-          "CSAFPID-51001",
-          "CSAFPID-51002",
-          "CSAFPID-51003",
-          "CSAFPID-51004",
-          "CSAFPID-51005",
-          "CSAFPID-51006",
-          "CSAFPID-51007",
-          "CSAFPID-51008",
-          "CSAFPID-51009",
-          "CSAFPID-510010"
-        ],
-        "summary": "Affected products."
-      },
-      {
-        "group_id": "CSAFGID-0002",
-        "summary": "Fixed Products.",
-        "product_ids": [
-          "CSAFPID-52001",
-          "CSAFPID-52002",
-          "CSAFPID-52003",
-          "CSAFPID-52004",
-          "CSAFPID-52005",
-          "CSAFPID-52006",
-          "CSAFPID-52007",
-          "CSAFPID-52008",
-          "CSAFPID-52009",
-          "CSAFPID-52010"
-        ]
-      }
-    ]
-  },
-  "vulnerabilities": [
-    {
-      "cve": "CVE-2021-27432",
-      "cwe": {
-        "id": "CWE-674",
-        "name": "Uncontrolled Recursion"
-      },
-      "notes": [
-        {
-          "audience": "all",
-          "category": "description",
-          "text": "OPC Foundation UA .NET Standard versions prior to 1.4.365.48 and OPC UA .NET Legacy are vulnerable to an uncontrolled recursion, which may allow an attacker to trigger a stack overflow.",
-          "title": "Vulnerability Description"
+            "current_release_date": "2025-05-22T13:03:10.000Z",
+            "generator": {
+                "date": "2025-04-11T07:25:35.560Z",
+                "engine": {
+                    "name": "Secvisogram",
+                    "version": "2.5.23"
+                }
+            },
+            "id": "VDE-2021-008",
+            "initial_release_date": "2024-10-21T08:00:00.000Z",
+            "revision_history": [
+                {
+                    "date": "2021-05-19T09:04:00.000Z",
+                    "number": "1",
+                    "summary": "Initial revision."
+                },
+                {
+                    "number": "2",
+                    "date": "2025-01-16T11:40:00.000Z",
+                    "summary": "Fix: list of branches, references "
+                },
+                {
+                    "number": "3",
+                    "date": "2025-04-11T07:00:00.000Z",
+                    "summary": "Fix: version range"
+                },
+                {
+                    "number": "4",
+                    "summary": "Fix: quotation mark",
+                    "date": "2025-05-22T13:03:10.000Z"
+                }
+            ],
+            "status": "final",
+            "version": "4"
         }
-      ],
-      "remediations": [
-        {
-          "category": "mitigation",
-          "details": "Consider limiting access to the network communication ports of affected server products. Also consider limiting where the affected client products are allowed to connect to. For example, this can be achived with Windows’ built-in firewall by incoming rules for servers and outgoing rules for clients. Consider to minimize the ability of an attacker to hijack communication establishment from a client to a server. For example this can be achieved with the help of zones and conduits: Try to keep servers and clients within the same network zone and prevent intrusion into that zone. Try to enclose communication establishment within conduits like VPN channels (where one conduit can serve for many OPC UA connections) and prevent attackers from intruding into such channels. Consider updating the .NET Framework.",
-          "group_ids": [
-            "CSAFGID-0001"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to a recent version of the affected product and update the .NET Framework.",
-          "group_ids": [
-            "CSAFGID-0001"
-          ]
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "HIGH",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "NONE",
-            "environmentalScore": 7.5,
-            "environmentalSeverity": "HIGH",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "temporalScore": 7.5,
-            "temporalSeverity": "HIGH",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-51001",
-            "CSAFPID-51002",
-            "CSAFPID-51003",
-            "CSAFPID-51004",
-            "CSAFPID-51005",
-            "CSAFPID-51006",
-            "CSAFPID-51007",
-            "CSAFPID-51008",
-            "CSAFPID-51009",
-            "CSAFPID-510010"
-          ]
-        }
-      ],
-      "title": "CVE-2021-27432",
-      "product_status": {
-        "known_affected": [
-          "CSAFPID-51001",
-          "CSAFPID-51002",
-          "CSAFPID-51003",
-          "CSAFPID-51004",
-          "CSAFPID-51005",
-          "CSAFPID-51006",
-          "CSAFPID-51007",
-          "CSAFPID-51008",
-          "CSAFPID-51009",
-          "CSAFPID-510010"
-        ],
-        "fixed": [
-          "CSAFPID-52001",
-          "CSAFPID-52002",
-          "CSAFPID-52003",
-          "CSAFPID-52004",
-          "CSAFPID-52005",
-          "CSAFPID-52006",
-          "CSAFPID-52007",
-          "CSAFPID-52008",
-          "CSAFPID-52009",
-          "CSAFPID-52010"
-        ]
-      }
     },
-    {
-      "cve": "CVE-2021-27434",
-      "cwe": {
-        "id": "CWE-200",
-        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
-      },
-      "notes": [
+    "product_tree": {
+        "branches": [
+            {
+                "branches": [
+                    {
+                        "branches": [
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT OPC UA Client System Manager Extension included in TF6100",
+                                "branches": [
+                                    {
+                                        "name": "<4.3.46.0",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Client System Manager Extension included in TF6100 <4.3.46.0",
+                                            "product_id": "CSAFPID-51001"
+                                        }
+                                    },
+                                    {
+                                        "name": "4.3.46.0",
+                                        "category": "product_version",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Client System Manager Extension included in TF6100 4.3.46.0",
+                                            "product_id": "CSAFPID-52001"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT OPC UA Configurator (Standalone) included in TF6100",
+                                "branches": [
+                                    {
+                                        "name": "<4.3.46.0",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Configurator (Standalone) included in TF6100 <4.3.46.0",
+                                            "product_id": "CSAFPID-51002"
+                                        }
+                                    },
+                                    {
+                                        "name": "4.3.46.0",
+                                        "category": "product_version",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Configurator (Standalone) included in TF6100 4.3.46.0",
+                                            "product_id": "CSAFPID-52002"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT OPC UA Configurator (Standalone) included in TS6100",
+                                "branches": [
+                                    {
+                                        "name": "<4.3.46.0",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Configurator (Standalone) included in TS6100 <4.3.46.0",
+                                            "product_id": "CSAFPID-51003"
+                                        }
+                                    },
+                                    {
+                                        "name": "4.3.46.0",
+                                        "category": "product_version",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Configurator (Standalone) included in TS6100 4.3.46.0",
+                                            "product_id": "CSAFPID-52003"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT OPC UA Configurator (Visual Studio) included in TF6100",
+                                "branches": [
+                                    {
+                                        "name": "<4.3.46.0",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Configurator (Visual Studio) included in TF6100 <4.3.46.0",
+                                            "product_id": "CSAFPID-51004"
+                                        }
+                                    },
+                                    {
+                                        "name": "4.3.46.0",
+                                        "category": "product_version",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Configurator (Visual Studio) included in TF6100 4.3.46.0",
+                                            "product_id": "CSAFPID-52004"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT OPC UA Sample Client included in TF6100",
+                                "branches": [
+                                    {
+                                        "name": "<4.3.46.0",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Sample Client included in TF6100 <4.3.46.0",
+                                            "product_id": "CSAFPID-51005"
+                                        }
+                                    },
+                                    {
+                                        "category": "product_version",
+                                        "name": "4.3.46.0",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Sample Client included in TF6100 4.3.46.0",
+                                            "product_id": "CSAFPID-52005"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "TwinCAT OPC UA Sample Client included in TS6100",
+                                "category": "product_name",
+                                "branches": [
+                                    {
+                                        "name": "<4.3.46.0",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Sample Client included in TS6100 <4.3.46.0",
+                                            "product_id": "CSAFPID-51006"
+                                        }
+                                    },
+                                    {
+                                        "category": "product_version",
+                                        "name": "4.3.46.0",
+                                        "product": {
+                                            "name": "TwinCAT OPC UA Sample Client included in TS6100 4.3.46.0",
+                                            "product_id": "CSAFPID-52006"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT Scope Server in TF3300",
+                                "branches": [
+                                    {
+                                        "category": "product_version_range",
+                                        "name": "<3.4.3144.11",
+                                        "product": {
+                                            "name": "TwinCAT Scope Server in TF3300 <3.4.3144.11",
+                                            "product_id": "CSAFPID-51007"
+                                        }
+                                    },
+                                    {
+                                        "category": "product_version",
+                                        "name": " 3.4.3144.11",
+                                        "product": {
+                                            "name": "TwinCAT Scope Server in TF3300  3.4.3144.11",
+                                            "product_id": "CSAFPID-52007"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT Target Browser OPC UA Extension included in TF3300",
+                                "branches": [
+                                    {
+                                        "name": "<3.4.3144.11",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT Target Browser OPC UA Extension included in TF3300 <3.4.3144.11",
+                                            "product_id": "CSAFPID-51008"
+                                        }
+                                    },
+                                    {
+                                        "category": "product_version",
+                                        "name": " 3.4.3144.11",
+                                        "product": {
+                                            "name": "TwinCAT Target Browser OPC UA Extension included in TF3300  3.4.3144.11",
+                                            "product_id": "CSAFPID-52008"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT Target Browser OPC UA Extension included in TF6100",
+                                "branches": [
+                                    {
+                                        "name": "<4.3.46.0",
+                                        "category": "product_version_range",
+                                        "product": {
+                                            "name": "TwinCAT Target Browser OPC UA Extension included in TF6100 <4.3.46.0",
+                                            "product_id": "CSAFPID-51009"
+                                        }
+                                    },
+                                    {
+                                        "name": "4.3.46.0",
+                                        "category": "product_version",
+                                        "product": {
+                                            "name": "TwinCAT Target Browser OPC UA Extension included in TF6100 4.3.46.0",
+                                            "product_id": "CSAFPID-52009"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "category": "product_name",
+                                "name": "TwinCAT Target Browser OPC UA Extension included in TF6720",
+                                "branches": [
+                                    {
+                                        "name": "<1.1.68.0",
+                                        "product": {
+                                            "name": "TwinCAT Target Browser OPC UA Extension included in TF6720 <1.1.68.0",
+                                            "product_id": "CSAFPID-510010"
+                                        },
+                                        "category": "product_version_range"
+                                    },
+                                    {
+                                        "category": "product_version",
+                                        "name": "1.1.68.0",
+                                        "product": {
+                                            "name": "TwinCAT Target Browser OPC UA Extension included in TF6720 1.1.68.0",
+                                            "product_id": "CSAFPID-52010"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "category": "product_family",
+                        "name": "Software"
+                    }
+                ],
+                "category": "vendor",
+                "name": "Beckhoff"
+            }
+        ],
+        "product_groups": [
+            {
+                "group_id": "CSAFGID-0001",
+                "product_ids": [
+                    "CSAFPID-51001",
+                    "CSAFPID-51002",
+                    "CSAFPID-51003",
+                    "CSAFPID-51004",
+                    "CSAFPID-51005",
+                    "CSAFPID-51006",
+                    "CSAFPID-51007",
+                    "CSAFPID-51008",
+                    "CSAFPID-51009",
+                    "CSAFPID-510010"
+                ],
+                "summary": "Affected products."
+            },
+            {
+                "group_id": "CSAFGID-0002",
+                "summary": "Fixed Products.",
+                "product_ids": [
+                    "CSAFPID-52001",
+                    "CSAFPID-52002",
+                    "CSAFPID-52003",
+                    "CSAFPID-52004",
+                    "CSAFPID-52005",
+                    "CSAFPID-52006",
+                    "CSAFPID-52007",
+                    "CSAFPID-52008",
+                    "CSAFPID-52009",
+                    "CSAFPID-52010"
+                ]
+            }
+        ]
+    },
+    "vulnerabilities": [
         {
-          "audience": "all",
-          "category": "description",
-          "text": "The configuration backend allows an unauthenticated user to write arbitrary data with root privileges to the storage, which could\nlead to unauthenticated remote code execution and full system compromise.\nusers should be able to use the API. The vulnerability allows an unauthenticated attacker to read and set several device\nparameters that can lead to full compromise of the device.",
-          "title": "Vulnerability Description"
-        }
-      ],
-      "remediations": [
-        {
-          "category": "mitigation",
-          "details": "Consider limiting access to the network communication ports of affected server products. Also consider limiting where the affected client products are allowed to connect to. For example, this can be achived with Windows’ built-in firewall by incoming rules for servers and outgoing rules for clients. Consider to minimize the ability of an attacker to hijack communication establishment from a client to a server. For example this can be achieved with the help of zones and conduits: Try to keep servers and clients within the same network zone and prevent intrusion into that zone. Try to enclose communication establishment within conduits like VPN channels (where one conduit can serve for many OPC UA connections) and prevent attackers from intruding into such channels. Consider updating the .NET Framework.",
-          "group_ids": [
-            "CSAFGID-0001"
-          ]
+            "cve": "CVE-2021-27432",
+            "cwe": {
+                "id": "CWE-674",
+                "name": "Uncontrolled Recursion"
+            },
+            "notes": [
+                {
+                    "audience": "all",
+                    "category": "description",
+                    "text": "OPC Foundation UA .NET Standard versions prior to 1.4.365.48 and OPC UA .NET Legacy are vulnerable to an uncontrolled recursion, which may allow an attacker to trigger a stack overflow.",
+                    "title": "Vulnerability Description"
+                }
+            ],
+            "remediations": [
+                {
+                    "category": "mitigation",
+                    "details": "Consider limiting access to the network communication ports of affected server products. Also consider limiting where the affected client products are allowed to connect to. For example, this can be achived with Windows' built-in firewall by incoming rules for servers and outgoing rules for clients. Consider to minimize the ability of an attacker to hijack communication establishment from a client to a server. For example this can be achieved with the help of zones and conduits: Try to keep servers and clients within the same network zone and prevent intrusion into that zone. Try to enclose communication establishment within conduits like VPN channels (where one conduit can serve for many OPC UA connections) and prevent attackers from intruding into such channels. Consider updating the .NET Framework.",
+                    "group_ids": [
+                        "CSAFGID-0001"
+                    ]
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to a recent version of the affected product and update the .NET Framework.",
+                    "group_ids": [
+                        "CSAFGID-0001"
+                    ]
+                }
+            ],
+            "scores": [
+                {
+                    "cvss_v3": {
+                        "attackComplexity": "LOW",
+                        "attackVector": "NETWORK",
+                        "availabilityImpact": "HIGH",
+                        "baseScore": 7.5,
+                        "baseSeverity": "HIGH",
+                        "confidentialityImpact": "NONE",
+                        "environmentalScore": 7.5,
+                        "environmentalSeverity": "HIGH",
+                        "integrityImpact": "NONE",
+                        "privilegesRequired": "NONE",
+                        "scope": "UNCHANGED",
+                        "temporalScore": 7.5,
+                        "temporalSeverity": "HIGH",
+                        "userInteraction": "NONE",
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                        "version": "3.1"
+                    },
+                    "products": [
+                        "CSAFPID-51001",
+                        "CSAFPID-51002",
+                        "CSAFPID-51003",
+                        "CSAFPID-51004",
+                        "CSAFPID-51005",
+                        "CSAFPID-51006",
+                        "CSAFPID-51007",
+                        "CSAFPID-51008",
+                        "CSAFPID-51009",
+                        "CSAFPID-510010"
+                    ]
+                }
+            ],
+            "title": "CVE-2021-27432",
+            "product_status": {
+                "known_affected": [
+                    "CSAFPID-51001",
+                    "CSAFPID-51002",
+                    "CSAFPID-51003",
+                    "CSAFPID-51004",
+                    "CSAFPID-51005",
+                    "CSAFPID-51006",
+                    "CSAFPID-51007",
+                    "CSAFPID-51008",
+                    "CSAFPID-51009",
+                    "CSAFPID-510010"
+                ],
+                "fixed": [
+                    "CSAFPID-52001",
+                    "CSAFPID-52002",
+                    "CSAFPID-52003",
+                    "CSAFPID-52004",
+                    "CSAFPID-52005",
+                    "CSAFPID-52006",
+                    "CSAFPID-52007",
+                    "CSAFPID-52008",
+                    "CSAFPID-52009",
+                    "CSAFPID-52010"
+                ]
+            }
         },
         {
-          "category": "vendor_fix",
-          "details": "Update to a recent version of the affected product and update the .NET Framework.",
-          "group_ids": [
-            "CSAFGID-0001"
-          ]
+            "cve": "CVE-2021-27434",
+            "cwe": {
+                "id": "CWE-200",
+                "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+            },
+            "notes": [
+                {
+                    "audience": "all",
+                    "category": "description",
+                    "text": "The configuration backend allows an unauthenticated user to write arbitrary data with root privileges to the storage, which could\nlead to unauthenticated remote code execution and full system compromise.\nusers should be able to use the API. The vulnerability allows an unauthenticated attacker to read and set several device\nparameters that can lead to full compromise of the device.",
+                    "title": "Vulnerability Description"
+                }
+            ],
+            "remediations": [
+                {
+                    "category": "mitigation",
+                    "details": "Consider limiting access to the network communication ports of affected server products. Also consider limiting where the affected client products are allowed to connect to. For example, this can be achived with Windows' built-in firewall by incoming rules for servers and outgoing rules for clients. Consider to minimize the ability of an attacker to hijack communication establishment from a client to a server. For example this can be achieved with the help of zones and conduits: Try to keep servers and clients within the same network zone and prevent intrusion into that zone. Try to enclose communication establishment within conduits like VPN channels (where one conduit can serve for many OPC UA connections) and prevent attackers from intruding into such channels. Consider updating the .NET Framework.",
+                    "group_ids": [
+                        "CSAFGID-0001"
+                    ]
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Update to a recent version of the affected product and update the .NET Framework.",
+                    "group_ids": [
+                        "CSAFGID-0001"
+                    ]
+                }
+            ],
+            "scores": [
+                {
+                    "cvss_v3": {
+                        "attackComplexity": "LOW",
+                        "attackVector": "NETWORK",
+                        "availabilityImpact": "NONE",
+                        "baseScore": 7.5,
+                        "baseSeverity": "HIGH",
+                        "confidentialityImpact": "HIGH",
+                        "environmentalScore": 7.5,
+                        "environmentalSeverity": "HIGH",
+                        "integrityImpact": "NONE",
+                        "privilegesRequired": "NONE",
+                        "scope": "UNCHANGED",
+                        "temporalScore": 7.5,
+                        "temporalSeverity": "HIGH",
+                        "userInteraction": "NONE",
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                        "version": "3.1"
+                    },
+                    "products": [
+                        "CSAFPID-51001",
+                        "CSAFPID-51002",
+                        "CSAFPID-51003",
+                        "CSAFPID-51004",
+                        "CSAFPID-51005",
+                        "CSAFPID-51006",
+                        "CSAFPID-51007",
+                        "CSAFPID-51008",
+                        "CSAFPID-51009",
+                        "CSAFPID-510010"
+                    ]
+                }
+            ],
+            "title": "CVE-2021-27434",
+            "product_status": {
+                "known_affected": [
+                    "CSAFPID-51001",
+                    "CSAFPID-51002",
+                    "CSAFPID-51003",
+                    "CSAFPID-51004",
+                    "CSAFPID-51005",
+                    "CSAFPID-51006",
+                    "CSAFPID-51007",
+                    "CSAFPID-51008",
+                    "CSAFPID-51009",
+                    "CSAFPID-510010"
+                ],
+                "fixed": [
+                    "CSAFPID-52001",
+                    "CSAFPID-52002",
+                    "CSAFPID-52003",
+                    "CSAFPID-52004",
+                    "CSAFPID-52005",
+                    "CSAFPID-52006",
+                    "CSAFPID-52007",
+                    "CSAFPID-52008",
+                    "CSAFPID-52009",
+                    "CSAFPID-52010"
+                ]
+            }
         }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "attackComplexity": "LOW",
-            "attackVector": "NETWORK",
-            "availabilityImpact": "NONE",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "confidentialityImpact": "HIGH",
-            "environmentalScore": 7.5,
-            "environmentalSeverity": "HIGH",
-            "integrityImpact": "NONE",
-            "privilegesRequired": "NONE",
-            "scope": "UNCHANGED",
-            "temporalScore": 7.5,
-            "temporalSeverity": "HIGH",
-            "userInteraction": "NONE",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-51001",
-            "CSAFPID-51002",
-            "CSAFPID-51003",
-            "CSAFPID-51004",
-            "CSAFPID-51005",
-            "CSAFPID-51006",
-            "CSAFPID-51007",
-            "CSAFPID-51008",
-            "CSAFPID-51009",
-            "CSAFPID-510010"
-          ]
-        }
-      ],
-      "title": "CVE-2021-27434",
-      "product_status": {
-        "known_affected": [
-          "CSAFPID-51001",
-          "CSAFPID-51002",
-          "CSAFPID-51003",
-          "CSAFPID-51004",
-          "CSAFPID-51005",
-          "CSAFPID-51006",
-          "CSAFPID-51007",
-          "CSAFPID-51008",
-          "CSAFPID-51009",
-          "CSAFPID-510010"
-        ],
-        "fixed": [
-          "CSAFPID-52001",
-          "CSAFPID-52002",
-          "CSAFPID-52003",
-          "CSAFPID-52004",
-          "CSAFPID-52005",
-          "CSAFPID-52006",
-          "CSAFPID-52007",
-          "CSAFPID-52008",
-          "CSAFPID-52009",
-          "CSAFPID-52010"
-        ]
-      }
-    }
-  ]
+    ]
 }

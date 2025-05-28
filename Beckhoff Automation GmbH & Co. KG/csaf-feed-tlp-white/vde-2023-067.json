@@ -1,232 +1,238 @@
 {
     "document": {
-      "category": "csaf_security_advisory",
-      "csaf_version": "2.0",
-      "tracking": {
-        "generator": {
-          "date": "2025-04-10T15:03:49.421Z",
-          "engine": {
-            "version": "2.5.23",
-            "name": "Secvisogram"
-          }
-        },
-        "id": "VDE-2023-067",
-        "version": "1",
-        "status": "final",
-        "aliases": [
-          "VDE-2023-067"
-        ],
-        "revision_history": [
-          {
-            "number": "1",
-            "summary": "initial revision",
-            "date": "2023-12-13T08:00:00.000Z"
-          }
-        ],
-        "current_release_date": "2023-12-13T08:00:00.000Z",
-        "initial_release_date": "2023-12-13T08:00:00.000Z"
-      },
-      "lang": "en-GB",
-      "title": "Beckhoff: Open redirect in TwinCAT/BSD package authelia-bhf",
-      "acknowledgments": [
-        {
-          "organization": "CERTVDE",
-          "urls": [
-            "https://certvde.com"
-          ],
-          "summary": "coordination"
-        },
-        {
-          "organization": "Siemens Energy",
-          "summary": "reporting",
-          "names": [
-            "Benedikt Kühne"
-          ],
-          "urls": [
-            "https://www.siemens-energy.com"
-          ]
-        }
-      ],
-      "distribution": {
-        "tlp": {
-          "label": "WHITE"
-        }
-      },
-      "notes": [
-        {
-          "category": "summary",
-          "title": "Summary",
-          "text": "With TwinCAT/BSD based products the HTTPS request to the Authelia login page accepts user-controlled input that specifies a link to an external site."
-        },
-        {
-          "category": "description",
-          "title": "Impact",
-          "text": "By default TwinCAT/BSD based products have Authelia installed and configured to perform the user authentication for web applications hosted on a target. This installation and configuration is provided with the package named “authelia-bhf”. With the affected versions of the package Authelia is configured to accept user-controlled input via URL parameter that specifies a link which can then be a link to an arbitrary external site.\n\nPlease note: The sources for the package “authelia-bhf” are a fork from the original Open Source Software called “Authelia”. The vulnerability was exclusively introduced with that fork and has been removed there. It never became part of “Authelia”."
-        },
-        {
-          "category": "description",
-          "title": "Mitigation",
-          "text": "Use firewall or web-proxy technology at your network perimeter which allow internal clients to access only trusted external sites directly."
-        },
-        {
-          "category": "description",
-          "title": "Remediation",
-          "text": "Please update to a recent version of the affected product."
-        }
-      ],
-      "publisher": {
-        "category": "vendor",
-        "contact_details": "product-securityincident@beckhoff.com",
-        "name": "Beckhoff Automation GmbH & Co. KG",
-        "namespace": "https://www.beckhoff.com"
-      },
-      "references": [
-        {
-          "summary": "VDE-2023-067: Beckhoff: Open redirect in TwinCAT/BSD package authelia-bhf - HTML",
-          "url": "https://certvde.com/de/advisories/VDE-2023-067/",
-          "category": "self"
-        },
-        {
-          "category": "external",
-          "summary": "CERT@VDE Security Advisories for Beckhoff Automation GmbH & Co. KG",
-          "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
-        },
-        {
-          "summary": "VDE-2023-067: Beckhoff: Open redirect in TwinCAT/BSD package authelia-bhf - CSAF",
-          "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2023/vde-2023-067.json",
-          "category": "self"
-        }
-      ]
-    },
-    "product_tree": {
-      "branches": [
-        {
-          "category": "vendor",
-          "name": "Beckhoff Automation GmbH & Co. KG",
-          "branches": [
-            {
-              "category": "product_family",
-              "name": "Hardware",
-              "branches": [
-                {
-                  "category": "product_name",
-                  "name": "authelia-bhf included in TwinCAT/BSD",
-                  "product": {
-                    "name": "authelia-bhf included in TwinCAT/BSD",
-                    "product_id": "CSAFPID-11001"
-                  }
+        "category": "csaf_security_advisory",
+        "csaf_version": "2.0",
+        "tracking": {
+            "generator": {
+                "date": "2025-04-10T15:03:49.421Z",
+                "engine": {
+                    "version": "2.5.23",
+                    "name": "Secvisogram"
                 }
-              ]
             },
-            {
-              "category": "product_family",
-              "name": "Firmware",
-              "branches": [
+            "id": "VDE-2023-067",
+            "version": "2",
+            "status": "final",
+            "aliases": [
+                "VDE-2023-067"
+            ],
+            "revision_history": [
                 {
-                  "category": "product_version_range",
-                  "name": "<4.37.5",
-                  "product": {
-                    "name": "Firmware <4.37.5",
-                    "product_id": "CSAFPID-21001"
-                  }
+                    "number": "1",
+                    "summary": "initial revision",
+                    "date": "2023-12-13T08:00:00.000Z"
                 },
                 {
-                  "category": "product_version",
-                  "name": "4.37.5",
-                  "product": {
-                    "name": "Firmware 4.37.5",
-                    "product_id": "CSAFPID-22001"
-                  }
+                    "number": "2",
+                    "summary": "Fix: added distribution, quotation mark",
+                    "date": "2025-05-22T13:03:10.000Z"
                 }
-              ]
-            }
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "category": "installed_on",
-          "product_reference": "CSAFPID-21001",
-          "relates_to_product_reference": "CSAFPID-11001",
-          "full_product_name": {
-            "name": "Firmware <4.37.5 installed on authelia-bhf included in TwinCAT/BSD",
-            "product_id": "CSAFPID-31001"
-          }
+            ],
+            "current_release_date": "2025-05-22T13:03:10.000Z",
+            "initial_release_date": "2023-12-13T08:00:00.000Z"
         },
-        {
-          "category": "installed_on",
-          "product_reference": "CSAFPID-22001",
-          "relates_to_product_reference": "CSAFPID-11001",
-          "full_product_name": {
-            "name": "Firmware 4.37.5 installed on authelia-bhf included in TwinCAT/BSD",
-            "product_id": "CSAFPID-32001"
-          }
-        }
-      ]
+        "lang": "en-GB",
+        "title": "Beckhoff: Open redirect in TwinCAT/BSD package authelia-bhf",
+        "acknowledgments": [
+            {
+                "organization": "CERTVDE",
+                "urls": [
+                    "https://certvde.com"
+                ],
+                "summary": "coordination"
+            },
+            {
+                "organization": "Siemens Energy",
+                "summary": "reporting",
+                "names": [
+                    "Benedikt Kühne"
+                ],
+                "urls": [
+                    "https://www.siemens-energy.com"
+                ]
+            }
+        ],
+        "distribution": {
+            "tlp": {
+                "label": "WHITE",
+                "url": "https://www.first.org/tlp/"
+            }
+        },
+        "notes": [
+            {
+                "category": "summary",
+                "title": "Summary",
+                "text": "With TwinCAT/BSD based products the HTTPS request to the Authelia login page accepts user-controlled input that specifies a link to an external site."
+            },
+            {
+                "category": "description",
+                "title": "Impact",
+                "text": "By default TwinCAT/BSD based products have Authelia installed and configured to perform the user authentication for web applications hosted on a target. This installation and configuration is provided with the package named 'authelia-bhf'. With the affected versions of the package Authelia is configured to accept user-controlled input via URL parameter that specifies a link which can then be a link to an arbitrary external site.\n\nPlease note: The sources for the package 'authelia-bhf' are a fork from the original Open Source Software called 'Authelia'. The vulnerability was exclusively introduced with that fork and has been removed there. It never became part of 'Authelia'."
+            },
+            {
+                "category": "description",
+                "title": "Mitigation",
+                "text": "Use firewall or web-proxy technology at your network perimeter which allow internal clients to access only trusted external sites directly."
+            },
+            {
+                "category": "description",
+                "title": "Remediation",
+                "text": "Please update to a recent version of the affected product."
+            }
+        ],
+        "publisher": {
+            "category": "vendor",
+            "contact_details": "product-securityincident@beckhoff.com",
+            "name": "Beckhoff Automation GmbH & Co. KG",
+            "namespace": "https://www.beckhoff.com"
+        },
+        "references": [
+            {
+                "summary": "VDE-2023-067: Beckhoff: Open redirect in TwinCAT/BSD package authelia-bhf - HTML",
+                "url": "https://certvde.com/de/advisories/VDE-2023-067/",
+                "category": "self"
+            },
+            {
+                "category": "external",
+                "summary": "CERT@VDE Security Advisories for Beckhoff Automation GmbH & Co. KG",
+                "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
+            },
+            {
+                "summary": "VDE-2023-067: Beckhoff: Open redirect in TwinCAT/BSD package authelia-bhf - CSAF",
+                "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2023/vde-2023-067.json",
+                "category": "self"
+            }
+        ]
+    },
+    "product_tree": {
+        "branches": [
+            {
+                "category": "vendor",
+                "name": "Beckhoff Automation GmbH & Co. KG",
+                "branches": [
+                    {
+                        "category": "product_family",
+                        "name": "Hardware",
+                        "branches": [
+                            {
+                                "category": "product_name",
+                                "name": "authelia-bhf included in TwinCAT/BSD",
+                                "product": {
+                                    "name": "authelia-bhf included in TwinCAT/BSD",
+                                    "product_id": "CSAFPID-11001"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "category": "product_family",
+                        "name": "Firmware",
+                        "branches": [
+                            {
+                                "category": "product_version_range",
+                                "name": "<4.37.5",
+                                "product": {
+                                    "name": "Firmware <4.37.5",
+                                    "product_id": "CSAFPID-21001"
+                                }
+                            },
+                            {
+                                "category": "product_version",
+                                "name": "4.37.5",
+                                "product": {
+                                    "name": "Firmware 4.37.5",
+                                    "product_id": "CSAFPID-22001"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "category": "installed_on",
+                "product_reference": "CSAFPID-21001",
+                "relates_to_product_reference": "CSAFPID-11001",
+                "full_product_name": {
+                    "name": "Firmware <4.37.5 installed on authelia-bhf included in TwinCAT/BSD",
+                    "product_id": "CSAFPID-31001"
+                }
+            },
+            {
+                "category": "installed_on",
+                "product_reference": "CSAFPID-22001",
+                "relates_to_product_reference": "CSAFPID-11001",
+                "full_product_name": {
+                    "name": "Firmware 4.37.5 installed on authelia-bhf included in TwinCAT/BSD",
+                    "product_id": "CSAFPID-32001"
+                }
+            }
+        ]
     },
     "vulnerabilities": [
-      {
-        "cve": "CVE-2023-6545",
-        "title": "CVE-2023-6545",
-        "product_status": {
-          "known_affected": [
-            "CSAFPID-31001"
-          ],
-          "fixed": [
-            "CSAFPID-32001"
-          ]
-        },
-        "scores": [
-          {
-            "cvss_v3": {
-              "attackVector": "NETWORK",
-              "attackComplexity": "LOW",
-              "privilegesRequired": "NONE",
-              "userInteraction": "REQUIRED",
-              "scope": "UNCHANGED",
-              "confidentialityImpact": "NONE",
-              "integrityImpact": "LOW",
-              "availabilityImpact": "NONE",
-              "version": "3.1",
-              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
-              "baseScore": 4.3,
-              "baseSeverity": "MEDIUM",
-              "temporalScore": 4.3,
-              "temporalSeverity": "MEDIUM",
-              "environmentalScore": 4.3,
-              "environmentalSeverity": "MEDIUM"
+        {
+            "cve": "CVE-2023-6545",
+            "title": "CVE-2023-6545",
+            "product_status": {
+                "known_affected": [
+                    "CSAFPID-31001"
+                ],
+                "fixed": [
+                    "CSAFPID-32001"
+                ]
             },
-            "products": [
-              "CSAFPID-31001"
+            "scores": [
+                {
+                    "cvss_v3": {
+                        "attackVector": "NETWORK",
+                        "attackComplexity": "LOW",
+                        "privilegesRequired": "NONE",
+                        "userInteraction": "REQUIRED",
+                        "scope": "UNCHANGED",
+                        "confidentialityImpact": "NONE",
+                        "integrityImpact": "LOW",
+                        "availabilityImpact": "NONE",
+                        "version": "3.1",
+                        "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+                        "baseScore": 4.3,
+                        "baseSeverity": "MEDIUM",
+                        "temporalScore": 4.3,
+                        "temporalSeverity": "MEDIUM",
+                        "environmentalScore": 4.3,
+                        "environmentalSeverity": "MEDIUM"
+                    },
+                    "products": [
+                        "CSAFPID-31001"
+                    ]
+                }
+            ],
+            "notes": [
+                {
+                    "category": "summary",
+                    "text": "The package authelia-bhf included in Beckhoffs TwinCAT/BSD is prone to an open redirect that allows a remote unprivileged attacker to redirect a user to another site. This may have limited impact to integrity and does solely affect anthelia-bhf the Beckhoff fork of authelia."
+                }
+            ],
+            "cwe": {
+                "id": "CWE-601",
+                "name": "URL Redirection to Untrusted Site ('Open Redirect')"
+            },
+            "remediations": [
+                {
+                    "category": "mitigation",
+                    "details": "Use firewall or web-proxy technology at your network perimeter which allow internal clients to access only trusted external sites directly.",
+                    "product_ids": [
+                        "CSAFPID-31001"
+                    ]
+                },
+                {
+                    "category": "vendor_fix",
+                    "details": "Please update to a recent version of the affected product.",
+                    "product_ids": [
+                        "CSAFPID-31001"
+                    ]
+                }
             ]
-          }
-        ],
-        "notes": [
-          {
-            "category": "summary",
-            "text": "The package authelia-bhf included in Beckhoffs TwinCAT/BSD is prone to an open redirect that allows a remote unprivileged attacker to redirect a user to another site. This may have limited impact to integrity and does solely affect anthelia-bhf the Beckhoff fork of authelia."
-          }
-        ],
-        "cwe": {
-          "id": "CWE-601",
-          "name": "URL Redirection to Untrusted Site ('Open Redirect')"
-        },
-        "remediations": [
-          {
-            "category": "mitigation",
-            "details": "Use firewall or web-proxy technology at your network perimeter which allow internal clients to access only trusted external sites directly.",
-            "product_ids": [
-              "CSAFPID-31001"
-            ]
-          },
-          {
-            "category": "vendor_fix",
-            "details": "Please update to a recent version of the affected product.",
-            "product_ids": [
-              "CSAFPID-31001"
-            ]
-          }
-        ]
-      }
+        }
     ]
-  }
+}

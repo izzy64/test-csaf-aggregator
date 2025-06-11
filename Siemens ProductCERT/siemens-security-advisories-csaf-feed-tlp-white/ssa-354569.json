@@ -51,7 +51,7 @@
     ],
     "title": "SSA-354569: Multiple Vulnerabilities in Palo Alto Networks PAN-OS on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-05-13T00:00:00Z",
+      "current_release_date": "2025-06-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -90,10 +90,16 @@
           "legacy_version": "1.4",
           "number": "5",
           "summary": "Added CVE-2025-0123, CVE-2025-0124, CVE-2025-0125, CVE-2025-0126 and CVE-2025-0128"
+        },
+        {
+          "date": "2025-06-10T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added CVE-2025-0130 and CVE-2025-0137"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -148,6 +154,14 @@
                 "product": {
                   "name": "RUGGEDCOM APE1808",
                   "product_id": "6"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "7"
                 }
               }
             ],
@@ -902,6 +916,104 @@
         }
       ],
       "title": "CVE-2025-0128"
+    },
+    {
+      "cve": "CVE-2025-0130",
+      "cwe": {
+        "id": "CWE-754",
+        "name": "Improper Check for Unusual or Exceptional Conditions"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A missing exception check in Palo Alto Networks PAN-OS\u00ae software with the web proxy feature enabled allows an unauthenticated attacker to send a burst of maliciously crafted packets that causes the firewall to become unresponsive and eventually reboot. Repeated successful attempts to trigger this condition will cause the firewall to enter maintenance mode.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "7"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Disable web proxy feature if not necessary. \nPalo Alto Networks' Security Advisory",
+          "product_ids": [
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.1.8. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "7"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2025-0130"
+    },
+    {
+      "cve": "CVE-2025-0137",
+      "cwe": {
+        "id": "CWE-83",
+        "name": "Improper Neutralization of Script in Attributes in a Web Page"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An improper input neutralization vulnerability in the management web interface of the Palo Alto Networks PAN-OS\u00ae software enables a malicious authenticated read-write administrator to impersonate another legitimate authenticated PAN-OS administrator.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Exposure can be reduced by restricting access to a jump box that is the only system allowed to access the management interface. This will ensure that attacks can succeed only if they obtain privileged access through those specified IP addresses \nPalo Alto Networks' Security Advisory",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.1.8. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.5,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2025-0137"
     }
   ]
 }

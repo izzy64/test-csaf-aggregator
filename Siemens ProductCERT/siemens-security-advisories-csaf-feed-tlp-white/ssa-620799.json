@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SENTRON Powercenter devices are affected by a denial of service vulnerability that can be triggered during BLE (Bluetooth Low Energy) pairing.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "SENTRON Powercenter devices are \nnot affected by a denial of service vulnerability that can be triggered during BLE (Bluetooth Low Energy) pairing.\nNote: Unlike stated in the initial version of this security advisory from 2024-12-10, detailed analysis has shown that SENTRON Powercenter devices are not affected by this vulnerability.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-620799: Denial of Service Vulnerability During BLE Pairing in SENTRON Powercenter 1000/1100",
     "tracking": {
-      "current_release_date": "2024-12-10T00:00:00Z",
+      "current_release_date": "2025-06-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-06-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Clarified that SENTRON Powercenter devices are not affected by this vulnerability"
         }
       ],
-      "status": "interim",
-      "version": "1"
+      "status": "final",
+      "version": "2"
     }
   },
   "product_tree": {
@@ -127,65 +133,28 @@
         "id": "CWE-821",
         "name": "Incorrect Synchronization"
       },
+      "flags": [
+        {
+          "group_ids": [
+            "2",
+            "1"
+          ],
+          "label": "component_not_present"
+        }
+      ],
       "notes": [
         {
           "category": "summary",
-          "text": "A denial of service condition can only be triggered during BLE pairing. This occurs only in a limited time window of three minutes after any device restart, which requires physical access.  A reset of the power supply is necessary to recover the device.",
+          "text": "A denial of service may be caused to a single peripheral device in a BLE network when multiple central devices continuously connect and disconnect to the peripheral. A hard reset is required to recover the peripheral device.",
           "title": "Summary"
         }
       ],
       "product_status": {
-        "known_affected": [
+        "known_not_affected": [
           "1",
           "2"
         ]
       },
-      "remediations": [
-        {
-          "category": "mitigation",
-          "details": "If BLE is needed: After any restart of the device or after turning on BLE via short button press, wait for more than three minutes to check the device's availability via Modbus TCP interface. If necessary, perform a restart by turning the power supply off and on again.",
-          "product_ids": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "If BLE is not needed: After any restart, disable BLE by a short press on the button.",
-          "product_ids": [
-            "1",
-            "2"
-          ]
-        },
-        {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "1"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "2"
-          ]
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 5.3,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "1",
-            "2"
-          ]
-        }
-      ],
       "title": "CVE-2024-6657"
     }
   ]

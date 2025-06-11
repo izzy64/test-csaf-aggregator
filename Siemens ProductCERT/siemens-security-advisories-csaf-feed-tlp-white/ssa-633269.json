@@ -1,0 +1,1036 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Several Industrial Communication Devices based on SINEC OS before V3.1 contain an incorrect authorization check vulnerability that could allow an attacker to perform actions that exceed the permissions of the \"guest\" role.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-633269: Incorrect Authorization Check Vulnerability in Industrial Communication Devices based on SINEC OS before V3.1 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-633269.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-633269: Incorrect Authorization Check Vulnerability in Industrial Communication Devices based on SINEC OS before V3.1 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-633269.json"
+      }
+    ],
+    "title": "SSA-633269: Incorrect Authorization Check Vulnerability in Industrial Communication Devices based on SINEC OS before V3.1",
+    "tracking": {
+      "current_release_date": "2025-06-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-633269",
+      "initial_release_date": "2025-06-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-06-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "RUGGEDCOM RST2428P (6GK6242-6PA00)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK6242-6PA00"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST2428P (6GK6242-6PA00)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XC316-8 (6GK5324-8TS00-2AC2)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-8TS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC316-8 (6GK5324-8TS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XC324-4 (6GK5328-4TS00-2AC2)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4TS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC324-4 (6GK5328-4TS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XC324-4 EEC (6GK5328-4TS00-2EC2)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4TS00-2EC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC324-4 EEC (6GK5328-4TS00-2EC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XC332 (6GK5332-0GA00-2AC2)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5332-0GA00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC332 (6GK5332-0GA00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XC416-8 (6GK5424-8TR00-2AC2)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5424-8TR00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC416-8 (6GK5424-8TR00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XC424-4 (6GK5428-4TR00-2AC2)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5428-4TR00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC424-4 (6GK5428-4TR00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XC432 (6GK5432-0GR00-2AC2)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5432-0GR00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XC432 (6GK5432-0GR00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XCH328 (6GK5328-4TS01-2EC2)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4TS01-2EC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XCH328 (6GK5328-4TS01-2EC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XCM324 (6GK5324-8TS01-2AC2)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-8TS01-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XCM324 (6GK5324-8TS01-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XCM328 (6GK5328-4TS01-2AC2)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4TS01-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XCM328 (6GK5328-4TS01-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XCM332 (6GK5332-0GA01-2AC2)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5332-0GA01-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XCM332 (6GK5332-0GA01-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR302-32 (6GK5334-5TS00-2AR3)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-5TS00-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR302-32 (6GK5334-5TS00-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR302-32 (6GK5334-5TS00-3AR3)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-5TS00-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR302-32 (6GK5334-5TS00-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR302-32 (6GK5334-5TS00-4AR3)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-5TS00-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR302-32 (6GK5334-5TS00-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR322-12 (6GK5334-3TS00-2AR3)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-3TS00-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR322-12 (6GK5334-3TS00-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR322-12 (6GK5334-3TS00-3AR3)",
+                  "product_id": "17",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-3TS00-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR322-12 (6GK5334-3TS00-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR322-12 (6GK5334-3TS00-4AR3)",
+                  "product_id": "18",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-3TS00-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR322-12 (6GK5334-3TS00-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR326-8 (6GK5334-2TS00-2AR3)",
+                  "product_id": "19",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS00-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR326-8 (6GK5334-2TS00-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR326-8 (6GK5334-2TS00-3AR3)",
+                  "product_id": "20",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS00-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR326-8 (6GK5334-2TS00-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR326-8 (6GK5334-2TS00-4AR3)",
+                  "product_id": "21",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS00-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR326-8 (6GK5334-2TS00-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR326-8 EEC (6GK5334-2TS00-2ER3)",
+                  "product_id": "22",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS00-2ER3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR326-8 EEC (6GK5334-2TS00-2ER3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR502-32 (6GK5534-5TR00-2AR3)",
+                  "product_id": "23",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-5TR00-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR502-32 (6GK5534-5TR00-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR502-32 (6GK5534-5TR00-3AR3)",
+                  "product_id": "24",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-5TR00-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR502-32 (6GK5534-5TR00-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR502-32 (6GK5534-5TR00-4AR3)",
+                  "product_id": "25",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-5TR00-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR502-32 (6GK5534-5TR00-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR522-12 (6GK5534-3TR00-2AR3)",
+                  "product_id": "26",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-3TR00-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR522-12 (6GK5534-3TR00-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR522-12 (6GK5534-3TR00-3AR3)",
+                  "product_id": "27",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-3TR00-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR522-12 (6GK5534-3TR00-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR522-12 (6GK5534-3TR00-4AR3)",
+                  "product_id": "28",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-3TR00-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR522-12 (6GK5534-3TR00-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR526-8 (6GK5534-2TR00-2AR3)",
+                  "product_id": "29",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-2TR00-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR526-8 (6GK5534-2TR00-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR526-8 (6GK5534-2TR00-3AR3)",
+                  "product_id": "30",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-2TR00-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR526-8 (6GK5534-2TR00-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XR526-8 (6GK5534-2TR00-4AR3)",
+                  "product_id": "31",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5534-2TR00-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XR526-8 (6GK5534-2TR00-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRH334 (24 V DC, 8xFO, CC) (6GK5334-2TS01-2ER3)",
+                  "product_id": "32",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS01-2ER3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRH334 (24 V DC, 8xFO, CC) (6GK5334-2TS01-2ER3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (2x230 V AC, 8xFO) (6GK5334-2TS01-4AR3)",
+                  "product_id": "33",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS01-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (2x230 V AC, 8xFO) (6GK5334-2TS01-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (2x230 V AC, 12xFO) (6GK5334-3TS01-4AR3)",
+                  "product_id": "34",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-3TS01-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (2x230 V AC, 12xFO) (6GK5334-3TS01-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (2x230V AC, 2x10G, 24xSFP, 8xSFP+) (6GK5334-5TS01-4AR3)",
+                  "product_id": "35",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-5TS01-4AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (2x230V AC, 2x10G, 24xSFP, 8xSFP+) (6GK5334-5TS01-4AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (24 V DC, 8xFO) (6GK5334-2TS01-2AR3)",
+                  "product_id": "36",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS01-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (24 V DC, 8xFO) (6GK5334-2TS01-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (24 V DC, 12xFO) (6GK5334-3TS01-2AR3)",
+                  "product_id": "37",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-3TS01-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (24 V DC, 12xFO) (6GK5334-3TS01-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (24V DC, 2x10G, 24xSFP, 8xSFP+) (6GK5334-5TS01-2AR3)",
+                  "product_id": "38",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-5TS01-2AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (24V DC, 2x10G, 24xSFP, 8xSFP+) (6GK5334-5TS01-2AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (230 V AC, 8xFO) (6GK5334-2TS01-3AR3)",
+                  "product_id": "39",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-2TS01-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (230 V AC, 8xFO) (6GK5334-2TS01-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (230 V AC, 12xFO) (6GK5334-3TS01-3AR3)",
+                  "product_id": "40",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-3TS01-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (230 V AC, 12xFO) (6GK5334-3TS01-3AR3)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V3.1",
+                "product": {
+                  "name": "SCALANCE XRM334 (230V AC, 2x10G, 24xSFP, 8xSFP+) (6GK5334-5TS01-3AR3)",
+                  "product_id": "41",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5334-5TS01-3AR3"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XRM334 (230V AC, 2x10G, 24xSFP, 8xSFP+) (6GK5334-5TS01-3AR3)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-41797",
+      "cwe": {
+        "id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices contain an incorrect authorization check vulnerability. This could allow an authenticated remote attacker with \"guest\" role to invoke an internal \"do system\" command which exceeds their privileges. This command allows the execution of certain low-risk actions, the most critical of which is clearing the local system log.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109977557/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1 or later version",
+          "product_ids": [
+            "12"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109977557/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41"
+          ]
+        }
+      ],
+      "title": "CVE-2024-41797"
+    }
+  ]
+}

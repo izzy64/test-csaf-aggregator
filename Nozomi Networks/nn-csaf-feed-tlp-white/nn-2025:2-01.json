@@ -1,0 +1,195 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Privilege escalation in Guardian/CMC before 24.6.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2024-13090"
+      ],
+      "current_release_date": "2025-06-10T11:00:00.000Z",
+      "id": "NN-2025:2-01",
+      "initial_release_date": "2025-06-10T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2025-06-10T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<24.6.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian <24.6.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "24.6.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian 24.6.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<24.6.0",
+                "product": {
+                  "name": "Nozomi Networks CMC <24.6.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "24.6.0",
+                "product": {
+                  "name": "Nozomi Networks CMC 24.6.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "organization": "IOActive",
+          "summary": "finding this issue during a VAPT testing session commissioned by one of our customers"
+        }
+      ],
+      "cve": "CVE-2024-13090",
+      "cwe": {
+        "id": "CWE-250",
+        "name": "Execution with Unnecessary Privileges"
+      },
+      "discovery_date": "2025-06-10T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2025:2-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A privilege escalation vulnerability may enable a service account to elevate its privileges.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-13090"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2025/nn-2025_2-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2025:2-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "N/A",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v24.6.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "The sudo rules configured for a local service account were excessively permissive, potentially allowing administrative access if a malicious actor could execute arbitrary commands as that account. It is important to note that no such vector has been identified in this instance."
+        }
+      ],
+      "title": "Privilege escalation in Guardian/CMC before 24.6.0"
+    }
+  ]
+}

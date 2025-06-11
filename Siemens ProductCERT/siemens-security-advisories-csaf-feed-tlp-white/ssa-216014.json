@@ -51,7 +51,7 @@
     ],
     "title": "SSA-216014: Vulnerabilities in EFI variable of SIMATIC IPCs, SIMATIC Tablet PCs, and SIMATIC Field PGs",
     "tracking": {
-      "current_release_date": "2025-03-11T00:00:00Z",
+      "current_release_date": "2025-06-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-06-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added SIMATIC IPC RC-543A and RW-543B; Updated SIMATIC IPC3000 Smart V3, IPC 347G, IPC 527G"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -446,8 +452,22 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC IPC RC-543B",
+                  "name": "SIMATIC IPC RC-543A",
                   "product_id": "27"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC RC-543A"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC RC-543B",
+                  "product_id": "28"
                 }
               }
             ],
@@ -461,7 +481,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC IPC RW-543A",
-                  "product_id": "28"
+                  "product_id": "29"
                 }
               }
             ],
@@ -474,8 +494,22 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
+                  "name": "SIMATIC IPC RW-543B",
+                  "product_id": "30"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC RW-543B"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
                   "name": "SIMATIC ITP1000",
-                  "product_id": "29"
+                  "product_id": "31"
                 }
               }
             ],
@@ -489,7 +523,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC\u00a0IPC277G PRO",
-                  "product_id": "30"
+                  "product_id": "32"
                 }
               }
             ],
@@ -519,22 +553,11 @@
       "product_status": {
         "known_affected": [
           "1",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26",
-          "27",
-          "28",
           "3",
           "4",
           "5",
           "6",
           "7",
-          "30",
-          "19",
           "8",
           "9",
           "10",
@@ -546,7 +569,20 @@
           "16",
           "17",
           "18",
-          "29"
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32"
         ]
       },
       "remediations": [
@@ -555,22 +591,11 @@
           "details": "Restrict access to root/administrator permission for the operating system",
           "product_ids": [
             "1",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
             "3",
             "4",
             "5",
             "6",
             "7",
-            "30",
-            "19",
             "8",
             "9",
             "10",
@@ -582,7 +607,20 @@
             "16",
             "17",
             "18",
-            "29"
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         },
         {
@@ -590,7 +628,10 @@
           "details": "Currently no fix is planned",
           "product_ids": [
             "4",
-            "6"
+            "6",
+            "9",
+            "14",
+            "19"
           ]
         },
         {
@@ -598,21 +639,20 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "1",
-            "27",
-            "28",
             "3",
             "5",
             "7",
-            "30",
-            "19",
             "8",
-            "9",
             "10",
             "11",
             "12",
             "13",
-            "14",
-            "29"
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         },
         {
@@ -623,7 +663,17 @@
             "16",
             "17",
             "18"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V29.01.07 or later version",
+          "product_ids": [
+            "21",
+            "24"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
         {
           "category": "vendor_fix",
@@ -632,29 +682,24 @@
             "22",
             "25",
             "26"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V29.01.07 or later version",
-          "product_ids": [
-            "21",
-            "24"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V31.01.07 or later version",
           "product_ids": [
             "20"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V32.01.04 or later version",
           "product_ids": [
             "23"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         }
       ],
       "scores": [
@@ -662,27 +707,16 @@
           "cvss_v3": {
             "baseScore": 8.2,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
             "1",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
             "3",
             "4",
             "5",
             "6",
             "7",
-            "30",
-            "19",
             "8",
             "9",
             "10",
@@ -694,7 +728,20 @@
             "16",
             "17",
             "18",
-            "29"
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         }
       ],
@@ -717,22 +764,11 @@
         "known_affected": [
           "1",
           "2",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26",
-          "27",
-          "28",
           "3",
           "4",
           "5",
           "6",
           "7",
-          "30",
-          "19",
           "8",
           "9",
           "10",
@@ -744,7 +780,20 @@
           "16",
           "17",
           "18",
-          "29"
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32"
         ]
       },
       "remediations": [
@@ -754,22 +803,11 @@
           "product_ids": [
             "1",
             "2",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
             "3",
             "4",
             "5",
             "6",
             "7",
-            "30",
-            "19",
             "8",
             "9",
             "10",
@@ -781,7 +819,20 @@
             "16",
             "17",
             "18",
-            "29"
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         },
         {
@@ -789,7 +840,10 @@
           "details": "Currently no fix is planned",
           "product_ids": [
             "4",
-            "6"
+            "6",
+            "9",
+            "14",
+            "19"
           ]
         },
         {
@@ -797,21 +851,20 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "1",
-            "27",
-            "28",
             "3",
             "5",
             "7",
-            "30",
-            "19",
             "8",
-            "9",
             "10",
             "11",
             "12",
             "13",
-            "14",
-            "29"
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         },
         {
@@ -822,14 +875,25 @@
             "16",
             "17",
             "18"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V26.01.12 or later version",
           "product_ids": [
             "2"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V29.01.07 or later version",
+          "product_ids": [
+            "21",
+            "24"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
         {
           "category": "vendor_fix",
@@ -838,29 +902,24 @@
             "22",
             "25",
             "26"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V29.01.07 or later version",
-          "product_ids": [
-            "21",
-            "24"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V31.01.07 or later version",
           "product_ids": [
             "20"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V32.01.04 or later version",
           "product_ids": [
             "23"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         }
       ],
       "scores": [
@@ -868,28 +927,17 @@
           "cvss_v3": {
             "baseScore": 8.2,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
             "1",
             "2",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
             "3",
             "4",
             "5",
             "6",
             "7",
-            "30",
-            "19",
             "8",
             "9",
             "10",
@@ -901,7 +949,20 @@
             "16",
             "17",
             "18",
-            "29"
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         }
       ],

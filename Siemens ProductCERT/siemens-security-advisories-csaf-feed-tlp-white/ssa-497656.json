@@ -1,1170 +1,1163 @@
 {
   "document": {
-    "title": "SSA-497656: Multiple NTP Vulnerabilities in TIM 4R-IE Devices",
-    "category": "Siemens Security Advisory",
+    "category": "csaf_security_advisory",
     "csaf_version": "2.0",
-    "publisher": {
-      "name": "Siemens ProductCERT",
-      "contact_details": "productcert@siemens.com",
-      "category": "vendor",
-      "namespace": "https://www.siemens.com"
-    },
     "distribution": {
-      "text": "Disclosure is not limited.",
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
       "tlp": {
         "label": "WHITE"
       }
     },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "TIM 4R-IE devices contain multiple vulnerabilities in the integrated NTP component as listed below.\n\nSiemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-497656: Multiple NTP Vulnerabilities in TIM 4R-IE Devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-497656.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-497656: Multiple NTP Vulnerabilities in TIM 4R-IE Devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-497656.json"
+      }
+    ],
+    "title": "SSA-497656: Multiple NTP Vulnerabilities in TIM 4R-IE Devices",
     "tracking": {
-      "id": "SSA-497656",
-      "status": "final",
-      "version": "1",
-      "revision_history": [
-        {
-          "number": "1",
-          "legacy_version": "1.0",
-          "date": "2021-04-13T00:00:00Z",
-          "summary": "Publication Date"
-        }
-      ],
-      "initial_release_date": "2021-04-13T00:00:00Z",
-      "current_release_date": "2021-04-13T00:00:00Z",
+      "current_release_date": "2025-06-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
           "version": "1"
         }
-      }
-    },
-    "notes": [
-      {
-        "title": "Summary",
-        "category": "summary",
-        "text": "There are multiple vulnerabilities in the underlying NTP component of the affected TIM 4R-IE.\n\nSiemens recommends specific countermeasures for products where updates are not, or not yet available."
       },
-      {
-        "title": "General Recommendations",
-        "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity"
-      },
-      {
-        "title": "Additional Resources",
-        "category": "general",
-        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories"
-      },
-      {
-        "title": "Terms of Use",
-        "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use."
-      }
-    ],
-    "references": [
-      {
-        "category": "self",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-497656.pdf",
-        "summary": "SSA-497656: Multiple NTP Vulnerabilities in TIM 4R-IE Devices - PDF Version"
-      },
-      {
-        "category": "self",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-497656.txt",
-        "summary": "SSA-497656: Multiple NTP Vulnerabilities in TIM 4R-IE Devices - TXT Version"
-      },
-      {
-        "category": "self",
-        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-497656.json",
-        "summary": "SSA-497656: Multiple NTP Vulnerabilities in TIM 4R-IE Devices - CSAF Version"
-      }
-    ]
+      "id": "SSA-497656",
+      "initial_release_date": "2021-04-13T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2021-04-13T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2025-06-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Expanded affected TIM 4R-IE product families to individual products, incl. MLFB IDs; CVE-2015-5219: changed CWE from CWE-704 to CWE-681; CVE-2015-7973: changed CWE from CWE-254 to CWE-294; CVE-2015-7979: changed CWE from CWE-19 to CWE-821; CVE-2016-1547: changed CWE from CWE-20 to CWE-821; CVE-2016-1548: changed CWE from CWE-19 to CWE-290"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
   },
   "product_tree": {
     "branches": [
       {
-        "name": "Siemens",
-        "category": "vendor",
         "branches": [
           {
-            "name": "TIM 4R-IE (incl. SIPLUS NET variants)",
-            "category": "product_name",
             "branches": [
               {
-                "name": "vers:all/*",
                 "category": "product_version_range",
+                "name": "vers:all/*",
                 "product": {
+                  "name": "SIPLUS NET TIM 4R-IE (6AG1800-4BA00-7AA0)",
                   "product_id": "1",
-                  "name": "TIM 4R-IE (incl. SIPLUS NET variants)"
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1800-4BA00-7AA0"
+                    ]
+                  }
                 }
               }
-            ]
+            ],
+            "category": "product_name",
+            "name": "SIPLUS NET TIM 4R-IE (6AG1800-4BA00-7AA0)"
           },
           {
-            "name": "TIM 4R-IE DNP3 (incl. SIPLUS NET variants)",
-            "category": "product_name",
             "branches": [
               {
-                "name": "vers:all/*",
                 "category": "product_version_range",
+                "name": "vers:all/*",
                 "product": {
+                  "name": "SIPLUS NET TIM 4R-IE DNP3 (6AG1803-4BA00-7AA0)",
                   "product_id": "2",
-                  "name": "TIM 4R-IE DNP3 (incl. SIPLUS NET variants)"
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1803-4BA00-7AA0"
+                    ]
+                  }
                 }
               }
-            ]
+            ],
+            "category": "product_name",
+            "name": "SIPLUS NET TIM 4R-IE DNP3 (6AG1803-4BA00-7AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "TIM 4R-IE (6NH7800-4BA00)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6NH7800-4BA00"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIM 4R-IE (6NH7800-4BA00)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "TIM 4R-IE DNP3 (6NH7803-4BA00-0AA0)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6NH7803-4BA00-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TIM 4R-IE DNP3 (6NH7803-4BA00-0AA0)"
           }
-        ]
+        ],
+        "category": "vendor",
+        "name": "Siemens"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "title": "CVE-2015-5219",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "The ULOGTOD function in ntp.d in SNTP before 4.2.7p366 does not properly perform type conversions from a precision value to a double, which allows remote attackers to cause a denial of service (infinite loop) via a crafted NTP packet."
-        }
-      ],
       "cve": "CVE-2015-5219",
       "cwe": {
-        "id": "CWE-704",
-        "name": "Incorrect Type Conversion or Cast"
+        "id": "CWE-681",
+        "name": "Incorrect Conversion between Numeric Types"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The ULOGTOD function in ntp.d in SNTP before 4.2.7p366 does not properly perform type conversions from a precision value to a double, which allows remote attackers to cause a denial of service (infinite loop) via a crafted NTP packet.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-5219.json",
-          "summary": "CVE-2015-5219 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-5219"
     },
     {
-      "title": "CVE-2015-7705",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "The rate limiting feature in NTP 4.x before 4.2.8p4 and 4.3.x before 4.3.77 allows remote attackers to have unspecified impact via a large number of crafted requests."
-        }
-      ],
       "cve": "CVE-2015-7705",
       "cwe": {
         "id": "CWE-20",
         "name": "Improper Input Validation"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The rate limiting feature in NTP 4.x before 4.2.8p4 and 4.3.x before 4.3.77 allows remote attackers to have unspecified impact via a large number of crafted requests.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 9.8,
-            "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7705.json",
-          "summary": "CVE-2015-7705 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-7705"
     },
     {
-      "title": "CVE-2015-7855",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "The decodenetnum function in ntpd in NTP 4.2.x before 4.2.8p4, and 4.3.x before 4.3.77 allows remote attackers to cause a denial of service (assertion failure) via a 6 or mode 7 packet containing a long data value."
-        }
-      ],
       "cve": "CVE-2015-7855",
       "cwe": {
         "id": "CWE-20",
         "name": "Improper Input Validation"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The decodenetnum function in ntpd in NTP 4.2.x before 4.2.8p4, and 4.3.x before 4.3.77 allows remote attackers to cause a denial of service (assertion failure) via a 6 or mode 7 packet containing a long data value.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 6.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7855.json",
-          "summary": "CVE-2015-7855 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-7855"
     },
     {
-      "title": "CVE-2015-7871",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "Crypto-NAK packets in ntpd in NTP 4.2.x before 4.2.8p4, and 4.3.x before 4.3.77 allows remote attackers to bypass authentication."
-        }
-      ],
       "cve": "CVE-2015-7871",
       "cwe": {
         "id": "CWE-287",
         "name": "Improper Authentication"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Crypto-NAK packets in ntpd in NTP 4.2.x before 4.2.8p4, and 4.3.x before 4.3.77 allows remote attackers to bypass authentication.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
       "scores": [
         {
           "cvss_v3": {
-            "version": "3.1",
             "baseScore": 9.8,
             "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
           },
           "products": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
-        }
-      ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7871.json",
-          "summary": "CVE-2015-7871 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-7871"
     },
     {
-      "title": "CVE-2015-7973",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "NTP before 4.2.8p6 and 4.3.x before 4.3.90, when configured in broadcast mode, allows man-in-the-middle attackers to conduct replay attacks by sniffing the network."
-        }
-      ],
       "cve": "CVE-2015-7973",
       "cwe": {
-        "id": "CWE-254",
-        "name": "7PK - Security Features"
+        "id": "CWE-294",
+        "name": "Authentication Bypass by Capture-replay"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "NTP before 4.2.8p6 and 4.3.x before 4.3.90, when configured in broadcast mode, allows man-in-the-middle attackers to conduct replay attacks by sniffing the network.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 6.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7973.json",
-          "summary": "CVE-2015-7973 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-7973"
     },
     {
-      "title": "CVE-2015-7974",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "NTP 4.x before 4.2.8p6 and 4.3.x before 4.3.90 do not verify peer associations of symmetric keys when authenticating packets, which might allow remote attackers to conduct impersonation attacks via an arbitrary trusted key, aka a \"skeleton key.\""
-        }
-      ],
       "cve": "CVE-2015-7974",
       "cwe": {
         "id": "CWE-287",
         "name": "Improper Authentication"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "NTP 4.x before 4.2.8p6 and 4.3.x before 4.3.90 do not verify peer associations of symmetric keys when authenticating packets, which might allow remote attackers to conduct impersonation attacks via an arbitrary trusted key, aka a \"skeleton key.\"",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 7.7,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 7.7,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7974.json",
-          "summary": "CVE-2015-7974 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-7974"
     },
     {
-      "title": "CVE-2015-7977",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "ntpd in NTP before 4.2.8p6 and 4.3.x before 4.3.90 allows remote attackers to cause a denial of service (NULL pointer dereference) via a ntpdc reslist command."
-        }
-      ],
       "cve": "CVE-2015-7977",
       "cwe": {
         "id": "CWE-476",
         "name": "NULL Pointer Dereference"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "ntpd in NTP before 4.2.8p6 and 4.3.x before 4.3.90 allows remote attackers to cause a denial of service (NULL pointer dereference) via a ntpdc reslist command.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
       "scores": [
         {
           "cvss_v3": {
-            "version": "3.1",
             "baseScore": 5.9,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
           },
           "products": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
-        }
-      ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7977.json",
-          "summary": "CVE-2015-7977 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-7977"
     },
     {
-      "title": "CVE-2015-7979",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "NTP before 4.2.8p6 and 4.3.x before 4.3.90 allows remote attackers to cause a denial of service (client-server association tear down) by sending broadcast packets with invalid authentication to a broadcast client."
-        }
-      ],
       "cve": "CVE-2015-7979",
       "cwe": {
-        "id": "CWE-19",
-        "name": "Data Processing Errors"
+        "id": "CWE-821",
+        "name": "Incorrect Synchronization"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "NTP before 4.2.8p6 and 4.3.x before 4.3.90 allows remote attackers to cause a denial of service (client-server association tear down) by sending broadcast packets with invalid authentication to a broadcast client.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-7979.json",
-          "summary": "CVE-2015-7979 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-7979"
     },
     {
-      "title": "CVE-2015-8138",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "NTP before 4.2.8p6 and 4.3.x before 4.3.90 allows remote attackers to bypass the origin timestamp validation via a packet with an origin timestamp set to zero."
-        }
-      ],
       "cve": "CVE-2015-8138",
       "cwe": {
         "id": "CWE-20",
         "name": "Improper Input Validation"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "NTP before 4.2.8p6 and 4.3.x before 4.3.90 allows remote attackers to bypass the origin timestamp validation via a packet with an origin timestamp set to zero.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 5.3,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2015-8138.json",
-          "summary": "CVE-2015-8138 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2015-8138"
     },
     {
-      "title": "CVE-2016-1547",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "An off-path attacker can cause a preemptible client association to be demobilized in NTP 4.2.8p4 and earlier and NTPSec a5fb34b9cc89b92a8fef2f459004865c93bb7f92 by sending a crypto NAK packet to a victim client with a spoofed source address of an existing associated peer. This is true even if authentication is enabled."
-        }
-      ],
       "cve": "CVE-2016-1547",
       "cwe": {
-        "id": "CWE-20",
-        "name": "Improper Input Validation"
+        "id": "CWE-821",
+        "name": "Incorrect Synchronization"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An off-path attacker can cause a preemptible client association to be demobilized in NTP 4.2.8p4 and earlier and NTPSec a5fb34b9cc89b92a8fef2f459004865c93bb7f92 by sending a crypto NAK packet to a victim client with a spoofed source address of an existing associated peer. This is true even if authentication is enabled.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
       "scores": [
         {
           "cvss_v3": {
-            "version": "3.1",
             "baseScore": 5.3,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:U/RL:O/RC:C"
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
           },
           "products": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
-        }
-      ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-1547.json",
-          "summary": "CVE-2016-1547 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2016-1547"
     },
     {
-      "title": "CVE-2016-1548",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "An attacker can spoof a packet from a legitimate ntpd server with an origin timestamp that matches the peer->dst timestamp recorded for that server. After making this switch, the client in NTP 4.2.8p4 and earlier and NTPSec aa48d001683e5b791a743ec9c575aaf7d867a2b0c will reject all future legitimate server responses. It is possible to force the victim client to move time after the mode has been changed. ntpq gives no indication that the mode has been switched."
-        }
-      ],
       "cve": "CVE-2016-1548",
       "cwe": {
-        "id": "CWE-19",
-        "name": "Data Processing Errors"
+        "id": "CWE-290",
+        "name": "Authentication Bypass by Spoofing"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An attacker can spoof a packet from a legitimate ntpd server with an origin timestamp that matches the peer->dst timestamp recorded for that server. After making this switch, the client in NTP 4.2.8p4 and earlier and NTPSec aa48d001683e5b791a743ec9c575aaf7d867a2b0c will reject all future legitimate server responses. It is possible to force the victim client to move time after the mode has been changed. ntpq gives no indication that the mode has been switched.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 7.2,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 7.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-1548.json",
-          "summary": "CVE-2016-1548 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2016-1548"
     },
     {
-      "title": "CVE-2016-1550",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "An exploitable vulnerability exists in the message authentication functionality of libntp in ntp 4.2.8p4 and NTPSec a5fb34b9cc89b92a8fef2f459004865c93bb7f92. An attacker can send a series of crafted messages to attempt to recover the message digest key."
-        }
-      ],
       "cve": "CVE-2016-1550",
       "cwe": {
         "id": "CWE-200",
         "name": "Exposure of Sensitive Information to an Unauthorized Actor"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An exploitable vulnerability exists in the message authentication functionality of libntp in ntp 4.2.8p4 and NTPSec a5fb34b9cc89b92a8fef2f459004865c93bb7f92. An attacker can send a series of crafted messages to attempt to recover the message digest key.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 5.3,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-1550.json",
-          "summary": "CVE-2016-1550 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2016-1550"
     },
     {
-      "title": "CVE-2016-4953",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "ntpd in NTP 4.x before 4.2.8p8 allows remote attackers to cause a denial of service (ephemeral-association demobilization) by sending a spoofed crypto-NAK packet with incorrect authentication data at a certain time."
-        }
-      ],
       "cve": "CVE-2016-4953",
       "cwe": {
         "id": "CWE-287",
         "name": "Improper Authentication"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "ntpd in NTP 4.x before 4.2.8p8 allows remote attackers to cause a denial of service (ephemeral-association demobilization) by sending a spoofed crypto-NAK packet with incorrect authentication data at a certain time.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-4953.json",
-          "summary": "CVE-2016-4953 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2016-4953"
     },
     {
-      "title": "CVE-2016-4954",
-      "notes": [
-        {
-          "title": "Summary",
-          "category": "summary",
-          "text": "The process_packet function in ntp_proto.c in ntpd in NTP 4.x before 4.2.8p8 allows remote attackers to cause a denial of service (peer-variable modification) by sending spoofed packets from many source IP addresses in a certain scenario, as demonstrated by triggering an incorrect leap indication."
-        }
-      ],
       "cve": "CVE-2016-4954",
       "cwe": {
         "id": "CWE-362",
         "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
       },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The process_packet function in ntp_proto.c in ntpd in NTP 4.x before 4.2.8p8 allows remote attackers to cause a denial of service (peer-variable modification) by sending spoofed packets from many source IP addresses in a certain scenario, as demonstrated by triggering an incorrect leap indication.",
+          "title": "Summary"
+        }
+      ],
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3",
+          "4"
         ]
       },
-      "scores": [
+      "remediations": [
         {
-          "cvss_v3": {
-            "version": "3.1",
-            "baseScore": 7.5,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:U/RL:O/RC:C"
-          },
-          "products": [
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
             "1",
-            "2"
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "category": "workaround",
+          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4"
           ]
         }
       ],
-      "remediations": [
+      "scores": [
         {
-          "product_ids": [
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
             "1",
-            "2"
-          ],
-          "category": "none_available",
-          "details": "Currently no remediation is available"
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Deactivate NTP-based time syncronization of the device, if enabled. The feature is disabled by default."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Configure an additional firewall to prevent communication to the port udp/123 of an affected device."
-        },
-        {
-          "product_ids": [
-            "1",
-            "2"
-          ],
-          "category": "workaround",
-          "details": "Migrate to a successor product."
+            "2",
+            "3",
+            "4"
+          ]
         }
       ],
-      "references": [
-        {
-          "url": "https://cert-portal.siemens.com/productcert/mitre/CVE-2016-4954.json",
-          "summary": "CVE-2016-4954 Mitre 5.0 json"
-        }
-      ]
+      "title": "CVE-2016-4954"
     }
   ]
 }
-

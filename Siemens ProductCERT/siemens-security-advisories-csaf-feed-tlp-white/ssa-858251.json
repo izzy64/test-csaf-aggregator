@@ -51,7 +51,7 @@
     ],
     "title": "SSA-858251: Authentication Bypass Vulnerabilities in OPC UA",
     "tracking": {
-      "current_release_date": "2025-03-11T00:00:00Z",
+      "current_release_date": "2025-06-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-06-10T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for  SIMIT V11; Clarified that SIMATIC BRAUMAT and SIMATIC SISTAR are not affected by CVE-2024-42513"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -94,7 +100,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions >= V8.0 SP1 < V8.1",
+                "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC BRAUMAT",
                   "product_id": "2"
@@ -108,7 +114,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions >= V7.5 < V7.5 Update 2",
+                "name": "All versions >= V7.5 SP0 Update 0 < V7.5 SP0 Update 2",
                 "product": {
                   "name": "SIMATIC Energy Manager PRO",
                   "product_id": "3"
@@ -144,7 +150,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions >= V8.0 SP1 < V8.1",
+                "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC SISTAR",
                   "product_id": "6"
@@ -200,7 +206,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V11.3",
                 "product": {
                   "name": "SIMIT V11",
                   "product_id": "10"
@@ -242,13 +248,20 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "4",
-            "10"
+            "4"
           ]
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V7.5 Update 2 or later version",
+          "details": "Update to V11.3 or later version",
+          "product_ids": [
+            "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987184/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.5 SP0 Update 2 or later version",
           "product_ids": [
             "3"
           ],
@@ -260,7 +273,7 @@
           "cvss_v3": {
             "baseScore": 7.4,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P/RL:W/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
             "version": "3.1"
           },
           "products": [
@@ -278,6 +291,15 @@
         "id": "CWE-305",
         "name": "Authentication Bypass by Primary Weakness"
       },
+      "flags": [
+        {
+          "group_ids": [
+            "2",
+            "6"
+          ],
+          "label": "vulnerable_code_not_in_execute_path"
+        }
+      ],
       "notes": [
         {
           "category": "summary",
@@ -288,32 +310,19 @@
       "product_status": {
         "known_affected": [
           "1",
-          "2",
           "3",
           "4",
           "5",
-          "6",
           "7",
           "8",
           "9"
+        ],
+        "known_not_affected": [
+          "2",
+          "6"
         ]
       },
       "remediations": [
-        {
-          "category": "mitigation",
-          "details": "Please note that the affected functionality (HTTPS endpoint in OPC UA Server) is deactivated by default in Unified RT.\nSystems running with default configuration are therefore not affected by this vulnerability.",
-          "product_ids": [
-            "7",
-            "8"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Please note that the affected functionality (HTTPS endpoint in OPC UA Server) is deactivated by default. Systems running with default configuration are therefore not affected by this vulnerability.",
-          "product_ids": [
-            "5"
-          ]
-        },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
@@ -335,11 +344,12 @@
           "details": "Update to V19 Update 4 or later version",
           "product_ids": [
             "8"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109925643/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V7.5 Update 2 or later version",
+          "details": "Update to V7.5 SP0 Update 2 or later version",
           "product_ids": [
             "3"
           ],
@@ -350,16 +360,8 @@
           "details": "Update to V8.0 Update 3 or later version",
           "product_ids": [
             "9"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V8.1 or later version",
-          "product_ids": [
-            "2",
-            "6"
           ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109816925/"
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109818723/"
         }
       ],
       "scores": [
@@ -367,16 +369,14 @@
           "cvss_v3": {
             "baseScore": 9.1,
             "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P/RL:W/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
             "version": "3.1"
           },
           "products": [
             "1",
-            "2",
             "3",
             "4",
             "5",
-            "6",
             "7",
             "8",
             "9"

@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "The Mendix OIDC SSO module grants read and write access to all tokens exclusively to the Administrator role and could result in privilege misuse by an adversary modifying the module during Mendix development.\n\nSiemens has released a new version for Mendix OIDC SSO (Mendix 10 compatible) and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "The Mendix OIDC SSO module grants read and write access to all tokens exclusively to the Administrator role and could result in privilege misuse by an adversary modifying the module during Mendix development.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-726617: Incorrect Privilege Assignment Vulnerability in Mendix OIDC SSO Module",
     "tracking": {
-      "current_release_date": "2025-05-22T00:00:00Z",
+      "current_release_date": "2025-06-12T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Corrected remediation for Mendix OIDC SSO (Mendix 10 compatible)"
+        },
+        {
+          "date": "2025-06-12T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for Mendix OIDC SSO (Mendix 10.12 compatible)"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -109,6 +115,20 @@
             ],
             "category": "product_name",
             "name": "Mendix OIDC SSO (Mendix 10 compatible)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/<V4.0.1",
+                "product": {
+                  "name": "Mendix OIDC SSO (Mendix 10.12 compatible)",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Mendix OIDC SSO (Mendix 10.12 compatible)"
           }
         ],
         "category": "vendor",
@@ -133,7 +153,8 @@
       "product_status": {
         "known_affected": [
           "1",
-          "2"
+          "2",
+          "3"
         ]
       },
       "remediations": [
@@ -142,7 +163,8 @@
           "details": "The default configuration of the OIDC.Token entity is to restrict read/write access only to the administrator role. If this setting is not restrictive enough the option arises to change the access rule of the specific entity, or to create a different user role to handle different administrative tasks",
           "product_ids": [
             "1",
-            "2"
+            "2",
+            "3"
           ]
         },
         {
@@ -151,6 +173,14 @@
           "product_ids": [
             "1"
           ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.0.1 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://marketplace.mendix.com/link/component/120371"
         },
         {
           "category": "vendor_fix",
@@ -171,7 +201,8 @@
           },
           "products": [
             "1",
-            "2"
+            "2",
+            "3"
           ]
         }
       ],

@@ -1,0 +1,225 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "organization": "Industrial Control Security Laboratory of QI-ANXIN Technology Group Inc.",
+        "summary": "reporting"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-GB",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Some TwinCAT OPC UA Server and IPC Diagnostics UA Server versions from Beckhoff Automation GmbH & Co. KG are vulnerable to denial of service attacks. The attacker needs to send several specifically crafted requests to the running OPC UA server. After some of these requests the OPC UA server is no longer responsive to any client. This is without effect to the real-time functionality of IPCs.\n\nUPDATE A - 11.05.2021\n\nPlease note that some hardware products from Beckhoff are shipped with a TwinCAT OPC UA Server pre-installed. In some cases the server is enabled by default.\n\nIPC Diagnostics UA Server (contained in Beckhoff's Windows images)\n\nserver versions up to and including 3.1.0.1 are affected\nPlease note that IPC products from Beckhoff are shipped with an IPC Diagnostics UA Server pre-installed. In all cases the server is disabled by default.\nThe version numbers named above always refer to the version number which is accessible via OPC UA at the server via the standard OPC UA node /Objects/Server/ServerStatus/BuildInfo/SoftwareVersion and on Windows also as the file property \"File version\" of the file TcOpcUaServer.exe for TwinCAT OPC UA Server respectively the file DevMgrSvr-UA.exe for IPC Diagnostics UA Server.\n\nUPDATE A - 11.05.2021\n\nPlease note that IPC products from Beckhoff are shipped with an IPC Diagnostics UA Server pre-installed. While on Windows CE it is disabled by default all other Windows images have it enabled by default.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "An attacker who can establish a TCP connection to one of the affected OPC UA servers can send a series of specifically crafted data packets to it. By repeating this several times this will provoke a stack overflow at the OPC UA server which then stops and does not recover until restarted by an administrator.\n\nSince TCP connections are routable there attacker may perform the exploit from remote if there is no firewall set up which limits the access to the TCP which the OPC UA server is listening on. The attacker does not need to have a local account at the device or OPC UA server nor it any authentication required for the attack.\n\nPlease note: The availability impact within the CVSS vector has been rated low because the TwinCAT OPC UA Server and IPC Diagnostics UA Server are seen as less-essential functional parts of an Industrial PC (IPC) image, not as its core functionality. The critical functionality of the IPC is its real-time runtime. The TwinCAT OPC UA Server is a communication interface. The IPC Diagnostics UA Server is for the hardware diagnostics functionality of the IPC. The main function of the IPC remains unaffected during the attack.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Consider disabling the IPC Diagnostics Server by stopping and disabling the corresponding Windows service or service. For example this can be achieved with the following PowerShell commands:\n\nStop-Service -Force -Name DevMgrSvr-UA\nSet-Service -Name DevMgrSvr-UA -StartupType Disabled\n\nAlternatively consider limiting access to the TCP port the OPC UA server is listening on. This can happen with a dedicated firewall appliance which sits in front of an affected device. Alternatively at the device the Windows firewall can be configured to limit access to the TCP port. Further guidance is provided within the \"Security Guide IPC\" from Beckhoff which is accessible at https://www.beckhoff.com/secguide",
+        "title": "Mitigation"
+      },
+      {
+        "category": "description",
+        "text": "For devices running Windows but not Windows CE or TwinCAT/BSD please get a recent version of the OPC UA servers through the conventional ways and update your system.\n\nFor devices running Windows CE please request a recent image via Beckhoff's support and apply it to your device.\n\nFor the product CX8091 please use firmware version \"CX8091_CE600_LF_v356f_TC211R3_B2306_v2\" or later which can be downloaded at\n\nhttps://download.beckhoff.com/download/software/embPC-Control/CX80x0/CX8091/OPC-update\n\nPlease note that the updated OPC UA server leaves less RAM available to your application on the CX8091.",
+        "title": "Remediation"
+      }
+    ],
+    "publisher": {
+      "contact_details": "product-securityincident@beckhoff.com",
+      "name": "Beckhoff Automation GmbH & Co. KG",
+      "namespace": "https://www.beckhoff.com",
+      "category": "vendor"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "VDE-2020-051: Beckhoff: DoS-Vulnerability for TwinCAT OPC UA Server and IPC Diagnostics UA Server - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2020-051/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2020-051: Beckhoff: DoS-Vulnerability for TwinCAT OPC UA Server and IPC Diagnostics UA Server - CSAF",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2021/vde-2020-051.json"
+      },
+      {
+        "category": "external",
+        "summary": "Vendor PSIRT",
+        "url": "https://www.beckhoff.com"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Beckhoff Automation GmbH & Co. KG",
+        "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
+      }
+    ],
+    "title": "Beckhoff: DoS-Vulnerability for TwinCAT OPC UA Server and IPC Diagnostics UA Server",
+    "tracking": {
+      "aliases": [
+        "VDE-2020-051"
+      ],
+      "current_release_date": "2021-05-11T10:00:00.000Z",
+      "generator": {
+        "date": "2025-06-12T08:11:49.312Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.27"
+        }
+      },
+      "id": "VDE-2020-051",
+      "initial_release_date": "2021-04-27T08:08:00.000Z",
+      "revision_history": [
+        {
+          "date": "2021-04-27T08:08:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial revision."
+        },
+        {
+          "number": "1.1.0",
+          "date": "2021-05-11T10:00:00.000Z",
+          "summary": "UPDATE A"
+        }
+      ],
+      "status": "final",
+      "version": "1.1.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Vendor",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Software",
+            "category": "product_family",
+            "branches": [
+              {
+                "name": "IPC Diagnostics UA Server",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<=3.1.0.1",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "IPC Diagnostics UA Server <=3.1.0.1",
+                      "product_id": "CSAFPID-51001"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "TwinCAT OPC UA Server",
+                "category": "product_name",
+                "branches": [
+                  {
+                    "name": "<=2.3.0.12",
+                    "category": "product_version_range",
+                    "product": {
+                      "name": "TwinCAT OPC UA Server <=2.3.0.12",
+                      "product_id": "CSAFPID-51002"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-51001",
+          "CSAFPID-51002"
+        ],
+        "summary": "Affected products."
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2020-12526",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "TwinCAT OPC UA Server in versions up to 2.3.0.12 and IPC Diagnostics UA Server in versions up to 3.1.0.1 from Beckhoff Automation GmbH & Co. KG are vulnerable to denial of service attacks. The attacker needs to send several specifically crafted requests to the running OPC UA server. After some of these requests the OPC UA server is no longer responsive to any client. This is without effect to the real-time functionality of IPCs.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-51001",
+          "CSAFPID-51002"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Consider disabling the IPC Diagnostics Server by stopping and disabling the corresponding Windows service or service. For example this can be achieved with the following PowerShell commands:\n\nStop-Service -Force -Name DevMgrSvr-UA\nSet-Service -Name DevMgrSvr-UA -StartupType Disabled\n\nAlternatively consider limiting access to the TCP port the OPC UA server is listening on. This can happen with a dedicated firewall appliance which sits in front of an affected device. Alternatively at the device the Windows firewall can be configured to limit access to the TCP port. Further guidance is provided within the \"Security Guide IPC\" from Beckhoff which is accessible at https://www.beckhoff.com/secguide",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For devices running Windows but not Windows CE or TwinCAT/BSD please get a recent version of the OPC UA servers through the conventional ways and update your system.\n\nFor devices running Windows CE please request a recent image via Beckhoff's support and apply it to your device.\n\nFor the product CX8091 please use firmware version \"CX8091_CE600_LF_v356f_TC211R3_B2306_v2\" or later which can be downloaded at\n\nhttps://download.beckhoff.com/download/software/embPC-Control/CX80x0/CX8091/OPC-update\n\nPlease note that the updated OPC UA server leaves less RAM available to your application on the CX8091.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 5.3,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 5.3,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-51001",
+            "CSAFPID-51002"
+          ]
+        }
+      ],
+      "title": "CVE-2020-12526"
+    }
+  ]
+}

@@ -1,0 +1,846 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "organization": "ONEKEY Research Labs",
+        "summary": "reporting",
+        "names": [
+          "Q. Kaiser",
+          "M. Illes"
+        ]
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-GB",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The Festo controller CECC-X-M1 product family in multiple versions are affected by a preauthentication command injection vulnerability.\nUpdate A, 2022-07-05\nRemediation has been updated. Fixed firmwares are now available.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "Any person who is able to gain access to the webserver would be able to run arbitrary system commands on the device with root privileges.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Please update to firmware versions as described below:\n\n| Product                      | Product Details                                           | Fixed in version |\n|-----------------------------|-----------------------------------------------------------|------------------|\n| Controller CECC-X-M1        | Festo:Partnumber:4407603 Festo:Ordercode:CECC-X-M1     |  3.8.18        |\n| Controller CECC-X-M1        | Festo:Partnumber:8124922 Festo:Ordercode:CECC-X-M1     |  4.0.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:4407605 Festo:Ordercode:CECC-X-M1-MV  |  3.8.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:8124923 Festo:Ordercode:CECC-X-M1-MV  |  4.0.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:4407606 Festo:Ordercode:CECC-X-M1-MV-S1 |  3.8.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:8124924 Festo:Ordercode:CECC-X-M1-MV-S1 |  4.0.18        |\n| Controller CECC-X-M1-YYJKP  | Festo:Partnumber:4803891 Festo:Ordercode:CECC-X-M1-YYJKP |  3.8.18        |\n| Controller CECC-X-M1-YSL1   | Festo:Partnumber:8082793 Festo:Ordercode:CECC-X-M1-YS-L1 |  3.8.18        |\n| Controller CECC-X-M1-YSL2   | Festo:Partnumber:8082794 Festo:Ordercode:CECC-X-M1-YS-L2 |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8077950 Festo:Ordercode:YJKP          |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8058596 Festo:Ordercode:YJKP          |  3.8.18        |",
+        "title": "Remediation"
+      },
+      {
+        "title": "General recommendation",
+        "category": "general",
+        "text": "Currently, Festo has not identified any specific workarounds for this vulnerability. As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\n- Activate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes. For a secure operation follow the recommendations in the product manuals."
+      }
+    ],
+    "publisher": {
+      "contact_details": "psirt@festo.com",
+      "name": "Festo SE & Co. KG",
+      "namespace": "https://festo.com",
+      "category": "vendor"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "FSA-202201: Festo: CECC-X-M1 - command injection vulnerabilities - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2022-020/"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202201: Festo: CECC-X-M1 - command injection vulnerabilities - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2022/fsa-202201.json"
+      },
+      {
+        "category": "external",
+        "summary": "Vendor PSIRT",
+        "url": "https://festo.com"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Festo SE & Co. KG",
+        "url": "https://certvde.com/en/advisories/vendor/festo/"
+      }
+    ],
+    "title": "Festo: CECC-X-M1 - command injection vulnerabilities",
+    "tracking": {
+      "aliases": [
+        "VDE-2022-020"
+      ],
+      "current_release_date": "2025-06-23T08:00:00.000Z",
+      "generator": {
+        "date": "2025-06-23T06:41:05.130Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.26"
+        }
+      },
+      "id": "FSA-202201",
+      "initial_release_date": "2022-07-06T07:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2022-07-06T07:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision."
+        },
+        {
+          "number": "2",
+          "summary": "Fix: quotation mark",
+          "date": "2025-06-05T13:28:12.000Z"
+        },
+        {
+          "date": "2025-06-23T08:00:00.000Z",
+          "number": "3",
+          "summary": "Changed Document ID"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "name": "Festo",
+        "category": "vendor",
+        "branches": [
+          {
+            "name": "Hardware",
+            "category": "product_family",
+            "branches": [
+              {
+                "name": "Controller CECC-X-M1",
+                "category": "product_name",
+                "product": {
+                  "name": "Controller CECC-X-M1",
+                  "product_id": "CSAFPID-11001",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8124922",
+                      "4407603"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "Controller CECC-X-M1-MV",
+                "category": "product_name",
+                "product": {
+                  "name": "Controller CECC-X-M1-MV",
+                  "product_id": "CSAFPID-11002",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "4407605",
+                      "8124923"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "Controller CECC-X-M1-MV-S1",
+                "category": "product_name",
+                "product": {
+                  "name": "Controller CECC-X-M1-MV-S1",
+                  "product_id": "CSAFPID-11003",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8124924",
+                      "4407606"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "Controller CECC-X-M1-YS-L1",
+                "category": "product_name",
+                "product": {
+                  "name": "Controller CECC-X-M1-YS-L1",
+                  "product_id": "CSAFPID-11004",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8082793"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "Controller CECC-X-M1-YS-L2",
+                "category": "product_name",
+                "product": {
+                  "name": "Controller CECC-X-M1-YS-L2",
+                  "product_id": "CSAFPID-11005",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8082794"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "Controller CECC-X-M1-Y-YJKP",
+                "category": "product_name",
+                "product": {
+                  "name": "Controller CECC-X-M1-Y-YJKP",
+                  "product_id": "CSAFPID-11006",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "4803891"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "Servo Press Kit YJKP",
+                "category": "product_name",
+                "product": {
+                  "name": "Servo Press Kit YJKP",
+                  "product_id": "CSAFPID-11007",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8077950"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "Servo Press Kit YJKP-",
+                "category": "product_name",
+                "product": {
+                  "name": "Servo Press Kit YJKP-",
+                  "product_id": "CSAFPID-11008",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8058596"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "Firmware",
+            "category": "product_family",
+            "branches": [
+              {
+                "name": "4.0.14",
+                "category": "product_version",
+                "product": {
+                  "name": "Firmware 4.0.14",
+                  "product_id": "CSAFPID-21001"
+                }
+              },
+              {
+                "name": "<=3.8.14",
+                "category": "product_version_range",
+                "product": {
+                  "name": "Firmware <=3.8.14",
+                  "product_id": "CSAFPID-21002"
+                }
+              },
+              {
+                "name": "4.0.18",
+                "category": "product_version",
+                "product": {
+                  "name": "Firmware 4.0.18",
+                  "product_id": "CSAFPID-22001"
+                }
+              },
+              {
+                "name": "3.8.18",
+                "category": "product_version",
+                "product": {
+                  "name": "Firmware 3.8.18",
+                  "product_id": "CSAFPID-22002"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003"
+        ],
+        "summary": "Affected products."
+      },
+      {
+        "group_id": "CSAFGID-0002",
+        "product_ids": [
+          "CSAFPID-32001",
+          "CSAFPID-32002",
+          "CSAFPID-32003"
+        ],
+        "summary": "Fixed products."
+      }
+    ],
+    "relationships": [
+      {
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11001",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 4.0.14 installed on Controller CECC-X-M1",
+          "product_id": "CSAFPID-31001"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11001",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Controller CECC-X-M1",
+          "product_id": "CSAFPID-31002"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11002",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Controller CECC-X-M1-MV",
+          "product_id": "CSAFPID-31003"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11002",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 4.0.14 installed on Controller CECC-X-M1-MV",
+          "product_id": "CSAFPID-31004"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11003",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 4.0.14 installed on Controller CECC-X-M1-MV-S1",
+          "product_id": "CSAFPID-31005"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11003",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Controller CECC-X-M1-MV-S1",
+          "product_id": "CSAFPID-31006"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11004",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Controller CECC-X-M1-YS-L1",
+          "product_id": "CSAFPID-31007"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11005",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Controller CECC-X-M1-YS-L2",
+          "product_id": "CSAFPID-31008"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11006",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Controller CECC-X-M1-Y-YJKP",
+          "product_id": "CSAFPID-31009"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11007",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Servo Press Kit YJKP",
+          "product_id": "CSAFPID-31010"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11008",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.14 installed on Servo Press Kit YJKP-",
+          "product_id": "CSAFPID-31011"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22001",
+        "relates_to_product_reference": "CSAFPID-11001",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 4.0.18 installed on Controller CECC-X-M1",
+          "product_id": "CSAFPID-32001"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11001",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Controller CECC-X-M1",
+          "product_id": "CSAFPID-32002"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11002",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Controller CECC-X-M1-MV",
+          "product_id": "CSAFPID-32003"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22001",
+        "relates_to_product_reference": "CSAFPID-11002",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 4.0.18 installed on Controller CECC-X-M1-MV",
+          "product_id": "CSAFPID-32004"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22001",
+        "relates_to_product_reference": "CSAFPID-11003",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 4.0.18 installed on Controller CECC-X-M1-MV-S1",
+          "product_id": "CSAFPID-32005"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11003",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Controller CECC-X-M1-MV-S1",
+          "product_id": "CSAFPID-32006"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11004",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Controller CECC-X-M1-YS-L1",
+          "product_id": "CSAFPID-32007"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11005",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Controller CECC-X-M1-YS-L2",
+          "product_id": "CSAFPID-32008"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11006",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Controller CECC-X-M1-Y-YJKP",
+          "product_id": "CSAFPID-32009"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11007",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Servo Press Kit YJKP",
+          "product_id": "CSAFPID-32010"
+        }
+      },
+      {
+        "product_reference": "CSAFPID-22002",
+        "relates_to_product_reference": "CSAFPID-11008",
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 3.8.18 installed on Servo Press Kit YJKP-",
+          "product_id": "CSAFPID-32011"
+        }
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-30311",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Festo Controller CECC-X-M1 product family in multiple versions, the http-endpoint \"cecc-x-refresh-request\" POST request doesn't check for port syntax. This can result in unauthorized execution of system commands with root privileges due to improper access control command injection.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-32001",
+          "CSAFPID-32002",
+          "CSAFPID-32003",
+          "CSAFPID-32004",
+          "CSAFPID-32005",
+          "CSAFPID-32006",
+          "CSAFPID-32007",
+          "CSAFPID-32008",
+          "CSAFPID-32009",
+          "CSAFPID-32010",
+          "CSAFPID-32011"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Please update to firmware versions as described below:\n\n| Product                      | Product Details                                           | Fixed in version |\n|-----------------------------|-----------------------------------------------------------|------------------|\n| Controller CECC-X-M1        | Festo:Partnumber:4407603 Festo:Ordercode:CECC-X-M1     |  3.8.18        |\n| Controller CECC-X-M1        | Festo:Partnumber:8124922 Festo:Ordercode:CECC-X-M1     |  4.0.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:4407605 Festo:Ordercode:CECC-X-M1-MV  |  3.8.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:8124923 Festo:Ordercode:CECC-X-M1-MV  |  4.0.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:4407606 Festo:Ordercode:CECC-X-M1-MV-S1 |  3.8.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:8124924 Festo:Ordercode:CECC-X-M1-MV-S1 |  4.0.18        |\n| Controller CECC-X-M1-YYJKP  | Festo:Partnumber:4803891 Festo:Ordercode:CECC-X-M1-YYJKP |  3.8.18        |\n| Controller CECC-X-M1-YSL1   | Festo:Partnumber:8082793 Festo:Ordercode:CECC-X-M1-YS-L1 |  3.8.18        |\n| Controller CECC-X-M1-YSL2   | Festo:Partnumber:8082794 Festo:Ordercode:CECC-X-M1-YS-L2 |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8077950 Festo:Ordercode:YJKP          |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8058596 Festo:Ordercode:YJKP          |  3.8.18        |",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011"
+          ]
+        }
+      ],
+      "title": "CVE-2022-30311"
+    },
+    {
+      "cve": "CVE-2022-30310",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Festo Controller CECC-X-M1 product family in multiple versions, the http-endpoint \"cecc-x-acknerr-request\" POST request doesn't check for port syntax. This can result in unauthorized execution of system commands with root privileges due to improper access control command injection.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-32001",
+          "CSAFPID-32002",
+          "CSAFPID-32003",
+          "CSAFPID-32004",
+          "CSAFPID-32005",
+          "CSAFPID-32006",
+          "CSAFPID-32007",
+          "CSAFPID-32008",
+          "CSAFPID-32009",
+          "CSAFPID-32010",
+          "CSAFPID-32011"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Please update to firmware versions as described below:\n\n| Product                      | Product Details                                           | Fixed in version |\n|-----------------------------|-----------------------------------------------------------|------------------|\n| Controller CECC-X-M1        | Festo:Partnumber:4407603 Festo:Ordercode:CECC-X-M1     |  3.8.18        |\n| Controller CECC-X-M1        | Festo:Partnumber:8124922 Festo:Ordercode:CECC-X-M1     |  4.0.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:4407605 Festo:Ordercode:CECC-X-M1-MV  |  3.8.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:8124923 Festo:Ordercode:CECC-X-M1-MV  |  4.0.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:4407606 Festo:Ordercode:CECC-X-M1-MV-S1 |  3.8.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:8124924 Festo:Ordercode:CECC-X-M1-MV-S1 |  4.0.18        |\n| Controller CECC-X-M1-YYJKP  | Festo:Partnumber:4803891 Festo:Ordercode:CECC-X-M1-YYJKP |  3.8.18        |\n| Controller CECC-X-M1-YSL1   | Festo:Partnumber:8082793 Festo:Ordercode:CECC-X-M1-YS-L1 |  3.8.18        |\n| Controller CECC-X-M1-YSL2   | Festo:Partnumber:8082794 Festo:Ordercode:CECC-X-M1-YS-L2 |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8077950 Festo:Ordercode:YJKP          |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8058596 Festo:Ordercode:YJKP          |  3.8.18        |",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011"
+          ]
+        }
+      ],
+      "title": "CVE-2022-30310"
+    },
+    {
+      "cve": "CVE-2022-30309",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Festo Controller CECC-X-M1 product family in multiple versions, the http-endpoint \"cecc-x-web-viewer-request-off\" POST request doesn't check for port syntax. This can result in unauthorized execution of system commands with root privileges due to improper access control command injection.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-32001",
+          "CSAFPID-32002",
+          "CSAFPID-32003",
+          "CSAFPID-32004",
+          "CSAFPID-32005",
+          "CSAFPID-32006",
+          "CSAFPID-32007",
+          "CSAFPID-32008",
+          "CSAFPID-32009",
+          "CSAFPID-32010",
+          "CSAFPID-32011"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Please update to firmware versions as described below:\n\n| Product                      | Product Details                                           | Fixed in version |\n|-----------------------------|-----------------------------------------------------------|------------------|\n| Controller CECC-X-M1        | Festo:Partnumber:4407603 Festo:Ordercode:CECC-X-M1     |  3.8.18        |\n| Controller CECC-X-M1        | Festo:Partnumber:8124922 Festo:Ordercode:CECC-X-M1     |  4.0.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:4407605 Festo:Ordercode:CECC-X-M1-MV  |  3.8.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:8124923 Festo:Ordercode:CECC-X-M1-MV  |  4.0.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:4407606 Festo:Ordercode:CECC-X-M1-MV-S1 |  3.8.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:8124924 Festo:Ordercode:CECC-X-M1-MV-S1 |  4.0.18        |\n| Controller CECC-X-M1-YYJKP  | Festo:Partnumber:4803891 Festo:Ordercode:CECC-X-M1-YYJKP |  3.8.18        |\n| Controller CECC-X-M1-YSL1   | Festo:Partnumber:8082793 Festo:Ordercode:CECC-X-M1-YS-L1 |  3.8.18        |\n| Controller CECC-X-M1-YSL2   | Festo:Partnumber:8082794 Festo:Ordercode:CECC-X-M1-YS-L2 |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8077950 Festo:Ordercode:YJKP          |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8058596 Festo:Ordercode:YJKP          |  3.8.18        |",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011"
+          ]
+        }
+      ],
+      "title": "CVE-2022-30309"
+    },
+    {
+      "cve": "CVE-2022-30308",
+      "cwe": {
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "In Festo Controller CECC-X-M1 product family in multiple versions, the http-endpoint \"cecc-x-web-viewer-request-on\" POST request doesn't check for port syntax. This can result in unauthorized execution of system commands with root privileges due to improper access control command injection.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-32001",
+          "CSAFPID-32002",
+          "CSAFPID-32003",
+          "CSAFPID-32004",
+          "CSAFPID-32005",
+          "CSAFPID-32006",
+          "CSAFPID-32007",
+          "CSAFPID-32008",
+          "CSAFPID-32009",
+          "CSAFPID-32010",
+          "CSAFPID-32011"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Please update to firmware versions as described below:\n\n| Product                      | Product Details                                           | Fixed in version |\n|-----------------------------|-----------------------------------------------------------|------------------|\n| Controller CECC-X-M1        | Festo:Partnumber:4407603 Festo:Ordercode:CECC-X-M1     |  3.8.18        |\n| Controller CECC-X-M1        | Festo:Partnumber:8124922 Festo:Ordercode:CECC-X-M1     |  4.0.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:4407605 Festo:Ordercode:CECC-X-M1-MV  |  3.8.18        |\n| Controller CECC-X-M1-MV     | Festo:Partnumber:8124923 Festo:Ordercode:CECC-X-M1-MV  |  4.0.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:4407606 Festo:Ordercode:CECC-X-M1-MV-S1 |  3.8.18        |\n| Controller CECC-X-M1-MVS1   | Festo:Partnumber:8124924 Festo:Ordercode:CECC-X-M1-MV-S1 |  4.0.18        |\n| Controller CECC-X-M1-YYJKP  | Festo:Partnumber:4803891 Festo:Ordercode:CECC-X-M1-YYJKP |  3.8.18        |\n| Controller CECC-X-M1-YSL1   | Festo:Partnumber:8082793 Festo:Ordercode:CECC-X-M1-YS-L1 |  3.8.18        |\n| Controller CECC-X-M1-YSL2   | Festo:Partnumber:8082794 Festo:Ordercode:CECC-X-M1-YS-L2 |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8077950 Festo:Ordercode:YJKP          |  3.8.18        |\n| Servo Press Kit YJKP        | Festo:Partnumber:8058596 Festo:Ordercode:YJKP          |  3.8.18        |",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011"
+          ]
+        }
+      ],
+      "title": "CVE-2022-30308"
+    }
+  ]
+}

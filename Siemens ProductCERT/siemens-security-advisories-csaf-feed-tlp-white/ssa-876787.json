@@ -51,7 +51,7 @@
     ],
     "title": "SSA-876787: Open Redirect Vulnerability in SIMATIC S7-1500 and S7-1200 CPUs",
     "tracking": {
-      "current_release_date": "2025-06-10T00:00:00Z",
+      "current_release_date": "2025-07-08T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -108,10 +108,16 @@
           "legacy_version": "1.7",
           "number": "8",
           "summary": "Added fix for SIMATIC S7-1500 Software Controller that run on firmware version line V2 and added fix for SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants) V2 CPUs"
+        },
+        {
+          "date": "2025-07-08T00:00:00Z",
+          "legacy_version": "1.8",
+          "number": "9",
+          "summary": "Clarified that currently no fix for CVE-2024-46886 is available for SIMATIC S7-1500 Software Controller Linux V3"
         }
       ],
       "status": "interim",
-      "version": "8"
+      "version": "9"
     }
   },
   "product_tree": {
@@ -2128,7 +2134,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V31.1.4",
+                "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller Linux V3",
                   "product_id": "110"
@@ -4026,7 +4032,8 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "109"
+            "109",
+            "110"
           ]
         },
         {
@@ -4203,8 +4210,7 @@
             "104",
             "105",
             "106",
-            "108",
-            "110"
+            "108"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478528/"
         },

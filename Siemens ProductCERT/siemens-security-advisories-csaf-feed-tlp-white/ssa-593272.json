@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "A vulnerability exists in affected products that could allow remote attackers to affect the availability of the devices under certain conditions.\n\nThe underlying TCP stack can be forced to make very computation expensive calls for every incoming packet which can lead to a Denial-of-Service.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "A vulnerability exists in affected products that could allow remote attackers to affect the availability of the devices under certain conditions.\n\nThe underlying TCP stack can be forced to make very computation expensive calls for every incoming packet which can lead to a Denial-of-Service.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-593272: SegmentSmack in Interniche IP-Stack based Industrial Devices",
     "tracking": {
-      "current_release_date": "2025-03-11T00:00:00Z",
+      "current_release_date": "2025-07-08T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -150,10 +150,16 @@
           "legacy_version": "2.4",
           "number": "15",
           "summary": "Added fix for SIMATIC S7-410 V8 CPU family (incl. SIPLUS variants)"
+        },
+        {
+          "date": "2025-07-08T00:00:00Z",
+          "legacy_version": "2.5",
+          "number": "16",
+          "summary": "Added fix for SIMATIC S7-410 V10 CPU family (incl. SIPLUS variants)"
         }
       ],
       "status": "interim",
-      "version": "15"
+      "version": "16"
     }
   },
   "product_tree": {
@@ -248,181 +254,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, AI 8xRTD/TC, M12-L (6ES7144-6JF00-0BB0)",
-                  "product_id": "7",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7144-6JF00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, AI 8xRTD/TC, M12-L (6ES7144-6JF00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, CM 4x IO-Link, M12-L (6ES7148-6JE00-0BB0)",
-                  "product_id": "8",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7148-6JE00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, CM 4x IO-Link, M12-L (6ES7148-6JE00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JG00-0BB0)",
-                  "product_id": "9",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7148-6JG00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JG00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JJ00-0BB0)",
-                  "product_id": "10",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7148-6JJ00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, CM 8x IO-Link, M12-L (6ES7148-6JJ00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, DI 8x24VDC, M12-L (6ES7141-6BG00-0BB0)",
-                  "product_id": "11",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7141-6BG00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, DI 8x24VDC, M12-L (6ES7141-6BG00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, DI 16x24VDC, M12-L (6ES7141-6BH00-0BB0)",
-                  "product_id": "12",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7141-6BH00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, DI 16x24VDC, M12-L (6ES7141-6BH00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.3",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, DIQ 16x24VDC/2A, M12-L (6ES7143-6BH00-0BB0)",
-                  "product_id": "13",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7143-6BH00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, DIQ 16x24VDC/2A, M12-L (6ES7143-6BH00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, DQ 8x24VDC/0,5A, M12-L (6ES7142-6BG00-0BB0)",
-                  "product_id": "14",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7142-6BG00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, DQ 8x24VDC/0,5A, M12-L (6ES7142-6BG00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/>=V5.1.1|<V5.1.2",
-                "product": {
-                  "name": "SIMATIC ET200ecoPN, DQ 8x24VDC/2A, M12-L (6ES7142-6BR00-0BB0)",
-                  "product_id": "15",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7142-6BR00-0BB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC ET200ecoPN, DQ 8x24VDC/2A, M12-L (6ES7142-6BR00-0BB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC ET 200AL IM 157-1 PN (6ES7157-1AB00-0AB0)",
-                  "product_id": "16",
+                  "product_id": "7",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7157-1AB00-0AB0"
@@ -433,6 +268,177 @@
             ],
             "category": "product_name",
             "name": "SIMATIC ET 200AL IM 157-1 PN (6ES7157-1AB00-0AB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, AI 8xRTD/TC, M12-L (6ES7144-6JF00-0BB0)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7144-6JF00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, AI 8xRTD/TC, M12-L (6ES7144-6JF00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, CM 4x IO-Link, M12-L (6ES7148-6JE00-0BB0)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7148-6JE00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, CM 4x IO-Link, M12-L (6ES7148-6JE00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, CM 8x IO-Link, M12-L (6ES7148-6JG00-0BB0)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7148-6JG00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, CM 8x IO-Link, M12-L (6ES7148-6JG00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, CM 8x IO-Link, M12-L (6ES7148-6JJ00-0BB0)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7148-6JJ00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, CM 8x IO-Link, M12-L (6ES7148-6JJ00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, DI 8x24VDC, M12-L (6ES7141-6BG00-0BB0)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7141-6BG00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, DI 8x24VDC, M12-L (6ES7141-6BG00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, DI 16x24VDC, M12-L (6ES7141-6BH00-0BB0)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7141-6BH00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, DI 16x24VDC, M12-L (6ES7141-6BH00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.3",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, DIQ 16x24VDC/2A, M12-L (6ES7143-6BH00-0BB0)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7143-6BH00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, DIQ 16x24VDC/2A, M12-L (6ES7143-6BH00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, DQ 8x24VDC/0,5A, M12-L (6ES7142-6BG00-0BB0)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7142-6BG00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, DQ 8x24VDC/0,5A, M12-L (6ES7142-6BG00-0BB0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/>=V5.1.1|<V5.1.2",
+                "product": {
+                  "name": "SIMATIC ET 200eco PN, DQ 8x24VDC/2A, M12-L (6ES7142-6BR00-0BB0)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6ES7142-6BR00-0BB0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ET 200eco PN, DQ 8x24VDC/2A, M12-L (6ES7142-6BR00-0BB0)"
           },
           {
             "branches": [
@@ -954,7 +960,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V10.2",
                 "product": {
                   "name": "SIMATIC S7-410 V10 CPU family (incl. SIPLUS variants)",
                   "product_id": "46"
@@ -984,13 +990,13 @@
                 "category": "product_version_range",
                 "name": "vers:all/<V2.0",
                 "product": {
-                  "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)",
+                  "name": "SIMATIC S7-1500 CPU family (incl. related ET 200 CPUs and SIPLUS variants)",
                   "product_id": "48"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU family (incl. related ET200 CPUs and SIPLUS variants)"
+            "name": "SIMATIC S7-1500 CPU family (incl. related ET 200 CPUs and SIPLUS variants)"
           },
           {
             "branches": [
@@ -1456,6 +1462,15 @@
           "4",
           "5",
           "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
           "16",
           "17",
           "18",
@@ -1468,23 +1483,11 @@
           "25",
           "26",
           "27",
-          "29",
           "28",
-          "7",
-          "8",
-          "9",
-          "10",
-          "12",
-          "11",
-          "13",
-          "14",
-          "15",
+          "29",
           "30",
           "31",
           "32",
-          "47",
-          "48",
-          "49",
           "33",
           "34",
           "35",
@@ -1497,8 +1500,11 @@
           "42",
           "43",
           "44",
-          "46",
           "45",
+          "46",
+          "47",
+          "48",
+          "49",
           "50",
           "51",
           "52",
@@ -1526,31 +1532,6 @@
       },
       "remediations": [
         {
-          "category": "mitigation",
-          "details": "As a mitigation, disable the ethernet ports on the CPU and use a communication module (like CP) for communication instead",
-          "product_ids": [
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "46",
-            "45",
-            "68",
-            "69",
-            "70",
-            "71",
-            "72"
-          ]
-        },
-        {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
@@ -1560,7 +1541,7 @@
             "4",
             "5",
             "6",
-            "16",
+            "7",
             "17",
             "18",
             "19",
@@ -1613,79 +1594,80 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.2 or later version",
           "product_ids": [
             "46"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109773044/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V2.0 or later version",
           "product_ids": [
             "29"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759122/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V2.0 or later version",
           "product_ids": [
             "28"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109759122/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.1.2 or later version",
+          "product_ids": [
+            "8",
+            "12",
+            "13",
+            "15",
+            "16"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109955667/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V5.1.2 or later version",
           "product_ids": [
             "9"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.1.2 or later version",
-          "product_ids": [
-            "7",
-            "12",
-            "11",
-            "14",
-            "15"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.1.2 or later version",
-          "product_ids": [
-            "8"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109975865/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V5.1.2 or later version",
           "product_ids": [
             "10"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109798522/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.1.2 or later version",
+          "product_ids": [
+            "11"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109975868/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V5.1.3 or later version",
           "product_ids": [
-            "13"
-          ]
+            "14"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109798530/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V8.3 or later version",
           "product_ids": [
             "45"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V20.8 or later version",
-          "product_ids": [
-            "49"
           ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109772864/"
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109476571/"
         },
         {
           "category": "vendor_fix",
@@ -1702,6 +1684,14 @@
             "48"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109773807/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V20.8 or later version",
+          "product_ids": [
+            "49"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109772864/"
         }
       ],
       "scores": [
@@ -1719,6 +1709,15 @@
             "4",
             "5",
             "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
             "16",
             "17",
             "18",
@@ -1731,23 +1730,11 @@
             "25",
             "26",
             "27",
-            "29",
             "28",
-            "7",
-            "8",
-            "9",
-            "10",
-            "12",
-            "11",
-            "13",
-            "14",
-            "15",
+            "29",
             "30",
             "31",
             "32",
-            "47",
-            "48",
-            "49",
             "33",
             "34",
             "35",
@@ -1760,8 +1747,11 @@
             "42",
             "43",
             "44",
-            "46",
             "45",
+            "46",
+            "47",
+            "48",
+            "49",
             "50",
             "51",
             "52",

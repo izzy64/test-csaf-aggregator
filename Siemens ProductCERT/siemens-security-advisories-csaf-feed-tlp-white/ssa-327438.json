@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SCALANCE LPE9403 is affected by multiple vulnerabilities which lead to a compromise in availability, integrity and confidentiality.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "SCALANCE LPE9403 is affected by multiple vulnerabilities which lead to a compromise in availability, integrity and confidentiality.\n\nSiemens has released a new version for SCALANCE LPE9403 and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-327438: Multiple Vulnerabilities in SCALANCE LPE9403",
     "tracking": {
-      "current_release_date": "2025-05-13T00:00:00Z",
+      "current_release_date": "2025-07-08T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-07-08T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for CVE-2025-40572, CVE-2025-40573, CVE-2025-40574, CVE-2025-40575, CVE-2025-40576, CVE-2025-40577, CVE-2025-40579, CVE-2025-40580"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,7 +86,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V4.0 HF0",
                 "product": {
                   "name": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
                   "product_id": "1",
@@ -97,6 +103,19 @@
                 "product": {
                   "name": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
                   "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5998-3GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
+                  "product_id": "3",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5998-3GS00-2AC2"
@@ -142,11 +161,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -191,11 +211,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -240,11 +261,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -289,11 +311,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -338,11 +361,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -387,11 +411,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -424,7 +449,7 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "2"
         ]
       },
       "remediations": [
@@ -432,14 +457,14 @@
           "category": "mitigation",
           "details": "Disable the Profinet Discovery and Configuration Protocol (DCP) service",
           "product_ids": [
-            "1"
+            "2"
           ]
         },
         {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "1"
+            "2"
           ]
         }
       ],
@@ -452,7 +477,7 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "2"
           ]
         }
       ],
@@ -485,11 +510,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -534,11 +560,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0 HF0 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989944/"
         }
       ],
       "scores": [
@@ -571,7 +598,7 @@
       ],
       "product_status": {
         "known_affected": [
-          "2"
+          "3"
         ]
       },
       "remediations": [
@@ -579,14 +606,14 @@
           "category": "mitigation",
           "details": "Restrict access to authorized and trusted personal only",
           "product_ids": [
-            "2"
+            "3"
           ]
         },
         {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -599,7 +626,7 @@
             "version": "3.1"
           },
           "products": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -620,7 +647,7 @@
       ],
       "product_status": {
         "known_affected": [
-          "2"
+          "3"
         ]
       },
       "remediations": [
@@ -628,21 +655,21 @@
           "category": "mitigation",
           "details": "Only use trusted SINEMA Remote Connect Servers",
           "product_ids": [
-            "2"
+            "3"
           ]
         },
         {
           "category": "mitigation",
           "details": "Restrict access to authorized and trusted personal only",
           "product_ids": [
-            "2"
+            "3"
           ]
         },
         {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -655,7 +682,7 @@
             "version": "3.1"
           },
           "products": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -676,7 +703,7 @@
       ],
       "product_status": {
         "known_affected": [
-          "2"
+          "3"
         ]
       },
       "remediations": [
@@ -684,14 +711,14 @@
           "category": "mitigation",
           "details": "Restrict access to authorized and trusted personal only",
           "product_ids": [
-            "2"
+            "3"
           ]
         },
         {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "2"
+            "3"
           ]
         }
       ],
@@ -704,7 +731,7 @@
             "version": "3.1"
           },
           "products": [
-            "2"
+            "3"
           ]
         }
       ],

@@ -27,7 +27,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       }
     ],
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-446545: Impact of RegreSSHion (CVE-2024-6387)  in Siemens Industrial Products",
     "tracking": {
-      "current_release_date": "2024-09-10T00:00:00Z",
+      "current_release_date": "2025-07-08T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-07-08T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for SINAMICS IIoT module"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -94,10 +100,24 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "All versions < V1.0 HF1",
+                "product": {
+                  "name": "SINAMICS IIoT module",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS IIoT module"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
                 "name": "All versions < V3.2 SP2",
                 "product": {
                   "name": "SINEMA Remote Connect Server",
-                  "product_id": "2"
+                  "product_id": "3"
                 }
               }
             ],
@@ -111,7 +131,7 @@
                 "name": "vers:all/<V6.24",
                 "product": {
                   "name": "SINUMERIK ONE",
-                  "product_id": "3"
+                  "product_id": "4"
                 }
               }
             ],
@@ -142,7 +162,8 @@
         "known_affected": [
           "1",
           "2",
-          "3"
+          "3",
+          "4"
         ]
       },
       "remediations": [
@@ -152,7 +173,8 @@
           "product_ids": [
             "1",
             "2",
-            "3"
+            "3",
+            "4"
           ]
         },
         {
@@ -161,7 +183,8 @@
           "product_ids": [
             "1",
             "2",
-            "3"
+            "3",
+            "4"
           ]
         },
         {
@@ -170,14 +193,8 @@
           "product_ids": [
             "1",
             "2",
-            "3"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Migrate to Industrial Edge Management Virtual (IEM-V)",
-          "product_ids": [
-            "1"
+            "3",
+            "4"
           ]
         },
         {
@@ -189,17 +206,25 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V3.2 SP2 or later version",
+          "details": "Update to V1.0 HF1 or later version",
           "product_ids": [
             "2"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109989288/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2 SP2 or later version",
+          "product_ids": [
+            "3"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109974084/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V6.24 or later version",
+          "details": "Update to V6.24 or later version\nUpdated software version can be obtained from Siemens customer support or a local partner.",
           "product_ids": [
-            "3"
+            "4"
           ]
         }
       ],
@@ -214,7 +239,8 @@
           "products": [
             "1",
             "2",
-            "3"
+            "3",
+            "4"
           ]
         }
       ],

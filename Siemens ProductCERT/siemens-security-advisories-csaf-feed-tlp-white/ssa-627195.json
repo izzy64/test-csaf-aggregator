@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Mendix Studio Pro contains a vulnerability in the module installation process, that could allow an attacker to write or modify arbitrary files in directories outside a developer\u2019s project directory.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Mendix Studio Pro contains a vulnerability in the module installation process, that could allow an attacker to write or modify arbitrary files in directories outside a developer\u2019s project directory.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-627195: Zip Path Traversal Vulnerability in Mendix Studio Pro's Module Installation Process",
     "tracking": {
-      "current_release_date": "2025-06-12T00:00:00Z",
+      "current_release_date": "2025-07-08T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-07-08T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for Mendix Studio Pro 11"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -164,7 +170,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:all/<V11.0.0",
                 "product": {
                   "name": "Mendix Studio Pro 11",
                   "product_id": "7"
@@ -220,13 +226,6 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "7"
-          ]
-        },
-        {
           "category": "vendor_fix",
           "details": "Update to V10.12.17 or later version",
           "product_ids": [
@@ -257,6 +256,14 @@
             "4"
           ],
           "url": "https://docs.mendix.com/releasenotes/studio-pro/10.6/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V11.0.0 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/11/"
         },
         {
           "category": "vendor_fix",

@@ -51,7 +51,7 @@
     ],
     "title": "SSA-366067: Multiple Vulnerabilities in Fortigate NGFW Before V7.4.1 on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-06-10T00:00:00Z",
+      "current_release_date": "2025-07-08T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -90,10 +90,16 @@
           "legacy_version": "1.4",
           "number": "5",
           "summary": "Added CVE-2025-47294 and CVE-2023-37930"
+        },
+        {
+          "date": "2025-07-08T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added CVE-2023-29184"
         }
       ],
       "status": "final",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -1177,6 +1183,48 @@
         }
       ],
       "title": "CVE-2023-29183"
+    },
+    {
+      "cve": "CVE-2023-29184",
+      "cwe": {
+        "id": "CWE-459",
+        "name": "Incomplete Cleanup"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An incomplete cleanup vulnerability [CWE-459] in FortiOS 7.2 all versions and before  & FortiProxy version 7.2.0 through 7.2.2 and before 7.0.8 allows a VDOM privileged attacker to add SSH key files on the system silently via crafted CLI requests.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.1. Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.2,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:N/I:L/A:N/E:P",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-29184"
     },
     {
       "cve": "CVE-2023-33301",

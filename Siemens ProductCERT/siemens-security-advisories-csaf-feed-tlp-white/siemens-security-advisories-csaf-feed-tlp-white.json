@@ -9,6 +9,37 @@
     "entry": [
       {
         "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-725549",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2025-04-08T00:00:00Z",
+        "summary": {
+          "content": "A vulnerability exists in affected products that could allow remote attackers to affect the availability of the devices under certain conditions.\r\n\r\nThe integrated ICMP services in the underlying TCP/IP stack is vulnerable to a denial of service attack through specially crafted ICMP packets. A successful attack will impact the availability of ICMP services on affected products for a limited time before it restores itself after the attack ceases.\r\nOther communication services are not affected by this vulnerability.\r\n\r\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available."
+        },
+        "title": "Denial of Service of ICMP in Industrial Devices",
+        "updated": "2025-07-10T00:00:00Z"
+      },
+      {
+        "content": {
           "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-078892.json",
           "type": "application/json"
         },
@@ -594,37 +625,6 @@
           "content": "This advisory documents the impact of CVE-2024-3596 (also dubbed \"Blastradius\"), a vulnerability in the RADIUS protocol, to SCALANCE, RUGGEDCOM and related products.\r\n\r\nThe vulnerability could allow on-path attackers, located between a Network Access Server (the RADIUS client, e.g., SCALANCE or RUGGEDCOM devices) and a RADIUS server (e.g., SINEC INS), to forge Access-Request packets in a way that enables them to modify the corresponding server response packet at will, e.g., turning an \"Access-Reject\" message into an \"Access-Accept\". This would cause the Network Access Server to grant the attackers access to the network with the attackers desired authorization (and without the need of knowing or guessing legitimate access credentials).\r\n\r\nFurther details incl. external references can be found in the chapter \"Additional Information\".\r\nSiemens has released new versions for several affected products and recommends to update to the latest versions, and to configure the updated systems as recommended in the chapter \"Additional Information\".\r\nSiemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available. See chapter \"Additional Information\" for details."
         },
         "title": "RADIUS Protocol Susceptible to Forgery Attacks (CVE-2024-3596) - Impact to SCALANCE, RUGGEDCOM and Related Products",
-        "updated": "2025-07-08T00:00:00Z"
-      },
-      {
-        "content": {
-          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
-          "type": "application/json"
-        },
-        "format": {
-          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
-          "version": "2.0"
-        },
-        "id": "SSA-725549",
-        "link": [
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
-            "rel": "self"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.sha512",
-            "rel": "hash"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.asc",
-            "rel": "signature"
-          }
-        ],
-        "published": "2025-04-08T00:00:00Z",
-        "summary": {
-          "content": "A vulnerability exists in affected products that could allow remote attackers to affect the availability of the devices under certain conditions.\r\n\r\nThe integrated ICMP services in the underlying TCP/IP stack is vulnerable to a denial of service attack through specially crafted ICMP packets. A successful attack will impact the availability of ICMP services on affected products for a limited time before it restores itself after the attack ceases.\r\nOther communication services are not affected by this vulnerability.\r\n\r\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available."
-        },
-        "title": "Denial of Service of ICMP in Industrial Devices",
         "updated": "2025-07-08T00:00:00Z"
       },
       {
@@ -21499,6 +21499,6 @@
       }
     ],
     "title": "Siemens Security Advisories CSAF feed (TLP:WHITE)",
-    "updated": "2025-07-09T08:32:13.345520Z"
+    "updated": "2025-07-10T08:32:10.774853Z"
   }
 }

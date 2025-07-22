@@ -9,6 +9,37 @@
     "entry": [
       {
         "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-725549",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2025-04-08T00:00:00Z",
+        "summary": {
+          "content": "A vulnerability exists in affected products that could allow remote attackers to affect the availability of the devices under certain conditions.\r\n\r\nThe integrated ICMP services in the underlying TCP/IP stack is vulnerable to a denial of service attack through specially crafted ICMP packets. A successful attack will impact the availability of ICMP services on affected products for a limited time before it restores itself after the attack ceases.\r\nOther communication services are not affected by this vulnerability.\r\n\r\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available."
+        },
+        "title": "Denial of Service of ICMP in Industrial Devices",
+        "updated": "2025-07-21T00:00:00Z"
+      },
+      {
+        "content": {
           "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-183963.json",
           "type": "application/json"
         },
@@ -37,37 +68,6 @@
         },
         "title": "Certificate Validation Vulnerabilities in SICAM TOOLBOX II Before V07.11",
         "updated": "2025-07-18T00:00:00Z"
-      },
-      {
-        "content": {
-          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
-          "type": "application/json"
-        },
-        "format": {
-          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
-          "version": "2.0"
-        },
-        "id": "SSA-725549",
-        "link": [
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json",
-            "rel": "self"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.sha512",
-            "rel": "hash"
-          },
-          {
-            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-725549.json.asc",
-            "rel": "signature"
-          }
-        ],
-        "published": "2025-04-08T00:00:00Z",
-        "summary": {
-          "content": "A vulnerability exists in affected products that could allow remote attackers to affect the availability of the devices under certain conditions.\r\n\r\nThe integrated ICMP services in the underlying TCP/IP stack is vulnerable to a denial of service attack through specially crafted ICMP packets. A successful attack will impact the availability of ICMP services on affected products for a limited time before it restores itself after the attack ceases.\r\nOther communication services are not affected by this vulnerability.\r\n\r\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available."
-        },
-        "title": "Denial of Service of ICMP in Industrial Devices",
-        "updated": "2025-07-10T00:00:00Z"
       },
       {
         "content": {
@@ -21499,6 +21499,6 @@
       }
     ],
     "title": "Siemens Security Advisories CSAF feed (TLP:WHITE)",
-    "updated": "2025-07-21T08:36:32.406846Z"
+    "updated": "2025-07-22T08:34:30.063337Z"
   }
 }

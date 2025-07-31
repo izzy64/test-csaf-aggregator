@@ -28,7 +28,6 @@ import urllib3
 ##########################
 # Custom Local Files
 ##########################
-from helpers import clean_key
 import env
 
 if not env.verify:
@@ -36,6 +35,12 @@ if not env.verify:
 
 now = datetime.now()
 workingdir = os.getcwd()
+
+def clean_key(key):
+    lines = key.splitlines()
+    filtered_list = [x for x in lines if not any(y in x for y in ["Version", "Comment", "MessageID", "Hash", "Charset"])]
+    filtered_key = "\n".join(filtered_list).replace("\n\n", "\n")
+    return filtered_key
 
 def load_aggregator():
     '''Load Aggregator

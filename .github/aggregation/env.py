@@ -7,4 +7,4 @@ dt_format = "%Y-%m-%dT%H:%M:%S.%fZ"
 
 verify=False
 
-aggregator_name = "aggregator_CISA.json"
+aggregator_name = "aggregator.json"

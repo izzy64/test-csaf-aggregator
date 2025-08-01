@@ -241,6 +241,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     )
     # If the fetch was successful, continue parsing and retrieving needed files.
     if pm_response.status_code == 200:
+        print(f"{publisher_name} response: {pm_response.text}")
         n_requests += 1
         provider_metadata = pm_response.json()
         # update provider metadata

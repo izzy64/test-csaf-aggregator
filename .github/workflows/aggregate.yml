@@ -2,8 +2,9 @@ name: Aggregate
 
 on:
   schedule:
-    - cron: "0 8 * * *" # 8 a.m. every day UTC
-    # - cron: "0 * * * *"
+    - cron: "0 8 * * 3,5" # 8 a.m. every wednesday and friday UTC
+    # - cron: "0 8 * * *" # Every day at 8
+    # - cron: "0 * * * *" # Every hour
   workflow_dispatch:
 
 jobs:

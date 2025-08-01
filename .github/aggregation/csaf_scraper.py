@@ -172,8 +172,6 @@ def get_csaf_updated_time(path:str):
     Returns:
         updated_time: A datetime string.
     '''
-    if "-10-" in path:
-        print("Here")
     try:
         # Grab timestamp of local copy of CSAF
         if os.path.isfile(path):
@@ -295,15 +293,11 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
                                         # If timestamp is newer than what is stored locally, mark for update
                                         if updated_time > old_updated_time:
                                             rolie_dict[entry["id"]]["update"] = True
-                                            if "-10-" in entry["id"]:
-                                                print(rolie_dict[entry["id"]])
 
                                 # fetch csafs for update
                                 for advid, entry in rolie_dict.items():
                                     if entry["update"]:
                                         print(f"Fetching data for {entry['id']}")
-                                        if "-10-" in advid:
-                                            print("Here")
                                         try:
                                             # Fetch new/updated CSAFs
                                             csaf_response = requests.get(

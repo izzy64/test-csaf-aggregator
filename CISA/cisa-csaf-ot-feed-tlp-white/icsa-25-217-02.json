@@ -3,10 +3,17 @@
     "acknowledgments": [
       {
         "names": [
-          "Souvik Kandar"
+          "Anthony Rose", "Jacob Krasnov"
         ],
-        "organization": "MicroSec (microsec.io)",
-        "summary": "reporting this vulnerability to CISA"
+        "organization": "BC Security",
+        "summary": "reporting these vulnerabilities to CISA"
+      },
+      {
+        "names": [
+          "Peter Kariuki"
+        ],
+        "organization": "Ovanova",
+        "summary": "reporting these vulnerabilities to CISA"
       }
     ],
     "category": "csaf_security_advisory",
@@ -27,12 +34,12 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of this vulnerability could allow an unauthenticated attacker to access the device's configuration port and execute commands.",
+        "text": "Successful exploitation of these vulnerabilities could allow attackers to gain unauthorized administrative access using hard-coded credentials, escalate privileges to take full control of the device, modify system settings, disrupt solar energy production, interfere with safety mechanisms, execute arbitrary commands via command injection, cause service disruptions, expose sensitive data, and recreate valid session IDs to access sensitive device functions on connected solar inverter systems due to insecure session ID generation.",
         "title": "Risk evaluation"
       },
       {
         "category": "other",
-        "text": "Critical Manufacturing",
+        "text": "Energy",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -42,12 +49,12 @@
       },
       {
         "category": "other",
-        "text": "Canada",
+        "text": "United States",
         "title": "Company headquarters location"
       },
       {
         "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability, such as:",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities, such as:",
         "title": "Recommended Practices"
       },
       {
@@ -92,7 +99,7 @@
       },
       {
         "category": "general",
-        "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.",
+        "text": "No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time.",
         "title": "Recommended Practices"
       }
     ],
@@ -105,13 +112,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-25-148-04 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-148-04.json"
+        "summary": "ICS Advisory ICSA-25-217-02 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-217-02.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-25-148-04 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-148-04"
+        "summary": "ICSA Advisory ICSA-25-217-02 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-217-02"
       },
       {
         "category": "external",
@@ -154,34 +161,28 @@
         "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       }
     ],
-    "title": "Instantel Micromate (Update A)",
+    "title": "Tigo Energy Cloud Connect Advanced",
     "tracking": {
-      "current_release_date": "2025-08-07T06:00:00.000000Z",
+      "current_release_date": "2025-08-05T06:00:00.000000Z",
       "generator": {
-        "date": "2025-08-07T13:28:24.559613Z",
+        "date": "2025-08-05T19:37:26.399339Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-25-148-04",
-      "initial_release_date": "2025-05-29T06:00:00.000000Z",
+      "id": "ICSA-25-217-02",
+      "initial_release_date": "2025-08-05T06:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2025-05-29T06:00:00.000000Z",
+          "date": "2025-08-05T06:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
-        },
-        {
-          "date": "2025-08-07T06:00:00.000000Z",
-          "legacy_version": "Update A",
-          "number": "2",
-          "summary": "Update A - Mitigations section updated to include the patch that is now available, updated the versions affected, and updated language in the advisory."
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -192,33 +193,33 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<11.0BD_and_11.0CB",
+                "name": "<=4.0.1",
                 "product": {
-                  "name": "Instantel Micromate: <11.0BD_and_11.0CB",
+                  "name": "Tigo Energy Cloud Connect Advanced: <=4.0.1",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Micromate"
+            "name": "Cloud Connect Advanced"
           }
         ],
         "category": "vendor",
-        "name": "Instantel"
+        "name": "Tigo Energy"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-1907",
+      "cve": "CVE-2025-7768",
       "cwe": {
-        "id": "CWE-306",
-        "name": "Missing Authentication for Critical Function"
+        "id": "CWE-798",
+        "name": "Use of Hard-coded Credentials"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Instantel's Micromate, when connected to a modem that enables remote access, is vulnerable due to a lack of proper authentication on a configuration port. This vulnerability allows unauthorized attackers to gain access and execute commands, potentially leading to device reconfiguration. However, this does not allow for access to other network resources or escalation beyond the device itself.",
+          "text": "Tigo Energy's Cloud Connect Advanced (CCA) device contains hard-coded credentials that allow unauthorized users to gain administrative access. This vulnerability enables attackers to escalate privileges and take full control of the device, potentially modifying system settings, disrupting solar energy production, and interfering with safety mechanisms.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -231,7 +232,7 @@
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2025-1907"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-7768"
         },
         {
           "category": "external",
@@ -246,34 +247,19 @@
       ],
       "remediations": [
         {
-          "category": "vendor_fix",
-          "details": "Instantel has released an update that effectively mitigates the vulnerability found in the Micromate. It can be downloaded from Instantel's website.",
-          "product_ids": [
-            "CSAFPID-0001"
-          ],
-          "url": "https://www.instantel.com/resource/micromate"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Instantel also advises Micromate users to implement the following measures for safety:",
+          "category": "mitigation",
+          "details": "Tigo Energy is aware of these vulnerabilities and is actively working on a fix to address them.",
           "product_ids": [
             "CSAFPID-0001"
           ]
         },
         {
           "category": "mitigation",
-          "details": "Establish and maintain a list of approved IP addresses that are allowed to access the modem to help prevent unauthorized access.",
-          "product_ids": [
-            "CSAFPID-0001"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "For more information, contact Instantel technical support.",
+          "details": "Visit Tigo Energy's Help Center for more specific security recommendations.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "https://www.instantel.com/service-and-support/contact-technical-support"
+          "url": "https://support.tigoenergy.com/hc/en-us"
         }
       ],
       "scores": [
@@ -282,6 +268,138 @@
             "baseScore": 9.8,
             "baseSeverity": "CRITICAL",
             "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-7769",
+      "cwe": {
+        "id": "CWE-77",
+        "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Tigo Energy's CCA is vulnerable to a command injection vulnerability in the /cgi-bin/mobile_api endpoint when the DEVICE_PING command is called, allowing remote code execution due to improper handling of user input. When used with default credentials, this enables attackers to execute arbitrary commands on the device that could cause potential unauthorized access, service disruption, and data exposure.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-7769"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Tigo Energy is aware of these vulnerabilities and is actively working on a fix to address them.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Visit Tigo Energy's Help Center for more specific security recommendations.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://support.tigoenergy.com/hc/en-us"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2025-7770",
+      "cwe": {
+        "id": "CWE-337",
+        "name": "Predictable Seed in Pseudo-Random Number Generator (PRNG)"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Tigo Energy's CCA device is vulnerable to insecure session ID generation in their remote API. The session IDs are generated using a predictable method based on the current timestamp, allowing attackers to recreate valid session IDs. When combined with the ability to circumvent session ID requirements for certain commands, this enables unauthorized access to sensitive device functions on connected solar optimization systems.",
+          "title": "Vulnerability Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-7770"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Tigo Energy is aware of these vulnerabilities and is actively working on a fix to address them.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Visit Tigo Energy's Help Center for more specific security recommendations.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "https://support.tigoenergy.com/hc/en-us"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [

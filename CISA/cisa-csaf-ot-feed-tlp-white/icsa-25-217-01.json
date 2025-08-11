@@ -2,12 +2,8 @@
   "document": {
     "acknowledgments": [
       {
-         "names": [
-          "Asher Davila",
-          "Malav Vyas"
-        ],
-        "organization": "Palo Alto Networks",
-        "summary": "reporting this vulnerability to Mitsubishi Electric and CISA"
+        "organization": "Mitsubishi Electric",
+        "summary": "reporting this vulnerability to CISA"
       }
     ],
     "category": "csaf_security_advisory",
@@ -28,7 +24,7 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of this vulnerability could result in information tampering on the target workstation.",
+        "text": "Successful exploitation of this vulnerability could result in information tampering.",
         "title": "Risk evaluation"
       },
       {
@@ -75,6 +71,11 @@
         "category": "general",
         "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time. This vulnerability is not exploitable remotely.",
         "title": "Recommended Practices"
+      },
+      {
+        "category": "other",
+        "text": "Mitsubishi Electric and Mitsubishi Electric Iconics Digital Solutions Inc. are both listed as the affected vendor.",
+        "title": "Affected vendors"
       }
     ],
     "publisher": {
@@ -86,13 +87,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-25-140-04 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-140-04.json"
+        "summary": "ICS Advisory ICSA-25-217-01 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-217-01.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-25-140-04 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-140-04"
+        "summary": "ICSA Advisory ICSA-25-217-01 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-217-01"
       },
       {
         "category": "external",
@@ -135,34 +136,28 @@
         "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       }
     ],
-    "title": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric Products (Update A)",
+    "title": "Mitsubishi Electric Iconics Digital Solutions Multiple Products",
     "tracking": {
-      "current_release_date": "2025-08-07T06:00:00.000000Z",
+      "current_release_date": "2025-08-05T06:00:00.000000Z",
       "generator": {
-        "date": "2025-08-07T13:25:43.897969Z",
+        "date": "2025-08-05T17:11:56.620336Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-25-140-04",
-      "initial_release_date": "2025-05-20T06:00:00.000000Z",
+      "id": "ICSA-25-217-01",
+      "initial_release_date": "2025-08-05T06:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2025-05-20T06:00:00.000000Z",
+          "date": "2025-08-05T06:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
-        },
-        {
-          "date": "2025-08-07T06:00:00.000000Z",
-          "legacy_version": "Update A",
-          "number": "2",
-          "summary": "Update A - Removed AlarmWorX64 wording from the Affected Products section, added reference to other services in the vulnerability overview, removed the multi-agent service disablement mitigation action, and updated CVE description and CVSS score."
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -219,15 +214,15 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-0921",
+      "cve": "CVE-2025-7376",
       "cwe": {
-        "id": "CWE-250",
-        "name": "Execution with Unnecessary Privileges"
+        "id": "CWE-64",
+        "name": "Windows Shortcut Following (.LNK)"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "An execution with unnecessary privileges vulnerability in the AlarmWorX64 MMX Pager agent and other services can provide the potential for information tampering. An attacker could make an unauthorized write to arbitrary files by creating a symbolic link from a file used as a write destination by GENESIS64, GENESIS, and MC Works64 to a target file. This could allow the attacker to destroy the file on a PC with GENESIS64, GENESIS, and MC Works64 installed, resulting in a denial-of-service (DoS) condition on the PC.",
+          "text": "An information tampering vulnerability due to Windows Shortcut Following exists in multiple processes in GENESIS64, MC Works64, and GENESIS. An attacker must first obtain the ability to execute low-privileged code on the target system to exploit this vulnerability. By creating a symbolic link, an attacker can cause the processes to make unauthorized writes to arbitrary files on the file system in any location that is accessible to the user under which the elevated processes are running, resulting in a denial-of-service (DoS) condition on the PC if the modified file is necessary for the operation of the PC.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -242,39 +237,31 @@
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2025-0921"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-7376"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:N"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+          "url": "https://www.first.org/cvss/calculator/v4-0#CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
-          "category": "mitigation",
-          "details": "Mitsubishi recommends updating the following to the latest versions:",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003"
-          ]
-        },
-        {
           "category": "vendor_fix",
-          "details": "GENESIS: Versions 11.01 or later",
+          "details": "Mitsubishi Iconics Digital Solutions recommends users upgrade to GENESIS Version 11.01, which contains a fix for this vulnerability. For the highest level of security, it is recommended that users upgrade their system to the latest version and keep it up-to-date with the latest releases. Consult Mitsubishi Electric Iconics Digital Solutions Support for upgrade assistance.",
           "product_ids": [
             "CSAFPID-0002"
-          ]
+          ],
+          "url": "https://iconics.com/en-us/Support"
         },
         {
           "category": "mitigation",
-          "details": "Mitsubishi Electric recommends that users take the following mitigations to minimize the risk of exploiting this vulnerability:",
+          "details": "Users who remain on affected versions should be aware of this information tampering vulnerability and take any necessary precautions to keep the system safe from potential attackers such as:",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -288,20 +275,6 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "In GENESIS 11.00, do not enable the Classic OPC Point Manager service.",
-          "product_ids": [
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "In GENESIS 11.00, only the Classic OPC Point Manager is affected by this vulnerability. This service is disabled by default and should not be enabled to mitigate this vulnerability.",
-          "product_ids": [
-            "CSAFPID-0002"
           ]
         },
         {
@@ -342,7 +315,7 @@
         },
         {
           "category": "mitigation",
-          "details": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric recommends updating the ICONICS Suite with the latest security patches as they become available. ICONICS Suite security patches may be found at the following link: https://partners.iconics.com/Home.aspx. Note that a login is required.",
+          "details": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric recommends updating the ICONICS Suite with the latest security patches as they become available. ICONICS Suite security patches may be found here (login required).",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -352,31 +325,21 @@
         },
         {
           "category": "mitigation",
-          "details": "Refer to the Mitsubishi Electric Iconics Digital Solutions Whitepaper on Security Vulnerabilities, the most recent version of which can be found at: https://iconics.com/About/Security/CERT",
+          "details": "For more information, see Mitsubishi Electric's security advisory.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003"
           ],
-          "url": "https://iconics.com/About/Security/CERT"
-        },
-        {
-          "category": "mitigation",
-          "details": "Refer to the Mitsubishi Electric security advisory at: https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2025-002_en.pdf for information on the availability of the security updates.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003"
-          ],
-          "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2025-002_en.pdf"
+          "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2025-009_en.pdf"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.5,
+            "baseScore": 5.9,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [

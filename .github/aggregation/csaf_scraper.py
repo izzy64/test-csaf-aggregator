@@ -158,9 +158,15 @@ def get_provider_pgp_keys(metadata:dict, num_requests:int):
     # Request the provider's Public PGP Keys
     provider_keys = json.loads(json.dumps(metadata["public_openpgp_keys"]))
     for j, key in enumerate(provider_keys):
-        provider_keys[j]["blob"] = clean_key(requests.get(
-            provider_keys[j]["url"], allow_redirects=True, verify=env.verify
-        ).text)
+        try: 
+            provider_keys[j]["blob"] = clean_key(requests.get(
+                provider_keys[j]["url"], allow_redirects=True, verify=env.verify
+            ).text)
+            with open(workingdir+os.sep+"backup_public_keys"+os.sep+f"{key['fingerprint']}.asc", "w") as f:
+                f.write(provider_keys[j]["blob"])         
+        except:
+            with open(workingdir+os.sep+"backup_public_keys"+os.sep+f"{key['fingerprint']}.asc") as f:
+                provider_keys[j]["blob"] = clean_key(f.read())
         num_requests += 1 # Keep track of number of requests
     return provider_keys, num_requests
 def get_csaf_updated_time(path:str):
@@ -243,6 +249,8 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     # If the fetch was successful, continue parsing and retrieving needed files.
     if pm_response.status_code == 200:
         provider_metadata = pm_response.json()
+        with open(workingdir+os.sep+"backup_provider_metadata"+os.sep+f"{publisher_name}_provider_metadata.json", "w") as pm:
+            pm.write(provider_metadata)
     else:
         # A failed fetch is recorded in a log file.
         with open("logs.txt", "a") as f:

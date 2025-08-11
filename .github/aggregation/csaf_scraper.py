@@ -237,152 +237,161 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     pm_response = requests.get(
         pm_url, allow_redirects=True, verify=env.verify
     )
+    n_requests += 1
     print(f"{publisher_name} response: {pm_response}")
 
     # If the fetch was successful, continue parsing and retrieving needed files.
     if pm_response.status_code == 200:
-        n_requests += 1
         provider_metadata = pm_response.json()
-        # update provider metadata
-        provider_metadata["canonical_url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
-        provider_metadata["last_updated"] = now.strftime(env.dt_format)
-        provider["metadata"]["last_updated"] = now.strftime(env.dt_format)
-
-        # keep the provider public keys
-        provider_keys, n_requests = get_provider_pgp_keys(provider_metadata, n_requests)
-
-        # scrape the rolie feeds
-        for distro in provider_metadata["distributions"]:
-            if "rolie" in distro.keys():
-                for feed in distro["rolie"]["feeds"]:
-                    try:
-                        # fetch rolie
-                        rolie_response = requests.get(
-                            feed["url"], allow_redirects=True, verify=env.verify
-                        )
-                        # If rolie is successful, continue parsing and retrieving needed files.
-                        if rolie_response.status_code == 200:
-                            n_requests += 1
-                            rolie = rolie_response.json()
-                            if rolie:
-                                print(f"Fetching results for ROLIE feed {rolie['feed']['id']}")
-                                if not os.path.exists(path_start+os.sep+rolie["feed"]['id']): 
-                                    os.makedirs(path_start+os.sep+rolie["feed"]['id'])
-                                feed_path = path_start+os.sep+rolie["feed"]['id']
-                                rolie_copy = json.loads(json.dumps(rolie)) # equivalent to deep copy
-                                try:
-                                    with open(f"{feed_path}"+os.sep+f"{rolie['feed']['id']}.json", "r") as old_file:
-                                        old_rolie = json.loads(old_file.read())
-                                except:
-                                    old_rolie = {}
-
-                                # Mirror URL for local copy of rolie feed
-                                feed["url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
-
-                                rolie_dict = {item['id']:item|{"update":False} for item in rolie.get("feed",{}).get("entry",[])}
-
-                                # Cull already fetched csafs from fetch pool
-                                if rolie.get("feed",{}).get("entry",[]):
-                                    for entry in rolie["feed"]["entry"]:
-                                        try:
-                                            updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
-                                            old_updated_time = parser.parse(get_csaf_updated_time(f"{feed_path}"+os.sep+f"{entry['id'].lower()}.json"))
-                                        except Exception as e:
-                                            print("Error here: "+str(e))
-                                            continue
-                                        # If timestamp is newer than what is stored locally, mark for update
-                                        if updated_time > old_updated_time:
-                                            rolie_dict[entry["id"]]["update"] = True
-
-                                # fetch csafs for update
-                                for advid, entry in rolie_dict.items():
-                                    if entry["update"]:
-                                        print(f"Fetching data for {entry['id']}")
-                                        try:
-                                            # Fetch new/updated CSAFs
-                                            csaf_response = requests.get(
-                                                entry["content"]["src"], allow_redirects=True, verify=env.verify
-                                            )
-                                            n_requests += 1
-                                            # If fetch is successful, fetch signatures and hashes
-                                            if csaf_response.status_code == 200:
-                                                try:
-                                                    csaf = csaf_response.json()
-                                                except:
-                                                    break
-                                                if csaf:
-                                                    # Save CSAF
-                                                    with open(f"{feed_path}"+os.sep+f"{entry['id'].lower()}.json", "w", encoding='utf-8') as outfile:
-                                                        print(f"Saving {entry['id'].lower()}")
-                                                        outfile.write(csaf_response.text)
-                                                        # json.dump(csaf, outfile, indent=2, sort_keys=True, ensure_ascii=False)
-                                                for link in entry["link"]:
-                                                    if link["rel"] in ["hash", "signature"]:
-                                                        link_response = requests.get(
-                                                            link["href"], allow_redirects=True, verify=env.verify
-                                                        )
-                                                        # If fetch is successful, attempt to verify.
-                                                        if link_response.status_code == 200:
-                                                            n_requests += 1
-                                                            # check sig
-                                                            if link["rel"] == "signature":
-                                                                verify_signature(link,provider_keys,link_response.text,csaf_response,feed_path)
-                                                            # check hash
-                                                            if link["rel"] == "hash":
-                                                                verify_hash(link,link_response.text,csaf_response,feed_path)
-                                                        else:
-                                                            # Record issues in log file.
-                                                            with open("logs.txt", "a") as f:
-                                                                if link["rel"] == "signature":
-                                                                    f.write(f"{publisher_name} CSAF Signature File request for {advid} FAILED with code [{link_response.status_code}] and message: {link_response.text}\n")
-                                                                elif link["rel"] == "hash":
-                                                                    f.write(f"{publisher_name} CSAF Hash File request for {advid} FAILED with code [{link_response.status_code}] and message: {link_response.text}\n")
-                                            else:
-                                                with open("logs.txt", "a") as f:
-                                                    f.write(f"{publisher_name} CSAF request for {advid} FAILED with code [{csaf_response.status_code}] and message: {csaf_response.text}\n")
-                                        except Exception as e:
-                                            print(e)
-                                            with open("logs.txt", "a") as f:
-                                                f.write(f"{publisher_name} CSAF File Fetch requests for {advid} FAILED due to error: {str(e)}\n")
-                                            continue
-
-                                # update mirrored ROLIE
-                                if rolie_copy.get("feed",{}).get("link",[]):
-                                    rolie_copy["feed"]["link"] = [
-                                        {
-                                            "rel": "self",
-                                            "href": f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie_copy['feed']['id']}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
-                                        },
-                                    ]
-                                if rolie_copy.get("feed",{}).get("updated",""):
-                                    rolie_copy["feed"]["updated"] = now.strftime(env.dt_format)
-
-                                mirrorURL = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}".replace(" ", "%20")
-                                updateROLIEURLs(rolie_copy,f"{mirrorURL}/{rolie_copy['feed']['id']}/")
-
-                                with open(f"{feed_path}"+os.sep+f"{rolie_copy['feed']['id']}.json", "w") as outfile:
-                                    print(f"Saving ROLIE {rolie_copy['feed']['id']}")
-                                    json.dump(rolie_copy, outfile, indent=2, sort_keys=True)
-                        else:
-                            # A failed fetch is recorded in a log file.
-                            with open("logs.txt", "a") as f:
-                                f.write(f"{publisher_name} ROLIE request FAILED with code [{rolie_response.status_code}] and message: {rolie_response.text}\n")
-                    except Exception as e:
-                        print(e)
-                        with open("logs.txt", "a") as f:
-                            f.write(f"{publisher_name} ROLIE request FAILED due to error: {str(e)}\n")
-                        continue
-                        
-        # Save the mirrored provider metadata
-        if not os.path.exists(workingdir+os.sep+publisher_name): 
-            os.makedirs(workingdir+os.sep+publisher_name)
-        with open(f"{path_start}"+os.sep+"provider_metadata.json", "w") as outfile:
-            print(f"Saving Provider Metadata for {publisher_name}")
-            json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
     else:
         # A failed fetch is recorded in a log file.
         with open("logs.txt", "a") as f:
             f.write(f"{publisher_name} Provider-Metadata request FAILED with code [{pm_response.status_code}] and message: {pm_response.text}\n")
+        try:
+            # Read in backup provider_metadata
+            with open(workingdir+os.sep+"backup_provider_metadata"+os.sep+f"{publisher_name}_provider_metadata.json", "r") as pm:
+                contents = pm.read()
+                provider_metadata = json.loads(contents)
+        except:
+            print("backup Provider-Metadata not found")
+            return n_requests
+    # update provider metadata
+    provider_metadata["canonical_url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/provider_metadata.json".replace(" ", "%20")
+    provider_metadata["last_updated"] = now.strftime(env.dt_format)
+    provider["metadata"]["last_updated"] = now.strftime(env.dt_format)
+
+    # keep the provider public keys
+    provider_keys, n_requests = get_provider_pgp_keys(provider_metadata, n_requests)
+
+    # scrape the rolie feeds
+    for distro in provider_metadata["distributions"]:
+        if "rolie" in distro.keys():
+            for feed in distro["rolie"]["feeds"]:
+                try:
+                    # fetch rolie
+                    rolie_response = requests.get(
+                        feed["url"], allow_redirects=True, verify=env.verify
+                    )
+                    # If rolie is successful, continue parsing and retrieving needed files.
+                    if rolie_response.status_code == 200:
+                        n_requests += 1
+                        rolie = rolie_response.json()
+                        if rolie:
+                            print(f"Fetching results for ROLIE feed {rolie['feed']['id']}")
+                            if not os.path.exists(path_start+os.sep+rolie["feed"]['id']): 
+                                os.makedirs(path_start+os.sep+rolie["feed"]['id'])
+                            feed_path = path_start+os.sep+rolie["feed"]['id']
+                            rolie_copy = json.loads(json.dumps(rolie)) # equivalent to deep copy
+                            try:
+                                with open(f"{feed_path}"+os.sep+f"{rolie['feed']['id']}.json", "r") as old_file:
+                                    old_rolie = json.loads(old_file.read())
+                            except:
+                                old_rolie = {}
+
+                            # Mirror URL for local copy of rolie feed
+                            feed["url"] = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie['feed']['id']}/{rolie['feed']['id']}.json".replace(" ", "%20")
+
+                            rolie_dict = {item['id']:item|{"update":False} for item in rolie.get("feed",{}).get("entry",[])}
+
+                            # Cull already fetched csafs from fetch pool
+                            if rolie.get("feed",{}).get("entry",[]):
+                                for entry in rolie["feed"]["entry"]:
+                                    try:
+                                        updated_time = parser.parse(rolie_dict.get(entry["id"],{}).get("updated",""))
+                                        old_updated_time = parser.parse(get_csaf_updated_time(f"{feed_path}"+os.sep+f"{entry['id'].lower()}.json"))
+                                    except Exception as e:
+                                        print("Error here: "+str(e))
+                                        continue
+                                    # If timestamp is newer than what is stored locally, mark for update
+                                    if updated_time > old_updated_time:
+                                        rolie_dict[entry["id"]]["update"] = True
+
+                            # fetch csafs for update
+                            for advid, entry in rolie_dict.items():
+                                if entry["update"]:
+                                    print(f"Fetching data for {entry['id']}")
+                                    try:
+                                        # Fetch new/updated CSAFs
+                                        csaf_response = requests.get(
+                                            entry["content"]["src"], allow_redirects=True, verify=env.verify
+                                        )
+                                        n_requests += 1
+                                        # If fetch is successful, fetch signatures and hashes
+                                        if csaf_response.status_code == 200:
+                                            try:
+                                                csaf = csaf_response.json()
+                                            except:
+                                                break
+                                            if csaf:
+                                                # Save CSAF
+                                                with open(f"{feed_path}"+os.sep+f"{entry['id'].lower()}.json", "w", encoding='utf-8') as outfile:
+                                                    print(f"Saving {entry['id'].lower()}")
+                                                    outfile.write(csaf_response.text)
+                                                    # json.dump(csaf, outfile, indent=2, sort_keys=True, ensure_ascii=False)
+                                            for link in entry["link"]:
+                                                if link["rel"] in ["hash", "signature"]:
+                                                    link_response = requests.get(
+                                                        link["href"], allow_redirects=True, verify=env.verify
+                                                    )
+                                                    # If fetch is successful, attempt to verify.
+                                                    if link_response.status_code == 200:
+                                                        n_requests += 1
+                                                        # check sig
+                                                        if link["rel"] == "signature":
+                                                            verify_signature(link,provider_keys,link_response.text,csaf_response,feed_path)
+                                                        # check hash
+                                                        if link["rel"] == "hash":
+                                                            verify_hash(link,link_response.text,csaf_response,feed_path)
+                                                    else:
+                                                        # Record issues in log file.
+                                                        with open("logs.txt", "a") as f:
+                                                            if link["rel"] == "signature":
+                                                                f.write(f"{publisher_name} CSAF Signature File request for {advid} FAILED with code [{link_response.status_code}] and message: {link_response.text}\n")
+                                                            elif link["rel"] == "hash":
+                                                                f.write(f"{publisher_name} CSAF Hash File request for {advid} FAILED with code [{link_response.status_code}] and message: {link_response.text}\n")
+                                        else:
+                                            with open("logs.txt", "a") as f:
+                                                f.write(f"{publisher_name} CSAF request for {advid} FAILED with code [{csaf_response.status_code}] and message: {csaf_response.text}\n")
+                                    except Exception as e:
+                                        print(e)
+                                        with open("logs.txt", "a") as f:
+                                            f.write(f"{publisher_name} CSAF File Fetch requests for {advid} FAILED due to error: {str(e)}\n")
+                                        continue
+
+                            # update mirrored ROLIE
+                            if rolie_copy.get("feed",{}).get("link",[]):
+                                rolie_copy["feed"]["link"] = [
+                                    {
+                                        "rel": "self",
+                                        "href": f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}/{rolie_copy['feed']['id']}/{rolie_copy['feed']['id']}.json".replace(" ", "%20")
+                                    },
+                                ]
+                            if rolie_copy.get("feed",{}).get("updated",""):
+                                rolie_copy["feed"]["updated"] = now.strftime(env.dt_format)
+
+                            mirrorURL = f"{env.github_raw_path_start}/{env.github_owner}/{env.repo_name}/{env.branch}/{publisher_name}".replace(" ", "%20")
+                            updateROLIEURLs(rolie_copy,f"{mirrorURL}/{rolie_copy['feed']['id']}/")
+
+                            with open(f"{feed_path}"+os.sep+f"{rolie_copy['feed']['id']}.json", "w") as outfile:
+                                print(f"Saving ROLIE {rolie_copy['feed']['id']}")
+                                json.dump(rolie_copy, outfile, indent=2, sort_keys=True)
+                    else:
+                        # A failed fetch is recorded in a log file.
+                        with open("logs.txt", "a") as f:
+                            f.write(f"{publisher_name} ROLIE request FAILED with code [{rolie_response.status_code}] and message: {rolie_response.text}\n")
+                except Exception as e:
+                    print(e)
+                    with open("logs.txt", "a") as f:
+                        f.write(f"{publisher_name} ROLIE request FAILED due to error: {str(e)}\n")
+                    continue
+                    
+    # Save the mirrored provider metadata
+    if not os.path.exists(workingdir+os.sep+publisher_name): 
+        os.makedirs(workingdir+os.sep+publisher_name)
+    with open(f"{path_start}"+os.sep+"provider_metadata.json", "w") as outfile:
+        print(f"Saving Provider Metadata for {publisher_name}")
+        json.dump(provider_metadata, outfile, indent=2, sort_keys=True)
+
     return n_requests
 def parse_aggregator(aggregator:dict):
     '''Parse Aggregator

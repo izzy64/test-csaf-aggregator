@@ -158,13 +158,18 @@ def get_provider_pgp_keys(metadata:dict, num_requests:int):
     # Request the provider's Public PGP Keys
     provider_keys = json.loads(json.dumps(metadata["public_openpgp_keys"]))
     for j, key in enumerate(provider_keys):
-        try: 
-            provider_keys[j]["blob"] = clean_key(requests.get(
+        try:
+            request = requests.get(
                 provider_keys[j]["url"], allow_redirects=True, verify=env.verify
-            ).text)
-            with open(workingdir+os.sep+"backup_public_keys"+os.sep+f"{key['fingerprint']}.asc", "w") as f:
-                f.write(provider_keys[j]["blob"])         
+            )
+            if request.status_code == 200:
+                provider_keys[j]["blob"] = clean_key(request.text)
+                with open(workingdir+os.sep+"backup_public_keys"+os.sep+f"{key['fingerprint']}.asc", "w") as f:
+                    f.write(provider_keys[j]["blob"])
+            else:
+                raise Exception("Couldn't fetch PGP key")
         except:
+            print(f"Couldn't fetch PGP key from {provider_keys[j]['url']}\nResorting to backup")
             with open(workingdir+os.sep+"backup_public_keys"+os.sep+f"{key['fingerprint']}.asc") as f:
                 provider_keys[j]["blob"] = clean_key(f.read())
         num_requests += 1 # Keep track of number of requests

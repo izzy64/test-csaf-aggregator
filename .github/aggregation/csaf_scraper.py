@@ -250,7 +250,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
     if pm_response.status_code == 200:
         provider_metadata = pm_response.json()
         with open(workingdir+os.sep+"backup_provider_metadata"+os.sep+f"{publisher_name}_provider_metadata.json", "w") as pm:
-            pm.write(provider_metadata)
+            json.dump(provider_metadata, pm)
     else:
         # A failed fetch is recorded in a log file.
         with open("logs.txt", "a") as f:

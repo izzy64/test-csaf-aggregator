@@ -264,6 +264,7 @@ def aggregate_provider_files(provider:dict, n_requests:int=0):
             # Read in backup provider_metadata
             with open(workingdir+os.sep+"backup_provider_metadata"+os.sep+f"{publisher_name}_provider_metadata.json", "r") as pm:
                 contents = pm.read()
+                print(f"Couldn't fetch Provider Metadata from {pm_url}\nResorting to backup")              
                 provider_metadata = json.loads(contents)
         except:
             print("backup Provider-Metadata not found")

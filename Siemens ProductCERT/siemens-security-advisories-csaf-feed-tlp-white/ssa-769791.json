@@ -1,0 +1,151 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "COMOS before V10.6 is affected by a local arbitrary code execution vulnerability in the integrated Open Design Alliance Drawings SDK.\n\nSiemens has released a new version for COMOS and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-769791: Local Arbitrary Code Execution Vulnerability in COMOS Before V10.6 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-769791.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-769791: Local Arbitrary Code Execution Vulnerability in COMOS Before V10.6 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-769791.json"
+      }
+    ],
+    "title": "SSA-769791: Local Arbitrary Code Execution Vulnerability in COMOS Before V10.6",
+    "tracking": {
+      "current_release_date": "2025-08-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-769791",
+      "initial_release_date": "2025-08-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-08-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<10.6",
+                "product": {
+                  "name": "COMOS",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "COMOS"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-8894",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Out-of-bounds Write vulnerability was discovered in Open Design Alliance Drawings SDK before 2025.10. Reading crafted DWF file and missing proper checks on received SectionIterator data can trigger an unhandled exception. This can allow attackers to cause a crash, potentially enabling a denial-of-service attack (Crash, Exit, or Restart) or possible code execution.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Ensure all files imported into the affected product originate from a trusted source and are transmitted over secure channels",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.6 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-8894"
+    }
+  ]
+}

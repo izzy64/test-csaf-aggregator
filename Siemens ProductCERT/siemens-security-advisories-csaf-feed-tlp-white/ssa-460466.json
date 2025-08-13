@@ -51,7 +51,7 @@
     ],
     "title": "SSA-460466: Denial of Service Vulnerability in TIA Project-Server and TIA Portal",
     "tracking": {
-      "current_release_date": "2025-07-08T00:00:00Z",
+      "current_release_date": "2025-08-12T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-08-12T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix TIA portal V19 Update 4 for TIA portal V19"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,7 +86,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V2.1.1",
+                "name": "vers:intdot/<2.1.1",
                 "product": {
                   "name": "TIA Project-Server",
                   "product_id": "1"
@@ -136,7 +142,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V19 Update 4",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V19",
                   "product_id": "5"
@@ -201,11 +207,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V19 Update 4 or later version",
           "product_ids": [
             "5"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109925643/"
         },
         {
           "category": "vendor_fix",

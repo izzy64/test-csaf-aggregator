@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SIMATIC IPC RS-828A is affected by an authentication bypass vulnerability in the Redfish interface of its Baseboard Management Controller (BMC) that could allow an attacker to gain unauthorized access and compromise confidentiality, integrity and availability of the BMC and thus the entire system.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "SIMATIC IPC RS-828A is affected by an authentication bypass vulnerability in the Redfish interface of its Baseboard Management Controller (BMC) that could allow an attacker to gain unauthorized access and compromise confidentiality, integrity and availability of the BMC and thus the entire system.\n\nSiemens has released a new version for SIMATIC IPC RS-828A - BMC firmware and recommends to update to the latest version.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-446307: Authentication Bypass Vulnerability in BMC (CVE-2024-54085) affects SIMATIC IPC RS-828A",
     "tracking": {
-      "current_release_date": "2025-05-13T00:00:00Z",
+      "current_release_date": "2025-08-12T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-08-12T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for SIMATIC IPC RS-828A - BMC firmware"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,15 +86,15 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<1.1.13",
                 "product": {
-                  "name": "SIMATIC IPC RS-828A",
+                  "name": "SIMATIC IPC RS-828A - BMC firmware",
                   "product_id": "1"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC IPC RS-828A"
+            "name": "SIMATIC IPC RS-828A - BMC firmware"
           }
         ],
         "category": "vendor",
@@ -117,18 +123,12 @@
       },
       "remediations": [
         {
-          "category": "mitigation",
-          "details": "Ensure access to the BMC network interface (X1P1) is limited to trusted networks only. See \nhttps://support.industry.siemens.com/cs/document/109954346 for details",
+          "category": "vendor_fix",
+          "details": "Update to V1.1.13 or later version",
           "product_ids": [
             "1"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "1"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         }
       ],
       "scores": [

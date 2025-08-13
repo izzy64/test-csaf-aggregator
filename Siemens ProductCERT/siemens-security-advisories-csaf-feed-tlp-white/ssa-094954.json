@@ -1,0 +1,342 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "RUGGEDCOM ROX II devices do not properly limit access through their Built-In-Self-Test (BIST) mode. This could allow a local attacker to bypass authentication and access a root shell on the device.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-094954: Authentication Bypass Vulnerability in BIST mode of RUGGEDCOM ROX II - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-094954.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-094954: Authentication Bypass Vulnerability in BIST mode of RUGGEDCOM ROX II - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-094954.json"
+      }
+    ],
+    "title": "SSA-094954: Authentication Bypass Vulnerability in BIST mode of RUGGEDCOM ROX II",
+    "tracking": {
+      "current_release_date": "2025-08-12T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-094954",
+      "initial_release_date": "2025-08-12T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-08-12T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX MX5000",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX MX5000"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX MX5000RE",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX MX5000RE"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1400",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1400"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1500",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1500"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1501",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1501"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1510",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1510"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1511",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1511"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1512",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1512"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1524",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1524"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1536",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1536"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX5000",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX5000"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-40761",
+      "cwe": {
+        "id": "CWE-288",
+        "name": "Authentication Bypass Using an Alternate Path or Channel"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly limit access through its Built-In-Self-Test (BIST) mode.\r\nThis could allow an attacker with physical access to the serial interface to bypass authentication and get access to a root shell on the device.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Ensure a secure boot password is set as described in the configuration manual to prevent unauthorized access to BIST mode. See \nhttps://support.industry.siemens.com/cs/document/109983826/ Sec. 5.9.3 for more details",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Ensure a secure boot password is set as described in the configuration manual to prevent unauthorized access to BIST mode. See \nhttps://support.industry.siemens.com/cs/document/109983829/ Sec. 5.9.3 for more details",
+          "product_ids": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Ensure a secure boot password is set as described in the configuration manual to prevent unauthorized access to BIST mode. See \nhttps://support.industry.siemens.com/cs/document/109983832/ Sec. 5.9.3 for more details",
+          "product_ids": [
+            "1",
+            "2",
+            "11"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40761"
+    }
+  ]
+}

@@ -51,7 +51,7 @@
     ],
     "title": "SSA-097435: Usernames Disclosure Vulnerability in Mendix Runtime",
     "tracking": {
-      "current_release_date": "2025-01-14T00:00:00Z",
+      "current_release_date": "2025-08-12T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -114,10 +114,16 @@
           "legacy_version": "1.8",
           "number": "9",
           "summary": "Added complete fix for Mendix Runtime V10.12 and V10.6; removed hint about additional required actions in former (incomplete) fix versions"
+        },
+        {
+          "date": "2025-08-12T00:00:00Z",
+          "legacy_version": "1.9",
+          "number": "10",
+          "summary": "Added mitigation for published REST and web services and oData APIs"
         }
       ],
       "status": "interim",
-      "version": "9"
+      "version": "10"
     }
   },
   "product_tree": {
@@ -128,7 +134,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.18.33",
+                "name": "vers:intdot/<8.18.33",
                 "product": {
                   "name": "Mendix Runtime V8",
                   "product_id": "1"
@@ -142,7 +148,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V9.24.31",
+                "name": "vers:intdot/<9.24.31",
                 "product": {
                   "name": "Mendix Runtime V9",
                   "product_id": "2"
@@ -156,7 +162,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V10.17.0",
+                "name": "vers:intdot/<10.17.0",
                 "product": {
                   "name": "Mendix Runtime V10",
                   "product_id": "3"
@@ -170,7 +176,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V10.6.19",
+                "name": "vers:intdot/<10.6.19",
                 "product": {
                   "name": "Mendix Runtime V10.6",
                   "product_id": "4"
@@ -184,7 +190,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V10.12.11",
+                "name": "vers:intdot/<10.12.11",
                 "product": {
                   "name": "Mendix Runtime V10.12",
                   "product_id": "5"
@@ -216,23 +222,34 @@
       ],
       "product_status": {
         "known_affected": [
-          "3",
-          "5",
-          "4",
           "1",
-          "2"
+          "2",
+          "3",
+          "4",
+          "5"
         ]
       },
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Do not use basic authentication, but setup an alternative authentication module (e.g. OIDC SSO, Mendix SSO, or SAML >= V4.0.0), or your own Identity Provider (IDP).",
+          "details": "For app user login: Do not use basic authentication, but setup an alternative authentication module (e.g. OIDC SSO, Mendix SSO, or SAML >= V4.0.0), or your own Identity Provider (IDP).",
           "product_ids": [
-            "3",
-            "5",
-            "4",
             "1",
-            "2"
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For published REST and web services and oData APIs: Do not use basic authentication, but use Custom or Active Session authentication methods.",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
           ]
         },
         {
@@ -240,35 +257,40 @@
           "details": "Update to V10.12.11 or later version",
           "product_ids": [
             "5"
-          ]
+          ],
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/10/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V10.17.0 or later version",
           "product_ids": [
             "3"
-          ]
+          ],
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/10/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V10.6.19 or later version",
           "product_ids": [
             "4"
-          ]
+          ],
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/10/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V8.18.33 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/8/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V9.24.31 or later version",
           "product_ids": [
             "2"
-          ]
+          ],
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/9/"
         }
       ],
       "scores": [
@@ -280,11 +302,11 @@
             "version": "3.1"
           },
           "products": [
-            "3",
-            "5",
-            "4",
             "1",
-            "2"
+            "2",
+            "3",
+            "4",
+            "5"
           ]
         }
       ],

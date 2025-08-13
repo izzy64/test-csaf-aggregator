@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SCALANCE XB-200/XC-200/XP-200/XF-200BA/XR-300WG Family is affected by multiple vulnerabilities.\nCVE-2023-44318 and CVE-2023-44321 were previously published as part of SSA-699386.\n\nSiemens recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "SCALANCE XB-200/XC-200/XP-200/XF-200BA/XR-300WG Family is affected by multiple vulnerabilities.\nCVE-2023-44318 and CVE-2023-44321 were previously published as part of SSA-699386.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       }
     ],
@@ -47,21 +47,11 @@
         "category": "self",
         "summary": "SSA-353002: Multiple Vulnerabilities in SCALANCE XB-200 / XC-200 / XP-200 / XF-200BA / XR-300WG Family - CSAF Version",
         "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-353002.json"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-353002: Multiple Vulnerabilities in SCALANCE XB-200 / XC-200 / XP-200 / XF-200BA / XR-300WG Family - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-353002.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-353002: Multiple Vulnerabilities in SCALANCE XB-200 / XC-200 / XP-200 / XF-200BA / XR-300WG Family - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-353002.txt"
       }
     ],
     "title": "SSA-353002: Multiple Vulnerabilities in SCALANCE XB-200 / XC-200 / XP-200 / XF-200BA / XR-300WG Family",
     "tracking": {
-      "current_release_date": "2024-06-11T00:00:00Z",
+      "current_release_date": "2025-08-12T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -82,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Clarify currently no fix planned"
+        },
+        {
+          "date": "2025-08-12T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for CVE-2023-44321"
         }
       ],
-      "status": "final",
-      "version": "2"
+      "status": "interim",
+      "version": "3"
     }
   },
   "product_tree": {
@@ -96,10 +92,23 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<4.6",
                 "product": {
                   "name": "SCALANCE XB205-3 (SC, PN) (6GK5205-3BB00-2AB2)",
                   "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5205-3BB00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XB205-3 (SC, PN) (6GK5205-3BB00-2AB2)",
+                  "product_id": "2",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BB00-2AB2"
@@ -115,10 +124,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB205-3 (ST, E/IP) (6GK5205-3BB00-2TB2)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5205-3BB00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB205-3 (ST, E/IP) (6GK5205-3BB00-2TB2)",
-                  "product_id": "2",
+                  "product_id": "4",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BB00-2TB2"
@@ -134,10 +156,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB205-3 (ST, E/IP) (6GK5205-3BD00-2TB2)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5205-3BD00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB205-3 (ST, E/IP) (6GK5205-3BD00-2TB2)",
-                  "product_id": "3",
+                  "product_id": "6",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BD00-2TB2"
@@ -153,10 +188,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB205-3 (ST, PN) (6GK5205-3BD00-2AB2)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5205-3BD00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB205-3 (ST, PN) (6GK5205-3BD00-2AB2)",
-                  "product_id": "4",
+                  "product_id": "8",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BD00-2AB2"
@@ -172,10 +220,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB205-3LD (SC, E/IP) (6GK5205-3BF00-2TB2)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5205-3BF00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB205-3LD (SC, E/IP) (6GK5205-3BF00-2TB2)",
-                  "product_id": "5",
+                  "product_id": "10",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BF00-2TB2"
@@ -191,10 +252,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB205-3LD (SC, PN) (6GK5205-3BF00-2AB2)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5205-3BF00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB205-3LD (SC, PN) (6GK5205-3BF00-2AB2)",
-                  "product_id": "6",
+                  "product_id": "12",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5205-3BF00-2AB2"
@@ -210,10 +284,215 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB206-2 (SC) (6GK5206-2BD00-2TB2)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BD00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XB206-2 (SC) (6GK5206-2BD00-2TB2)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BD00-2TB2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XB206-2 (SC) (6GK5206-2BD00-2TB2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB206-2 (ST/BFOC) (6GK5206-2BF00-2TB2)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BF00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XB206-2 (ST/BFOC) (6GK5206-2BF00-2TB2)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BF00-2TB2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XB206-2 (ST/BFOC) (6GK5206-2BF00-2TB2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB206-2 LD (6GK5206-2BF00-2AB2)",
+                  "product_id": "17",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BF00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XB206-2 LD (6GK5206-2BF00-2AB2)",
+                  "product_id": "18",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BF00-2AB2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XB206-2 LD (6GK5206-2BF00-2AB2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB206-2 SC (6GK5206-2BD00-2AB2)",
+                  "product_id": "19",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BD00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XB206-2 SC (6GK5206-2BD00-2AB2)",
+                  "product_id": "20",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BD00-2AB2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XB206-2 SC (6GK5206-2BD00-2AB2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB206-2 ST (6GK5206-2BB00-2AB2)",
+                  "product_id": "21",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BB00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XB206-2 ST (6GK5206-2BB00-2AB2)",
+                  "product_id": "22",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BB00-2AB2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XB206-2 ST (6GK5206-2BB00-2AB2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB206-2LD (6GK5206-2BB00-2TB2)",
+                  "product_id": "23",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BB00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XB206-2LD (6GK5206-2BB00-2TB2)",
+                  "product_id": "24",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BB00-2TB2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XB206-2LD (6GK5206-2BB00-2TB2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB208 (E/IP) (6GK5208-0BA00-2TB2)",
+                  "product_id": "25",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB208 (E/IP) (6GK5208-0BA00-2TB2)",
-                  "product_id": "7",
+                  "product_id": "26",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2TB2"
@@ -229,10 +508,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB208 (PN) (6GK5208-0BA00-2AB2)",
+                  "product_id": "27",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB208 (PN) (6GK5208-0BA00-2AB2)",
-                  "product_id": "8",
+                  "product_id": "28",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2AB2"
@@ -248,10 +540,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB213-3 (SC, E/IP) (6GK5213-3BD00-2TB2)",
+                  "product_id": "29",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5213-3BD00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB213-3 (SC, E/IP) (6GK5213-3BD00-2TB2)",
-                  "product_id": "9",
+                  "product_id": "30",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BD00-2TB2"
@@ -267,10 +572,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB213-3 (SC, PN) (6GK5213-3BD00-2AB2)",
+                  "product_id": "31",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5213-3BD00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB213-3 (SC, PN) (6GK5213-3BD00-2AB2)",
-                  "product_id": "10",
+                  "product_id": "32",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BD00-2AB2"
@@ -286,10 +604,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB213-3 (ST, E/IP) (6GK5213-3BB00-2TB2)",
+                  "product_id": "33",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5213-3BB00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB213-3 (ST, E/IP) (6GK5213-3BB00-2TB2)",
-                  "product_id": "11",
+                  "product_id": "34",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BB00-2TB2"
@@ -305,10 +636,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB213-3 (ST, PN) (6GK5213-3BB00-2AB2)",
+                  "product_id": "35",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5213-3BB00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB213-3 (ST, PN) (6GK5213-3BB00-2AB2)",
-                  "product_id": "12",
+                  "product_id": "36",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BB00-2AB2"
@@ -324,10 +668,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB213-3LD (SC, E/IP) (6GK5213-3BF00-2TB2)",
+                  "product_id": "37",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5213-3BF00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB213-3LD (SC, E/IP) (6GK5213-3BF00-2TB2)",
-                  "product_id": "13",
+                  "product_id": "38",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BF00-2TB2"
@@ -343,10 +700,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB213-3LD (SC, PN) (6GK5213-3BF00-2AB2)",
+                  "product_id": "39",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5213-3BF00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB213-3LD (SC, PN) (6GK5213-3BF00-2AB2)",
-                  "product_id": "14",
+                  "product_id": "40",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5213-3BF00-2AB2"
@@ -362,10 +732,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB216 (E/IP) (6GK5216-0BA00-2TB2)",
+                  "product_id": "41",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0BA00-2TB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB216 (E/IP) (6GK5216-0BA00-2TB2)",
-                  "product_id": "15",
+                  "product_id": "42",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2TB2"
@@ -381,10 +764,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XB216 (PN) (6GK5216-0BA00-2AB2)",
+                  "product_id": "43",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0BA00-2AB2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XB216 (PN) (6GK5216-0BA00-2AB2)",
-                  "product_id": "16",
+                  "product_id": "44",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2AB2"
@@ -400,10 +796,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2 (SC) (6GK5206-2BD00-2AC2)",
+                  "product_id": "45",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BD00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2 (SC) (6GK5206-2BD00-2AC2)",
-                  "product_id": "17",
+                  "product_id": "46",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BD00-2AC2"
@@ -419,10 +828,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2 (ST/BFOC) (6GK5206-2BB00-2AC2)",
+                  "product_id": "47",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BB00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2 (ST/BFOC) (6GK5206-2BB00-2AC2)",
-                  "product_id": "18",
+                  "product_id": "48",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BB00-2AC2"
@@ -438,10 +860,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2G PoE (6GK5206-2RS00-2AC2)",
+                  "product_id": "49",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2RS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2G PoE (6GK5206-2RS00-2AC2)",
-                  "product_id": "19",
+                  "product_id": "50",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2RS00-2AC2"
@@ -457,10 +892,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2G PoE (54 V DC) (6GK5206-2RS00-5AC2)",
+                  "product_id": "51",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2RS00-5AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2G PoE (54 V DC) (6GK5206-2RS00-5AC2)",
-                  "product_id": "20",
+                  "product_id": "52",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2RS00-5AC2"
@@ -476,10 +924,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2G PoE EEC (54 V DC) (6GK5206-2RS00-5FC2)",
+                  "product_id": "53",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2RS00-5FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2G PoE EEC (54 V DC) (6GK5206-2RS00-5FC2)",
-                  "product_id": "21",
+                  "product_id": "54",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2RS00-5FC2"
@@ -495,10 +956,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2SFP (6GK5206-2BS00-2AC2)",
+                  "product_id": "55",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2SFP (6GK5206-2BS00-2AC2)",
-                  "product_id": "22",
+                  "product_id": "56",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BS00-2AC2"
@@ -514,10 +988,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2SFP EEC (6GK5206-2BS00-2FC2)",
+                  "product_id": "57",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2BS00-2FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2SFP EEC (6GK5206-2BS00-2FC2)",
-                  "product_id": "23",
+                  "product_id": "58",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2BS00-2FC2"
@@ -533,10 +1020,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2SFP G (6GK5206-2GS00-2AC2)",
+                  "product_id": "59",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2SFP G (6GK5206-2GS00-2AC2)",
-                  "product_id": "24",
+                  "product_id": "60",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2GS00-2AC2"
@@ -552,10 +1052,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2SFP G (EIP DEF.) (6GK5206-2GS00-2TC2)",
+                  "product_id": "61",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2GS00-2TC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2SFP G (EIP DEF.) (6GK5206-2GS00-2TC2)",
-                  "product_id": "25",
+                  "product_id": "62",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2GS00-2TC2"
@@ -571,10 +1084,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC206-2SFP G EEC (6GK5206-2GS00-2FC2)",
+                  "product_id": "63",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5206-2GS00-2FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC206-2SFP G EEC (6GK5206-2GS00-2FC2)",
-                  "product_id": "26",
+                  "product_id": "64",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5206-2GS00-2FC2"
@@ -590,10 +1116,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC208 (6GK5208-0BA00-2AC2)",
+                  "product_id": "65",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC208 (6GK5208-0BA00-2AC2)",
-                  "product_id": "27",
+                  "product_id": "66",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2AC2"
@@ -609,10 +1148,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC208EEC (6GK5208-0BA00-2FC2)",
+                  "product_id": "67",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0BA00-2FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC208EEC (6GK5208-0BA00-2FC2)",
-                  "product_id": "28",
+                  "product_id": "68",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0BA00-2FC2"
@@ -628,10 +1180,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC208G (6GK5208-0GA00-2AC2)",
+                  "product_id": "69",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0GA00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC208G (6GK5208-0GA00-2AC2)",
-                  "product_id": "29",
+                  "product_id": "70",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0GA00-2AC2"
@@ -647,10 +1212,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC208G (EIP def.) (6GK5208-0GA00-2TC2)",
+                  "product_id": "71",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0GA00-2TC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC208G (EIP def.) (6GK5208-0GA00-2TC2)",
-                  "product_id": "30",
+                  "product_id": "72",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0GA00-2TC2"
@@ -666,10 +1244,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC208G EEC (6GK5208-0GA00-2FC2)",
+                  "product_id": "73",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0GA00-2FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC208G EEC (6GK5208-0GA00-2FC2)",
-                  "product_id": "31",
+                  "product_id": "74",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0GA00-2FC2"
@@ -685,10 +1276,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC208G PoE (6GK5208-0RA00-2AC2)",
+                  "product_id": "75",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0RA00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC208G PoE (6GK5208-0RA00-2AC2)",
-                  "product_id": "32",
+                  "product_id": "76",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0RA00-2AC2"
@@ -704,10 +1308,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC208G PoE (54 V DC) (6GK5208-0RA00-5AC2)",
+                  "product_id": "77",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0RA00-5AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC208G PoE (54 V DC) (6GK5208-0RA00-5AC2)",
-                  "product_id": "33",
+                  "product_id": "78",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0RA00-5AC2"
@@ -723,10 +1340,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216 (6GK5216-0BA00-2AC2)",
+                  "product_id": "79",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0BA00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216 (6GK5216-0BA00-2AC2)",
-                  "product_id": "34",
+                  "product_id": "80",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2AC2"
@@ -742,10 +1372,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216-3G PoE (6GK5216-3RS00-2AC2)",
+                  "product_id": "81",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-3RS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216-3G PoE (6GK5216-3RS00-2AC2)",
-                  "product_id": "35",
+                  "product_id": "82",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-3RS00-2AC2"
@@ -761,10 +1404,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216-3G PoE (54 V DC) (6GK5216-3RS00-5AC2)",
+                  "product_id": "83",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-3RS00-5AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216-3G PoE (54 V DC) (6GK5216-3RS00-5AC2)",
-                  "product_id": "36",
+                  "product_id": "84",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-3RS00-5AC2"
@@ -780,10 +1436,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216-4C (6GK5216-4BS00-2AC2)",
+                  "product_id": "85",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-4BS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216-4C (6GK5216-4BS00-2AC2)",
-                  "product_id": "37",
+                  "product_id": "86",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4BS00-2AC2"
@@ -799,10 +1468,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216-4C G (6GK5216-4GS00-2AC2)",
+                  "product_id": "87",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-4GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216-4C G (6GK5216-4GS00-2AC2)",
-                  "product_id": "38",
+                  "product_id": "88",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4GS00-2AC2"
@@ -818,10 +1500,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216-4C G (EIP Def.) (6GK5216-4GS00-2TC2)",
+                  "product_id": "89",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-4GS00-2TC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216-4C G (EIP Def.) (6GK5216-4GS00-2TC2)",
-                  "product_id": "39",
+                  "product_id": "90",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4GS00-2TC2"
@@ -837,10 +1532,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216-4C G EEC (6GK5216-4GS00-2FC2)",
+                  "product_id": "91",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-4GS00-2FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216-4C G EEC (6GK5216-4GS00-2FC2)",
-                  "product_id": "40",
+                  "product_id": "92",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-4GS00-2FC2"
@@ -856,10 +1564,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC216EEC (6GK5216-0BA00-2FC2)",
+                  "product_id": "93",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0BA00-2FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC216EEC (6GK5216-0BA00-2FC2)",
-                  "product_id": "41",
+                  "product_id": "94",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0BA00-2FC2"
@@ -875,10 +1596,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC224 (6GK5224-0BA00-2AC2)",
+                  "product_id": "95",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5224-0BA00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC224 (6GK5224-0BA00-2AC2)",
-                  "product_id": "42",
+                  "product_id": "96",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-0BA00-2AC2"
@@ -894,10 +1628,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC224-4C G (6GK5224-4GS00-2AC2)",
+                  "product_id": "97",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5224-4GS00-2AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC224-4C G (6GK5224-4GS00-2AC2)",
-                  "product_id": "43",
+                  "product_id": "98",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-4GS00-2AC2"
@@ -913,10 +1660,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC224-4C G (EIP Def.) (6GK5224-4GS00-2TC2)",
+                  "product_id": "99",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5224-4GS00-2TC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC224-4C G (EIP Def.) (6GK5224-4GS00-2TC2)",
-                  "product_id": "44",
+                  "product_id": "100",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-4GS00-2TC2"
@@ -932,10 +1692,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XC224-4C G EEC (6GK5224-4GS00-2FC2)",
+                  "product_id": "101",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5224-4GS00-2FC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XC224-4C G EEC (6GK5224-4GS00-2FC2)",
-                  "product_id": "45",
+                  "product_id": "102",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5224-4GS00-2FC2"
@@ -951,10 +1724,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XF204 (6GK5204-0BA00-2GF2)",
+                  "product_id": "103",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2GF2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XF204 (6GK5204-0BA00-2GF2)",
-                  "product_id": "46",
+                  "product_id": "104",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-0BA00-2GF2"
@@ -970,10 +1756,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XF204 DNA (6GK5204-0BA00-2YF2)",
+                  "product_id": "105",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0BA00-2YF2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XF204 DNA (6GK5204-0BA00-2YF2)",
-                  "product_id": "47",
+                  "product_id": "106",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-0BA00-2YF2"
@@ -989,10 +1788,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XF204-2BA (6GK5204-2AA00-2GF2)",
+                  "product_id": "107",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2AA00-2GF2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XF204-2BA (6GK5204-2AA00-2GF2)",
-                  "product_id": "48",
+                  "product_id": "108",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-2AA00-2GF2"
@@ -1008,10 +1820,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XF204-2BA DNA (6GK5204-2AA00-2YF2)",
+                  "product_id": "109",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-2AA00-2YF2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XF204-2BA DNA (6GK5204-2AA00-2YF2)",
-                  "product_id": "49",
+                  "product_id": "110",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5204-2AA00-2YF2"
@@ -1027,10 +1852,55 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XF204G (6GK5204-0GA00-1UF2)",
+                  "product_id": "111",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0GA00-1UF2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XF204G (6GK5204-0GA00-1UF2)",
+                  "product_id": "112",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5204-0GA00-1UF2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XF204G (6GK5204-0GA00-1UF2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208 (6GK5208-0HA00-2AS6)",
+                  "product_id": "113",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA00-2AS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP208 (6GK5208-0HA00-2AS6)",
-                  "product_id": "50",
+                  "product_id": "114",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0HA00-2AS6"
@@ -1046,10 +1916,55 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208 (6GK5208-0HA10-2AS6)",
+                  "product_id": "115",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA10-2AS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP208 (6GK5208-0HA10-2AS6)",
+                  "product_id": "116",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA10-2AS6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP208 (6GK5208-0HA10-2AS6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208 (Ethernet/IP) (6GK5208-0HA00-2TS6)",
+                  "product_id": "117",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA00-2TS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP208 (Ethernet/IP) (6GK5208-0HA00-2TS6)",
-                  "product_id": "51",
+                  "product_id": "118",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0HA00-2TS6"
@@ -1065,10 +1980,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208EEC (6GK5208-0HA00-2ES6)",
+                  "product_id": "119",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA00-2ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP208EEC (6GK5208-0HA00-2ES6)",
-                  "product_id": "52",
+                  "product_id": "120",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0HA00-2ES6"
@@ -1084,10 +2012,183 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208EEC (6GK5208-0HA10-2ES6)",
+                  "product_id": "121",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA10-2ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP208EEC (6GK5208-0HA10-2ES6)",
+                  "product_id": "122",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0HA10-2ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP208EEC (6GK5208-0HA10-2ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208G (6GK5208-0XA00-2AS6)",
+                  "product_id": "123",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0XA00-2AS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP208G (6GK5208-0XA00-2AS6)",
+                  "product_id": "124",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0XA00-2AS6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP208G (6GK5208-0XA00-2AS6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208G EEC (6GK5208-0XA00-2ES6)",
+                  "product_id": "125",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0XA00-2ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP208G EEC (6GK5208-0XA00-2ES6)",
+                  "product_id": "126",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0XA00-2ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP208G EEC (6GK5208-0XA00-2ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208G PoE EEC (6GK5208-0YA00-5ES6)",
+                  "product_id": "127",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0YA00-5ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP208G PoE EEC (6GK5208-0YA00-5ES6)",
+                  "product_id": "128",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0YA00-5ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP208G PoE EEC (6GK5208-0YA00-5ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208G PP (6GK5208-0JA00-2AS6)",
+                  "product_id": "129",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0JA00-2AS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP208G PP (6GK5208-0JA00-2AS6)",
+                  "product_id": "130",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0JA00-2AS6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP208G PP (6GK5208-0JA00-2AS6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208PoE EEC (6GK5208-0UA00-5ES6)",
+                  "product_id": "131",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0UA00-5ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP208PoE EEC (6GK5208-0UA00-5ES6)",
-                  "product_id": "53",
+                  "product_id": "132",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5208-0UA00-5ES6"
@@ -1103,10 +2204,55 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP208PoE EEC (6GK5208-0UA10-5ES6)",
+                  "product_id": "133",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0UA10-5ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP208PoE EEC (6GK5208-0UA10-5ES6)",
+                  "product_id": "134",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5208-0UA10-5ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP208PoE EEC (6GK5208-0UA10-5ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216 (6GK5216-0HA00-2AS6)",
+                  "product_id": "135",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0HA00-2AS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP216 (6GK5216-0HA00-2AS6)",
-                  "product_id": "54",
+                  "product_id": "136",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0HA00-2AS6"
@@ -1122,10 +2268,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216 (Ethernet/IP) (6GK5216-0HA00-2TS6)",
+                  "product_id": "137",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0HA00-2TS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP216 (Ethernet/IP) (6GK5216-0HA00-2TS6)",
-                  "product_id": "55",
+                  "product_id": "138",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0HA00-2TS6"
@@ -1141,10 +2300,55 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216 (V2) (6GK5216-0HA10-2AS6)",
+                  "product_id": "139",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0HA10-2AS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP216 (V2) (6GK5216-0HA10-2AS6)",
+                  "product_id": "140",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0HA10-2AS6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP216 (V2) (6GK5216-0HA10-2AS6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216EEC (6GK5216-0HA00-2ES6)",
+                  "product_id": "141",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0HA00-2ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP216EEC (6GK5216-0HA00-2ES6)",
-                  "product_id": "56",
+                  "product_id": "142",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0HA00-2ES6"
@@ -1160,10 +2364,151 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216EEC (V2) (6GK5216-0HA10-2ES6)",
+                  "product_id": "143",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0HA10-2ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP216EEC (V2) (6GK5216-0HA10-2ES6)",
+                  "product_id": "144",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0HA10-2ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP216EEC (V2) (6GK5216-0HA10-2ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216G (6GK5216-0XA00-2AS6)",
+                  "product_id": "145",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0XA00-2AS6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP216G (6GK5216-0XA00-2AS6)",
+                  "product_id": "146",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0XA00-2AS6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP216G (6GK5216-0XA00-2AS6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216G EEC (6GK5216-0XA00-2ES6)",
+                  "product_id": "147",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0XA00-2ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP216G EEC (6GK5216-0XA00-2ES6)",
+                  "product_id": "148",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0XA00-2ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP216G EEC (6GK5216-0XA00-2ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216G PoE EEC (6GK5216-0YA00-5ES6)",
+                  "product_id": "149",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0YA00-5ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP216G PoE EEC (6GK5216-0YA00-5ES6)",
+                  "product_id": "150",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0YA00-5ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP216G PoE EEC (6GK5216-0YA00-5ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216POE EEC (6GK5216-0UA00-5ES6)",
+                  "product_id": "151",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0UA00-5ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XP216POE EEC (6GK5216-0UA00-5ES6)",
-                  "product_id": "57",
+                  "product_id": "152",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5216-0UA00-5ES6"
@@ -1179,10 +2524,55 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XP216PoE EEC (V2) (6GK5216-0UA10-5ES6)",
+                  "product_id": "153",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0UA10-5ES6"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SCALANCE XP216PoE EEC (V2) (6GK5216-0UA10-5ES6)",
+                  "product_id": "154",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5216-0UA10-5ES6"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE XP216PoE EEC (V2) (6GK5216-0UA10-5ES6)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR324WG (24 x FE, AC 230V) (6GK5324-0BA00-3AR3)",
+                  "product_id": "155",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0BA00-3AR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR324WG (24 x FE, AC 230V) (6GK5324-0BA00-3AR3)",
-                  "product_id": "58",
+                  "product_id": "156",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5324-0BA00-3AR3"
@@ -1198,10 +2588,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR324WG (24 X FE, DC 24V) (6GK5324-0BA00-2AR3)",
+                  "product_id": "157",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5324-0BA00-2AR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR324WG (24 X FE, DC 24V) (6GK5324-0BA00-2AR3)",
-                  "product_id": "59",
+                  "product_id": "158",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5324-0BA00-2AR3"
@@ -1217,10 +2620,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR326-2C PoE WG (6GK5326-2QS00-3AR3)",
+                  "product_id": "159",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5326-2QS00-3AR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR326-2C PoE WG (6GK5326-2QS00-3AR3)",
-                  "product_id": "60",
+                  "product_id": "160",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5326-2QS00-3AR3"
@@ -1236,10 +2652,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR326-2C PoE WG (without UL) (6GK5326-2QS00-3RR3)",
+                  "product_id": "161",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5326-2QS00-3RR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR326-2C PoE WG (without UL) (6GK5326-2QS00-3RR3)",
-                  "product_id": "61",
+                  "product_id": "162",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5326-2QS00-3RR3"
@@ -1255,10 +2684,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR328-4C WG (24xFE,4xGE,AC230V) (6GK5328-4FS00-3AR3)",
+                  "product_id": "163",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4FS00-3AR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24xFE,4xGE,AC230V) (6GK5328-4FS00-3AR3)",
-                  "product_id": "62",
+                  "product_id": "164",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-3AR3"
@@ -1274,10 +2716,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR328-4C WG (24xFE,4xGE,AC230V) (6GK5328-4FS00-3RR3)",
+                  "product_id": "165",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4FS00-3RR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24xFE,4xGE,AC230V) (6GK5328-4FS00-3RR3)",
-                  "product_id": "63",
+                  "product_id": "166",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-3RR3"
@@ -1293,10 +2748,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR328-4C WG (24XFE, 4XGE, 24V) (6GK5328-4FS00-2AR3)",
+                  "product_id": "167",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4FS00-2AR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24XFE, 4XGE, 24V) (6GK5328-4FS00-2AR3)",
-                  "product_id": "64",
+                  "product_id": "168",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-2AR3"
@@ -1312,10 +2780,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR328-4C WG (24xFE, 4xGE,DC24V) (6GK5328-4FS00-2RR3)",
+                  "product_id": "169",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4FS00-2RR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (24xFE, 4xGE,DC24V) (6GK5328-4FS00-2RR3)",
-                  "product_id": "65",
+                  "product_id": "170",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4FS00-2RR3"
@@ -1331,10 +2812,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR328-4C WG (28xGE, AC 230V) (6GK5328-4SS00-3AR3)",
+                  "product_id": "171",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4SS00-3AR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (28xGE, AC 230V) (6GK5328-4SS00-3AR3)",
-                  "product_id": "66",
+                  "product_id": "172",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4SS00-3AR3"
@@ -1350,10 +2844,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SCALANCE XR328-4C WG (28xGE, DC 24V) (6GK5328-4SS00-2AR3)",
+                  "product_id": "173",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5328-4SS00-2AR3"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SCALANCE XR328-4C WG (28xGE, DC 24V) (6GK5328-4SS00-2AR3)",
-                  "product_id": "67",
+                  "product_id": "174",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5328-4SS00-2AR3"
@@ -1369,10 +2876,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SIPLUS NET SCALANCE XC206-2 (6AG1206-2BB00-7AC2)",
+                  "product_id": "175",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1206-2BB00-7AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC206-2 (6AG1206-2BB00-7AC2)",
-                  "product_id": "68",
+                  "product_id": "176",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1206-2BB00-7AC2"
@@ -1388,10 +2908,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SIPLUS NET SCALANCE XC206-2SFP (6AG1206-2BS00-7AC2)",
+                  "product_id": "177",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1206-2BS00-7AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC206-2SFP (6AG1206-2BS00-7AC2)",
-                  "product_id": "69",
+                  "product_id": "178",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1206-2BS00-7AC2"
@@ -1407,10 +2940,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SIPLUS NET SCALANCE XC208 (6AG1208-0BA00-7AC2)",
+                  "product_id": "179",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1208-0BA00-7AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC208 (6AG1208-0BA00-7AC2)",
-                  "product_id": "70",
+                  "product_id": "180",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1208-0BA00-7AC2"
@@ -1426,10 +2972,23 @@
             "branches": [
               {
                 "category": "product_version_range",
+                "name": "vers:intdot/<4.6",
+                "product": {
+                  "name": "SIPLUS NET SCALANCE XC216-4C (6AG1216-4BS00-7AC2)",
+                  "product_id": "181",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6AG1216-4BS00-7AC2"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS NET SCALANCE XC216-4C (6AG1216-4BS00-7AC2)",
-                  "product_id": "71",
+                  "product_id": "182",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1216-4BS00-7AC2"
@@ -1463,77 +3022,97 @@
       ],
       "product_status": {
         "known_affected": [
-          "1",
           "2",
-          "3",
           "4",
-          "5",
           "6",
-          "7",
           "8",
-          "9",
           "10",
-          "11",
           "12",
-          "13",
           "14",
-          "15",
           "16",
-          "17",
           "18",
-          "19",
           "20",
-          "21",
           "22",
-          "23",
           "24",
-          "25",
           "26",
-          "27",
           "28",
-          "29",
           "30",
-          "31",
           "32",
-          "33",
           "34",
-          "35",
           "36",
-          "37",
           "38",
-          "39",
           "40",
-          "41",
           "42",
-          "43",
           "44",
-          "45",
           "46",
-          "47",
           "48",
-          "49",
           "50",
-          "51",
           "52",
-          "53",
           "54",
-          "55",
           "56",
-          "57",
           "58",
-          "59",
           "60",
-          "61",
-          "64",
-          "65",
           "62",
-          "63",
+          "64",
           "66",
-          "67",
           "68",
-          "69",
           "70",
-          "71"
+          "72",
+          "74",
+          "76",
+          "78",
+          "80",
+          "82",
+          "84",
+          "86",
+          "88",
+          "90",
+          "92",
+          "94",
+          "96",
+          "98",
+          "100",
+          "102",
+          "104",
+          "106",
+          "108",
+          "110",
+          "112",
+          "114",
+          "116",
+          "118",
+          "120",
+          "122",
+          "124",
+          "126",
+          "128",
+          "130",
+          "132",
+          "134",
+          "136",
+          "138",
+          "140",
+          "142",
+          "144",
+          "146",
+          "148",
+          "150",
+          "152",
+          "154",
+          "156",
+          "158",
+          "160",
+          "162",
+          "164",
+          "166",
+          "168",
+          "170",
+          "172",
+          "174",
+          "176",
+          "178",
+          "180",
+          "182"
         ]
       },
       "remediations": [
@@ -1541,77 +3120,97 @@
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
-            "1",
             "2",
-            "3",
             "4",
-            "5",
             "6",
-            "7",
             "8",
-            "9",
             "10",
-            "11",
             "12",
-            "13",
             "14",
-            "15",
             "16",
-            "17",
             "18",
-            "19",
             "20",
-            "21",
             "22",
-            "23",
             "24",
-            "25",
             "26",
-            "27",
             "28",
-            "29",
             "30",
-            "31",
             "32",
-            "33",
             "34",
-            "35",
             "36",
-            "37",
             "38",
-            "39",
             "40",
-            "41",
             "42",
-            "43",
             "44",
-            "45",
             "46",
-            "47",
             "48",
-            "49",
             "50",
-            "51",
             "52",
-            "53",
             "54",
-            "55",
             "56",
-            "57",
             "58",
-            "59",
             "60",
-            "61",
-            "64",
-            "65",
             "62",
-            "63",
+            "64",
             "66",
-            "67",
             "68",
-            "69",
             "70",
-            "71"
+            "72",
+            "74",
+            "76",
+            "78",
+            "80",
+            "82",
+            "84",
+            "86",
+            "88",
+            "90",
+            "92",
+            "94",
+            "96",
+            "98",
+            "100",
+            "102",
+            "104",
+            "106",
+            "108",
+            "110",
+            "112",
+            "114",
+            "116",
+            "118",
+            "120",
+            "122",
+            "124",
+            "126",
+            "128",
+            "130",
+            "132",
+            "134",
+            "136",
+            "138",
+            "140",
+            "142",
+            "144",
+            "146",
+            "148",
+            "150",
+            "152",
+            "154",
+            "156",
+            "158",
+            "160",
+            "162",
+            "164",
+            "166",
+            "168",
+            "170",
+            "172",
+            "174",
+            "176",
+            "178",
+            "180",
+            "182"
           ]
         }
       ],
@@ -1620,81 +3219,101 @@
           "cvss_v3": {
             "baseScore": 4.9,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
-            "1",
             "2",
-            "3",
             "4",
-            "5",
             "6",
-            "7",
             "8",
-            "9",
             "10",
-            "11",
             "12",
-            "13",
             "14",
-            "15",
             "16",
-            "17",
             "18",
-            "19",
             "20",
-            "21",
             "22",
-            "23",
             "24",
-            "25",
             "26",
-            "27",
             "28",
-            "29",
             "30",
-            "31",
             "32",
-            "33",
             "34",
-            "35",
             "36",
-            "37",
             "38",
-            "39",
             "40",
-            "41",
             "42",
-            "43",
             "44",
-            "45",
             "46",
-            "47",
             "48",
-            "49",
             "50",
-            "51",
             "52",
-            "53",
             "54",
-            "55",
             "56",
-            "57",
             "58",
-            "59",
             "60",
-            "61",
-            "64",
-            "65",
             "62",
-            "63",
+            "64",
             "66",
-            "67",
             "68",
-            "69",
             "70",
-            "71"
+            "72",
+            "74",
+            "76",
+            "78",
+            "80",
+            "82",
+            "84",
+            "86",
+            "88",
+            "90",
+            "92",
+            "94",
+            "96",
+            "98",
+            "100",
+            "102",
+            "104",
+            "106",
+            "108",
+            "110",
+            "112",
+            "114",
+            "116",
+            "118",
+            "120",
+            "122",
+            "124",
+            "126",
+            "128",
+            "130",
+            "132",
+            "134",
+            "136",
+            "138",
+            "140",
+            "142",
+            "144",
+            "146",
+            "148",
+            "150",
+            "152",
+            "154",
+            "156",
+            "158",
+            "160",
+            "162",
+            "164",
+            "166",
+            "168",
+            "170",
+            "172",
+            "174",
+            "176",
+            "178",
+            "180",
+            "182"
           ]
         }
       ],
@@ -1716,155 +3335,196 @@
       "product_status": {
         "known_affected": [
           "1",
-          "2",
           "3",
-          "4",
           "5",
-          "6",
           "7",
-          "8",
           "9",
-          "10",
           "11",
-          "12",
           "13",
-          "14",
           "15",
-          "16",
           "17",
-          "18",
           "19",
-          "20",
           "21",
-          "22",
           "23",
-          "24",
           "25",
-          "26",
           "27",
-          "28",
           "29",
-          "30",
           "31",
-          "32",
           "33",
-          "34",
           "35",
-          "36",
           "37",
-          "38",
           "39",
-          "40",
           "41",
-          "42",
           "43",
-          "44",
           "45",
-          "46",
           "47",
-          "48",
           "49",
-          "50",
           "51",
-          "52",
           "53",
-          "54",
           "55",
-          "56",
           "57",
-          "58",
           "59",
-          "60",
           "61",
-          "64",
-          "65",
-          "62",
           "63",
-          "66",
+          "65",
           "67",
-          "68",
           "69",
-          "70",
-          "71"
+          "71",
+          "73",
+          "75",
+          "77",
+          "79",
+          "81",
+          "83",
+          "85",
+          "87",
+          "89",
+          "91",
+          "93",
+          "95",
+          "97",
+          "99",
+          "101",
+          "103",
+          "105",
+          "107",
+          "109",
+          "111",
+          "113",
+          "115",
+          "117",
+          "119",
+          "121",
+          "123",
+          "125",
+          "127",
+          "129",
+          "131",
+          "133",
+          "135",
+          "137",
+          "139",
+          "141",
+          "143",
+          "145",
+          "147",
+          "149",
+          "151",
+          "153",
+          "155",
+          "157",
+          "159",
+          "161",
+          "163",
+          "165",
+          "167",
+          "169",
+          "171",
+          "173",
+          "175",
+          "177",
+          "179",
+          "181"
         ]
       },
       "remediations": [
         {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
+          "category": "vendor_fix",
+          "details": "Update to V4.6 or later version",
           "product_ids": [
             "1",
-            "2",
             "3",
-            "4",
             "5",
-            "6",
             "7",
-            "8",
             "9",
-            "10",
             "11",
-            "12",
             "13",
-            "14",
             "15",
-            "16",
             "17",
-            "18",
             "19",
-            "20",
             "21",
-            "22",
             "23",
-            "24",
             "25",
-            "26",
             "27",
-            "28",
             "29",
-            "30",
             "31",
-            "32",
             "33",
-            "34",
             "35",
-            "36",
             "37",
-            "38",
             "39",
-            "40",
             "41",
-            "42",
             "43",
-            "44",
             "45",
-            "46",
             "47",
-            "48",
             "49",
-            "50",
             "51",
-            "52",
             "53",
-            "54",
             "55",
-            "56",
             "57",
-            "58",
             "59",
-            "60",
             "61",
-            "64",
-            "65",
-            "62",
             "63",
-            "66",
+            "65",
             "67",
-            "68",
             "69",
-            "70",
-            "71"
-          ]
+            "71",
+            "73",
+            "75",
+            "77",
+            "79",
+            "81",
+            "83",
+            "85",
+            "87",
+            "89",
+            "91",
+            "93",
+            "95",
+            "97",
+            "99",
+            "101",
+            "103",
+            "105",
+            "107",
+            "109",
+            "111",
+            "113",
+            "115",
+            "117",
+            "119",
+            "121",
+            "123",
+            "125",
+            "127",
+            "129",
+            "131",
+            "133",
+            "135",
+            "137",
+            "139",
+            "141",
+            "143",
+            "145",
+            "147",
+            "149",
+            "151",
+            "153",
+            "155",
+            "157",
+            "159",
+            "161",
+            "163",
+            "165",
+            "167",
+            "169",
+            "171",
+            "173",
+            "175",
+            "177",
+            "179",
+            "181"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109977185/"
         }
       ],
       "scores": [
@@ -1872,81 +3532,101 @@
           "cvss_v3": {
             "baseScore": 2.7,
             "baseSeverity": "LOW",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L",
             "version": "3.1"
           },
           "products": [
             "1",
-            "2",
             "3",
-            "4",
             "5",
-            "6",
             "7",
-            "8",
             "9",
-            "10",
             "11",
-            "12",
             "13",
-            "14",
             "15",
-            "16",
             "17",
-            "18",
             "19",
-            "20",
             "21",
-            "22",
             "23",
-            "24",
             "25",
-            "26",
             "27",
-            "28",
             "29",
-            "30",
             "31",
-            "32",
             "33",
-            "34",
             "35",
-            "36",
             "37",
-            "38",
             "39",
-            "40",
             "41",
-            "42",
             "43",
-            "44",
             "45",
-            "46",
             "47",
-            "48",
             "49",
-            "50",
             "51",
-            "52",
             "53",
-            "54",
             "55",
-            "56",
             "57",
-            "58",
             "59",
-            "60",
             "61",
-            "64",
-            "65",
-            "62",
             "63",
-            "66",
+            "65",
             "67",
-            "68",
             "69",
-            "70",
-            "71"
+            "71",
+            "73",
+            "75",
+            "77",
+            "79",
+            "81",
+            "83",
+            "85",
+            "87",
+            "89",
+            "91",
+            "93",
+            "95",
+            "97",
+            "99",
+            "101",
+            "103",
+            "105",
+            "107",
+            "109",
+            "111",
+            "113",
+            "115",
+            "117",
+            "119",
+            "121",
+            "123",
+            "125",
+            "127",
+            "129",
+            "131",
+            "133",
+            "135",
+            "137",
+            "139",
+            "141",
+            "143",
+            "145",
+            "147",
+            "149",
+            "151",
+            "153",
+            "155",
+            "157",
+            "159",
+            "161",
+            "163",
+            "165",
+            "167",
+            "169",
+            "171",
+            "173",
+            "175",
+            "177",
+            "179",
+            "181"
           ]
         }
       ],

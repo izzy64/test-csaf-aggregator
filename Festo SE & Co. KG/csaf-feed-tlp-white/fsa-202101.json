@@ -1,0 +1,1289 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination and support with this publication",
+        "urls": [
+          "https://certvde.com"
+        ]
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The affected product families are cameras SBOC/SBOI and the Controller SBRD. The vulnerabilities are located within the Ethernet IP Stack from EIPStackGroup OpENer Ethernet/IP.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "Please consult the CVEs listed above and ICSA-21-105-02.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "- Minimize network exposure for all control system devices and/or systems, and ensure that they are not accessible from the Internet.\n- Deactivate EtherNet/IP in device settings if not used",
+        "title": "Mitigation"
+      },
+      {
+        "category": "description",
+        "text": "There is no fix planned.",
+        "title": "Remediation"
+      },
+      {
+        "category": "general",
+        "title": "General recomendation",
+        "text": "Festo strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes. \nFor a secure operation follow the recommendations in the product manuals."
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\n\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\n\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply.",
+        "title": "Disclaimer"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "psirt@festo.com",
+      "name": "Festo SE & Co. KG",
+      "namespace": "https://festo.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "FSA-202101: Festo: Multiple vulnerabilities in Ethernet/IP Stack of SBRD-Q/SBOC-Q/SBOI-Q - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2021-045/"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202101: Festo: Multiple vulnerabilities in Ethernet/IP Stack of SBRD-Q/SBOC-Q/SBOI-Q - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2021/fsa-202101.json"
+      },
+      {
+        "category": "external",
+        "summary": "For further security-related issues in Festo products please contact the Festo Product Security Incident Response Team (PSIRT)",
+        "url": "https://festo.com/psirt"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories ",
+        "url": "https://certvde.com/en/advisories/vendor/festo/"
+      }
+    ],
+    "title": "Festo: Multiple vulnerabilities in Ethernet/IP Stack of SBRD-Q/SBOC-Q/SBOI-Q",
+    "tracking": {
+      "aliases": [
+        "VDE-2021-045"
+      ],
+      "current_release_date": "2025-08-26T10:00:00.000Z",
+      "generator": {
+        "date": "2025-08-25T17:10:00.198Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.16"
+        }
+      },
+      "id": "FSA-202101",
+      "initial_release_date": "2021-09-22T11:13:00.000Z",
+      "revision_history": [
+        {
+          "date": "2021-09-28T11:13:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial revision."
+        },
+        {
+          "date": "2024-01-11T10:00:00.000Z",
+          "number": "1.0.1",
+          "summary": "Adjust link to VDE Advisory"
+        },
+        {
+          "date": "2025-08-26T10:00:00.000Z",
+          "number": "1.0.2",
+          "summary": "Adjusted to VDE template. Changed document title from 'Vulnerability in Ethernet/IP Stack of SBRD-Q/SBOC-Q/SBOI-Q' to 'Festo: Multiple vulnerabilities in Ethernet/IP Stack of SBRD-Q/SBOC-Q/SBOI-Q'. Updated legal disclaimer to add references to special provisions.\". Updated vulnerability notes and mitigation information. Updated legal disclaimer to add references to special provisions."
+        }
+      ],
+      "status": "final",
+      "version": "1.0.2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R1B",
+                "product": {
+                  "name": "SBOC-Q-R1B",
+                  "product_id": "CSAFPID-11001",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:541399"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R1B"
+                      }
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R1B"
+                    ],
+                    "skus": [
+                      "541399"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R1B-S1",
+                "product": {
+                  "name": "SBOC-Q-R1B-S1",
+                  "product_id": "CSAFPID-11002",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569771"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R1B-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569771"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R1B-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R1C",
+                "product": {
+                  "name": "SBOC-Q-R1C",
+                  "product_id": "CSAFPID-11003",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:548317"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R1C"
+                      }
+                    ],
+                    "skus": [
+                      "548317"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R1C"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R1C-S1",
+                "product": {
+                  "name": "SBOC-Q-R1C-S1",
+                  "product_id": "CSAFPID-11004",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569774"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R1C-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569774"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R1C-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R2B",
+                "product": {
+                  "name": "SBOC-Q-R2B",
+                  "product_id": "CSAFPID-11005",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:551021"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R2B"
+                      }
+                    ],
+                    "skus": [
+                      "551021"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R2B"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R2B-S1",
+                "product": {
+                  "name": "SBOC-Q-R2B-S1",
+                  "product_id": "CSAFPID-11006",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569772"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R2B-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569772"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R2B-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R2C",
+                "product": {
+                  "name": "SBOC-Q-R2C",
+                  "product_id": "CSAFPID-11007",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:551022"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R2C"
+                      }
+                    ],
+                    "skus": [
+                      "551022"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R2C"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R3B-WB",
+                "product": {
+                  "name": "SBOC-Q-R3B-WB",
+                  "product_id": "CSAFPID-11008",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:555841"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R3B-WB"
+                      }
+                    ],
+                    "skus": [
+                      "555841"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R3B-WB"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R3B-WB-S1",
+                "product": {
+                  "name": "SBOC-Q-R3B-WB-S1",
+                  "product_id": "CSAFPID-11009",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569777"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R3B-WB-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569777"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R3B-WB-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R3C-WB",
+                "product": {
+                  "name": "SBOC-Q-R3C-WB",
+                  "product_id": "CSAFPID-11010",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:555842"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R3C-WB"
+                      }
+                    ],
+                    "skus": [
+                      "555842"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R3C-WB"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOC-Q-R3C-WB-S1",
+                "product": {
+                  "name": "SBOC-Q-R3C-WB-S1",
+                  "product_id": "CSAFPID-11011",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569778"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOC-Q-R3C-WB-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569778"
+                    ],
+                    "model_numbers": [
+                      "SBOC-Q-R3C-WB-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R1B",
+                "product": {
+                  "name": "SBOI-Q-R1B",
+                  "product_id": "CSAFPID-11012",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:541396"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R1B"
+                      }
+                    ],
+                    "skus": [
+                      "541396"
+                    ],
+                    "model_numbers": [
+                      "SBOI-Q-R1B"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R1B-S1",
+                "product": {
+                  "name": "SBOI-Q-R1B-S1",
+                  "product_id": "CSAFPID-11013",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569773"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R1B-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569773"
+                    ],
+                    "model_numbers": [
+                      "SBOI-Q-R1B-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R1C",
+                "product": {
+                  "name": "SBOI-Q-R1C",
+                  "product_id": "CSAFPID-11014",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:548316"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R1C"
+                      }
+                    ],
+                    "skus": [
+                      "548316"
+                    ],
+                    "model_numbers": [
+                      "SBOI-Q-R1C"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R1C-S1",
+                "product": {
+                  "name": "SBOI-Q-R1C-S1",
+                  "product_id": "CSAFPID-11015",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569776"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R1C-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569776"
+                    ],
+                    "model_numbers": [
+                      "SBOI-Q-R1C-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R3B-WB",
+                "product": {
+                  "name": "SBOI-Q-R3B-WB",
+                  "product_id": "CSAFPID-11016",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:555839"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R3B-WB"
+                      }
+                    ],
+                    "skus": [
+                      "SBOI-Q-R3B-WB"
+                    ],
+                    "model_numbers": [
+                      "555839"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R3B-WB-S1",
+                "product": {
+                  "name": "SBOI-Q-R3B-WB-S1",
+                  "product_id": "CSAFPID-11017",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569779"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R3B-WB-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569779"
+                    ],
+                    "model_numbers": [
+                      "SBOI-Q-R3B-WB-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R3C-WB",
+                "product": {
+                  "name": "SBOI-Q-R3C-WB",
+                  "product_id": "CSAFPID-11018",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:555840"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R3C-WB"
+                      }
+                    ],
+                    "skus": [
+                      "555840"
+                    ],
+                    "model_numbers": [
+                      "SBOI-Q-R3C-WB"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBOI-Q-R3C-WB-S1",
+                "product": {
+                  "name": "SBOI-Q-R3C-WB-S1",
+                  "product_id": "CSAFPID-11019",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:569780"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBOI-Q-R3C-WB-S1"
+                      }
+                    ],
+                    "skus": [
+                      "569780"
+                    ],
+                    "model_numbers": [
+                      "SBOI-Q-R3C-WB-S1"
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "SBRD-Q",
+                "product": {
+                  "name": "SBRD-Q",
+                  "product_id": "CSAFPID-11020",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8067301"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBRD-Q"
+                      }
+                    ],
+                    "skus": [
+                      "8067301"
+                    ],
+                    "model_numbers": [
+                      "SBRD-Q"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Hardware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Firmware vers:all/*",
+                  "product_id": "CSAFPID-21001"
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Festo"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020"
+        ],
+        "summary": "Affected products."
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R1B",
+          "product_id": "CSAFPID-31001"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R1B-S1",
+          "product_id": "CSAFPID-31002"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R1C",
+          "product_id": "CSAFPID-31003"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11003"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R1C-S1",
+          "product_id": "CSAFPID-31004"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11004"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R2B",
+          "product_id": "CSAFPID-31005"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11005"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R2B-S1",
+          "product_id": "CSAFPID-31006"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11006"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R2C",
+          "product_id": "CSAFPID-31007"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11007"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R3B-WB",
+          "product_id": "CSAFPID-31008"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11008"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R3B-WB-S1",
+          "product_id": "CSAFPID-31009"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11009"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R3C-WB",
+          "product_id": "CSAFPID-31010"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11010"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOC-Q-R3C-WB-S1",
+          "product_id": "CSAFPID-31011"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11011"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R1B",
+          "product_id": "CSAFPID-31012"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11012"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R1B-S1",
+          "product_id": "CSAFPID-31013"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11013"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R1C",
+          "product_id": "CSAFPID-31014"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11014"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R1C-S1",
+          "product_id": "CSAFPID-31015"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11015"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R3B-WB",
+          "product_id": "CSAFPID-31016"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11016"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R3B-WB-S1",
+          "product_id": "CSAFPID-31017"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11017"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R3C-WB",
+          "product_id": "CSAFPID-31018"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11018"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBOI-Q-R3C-WB-S1",
+          "product_id": "CSAFPID-31019"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11019"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on SBRD-Q",
+          "product_id": "CSAFPID-31020"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11020"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-27478",
+      "cwe": {
+        "id": "CWE-681",
+        "name": "Incorrect Conversion between Numeric Types"
+      },
+      "ids": [
+        {
+          "system_name": "ICS Advisory (ICSA-21-105-02)",
+          "text": "EIPStackGroup OpENer Ethernet/IP"
+        }
+      ],
+      "notes": [
+        {
+          "audience": "all",
+          "category": "description",
+          "text": "A specifically crafted packet sent by an attacker to EIPStackGroup OpENer EtherNet/IP commits and versions prior to Feb 10, 2021 may cause a denial-of-service condition.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "- Minimize network exposure for all control system devices and/or systems, and ensure that they are not accessible from the Internet.\n- Deactivate EtherNet/IP in device settings if not used",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "There is no fix planned.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.2,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 8.2,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "LOW",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.2,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020"
+          ]
+        }
+      ],
+      "title": "CVE-2021-27478"
+    },
+    {
+      "cve": "CVE-2021-27482",
+      "cwe": {
+        "id": "CWE-125",
+        "name": "Out-of-bounds Read"
+      },
+      "ids": [
+        {
+          "system_name": "ICS Advisory (ICSA-21-105-02)",
+          "text": "EIPStackGroup OpENer Ethernet/IP"
+        }
+      ],
+      "notes": [
+        {
+          "audience": "all",
+          "category": "description",
+          "text": "A specifically crafted packet sent by an attacker to EIPStackGroup OpENer EtherNet/IP commits and versions prior to Feb 10, 2021 may allow the attacker to read arbitrary data.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "- Minimize network exposure for all control system devices and/or systems, and ensure that they are not accessible from the Internet.\n- Deactivate EtherNet/IP in device settings if not used",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "There is no fix planned.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020"
+          ]
+        }
+      ],
+      "title": "CVE-2021-27482"
+    },
+    {
+      "cve": "CVE-2021-27500",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A specifically crafted packet sent by an attacker to EIPStackGroup OpENer EtherNet/IP commits and versions prior to Feb 10, 2021 may result in a denial-of-service condition.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "- Minimize network exposure for all control system devices and/or systems, and ensure that they are not accessible from the Internet.\n- Deactivate EtherNet/IP in device settings if not used",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "There is no fix planned.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020"
+          ]
+        }
+      ],
+      "title": "CVE-2021-27500"
+    },
+    {
+      "cve": "CVE-2021-27498",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A specifically crafted packet sent by an attacker to EIPStackGroup OpENer EtherNet/IP commits and versions prior to Feb 10, 2021 may result in a denial-of-service condition.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "- Minimize network exposure for all control system devices and/or systems, and ensure that they are not accessible from the Internet.\n- Deactivate EtherNet/IP in device settings if not used",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "no_fix_planned",
+          "details": "There is no fix planned.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020"
+          ]
+        }
+      ],
+      "title": "CVE-2021-27498"
+    }
+  ]
+}

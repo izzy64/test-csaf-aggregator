@@ -1,0 +1,225 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "names": [
+          "Peter Cheng"
+        ],
+        "organization": "ELEX FEIGONG RESEARCH INSTITUTE of Elex CyberSecurity, Inc.",
+        "summary": "Reported by"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/v1/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Beckhoff's TwinCAT 3 Engineering software is intented to craft automation projects consisting of a set of files which are stored locally as files underneath an individual folder or in a packed file. The TwinCAT 3 Engineering stores user settings and preferences among the non packed local files which are relevant to continue former work on the project conventienly. TwinCAT 3 Engineering stores such settings in files which are called \"Solution User Options (.suo) File\". When such settings are manipulated or crafted by an adversary in a specific way then TwinCAT 3 Engineering executes arbitrary commands as determined by these settings when the user uses TwinCAT 3 Engineering to open the project. These arbitrary commands are executed in the user context. \n\nPlease note that solution user option files should not be checked in to source code control. This is also a best practice when working with source code projects and solutions. For example, see https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-user-options-dot-suo-file and https://infosys.beckhoff.com/content/1033/tc3_sourcecontrol/14604066827.html. \n\nThe vulnerability is similar to older vulnerabilities that were addressed in the CODESYS Development System V3 product from CODESYS GmbH with CVE-2021-21864, CVE-2021-21865, CVE-2021-21866, CVE-2021-21867, CVE-2021-21868, CVE-2021-21869, and the associated Advisory 2021-13 from CODESYS GmbH.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "An attacker with access to local files can trick a local user into executing arbitrary commands by opening a deliberately manipulated project file with an affected engineering tool. These arbitrary commands are executed in the user context. When older affected versions of the engineering tool are installed then the deliberate manipulation of the project file can cause that these are used to open it.\n\n\nPlease note that TwinCAT 3 Engineering offers the \"Remote Manager\" feature (see https://infosys.beckhoff.com/content/1033/tc3_remote_manager/index.html?id=1584127271344589360) which means that older versions of TwinCAT 3 Engineering can stay installed in parallel to more recent versions. TwinCAT projects can be \"pinned\" to be edited with a fixed version, see https://infosys.beckhoff.com/content/1033/tc3_remote_manager/3154642571.html. If such a pinned project is opened while a more recent version of TwinCAT 3 Engineering is installed and at the same time the matching older version of TwinCAT 3 Engineering is still installed then the project is automatically passed from the more recent version to the matching older version and edited with that older version where that older version is vulnerable.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Developers shall care for opening projects from trusted sources only. This is a best practice when working with source code and the main content of a project which is crafted with TwinCAT 3 Engineering is source code which is to be compiled to activate it on a target. \n\nSolution user option files should not be checked in to source code control. This is also a best practice when working with source code projects and solutions. For example, see https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/solution-user-options-dot-suo-file and https://infosys.beckhoff.com/content/1033/tc3_sourcecontrol/14604066827.html. \n\nAvoid pinning of projects to exact versions of TwinCAT 3 Engineering, see https://infosys.beckhoff.com/content/1033/tc3_remote_manager/index.html?id=1584127271344589360 and https://infosys.beckhoff.com/content/1033/tc3_remote_manager/3154642571.html. Always open projects with the most recent version of TwinCAT 3.",
+        "title": "General Recommendation"
+      },
+      {
+        "category": "description",
+        "text": "Please update to a recent version of the affected product and uninstall older versions of TwinCAT 3 Engineering. Make sure that older versions of TwinCAT 3 Engineering do not occur as \"Remote Manager\" versions, see https://infosys.beckhoff.com/content/1033/tc3_remote_manager/index.html?id=1584127271344589360. Remove the \"pinning\" from your projects to older versions of TwinCAT 3 Engineering, if present, see https://infosys.beckhoff.com/content/1033/tc3_remote_manager/3154642571.html.",
+        "title": "Remediation"
+      },
+      {
+        "category": "general",
+        "text": "Beckhoff Automation welcomes responsibly coordinated reports of vulnerabilities and Beckhoff will collaborate with reporting parties to fix vulnerabilities or mitigate threats.",
+        "title": "Reporting vulnerabilities"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Beckhoff is not responsible for any side effects negatively affecting the real-time capabilities of your TwinCAT control application possibly caused by updates. Beckhoff offers updated images with qualified performance for Beckhoff hardware from time to time. TwinCAT System Manager offers tools which can be of assistance to verify real-time performance after update. A backup should be created every time before installing an update. Only administrators or IT experts should perform the backup and update procedure.",
+        "title": "Disclaimer"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "product-securityincident@beckhoff.com",
+      "name": "Beckhoff Automation GmbH & Co. KG",
+      "namespace": "https://www.beckhoff.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "Beckhoff Security Advisory 2025-001: Deserialization of untrusted data by TwinCAT 3 Engineering - PDF version",
+        "url": "https://download.beckhoff.com/download/Document/product-security/Advisories/advisory-2025-001.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Additional information about the latest security advisories is provided here:",
+        "url": "https://www.beckhoff.com/secinfo"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Beckhoff Automation GmbH & Co. KG",
+        "url": "https://certvde.com/en/advisories/vendor/beckhoff/"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2025-075: Beckhoff: Deserialization of untrusted data by TwinCAT 3 Engineering - CSAF",
+        "url": "https://beckhoff.csaf-tp.certvde.com/.well-known/csaf/white/2025/vde-2025-075.json"
+      },
+      {
+        "category": "self",
+        "summary": "VDE-2025-075: Beckhoff: Deserialization of untrusted data by TwinCAT 3 Engineering - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2025-075"
+      }
+    ],
+    "title": "Beckhoff: Deserialization of untrusted data by TwinCAT 3 Engineering",
+    "tracking": {
+      "aliases": [
+        "VDE-2025-075"
+      ],
+      "current_release_date": "2025-09-09T10:00:00.000Z",
+      "generator": {
+        "date": "2025-08-28T07:42:39.284Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.32"
+        }
+      },
+      "id": "VDE-2025-075",
+      "initial_release_date": "2025-09-09T10:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2025-09-09T10:00:00.000Z",
+          "number": "1",
+          "summary": "initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<3.1.4024.67",
+                    "product": {
+                      "name": "TE1000 | TwinCAT 3 Enineering <3.1.4024.67",
+                      "product_id": "CSAFPID-51001"
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "3.1.4024.67",
+                    "product": {
+                      "name": "TE1000 | TwinCAT 3 Enineering 3.1.4024.67",
+                      "product_id": "CSAFPID-52001"
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "TE1000 | TwinCAT 3 Enineering"
+              }
+            ],
+            "category": "product_family",
+            "name": "Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "Beckhoff"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Peter Cheng"
+          ],
+          "organization": "ELEX FEIGONG RESEARCH INSTITUTE of Elex CyberSecurity, Inc.",
+          "summary": "Peter Cheng reported the vulnerability to Beckhoff"
+        }
+      ],
+      "cve": "CVE-2025-41701",
+      "cwe": {
+        "id": "CWE-502",
+        "name": "Deserialization of Untrusted Data"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An unauthenticated attacker can trick a local user into executing arbitrary commands by opening a deliberately manipulated project file with an affected engineering tool. These arbitrary commands are executed in the user context.",
+          "title": "Description"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-52001"
+        ],
+        "known_affected": [
+          "CSAFPID-51001"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Please update to a recent version of the affected product and uninstall older versions of TwinCAT 3 Engineering. Make sure that older versions of TwinCAT 3 Engineering do not occur as \"Remote Manager\" versions, see https://infosys.beckhoff.com/content/1033/tc3_remote_manager/index.html?id=1584127271344589360. Remove the \"pinning\" from your projects to older versions of TwinCAT 3 Engineering, if present, see https://infosys.beckhoff.com/content/1033/tc3_remote_manager/3154642571.html.",
+          "product_ids": [
+            "CSAFPID-51001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 7.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "REQUIRED",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-51001"
+          ]
+        }
+      ],
+      "title": "CVE-2025-41701"
+    }
+  ]
+}

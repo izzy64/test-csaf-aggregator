@@ -1,0 +1,191 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Siemens SINAMICS G220, SINAMICS S210, and SINAMICS S200 contains a privilege escalation vulnerability that could allow users to escalate their privileges.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-027652: Privilege Escalation Vulnerability in SINAMICS Drives - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-027652.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-027652: Privilege Escalation Vulnerability in SINAMICS Drives - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-027652.json"
+      }
+    ],
+    "title": "SSA-027652: Privilege Escalation Vulnerability in SINAMICS Drives",
+    "tracking": {
+      "current_release_date": "2025-09-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-027652",
+      "initial_release_date": "2025-09-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-09-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V6.4 HF2",
+                "product": {
+                  "name": "SINAMICS G220 V6.4",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS G220 V6.4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINAMICS S200 V6.4",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS S200 V6.4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V6.4 HF2",
+                "product": {
+                  "name": "SINAMICS S210 V6.4",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINAMICS S210 V6.4"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-40594",
+      "cwe": {
+        "id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected devices allow a factory reset to be executed without the required privileges due to improper privilege management as well as manipulation of configuration data because of leaked privileges of previous sessions. This could allow an unauthorized attacker to escalate their privileges.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.4 HF2 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109978915/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.4 HF2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109983183/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40594"
+    }
+  ]
+}

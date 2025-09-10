@@ -27,7 +27,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       }
     ],
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-691715: Vulnerability in OPC Foundation Local Discovery Server Affecting Siemens Products",
     "tracking": {
-      "current_release_date": "2024-09-10T00:00:00Z",
+      "current_release_date": "2025-09-09T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -102,10 +102,16 @@
           "legacy_version": "1.6",
           "number": "7",
           "summary": "Added fix for SIMATIC NET PC Software V16, clarified no fix planned for OpenPCS 7 V9.1"
+        },
+        {
+          "date": "2025-09-09T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Corrected fix version for SIMATIC NET PC Software V17"
         }
       ],
       "status": "interim",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -172,7 +178,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions < V17 SP1",
+                "name": "All versions < V17 SP1 Update 1",
                 "product": {
                   "name": "SIMATIC NET PC Software V17",
                   "product_id": "5"
@@ -228,7 +234,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.0",
+                "name": "vers:intdot/<8.0",
                 "product": {
                   "name": "SIMATIC WinCC",
                   "product_id": "9"
@@ -270,7 +276,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V3.1.2",
+                "name": "vers:intdot/<3.1.2",
                 "product": {
                   "name": "TeleControl Server Basic V3",
                   "product_id": "12"
@@ -319,7 +325,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Update the underlying OPC Foundation Unified Architecture Local Discovery Server (UA-LDS) to \nV1.04.405 or later if possible",
+          "details": "Update the underlying OPC Foundation Unified Architecture Local Discovery Server (UA-LDS) to [V1.04.405](https://opcfoundation.org/developer-tools/samples-and-tools-unified-architecture/local-discovery-server-lds/) or later if possible",
           "product_ids": [
             "1",
             "2",
@@ -355,11 +361,11 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V17 SP1 or later version",
+          "details": "Update to V17 SP1 Update 1 or later version",
           "product_ids": [
             "5"
           ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109808270/"
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109820674/"
         },
         {
           "category": "vendor_fix",
@@ -413,7 +419,7 @@
           "cvss_v3": {
             "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [

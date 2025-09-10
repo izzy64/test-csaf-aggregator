@@ -51,7 +51,7 @@
     ],
     "title": "SSA-331739: Privilege Escalation Vulnerability in WIBU CodeMeter Runtime Affecting Siemens Products",
     "tracking": {
-      "current_release_date": "2025-08-12T00:00:00Z",
+      "current_release_date": "2025-09-09T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-09-09T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Removed Simatic Information Server and Simatic Process Historian as they are not affected."
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -82,50 +88,8 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC Information Server 2020",
-                  "product_id": "1"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Information Server 2020"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Information Server 2022",
-                  "product_id": "2"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Information Server 2022"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Information Server 2024",
-                  "product_id": "3"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Information Server 2024"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
                   "name": "SIMATIC PDM Maintenance Station V5.0",
-                  "product_id": "4"
+                  "product_id": "1"
                 }
               }
             ],
@@ -136,52 +100,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Process Historian 2020",
-                  "product_id": "5"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Process Historian 2020"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Process Historian 2022",
-                  "product_id": "6"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Process Historian 2022"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Process Historian 2024",
-                  "product_id": "7"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Process Historian 2024"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
                 "name": "All versions < V3.18 P032",
                 "product": {
                   "name": "SIMATIC WinCC OA V3.18",
-                  "product_id": "8"
+                  "product_id": "2"
                 }
               }
             ],
@@ -195,7 +117,7 @@
                 "name": "All versions < V3.19 P020",
                 "product": {
                   "name": "SIMATIC WinCC OA V3.19",
-                  "product_id": "9"
+                  "product_id": "3"
                 }
               }
             ],
@@ -209,7 +131,7 @@
                 "name": "All versions < V3.20 P008",
                 "product": {
                   "name": "SIMATIC WinCC OA V3.20",
-                  "product_id": "10"
+                  "product_id": "4"
                 }
               }
             ],
@@ -241,40 +163,22 @@
           "1",
           "2",
           "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10"
+          "4"
         ]
       },
       "remediations": [
         {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "5"
-          ]
-        },
-        {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "6",
-            "7"
+            "1"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.18 P032 or later version",
           "product_ids": [
-            "8"
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109994004/"
         },
@@ -282,7 +186,7 @@
           "category": "vendor_fix",
           "details": "Update to V3.19 P020 or later version",
           "product_ids": [
-            "9"
+            "3"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109989640/"
         },
@@ -290,7 +194,7 @@
           "category": "vendor_fix",
           "details": "Update to V3.20 P008 or later version",
           "product_ids": [
-            "10"
+            "4"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109990967/"
         }
@@ -307,13 +211,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
+            "4"
           ]
         }
       ],

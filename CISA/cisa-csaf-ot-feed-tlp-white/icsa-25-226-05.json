@@ -49,7 +49,7 @@
       },
       {
         "category": "other",
-        "text": "Critical Manufacturing, Transportation Systems, Energy, Healthcare and Public Health, Financial Services, Government Services and Facilities",
+        "text": "Critical Manufacturing, Financial Services, Healthcare and Public Health, Transportation Systems",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -161,11 +161,11 @@
         "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
       }
     ],
-    "title": "Siemens Wibu CodeMeter Runtime",
+    "title": "Siemens WIBU CodeMeter Runtime",
     "tracking": {
-      "current_release_date": "2025-08-12T00:00:00.000000Z",
+      "current_release_date": "2025-09-09T00:00:00.000000Z",
       "generator": {
-        "date": "2025-08-14T20:56:35.513251Z",
+        "date": "2025-09-11T15:37:58.531809Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -179,10 +179,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-09-09T00:00:00.000000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Removed Simatic Information Server and Simatic Process Historian as they are not affected."
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -195,50 +201,8 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC Information Server 2020",
-                  "product_id": "CSAFPID-0001"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Information Server 2020"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Information Server 2022",
-                  "product_id": "CSAFPID-0002"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Information Server 2022"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Information Server 2024",
-                  "product_id": "CSAFPID-0003"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Information Server 2024"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
                   "name": "SIMATIC PDM Maintenance Station V5.0",
-                  "product_id": "CSAFPID-0004"
+                  "product_id": "CSAFPID-0001"
                 }
               }
             ],
@@ -249,52 +213,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Process Historian 2020",
-                  "product_id": "CSAFPID-0005"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Process Historian 2020"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Process Historian 2022",
-                  "product_id": "CSAFPID-0006"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Process Historian 2022"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC Process Historian 2024",
-                  "product_id": "CSAFPID-0007"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC Process Historian 2024"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V3.18_P032",
                 "product": {
                   "name": "SIMATIC WinCC OA V3.18",
-                  "product_id": "CSAFPID-0008"
+                  "product_id": "CSAFPID-0002"
                 }
               }
             ],
@@ -308,7 +230,7 @@
                 "name": "<V3.19_P020",
                 "product": {
                   "name": "SIMATIC WinCC OA V3.19",
-                  "product_id": "CSAFPID-0009"
+                  "product_id": "CSAFPID-0003"
                 }
               }
             ],
@@ -322,7 +244,7 @@
                 "name": "<V3.20_P008",
                 "product": {
                   "name": "SIMATIC WinCC OA V3.20",
-                  "product_id": "CSAFPID-0010"
+                  "product_id": "CSAFPID-0004"
                 }
               }
             ],
@@ -354,41 +276,30 @@
           "CSAFPID-0001",
           "CSAFPID-0002",
           "CSAFPID-0003",
-          "CSAFPID-0004",
-          "CSAFPID-0005",
-          "CSAFPID-0006",
-          "CSAFPID-0007",
-          "CSAFPID-0008",
-          "CSAFPID-0009",
-          "CSAFPID-0010"
+          "CSAFPID-0004"
         ]
       },
       "remediations": [
         {
-          "category": "no_fix_planned",
-          "details": "Currently no fix is planned",
-          "product_ids": [
-            "CSAFPID-0005"
-          ]
-        },
-        {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008"
+            "CSAFPID-0001"
           ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.18 P032 or later version",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109994004/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.19 P020 or later version",
           "product_ids": [
-            "CSAFPID-0009"
+            "CSAFPID-0003"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109989640/"
         },
@@ -396,7 +307,7 @@
           "category": "vendor_fix",
           "details": "Update to V3.20 P008 or later version",
           "product_ids": [
-            "CSAFPID-0010"
+            "CSAFPID-0004"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109990967/"
         }
@@ -413,13 +324,7 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007",
-            "CSAFPID-0008",
-            "CSAFPID-0009",
-            "CSAFPID-0010"
+            "CSAFPID-0004"
           ]
         }
       ],

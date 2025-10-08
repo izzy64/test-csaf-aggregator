@@ -1,0 +1,198 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "MEDIUM"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Authenticated SQL Injection on Alert functionality in Guardian/CMC before 25.2.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2025-40887"
+      ],
+      "current_release_date": "2025-10-07T11:00:00.000Z",
+      "id": "NN-2025:8-01",
+      "initial_release_date": "2025-10-07T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2025-10-07T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<25.2.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian <25.2.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "25.2.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian 25.2.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<25.2.0",
+                "product": {
+                  "name": "Nozomi Networks CMC <25.2.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "25.2.0",
+                "product": {
+                  "name": "Nozomi Networks CMC 25.2.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Andrea Palanca"
+          ],
+          "organization": "Nozomi Networks Product Security team",
+          "summary": "finding this issue during an internal investigation"
+        }
+      ],
+      "cve": "CVE-2025-40887",
+      "cwe": {
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      },
+      "discovery_date": "2025-10-07T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2025:8-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A SQL Injection vulnerability was discovered in the Alert functionality due to improper validation of an input parameter.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-40887"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2025/nn-2025_8-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2025:8-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Use internal firewall features to limit access to the web management interface. Review all accounts with access to it and delete unnecessary ones.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v25.2.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "An authenticated user with limited privileges can execute arbitrary SELECT SQL statements on the DBMS used by the web application, potentially exposing unauthorized data."
+        }
+      ],
+      "title": "Authenticated SQL Injection on Alert functionality in Guardian/CMC before 25.2.0"
+    }
+  ]
+}

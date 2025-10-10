@@ -2,7 +2,7 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "Rockwell Automation",
+        "organization": "Hitachi Energy PSIRT",
         "summary": "reporting this vulnerability to CISA"
       }
     ],
@@ -24,12 +24,12 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of these vulnerabilities could result in an attacker causing a denial of service condition.",
+        "text": "Successful exploitation of this vulnerability could result in the manipulation of content or the injection of data with the potential of carrying out further malicious attacks.",
         "title": "Risk evaluation"
       },
       {
         "category": "other",
-        "text": "Chemical, Critical Manufacturing",
+        "text": "Energy",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -39,17 +39,17 @@
       },
       {
         "category": "other",
-        "text": "United States",
+        "text": "Switzerland",
         "title": "Company headquarters location"
       },
       {
         "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities, such as:",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability, such as:",
         "title": "Recommended Practices"
       },
       {
         "category": "general",
-        "text": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
+        "text": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet.",
         "title": "Recommended Practices"
       },
       {
@@ -89,7 +89,27 @@
       },
       {
         "category": "general",
-        "text": "No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time. These vulnerabilities are not exploitable remotely.",
+        "text": "CISA also recommends users take the following measures to protect themselves from social engineering attacks:",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Do not click web links or open attachments in unsolicited email messages.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Refer to Recognizing and Avoiding Email Scams for more information on avoiding email scams.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Refer to Avoiding Social Engineering and Phishing Attacks for more information on social engineering attacks.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.",
         "title": "Recommended Practices"
       }
     ],
@@ -102,13 +122,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-25-226-31 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-226-31.json"
+        "summary": "ICS Advisory ICSA-25-282-01 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-25-282-01.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-25-226-31 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-226-31"
+        "summary": "ICSA Advisory ICSA-25-282-01 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-282-01"
       },
       {
         "category": "external",
@@ -129,6 +149,16 @@
         "category": "external",
         "summary": "Recommended Practices",
         "url": "https://www.cisa.gov/topics/industrial-control-systems"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/sites/default/files/publications/emailscams0905.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       },
       {
         "category": "external",
@@ -156,40 +186,28 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "Rockwell Automation 1756-EN4TR, 1756-EN4TRXT (Update B)",
+    "title": "Hitachi Energy Asset Suite",
     "tracking": {
-      "current_release_date": "2025-10-07T06:00:00.000000Z",
+      "current_release_date": "2025-10-09T06:00:00.000000Z",
       "generator": {
-        "date": "2025-10-07T16:56:44.045962Z",
+        "date": "2025-10-08T18:42:52.387584Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-25-226-31",
-      "initial_release_date": "2025-08-14T06:00:00.000000Z",
+      "id": "ICSA-25-282-01",
+      "initial_release_date": "2025-10-09T06:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2025-08-14T06:00:00.000000Z",
+          "date": "2025-10-09T06:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
-        },
-        {
-          "date": "2025-09-09T06:00:00.000000Z",
-          "legacy_version": "Update A",
-          "number": "2",
-          "summary": "Update A - Adjusted affected versions"
-        },
-        {
-          "date": "2025-10-07T06:00:00.000000Z",
-          "legacy_version": "Update B",
-          "number": "3",
-          "summary": "Update B - Removed affected product"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -200,162 +218,80 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<=6.001",
+                "name": "<=9.7",
                 "product": {
-                  "name": "Rockwell Automation 1756-EN4TR: <=6.001",
+                  "name": "Hitachi Energy Asset Suite: <=9.7",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "1756-EN4TR"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "<=6.001",
-                "product": {
-                  "name": "Rockwell Automation 1756-EN4TRXT: <=6.001",
-                  "product_id": "CSAFPID-0002"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "1756-EN4TRXT"
+            "name": "Asset Suite"
           }
         ],
         "category": "vendor",
-        "name": "Rockwell Automation"
+        "name": "Hitachi Energy"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-8007",
+      "cve": "CVE-2025-10217",
       "cwe": {
-        "id": "CWE-20",
-        "name": "Improper Input Validation"
+        "id": "CWE-117",
+        "name": "Improper Output Neutralization for Logs"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "A security issue exists in the protected mode of 1756-EN4TR communication modules, where a Concurrent Forward Close operation can trigger a Major Non-Recoverable (MNFR) fault. This condition may lead to unexpected system crashes and loss of device availability.",
+          "text": "A vulnerability exists in Asset Suite for an authenticated user to manipulate the content of performance related log data or to inject crafted data in logfile for potentially carrying out further malicious attacks. Performance logging is typically enabled for troubleshooting purposes while resolving application performance related issues.",
           "title": "Vulnerability Summary"
         }
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002"
+          "CSAFPID-0001"
         ]
       },
       "references": [
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2025-8007"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-10217"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Rockwell Automation recommends users upgrade their devices to 7.001 or later. The update can be downloaded from Rockwell Automation's website.",
+          "details": "Hitachi Energy recommends users disable performance logging and apply the update as soon as it becomes available.",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "https://www.rockwellautomation.com/en-ca/support/product/product-downloads.html"
-        },
-        {
-          "category": "mitigation",
-          "details": "Rockwell Automation also recommends users follow their published Security Best Practices.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 6.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
+            "CSAFPID-0001"
           ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2025-8008",
-      "cwe": {
-        "id": "CWE-755",
-        "name": "Improper Handling of Exceptional Conditions"
-      },
-      "notes": [
-        {
-          "category": "summary",
-          "text": "A security issue exists in the protected mode of EN4TR devices, where sending specifically crafted messages during a Forward Close operation can cause the device to crash.",
-          "title": "Vulnerability Summary"
-        }
-      ],
-      "product_status": {
-        "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002"
-        ]
-      },
-      "references": [
-        {
-          "category": "external",
-          "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2025-8008"
-        },
-        {
-          "category": "external",
-          "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "category": "external",
-          "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
-        }
-      ],
-      "remediations": [
-        {
-          "category": "mitigation",
-          "details": "Rockwell Automation recommends users upgrade their devices to 7.001 or later. The update can be downloaded from Rockwell Automation's website.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "https://www.rockwellautomation.com/en-ca/support/product/product-downloads.html"
         },
         {
           "category": "mitigation",
-          "details": "Rockwell Automation also recommends users follow their published Security Best Practices.",
+          "details": "Hitachi Energy recommends the following security practices and firewall configurations to help protect a process control network from attacks originating from outside the network. Such practices include ensuring process control systems are physically protected from direct access by unauthorized personnel, have no direct connections to the Internet, and are separated from other networks by means of a firewall system with a minimal number of exposed ports, and others to be evaluated case by case. Process control systems should not be used for Internet surfing, instant messaging, or receiving e-mails. Portable computers and removable storage media should be carefully scanned for viruses before they are connected to a control system. Proper password policies and processes should be followed.",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For more information see the associated Hitachi Energy PSIRT security advisory Log Data Vulnerability in Hitachi Energy Asset Suite Product.",
+          "product_ids": [
+            "CSAFPID-0001"
           ],
-          "url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight"
+          "url": "https://publisher.hitachienergy.com/preview?DocumentID=8DBD000226&LanguageCode=en&DocumentPartId=&Action=launch"
         }
       ],
       "scores": [
@@ -363,12 +299,11 @@
           "cvss_v3": {
             "baseScore": 6.5,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
+            "CSAFPID-0001"
           ]
         }
       ]

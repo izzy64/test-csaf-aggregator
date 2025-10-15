@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-373591: Buffer Overflow Vulnerability in RUGGEDCOM ROS Devices",
     "tracking": {
-      "current_release_date": "2025-05-13T00:00:00Z",
+      "current_release_date": "2025-10-14T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added RUGGEDCOM RSG2100PNC (32M) V4.X and RSG2100PNC (32M) V5.X as affected products. Removed not affected products: RUGGEDCOM ROS RMC, RUGGEDCOM ROS RMC20, RUGGEDCOM ROS RMC40, RUGGEDCOM ROS RMC41, RUGGEDCOM RSG900 V4.X, RUGGEDCOM RSG900 V5.X, RUGGEDCOM RSG900G V4.X, RUGGEDCOM RSG900G V5.X, RUGGEDCOM ROS RSG900C, RUGGEDCOM ROS RSG900R. Added RUGGEDCOM RS416P, RUGGEDCOM RS416Pv2 V4.X, RUGGEDCOM RS416Pv2 V5.X, RUGGEDCOM RS1600, RUGGEDCOM RS1600F, RUGGEDCOM RS1600T and RUGGEDCOM RST2228P V5.X"
+        },
+        {
+          "date": "2025-10-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for RSG2100"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -86,7 +92,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM i800",
                   "product_id": "1"
@@ -100,7 +106,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM i801",
                   "product_id": "2"
@@ -114,7 +120,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM i802",
                   "product_id": "3"
@@ -128,7 +134,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM i803",
                   "product_id": "4"
@@ -142,24 +148,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM M969",
-                  "product_id": "5"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM M969"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM M2100",
-                  "product_id": "6"
+                  "product_id": "5"
                 }
               }
             ],
@@ -170,10 +162,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM M2200",
-                  "product_id": "7"
+                  "product_id": "6"
                 }
               }
             ],
@@ -184,7 +176,21 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM M969",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM M969"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RMC30",
                   "product_id": "8"
@@ -198,7 +204,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RMC8388 V4.X",
                   "product_id": "9"
@@ -212,7 +218,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "vers:intdot/<5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RMC8388 V5.X",
                   "product_id": "10"
@@ -226,7 +232,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RP110",
                   "product_id": "11"
@@ -240,360 +246,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS400",
-                  "product_id": "12"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS400"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS401",
-                  "product_id": "13"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS401"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS416",
-                  "product_id": "14"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS416"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS416P",
-                  "product_id": "15"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS416P"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS416Pv2 V4.X",
-                  "product_id": "16"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS416Pv2 V4.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
-                "product": {
-                  "name": "RUGGEDCOM RS416Pv2 V5.X",
-                  "product_id": "17"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS416Pv2 V5.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS416v2 V4.X",
-                  "product_id": "18"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS416v2 V4.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<5.5.4",
-                "product": {
-                  "name": "RUGGEDCOM RS416v2 V5.X",
-                  "product_id": "19"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS416v2 V5.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS900 (32M) V4.X",
-                  "product_id": "20"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900 (32M) V4.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
-                "product": {
-                  "name": "RUGGEDCOM RS900 (32M) V5.X",
-                  "product_id": "21"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900 (32M) V5.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS900G",
-                  "product_id": "22"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS900G (32M) V4.X",
-                  "product_id": "23"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900G (32M) V4.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
-                "product": {
-                  "name": "RUGGEDCOM RS900G (32M) V5.X",
-                  "product_id": "24"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900G (32M) V5.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS900GP",
-                  "product_id": "25"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900GP"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS900L",
-                  "product_id": "26"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900L"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS900W",
-                  "product_id": "27"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS900W"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS910",
-                  "product_id": "28"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS910"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS910L",
-                  "product_id": "29"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS910L"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS910W",
-                  "product_id": "30"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS910W"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS920L",
-                  "product_id": "31"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS920L"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS920W",
-                  "product_id": "32"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS920W"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS930L",
-                  "product_id": "33"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS930L"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS930W",
-                  "product_id": "34"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS930W"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS940G",
-                  "product_id": "35"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS940G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RS969",
-                  "product_id": "36"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RS969"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "vers:intdot/<4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RS1600",
-                  "product_id": "37"
+                  "product_id": "12"
                 }
               }
             ],
@@ -604,10 +260,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "vers:intdot/<4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RS1600F",
-                  "product_id": "38"
+                  "product_id": "13"
                 }
               }
             ],
@@ -618,10 +274,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "vers:intdot/<4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RS1600T",
-                  "product_id": "39"
+                  "product_id": "14"
                 }
               }
             ],
@@ -632,10 +288,122 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS400",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS400"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS401",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS401"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS416",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS416P",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416P"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS416Pv2 V4.X",
+                  "product_id": "19"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416Pv2 V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RS416Pv2 V5.X",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416Pv2 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS416v2 V4.X",
+                  "product_id": "21"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416v2 V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RS416v2 V5.X",
+                  "product_id": "22"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416v2 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RS8000",
-                  "product_id": "40"
+                  "product_id": "23"
                 }
               }
             ],
@@ -646,10 +414,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RS8000A",
-                  "product_id": "41"
+                  "product_id": "24"
                 }
               }
             ],
@@ -660,10 +428,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RS8000H",
-                  "product_id": "42"
+                  "product_id": "25"
                 }
               }
             ],
@@ -674,10 +442,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RS8000T",
-                  "product_id": "43"
+                  "product_id": "26"
                 }
               }
             ],
@@ -688,94 +456,248 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V4.3.7",
                 "product": {
-                  "name": "RUGGEDCOM RSG907R",
-                  "product_id": "44"
+                  "name": "RUGGEDCOM RS900 (32M) V4.X",
+                  "product_id": "27"
                 }
               }
             ],
             "category": "product_name",
-            "name": "RUGGEDCOM RSG907R"
+            "name": "RUGGEDCOM RS900 (32M) V4.X"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
-                  "name": "RUGGEDCOM RSG908C",
-                  "product_id": "45"
+                  "name": "RUGGEDCOM RS900 (32M) V5.X",
+                  "product_id": "28"
                 }
               }
             ],
             "category": "product_name",
-            "name": "RUGGEDCOM RSG908C"
+            "name": "RUGGEDCOM RS900 (32M) V5.X"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V4.3.7",
                 "product": {
-                  "name": "RUGGEDCOM RSG909R",
-                  "product_id": "46"
+                  "name": "RUGGEDCOM RS900G",
+                  "product_id": "29"
                 }
               }
             ],
             "category": "product_name",
-            "name": "RUGGEDCOM RSG909R"
+            "name": "RUGGEDCOM RS900G"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V4.3.7",
                 "product": {
-                  "name": "RUGGEDCOM RSG910C",
-                  "product_id": "47"
+                  "name": "RUGGEDCOM RS900G (32M) V4.X",
+                  "product_id": "30"
                 }
               }
             ],
             "category": "product_name",
-            "name": "RUGGEDCOM RSG910C"
+            "name": "RUGGEDCOM RS900G (32M) V4.X"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V5.5.4",
                 "product": {
-                  "name": "RUGGEDCOM RSG920P V4.X",
-                  "product_id": "48"
+                  "name": "RUGGEDCOM RS900G (32M) V5.X",
+                  "product_id": "31"
                 }
               }
             ],
             "category": "product_name",
-            "name": "RUGGEDCOM RSG920P V4.X"
+            "name": "RUGGEDCOM RS900G (32M) V5.X"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V4.3.7",
                 "product": {
-                  "name": "RUGGEDCOM RSG920P V5.X",
-                  "product_id": "49"
+                  "name": "RUGGEDCOM RS900GP",
+                  "product_id": "32"
                 }
               }
             ],
             "category": "product_name",
-            "name": "RUGGEDCOM RSG920P V5.X"
+            "name": "RUGGEDCOM RS900GP"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS900L",
+                  "product_id": "33"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS900L"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS900W",
+                  "product_id": "34"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS900W"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS910",
+                  "product_id": "35"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS910"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS910L",
+                  "product_id": "36"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS910L"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS910W",
+                  "product_id": "37"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS910W"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS920L",
+                  "product_id": "38"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS920L"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS920W",
+                  "product_id": "39"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS920W"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS930L",
+                  "product_id": "40"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS930L"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS930W",
+                  "product_id": "41"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS930W"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS940G",
+                  "product_id": "42"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS940G"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RS969",
+                  "product_id": "43"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS969"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2100",
-                  "product_id": "50"
+                  "product_id": "44"
                 }
               }
             ],
@@ -786,10 +708,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2100 (32M) V4.X",
-                  "product_id": "51"
+                  "product_id": "45"
                 }
               }
             ],
@@ -800,10 +722,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RSG2100 (32M) V5.X",
-                  "product_id": "52"
+                  "product_id": "46"
                 }
               }
             ],
@@ -814,10 +736,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2100P",
-                  "product_id": "53"
+                  "product_id": "47"
                 }
               }
             ],
@@ -828,10 +750,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2100P (32M) V4.X",
-                  "product_id": "54"
+                  "product_id": "48"
                 }
               }
             ],
@@ -842,10 +764,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RSG2100P (32M) V5.X",
-                  "product_id": "55"
+                  "product_id": "49"
                 }
               }
             ],
@@ -856,38 +778,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
-                "product": {
-                  "name": "RUGGEDCOM RSG2100PNC (32M) V4.X",
-                  "product_id": "56"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RSG2100PNC (32M) V4.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
-                "product": {
-                  "name": "RUGGEDCOM RSG2100PNC (32M) V5.X",
-                  "product_id": "57"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RSG2100PNC (32M) V5.X"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2200",
-                  "product_id": "58"
+                  "product_id": "50"
                 }
               }
             ],
@@ -898,10 +792,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2288 V4.X",
-                  "product_id": "59"
+                  "product_id": "51"
                 }
               }
             ],
@@ -912,10 +806,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RSG2288 V5.X",
-                  "product_id": "60"
+                  "product_id": "52"
                 }
               }
             ],
@@ -926,10 +820,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2300 V4.X",
-                  "product_id": "61"
+                  "product_id": "53"
                 }
               }
             ],
@@ -940,10 +834,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RSG2300 V5.X",
-                  "product_id": "62"
+                  "product_id": "54"
                 }
               }
             ],
@@ -954,10 +848,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2300P V4.X",
-                  "product_id": "63"
+                  "product_id": "55"
                 }
               }
             ],
@@ -968,10 +862,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RSG2300P V5.X",
-                  "product_id": "64"
+                  "product_id": "56"
                 }
               }
             ],
@@ -982,10 +876,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.3.7",
+                "name": "<V4.3.7",
                 "product": {
                   "name": "RUGGEDCOM RSG2488 V4.X",
-                  "product_id": "65"
+                  "product_id": "57"
                 }
               }
             ],
@@ -996,10 +890,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RSG2488 V5.X",
-                  "product_id": "66"
+                  "product_id": "58"
                 }
               }
             ],
@@ -1010,10 +904,94 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "vers:intdot/<5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RSG907R",
+                  "product_id": "59"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG907R"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RSG908C",
+                  "product_id": "60"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG908C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RSG909R",
+                  "product_id": "61"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG909R"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RSG910C",
+                  "product_id": "62"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG910C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V4.3.7",
+                "product": {
+                  "name": "RUGGEDCOM RSG920P V4.X",
+                  "product_id": "63"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG920P V4.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RSG920P V5.X",
+                  "product_id": "64"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG920P V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RSL910",
-                  "product_id": "67"
+                  "product_id": "65"
                 }
               }
             ],
@@ -1024,7 +1002,35 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RST2228",
+                  "product_id": "66"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST2228"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.5.4",
+                "product": {
+                  "name": "RUGGEDCOM RST2228P",
+                  "product_id": "67"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST2228P"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RST916C",
                   "product_id": "68"
@@ -1038,7 +1044,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
+                "name": "<V5.5.4",
                 "product": {
                   "name": "RUGGEDCOM RST916P",
                   "product_id": "69"
@@ -1047,34 +1053,6 @@
             ],
             "category": "product_name",
             "name": "RUGGEDCOM RST916P"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
-                "product": {
-                  "name": "RUGGEDCOM RST2228",
-                  "product_id": "70"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RST2228"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V5.5.4",
-                "product": {
-                  "name": "RUGGEDCOM RST2228P",
-                  "product_id": "71"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "RUGGEDCOM RST2228P"
           }
         ],
         "category": "vendor",
@@ -1102,16 +1080,13 @@
           "2",
           "3",
           "4",
+          "5",
           "6",
           "7",
-          "5",
           "8",
           "9",
           "10",
           "11",
-          "37",
-          "38",
-          "39",
           "12",
           "13",
           "14",
@@ -1120,10 +1095,6 @@
           "17",
           "18",
           "19",
-          "40",
-          "41",
-          "42",
-          "43",
           "20",
           "21",
           "22",
@@ -1141,6 +1112,19 @@
           "34",
           "35",
           "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
           "50",
           "51",
           "52",
@@ -1158,15 +1142,7 @@
           "64",
           "65",
           "66",
-          "44",
-          "45",
-          "46",
-          "47",
-          "48",
-          "49",
           "67",
-          "70",
-          "71",
           "68",
           "69"
         ]
@@ -1180,16 +1156,13 @@
             "2",
             "3",
             "4",
+            "5",
             "6",
             "7",
-            "5",
             "8",
             "9",
             "10",
             "11",
-            "37",
-            "38",
-            "39",
             "12",
             "13",
             "14",
@@ -1198,10 +1171,6 @@
             "17",
             "18",
             "19",
-            "40",
-            "41",
-            "42",
-            "43",
             "20",
             "21",
             "22",
@@ -1219,6 +1188,19 @@
             "34",
             "35",
             "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
             "50",
             "51",
             "52",
@@ -1236,34 +1218,20 @@
             "64",
             "65",
             "66",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
             "67",
-            "70",
-            "71",
             "68",
             "69"
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "50"
-          ]
-        },
-        {
           "category": "vendor_fix",
           "details": "Update to V4.3.7 or later version",
           "product_ids": [
-            "37",
-            "38",
-            "39",
-            "16"
+            "12",
+            "13",
+            "14",
+            "19",
+            "44"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
         },
@@ -1271,88 +1239,7 @@
           "category": "vendor_fix",
           "details": "Update to V4.3.7 or later version",
           "product_ids": [
-            "15",
-            "56"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "37",
-            "38",
-            "39",
-            "16"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "15",
-            "56"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "37",
-            "38",
-            "39",
-            "16"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "15",
-            "56"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "37",
-            "38",
-            "39",
-            "16"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "15",
-            "56"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "37",
-            "38",
-            "39",
-            "16"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "15",
-            "56"
+            "18"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
         },
@@ -1360,166 +1247,13 @@
           "category": "vendor_fix",
           "details": "Update to V5.5.4 or later version",
           "product_ids": [
-            "17",
-            "44",
-            "45",
-            "46",
-            "47",
-            "71"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "57"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "37",
-            "38",
-            "39",
-            "16"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.3.7 or later version",
-          "product_ids": [
-            "15",
-            "56"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "17",
-            "44",
-            "45",
-            "46",
-            "47",
-            "71"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "57"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "17",
-            "44",
-            "45",
-            "46",
-            "47",
-            "71"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "57"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "17",
-            "44",
-            "45",
-            "46",
-            "47",
-            "71"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "57"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "17",
-            "44",
-            "45",
-            "46",
-            "47",
-            "71"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "57"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "17",
-            "44",
-            "45",
-            "46",
-            "47",
-            "71"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "57"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "17",
-            "44",
-            "45",
-            "46",
-            "47",
-            "71"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.5.4 or later version",
-          "product_ids": [
-            "57"
+            "10",
+            "20",
+            "59",
+            "60",
+            "61",
+            "62",
+            "67"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109797844/"
         },
@@ -1531,44 +1265,44 @@
             "2",
             "3",
             "4",
+            "5",
             "6",
             "7",
-            "5",
             "8",
             "9",
             "11",
-            "12",
-            "13",
-            "14",
-            "18",
-            "40",
-            "41",
-            "42",
-            "43",
-            "20",
-            "22",
+            "15",
+            "16",
+            "17",
+            "21",
             "23",
+            "24",
             "25",
             "26",
             "27",
-            "28",
             "29",
             "30",
-            "31",
             "32",
             "33",
             "34",
             "35",
             "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "45",
+            "47",
+            "48",
+            "50",
             "51",
             "53",
-            "54",
-            "58",
-            "59",
-            "61",
-            "63",
-            "65",
-            "48"
+            "55",
+            "57",
+            "63"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109799880/"
         },
@@ -1576,19 +1310,18 @@
           "category": "vendor_fix",
           "details": "Update to V5.5.4 or later version",
           "product_ids": [
-            "10",
-            "19",
-            "21",
-            "24",
-            "52",
-            "55",
-            "60",
-            "62",
-            "64",
-            "66",
+            "22",
+            "28",
+            "31",
+            "46",
             "49",
-            "67",
-            "70",
+            "52",
+            "54",
+            "56",
+            "58",
+            "64",
+            "65",
+            "66",
             "68",
             "69"
           ],
@@ -1602,16 +1335,13 @@
             "2",
             "3",
             "4",
+            "5",
             "6",
             "7",
-            "5",
             "8",
             "9",
             "10",
             "11",
-            "37",
-            "38",
-            "39",
             "12",
             "13",
             "14",
@@ -1620,10 +1350,6 @@
             "17",
             "18",
             "19",
-            "40",
-            "41",
-            "42",
-            "43",
             "20",
             "21",
             "22",
@@ -1641,6 +1367,19 @@
             "34",
             "35",
             "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
             "50",
             "51",
             "52",
@@ -1658,15 +1397,7 @@
             "64",
             "65",
             "66",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
             "67",
-            "70",
-            "71",
             "68",
             "69"
           ]
@@ -1685,16 +1416,13 @@
             "2",
             "3",
             "4",
+            "5",
             "6",
             "7",
-            "5",
             "8",
             "9",
             "10",
             "11",
-            "37",
-            "38",
-            "39",
             "12",
             "13",
             "14",
@@ -1703,10 +1431,6 @@
             "17",
             "18",
             "19",
-            "40",
-            "41",
-            "42",
-            "43",
             "20",
             "21",
             "22",
@@ -1724,6 +1448,19 @@
             "34",
             "35",
             "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
             "50",
             "51",
             "52",
@@ -1741,15 +1478,7 @@
             "64",
             "65",
             "66",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
             "67",
-            "70",
-            "71",
             "68",
             "69"
           ]

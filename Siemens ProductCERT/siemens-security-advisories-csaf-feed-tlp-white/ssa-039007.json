@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-039007: Heap-based Buffer Overflow Vulnerability in User Management Component (UMC)",
     "tracking": {
-      "current_release_date": "2025-05-13T00:00:00Z",
+      "current_release_date": "2025-10-14T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -96,10 +96,16 @@
           "legacy_version": "1.5",
           "number": "6",
           "summary": "Updated remediation for SINEC NMS to point directly to the update of UMC"
+        },
+        {
+          "date": "2025-10-14T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "Added remediation for Opcenter RDnL and Opcenter Quality"
         }
       ],
       "status": "interim",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -110,24 +116,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "Opcenter Execution Foundation",
-                  "product_id": "1"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Opcenter Execution Foundation"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<2406",
                 "product": {
                   "name": "Opcenter Quality",
-                  "product_id": "2"
+                  "product_id": "1"
                 }
               }
             ],
@@ -138,15 +130,15 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<2410",
                 "product": {
-                  "name": "Opcenter RDL",
-                  "product_id": "3"
+                  "name": "Opcenter RDnL",
+                  "product_id": "2"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Opcenter RDL"
+            "name": "Opcenter RDnL"
           },
           {
             "branches": [
@@ -155,7 +147,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC PCS neo V4.0",
-                  "product_id": "4"
+                  "product_id": "3"
                 }
               }
             ],
@@ -169,7 +161,7 @@
                 "name": "All versions < V4.1 Update 2",
                 "product": {
                   "name": "SIMATIC PCS neo V4.1",
-                  "product_id": "5"
+                  "product_id": "4"
                 }
               }
             ],
@@ -183,7 +175,7 @@
                 "name": "All versions < V5.0 Update 1",
                 "product": {
                   "name": "SIMATIC PCS neo V5.0",
-                  "product_id": "6"
+                  "product_id": "5"
                 }
               }
             ],
@@ -197,7 +189,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SINEC NMS",
-                  "product_id": "7"
+                  "product_id": "6"
                 }
               }
             ],
@@ -211,7 +203,7 @@
                 "name": "All versions < V3.2 SP3",
                 "product": {
                   "name": "SINEMA Remote Connect Client",
-                  "product_id": "8"
+                  "product_id": "7"
                 }
               }
             ],
@@ -225,7 +217,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V16",
-                  "product_id": "9"
+                  "product_id": "8"
                 }
               }
             ],
@@ -239,7 +231,7 @@
                 "name": "All versions < V17 Update 8",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V17",
-                  "product_id": "10"
+                  "product_id": "9"
                 }
               }
             ],
@@ -253,7 +245,7 @@
                 "name": "All versions < V18 Update 5",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V18",
-                  "product_id": "11"
+                  "product_id": "10"
                 }
               }
             ],
@@ -267,7 +259,7 @@
                 "name": "All versions < V19 Update 3",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V19",
-                  "product_id": "12"
+                  "product_id": "11"
                 }
               }
             ],
@@ -306,8 +298,7 @@
           "8",
           "9",
           "10",
-          "11",
-          "12"
+          "11"
         ]
       },
       "remediations": [
@@ -325,8 +316,7 @@
             "8",
             "9",
             "10",
-            "11",
-            "12"
+            "11"
           ]
         },
         {
@@ -343,56 +333,22 @@
             "8",
             "9",
             "10",
-            "11",
-            "12"
+            "11"
           ]
         },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
-            "4",
-            "9"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "1",
-            "2",
-            "3"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V4.1 Update 2 or later version",
-          "product_ids": [
-            "5"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109972354/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V5.0 Update 1 or later version",
-          "product_ids": [
-            "6"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109977244/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V3.2 SP3 or later version",
-          "product_ids": [
+            "3",
             "8"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109976964/"
+          ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V17 Update 8 or later version",
           "product_ids": [
-            "10"
+            "9"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109784441/"
         },
@@ -400,7 +356,7 @@
           "category": "vendor_fix",
           "details": "Update to V18 Update 5 or later version",
           "product_ids": [
-            "11"
+            "10"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109817218/"
         },
@@ -408,15 +364,54 @@
           "category": "vendor_fix",
           "details": "Update to V19 Update 3 or later version",
           "product_ids": [
-            "12"
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109925643/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update UMC to V2.15.1.1 or later compatible version \nhttps://support.industry.siemens.com/cs/ww/en/view/109987708/",
+          "details": "Update to V2406 or later version",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2410 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/product/297341591/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2 SP3 or later version",
           "product_ids": [
             "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109976964/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 Update 2 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109972354/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.0 Update 1 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109977244/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update UMC to V2.15.1.1 or later compatible version https://support.industry.siemens.com/cs/ww/en/view/109987708/",
+          "product_ids": [
+            "6"
           ]
         }
       ],
@@ -425,7 +420,7 @@
           "cvss_v3": {
             "baseScore": 9.8,
             "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -439,8 +434,7 @@
             "8",
             "9",
             "10",
-            "11",
-            "12"
+            "11"
           ]
         }
       ],

@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SiPass integrated ACC (Advanced Central Controller) devices do not properly check the integrity of firmware updates. This could allow an attacker to upload a maliciously modified firmware onto the device.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "SiPass integrated ACC (Advanced Central Controller) devices do not properly check the integrity of firmware updates. This could allow an attacker to upload a maliciously modified firmware onto the device.\n\nSiemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-367714: Improper Integrity Check of Firmware Updates in SiPass integrated AC5102 / ACC-G2 and ACC-AP",
     "tracking": {
-      "current_release_date": "2025-05-23T00:00:00Z",
+      "current_release_date": "2025-10-14T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2025-10-14T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Clarified that currently no fix is planned for affected devices"
         }
       ],
-      "status": "interim",
-      "version": "1"
+      "status": "final",
+      "version": "2"
     }
   },
   "product_tree": {
@@ -140,8 +146,8 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
           "product_ids": [
             "1",
             "2"

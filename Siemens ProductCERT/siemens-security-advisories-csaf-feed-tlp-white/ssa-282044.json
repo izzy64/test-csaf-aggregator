@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-282044: DLL Hijacking Vulnerability in Siemens Web Installer used by the Online Software Delivery",
     "tracking": {
-      "current_release_date": "2025-09-09T00:00:00Z",
+      "current_release_date": "2025-10-14T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added Sahil Shah to acknowledgment; Added fix for SIMATIC Energy Suite V19, SIMATIC Energy Suite V20, SIMATIC MTP CREATOR V4.x, SIMATIC Control Function Library (CFL) V3.x, TIA Portal Test Suite V19, TIA Portal Test Suite V20, SIMATIC WinCC Visualization Architect V19, SIMATIC WinCC Visualization Architect V20, SIMATIC S7-PCT;  Updated No fix planned for SIMATIC ProSave V17,SIMATIC WinCC flexible ES,  SIMATIC Control Function Library (CFL) V1.x,  SIMATIC Control Function Library (CFL) V2.x"
+        },
+        {
+          "date": "2025-10-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for MTP Creator V2.x, CFL V4.x, Simatic WinCC Unified Line Coordination and Simatic WinCC Unified Sequence"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -352,7 +358,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<4.1",
                 "product": {
                   "name": "SIMATIC Control Function Library (CFL) V4.x",
                   "product_id": "20"
@@ -544,7 +550,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<2.1",
                 "product": {
                   "name": "SIMATIC MTP CREATOR\u00a0V2.x",
                   "product_id": "33"
@@ -1538,7 +1544,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<20",
                 "product": {
                   "name": "SIMATIC WinCC Unified Line Coordination",
                   "product_id": "104"
@@ -1594,7 +1600,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<20",
                 "product": {
                   "name": "SIMATIC WinCC Unified Sequence",
                   "product_id": "108"
@@ -2435,7 +2441,6 @@
             "17",
             "18",
             "29",
-            "33",
             "34",
             "56",
             "68",
@@ -2464,7 +2469,6 @@
             "13",
             "14",
             "15",
-            "20",
             "21",
             "22",
             "23",
@@ -2526,11 +2530,9 @@
             "101",
             "102",
             "103",
-            "104",
             "105",
             "106",
             "107",
-            "108",
             "109",
             "110",
             "112",
@@ -2562,6 +2564,30 @@
             "131"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109947027/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1 or later version",
+          "product_ids": [
+            "33"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109982993/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V20 or later version",
+          "product_ids": [
+            "108"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987448/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V20 or later version",
+          "product_ids": [
+            "104"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109987448/"
         },
         {
           "category": "vendor_fix",
@@ -2635,6 +2661,14 @@
             "87"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109762827/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.1 or later version",
+          "product_ids": [
+            "20"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109982975/"
         },
         {
           "category": "vendor_fix",

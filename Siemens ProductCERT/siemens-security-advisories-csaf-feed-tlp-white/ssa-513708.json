@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-513708: Multiple Vulnerabilities in Palo Alto Networks Virtual NGFW on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-07-08T00:00:00Z",
+      "current_release_date": "2025-10-14T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added CVE-2025-4229 and CVE-2025-4230"
+        },
+        {
+          "date": "2025-10-14T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added CVE-2025-4614 and CVE-2025-4615"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -106,6 +112,14 @@
                 "product": {
                   "name": "RUGGEDCOM APE1808",
                   "product_id": "3"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "4"
                 }
               }
             ],
@@ -140,7 +154,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Disable Clientless VPN. For additional mitigation measures, refer to \nPalo Alto Networks' Security Advisory",
+          "details": "Disable Clientless VPN. For additional mitigation measures, refer to Palo Alto Networks' Security Advisory",
           "product_ids": [
             "1"
           ]
@@ -258,6 +272,104 @@
         }
       ],
       "title": "CVE-2025-4230"
+    },
+    {
+      "cve": "CVE-2025-4614",
+      "cwe": {
+        "id": "CWE-497",
+        "name": "Exposure of Sensitive System Information to an Unauthorized Control Sphere"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An information disclosure vulnerability in Palo Alto Networks PAN-OS software enables an authenticated administrator to view session tokens of users authenticated to the firewall web UI. This may allow impersonation of users whose session tokens are leaked.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "4"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict CLI access to a limited group of administrators",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.4,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2025-4614"
+    },
+    {
+      "cve": "CVE-2025-4615",
+      "cwe": {
+        "id": "CWE-83",
+        "name": "Improper Neutralization of Script in Attributes in a Web Page"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An improper input neutralization vulnerability in the management web interface of the Palo Alto Networks PAN-OS software enables an authenticated administrator to bypass system restrictions and execute arbitrary commands.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict CLI access to a limited group of administrators",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "3"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2025-4615"
     }
   ]
 }

@@ -1,0 +1,308 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "SiPass integrated before V3.0 contains multiple vulnerabilities that could allow an unauthenticated remote attacker to exploit user accounts, manipulate data, impersonate users, or achieve arbitrary code execution on the SiPass integrated server.\n\nSiemens has released a new version for SiPass integrated and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-599451: Multiple Vulnerabilities in SiPass integrated Before V3.0 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-599451.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-599451: Multiple Vulnerabilities in SiPass integrated Before V3.0 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-599451.json"
+      }
+    ],
+    "title": "SSA-599451: Multiple Vulnerabilities in SiPass integrated Before V3.0",
+    "tracking": {
+      "current_release_date": "2025-10-14T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-599451",
+      "initial_release_date": "2025-10-14T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-10-14T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.0",
+                "product": {
+                  "name": "SiPass integrated",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-35002",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A heap-based buffer overflow vulnerability exists in the pictwread functionality of Accusoft ImageGear 20.1. A specially crafted malformed file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger this vulnerability.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to authorized and trusted personal only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Avoid uploading untrusted image files in affected applications",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109995331/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-35002"
+    },
+    {
+      "cve": "CVE-2025-40772",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected server applications are vulnerable to stored Cross-Site Scripting (XSS), allowing an attacker to inject malicious code that can be executed by other users when they visit the affected page.\r\n\r\nSuccessful exploitation allows an attacker to impersonate other users within the application and steal their session data. This could enable unauthorized access to accounts and potentially lead to privilege escalation.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to authorized and trusted personal only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109995331/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40772"
+    },
+    {
+      "cve": "CVE-2025-40773",
+      "cwe": {
+        "id": "CWE-639",
+        "name": "Authorization Bypass Through User-Controlled Key"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected server applications contains a broken access control vulnerability. The authorization mechanism lacks sufficient server-side checks, allowing an attacker to execute a specific API request.\r\n\r\nSuccessful exploitation allows an attacker to potentially manipulate data belonging to other users.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to authorized and trusted personal only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109995331/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.5,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40773"
+    },
+    {
+      "cve": "CVE-2025-40774",
+      "cwe": {
+        "id": "CWE-257",
+        "name": "Storing Passwords in a Recoverable Format"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected server applications store user passwords encrypted in its database. Decryption keys are accessible to users with administrative privileges, allowing them to recover passwords.\r\n\r\nSuccessful exploitation of this vulnerability allows an attacker to obtain and use valid user passwords. This can lead to unauthorized access to user accounts, data breaches, and potential system compromise.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to authorized and trusted personal only",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109995331/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40774"
+    }
+  ]
+}

@@ -1,0 +1,1145 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination and support with this publication",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "names": [
+          "Rob Hulsebos",
+          "Daniel dos Santos"
+        ],
+        "organization": "Forescout",
+        "summary": "reporting to Festo",
+        "urls": [
+          "https://forescout.com/"
+        ]
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The products are shipped with an unsafe configuration of the integrated CODESYS Runtime\nenvironment. In this case no default password is set to the CODESYS PLC and therefore access\nwithout authentication is possible.\n\nWith a successful established connection to the CODESYS Runtime the PLC-Browser commands are\navailable. Thus granting the possibilities to e.g. read and modify the configuration file(s), start/stop\nthe application and reboot the device.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "Festo has identified the following compensatory measures to reduce the risk:\n\n- For CVE-2022-22515: Using the online user management prevents an attacker from\ndownloading and execute malicious code, but also suppresses start, stop, debug, or other\nactions on a known working application that could potentially disrupt a machine or system.\n- For CVE-2022-31806: Enable password protection at login in case no password is set at the controller. Please note that the password configuration file is not covered via default FFT backup & Restore mechanism, you must select the related file manually.",
+        "title": "Mitigation"
+      },
+      {
+        "category": "general",
+        "text": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits: \n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside \n- Use firewalls to protect and separate the control system network from other networks \n- Use VPN (Virtual Private Networks) tunnels if remote access is required \n- Activate and apply user management and password features \n- Use encrypted communication links \n- Limit the access to both development and control system by physical means, operating system features, etc. \n- Protect both development and control system by using up to date virus detecting solutions \n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes. \nFor a secure operation follow the recommendations in the product manuals.",
+        "title": "General recommendations"
+      },
+      {
+        "category": "legal_disclaimer",
+        "title": "Disclaimer",
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\\n\\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\\n\\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply."
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "psirt@festo.com",
+      "name": "Festo SE & Co. KG",
+      "namespace": "https://festo.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "FSA-202208: Festo: Multiple Festo products contain an unsafe default Codesys configuration - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2022-037/"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202208: Festo: Multiple Festo products contain an unsafe default Codesys configuration - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2022/fsa-202208.json"
+      },
+      {
+        "category": "external",
+        "summary": "For further security-related issues in Festo products please contact the Festo Product Security Incident Response Team (PSIRT)",
+        "url": "https://festo.com/psirt"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories",
+        "url": "https://certvde.com/en/advisories/vendor/festo/"
+      }
+    ],
+    "title": "Festo: Multiple Festo products contain an unsafe default Codesys configuration",
+    "tracking": {
+      "aliases": [
+        "VDE-2022-037"
+      ],
+      "current_release_date": "2025-10-28T11:00:00.000Z",
+      "generator": {
+        "date": "2025-10-28T09:02:23.722Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.35"
+        }
+      },
+      "id": "FSA-202208",
+      "initial_release_date": "2022-11-29T11:41:00.000Z",
+      "revision_history": [
+        {
+          "date": "2022-11-29T11:41:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial revision."
+        },
+        {
+          "date": "2024-01-11T10:00:00.000Z",
+          "summary": "Adjust link to VDE Advisory",
+          "number": "1.0.1"
+        },
+        {
+          "number": "1.0.2",
+          "date": "2025-10-28T11:00:00.000Z",
+          "summary": "Adjusted to VDE template.  Changed title from \"Multiple Festo products contain an unsafe default Codesys configuration\" to \"Festo: Multiple Festo products contain an unsafe default Codesys configuration\". Updated legal disclaimer to add references to special provisions."
+        }
+      ],
+      "status": "final",
+      "version": "1.0.2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Compact Vision System SBO*-Q-* vers:all/*",
+                      "product_id": "CSAFPID-11001",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:SBO*-Q-*"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Compact Vision System SBO*-Q-*"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-CEC-C1 Codesys V2 vers:all/*",
+                      "product_id": "CSAFPID-11002",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Ordercode:CPX-CEC-C1",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-C1 Codesys V2"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-CEC-C1-V3 Codesys V3 vers:all/*",
+                      "product_id": "CSAFPID-11003",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-CEC-C1-V3"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-C1-V3 Codesys V3"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-CEC Codesys V2 vers:all/*",
+                      "product_id": "CSAFPID-11004",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Ordercode:CPX-CEC",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC Codesys V2"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-CEC-M1 Codesys V2 vers:all/*",
+                      "product_id": "CSAFPID-11005",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Ordercode:CPX-CEC-M1",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-M1 Codesys V2"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-CEC-M1-V3 Codesys V3 vers:all/*",
+                      "product_id": "CSAFPID-11006",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Ordercode:CPX-CEC-M1-V3",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-M1-V3 Codesys V3"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-CEC-S1-V3 Codesys V3 vers:all/*",
+                      "product_id": "CSAFPID-11007",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Ordercode:CPX-CEC-S1-V3",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-S1-V3 Codesys V3"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-CMXX vers:all/*",
+                      "product_id": "CSAFPID-11008",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "555667",
+                          "555668"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:555667"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:555668"
+                          },
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-CMXX"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CMXX"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-D vers:all/*",
+                      "product_id": "CSAFPID-11009",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-D"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-D"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-D-BA vers:all/*",
+                      "product_id": "CSAFPID-11010",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-D-BA"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-D-BA"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-D-CS vers:all/*",
+                      "product_id": "CSAFPID-11011",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-D-CS"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-D-CS"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-LK vers:all/*",
+                      "product_id": "CSAFPID-11012",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-LK"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-LK"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-S vers:all/*",
+                      "product_id": "CSAFPID-11013",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-S"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-S"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-X-M1 vers:all/*",
+                      "product_id": "CSAFPID-11014",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-X-M1"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-X-M1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-X-M1-MV vers:all/*",
+                      "product_id": "CSAFPID-11015",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-X-M1-MV"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-X-M1-MV"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECC-X-M1-S1 vers:all/*",
+                      "product_id": "CSAFPID-11016",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-X-M1-S1"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-X-M1-S1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECX-X-C1 vers:all/*",
+                      "product_id": "CSAFPID-11017",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "553852"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECX-X-C1"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:553852"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECX-X-C1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CECX-X-M1 vers:all/*",
+                      "product_id": "CSAFPID-11018",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "553853"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECX-X-M1"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:553853"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECX-X-M1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CPX-E-CEC-C1 vers:all/*",
+                      "product_id": "CSAFPID-11019",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-C1"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CPX-E-CEC-C1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CPX-E-CEC-C1-EP vers:all/*",
+                      "product_id": "CSAFPID-11020",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-C1-EP"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CPX-E-CEC-C1-EP"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CPX-E-CEC-C1-PN vers:all/*",
+                      "product_id": "CSAFPID-11021",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-C1-PN"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CPX-E-CEC-C1-PN"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CPX-E-CEC-M1 vers:all/*",
+                      "product_id": "CSAFPID-11022",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-M1"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CPX-E-CEC-M1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CPX-E-CEC-M1-EP vers:all/*",
+                      "product_id": "CSAFPID-11023",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-M1-EP"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CPX-E-CEC-M1-EP"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller CPX-E-CEC-M1-PN vers:all/*",
+                      "product_id": "CSAFPID-11024",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-M1-PN"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CPX-E-CEC-M1-PN"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Controller FED-CEC vers:all/*",
+                      "product_id": "CSAFPID-11025",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "559869"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:559869"
+                          },
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:FED-CEC"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller FED-CEC"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Operator unit CDPX-X-A-S-10 vers:all/*",
+                      "product_id": "CSAFPID-11026",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CDPX-X-A-S-10"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-S-10"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Operator unit CDPX-X-A-W-13 vers:all/*",
+                      "product_id": "CSAFPID-11027",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CDPX-X-A-W-13"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-13"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Operator unit CDPX-X-A-W-4 vers:all/*",
+                      "product_id": "CSAFPID-11028",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CDPX-X-A-W-4"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-4"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Operator unit CDPX-X-A-W-7 vers:all/*",
+                      "product_id": "CSAFPID-11029",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "uri": "Festo:Ordercode:CDPX-X-A-W-7",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-7"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Operator unit CDPX-X-E1-W-10 vers:all/*",
+                      "product_id": "CSAFPID-11030",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CDPX-X-E1-W-10"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-E1-W-10"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Operator unit CDPX-X-E1-W-15 vers:all/*",
+                      "product_id": "CSAFPID-11031",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CDPX-X-E1-W-15"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-E1-W-15"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Operator unit CDPX-X-E1-W-7 vers:all/*",
+                      "product_id": "CSAFPID-11032",
+                      "product_identification_helper": {
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CDPX-X-E1-W-7"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-E1-W-7"
+              }
+            ],
+            "category": "product_family",
+            "name": "Software"
+          }
+        ],
+        "category": "vendor",
+        "name": "Festo"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-11001",
+          "CSAFPID-11002",
+          "CSAFPID-11003",
+          "CSAFPID-11004",
+          "CSAFPID-11005",
+          "CSAFPID-11006",
+          "CSAFPID-11007",
+          "CSAFPID-11008",
+          "CSAFPID-11009",
+          "CSAFPID-11010",
+          "CSAFPID-11011",
+          "CSAFPID-11012",
+          "CSAFPID-11013",
+          "CSAFPID-11014",
+          "CSAFPID-11015",
+          "CSAFPID-11016",
+          "CSAFPID-11017",
+          "CSAFPID-11018",
+          "CSAFPID-11019",
+          "CSAFPID-11020",
+          "CSAFPID-11021",
+          "CSAFPID-11022",
+          "CSAFPID-11023",
+          "CSAFPID-11024",
+          "CSAFPID-11025",
+          "CSAFPID-11026",
+          "CSAFPID-11027",
+          "CSAFPID-11028",
+          "CSAFPID-11029",
+          "CSAFPID-11030",
+          "CSAFPID-11031",
+          "CSAFPID-11032"
+        ],
+        "summary": "Affected products."
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-22515",
+      "cwe": {
+        "id": "CWE-668",
+        "name": "Exposure of Resource to Wrong Sphere"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A remote, authenticated attacker could utilize the control program of the CODESYS Control runtime system to use the vulnerability in order to read and modify the configuration file(s) of the affected products.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-11001",
+          "CSAFPID-11002",
+          "CSAFPID-11003",
+          "CSAFPID-11004",
+          "CSAFPID-11005",
+          "CSAFPID-11006",
+          "CSAFPID-11007",
+          "CSAFPID-11008",
+          "CSAFPID-11009",
+          "CSAFPID-11010",
+          "CSAFPID-11011",
+          "CSAFPID-11012",
+          "CSAFPID-11013",
+          "CSAFPID-11014",
+          "CSAFPID-11015",
+          "CSAFPID-11016",
+          "CSAFPID-11017",
+          "CSAFPID-11018",
+          "CSAFPID-11019",
+          "CSAFPID-11020",
+          "CSAFPID-11021",
+          "CSAFPID-11022",
+          "CSAFPID-11023",
+          "CSAFPID-11024",
+          "CSAFPID-11025",
+          "CSAFPID-11026",
+          "CSAFPID-11027",
+          "CSAFPID-11028",
+          "CSAFPID-11029",
+          "CSAFPID-11030",
+          "CSAFPID-11031",
+          "CSAFPID-11032"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Festo has identified the following compensatory measures to reduce the risk:\n\n- For CVE-2022-22515: Using the online user management prevents an attacker from\ndownloading and execute malicious code, but also suppresses start, stop, debug, or other\nactions on a known working application that could potentially disrupt a machine or system.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "NONE",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.1,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.1,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-11001",
+            "CSAFPID-11002",
+            "CSAFPID-11003",
+            "CSAFPID-11004",
+            "CSAFPID-11005",
+            "CSAFPID-11006",
+            "CSAFPID-11007",
+            "CSAFPID-11008",
+            "CSAFPID-11009",
+            "CSAFPID-11010",
+            "CSAFPID-11011",
+            "CSAFPID-11012",
+            "CSAFPID-11013",
+            "CSAFPID-11014",
+            "CSAFPID-11015",
+            "CSAFPID-11016",
+            "CSAFPID-11017",
+            "CSAFPID-11018",
+            "CSAFPID-11019",
+            "CSAFPID-11020",
+            "CSAFPID-11021",
+            "CSAFPID-11022",
+            "CSAFPID-11023",
+            "CSAFPID-11024",
+            "CSAFPID-11025",
+            "CSAFPID-11026",
+            "CSAFPID-11027",
+            "CSAFPID-11028",
+            "CSAFPID-11029",
+            "CSAFPID-11030",
+            "CSAFPID-11031",
+            "CSAFPID-11032"
+          ]
+        }
+      ],
+      "title": "CVE-2022-22515"
+    },
+    {
+      "cve": "CVE-2022-31806",
+      "cwe": {
+        "id": "CWE-1188",
+        "name": "Initialization of a Resource with an Insecure Default"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "In CODESYS V2 PLCWinNT and Runtime Toolkit 32 in versions prior to V2.4.7.57 password protection is not enabled by default and there is no information or prompt to enable password protection at login in case no password is set at the controller.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-11001",
+          "CSAFPID-11002",
+          "CSAFPID-11003",
+          "CSAFPID-11004",
+          "CSAFPID-11005",
+          "CSAFPID-11006",
+          "CSAFPID-11007",
+          "CSAFPID-11008",
+          "CSAFPID-11009",
+          "CSAFPID-11010",
+          "CSAFPID-11011",
+          "CSAFPID-11012",
+          "CSAFPID-11013",
+          "CSAFPID-11014",
+          "CSAFPID-11015",
+          "CSAFPID-11016",
+          "CSAFPID-11017",
+          "CSAFPID-11018",
+          "CSAFPID-11019",
+          "CSAFPID-11020",
+          "CSAFPID-11021",
+          "CSAFPID-11022",
+          "CSAFPID-11023",
+          "CSAFPID-11024",
+          "CSAFPID-11025",
+          "CSAFPID-11026",
+          "CSAFPID-11027",
+          "CSAFPID-11028",
+          "CSAFPID-11029",
+          "CSAFPID-11030",
+          "CSAFPID-11031",
+          "CSAFPID-11032"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Festo has identified the following compensatory measures to reduce the risk:\n\n- For CVE-2022-31806: Enable password protection at login in case no password is set at the controller. Please note that the password configuration file is not covered via default FFT backup & Restore mechanism, you must select the related file manually.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-11001",
+            "CSAFPID-11002",
+            "CSAFPID-11003",
+            "CSAFPID-11004",
+            "CSAFPID-11005",
+            "CSAFPID-11006",
+            "CSAFPID-11007",
+            "CSAFPID-11008",
+            "CSAFPID-11009",
+            "CSAFPID-11010",
+            "CSAFPID-11011",
+            "CSAFPID-11012",
+            "CSAFPID-11013",
+            "CSAFPID-11014",
+            "CSAFPID-11015",
+            "CSAFPID-11016",
+            "CSAFPID-11017",
+            "CSAFPID-11018",
+            "CSAFPID-11019",
+            "CSAFPID-11020",
+            "CSAFPID-11021",
+            "CSAFPID-11022",
+            "CSAFPID-11023",
+            "CSAFPID-11024",
+            "CSAFPID-11025",
+            "CSAFPID-11026",
+            "CSAFPID-11027",
+            "CSAFPID-11028",
+            "CSAFPID-11029",
+            "CSAFPID-11030",
+            "CSAFPID-11031",
+            "CSAFPID-11032"
+          ]
+        }
+      ],
+      "title": "CVE-2022-31806"
+    }
+  ]
+}

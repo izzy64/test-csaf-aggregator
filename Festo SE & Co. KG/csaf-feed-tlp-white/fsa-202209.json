@@ -1,0 +1,1967 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination and support with this publication",
+        "urls": [
+          "https://certvde.com"
+        ]
+      },
+      {
+        "names": [
+          "Rob Hulsebos",
+          "Daniel dos Santos"
+        ],
+        "organization": "Forescout",
+        "summary": "reporting"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Incomplete Festo product documentation of remote accessible functions and their required IP ports. Depending on the product a description of the supported features can be found in the product documentation to some extent.\nUpdate A, 2022-12-13\nAdded affected device \"Bus module CPX-E-PN, 4080497\"",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "Please consult the CVE details above.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Update of technical user manual documentation in next product version.",
+        "title": "Mitigation"
+      },
+      {
+        "category": "general",
+        "text": "Users running communication over an untrusted network who require full protection should switch to an alternative solution such as running the communication over a VPN.\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes. For a secure operation follow the recommendations in the product manuals and note the protocols and their supported features in Festo Field Device Tool or Festo Automation Suite online help.\n\nAs part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits: - Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n\n- Use firewalls to protect and separate the control system network from other networks\n\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\n\n- Activate and apply user management and password features\n\n- Use encrypted communication links\n\n- Limit the access to both development and control system by physical means, operating system features, etc.\n\n- Protect both development and control system by using up to date virus detecting solutions",
+        "title": "Recommendations"
+      },
+      {
+        "category": "legal_disclaimer",
+        "title": "Disclaimer",
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\\n\\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\\n\\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply."
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "psirt@festo.com",
+      "name": "Festo SE & Co. KG",
+      "namespace": "https://festo.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "FSA-202209: Festo: Incomplete documentation of remote accessible functions and protocols in Festo products - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2022-041/"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202209: Festo: Incomplete documentation of remote accessible functions and protocols in Festo products - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2022/fsa-202209.json"
+      },
+      {
+        "category": "external",
+        "summary": "For further security-related issues in Festo products please contact the Festo Product Security Incident Response Team (PSIRT)",
+        "url": "https://festo.com/psirt"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Festo SE & Co. KG",
+        "url": "https://certvde.com/en/advisories/vendor/festo/"
+      }
+    ],
+    "title": "Festo: Incomplete documentation of remote accessible functions and protocols in Festo products",
+    "tracking": {
+      "aliases": [
+        "VDE-2022-041"
+      ],
+      "current_release_date": "2025-11-03T10:00:00.000Z",
+      "generator": {
+        "date": "2025-11-04T15:13:29.642Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.38"
+        }
+      },
+      "id": "FSA-202209",
+      "initial_release_date": "2022-11-29T11:49:00.000Z",
+      "revision_history": [
+        {
+          "date": "2022-11-29T11:49:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial revision."
+        },
+        {
+          "number": "1.1.0",
+          "summary": "added bus module CPX-E-PN as affected product",
+          "date": "2022-12-05T10:15:00.000Z"
+        },
+        {
+          "number": "1.2.0",
+          "date": "2023-04-06T10:00:00.000Z",
+          "summary": "adjusted technical user documentation to user documentation and fixed some typos."
+        },
+        {
+          "date": "2025-11-03T10:00:00.000Z",
+          "number": "1.2.1",
+          "summary": "Adjust link to VDE Advisory. Change title from \"Incomplete User Documentation of Remote Accessible Functions and Protocols in Festo Products\" to \"Festo: Incomplete documentation of remote accessible functions and protocols in Festo products\". Updated legal disclaimer to add references to special provisions."
+        }
+      ],
+      "status": "final",
+      "version": "1.2.1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "Bus module CPX-E-EP",
+                "product": {
+                  "name": "Bus module CPX-E-EP",
+                  "product_id": "CSAFPID-11001",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "4080499"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-E-EP"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:4080499"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus module CPX-E-PN",
+                "product": {
+                  "name": "Bus module CPX-E-PN",
+                  "product_id": "CSAFPID-11002",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "4080497"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-E-PN"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:4080497"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-FB32",
+                "product": {
+                  "name": "Bus node CPX-FB32",
+                  "product_id": "CSAFPID-11003",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "541302"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-FB32"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:541302"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-FB33",
+                "product": {
+                  "name": "Bus node CPX-FB33",
+                  "product_id": "CSAFPID-11004",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "548755"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-FB33"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:548755"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-FB36",
+                "product": {
+                  "name": "Bus node CPX-FB36",
+                  "product_id": "CSAFPID-11005",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "1912451"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-FB36"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:1912451"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-FB37",
+                "product": {
+                  "name": "Bus node CPX-FB37",
+                  "product_id": "CSAFPID-11006",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "2735960"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "uri": "Festo:Partnumber:2735960",
+                        "namespace": "Festo:Partnumber"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-FB37"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-FB39",
+                "product": {
+                  "name": "Bus node CPX-FB39",
+                  "product_id": "CSAFPID-11007",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "2093101"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:2093101"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-FB39"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-FB40",
+                "product": {
+                  "name": "Bus node CPX-FB40",
+                  "product_id": "CSAFPID-11008",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "2474896"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-FB40"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:2474896"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-FB43",
+                "product": {
+                  "name": "Bus node CPX-FB43",
+                  "product_id": "CSAFPID-11009",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8110369"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8110369"
+                      },
+                      {
+                        "uri": "Festo:Ordercode:CPX-FB43",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-M-FB34",
+                "product": {
+                  "name": "Bus node CPX-M-FB34",
+                  "product_id": "CSAFPID-11010",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "548751"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-M-FB34"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:548751"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-M-FB35",
+                "product": {
+                  "name": "Bus node CPX-M-FB35",
+                  "product_id": "CSAFPID-11011",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "548749"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-M-FB35"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:548749"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-M-FB44",
+                "product": {
+                  "name": "Bus node CPX-M-FB44",
+                  "product_id": "CSAFPID-11012",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8110370"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-M-FB44"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8110370"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CPX-M-FB45",
+                "product": {
+                  "name": "Bus node CPX-M-FB45",
+                  "product_id": "CSAFPID-11013",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8110371"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-M-FB45"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8110371"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CTEU-EP",
+                "product": {
+                  "name": "Bus node CTEU-EP",
+                  "product_id": "CSAFPID-11014",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "2798071"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:2798071"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CTEU-EP"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CTEU-PN",
+                "product": {
+                  "name": "Bus node CTEU-PN",
+                  "product_id": "CSAFPID-11015",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "2201471"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:2201471"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CTEU-PN"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Bus node CTEU-PN-EX1C",
+                "product": {
+                  "name": "Bus node CTEU-PN-EX1C",
+                  "product_id": "CSAFPID-11016",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8107589"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8107589"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CTEU-PN-EX1C"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Camera system CHB-C-N",
+                "product": {
+                  "name": "Camera system CHB-C-N",
+                  "product_id": "CSAFPID-11017",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "3501040"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:3501040"
+                      },
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CHB-C-N"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Compact Vision System SBO*-C-*",
+                "product": {
+                  "name": "Compact Vision System SBO*-C-*",
+                  "product_id": "CSAFPID-11018",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBO*-C-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Compact Vision System SBO*-M-*",
+                "product": {
+                  "name": "Compact Vision System SBO*-M-*",
+                  "product_id": "CSAFPID-11019",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBO*-M-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Compact Vision System SBO*-Q-*",
+                "product": {
+                  "name": "Compact Vision System SBO*-Q-*",
+                  "product_id": "CSAFPID-11020",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBO*-Q-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-CEC",
+                "product": {
+                  "name": "Control block CPX-CEC",
+                  "product_id": "CSAFPID-11021",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-CEC"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-CEC-C1",
+                "product": {
+                  "name": "Control block CPX-CEC-C1",
+                  "product_id": "CSAFPID-11022",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-CEC-C1"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-CEC-C1-V3",
+                "product": {
+                  "name": "Control block CPX-CEC-C1-V3",
+                  "product_id": "CSAFPID-11023",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-CEC-C1-V3"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-CEC-M1",
+                "product": {
+                  "name": "Control block CPX-CEC-M1",
+                  "product_id": "CSAFPID-11024",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "uri": "Festo:Ordercode:CPX-CEC-M1",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-CEC-M1-V3",
+                "product": {
+                  "name": "Control block CPX-CEC-M1-V3",
+                  "product_id": "CSAFPID-11025",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-CEC-M1-V3"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-CEC-S1-V3",
+                "product": {
+                  "name": "Control block CPX-CEC-S1-V3",
+                  "product_id": "CSAFPID-11026",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-CEC-S1-V3"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-CMXX",
+                "product": {
+                  "name": "Control block CPX-CMXX",
+                  "product_id": "CSAFPID-11027",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "555667",
+                      "555668"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-CMXX"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:555668"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:555667"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Control block CPX-FEC-1-IE",
+                "product": {
+                  "name": "Control block CPX-FEC-1-IE",
+                  "product_id": "CSAFPID-11028",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "529041"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-FEC-1-IE"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:529041"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-D",
+                "product": {
+                  "name": "Controller CECC-D",
+                  "product_id": "CSAFPID-11029",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECC-D"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-D-BA",
+                "product": {
+                  "name": "Controller CECC-D-BA",
+                  "product_id": "CSAFPID-11030",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECC-D-BA"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-LK",
+                "product": {
+                  "name": "Controller CECC-LK",
+                  "product_id": "CSAFPID-11031",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECC-LK"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-S",
+                "product": {
+                  "name": "Controller CECC-S",
+                  "product_id": "CSAFPID-11032",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECC-S"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-X-*",
+                "product": {
+                  "name": "Controller CECC-X-*",
+                  "product_id": "CSAFPID-11033",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "uri": "Festo:Ordercode:CECC-X-*",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECX-X-C1",
+                "product": {
+                  "name": "Controller CECX-X-C1",
+                  "product_id": "CSAFPID-11034",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "553852"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECX-X-C1"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:553852"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECX-X-M1",
+                "product": {
+                  "name": "Controller CECX-X-M1",
+                  "product_id": "CSAFPID-11035",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "553853"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECX-X-M1"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:553853"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CMXH-ST2-C5-7-DIOP",
+                "product": {
+                  "name": "Controller CMXH-ST2-C5-7-DIOP",
+                  "product_id": "CSAFPID-11036",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "3605478"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMXH-ST2-C5-7-DIOP"
+                      },
+                      {
+                        "uri": "Festo:Partnumber:3605478",
+                        "namespace": "Festo:Partnumber"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CPX-E-CEC-*",
+                "product": {
+                  "name": "Controller CPX-E-CEC-*",
+                  "product_id": "CSAFPID-11037",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-E-CEC-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller SBRD-Q",
+                "product": {
+                  "name": "Controller SBRD-Q",
+                  "product_id": "CSAFPID-11038",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8067301"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:SBRD-Q"
+                      },
+                      {
+                        "uri": "Festo:Partnumber:8067301",
+                        "namespace": "Festo:Partnumber"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "EtherNet/IP interface CPX-AP-I-EP-M12",
+                "product": {
+                  "name": "EtherNet/IP interface CPX-AP-I-EP-M12",
+                  "product_id": "CSAFPID-11039",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8086610"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-AP-I-EP-M12"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8086610"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "EtherNet/IP interface CPX-AP-I-PN-M12",
+                "product": {
+                  "name": "EtherNet/IP interface CPX-AP-I-PN-M12",
+                  "product_id": "CSAFPID-11040",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8086607"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-AP-I-PN-M12"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8086607"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Gateway CPX-IOT",
+                "product": {
+                  "name": "Gateway CPX-IOT",
+                  "product_id": "CSAFPID-11041",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8069773"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CPX-IOT"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8069773"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Integrated drive EMCA-EC-67-*",
+                "product": {
+                  "name": "Integrated drive EMCA-EC-67-*",
+                  "product_id": "CSAFPID-11042",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:EMCA-EC-67-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Motor controller CMMO-ST-C5-1-DION",
+                "product": {
+                  "name": "Motor controller CMMO-ST-C5-1-DION",
+                  "product_id": "CSAFPID-11043",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMMO-ST-C5-1-DION"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Motor controller CMMO-ST-C5-1-DIOP",
+                "product": {
+                  "name": "Motor controller CMMO-ST-C5-1-DIOP",
+                  "product_id": "CSAFPID-11044",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMMO-ST-C5-1-DIOP"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Motor controller CMMO-ST-C5-1-LKP",
+                "product": {
+                  "name": "Motor controller CMMO-ST-C5-1-LKP",
+                  "product_id": "CSAFPID-11045",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMMO-ST-C5-1-LKP"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Motor controller CMMP-AS-*",
+                "product": {
+                  "name": "Motor controller CMMP-AS-*",
+                  "product_id": "CSAFPID-11046",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMMP-AS-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Motor controller CMMT-AS-*",
+                "product": {
+                  "name": "Motor controller CMMT-AS-*",
+                  "product_id": "CSAFPID-11047",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMMT-AS-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-S-10",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-S-10",
+                  "product_id": "CSAFPID-11048",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CDPX-X-A-S-10"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-13",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-W-13",
+                  "product_id": "CSAFPID-11049",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CDPX-X-A-W-13"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-4",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-W-4",
+                  "product_id": "CSAFPID-11050",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CDPX-X-A-W-4"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-7",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-W-7",
+                  "product_id": "CSAFPID-11051",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CDPX-X-A-W-7"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Planar surface gantry EXCM-*",
+                "product": {
+                  "name": "Planar surface gantry EXCM-*",
+                  "product_id": "CSAFPID-11052",
+                  "product_identification_helper": {
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:EXCM-*"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Servo drive CMMT-ST-C8-1C-EP-S0",
+                "product": {
+                  "name": "Servo drive CMMT-ST-C8-1C-EP-S0",
+                  "product_id": "CSAFPID-11053",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8084006"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMMT-ST-C8-1C-EP-S0"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8084006"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Servo drive CMMT-ST-C8-1C-PN-S0",
+                "product": {
+                  "name": "Servo drive CMMT-ST-C8-1C-PN-S0",
+                  "product_id": "CSAFPID-11054",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8084004"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CMMT-ST-C8-1C-PN-S0"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8084004"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "VTEM-S1-*",
+                "product": {
+                  "name": "VTEM-S1-*",
+                  "product_id": "CSAFPID-11055",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8047502"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:VTEM-S1-*"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8047502"
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Hardware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Firmware vers:all/*",
+                  "product_id": "CSAFPID-21001"
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Festo"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027",
+          "CSAFPID-31028",
+          "CSAFPID-31029",
+          "CSAFPID-31030",
+          "CSAFPID-31031",
+          "CSAFPID-31032",
+          "CSAFPID-31033",
+          "CSAFPID-31034",
+          "CSAFPID-31035",
+          "CSAFPID-31036",
+          "CSAFPID-31037",
+          "CSAFPID-31038",
+          "CSAFPID-31039",
+          "CSAFPID-31040",
+          "CSAFPID-31041",
+          "CSAFPID-31042",
+          "CSAFPID-31043",
+          "CSAFPID-31044",
+          "CSAFPID-31045",
+          "CSAFPID-31046",
+          "CSAFPID-31047",
+          "CSAFPID-31048",
+          "CSAFPID-31049",
+          "CSAFPID-31050",
+          "CSAFPID-31051",
+          "CSAFPID-31052",
+          "CSAFPID-31053",
+          "CSAFPID-31054",
+          "CSAFPID-31055"
+        ],
+        "summary": "Affected products."
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus module CPX-E-EP",
+          "product_id": "CSAFPID-31001"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus module CPX-E-PN",
+          "product_id": "CSAFPID-31002"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-FB32",
+          "product_id": "CSAFPID-31003"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11003"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-FB33",
+          "product_id": "CSAFPID-31004"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11004"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-FB36",
+          "product_id": "CSAFPID-31005"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11005"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-FB37",
+          "product_id": "CSAFPID-31006"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11006"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-FB39",
+          "product_id": "CSAFPID-31007"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11007"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-FB40",
+          "product_id": "CSAFPID-31008"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11008"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-FB43",
+          "product_id": "CSAFPID-31009"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11009"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-M-FB34",
+          "product_id": "CSAFPID-31010"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11010"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-M-FB35",
+          "product_id": "CSAFPID-31011"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11011"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-M-FB44",
+          "product_id": "CSAFPID-31012"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11012"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CPX-M-FB45",
+          "product_id": "CSAFPID-31013"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11013"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CTEU-EP",
+          "product_id": "CSAFPID-31014"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11014"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CTEU-PN",
+          "product_id": "CSAFPID-31015"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11015"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Bus node CTEU-PN-EX1C",
+          "product_id": "CSAFPID-31016"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11016"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Camera system CHB-C-N",
+          "product_id": "CSAFPID-31017"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11017"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Compact Vision System SBO*-C-*",
+          "product_id": "CSAFPID-31018"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11018"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Compact Vision System SBO*-M-*",
+          "product_id": "CSAFPID-31019"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11019"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Compact Vision System SBO*-Q-*",
+          "product_id": "CSAFPID-31020"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11020"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-CEC",
+          "product_id": "CSAFPID-31021"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11021"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-CEC-C1",
+          "product_id": "CSAFPID-31022"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11022"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-CEC-C1-V3",
+          "product_id": "CSAFPID-31023"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11023"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-CEC-M1",
+          "product_id": "CSAFPID-31024"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11024"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-CEC-M1-V3",
+          "product_id": "CSAFPID-31025"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11025"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-CEC-S1-V3",
+          "product_id": "CSAFPID-31026"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11026"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-CMXX",
+          "product_id": "CSAFPID-31027"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11027"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-FEC-1-IE",
+          "product_id": "CSAFPID-31028"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11028"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Control block CPX-FEC-1-IE",
+          "product_id": "CSAFPID-31029"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11029"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CECC-D",
+          "product_id": "CSAFPID-31030"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11030"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CECC-D-BA",
+          "product_id": "CSAFPID-31031"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11031"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CECC-LK",
+          "product_id": "CSAFPID-31032"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11032"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CECC-S",
+          "product_id": "CSAFPID-31033"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11033"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CECC-X-*",
+          "product_id": "CSAFPID-31034"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11034"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CECX-X-C1",
+          "product_id": "CSAFPID-31035"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11035"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CECX-X-M1",
+          "product_id": "CSAFPID-31036"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11036"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CMXH-ST2-C5-7-DIOP",
+          "product_id": "CSAFPID-31037"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11037"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller CPX-E-CEC-*",
+          "product_id": "CSAFPID-31038"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11038"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Controller SBRD-Q",
+          "product_id": "CSAFPID-31039"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11039"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on EtherNet/IP interface CPX-AP-I-EP-M12",
+          "product_id": "CSAFPID-31040"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11040"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on EtherNet/IP interface CPX-AP-I-PN-M12",
+          "product_id": "CSAFPID-31041"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11041"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Gateway CPX-IOT",
+          "product_id": "CSAFPID-31042"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11042"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Integrated drive EMCA-EC-67-*",
+          "product_id": "CSAFPID-31043"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11043"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Motor controller CMMO-ST-C5-1-DION",
+          "product_id": "CSAFPID-31044"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11044"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Motor controller CMMO-ST-C5-1-DIOP",
+          "product_id": "CSAFPID-31045"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11045"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Motor controller CMMP-AS-*",
+          "product_id": "CSAFPID-31046"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11046"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Motor controller CMMT-AS-*",
+          "product_id": "CSAFPID-31047"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11047"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Motor controller CMMT-AS-*",
+          "product_id": "CSAFPID-31048"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11048"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Operator unit CDPX-X-A-S-10",
+          "product_id": "CSAFPID-31049"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11049"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Operator unit CDPX-X-A-W-13",
+          "product_id": "CSAFPID-31050"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11050"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Operator unit CDPX-X-A-W-4",
+          "product_id": "CSAFPID-31051"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11051"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Operator unit CDPX-X-A-W-7",
+          "product_id": "CSAFPID-31052"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11052"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Planar surface gantry EXCM-*",
+          "product_id": "CSAFPID-31053"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11053"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Servo drive CMMT-ST-C8-1C-EP-S0",
+          "product_id": "CSAFPID-31054"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11054"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware vers:all/* installed on Servo drive CMMT-ST-C8-1C-PN-S0",
+          "product_id": "CSAFPID-31055"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11055"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-3270",
+      "cwe": {
+        "id": "CWE-1059",
+        "name": "Insufficient Technical Documentation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "In multiple products by Festo a remote unauthenticated attacker could use functions of an undocumented  protocol which could lead to a complete loss of confidentiality, integrity and availability.\n",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027",
+          "CSAFPID-31028",
+          "CSAFPID-31029",
+          "CSAFPID-31030",
+          "CSAFPID-31031",
+          "CSAFPID-31032",
+          "CSAFPID-31033",
+          "CSAFPID-31034",
+          "CSAFPID-31035",
+          "CSAFPID-31036",
+          "CSAFPID-31037",
+          "CSAFPID-31038",
+          "CSAFPID-31039",
+          "CSAFPID-31040",
+          "CSAFPID-31041",
+          "CSAFPID-31042",
+          "CSAFPID-31043",
+          "CSAFPID-31044",
+          "CSAFPID-31045",
+          "CSAFPID-31046",
+          "CSAFPID-31047",
+          "CSAFPID-31048",
+          "CSAFPID-31049",
+          "CSAFPID-31050",
+          "CSAFPID-31051",
+          "CSAFPID-31052",
+          "CSAFPID-31053",
+          "CSAFPID-31054",
+          "CSAFPID-31055"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Update of technical user manual documentation in next product version.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 9.8,
+            "environmentalSeverity": "CRITICAL",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 9.8,
+            "temporalSeverity": "CRITICAL",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027",
+            "CSAFPID-31028",
+            "CSAFPID-31029",
+            "CSAFPID-31030",
+            "CSAFPID-31031",
+            "CSAFPID-31032",
+            "CSAFPID-31033",
+            "CSAFPID-31034",
+            "CSAFPID-31035",
+            "CSAFPID-31036",
+            "CSAFPID-31037",
+            "CSAFPID-31038",
+            "CSAFPID-31039",
+            "CSAFPID-31040",
+            "CSAFPID-31041",
+            "CSAFPID-31042",
+            "CSAFPID-31043",
+            "CSAFPID-31044",
+            "CSAFPID-31045",
+            "CSAFPID-31046",
+            "CSAFPID-31047",
+            "CSAFPID-31048",
+            "CSAFPID-31049",
+            "CSAFPID-31050",
+            "CSAFPID-31051",
+            "CSAFPID-31052",
+            "CSAFPID-31053",
+            "CSAFPID-31054",
+            "CSAFPID-31055"
+          ]
+        }
+      ],
+      "title": "CVE-2022-3270"
+    }
+  ]
+}

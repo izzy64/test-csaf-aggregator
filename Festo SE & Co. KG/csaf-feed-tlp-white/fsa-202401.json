@@ -1,0 +1,2988 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination and support with this publication",
+        "urls": [
+          "https://certvde.com"
+        ]
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.first.org/tlp/"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Several high severity vulnerabilities in CODESYS V3 affecting Festo products could lead to Remote Code Execution or Denial of Service.",
+        "title": "Summary"
+      },
+      {
+        "category": "description",
+        "text": "Please check the references in the CVEs.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+        "title": "Mitigation"
+      },
+      {
+        "category": "description",
+        "text": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+        "title": "Remediation"
+      },
+      {
+        "category": "legal_disclaimer",
+        "title": "Disclaimer",
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\\n\\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\\n\\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply."
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "psirt@festo.com",
+      "name": "Festo SE & Co. KG",
+      "namespace": "https://festo.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "FSA-202401: Festo: Multiple products contain CoDe16 vulnerability - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2023-063/"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202401: Festo: Multiple products contain CoDe16 vulnerability - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2024/fsa-202401.json"
+      },
+      {
+        "category": "external",
+        "summary": "For further security-related issues in Festo products please contact the Festo Product Security Incident Response Team (PSIRT)",
+        "url": "https://festo.com/psirt"
+      },
+      {
+        "category": "external",
+        "summary": "CERT@VDE Security Advisories for Festo SE & Co. KG",
+        "url": "https://certvde.com/en/advisories/vendor/festo/"
+      }
+    ],
+    "title": "Festo: Multiple products contain CoDe16 vulnerability",
+    "tracking": {
+      "aliases": [
+        "VDE-2023-063"
+      ],
+      "current_release_date": "2025-11-04T11:00:00.000Z",
+      "generator": {
+        "date": "2025-11-04T15:21:32.653Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.5.38"
+        }
+      },
+      "id": "FSA-202401",
+      "initial_release_date": "2024-01-30T07:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2024-01-30T07:00:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial revision."
+        },
+        {
+          "summary": "Adjusted to VDE template. Changed title from \"Several Codesys Vulnerabilities in Festo Products\" to \"Festo: Multiple products contain CoDe16 vulnerability\". Updated legal disclaimer to add references to special provisions.",
+          "date": "2025-11-04T11:00:00.000Z",
+          "number": "1.0.1"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=8",
+                    "product": {
+                      "name": "Control block CPX-CEC-C1-V3 <=8",
+                      "product_id": "CSAFPID-11001",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "3473128"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-CEC-C1-V3"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:3473128"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-C1-V3"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=8",
+                    "product": {
+                      "name": "Control block CPX-CEC-M1-V3 <=8",
+                      "product_id": "CSAFPID-11002",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "3472765"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:3472765"
+                          },
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-CEC-M1-V3"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-M1-V3"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=8",
+                    "product": {
+                      "name": "Control block CPX-CEC-S1-V3 <=8",
+                      "product_id": "CSAFPID-11003",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "3472425"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:3472425"
+                          },
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-CEC-S1-V3"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-CEC-S1-V3"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-E-CEC-C1-EP <8",
+                      "product_id": "CSAFPID-11004",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "4252742"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-C1-EP"
+                          },
+                          {
+                            "uri": "Festo:Partnumber:4252742",
+                            "namespace": "Festo:Partnumber"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-E-CEC-C1-EP"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=5",
+                    "product": {
+                      "name": "Control block CPX-E-CEC-C1 <=5",
+                      "product_id": "CSAFPID-11006",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "5226780"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-C1"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:5226780"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-E-CEC-C1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-E-CEC-C1-PN <8",
+                      "product_id": "CSAFPID-11007",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "4252741"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:4252741"
+                          },
+                          {
+                            "uri": "Festo:Ordercode:CPX-E-CEC-C1-PN",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-E-CEC-C1-PN"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-E-CEC-M1-EP vers:all/*",
+                      "product_id": "CSAFPID-11009",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "4252744"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:4252744"
+                          },
+                          {
+                            "uri": "Festo:Ordercode:CPX-E-CEC-M1-EP",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-E-CEC-M1-EP"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=5",
+                    "product": {
+                      "name": "Control block CPX-E-CEC-M1 <=5",
+                      "product_id": "CSAFPID-11011",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "5266781"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:5266781"
+                          },
+                          {
+                            "uri": "Festo:Ordercode:CPX-E-CEC-M1",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-E-CEC-M1"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "vers:all/*",
+                    "product": {
+                      "name": "Control block CPX-E-CEC-M1-PN vers:all/*",
+                      "product_id": "CSAFPID-11012",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "4252743"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CPX-E-CEC-M1-PN"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:4252743"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Control block CPX-E-CEC-M1-PN"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=7",
+                    "product": {
+                      "name": "Controller CECC-D-BA <=7",
+                      "product_id": "CSAFPID-11014",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "8072995"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:8072995"
+                          },
+                          {
+                            "uri": "Festo:Ordercode:CECC-D-BA",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-D-BA"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=7",
+                    "product": {
+                      "name": "Controller CECC-D-CS <=7",
+                      "product_id": "CSAFPID-11015",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "2463301"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:2463301"
+                          },
+                          {
+                            "uri": "Festo:Ordercode:CECC-D-CS",
+                            "namespace": "Festo:Ordercode"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-D-CS"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=7",
+                    "product": {
+                      "name": "Controller CECC-D <=7",
+                      "product_id": "CSAFPID-11016",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "574415"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:574415"
+                          },
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-D"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-D"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=7",
+                    "product": {
+                      "name": "Controller CECC-LK <=7",
+                      "product_id": "CSAFPID-11017",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "574418"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-LK"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:574418"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-LK"
+              },
+              {
+                "branches": [
+                  {
+                    "category": "product_version_range",
+                    "name": "<=7",
+                    "product": {
+                      "name": "Controller CECC-S <=7",
+                      "product_id": "CSAFPID-11018",
+                      "product_identification_helper": {
+                        "model_numbers": [
+                          "574416"
+                        ],
+                        "x_generic_uris": [
+                          {
+                            "namespace": "Festo:Ordercode",
+                            "uri": "Festo:Ordercode:CECC-S"
+                          },
+                          {
+                            "namespace": "Festo:Partnumber",
+                            "uri": "Festo:Partnumber:574416"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Controller CECC-S"
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-X-M1 (Gen3)",
+                "product": {
+                  "name": "Controller CECC-X-M1 (Gen3)",
+                  "product_id": "CSAFPID-11019",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "4407603"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECC-X-M1"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:4407603"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-X-M1 (Gen4)",
+                "product": {
+                  "name": "Controller CECC-X-M1 (Gen4)",
+                  "product_id": "CSAFPID-11020",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8124922"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECC-X-M1"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8124922"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-X-M1-MV (Gen3)",
+                "product": {
+                  "name": "Controller CECC-X-M1-MV (Gen3)",
+                  "product_id": "CSAFPID-11021",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "4407605"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CECC-X-M1-MV"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:4407605"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-X-M1-MV (Gen4)",
+                "product": {
+                  "name": "Controller CECC-X-M1-MV (Gen4)",
+                  "product_id": "CSAFPID-11022",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8124923"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "uri": "Festo:Ordercode:CECC-X-M1-MV",
+                        "namespace": "Festo:Ordercode"
+                      },
+                      {
+                        "uri": "Festo:Partnumber:8124923",
+                        "namespace": "Festo:Partnumber"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-X-M1-MV-S1 (Gen3)",
+                "product": {
+                  "name": "Controller CECC-X-M1-MV-S1 (Gen3)",
+                  "product_id": "CSAFPID-11023",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "4407606"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:4407606"
+                      },
+                      {
+                        "uri": "Festo:Ordercode:CECC-X-M1-MV-S1",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Controller CECC-X-M1-MV-S1 (Gen4)",
+                "product": {
+                  "name": "Controller CECC-X-M1-MV-S1 (Gen4)",
+                  "product_id": "CSAFPID-11024",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8124924"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8124924"
+                      },
+                      {
+                        "uri": "Festo:Ordercode:CECC-X-M1-MV-S1",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-S-10",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-S-10",
+                  "product_id": "CSAFPID-11025",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "574412"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Ordercode",
+                        "uri": "Festo:Ordercode:CDPX-X-A-S-10"
+                      },
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:574412"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-13",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-W-13",
+                  "product_id": "CSAFPID-11026",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "574413"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:574413"
+                      },
+                      {
+                        "uri": "Festo:Ordercode:CDPX-X-A-W-13",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-4",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-W-4",
+                  "product_id": "CSAFPID-11027",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "574410"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "uri": "Festo:Ordercode:CDPX-X-A-W-4",
+                        "namespace": "Festo:Ordercode"
+                      },
+                      {
+                        "uri": "Festo:Partnumber:574410",
+                        "namespace": "Festo:Partnumber"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-A-W-7",
+                "product": {
+                  "name": "Operator unit CDPX-X-A-W-7",
+                  "product_id": "CSAFPID-11028",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "574411"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "uri": "Festo:Ordercode:CDPX-X-A-W-7",
+                        "namespace": "Festo:Ordercode"
+                      },
+                      {
+                        "uri": "Festo:Partnumber:574411",
+                        "namespace": "Festo:Partnumber"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-E1-W-10",
+                "product": {
+                  "name": "Operator unit CDPX-X-E1-W-10",
+                  "product_id": "CSAFPID-11029",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8155217"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8155217"
+                      },
+                      {
+                        "uri": "Festo:Ordercode:CDPX-X-E1-W-10",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-E1-W-15",
+                "product": {
+                  "name": "Operator unit CDPX-X-E1-W-15",
+                  "product_id": "CSAFPID-11030",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8155218"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "uri": "Festo:Ordercode:CDPX-X-E1-W-15",
+                        "namespace": "Festo:Ordercode"
+                      },
+                      {
+                        "uri": "Festo:Partnumber:8155218",
+                        "namespace": "Festo:Partnumber"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": "product_name",
+                "name": "Operator unit CDPX-X-E1-W-7",
+                "product": {
+                  "name": "Operator unit CDPX-X-E1-W-7",
+                  "product_id": "CSAFPID-11031",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "8155216"
+                    ],
+                    "x_generic_uris": [
+                      {
+                        "namespace": "Festo:Partnumber",
+                        "uri": "Festo:Partnumber:8155216"
+                      },
+                      {
+                        "uri": "Festo:Ordercode:CDPX-X-E1-W-7",
+                        "namespace": "Festo:Ordercode"
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Hardware"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=4.0.4",
+                "product": {
+                  "name": "Firmware <=4.0.4",
+                  "product_id": "CSAFPID-21001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.2.14",
+                "product": {
+                  "name": "Firmware 2.2.14",
+                  "product_id": "CSAFPID-21002"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "3.2.10",
+                "product": {
+                  "name": "Firmware 3.2.10",
+                  "product_id": "CSAFPID-21003"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=10.1.4",
+                "product": {
+                  "name": "Firmware <=10.1.4",
+                  "product_id": "CSAFPID-21004"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=2.4.2",
+                "product": {
+                  "name": "Firmware <=2.4.2",
+                  "product_id": "CSAFPID-21005"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=3.8.18",
+                "product": {
+                  "name": "Firmware <=3.8.18",
+                  "product_id": "CSAFPID-21006"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=4.0.18",
+                "product": {
+                  "name": "Firmware <=4.0.18",
+                  "product_id": "CSAFPID-21007"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "<=3.5.7.159",
+                "product": {
+                  "name": "Firmware <=3.5.7.159",
+                  "product_id": "CSAFPID-21008"
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Festo"
+      }
+    ],
+    "product_groups": [
+      {
+        "group_id": "CSAFGID-0001",
+        "product_ids": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ],
+        "summary": "Affected products."
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=4.0.4 installed on Control block CPX-CEC-C1-V3 <=8",
+          "product_id": "CSAFPID-31001"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11001"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=4.0.4 installed on Control block CPX-CEC-M1-V3 <=8",
+          "product_id": "CSAFPID-31002"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11002"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=4.0.4 installed on Control block CPX-CEC-S1-V3 <=8",
+          "product_id": "CSAFPID-31003"
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CSAFPID-11003"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 2.2.14 installed on Control block CPX-E-CEC-C1-EP <8",
+          "product_id": "CSAFPID-31004"
+        },
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11004"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=10.1.4 installed on Control block CPX-E-CEC-C1 <=5",
+          "product_id": "CSAFPID-31005"
+        },
+        "product_reference": "CSAFPID-21004",
+        "relates_to_product_reference": "CSAFPID-11006"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 2.2.14 installed on Control block CPX-E-CEC-C1-PN <8",
+          "product_id": "CSAFPID-31006"
+        },
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11007"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 2.2.14 installed on Control block CPX-E-CEC-M1-EP vers:all/*",
+          "product_id": "CSAFPID-31007"
+        },
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11009"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=10.1.4 installed on Control block CPX-E-CEC-M1 <=5",
+          "product_id": "CSAFPID-31008"
+        },
+        "product_reference": "CSAFPID-21004",
+        "relates_to_product_reference": "CSAFPID-11011"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware 2.2.14 installed on Control block CPX-E-CEC-M1-PN vers:all/*",
+          "product_id": "CSAFPID-31009"
+        },
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CSAFPID-11012"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=2.4.2 installed on Controller CECC-D-BA <=7",
+          "product_id": "CSAFPID-31010"
+        },
+        "product_reference": "CSAFPID-21005",
+        "relates_to_product_reference": "CSAFPID-11014"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=2.4.2 installed on Controller CECC-D-CS <=7",
+          "product_id": "CSAFPID-31011"
+        },
+        "product_reference": "CSAFPID-21005",
+        "relates_to_product_reference": "CSAFPID-11015"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=2.4.2 installed on Controller CECC-D <=7",
+          "product_id": "CSAFPID-31012"
+        },
+        "product_reference": "CSAFPID-21005",
+        "relates_to_product_reference": "CSAFPID-11016"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=2.4.2 installed on Controller CECC-LK <=7",
+          "product_id": "CSAFPID-31013"
+        },
+        "product_reference": "CSAFPID-21005",
+        "relates_to_product_reference": "CSAFPID-11017"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=2.4.2 installed on Controller CECC-S <=7",
+          "product_id": "CSAFPID-31014"
+        },
+        "product_reference": "CSAFPID-21005",
+        "relates_to_product_reference": "CSAFPID-11018"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.18 installed on Controller CECC-X-M1 (Gen3)",
+          "product_id": "CSAFPID-31015"
+        },
+        "product_reference": "CSAFPID-21006",
+        "relates_to_product_reference": "CSAFPID-11019"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=4.0.18 installed on Controller CECC-X-M1 (Gen4)",
+          "product_id": "CSAFPID-31016"
+        },
+        "product_reference": "CSAFPID-21007",
+        "relates_to_product_reference": "CSAFPID-11020"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.18 installed on Controller CECC-X-M1-MV (Gen3)",
+          "product_id": "CSAFPID-31017"
+        },
+        "product_reference": "CSAFPID-21006",
+        "relates_to_product_reference": "CSAFPID-11021"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=4.0.18 installed on Controller CECC-X-M1-MV (Gen4)",
+          "product_id": "CSAFPID-31018"
+        },
+        "product_reference": "CSAFPID-21007",
+        "relates_to_product_reference": "CSAFPID-11022"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.8.18 installed on Controller CECC-X-M1-MV-S1 (Gen3)",
+          "product_id": "CSAFPID-31019"
+        },
+        "product_reference": "CSAFPID-21006",
+        "relates_to_product_reference": "CSAFPID-11023"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=4.0.18 installed on Controller CECC-X-M1-MV-S1 (Gen4)",
+          "product_id": "CSAFPID-31020"
+        },
+        "product_reference": "CSAFPID-21007",
+        "relates_to_product_reference": "CSAFPID-11024"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.5.7.159 installed on Operator unit CDPX-X-A-S-10",
+          "product_id": "CSAFPID-31021"
+        },
+        "product_reference": "CSAFPID-21008",
+        "relates_to_product_reference": "CSAFPID-11025"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.5.7.159 installed on Operator unit CDPX-X-A-W-13",
+          "product_id": "CSAFPID-31022"
+        },
+        "product_reference": "CSAFPID-21008",
+        "relates_to_product_reference": "CSAFPID-11026"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.5.7.159 installed on Operator unit CDPX-X-A-W-4",
+          "product_id": "CSAFPID-31023"
+        },
+        "product_reference": "CSAFPID-21008",
+        "relates_to_product_reference": "CSAFPID-11027"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.5.7.159 installed on Operator unit CDPX-X-A-W-7",
+          "product_id": "CSAFPID-31024"
+        },
+        "product_reference": "CSAFPID-21008",
+        "relates_to_product_reference": "CSAFPID-11028"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.5.7.159 installed on Operator unit CDPX-X-E1-W-10",
+          "product_id": "CSAFPID-31025"
+        },
+        "product_reference": "CSAFPID-21008",
+        "relates_to_product_reference": "CSAFPID-11029"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.5.7.159 installed on Operator unit CDPX-X-E1-W-15",
+          "product_id": "CSAFPID-31026"
+        },
+        "product_reference": "CSAFPID-21008",
+        "relates_to_product_reference": "CSAFPID-11030"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Firmware <=3.5.7.159 installed on Operator unit CDPX-X-E1-W-7",
+          "product_id": "CSAFPID-31027"
+        },
+        "product_reference": "CSAFPID-21008",
+        "relates_to_product_reference": "CSAFPID-11031"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2022-47391",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "In multiple CODESYS products in multiple versions an unauthorized, remote attacker may use a improper input validation vulnerability to read from invalid addresses leading to a denial of service.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 7.5,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "temporalScore": 7.5,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47391"
+    },
+    {
+      "cve": "CVE-2022-47393",
+      "cwe": {
+        "id": "CWE-119",
+        "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a Improper Restriction of Operations within the Bounds of a Memory Buffer vulnerability in multiple versions of multiple CODESYS products to force a denial-of-service situation.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 6.5,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 6.5,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47393"
+    },
+    {
+      "cve": "CVE-2022-47392",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a improper input validation vulnerability in the CmpApp/CmpAppBP/CmpAppForce Components of multiple CODESYS products in multiple versions to read from an invalid address which can lead to a denial-of-service condition.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 6.5,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 6.5,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47392"
+    },
+    {
+      "cve": "CVE-2022-47390",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47390"
+    },
+    {
+      "cve": "CVE-2022-47389",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47389"
+    },
+    {
+      "cve": "CVE-2022-47388",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47388"
+    },
+    {
+      "cve": "CVE-2022-47387",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47387"
+    },
+    {
+      "cve": "CVE-2022-47386",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47386"
+    },
+    {
+      "cve": "CVE-2022-47385",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a stack based out-of-bounds write vulnerability in the CmpAppForce Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47385"
+    },
+    {
+      "cve": "CVE-2022-47384",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47384"
+    },
+    {
+      "cve": "CVE-2022-47383",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47383"
+    },
+    {
+      "cve": "CVE-2022-47382",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated remote attacker may use a stack based out-of-bounds write vulnerability in the CmpTraceMgr Component of multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47382"
+    },
+    {
+      "cve": "CVE-2022-47381",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated remote attacker may use a stack based out-of-bounds write vulnerability in multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47381"
+    },
+    {
+      "cve": "CVE-2022-47380",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated remote attacker may use a stack based  out-of-bounds write vulnerability in multiple CODESYS products in multiple versions to write data into the stack which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47380"
+    },
+    {
+      "cve": "CVE-2022-47379",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An authenticated, remote attacker may use a out-of-bounds write vulnerability in multiple CODESYS products in multiple versions to write data into memory which can lead to a denial-of-service condition, memory overwriting, or remote code execution.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "environmentalScore": 8.8,
+            "environmentalSeverity": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 8.8,
+            "temporalSeverity": "HIGH",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47379"
+    },
+    {
+      "cve": "CVE-2022-47378",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "Multiple CODESYS products in multiple versions are prone to a improper input validation vulnerability. An authenticated remote attacker may craft specific requests that use the vulnerability leading to a denial-of-service condition.",
+          "title": "Vulnerability Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002",
+          "CSAFPID-31003",
+          "CSAFPID-31004",
+          "CSAFPID-31005",
+          "CSAFPID-31006",
+          "CSAFPID-31007",
+          "CSAFPID-31008",
+          "CSAFPID-31009",
+          "CSAFPID-31010",
+          "CSAFPID-31011",
+          "CSAFPID-31012",
+          "CSAFPID-31013",
+          "CSAFPID-31014",
+          "CSAFPID-31015",
+          "CSAFPID-31016",
+          "CSAFPID-31017",
+          "CSAFPID-31018",
+          "CSAFPID-31019",
+          "CSAFPID-31020",
+          "CSAFPID-31021",
+          "CSAFPID-31022",
+          "CSAFPID-31023",
+          "CSAFPID-31024",
+          "CSAFPID-31025",
+          "CSAFPID-31026",
+          "CSAFPID-31027"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits:\n\n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n- Use firewalls to protect and separate the control system network from other networks\n- Use VPN (Virtual Private Networks) tunnels if remote access is required\nActivate and apply user management and password features\n- Use encrypted communication links\n- Limit the access to both development and control system by physical means, operating system features, etc.\n- Protect both development and control system by using up to date virus detecting solutions\n\nFesto strongly recommends to minimize and protect network access to connected devices with state of the art techniques and processes.\nFor a secure operation follow the recommendations in the product manuals.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "For all vulnerability identifiers except CECC-D, CECC-D-CS, CECC-D-BA, CECC-S, CECC-X Gen3 and CECC-LK: Update planned end of Q3 2024.",
+          "group_ids": [
+            "CSAFGID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "environmentalScore": 6.5,
+            "environmentalSeverity": "MEDIUM",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "temporalScore": 6.5,
+            "temporalSeverity": "MEDIUM",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002",
+            "CSAFPID-31003",
+            "CSAFPID-31004",
+            "CSAFPID-31005",
+            "CSAFPID-31006",
+            "CSAFPID-31007",
+            "CSAFPID-31008",
+            "CSAFPID-31009",
+            "CSAFPID-31010",
+            "CSAFPID-31011",
+            "CSAFPID-31012",
+            "CSAFPID-31013",
+            "CSAFPID-31014",
+            "CSAFPID-31015",
+            "CSAFPID-31016",
+            "CSAFPID-31017",
+            "CSAFPID-31018",
+            "CSAFPID-31019",
+            "CSAFPID-31020",
+            "CSAFPID-31021",
+            "CSAFPID-31022",
+            "CSAFPID-31023",
+            "CSAFPID-31024",
+            "CSAFPID-31025",
+            "CSAFPID-31026",
+            "CSAFPID-31027"
+          ]
+        }
+      ],
+      "title": "CVE-2022-47378"
+    }
+  ]
+}

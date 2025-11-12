@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-216014: Vulnerabilities in EFI variable of SIMATIC IPCs, SIMATIC Tablet PCs, and SIMATIC Field PGs",
     "tracking": {
-      "current_release_date": "2025-06-10T00:00:00Z",
+      "current_release_date": "2025-11-11T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added SIMATIC IPC RC-543A and RW-543B; Updated SIMATIC IPC3000 Smart V3, IPC 347G, IPC 527G"
+        },
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for SIMATIC IPC227G / IPC277G / IPC277G PRO / IPC327G / IPC377G"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -100,7 +106,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V26.01.12",
+                "name": "vers:intdot/<26.01.12",
                 "product": {
                   "name": "SIMATIC Field PG M6",
                   "product_id": "2"
@@ -114,248 +120,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC127E",
-                  "product_id": "3"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC127E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC227E",
-                  "product_id": "4"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC227E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC227G",
-                  "product_id": "5"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC227G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC277E",
-                  "product_id": "6"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC277E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC277G",
-                  "product_id": "7"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC277G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC327G",
-                  "product_id": "8"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC327G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC347G",
-                  "product_id": "9"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC347G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC377G",
-                  "product_id": "10"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC377G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC427E",
-                  "product_id": "11"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC427E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC477E",
-                  "product_id": "12"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC477E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC477E PRO",
-                  "product_id": "13"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC477E PRO"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC527G",
-                  "product_id": "14"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC527G"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V25.02.15",
-                "product": {
-                  "name": "SIMATIC IPC627E",
-                  "product_id": "15"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC627E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V25.02.15",
-                "product": {
-                  "name": "SIMATIC IPC647E",
-                  "product_id": "16"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC647E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V25.02.15",
-                "product": {
-                  "name": "SIMATIC IPC677E",
-                  "product_id": "17"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC677E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V25.02.15",
-                "product": {
-                  "name": "SIMATIC IPC847E",
-                  "product_id": "18"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC847E"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC IPC3000 SMART V3",
-                  "product_id": "19"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC IPC3000 SMART V3"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V31.01.07",
+                "name": "vers:intdot/<31.01.07",
                 "product": {
                   "name": "SIMATIC IPC BX-21A",
-                  "product_id": "20"
+                  "product_id": "3"
                 }
               }
             ],
@@ -366,10 +134,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V29.01.07",
+                "name": "vers:intdot/<29.01.07",
                 "product": {
                   "name": "SIMATIC IPC BX-32A",
-                  "product_id": "21"
+                  "product_id": "4"
                 }
               }
             ],
@@ -380,10 +148,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V29.01.07",
+                "name": "vers:intdot/<29.01.07",
                 "product": {
                   "name": "SIMATIC IPC BX-39A",
-                  "product_id": "22"
+                  "product_id": "5"
                 }
               }
             ],
@@ -394,10 +162,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V32.01.04",
+                "name": "vers:intdot/<32.01.04",
                 "product": {
                   "name": "SIMATIC IPC BX-59A",
-                  "product_id": "23"
+                  "product_id": "6"
                 }
               }
             ],
@@ -408,10 +176,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V29.01.07",
+                "name": "vers:intdot/<29.01.07",
                 "product": {
                   "name": "SIMATIC IPC PX-32A",
-                  "product_id": "24"
+                  "product_id": "7"
                 }
               }
             ],
@@ -422,10 +190,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V29.01.07",
+                "name": "vers:intdot/<29.01.07",
                 "product": {
                   "name": "SIMATIC IPC PX-39A",
-                  "product_id": "25"
+                  "product_id": "8"
                 }
               }
             ],
@@ -436,10 +204,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V29.01.07",
+                "name": "vers:intdot/<29.01.07",
                 "product": {
                   "name": "SIMATIC IPC PX-39A PRO",
-                  "product_id": "26"
+                  "product_id": "9"
                 }
               }
             ],
@@ -453,7 +221,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC IPC RC-543A",
-                  "product_id": "27"
+                  "product_id": "10"
                 }
               }
             ],
@@ -467,7 +235,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC IPC RC-543B",
-                  "product_id": "28"
+                  "product_id": "11"
                 }
               }
             ],
@@ -481,7 +249,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC IPC RW-543A",
-                  "product_id": "29"
+                  "product_id": "12"
                 }
               }
             ],
@@ -495,7 +263,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC IPC RW-543B",
-                  "product_id": "30"
+                  "product_id": "13"
                 }
               }
             ],
@@ -508,13 +276,13 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC ITP1000",
-                  "product_id": "31"
+                  "name": "SIMATIC IPC127E",
+                  "product_id": "14"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC ITP1000"
+            "name": "SIMATIC IPC127E"
           },
           {
             "branches": [
@@ -522,13 +290,251 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
+                  "name": "SIMATIC IPC227E",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC227E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<28.01.14",
+                "product": {
+                  "name": "SIMATIC IPC227G",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC227G"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC277E",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC277E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<28.01.14",
+                "product": {
+                  "name": "SIMATIC IPC277G",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC277G"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<28.01.14",
+                "product": {
                   "name": "SIMATIC\u00a0IPC277G PRO",
-                  "product_id": "32"
+                  "product_id": "19"
                 }
               }
             ],
             "category": "product_name",
             "name": "SIMATIC\u00a0IPC277G PRO"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC3000 SMART V3",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC3000 SMART V3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<28.01.14",
+                "product": {
+                  "name": "SIMATIC IPC327G",
+                  "product_id": "21"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC327G"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC347G",
+                  "product_id": "22"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC347G"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<28.01.14",
+                "product": {
+                  "name": "SIMATIC IPC377G",
+                  "product_id": "23"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC377G"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC427E",
+                  "product_id": "24"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC427E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC477E",
+                  "product_id": "25"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC477E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC477E PRO",
+                  "product_id": "26"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC477E PRO"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC IPC527G",
+                  "product_id": "27"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC527G"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<25.02.15",
+                "product": {
+                  "name": "SIMATIC IPC627E",
+                  "product_id": "28"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC627E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<25.02.15",
+                "product": {
+                  "name": "SIMATIC IPC647E",
+                  "product_id": "29"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC647E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<25.02.15",
+                "product": {
+                  "name": "SIMATIC IPC677E",
+                  "product_id": "30"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC677E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<25.02.15",
+                "product": {
+                  "name": "SIMATIC IPC847E",
+                  "product_id": "31"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC IPC847E"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIMATIC ITP1000",
+                  "product_id": "32"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC ITP1000"
           }
         ],
         "category": "vendor",
@@ -627,11 +633,11 @@
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
-            "4",
-            "6",
-            "9",
-            "14",
-            "19"
+            "15",
+            "17",
+            "20",
+            "22",
+            "27"
           ]
         },
         {
@@ -639,19 +645,14 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "1",
-            "3",
-            "5",
-            "7",
-            "8",
             "10",
             "11",
             "12",
             "13",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
+            "14",
+            "24",
+            "25",
+            "26",
             "32"
           ]
         },
@@ -659,19 +660,22 @@
           "category": "vendor_fix",
           "details": "Update to V25.02.15 or later version",
           "product_ids": [
-            "15",
+            "28",
+            "29",
+            "30",
+            "31"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V28.01.14 or later version",
+          "product_ids": [
             "16",
-            "17",
-            "18"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V29.01.07 or later version",
-          "product_ids": [
+            "18",
+            "19",
             "21",
-            "24"
+            "23"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
@@ -679,9 +683,18 @@
           "category": "vendor_fix",
           "details": "Update to V29.01.07 or later version",
           "product_ids": [
-            "22",
-            "25",
-            "26"
+            "4",
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V29.01.07 or later version",
+          "product_ids": [
+            "5",
+            "8",
+            "9"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
@@ -689,7 +702,7 @@
           "category": "vendor_fix",
           "details": "Update to V31.01.07 or later version",
           "product_ids": [
-            "20"
+            "3"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
@@ -697,7 +710,7 @@
           "category": "vendor_fix",
           "details": "Update to V32.01.04 or later version",
           "product_ids": [
-            "23"
+            "6"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         }
@@ -839,11 +852,11 @@
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
-            "4",
-            "6",
-            "9",
-            "14",
-            "19"
+            "15",
+            "17",
+            "20",
+            "22",
+            "27"
           ]
         },
         {
@@ -851,19 +864,14 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "1",
-            "3",
-            "5",
-            "7",
-            "8",
             "10",
             "11",
             "12",
             "13",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
+            "14",
+            "24",
+            "25",
+            "26",
             "32"
           ]
         },
@@ -871,10 +879,10 @@
           "category": "vendor_fix",
           "details": "Update to V25.02.15 or later version",
           "product_ids": [
-            "15",
-            "16",
-            "17",
-            "18"
+            "28",
+            "29",
+            "30",
+            "31"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
@@ -888,10 +896,13 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V29.01.07 or later version",
+          "details": "Update to V28.01.14 or later version",
           "product_ids": [
+            "16",
+            "18",
+            "19",
             "21",
-            "24"
+            "23"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
@@ -899,9 +910,18 @@
           "category": "vendor_fix",
           "details": "Update to V29.01.07 or later version",
           "product_ids": [
-            "22",
-            "25",
-            "26"
+            "4",
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V29.01.07 or later version",
+          "product_ids": [
+            "5",
+            "8",
+            "9"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
@@ -909,7 +929,7 @@
           "category": "vendor_fix",
           "details": "Update to V31.01.07 or later version",
           "product_ids": [
-            "20"
+            "3"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },
@@ -917,7 +937,7 @@
           "category": "vendor_fix",
           "details": "Update to V32.01.04 or later version",
           "product_ids": [
-            "23"
+            "6"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         }

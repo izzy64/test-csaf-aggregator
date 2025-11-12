@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW Before V7.4.3 on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-05-13T00:00:00Z",
+      "current_release_date": "2025-11-11T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -120,10 +120,16 @@
           "legacy_version": "1.9",
           "number": "10",
           "summary": "Moved CVE-2024-21762 to SSA-770770"
+        },
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "2.0",
+          "number": "11",
+          "summary": "Added CVE-2025-54822 and CVE-2023-46718"
         }
       ],
       "status": "final",
-      "version": "10"
+      "version": "11"
     }
   },
   "product_tree": {
@@ -364,7 +370,7 @@
           "cvss_v3": {
             "baseScore": 3.7,
             "baseSeverity": "LOW",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
             "version": "3.1"
           },
           "products": [
@@ -563,7 +569,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Set a non form-based authentication scheme (see \nhttps://fortiguard.fortinet.com/psirt/FG-IR-23-328)",
+          "details": "Set a non form-based authentication scheme (see https://fortiguard.fortinet.com/psirt/FG-IR-23-328)",
           "product_ids": [
             "2"
           ]
@@ -612,7 +618,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Set a non form-based authentication scheme (see \nhttps://fortiguard.fortinet.com/psirt/FG-IR-23-328)",
+          "details": "Set a non form-based authentication scheme (see https://fortiguard.fortinet.com/psirt/FG-IR-23-328)",
           "product_ids": [
             "2"
           ]
@@ -756,7 +762,7 @@
           "cvss_v3": {
             "baseScore": 7.5,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P/RL:O/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -977,6 +983,48 @@
       "title": "CVE-2023-46717"
     },
     {
+      "cve": "CVE-2023-46718",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A stack-based buffer overflow in Fortinet FortiOS version 7.4.0 through 7.4.1 and 7.2.0 through 7.2.7 and 7.0.0 through 7.0.12 and 6.4.6 through 6.4.15 and 6.2.9 through 6.2.16 and 6.0.13 through 6.0.18 allows attacker to execute unauthorized code or commands via specially crafted CLI commands.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.3. Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2023-46718"
+    },
+    {
       "cve": "CVE-2023-47537",
       "cwe": {
         "id": "CWE-295",
@@ -1165,7 +1213,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "For each interface, remove the fgfm access (see \nhttps://www.fortiguard.com/psirt/FG-IR-24-029)",
+          "details": "For each interface, remove the fgfm access (see https://www.fortiguard.com/psirt/FG-IR-24-029)",
           "product_ids": [
             "1"
           ]
@@ -1311,7 +1359,7 @@
           "cvss_v3": {
             "baseScore": 5.3,
             "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N/E:F/RL:U/RC:C",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
             "version": "3.1"
           },
           "products": [
@@ -1321,6 +1369,48 @@
         }
       ],
       "title": "CVE-2024-26011"
+    },
+    {
+      "cve": "CVE-2025-54822",
+      "cwe": {
+        "id": "CWE-285",
+        "name": "Improper Authorization"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An improper authorization vulnerability [CWE-285] in Fortinet FortiOS version 7.4.0 through 7.4.1 and before 7.2.8 & Fortinet FortiProxy before version 7.4.8 allows an authenticated attacker to access static files of others VDOMs via crafted HTTP or HTTPS requests.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.3. Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-54822"
     }
   ]
 }

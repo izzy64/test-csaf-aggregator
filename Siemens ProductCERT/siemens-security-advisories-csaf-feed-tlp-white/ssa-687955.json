@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Affected SIPROTEC 5 devices contain a development shell which is accessible via a physical interface which is not properly restricted. This could allow an unauthenticated attacker with physical access to an affected device to execute arbitrary commands on the device.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Affected SIPROTEC 5 devices contain a development shell which is accessible via a physical interface which is not properly restricted. This could allow an unauthenticated attacker with physical access to an affected device to execute arbitrary commands on the device.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\nhttps://www.siemens.com/gridsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-687955: Accessible Development Shell via Physical Interface in SIPROTEC 5",
     "tracking": {
-      "current_release_date": "2025-08-12T00:00:00Z",
+      "current_release_date": "2025-11-11T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for SIPROTEC 5 7KE85 (CP300), 7ST85 (CP300), 7ST86 (CP300)"
+        },
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for SIPROTEC 5 7SA82 (CP100), SIPROTEC 5 7SD82 (CP100), SIPROTEC 5 7SJ81 (CP100), SIPROTEC 5 7SJ82 (CP100), SIPROTEC 5 7SK82 (CP100), SIPROTEC 5 7SL82 (CP100), SIPROTEC 5 7UT82 (CP100)"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -212,7 +218,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SA82 (CP100)",
                   "product_id": "10"
@@ -296,7 +302,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SD82 (CP100)",
                   "product_id": "16"
@@ -380,7 +386,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SJ81 (CP100)",
                   "product_id": "22"
@@ -408,7 +414,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SJ82 (CP100)",
                   "product_id": "24"
@@ -492,7 +498,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SK82 (CP100)",
                   "product_id": "30"
@@ -548,7 +554,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SL82 (CP100)",
                   "product_id": "34"
@@ -758,7 +764,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7UT82 (CP100)",
                   "product_id": "49"
@@ -1114,19 +1120,6 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "10",
-            "16",
-            "22",
-            "24",
-            "30",
-            "34",
-            "49"
-          ]
-        },
-        {
           "category": "vendor_fix",
           "details": "Update to V10.0 or later version",
           "product_ids": [
@@ -1189,6 +1182,19 @@
             "61"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109796884/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.90 or later V8.xx version",
+          "product_ids": [
+            "10",
+            "16",
+            "22",
+            "24",
+            "30",
+            "34",
+            "49"
+          ]
         }
       ],
       "scores": [

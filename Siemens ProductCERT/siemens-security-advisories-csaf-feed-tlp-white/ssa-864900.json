@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products.\nSiemens is preparing fix versions and recommends to consult and implement the workarounds provided in Fortinet's upstream security notifications.",
+        "text": "Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products.\n\nSiemens is preparing fix versions and recommends to consult and implement the workarounds provided in Fortinet's upstream security notifications.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-864900: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-09-09T00:00:00Z",
+      "current_release_date": "2025-11-11T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -84,10 +84,16 @@
           "legacy_version": "1.3",
           "number": "4",
           "summary": "Added CVE-2025-25248 and CVE-2025-53744"
+        },
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Added CVE-2025-57740, CVE-2025-31514, CVE-2025-58903, CVE-2025-31366, CVE-2025-47890 and CVE-2025-25253"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -220,7 +226,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Under the \nconfig vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
+          "details": "Under the config vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
           "product_ids": [
             "1"
           ]
@@ -459,6 +465,202 @@
       "title": "CVE-2025-25250"
     },
     {
+      "cve": "CVE-2025-25253",
+      "cwe": {
+        "id": "CWE-297",
+        "name": "Improper Validation of Certificate with Host Mismatch"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Improper Validation of Certificate with Host Mismatch vulnerability [CWE-297] in FortiProxy version 7.6.1 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions and FortiOS version 7.6.2 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions ZTNA proxy may allow an unauthenticated attacker in a man-in-the middle position to intercept and tamper with connections to the ZTNA proxy",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Under the config vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-25253"
+    },
+    {
+      "cve": "CVE-2025-31366",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Improper Neutralization of Input During Web Page Generation vulnerability [CWE-79] in FortiOS 7.6.0 through 7.6.3, 7.4.0 through 7.4.7, 7.2 all versions, 7.0 all versions, 6.4 all versions; FortiProxy 7.6.0 through 7.6.3, 7.4.0 through 7.4.9, 7.2 all versions, 7.0 all versions; FortiSASE 25.3.a may allow an unauthenticated attacker to perform a reflected cross site scripting (XSS) via crafted HTTP requests.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Under the config vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31366"
+    },
+    {
+      "cve": "CVE-2025-31514",
+      "cwe": {
+        "id": "CWE-532",
+        "name": "Insertion of Sensitive Information into Log File"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Insertion of Sensitive Information into Log File vulnerability [CWE-532] in FortiOS 7.6.0 through 7.6.3, 7.4 all versions, 7.2 all versions, 7.0 all versions, 6.4 all versions may allow an attacker with at least read-only privileges to retrieve sensitive 2FA-related information via observing logs or via diagnose command.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Under the config vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-31514"
+    },
+    {
+      "cve": "CVE-2025-47890",
+      "cwe": {
+        "id": "CWE-601",
+        "name": "URL Redirection to Untrusted Site ('Open Redirect')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An URL Redirection to Untrusted Site vulnerabilities [CWE-601] in FortiOS 7.6.0 through 7.6.2, 7.4.0 through 7.4.8, 7.2 all versions, 7.0 all versions, 6.4 all versions; FortiProxy 7.6.0 through 7.6.3, 7.4 all versions, 7.2 all versions, 7.0 all versions; FortiSASE 25.2.a may allow an unauthenticated attacker to perform an open redirect attack via crafted HTTP requests.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Under the config vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.6,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-47890"
+    },
+    {
       "cve": "CVE-2025-53744",
       "cwe": {
         "id": "CWE-266",
@@ -499,6 +701,104 @@
         }
       ],
       "title": "CVE-2025-53744"
+    },
+    {
+      "cve": "CVE-2025-57740",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Heap-based Buffer Overflow vulnerability [CWE-122] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions; FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions and FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions RDP bookmark connection may allow an authenticated user to execute unauthorized code via crafted requests.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Under the config vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-57740"
+    },
+    {
+      "cve": "CVE-2025-58903",
+      "cwe": {
+        "id": "CWE-252",
+        "name": "Unchecked Return Value"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Unchecked Return Value vulnerability [CWE-252] in Fortinet FortiOS version 7.6.0 through 7.6.3 and before 7.4.8 API allows an authenticated user to cause a  Null Pointer Dereference, crashing the http daemon via a specialy crafted request.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Under the config vpn ipsec phase1-interface configuration, either set authmethod to psk, or set digital-signature-auth to disable (see https://fortiguard.fortinet.com/psirt/FG-IR-24-373)",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 2.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-58903"
     }
   ]
 }

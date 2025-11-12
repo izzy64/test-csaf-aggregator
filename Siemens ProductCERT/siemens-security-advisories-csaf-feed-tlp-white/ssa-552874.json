@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Devices of the SIPROTEC 5 family contain a vulnerability related to secure client-initiated renegotiation. This could allow an unauthenticated attacker to cause a denial of service condition for the duration of the attack.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Devices of the SIPROTEC 5 family contain a vulnerability related to secure client-initiated renegotiation. This could allow an unauthenticated attacker to cause a denial of service condition for the duration of the attack.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\n\nhttps://www.siemens.com/gridsecurity",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\nhttps://www.siemens.com/gridsecurity",
         "title": "General Recommendations"
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       }
     ],
@@ -47,21 +47,11 @@
         "category": "self",
         "summary": "SSA-552874: Denial of Service Vulnerability in SIPROTEC 5 Devices - CSAF Version",
         "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-552874.json"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-552874: Denial of Service Vulnerability in SIPROTEC 5 Devices - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-552874.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-552874: Denial of Service Vulnerability in SIPROTEC 5 Devices - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-552874.txt"
       }
     ],
     "title": "SSA-552874: Denial of Service Vulnerability in SIPROTEC 5 Devices",
     "tracking": {
-      "current_release_date": "2024-05-14T00:00:00Z",
+      "current_release_date": "2025-11-11T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -100,10 +90,16 @@
           "legacy_version": "1.4",
           "number": "5",
           "summary": "Added fix for SIPROTEC 5 7SJ81 (CP100), SIPROTEC 5 7SJ82 (CP100), SIPROTEC 5 7SK82 (CP100), SIPROTEC 5 Communication Module ETH-BA-2EL (installed on CP100 devices), SIPROTEC 5 Communication Module ETH-BB-2FO (installed on CP100 devices); Clarified that currently no fix is available for SIPROTEC 5 7SA82 (CP100), SIPROTEC 5 7SD82 (CP100), SIPROTEC 5 7SL82 (CP100), SIPROTEC 5 7UT82 (CP100)"
+        },
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added fix for SIPROTEC 5 7SA82 (CP100), SIPROTEC 5 7SD82 (CP100), SIPROTEC 5 7SL82 (CP100) and SIPROTEC 5 7UT82 (CP100)"
         }
       ],
       "status": "interim",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -114,7 +110,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 6MD84 (CP300)",
                   "product_id": "1"
@@ -142,7 +138,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 6MD85 (CP300)",
                   "product_id": "3"
@@ -170,7 +166,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 6MD86 (CP300)",
                   "product_id": "5"
@@ -184,7 +180,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.64",
+                "name": "vers:intdot/<9.64",
                 "product": {
                   "name": "SIPROTEC 5 6MD89 (CP300)",
                   "product_id": "6"
@@ -198,7 +194,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 6MU85 (CP300)",
                   "product_id": "7"
@@ -226,7 +222,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.64",
+                "name": "vers:intdot/<9.64",
                 "product": {
                   "name": "SIPROTEC 5 7KE85 (CP300)",
                   "product_id": "9"
@@ -240,7 +236,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SA82 (CP100)",
                   "product_id": "10"
@@ -254,7 +250,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SA82 (CP150)",
                   "product_id": "11"
@@ -296,7 +292,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SA86 (CP300)",
                   "product_id": "14"
@@ -324,7 +320,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SA87 (CP300)",
                   "product_id": "16"
@@ -338,7 +334,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SD82 (CP100)",
                   "product_id": "17"
@@ -352,7 +348,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SD82 (CP150)",
                   "product_id": "18"
@@ -394,7 +390,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SD86 (CP300)",
                   "product_id": "21"
@@ -422,7 +418,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SD87 (CP300)",
                   "product_id": "23"
@@ -436,7 +432,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V8.89",
+                "name": "vers:intdot/<8.89",
                 "product": {
                   "name": "SIPROTEC 5 7SJ81 (CP100)",
                   "product_id": "24"
@@ -450,7 +446,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SJ81 (CP150)",
                   "product_id": "25"
@@ -464,7 +460,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V8.89",
+                "name": "vers:intdot/<8.89",
                 "product": {
                   "name": "SIPROTEC 5 7SJ82 (CP100)",
                   "product_id": "26"
@@ -478,7 +474,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SJ82 (CP150)",
                   "product_id": "27"
@@ -506,7 +502,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SJ85 (CP300)",
                   "product_id": "29"
@@ -534,7 +530,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SJ86 (CP300)",
                   "product_id": "31"
@@ -548,7 +544,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V8.89",
+                "name": "vers:intdot/<8.89",
                 "product": {
                   "name": "SIPROTEC 5 7SK82 (CP100)",
                   "product_id": "32"
@@ -562,7 +558,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SK82 (CP150)",
                   "product_id": "33"
@@ -590,7 +586,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SK85 (CP300)",
                   "product_id": "35"
@@ -604,7 +600,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7SL82 (CP100)",
                   "product_id": "36"
@@ -618,7 +614,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SL82 (CP150)",
                   "product_id": "37"
@@ -646,7 +642,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SL86 (CP300)",
                   "product_id": "39"
@@ -674,7 +670,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SL87 (CP300)",
                   "product_id": "41"
@@ -702,7 +698,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SS85 (CP300)",
                   "product_id": "43"
@@ -730,7 +726,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.64",
+                "name": "vers:intdot/<9.64",
                 "product": {
                   "name": "SIPROTEC 5 7ST85 (CP300)",
                   "product_id": "45"
@@ -744,7 +740,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.64",
+                "name": "vers:intdot/<9.64",
                 "product": {
                   "name": "SIPROTEC 5 7ST86 (CP300)",
                   "product_id": "46"
@@ -758,7 +754,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SX82 (CP150)",
                   "product_id": "47"
@@ -772,7 +768,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7SX85 (CP300)",
                   "product_id": "48"
@@ -786,7 +782,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7UM85 (CP300)",
                   "product_id": "49"
@@ -800,7 +796,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<8.90",
                 "product": {
                   "name": "SIPROTEC 5 7UT82 (CP100)",
                   "product_id": "50"
@@ -814,7 +810,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7UT82 (CP150)",
                   "product_id": "51"
@@ -842,7 +838,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7UT85 (CP300)",
                   "product_id": "53"
@@ -870,7 +866,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7UT86 (CP300)",
                   "product_id": "55"
@@ -898,7 +894,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7UT87 (CP300)",
                   "product_id": "57"
@@ -912,7 +908,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7VE85 (CP300)",
                   "product_id": "58"
@@ -940,7 +936,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7VK87 (CP300)",
                   "product_id": "60"
@@ -954,7 +950,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 7VU85 (CP300)",
                   "product_id": "61"
@@ -968,67 +964,67 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions < V8.89 installed on CP100 devices",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "SIPROTEC 5 Communication Module ETH-BA-2EL",
+                  "name": "SIPROTEC 5 Communication Module ETH-BA-2EL (Rev.1)",
                   "product_id": "62"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "All versions < V9.50 installed on CP150 and CP300 devices",
+                "name": "vers:intdot/<9.50",
                 "product": {
-                  "name": "SIPROTEC 5 Communication Module ETH-BA-2EL",
+                  "name": "SIPROTEC 5 Communication Module ETH-BA-2EL (Rev.1)",
                   "product_id": "63"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "All versions installed on CP200 devices",
+                "name": "vers:intdot/<8.89",
                 "product": {
-                  "name": "SIPROTEC 5 Communication Module ETH-BA-2EL",
+                  "name": "SIPROTEC 5 Communication Module ETH-BA-2EL (Rev.1)",
                   "product_id": "64"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIPROTEC 5 Communication Module ETH-BA-2EL"
+            "name": "SIPROTEC 5 Communication Module ETH-BA-2EL (Rev.1)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions < V8.89 installed on CP100 devices",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "SIPROTEC 5 Communication Module ETH-BB-2FO",
+                  "name": "SIPROTEC 5 Communication Module ETH-BB-2FO (Rev. 1)",
                   "product_id": "65"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "All versions < V9.50 installed on CP150 and CP300 devices",
+                "name": "vers:intdot/<9.50",
                 "product": {
-                  "name": "SIPROTEC 5 Communication Module ETH-BB-2FO",
+                  "name": "SIPROTEC 5 Communication Module ETH-BB-2FO (Rev. 1)",
                   "product_id": "66"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "All versions installed on CP200 devices",
+                "name": "vers:intdot/<8.89",
                 "product": {
-                  "name": "SIPROTEC 5 Communication Module ETH-BB-2FO",
+                  "name": "SIPROTEC 5 Communication Module ETH-BB-2FO (Rev. 1)",
                   "product_id": "67"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIPROTEC 5 Communication Module ETH-BB-2FO"
+            "name": "SIPROTEC 5 Communication Module ETH-BB-2FO (Rev. 1)"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 Communication Module ETH-BD-2FO",
                   "product_id": "68"
@@ -1042,7 +1038,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<V9.50",
+                "name": "vers:intdot/<9.50",
                 "product": {
                   "name": "SIPROTEC 5 Compact 7SX800 (CP050)",
                   "product_id": "69"
@@ -1245,19 +1241,53 @@
             "54",
             "56",
             "59",
-            "64",
-            "67"
+            "62",
+            "65"
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V9.50 or later version",
           "product_ids": [
-            "10",
-            "17",
-            "36",
-            "50"
-          ]
+            "1",
+            "3",
+            "5",
+            "7",
+            "14",
+            "16",
+            "21",
+            "23",
+            "29",
+            "31",
+            "35",
+            "39",
+            "41",
+            "43",
+            "48",
+            "49",
+            "53",
+            "55",
+            "57",
+            "58",
+            "60",
+            "61"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109814150/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.50 or later version",
+          "product_ids": [
+            "11",
+            "18",
+            "25",
+            "27",
+            "33",
+            "37",
+            "47",
+            "51"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757433/"
         },
         {
           "category": "vendor_fix",
@@ -1277,142 +1307,33 @@
         },
         {
           "category": "vendor_fix",
+          "details": "Update to V9.64 or later version",
+          "product_ids": [
+            "6",
+            "9",
+            "45",
+            "46"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109742950/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.90 or later V8.xx version",
+          "product_ids": [
+            "10",
+            "17",
+            "36",
+            "50"
+          ]
+        },
+        {
+          "category": "vendor_fix",
           "details": "Update to V8.89 or later V8.xx version",
           "product_ids": [
             "24",
-            "26"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109751934/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V8.89 or later V8.xx version",
-          "product_ids": [
+            "26",
             "32"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757434/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "11",
-            "14",
-            "16",
-            "18",
-            "21",
-            "23",
-            "31",
-            "37",
-            "39",
-            "41",
-            "60"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757433/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "25",
-            "27",
-            "29"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109751934/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "33",
-            "35"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757434/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "51",
-            "53",
-            "55",
-            "57"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757438/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "7"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109765263/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "47",
-            "48"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109768011/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.64 or later version",
-          "product_ids": [
-            "9"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757430/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "43"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757429/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.64 or later version",
-          "product_ids": [
-            "45"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109740299/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "49"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757431/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "58"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109749865/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "3",
-            "5"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109757428/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.64 or later version",
-          "product_ids": [
-            "6"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109742950/"
+          ]
         },
         {
           "category": "vendor_fix",
@@ -1427,34 +1348,10 @@
           "category": "vendor_fix",
           "details": "Update to V8.89 or later V8.xx version",
           "product_ids": [
-            "62",
-            "65"
+            "64",
+            "67"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109740816/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "1"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109814150/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.50 or later version",
-          "product_ids": [
-            "61"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800399/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V9.64 or later version",
-          "product_ids": [
-            "46"
-          ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109768428/"
         }
       ],
       "scores": [

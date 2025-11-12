@@ -51,7 +51,7 @@
     ],
     "title": "SSA-282044: DLL Hijacking Vulnerability in Siemens Web Installer used by the Online Software Delivery",
     "tracking": {
-      "current_release_date": "2025-10-14T00:00:00Z",
+      "current_release_date": "2025-11-11T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -78,10 +78,16 @@
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added fix for MTP Creator V2.x, CFL V4.x, Simatic WinCC Unified Line Coordination and Simatic WinCC Unified Sequence"
+        },
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added Fixes for PCS 7 Logic Matrix V9.1, PCS7 Advanced Process Faceplates V9.1, SIMATIC PCS 7 Basis Faceplates V9.1 PCS 7 Basis Library V9.1, SIMATIC Management Agent V9.1, SIMATIC Management Console V9.1, PCS 7 V9.1, PCS 7 V10.0"
         }
       ],
       "status": "interim",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -522,7 +528,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 SP1 Upd8",
                 "product": {
                   "name": "SIMATIC Management Agent",
                   "product_id": "31"
@@ -536,7 +542,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 SP1 Upd8",
                 "product": {
                   "name": "SIMATIC Management Console",
                   "product_id": "32"
@@ -718,7 +724,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 SP2 Upd4",
                 "product": {
                   "name": "SIMATIC PCS 7 Advanced Process Faceplates V9.1",
                   "product_id": "45"
@@ -802,7 +808,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 SP2 Upd6",
                 "product": {
                   "name": "SIMATIC PCS 7 Advanced Process Library V9.1",
                   "product_id": "51"
@@ -816,7 +822,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 SP2 Upd2",
                 "product": {
                   "name": "SIMATIC PCS 7 Basis Faceplates V9.1",
                   "product_id": "52"
@@ -844,7 +850,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 SP2 Upd8",
                 "product": {
                   "name": "SIMATIC PCS 7 Basis Library V9.1",
                   "product_id": "54"
@@ -914,7 +920,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 Upd8",
                 "product": {
                   "name": "SIMATIC PCS 7 Logic Matrix V9.1",
                   "product_id": "59"
@@ -998,7 +1004,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V10.0 SP1 UC01",
                 "product": {
                   "name": "SIMATIC PCS 7 V10.0",
                   "product_id": "65"
@@ -1012,7 +1018,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.1 SP1 UC08",
                 "product": {
                   "name": "SIMATIC PCS 7 V9.1",
                   "product_id": "66"
@@ -2477,8 +2483,6 @@
             "26",
             "27",
             "30",
-            "31",
-            "32",
             "36",
             "37",
             "38",
@@ -2487,27 +2491,20 @@
             "41",
             "42",
             "44",
-            "45",
             "46",
             "47",
             "48",
             "49",
             "50",
-            "51",
-            "52",
             "53",
-            "54",
             "55",
             "57",
             "58",
-            "59",
             "60",
             "61",
             "62",
             "63",
             "64",
-            "65",
-            "66",
             "67",
             "70",
             "71",
@@ -2553,6 +2550,14 @@
             "134",
             "135"
           ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.0 SP1 UC01 or later version",
+          "product_ids": [
+            "65"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109983445/"
         },
         {
           "category": "vendor_fix",
@@ -2709,6 +2714,70 @@
             "111"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109977191/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 Upd8 or later version",
+          "product_ids": [
+            "59"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP1 UC08 or later version",
+          "product_ids": [
+            "66"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP1 Upd8 or later version",
+          "product_ids": [
+            "31"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP1 Upd8 or later version",
+          "product_ids": [
+            "32"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP2 Upd2 or later version",
+          "product_ids": [
+            "52"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP2 Upd4 or later version",
+          "product_ids": [
+            "45"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP2 Upd6 or later version",
+          "product_ids": [
+            "51"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.1 SP2 Upd8 or later version",
+          "product_ids": [
+            "54"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
         }
       ],
       "scores": [

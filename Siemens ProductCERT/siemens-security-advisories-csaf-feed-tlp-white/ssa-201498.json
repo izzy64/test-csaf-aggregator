@@ -1,0 +1,1151 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The web server of SICAM P850 and SICAM P855 devices, versions before V3.11, contains a Cross Site Request Forgery (CSRF) vulnerability and is missing cookie protection flags. This could allow an attacker to perform arbitrary actions on the device on behalf of a legitimate user, or impersonate that user.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\nhttps://www.siemens.com/gridsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-201498: Multiple Vulnerabilities in the Web Server of SICAM P850 and SICAM P855 Devices Before V3.11 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-201498.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-201498: Multiple Vulnerabilities in the Web Server of SICAM P850 and SICAM P855 Devices Before V3.11 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-201498.json"
+      }
+    ],
+    "title": "SSA-201498: Multiple Vulnerabilities in the Web Server of SICAM P850 and SICAM P855 Devices Before V3.11",
+    "tracking": {
+      "current_release_date": "2025-11-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-201498",
+      "initial_release_date": "2025-11-11T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8500-0AA00-0AA0)",
+                  "product_id": "1",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8500-0AA00-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8500-0AA00-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8500-0AA00-2AA0)",
+                  "product_id": "2",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8500-0AA00-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8500-0AA00-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8500-0AA10-0AA0)",
+                  "product_id": "3",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8500-0AA10-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8500-0AA10-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8500-0AA10-2AA0)",
+                  "product_id": "4",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8500-0AA10-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8500-0AA10-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8500-0AA30-0AA0)",
+                  "product_id": "5",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8500-0AA30-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8500-0AA30-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8500-0AA30-2AA0)",
+                  "product_id": "6",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8500-0AA30-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8500-0AA30-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA01-0AA0)",
+                  "product_id": "7",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA01-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA01-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA01-2AA0)",
+                  "product_id": "8",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA01-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA01-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA02-0AA0)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA02-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA02-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA02-2AA0)",
+                  "product_id": "10",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA02-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA02-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA11-0AA0)",
+                  "product_id": "11",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA11-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA11-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA11-2AA0)",
+                  "product_id": "12",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA11-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA11-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA12-0AA0)",
+                  "product_id": "13",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA12-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA12-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA12-2AA0)",
+                  "product_id": "14",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA12-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA12-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA31-0AA0)",
+                  "product_id": "15",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA31-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA31-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA31-2AA0)",
+                  "product_id": "16",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA31-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA31-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA32-0AA0)",
+                  "product_id": "17",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA32-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA32-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P850 (7KG8501-0AA32-2AA0)",
+                  "product_id": "18",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8501-0AA32-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P850 (7KG8501-0AA32-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8550-0AA00-0AA0)",
+                  "product_id": "19",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8550-0AA00-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8550-0AA00-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8550-0AA00-2AA0)",
+                  "product_id": "20",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8550-0AA00-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8550-0AA00-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8550-0AA10-0AA0)",
+                  "product_id": "21",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8550-0AA10-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8550-0AA10-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8550-0AA10-2AA0)",
+                  "product_id": "22",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8550-0AA10-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8550-0AA10-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8550-0AA30-0AA0)",
+                  "product_id": "23",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8550-0AA30-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8550-0AA30-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8550-0AA30-2AA0)",
+                  "product_id": "24",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8550-0AA30-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8550-0AA30-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA01-0AA0)",
+                  "product_id": "25",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA01-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA01-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA01-2AA0)",
+                  "product_id": "26",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA01-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA01-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA02-0AA0)",
+                  "product_id": "27",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA02-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA02-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA02-2AA0)",
+                  "product_id": "28",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA02-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA02-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA11-0AA0)",
+                  "product_id": "29",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA11-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA11-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA11-2AA0)",
+                  "product_id": "30",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA11-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA11-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA12-0AA0)",
+                  "product_id": "31",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA12-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA12-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA12-2AA0)",
+                  "product_id": "32",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA12-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA12-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA31-0AA0)",
+                  "product_id": "33",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA31-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA31-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA31-2AA0)",
+                  "product_id": "34",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA31-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA31-2AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA32-0AA0)",
+                  "product_id": "35",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA32-0AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA32-0AA0)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.11",
+                "product": {
+                  "name": "SICAM P855 (7KG8551-0AA32-2AA0)",
+                  "product_id": "36",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "7KG8551-0AA32-2AA0"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM P855 (7KG8551-0AA32-2AA0)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-30901",
+      "cwe": {
+        "id": "CWE-352",
+        "name": "Cross-Site Request Forgery (CSRF)"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The web interface of the affected devices are vulnerable to Cross-Site Request Forgery attacks. By tricking an authenticated victim user to click a malicious link, an attacker could perform arbitrary actions on the device on behalf of the victim user.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Do not access links from untrusted sources while logged in at affected devices",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.11 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109743594/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"
+          ]
+        }
+      ],
+      "title": "CVE-2023-30901"
+    },
+    {
+      "cve": "CVE-2023-31238",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices are missing cookie protection flags when using the default settings. An attacker who gains access to a session token can use it to impersonate a legitimate application user.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Restrict access to port 443/tcp to trusted IP addresses only",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.11 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109743594/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"
+          ]
+        }
+      ],
+      "title": "CVE-2023-31238"
+    }
+  ]
+}

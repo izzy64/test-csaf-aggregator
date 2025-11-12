@@ -1,0 +1,311 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Spectrum Power 4 before v4.70 SP12 Security Patch 2 contains multiple vulnerabilities that could allow an attacker to remotely execute code as application administrator or locally execute code as operating system administrator.\n\nSiemens has released a new version for Spectrum Power 4 and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design. Siemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. As a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-339694: Multiple Vulnerabilities in Spectrum Power 4 Before v4.70 SP12 Security Patch 2 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-339694.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-339694: Multiple Vulnerabilities in Spectrum Power 4 Before v4.70 SP12 Security Patch 2 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-339694.json"
+      }
+    ],
+    "title": "SSA-339694: Multiple Vulnerabilities in Spectrum Power 4 Before v4.70 SP12 Security Patch 2",
+    "tracking": {
+      "current_release_date": "2025-11-11T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-339694",
+      "initial_release_date": "2025-11-11T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-11-11T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.70 SP12 Update 2",
+                "product": {
+                  "name": "Spectrum Power 4",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Spectrum Power 4"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-32008",
+      "cwe": {
+        "id": "CWE-648",
+        "name": "Incorrect Use of Privileged APIs"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to a local privilege escalation due to an exposed debug interface on the localhost. This allows any local user to gain code execution as administrative application user.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.70 SP12 Update 2 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-32008"
+    },
+    {
+      "cve": "CVE-2024-32009",
+      "cwe": {
+        "id": "CWE-266",
+        "name": "Incorrect Privilege Assignment"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to a local privilege escalation due to wrongly set permissions to a binary which allows any local attacker to gain administrative privileges.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.70 SP12 Update 2 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-32009"
+    },
+    {
+      "cve": "CVE-2024-32010",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to extraction of database credentials via a world-readable credential file. This allows an attacker to connect to the database as privileged application user and to run system commands via the database.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.70 SP12 Update 2 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-32010"
+    },
+    {
+      "cve": "CVE-2024-32011",
+      "cwe": {
+        "id": "CWE-829",
+        "name": "Inclusion of Functionality from Untrusted Control Sphere"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to run arbitrary commands via the user interface. This user interface can be used via the network and allows the execution of commands as administrative application user.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.70 SP12 Update 2 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-32011"
+    },
+    {
+      "cve": "CVE-2024-32014",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application is vulnerable to alter the local database which contains the application credentials. This allows an attacker to gain administrative application privileges.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.70 SP12 Update 2 or later version",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-32014"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Stored Cross-Site Scripting (XSS) in Dashboards in Guardian/CMC before 25.4.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2025-40890"
+      ],
+      "current_release_date": "2025-11-25T11:00:00.000Z",
+      "id": "NN-2025:11-01",
+      "initial_release_date": "2025-11-25T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2025-11-25T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<25.4.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian <25.4.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "25.4.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian 25.4.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<25.4.0",
+                "product": {
+                  "name": "Nozomi Networks CMC <25.4.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "25.4.0",
+                "product": {
+                  "name": "Nozomi Networks CMC 25.4.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "organization": "ENCS",
+          "summary": "finding this issue during a VAPT testing session commissioned by one of our customers"
+        }
+      ],
+      "cve": "CVE-2025-40890",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "discovery_date": "2025-11-25T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2025:11-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored Cross-Site Scripting vulnerability was discovered in the Dashboards functionality due to improper validation of an input parameter.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-40890"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2025/nn-2025_11-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2025:11-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Use internal firewall features to limit access to the web management interface. Review all accounts with access to it and delete unnecessary ones.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v25.4.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.9,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "An authenticated low-privilege user can craft a malicious dashboard containing a JavaScript payload and share it with victim users, or a victim can be socially engineered to import a malicious dashboard template. When the victim views or imports the dashboard, the XSS executes in their browser context, allowing the attacker to perform unauthorized actions as the victim, such as modify application data, disrupt application availability, and access limited sensitive information."
+        }
+      ],
+      "title": "Stored Cross-Site Scripting (XSS) in Dashboards in Guardian/CMC before 25.4.0"
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "COMOS is affected by multiple vulnerabilities that could allow an attacker to execute arbitrary code or cause denial of service condition, data infiltration or perform access control violations. \n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-212953: Multiple Vulnerabilities in COMOS - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-212953.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-212953: Multiple Vulnerabilities in COMOS - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-212953.json"
+      }
+    ],
+    "title": "SSA-212953: Multiple Vulnerabilities in COMOS",
+    "tracking": {
+      "current_release_date": "2025-12-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-212953",
+      "initial_release_date": "2025-12-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-12-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<10.4.5",
+                "product": {
+                  "name": "COMOS V10.4",
+                  "product_id": "1"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<10.4.5",
+                "product": {
+                  "name": "COMOS V10.4",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "COMOS V10.4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "COMOS V10.4.5",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "COMOS V10.4.5"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<10.5.2",
+                "product": {
+                  "name": "COMOS V10.5",
+                  "product_id": "4"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<10.5.2",
+                "product": {
+                  "name": "COMOS V10.5",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "COMOS V10.5"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "COMOS V10.5.2",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "COMOS V10.5.2"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "COMOS V10.6",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "COMOS V10.6"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2024-11053",
+      "cwe": {
+        "id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "When asked to both use a `.netrc` file for credentials and to follow HTTP redirects, curl could leak the password used for the first host to the followed-to host under certain circumstances. This flaw only manifests itself if the netrc file has an entry that matches the redirect target hostname but the entry either omits just the password or omits both login and password.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "3",
+          "6",
+          "7"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "3",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "3",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2024-11053"
+    },
+    {
+      "cve": "CVE-2024-47875",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "DOMPurify is a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMpurify was vulnerable to nesting-based mXSS. This vulnerability is fixed in 2.5.0 and 3.1.3.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "5"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.4.5 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.5.2 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "5"
+          ]
+        }
+      ],
+      "title": "CVE-2024-47875"
+    },
+    {
+      "cve": "CVE-2025-2783",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Incorrect handle provided in unspecified circumstances in Mojo in Google Chrome on Windows prior to 134.0.6998.177 allowed a remote attacker to perform a sandbox escape via a malicious file.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2",
+          "4"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.4.5 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.5.2 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "2",
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2025-2783"
+    },
+    {
+      "cve": "CVE-2025-10148",
+      "cwe": {
+        "id": "CWE-340",
+        "name": "Generation of Predictable Numbers or Identifiers"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "curl's websocket code did not update the 32 bit mask pattern for each new\n outgoing frame as the specification says. Instead it used a fixed mask that\npersisted and was used throughout the entire connection.\n\nA predictable mask pattern allows for a malicious server to induce traffic\nbetween the two communicating parties that could be interpreted by an involved\nproxy (configured or transparent) as genuine, real, HTTP traffic with content\nand thereby poison its cache. That cached poisoned content could then be\nserved to all users of that proxy.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "3",
+          "6",
+          "7"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "3",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "3",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2025-10148"
+    },
+    {
+      "cve": "CVE-2025-40800",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The IAM client in affected products is missing server certificate validation while establishing TLS connections to the authorization server. This could allow an attacker to perform a man-in-the-middle attack.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "7"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "7"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40800"
+    },
+    {
+      "cve": "CVE-2025-40801",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The SALT SDK is missing server certificate validation while establishing TLS connections to the authorization server. This could allow an attacker to perform a man-in-the-middle attack.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "7"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "7"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40801"
+    }
+  ]
+}

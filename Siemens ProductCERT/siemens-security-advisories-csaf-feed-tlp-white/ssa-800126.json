@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-800126: Deserialization Vulnerability in Siemens Engineering Platforms before V20",
     "tracking": {
-      "current_release_date": "2025-08-12T00:00:00Z",
+      "current_release_date": "2025-12-09T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for Totally Integrated Automation Portal (TIA Portal) V19; Name of SIMOTION SCOUT TIA V5.6 SP1 was updated to SIMOTION SCOUT TIA V5.6 and Name of SIMOTION SCOUT TIA V5.5 SP1 was updated to SIMOTION SCOUT TIA V5.5; Removed entry for SIMOTION SCOUT TIA V5.4 SP1 as the product is renamed to SIMOTION SCOUT TIA V5.4 which is mentioned in TIA portal; Name of SIMOTION SCOUT TIA V5.4 SP3 was updated to SIMOTION SCOUT TIA V5.4"
+        },
+        {
+          "date": "2025-12-09T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for Totally Integrated Automation Portal (TIA Portal) V17"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -128,7 +134,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC STEP 7 Safety V17",
                   "product_id": "4"
@@ -184,7 +190,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC STEP 7 V17",
                   "product_id": "8"
@@ -240,7 +246,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC WinCC Unified V17",
                   "product_id": "12"
@@ -296,7 +302,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC WinCC V17",
                   "product_id": "16"
@@ -756,13 +762,9 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "4",
             "5",
-            "8",
             "9",
-            "12",
             "13",
-            "16",
             "17",
             "20",
             "21",
@@ -781,6 +783,17 @@
             "37",
             "38"
           ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 9 or later version",
+          "product_ids": [
+            "4",
+            "8",
+            "12",
+            "16"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109784441/"
         },
         {
           "category": "vendor_fix",

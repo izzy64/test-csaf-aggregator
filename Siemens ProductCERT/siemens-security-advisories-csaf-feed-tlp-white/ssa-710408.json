@@ -1,0 +1,320 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Multiple Siemens products are affected by improper certificate validation in Siemens Advanced Licensing (SALT) Toolkit. This could allow an unauthenticated remote attacker to perform man in the middle attacks.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends countermeasures for products where fixes are not, or not yet available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-710408: Missing Server Certificate Validation in Siemens Advanced Licensing (SALT) Toolkit - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-710408.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-710408: Missing Server Certificate Validation in Siemens Advanced Licensing (SALT) Toolkit - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-710408.json"
+      }
+    ],
+    "title": "SSA-710408: Missing Server Certificate Validation in Siemens Advanced Licensing (SALT) Toolkit",
+    "tracking": {
+      "current_release_date": "2025-12-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-710408",
+      "initial_release_date": "2025-12-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-12-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "COMOS V10.6",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "COMOS V10.6"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "JT Bi-Directional Translator for STEP",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "JT Bi-Directional Translator for STEP"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2412.8900",
+                "product": {
+                  "name": "NX V2412",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NX V2412"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2506.6000",
+                "product": {
+                  "name": "NX V2506",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NX V2506"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2506.6000",
+                "product": {
+                  "name": "Simcenter 3D",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter 3D"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2506.0002",
+                "product": {
+                  "name": "Simcenter Femap",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter Femap"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Simcenter Studio",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter Studio"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Simcenter System Architect",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter System Architect"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2504.0007",
+                "product": {
+                  "name": "Tecnomatix Plant Simulation",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Tecnomatix Plant Simulation"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-40801",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The SALT SDK is missing server certificate validation while establishing TLS connections to the authorization server. This could allow an attacker to perform a man-in-the-middle attack.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "none_available",
+          "details": "Currently no fix is available",
+          "product_ids": [
+            "1",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2412.8900 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.sw.siemens.com/product/209349590/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2504.0007 or later version",
+          "product_ids": [
+            "9"
+          ],
+          "url": "https://support.sw.siemens.com/product/297028302/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2506.0002 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.sw.siemens.com/product/275652363/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2506.6000 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.sw.siemens.com/product/289054037/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2506.6000 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.sw.siemens.com/product/209349590/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40801"
+    }
+  ]
+}

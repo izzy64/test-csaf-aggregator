@@ -1,0 +1,484 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Ruggedcom ROS devices contain a temporary denial of service vulnerability that could allow an attacker to crash and restart the device.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-763474: Denial of Service Vulnerability in Ruggedcom ROS devices before V5.10.1 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-763474.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-763474: Denial of Service Vulnerability in Ruggedcom ROS devices before V5.10.1 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-763474.json"
+      }
+    ],
+    "title": "SSA-763474: Denial of Service Vulnerability in Ruggedcom ROS devices before V5.10.1",
+    "tracking": {
+      "current_release_date": "2025-12-09T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-763474",
+      "initial_release_date": "2025-12-09T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2025-12-09T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RMC8388 V5.X",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RMC8388 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RS416Pv2 V5.X",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416Pv2 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RS416v2 V5.X",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS416v2 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RS900 (32M) V5.X",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS900 (32M) V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RS900G (32M) V5.X",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RS900G (32M) V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG2100 (32M) V5.X",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2100 (32M) V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG2100P (32M) V5.X",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2100P (32M) V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG2288 V5.X",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2288 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG2300 V5.X",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2300 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG2300P V5.X",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2300P V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG2488 V5.X",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG2488 V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG907R",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG907R"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG908C",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG908C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG909R",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG909R"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG910C",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG910C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSG920P V5.X",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSG920P V5.X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RSL910",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RSL910"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RST2228",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST2228"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RST2228P",
+                  "product_id": "19"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST2228P"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RST916C",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST916C"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<5.10.1",
+                "product": {
+                  "name": "RUGGEDCOM RST916P",
+                  "product_id": "21"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM RST916P"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-40935",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected devices do not properly validate input during the TLS certificate upload process of the web service. This could allow an authenticated remote attacker to trigger a device crash and reboot, leading to a temporary Denial of Service on the device.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V5.10.1 or later version",
+          "product_ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109997649/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40935"
+    }
+  ]
+}

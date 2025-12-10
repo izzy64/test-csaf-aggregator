@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "The openSSL component, versions 3.0.0 through 3.0.6, contains two buffer overflow vulnerabilities (CVE-2022-3602, CVE-2022-3786) in the X.509 certificate verification [0]. They could allow an attacker to create a denial of service condition or execute arbitrary code on a vulnerable TLS server (if the server requests client certificate authentication), or on a vulnerable TLS client.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens is preparing further updates and recommends specific countermeasures for products where updates are not, or not yet available.\n\n[0] \nhttps://www.openssl.org/news/secadv/20221101.txt",
+        "text": "The openSSL component, versions 3.0.0 through 3.0.6, contains two buffer overflow vulnerabilities (CVE-2022-3602, CVE-2022-3786) in the X.509 certificate verification [0]. They could allow an attacker to create a denial of service condition or execute arbitrary code on a vulnerable TLS server (if the server requests client certificate authentication), or on a vulnerable TLS client.\n\nSiemens has released updates for several affected products and recommends to update to the latest versions. Siemens is preparing further updates and recommends specific countermeasures for products where updates are not, or not yet available.\n\n[0] https://www.openssl.org/news/secadv/20221101.txt",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       }
     ],
@@ -47,21 +47,11 @@
         "category": "self",
         "summary": "SSA-408105: Buffer Overflow Vulnerabilities in OpenSSL 3.0 Affecting Siemens Products - CSAF Version",
         "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-408105.json"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-408105: Buffer Overflow Vulnerabilities in OpenSSL 3.0 Affecting Siemens Products - PDF Version",
-        "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-408105.pdf"
-      },
-      {
-        "category": "self",
-        "summary": "SSA-408105: Buffer Overflow Vulnerabilities in OpenSSL 3.0 Affecting Siemens Products - TXT Version",
-        "url": "https://cert-portal.siemens.com/productcert/txt/ssa-408105.txt"
       }
     ],
     "title": "SSA-408105: Buffer Overflow Vulnerabilities in OpenSSL 3.0 Affecting Siemens Products",
     "tracking": {
-      "current_release_date": "2023-07-11T00:00:00Z",
+      "current_release_date": "2025-12-09T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -88,10 +78,16 @@
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added fix for Mcenter (SINUMERIK Integrate) and for SIMATIC RTLS Locating Manager"
+        },
+        {
+          "date": "2025-12-09T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added fix for SCALANCE X-200RNA family"
         }
       ],
       "status": "interim",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -102,7 +98,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/>=V2022.4<V2023.1",
+                "name": "vers:intdot/>=2022.4|<2023.1",
                 "product": {
                   "name": "Calibre ICE",
                   "product_id": "1"
@@ -116,7 +112,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/>=V5.2.1<V5.3.0",
+                "name": "vers:intdot/>=5.2.1|<5.3.0",
                 "product": {
                   "name": "Mcenter",
                   "product_id": "2"
@@ -130,40 +126,35 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/>=V3.2.7",
+                "name": "vers:intdot/>=3.2.7|<3.2.8",
                 "product": {
-                  "name": "SCALANCE X-200RNA switch family",
+                  "name": "SCALANCE X-200RNA family",
                   "product_id": "3"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE X-200RNA switch family"
+            "name": "SCALANCE X-200RNA family"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/>=V1.80<V2.20",
+                "name": "vers:intdot/>=1.80|<2.20",
                 "product": {
-                  "name": "SICAM GridPass (6MD7711-2AA00-1EA0)",
-                  "product_id": "4",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6MD7711-2AA00-1EA0"
-                    ]
-                  }
+                  "name": "SICAM GridPass",
+                  "product_id": "4"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SICAM GridPass (6MD7711-2AA00-1EA0)"
+            "name": "SICAM GridPass"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/>=V2.13<V2.13.0.3",
+                "name": "vers:intdot/>=2.13.0.0|<2.13.0.3",
                 "product": {
                   "name": "SIMATIC RTLS Locating Manager",
                   "product_id": "5"
@@ -205,13 +196,16 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Siemens products that contain a vulnerable TLS server and have certificate-based client authentication enabled: do not configure trust for CA certificates, that contain a nameConstraint-extension (https://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
+          "details": "As a mitigation for vulnerable versions: Ensure that only trusted (CA) certificates are contained in the Machine Agent's truststore",
           "product_ids": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "As a mitigation for vulnerable versions: In the truststore, do not add CA certificates that contain a nameConstraint-extension (https://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
+          "product_ids": [
+            "4"
           ]
         },
         {
@@ -227,23 +221,13 @@
         },
         {
           "category": "mitigation",
-          "details": "As a mitigation for vulnerable versions: Ensure that only trusted (CA) certificates are contained in the Machine Agent's truststore",
+          "details": "Siemens products that contain a vulnerable TLS server and have certificate-based client authentication enabled: do not configure trust for CA certificates, that contain a nameConstraint-extension (https://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
           "product_ids": [
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "As a mitigation for vulnerable versions: In the truststore, do not add CA certificates that contain a nameConstraint-extension (\nhttps://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
-          "product_ids": [
-            "4"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "3"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
           ]
         },
         {
@@ -267,8 +251,15 @@
           "details": "Update to V2023.1 or later version",
           "product_ids": [
             "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.8 or later version",
+          "product_ids": [
+            "3"
           ],
-          "url": "https://support.sw.siemens.com/"
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109995126/"
         },
         {
           "category": "vendor_fix",
@@ -323,13 +314,16 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Siemens products that contain a vulnerable TLS server and have certificate-based client authentication enabled: do not configure trust for CA certificates, that contain a nameConstraint-extension (https://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
+          "details": "As a mitigation for vulnerable versions: Ensure that only trusted (CA) certificates are contained in the Machine Agent's truststore",
           "product_ids": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "As a mitigation for vulnerable versions: In the truststore, do not add CA certificates that contain a nameConstraint-extension (https://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
+          "product_ids": [
+            "4"
           ]
         },
         {
@@ -345,23 +339,13 @@
         },
         {
           "category": "mitigation",
-          "details": "As a mitigation for vulnerable versions: Ensure that only trusted (CA) certificates are contained in the Machine Agent's truststore",
+          "details": "Siemens products that contain a vulnerable TLS server and have certificate-based client authentication enabled: do not configure trust for CA certificates, that contain a nameConstraint-extension (https://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
           "product_ids": [
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "As a mitigation for vulnerable versions: In the truststore, do not add CA certificates that contain a nameConstraint-extension (\nhttps://www.rfc-editor.org/rfc/rfc5280#section-4.2.1.10) with punycode-encoded internationalized domain names",
-          "product_ids": [
-            "4"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "3"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
           ]
         },
         {
@@ -385,8 +369,15 @@
           "details": "Update to V2023.1 or later version",
           "product_ids": [
             "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2.8 or later version",
+          "product_ids": [
+            "3"
           ],
-          "url": "https://support.sw.siemens.com/"
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109995126/"
         },
         {
           "category": "vendor_fix",

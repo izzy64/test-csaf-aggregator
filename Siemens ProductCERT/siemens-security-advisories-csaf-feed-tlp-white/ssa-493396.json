@@ -51,7 +51,7 @@
     ],
     "title": "SSA-493396: Deserialization Vulnerability in Siemens Engineering Platforms",
     "tracking": {
-      "current_release_date": "2025-10-14T00:00:00Z",
+      "current_release_date": "2025-12-09T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for TIA Portal V20"
+        },
+        {
+          "date": "2025-12-09T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for Totally Integrated Automation Portal (TIA Portal) V17"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -100,7 +106,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC STEP 7 V17",
                   "product_id": "2"
@@ -156,7 +162,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC WinCC V17",
                   "product_id": "6"
@@ -652,9 +658,7 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "2",
             "3",
-            "6",
             "7",
             "10",
             "11",
@@ -678,6 +682,15 @@
             "30",
             "31"
           ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 9 or later version",
+          "product_ids": [
+            "2",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109784441/"
         },
         {
           "category": "vendor_fix",

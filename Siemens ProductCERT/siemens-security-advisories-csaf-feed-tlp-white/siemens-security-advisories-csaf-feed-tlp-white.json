@@ -9,6 +9,37 @@
     "entry": [
       {
         "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-512988.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-512988",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-512988.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-512988.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-512988.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2025-12-12T00:00:00Z",
+        "summary": {
+          "content": "Siemens Simcenter Femap versions before V2512 are affected by uninitialized memory vulnerability that could be triggered when the application reads files in SLDPRT format. If a user is tricked to open a malicious file with the affected application, an attacker could leverage the vulnerability to perform remote code execution in the context of the current process.\r\n\r\nSiemens has released a new version for Simcenter Femap and recommends to update to the latest version."
+        },
+        "title": "File Parsing Vulnerability in Simcenter Femap Before V2512",
+        "updated": "2025-12-12T00:00:00Z"
+      },
+      {
+        "content": {
           "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-202008.json",
           "type": "application/json"
         },
@@ -23483,6 +23514,6 @@
       }
     ],
     "title": "Siemens Security Advisories CSAF feed (TLP:WHITE)",
-    "updated": "2025-12-12T08:15:20.288528Z"
+    "updated": "2025-12-17T08:15:29.949320Z"
   }
 }

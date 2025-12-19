@@ -1,0 +1,199 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "MEDIUM"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Low",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "HTML injection in in Time Machine functionality in Guardian/CMC before 25.5.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2025-40891"
+      ],
+      "current_release_date": "2025-12-18T11:00:00.000Z",
+      "id": "NN-2025:12-01",
+      "initial_release_date": "2025-12-18T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2025-12-18T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<25.5.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian <25.5.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "25.5.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian 25.5.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<25.5.0",
+                "product": {
+                  "name": "Nozomi Networks CMC <25.5.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "25.5.0",
+                "product": {
+                  "name": "Nozomi Networks CMC 25.5.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Stefano Libero",
+            "Andrea Palanca"
+          ],
+          "organization": "Nozomi Networks Product Security team",
+          "summary": "finding this issue during an internal investigation"
+        }
+      ],
+      "cve": "CVE-2025-40891",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "discovery_date": "2025-12-18T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2025:12-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored HTML Injection vulnerability was discovered in the Time Machine Snapshot Diff functionality due to improper validation of network traffic data.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-40891"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2025/nn-2025_12-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2025:12-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "N/A",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade to v25.5.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "An unauthenticated attacker can send specially crafted network packets at two different times to inject HTML tags into asset attributes across two snapshots. Exploitation requires a victim to use the Time Machine Snapshot Diff feature on those specific snapshots and perform specific GUI actions, at which point the injected HTML renders in their browser, enabling phishing and open redirect attacks. Full XSS exploitation is prevented by input validation and Content Security Policy. Attack complexity is high due to multiple required conditions."
+        }
+      ],
+      "title": "HTML injection in in Time Machine functionality in Guardian/CMC before 25.5.0"
+    }
+  ]
+}

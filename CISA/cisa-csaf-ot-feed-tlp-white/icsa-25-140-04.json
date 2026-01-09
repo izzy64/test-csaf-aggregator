@@ -137,9 +137,9 @@
     ],
     "title": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric Products (Update C)",
     "tracking": {
-      "current_release_date": "2025-12-16T06:00:00.000000Z",
+      "current_release_date": "2026-01-08T06:00:00.000000Z",
       "generator": {
-        "date": "2025-12-15T15:43:02.211057Z",
+        "date": "2026-01-07T20:32:29.319161Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -167,10 +167,10 @@
           "summary": "Update B - Modified company name to \"Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric\" and added a statement from Mitsubishi regarding a patched version of GENESIS64 that is in development."
         },
         {
-          "date": "2025-12-16T06:00:00.000000Z",
+          "date": "2026-01-08T06:00:00.000000Z",
           "legacy_version": "Update C",
           "number": "4",
-          "summary": "Update C - Added GENESIS32 as an affected product, added GENESIS32 to the vulnerability description, and added relevant mitigations strategies for GENESIS32 as requested by Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric"
+          "summary": "Update C - Added BizViz and GENESIS32 as affected products, added GENESIS32 and BizViz to the vulnerability description, and added relevant mitigations strategies for GENESIS32 and BizViz as requested by Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric"
         }
       ],
       "status": "final",
@@ -187,8 +187,22 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric GENESIS32: vers:all/*",
+                  "name": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric BizViz: vers:all/*",
                   "product_id": "CSAFPID-0001"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "BizViz"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric GENESIS32: vers:all/*",
+                  "product_id": "CSAFPID-0002"
                 }
               }
             ],
@@ -202,7 +216,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric GENESIS64: vers:all/*",
-                  "product_id": "CSAFPID-0002"
+                  "product_id": "CSAFPID-0003"
                 }
               }
             ],
@@ -216,7 +230,7 @@
                 "name": "11.00",
                 "product": {
                   "name": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric GENESIS: 11.00",
-                  "product_id": "CSAFPID-0003"
+                  "product_id": "CSAFPID-0004"
                 }
               }
             ],
@@ -230,7 +244,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric MC Works64: vers:all/*",
-                  "product_id": "CSAFPID-0004"
+                  "product_id": "CSAFPID-0005"
                 }
               }
             ],
@@ -253,7 +267,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "An execution with unnecessary privileges vulnerability in the AlarmWorX64 MMX Pager agent and other services can provide the potential for information tampering. An attacker could make an unauthorized write to arbitrary files by creating a symbolic link from a file used as a write destination by GENESIS32, GENESIS64, GENESIS, and MC Works64 to a target file. This could allow the attacker to destroy the file on a PC with GENESIS32, GENESIS64, GENESIS, and MC Works64 installed, resulting in a denial-of-service (DoS) condition on the PC.",
+          "text": "An execution with unnecessary privileges vulnerability in the AlarmWorX64 MMX Pager agent and other services can provide the potential for information tampering. An attacker could make an unauthorized write to arbitrary files by creating a symbolic link from a file used as a write destination by BizViz, GENESIS32, GENESIS64, GENESIS, and MC Works64 to a target file. This could allow the attacker to destroy the file on a PC with BizViz, GENESIS32, GENESIS64, GENESIS, and MC Works64 installed, resulting in a denial-of-service (DoS) condition on the PC.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -262,7 +276,8 @@
           "CSAFPID-0001",
           "CSAFPID-0002",
           "CSAFPID-0003",
-          "CSAFPID-0004"
+          "CSAFPID-0004",
+          "CSAFPID-0005"
         ]
       },
       "references": [
@@ -290,14 +305,15 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "GENESIS: Versions 11.01 or later",
           "product_ids": [
-            "CSAFPID-0003"
+            "CSAFPID-0004"
           ]
         },
         {
@@ -307,7 +323,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         },
         {
@@ -317,21 +334,22 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "In GENESIS 11.00, do not enable the Classic OPC Point Manager service.",
           "product_ids": [
-            "CSAFPID-0003"
+            "CSAFPID-0004"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "In GENESIS 11.00, only the Classic OPC Point Manager is affected by this vulnerability. This service is disabled by default and should not be enabled to mitigate this vulnerability.",
           "product_ids": [
-            "CSAFPID-0003"
+            "CSAFPID-0004"
           ]
         },
         {
@@ -341,7 +359,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         },
         {
@@ -351,7 +370,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         },
         {
@@ -361,7 +381,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         },
         {
@@ -371,7 +392,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         },
         {
@@ -381,7 +403,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ],
           "url": "https://partners.iconics.com/Home.aspx"
         },
@@ -392,7 +415,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ],
           "url": "https://iconics.com/About/Security/CERT"
         },
@@ -403,7 +427,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ],
           "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2025-002_en.pdf"
         },
@@ -411,14 +436,15 @@
           "category": "vendor_fix",
           "details": "Mitsubishi Electric Iconics Digital Solutions is currently preparing a version of GENESIS64 that includes countermeasures for this vulnerability.",
           "product_ids": [
-            "CSAFPID-0002"
+            "CSAFPID-0003"
           ]
         },
         {
           "category": "vendor_fix",
-          "details": "For GENESIS32 users, there are no plans to release a security patch or a countermeasure version. Version 9 products are in the Retired Stage of the (Product Lifecycle Policy)[https://iconics.com/en-us/Lifecycle-Policy]. As described in the policy, these versions are no longer monitored for security vulnerabilities, nor are they being fixed or patched. Please see the Product Lifecycle Policy for full details.",
+          "details": "For GENESIS32 or BizViz users, there are no plans to release a security patch or a countermeasure version. Version 9 products are in the Retired Stage of the (Product Lifecycle Policy)[https://iconics.com/en-us/Lifecycle-Policy]. As described in the policy, these versions are no longer monitored for security vulnerabilities, nor are they being fixed or patched. Please see the Product Lifecycle Policy for full details.",
           "product_ids": [
-            "CSAFPID-0001"
+            "CSAFPID-0001",
+            "CSAFPID-0002"
           ],
           "url": "https://iconics.com/en-us/Lifecycle-Policy%5D"
         },
@@ -426,7 +452,7 @@
           "category": "vendor_fix",
           "details": "For the highest level of security, it is recommended that users use the Current Development version of Mitsubishi Electric Iconics Digital Solutions products as defined in (Product Lifecycle Policy)[https://iconics.com/en-us/Lifecycle-Policy] (GENESIS V11 at the time of this writing) and keep it up to date with the latest releases. Note, upgrading from V9 to V11 may require replacing some of the V9 applications, depending on which applications are being used, with different V11 applications.  Please consult Mitsubishi Electric Iconics Digital Solutions on the options for upgrades.",
           "product_ids": [
-            "CSAFPID-0003"
+            "CSAFPID-0004"
           ],
           "url": "https://iconics.com/en-us/Lifecycle-Policy%5D"
         }
@@ -443,7 +469,8 @@
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ]
         }
       ]

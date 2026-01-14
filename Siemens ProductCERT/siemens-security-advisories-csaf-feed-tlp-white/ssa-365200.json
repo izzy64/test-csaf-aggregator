@@ -51,7 +51,7 @@
     ],
     "title": "SSA-365200: Google Chrome Type Confusion Vulnerability in Siemens Products",
     "tracking": {
-      "current_release_date": "2025-10-14T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added remediation for HyperLynx"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,7 +86,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<2510.0001",
                 "product": {
                   "name": "HyperLynx",
                   "product_id": "1"
@@ -137,19 +143,20 @@
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "1"
-          ]
-        },
-        {
           "category": "vendor_fix",
           "details": "Update to V1.23.5 or later version",
           "product_ids": [
             "2"
           ],
           "url": "https://docs.eu1.edge.siemens.cloud/develop_an_application/ieap/download_the_ie_ap.html"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2510.0001 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.sw.siemens.com/product/861057060"
         }
       ],
       "scores": [

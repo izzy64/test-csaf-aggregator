@@ -51,7 +51,7 @@
     ],
     "title": "SSA-912274: Multiple Vulnerabilities in RUGGEDCOM ROX Before V2.17",
     "tracking": {
-      "current_release_date": "2025-12-09T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added Children from RUGGEDCOM ROX Family"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -82,13 +88,153 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<2.17.0",
                 "product": {
-                  "name": "RUGGEDCOM ROX II family",
+                  "name": "RUGGEDCOM ROX MX5000",
                   "product_id": "1"
                 }
               }
             ],
             "category": "product_name",
-            "name": "RUGGEDCOM ROX II family"
+            "name": "RUGGEDCOM ROX MX5000"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX MX5000RE",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX MX5000RE"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1400",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1400"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1500",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1500"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1501",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1501"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1510",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1510"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1511",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1511"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1512",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1512"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1524",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1524"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX1536",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX1536"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.17.0",
+                "product": {
+                  "name": "RUGGEDCOM ROX RX5000",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RUGGEDCOM ROX RX5000"
           }
         ],
         "category": "vendor",
@@ -112,7 +258,17 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
         ]
       },
       "remediations": [
@@ -120,7 +276,17 @@
           "category": "vendor_fix",
           "details": "Update to V2.17.0 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109997648/"
         }
@@ -134,7 +300,17 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ]
         }
       ],
@@ -155,7 +331,17 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
         ]
       },
       "remediations": [
@@ -163,7 +349,17 @@
           "category": "vendor_fix",
           "details": "Update to V2.17.0 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109997648/"
         }
@@ -177,7 +373,17 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ]
         }
       ],
@@ -198,7 +404,17 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
         ]
       },
       "remediations": [
@@ -206,7 +422,17 @@
           "category": "vendor_fix",
           "details": "Update to V2.17.0 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109997648/"
         }
@@ -220,7 +446,17 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ]
         }
       ],
@@ -241,7 +477,17 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
         ]
       },
       "remediations": [
@@ -249,7 +495,17 @@
           "category": "vendor_fix",
           "details": "Update to V2.17.0 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109997648/"
         }
@@ -263,7 +519,17 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ]
         }
       ],
@@ -284,7 +550,17 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
         ]
       },
       "remediations": [
@@ -292,7 +568,17 @@
           "category": "vendor_fix",
           "details": "Update to V2.17.0 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109997648/"
         }
@@ -306,7 +592,17 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ]
         }
       ],
@@ -327,7 +623,17 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
         ]
       },
       "remediations": [
@@ -335,7 +641,17 @@
           "category": "vendor_fix",
           "details": "Update to V2.17.0 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109997648/"
         }
@@ -349,7 +665,17 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
           ]
         }
       ],

@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-858251: Authentication Bypass Vulnerabilities in OPC UA",
     "tracking": {
-      "current_release_date": "2025-06-10T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for  SIMIT V11; Clarified that SIMATIC BRAUMAT and SIMATIC SISTAR are not affected by CVE-2024-42513"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Automatically generated entry"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -114,23 +120,57 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions >= V7.5 SP0 Update 0 < V7.5 SP0 Update 2",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC Energy Manager PRO",
+                  "name": "SIMATIC Energy Manager PRO V7.2",
                   "product_id": "3"
                 }
-              },
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Energy Manager PRO V7.2"
+          },
+          {
+            "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions >= V7.2 Update 6",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC Energy Manager PRO",
+                  "name": "SIMATIC Energy Manager PRO V7.3",
                   "product_id": "4"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SIMATIC Energy Manager PRO"
+            "name": "SIMATIC Energy Manager PRO V7.3"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions >= V7.4 Update 0 < V7.4 Update 7",
+                "product": {
+                  "name": "SIMATIC Energy Manager PRO V7.4",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Energy Manager PRO V7.4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions >= V7.5 Update 0 < V7.5 Update 2",
+                "product": {
+                  "name": "SIMATIC Energy Manager PRO V7.5",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIMATIC Energy Manager PRO V7.5"
           },
           {
             "branches": [
@@ -139,7 +179,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC IPC DiagMonitor",
-                  "product_id": "5"
+                  "product_id": "7"
                 }
               }
             ],
@@ -153,7 +193,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC SISTAR",
-                  "product_id": "6"
+                  "product_id": "8"
                 }
               }
             ],
@@ -167,7 +207,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC WinCC Unified V18",
-                  "product_id": "7"
+                  "product_id": "9"
                 }
               }
             ],
@@ -181,7 +221,7 @@
                 "name": "All versions < V19 Update 4",
                 "product": {
                   "name": "SIMATIC WinCC Unified V19",
-                  "product_id": "8"
+                  "product_id": "10"
                 }
               }
             ],
@@ -195,7 +235,7 @@
                 "name": "All versions < V8.0 Update 3",
                 "product": {
                   "name": "SIMATIC WinCC V8.0",
-                  "product_id": "9"
+                  "product_id": "11"
                 }
               }
             ],
@@ -206,10 +246,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V11.3",
+                "name": "vers:intdot/<11.3",
                 "product": {
                   "name": "SIMIT V11",
-                  "product_id": "10"
+                  "product_id": "12"
                 }
               }
             ],
@@ -240,14 +280,17 @@
         "known_affected": [
           "3",
           "4",
-          "10"
+          "5",
+          "6",
+          "12"
         ]
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "no_fix_planned",
+          "details": "Currently no fix is planned",
           "product_ids": [
+            "3",
             "4"
           ]
         },
@@ -255,17 +298,25 @@
           "category": "vendor_fix",
           "details": "Update to V11.3 or later version",
           "product_ids": [
-            "10"
+            "12"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109987184/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V7.5 SP0 Update 2 or later version",
+          "details": "Update to V7.4 Update 7 or later version",
           "product_ids": [
-            "3"
+            "5"
           ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109976966/"
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109997044/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.5 Update 2 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109996728/"
         }
       ],
       "scores": [
@@ -279,7 +330,9 @@
           "products": [
             "3",
             "4",
-            "10"
+            "5",
+            "6",
+            "12"
           ]
         }
       ],
@@ -293,11 +346,11 @@
       },
       "flags": [
         {
-          "group_ids": [
+          "label": "vulnerable_code_not_in_execute_path",
+          "product_ids": [
             "2",
-            "6"
-          ],
-          "label": "vulnerable_code_not_in_execute_path"
+            "8"
+          ]
         }
       ],
       "notes": [
@@ -313,53 +366,79 @@
           "3",
           "4",
           "5",
+          "6",
           "7",
-          "8",
-          "9"
+          "9",
+          "10",
+          "11"
         ],
         "known_not_affected": [
           "2",
-          "6"
+          "8"
         ]
       },
       "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Please note that the affected functionality (HTTPS endpoint in OPC UA Server) is deactivated by default in Unified RT. Systems running with default configuration are therefore not affected by this vulnerability.",
+          "product_ids": [
+            "9",
+            "10"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Please note that the affected functionality (HTTPS endpoint in OPC UA Server) is deactivated by default. Systems running with default configuration are therefore not affected by this vulnerability.",
+          "product_ids": [
+            "7"
+          ]
+        },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
             "1",
-            "5"
+            "3",
+            "4",
+            "7"
           ]
         },
         {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "4",
-            "7"
+            "9"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V19 Update 4 or later version",
           "product_ids": [
-            "8"
+            "10"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109925643/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V7.5 SP0 Update 2 or later version",
+          "details": "Update to V7.4 Update 7 or later version",
           "product_ids": [
-            "3"
+            "5"
           ],
-          "url": "https://support.industry.siemens.com/cs/ww/en/view/109976966/"
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109997044/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.5 Update 2 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109996728/"
         },
         {
           "category": "vendor_fix",
           "details": "Update to V8.0 Update 3 or later version",
           "product_ids": [
-            "9"
+            "11"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109818723/"
         }
@@ -377,9 +456,21 @@
             "3",
             "4",
             "5",
+            "6",
             "7",
-            "8",
-            "9"
+            "9",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "The product does not expose an HTTPS endpoint.",
+          "product_ids": [
+            "2",
+            "8"
           ]
         }
       ],

@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Palo Alto Networks has published [1] information on vulnerabilities in PAN-OS. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\n\nSiemens is preparing updates and recommends specific countermeasures for products where updates are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications.\n\n[1] \nhttps://security.paloaltonetworks.com/",
+        "text": "Palo Alto Networks has published [1] information on vulnerabilities in PAN-OS. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\n\nSiemens is preparing updates and recommends specific countermeasures for products where updates are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications.\n\n[1] https://security.paloaltonetworks.com/",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-364175: Multiple Vulnerabilities in Palo Alto Networks Virtual NGFW on RUGGEDCOM APE1808 Devices Before V11.1.4-h1",
     "tracking": {
-      "current_release_date": "2025-07-08T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -102,10 +102,16 @@
           "legacy_version": "1.6",
           "number": "7",
           "summary": "Added newly published CVE-2025-4231"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Added newly published CVE-2025-4619"
         }
       ],
       "status": "final",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -136,6 +142,14 @@
                 "product": {
                   "name": "RUGGEDCOM APE1808",
                   "product_id": "3"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "4"
                 }
               }
             ],
@@ -170,6 +184,13 @@
       "remediations": [
         {
           "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "mitigation",
           "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
           "product_ids": [
             "1"
@@ -178,13 +199,6 @@
         {
           "category": "mitigation",
           "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
-          "product_ids": [
-            "1"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "1"
           ]
@@ -233,6 +247,13 @@
       "remediations": [
         {
           "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
           "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
           "product_ids": [
             "2"
@@ -241,13 +262,6 @@
         {
           "category": "mitigation",
           "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
-          "product_ids": [
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "2"
           ]
@@ -296,6 +310,13 @@
       "remediations": [
         {
           "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
           "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
           "product_ids": [
             "2"
@@ -304,13 +325,6 @@
         {
           "category": "mitigation",
           "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
-          "product_ids": [
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "2"
           ]
@@ -359,6 +373,13 @@
       "remediations": [
         {
           "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
           "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
           "product_ids": [
             "2"
@@ -367,13 +388,6 @@
         {
           "category": "mitigation",
           "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
-          "product_ids": [
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "2"
           ]
@@ -422,6 +436,13 @@
       "remediations": [
         {
           "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
           "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
           "product_ids": [
             "2"
@@ -430,13 +451,6 @@
         {
           "category": "mitigation",
           "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
-          "product_ids": [
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "2"
           ]
@@ -485,6 +499,13 @@
       "remediations": [
         {
           "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "mitigation",
           "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
           "product_ids": [
             "2"
@@ -493,13 +514,6 @@
         {
           "category": "mitigation",
           "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
-          "product_ids": [
-            "2"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "2"
           ]
@@ -548,6 +562,13 @@
       "remediations": [
         {
           "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "3"
+          ]
+        },
+        {
+          "category": "mitigation",
           "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
           "product_ids": [
             "3"
@@ -556,13 +577,6 @@
         {
           "category": "mitigation",
           "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
-          "product_ids": [
-            "3"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "3"
           ]
@@ -611,7 +625,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Exposure can be reduced by limiting access to the management interface to trusted internal IP addresses as described in \nPalo Alto Networks' Security Advisory",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
           "product_ids": [
             "2"
           ]
@@ -625,14 +639,14 @@
         },
         {
           "category": "mitigation",
-          "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
+          "details": "Exposure can be reduced by limiting access to the management interface to trusted internal IP addresses as described in Palo Alto Networks' Security Advisory",
           "product_ids": [
             "2"
           ]
         },
         {
           "category": "mitigation",
-          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
           "product_ids": [
             "2"
           ]
@@ -659,6 +673,69 @@
         }
       ],
       "title": "CVE-2025-4231"
+    },
+    {
+      "cve": "CVE-2025-4619",
+      "cwe": {
+        "id": "CWE-754",
+        "name": "Improper Check for Unusual or Exceptional Conditions"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A denial-of-service (DoS) vulnerability in Palo Alto Networks PAN-OS software enables an unauthenticated attacker to reboot a firewall by sending a specially crafted packet through the dataplane. Repeated attempts to initiate a reboot causes the firewall to enter maintenance mode.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "4"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Con\ufb01gure the RADIUS server to require the presence of a Message-Authenticator attribute in all Access-Request packets from RADIUS client devices that support it",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Customers can resolve this issue by configuring the in-use SSH profile to contain at least one cipher and at least one MAC algorithm, which removes support for CHACHA20-POLY1305 and all Encrypt-then-MAC algorithms available (ciphers with -etm in the name) in PAN-OS software. See Palo Alto Networks' upstream documentation https://security.paloaltonetworks.com/CVE-2023-48795 for additional guidance.",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Restrict access to the networks where RADIUS messages are exchanged (e.g., send RADIUS traffic via management network or a dedicated VLAN)",
+          "product_ids": [
+            "4"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.1.4-h1. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "4"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "4"
+          ]
+        }
+      ],
+      "title": "CVE-2025-4619"
     }
   ]
 }

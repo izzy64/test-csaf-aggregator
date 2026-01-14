@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Siemens User Management Component (UMC) is affected by a heap-based buffer overflow vulnerability which could allow an unauthenticated remote attacker arbitrary code execution.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Siemens User Management Component (UMC) is affected by a heap-based buffer overflow vulnerability which could allow an unauthenticated remote attacker arbitrary code execution.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-928984: Heap-based Buffer Overflow Vulnerability in User Management Component (UMC)",
     "tracking": {
-      "current_release_date": "2025-06-10T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -84,10 +84,16 @@
           "legacy_version": "1.3",
           "number": "4",
           "summary": "Added fix for Opcenter Execution Foundation, Opcenter Intelligence and Opcenter RDnL"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.4",
+          "number": "5",
+          "summary": "Added fix for Opcenter Quality"
         }
       ],
       "status": "interim",
-      "version": "4"
+      "version": "5"
     }
   },
   "product_tree": {
@@ -98,10 +104,24 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V2501.0001",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo ABT",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo ABT"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2501.0001",
                 "product": {
                   "name": "Opcenter Execution Foundation",
-                  "product_id": "1"
+                  "product_id": "2"
                 }
               }
             ],
@@ -112,10 +132,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V2501.0001",
+                "name": "vers:intdot/<2501.0001",
                 "product": {
                   "name": "Opcenter Intelligence",
-                  "product_id": "2"
+                  "product_id": "3"
                 }
               }
             ],
@@ -126,10 +146,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<2512",
                 "product": {
                   "name": "Opcenter Quality",
-                  "product_id": "3"
+                  "product_id": "4"
                 }
               }
             ],
@@ -140,10 +160,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V2410",
+                "name": "vers:intdot/<2410",
                 "product": {
                   "name": "Opcenter RDnL",
-                  "product_id": "4"
+                  "product_id": "5"
                 }
               }
             ],
@@ -157,7 +177,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC PCS neo V4.0",
-                  "product_id": "5"
+                  "product_id": "6"
                 }
               }
             ],
@@ -171,7 +191,7 @@
                 "name": "All versions < V4.1 Update 3",
                 "product": {
                   "name": "SIMATIC PCS neo V4.1",
-                  "product_id": "6"
+                  "product_id": "7"
                 }
               }
             ],
@@ -185,7 +205,7 @@
                 "name": "All versions < V5.0 Update 1",
                 "product": {
                   "name": "SIMATIC PCS neo V5.0",
-                  "product_id": "7"
+                  "product_id": "8"
                 }
               }
             ],
@@ -199,7 +219,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SINEC NMS",
-                  "product_id": "8"
+                  "product_id": "9"
                 }
               }
             ],
@@ -213,7 +233,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V16",
-                  "product_id": "9"
+                  "product_id": "10"
                 }
               }
             ],
@@ -227,7 +247,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V17",
-                  "product_id": "10"
+                  "product_id": "11"
                 }
               }
             ],
@@ -241,7 +261,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V18",
-                  "product_id": "11"
+                  "product_id": "12"
                 }
               }
             ],
@@ -255,7 +275,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "Totally Integrated Automation Portal (TIA Portal) V19",
-                  "product_id": "12"
+                  "product_id": "13"
                 }
               }
             ],
@@ -275,6 +295,14 @@
         "id": "CWE-122",
         "name": "Heap-based Buffer Overflow"
       },
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
       "notes": [
         {
           "category": "summary",
@@ -284,7 +312,6 @@
       ],
       "product_status": {
         "known_affected": [
-          "1",
           "2",
           "3",
           "4",
@@ -295,7 +322,11 @@
           "9",
           "10",
           "11",
-          "12"
+          "12",
+          "13"
+        ],
+        "known_not_affected": [
+          "1"
         ]
       },
       "remediations": [
@@ -303,7 +334,6 @@
           "category": "mitigation",
           "details": "Filter the ports 4002 and 4004 to only accept connections to/from the IP addresses of machines that run UMC and are part of the UMC network e.g. with an external firewall",
           "product_ids": [
-            "1",
             "2",
             "3",
             "4",
@@ -314,14 +344,14 @@
             "9",
             "10",
             "11",
-            "12"
+            "12",
+            "13"
           ]
         },
         {
           "category": "mitigation",
           "details": "In addition if no RT server machines are used, port 4004 can be blocked completely",
           "product_ids": [
-            "1",
             "2",
             "3",
             "4",
@@ -332,29 +362,23 @@
             "9",
             "10",
             "11",
-            "12"
+            "12",
+            "13"
           ]
         },
         {
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
-            "5",
-            "9"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "3"
+            "6",
+            "10"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V2410 or later version",
           "product_ids": [
-            "4"
+            "5"
           ],
           "url": "https://support.sw.siemens.com/product/297341591/"
         },
@@ -362,7 +386,7 @@
           "category": "vendor_fix",
           "details": "Update to V2501.0001 or later version",
           "product_ids": [
-            "1"
+            "2"
           ],
           "url": "https://support.sw.siemens.com/product/219646572/"
         },
@@ -370,15 +394,23 @@
           "category": "vendor_fix",
           "details": "Update to V2501.0001 or later version",
           "product_ids": [
-            "2"
+            "3"
           ],
           "url": "https://support.sw.siemens.com/product/287414453/"
         },
         {
           "category": "vendor_fix",
+          "details": "Update to V2512 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.sw.siemens.com/product/249261320"
+        },
+        {
+          "category": "vendor_fix",
           "details": "Update to V4.1 Update 3 or later version",
           "product_ids": [
-            "6"
+            "7"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109978820/"
         },
@@ -386,18 +418,18 @@
           "category": "vendor_fix",
           "details": "Update to V5.0 Update 1 or later version",
           "product_ids": [
-            "7"
+            "8"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109977244/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update UMC to V2.15.1.1 or later compatible version \nhttps://support.industry.siemens.com/cs/ww/en/view/109987708/",
+          "details": "Update UMC to V2.15.1.1 or later compatible version https://support.industry.siemens.com/cs/ww/en/view/109987708/",
           "product_ids": [
-            "8",
-            "10",
+            "9",
             "11",
-            "12"
+            "12",
+            "13"
           ]
         }
       ],
@@ -410,7 +442,6 @@
             "version": "3.1"
           },
           "products": [
-            "1",
             "2",
             "3",
             "4",
@@ -421,7 +452,17 @@
             "9",
             "10",
             "11",
-            "12"
+            "12",
+            "13"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "While TIA Portal is included as part of the ABT Site installation, neither ABT itself nor the incorporated TIA version uses or installs the affected User Management Component (UMC). As a result, any standalone ABT installation remains unaffected by this issue.",
+          "product_ids": [
+            "1"
           ]
         }
       ],

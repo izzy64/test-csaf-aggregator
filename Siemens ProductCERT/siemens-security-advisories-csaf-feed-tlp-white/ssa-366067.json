@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Fortinet has published information on vulnerabilities in FORTIOS. This advisory lists the related Siemens Industrial products.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-366067: Multiple Vulnerabilities in Fortigate NGFW Before V7.4.1 on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-09-09T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -102,10 +102,16 @@
           "legacy_version": "1.6",
           "number": "7",
           "summary": "Added CVE-2023-45584 and CVE-2024-26009"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Added CVE-2025-62631"
         }
       ],
       "status": "final",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -784,7 +790,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Disable HTTP/HTTPS administrative interface OR Limit IP addresses that can reach the administrative interface (see \nhttps://www.fortiguard.com/psirt/FG-IR-23-001)",
+          "details": "Disable HTTP/HTTPS administrative interface OR Limit IP addresses that can reach the administrative interface (see https://www.fortiguard.com/psirt/FG-IR-23-001)",
           "product_ids": [
             "1"
           ]
@@ -1421,7 +1427,7 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Disable HTTP/2 support on SSL inspection profiles used by proxy policies or firewall policies with proxy mode (see \nhttps://www.fortiguard.com/psirt/FG-IR-23-183)",
+          "details": "Disable HTTP/2 support on SSL inspection profiles used by proxy policies or firewall policies with proxy mode (see https://www.fortiguard.com/psirt/FG-IR-23-183)",
           "product_ids": [
             "1"
           ]
@@ -1910,6 +1916,48 @@
         }
       ],
       "title": "CVE-2025-47294"
+    },
+    {
+      "cve": "CVE-2025-62631",
+      "cwe": {
+        "id": "CWE-613",
+        "name": "Insufficient Session Expiration"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An insufficient session expiration vulnerability [CWE-613] in Fortinet FortiOS 7.4.0, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions allows attacker to maintain access to network resources via an active SSLVPN session not terminated after a user's password change under particular conditions outside of the attacker's control",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.1. Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-62631"
     }
   ]
 }

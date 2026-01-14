@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-201595: Privilege Escalation Vulnerability in WIBU CodeMeter Runtime Affecting the Desigo CC Product Family and SENTRON Powermanager",
     "tracking": {
-      "current_release_date": "2025-08-19T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Clarified that updating WIBU CodeMeter to a later version than V8.30a (currently available: V8.40) will also fix the issue"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added the fix version for Desigo CC V8.0"
         }
       ],
-      "status": "final",
-      "version": "2"
+      "status": "interim",
+      "version": "3"
     }
   },
   "product_tree": {
@@ -142,7 +148,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V8.0 QU2",
                 "product": {
                   "name": "Desigo CC family V8",
                   "product_id": "5"
@@ -244,13 +250,20 @@
       "remediations": [
         {
           "category": "vendor_fix",
+          "details": "Update to V8.0 QU2 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109997962/"
+        },
+        {
+          "category": "vendor_fix",
           "details": "Apply patch as documented in section 'Additional Information'",
           "product_ids": [
             "1",
             "2",
             "3",
             "4",
-            "5",
             "6",
             "7",
             "8",

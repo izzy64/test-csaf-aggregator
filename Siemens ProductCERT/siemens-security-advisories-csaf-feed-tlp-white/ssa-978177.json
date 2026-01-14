@@ -51,7 +51,7 @@
     ],
     "title": "SSA-978177: Vulnerability in Nozomi Guardian/CMC Before 25.4.0 on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-11-17T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -78,10 +78,16 @@
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added remediation for RUGGEDCOM APE1808"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added CVE-2025-40890"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -598,6 +604,55 @@
         }
       ],
       "title": "CVE-2025-40889"
+    },
+    {
+      "cve": "CVE-2025-40890",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored Cross-Site Scripting vulnerability was discovered in the Dashboards functionality due to improper validation of an input parameter.\n\n\n\nAn authenticated low-privilege user can craft a malicious dashboard containing a JavaScript payload and share it with victim users, or a victim can be socially engineered to import a malicious dashboard template. When the victim views or imports the dashboard, the XSS executes in their browser context, allowing the attacker to perform unauthorized actions as the victim, such as modify application data, disrupt application availability, and access limited sensitive information.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Use internal firewall features to limit access to the web management interface. Review all accounts with access to it and delete unnecessary ones",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Nozomi Guardian / CMC to V25.4.0. Using Web GUI might have errors and it is recommended to use the CLI for the upgrade. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.9,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40890"
     }
   ]
 }

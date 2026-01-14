@@ -51,7 +51,7 @@
     ],
     "title": "SSA-832273: Multiple Vulnerabilities in Fortigate NGFW Before V7.4.3 on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-11-11T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -126,10 +126,16 @@
           "legacy_version": "2.0",
           "number": "11",
           "summary": "Added CVE-2025-54822 and CVE-2023-46718"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "2.1",
+          "number": "12",
+          "summary": "Added CVE-2024-40593"
         }
       ],
       "status": "final",
-      "version": "11"
+      "version": "12"
     }
   },
   "product_tree": {
@@ -1369,6 +1375,48 @@
         }
       ],
       "title": "CVE-2024-26011"
+    },
+    {
+      "cve": "CVE-2024-40593",
+      "cwe": {
+        "id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A key management errors vulnerability in Fortinet FortiAnalyzer 7.4.0 through 7.4.2, FortiAnalyzer 7.2.0 through 7.2.5, FortiAnalyzer 7.0 all versions, FortiAnalyzer 6.4 all versions, FortiManager 7.4.0 through 7.4.2, FortiManager 7.2.0 through 7.2.5, FortiManager 7.0 all versions, FortiManager 6.4 all versions, FortiOS 7.6.0, FortiOS 7.4.4, FortiOS 7.2.7, FortiOS 7.0.14, FortiPortal 6.0 all versions may allow an authenticated admin to retrieve a certificate's private key via the device's admin shell.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.3. Contact customer support to receive patch and update information.",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.0,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2024-40593"
     },
     {
       "cve": "CVE-2025-54822",

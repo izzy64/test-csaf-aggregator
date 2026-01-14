@@ -51,7 +51,7 @@
     ],
     "title": "SSA-282044: DLL Hijacking Vulnerability in Siemens Web Installer used by the Online Software Delivery",
     "tracking": {
-      "current_release_date": "2025-12-09T00:00:00Z",
+      "current_release_date": "2026-01-13T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -90,10 +90,16 @@
           "legacy_version": "1.4",
           "number": "5",
           "summary": "Added fixes for TIA Project-Server, TIA Portal Cloud Connector, SIMATIC MTP CREATOR V5.x, SIMATIC S7-1500 Software Controller V3, Simatic Prosave, TIA Portal V20, V19, and V17 and updated Energy suite V17 and V18, SIMATIC S7-1500 Software Controller V2 with no fix planned"
+        },
+        {
+          "date": "2026-01-13T00:00:00Z",
+          "legacy_version": "1.5",
+          "number": "6",
+          "summary": "Added fixes for WinCC Panel Image Setup, SIMATIC WinCC Runtime Advanced, SIMATIC WinCC Runtime Professional, SIMATIC WinCC Visualization Architect (SiVArc) V17, SIMATIC Process Historian 2024, SIMATIC PCS 7 Basis Library V10.0, SIMATIC Logon V2.0, SIMATIC PDM V9.3, and MultiFieldbus Configuration Tool (MFCT); Clarified that no fix is planned for TIA Project-Server V17"
         }
       ],
       "status": "interim",
-      "version": "5"
+      "version": "6"
     }
   },
   "product_tree": {
@@ -216,7 +222,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<1.5.5.0",
                 "product": {
                   "name": "MultiFieldbus Configuration Tool\u00a0(MFCT)",
                   "product_id": "9"
@@ -520,7 +526,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V2.0 Upd3",
                 "product": {
                   "name": "SIMATIC Logon V2.0",
                   "product_id": "30"
@@ -842,7 +848,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V10.0 SP1 Upd2",
                 "product": {
                   "name": "SIMATIC PCS 7 Basis Library V10.0",
                   "product_id": "53"
@@ -1108,7 +1114,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V9.3 SP1 Upd2",
                 "product": {
                   "name": "SIMATIC PDM V9.3",
                   "product_id": "72"
@@ -1164,7 +1170,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V2024 SP1 Upd2",
                 "product": {
                   "name": "SIMATIC Process Historian 2024",
                   "product_id": "76"
@@ -1500,7 +1506,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC WinCC Runtime Advanced",
                   "product_id": "100"
@@ -1514,7 +1520,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<21",
                 "product": {
                   "name": "SIMATIC WinCC Runtime Professional",
                   "product_id": "101"
@@ -1668,7 +1674,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "SIMATIC WinCC Visualization Architect (SiVArc) V17",
                   "product_id": "112"
@@ -2046,7 +2052,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V17 Update 9",
                 "product": {
                   "name": "WinCC Panel Image Setup",
                   "product_id": "139"
@@ -2533,7 +2539,8 @@
             "96",
             "99",
             "129",
-            "130"
+            "130",
+            "134"
           ]
         },
         {
@@ -2544,7 +2551,6 @@
             "5",
             "7",
             "8",
-            "9",
             "10",
             "11",
             "12",
@@ -2558,7 +2564,6 @@
             "25",
             "26",
             "27",
-            "30",
             "37",
             "38",
             "39",
@@ -2571,7 +2576,6 @@
             "48",
             "49",
             "50",
-            "53",
             "55",
             "57",
             "58",
@@ -2583,9 +2587,7 @@
             "67",
             "70",
             "71",
-            "72",
             "75",
-            "76",
             "80",
             "81",
             "82",
@@ -2596,8 +2598,6 @@
             "94",
             "97",
             "98",
-            "100",
-            "101",
             "102",
             "103",
             "105",
@@ -2605,7 +2605,6 @@
             "107",
             "109",
             "110",
-            "112",
             "113",
             "116",
             "117",
@@ -2616,10 +2615,16 @@
             "123",
             "124",
             "125",
-            "134",
-            "136",
-            "139"
+            "136"
           ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.5.5.0 or later version",
+          "product_ids": [
+            "9"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109773881/"
         },
         {
           "category": "vendor_fix",
@@ -2628,6 +2633,38 @@
             "65"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109983445/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V10.0 SP1 Upd2 or later version",
+          "product_ids": [
+            "53"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109983445/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 9 or later version",
+          "product_ids": [
+            "139"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109825750/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 9 or later version",
+          "product_ids": [
+            "100"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109800912/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V17 Update 9 or later version",
+          "product_ids": [
+            "112"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109792356/"
         },
         {
           "category": "vendor_fix",
@@ -2656,6 +2693,14 @@
             "137"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109947027/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.0 Upd3 or later version",
+          "product_ids": [
+            "30"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109983445/"
         },
         {
           "category": "vendor_fix",
@@ -2729,6 +2774,22 @@
             "43"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109987675/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2024 SP1 Upd2 or later version",
+          "product_ids": [
+            "76"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109983445/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V21 or later version",
+          "product_ids": [
+            "101"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109991139/"
         },
         {
           "category": "vendor_fix",
@@ -2905,6 +2966,14 @@
             "54"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109812242/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V9.3 SP1 Upd2 or later version",
+          "product_ids": [
+            "72"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109983445/"
         }
       ],
       "scores": [

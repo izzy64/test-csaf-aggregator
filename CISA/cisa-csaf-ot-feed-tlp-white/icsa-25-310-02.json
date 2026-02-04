@@ -5,7 +5,7 @@
         "names": [
           "Milos C"
         ],
-        "summary": "reporting this vulnerability to CISA"
+        "summary": "reported this vulnerability to CISA"
       }
     ],
     "category": "csaf_security_advisory",
@@ -158,11 +158,11 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "Ubia Ubox",
+    "title": "Ubia Ubox (Update A)",
     "tracking": {
-      "current_release_date": "2025-11-06T07:00:00.000000Z",
+      "current_release_date": "2026-02-03T07:00:00.000000Z",
       "generator": {
-        "date": "2025-11-06T17:37:24.146019Z",
+        "date": "2026-02-02T23:02:18.172902Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -176,10 +176,16 @@
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
+        },
+        {
+          "date": "2026-02-03T07:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - Update to affected products and mitigations."
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -189,16 +195,30 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "v1.1.124",
+                "category": "product_version_range",
+                "name": "<January_15_2026",
                 "product": {
-                  "name": "Ubia Ubox: v1.1.124",
+                  "name": "Ubia Ubox Android: <January_15_2026",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Ubox"
+            "name": "Ubox Android"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<January_15_2026",
+                "product": {
+                  "name": "Ubia Ubox IOS: <January_15_2026",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Ubox IOS"
           }
         ],
         "category": "vendor",
@@ -222,10 +242,16 @@
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001"
+          "CSAFPID-0001",
+          "CSAFPID-0002"
         ]
       },
       "references": [
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/522.html"
+        },
         {
           "category": "external",
           "summary": "www.cve.org",
@@ -245,11 +271,33 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Ubia did not respond to CISA's attempts to coordinate. Users of Ubia Cameras are encouraged to reach out out to Ubia for more information.",
+          "details": "Ubia reports that the vulnerability has been resolved through a backend fix, and no user action is required to apply the patch.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "However, users running older versions of the application may experience reduced functionality. To ensure full compatibility, Ubia recommends updating to at least the following versions or newer:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Ubox Android: Version 1.1.306",
           "product_ids": [
             "CSAFPID-0001"
-          ],
-          "url": "mailto:support@ubianet.com"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Ubox IOS: Version 1.1.90",
+          "product_ids": [
+            "CSAFPID-0002"
+          ]
         }
       ],
       "scores": [
@@ -261,7 +309,8 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001"
+            "CSAFPID-0001",
+            "CSAFPID-0002"
           ]
         }
       ]

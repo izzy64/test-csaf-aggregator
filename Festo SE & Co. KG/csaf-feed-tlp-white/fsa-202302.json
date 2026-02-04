@@ -41,15 +41,15 @@
       },
       {
         "category": "legal_disclaimer",
-        "title": "Disclaimer",
-        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\\n\\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\\n\\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply."
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\\n\\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\\n\\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply.",
+        "title": "Disclaimer"
       }
     ],
     "publisher": {
       "category": "vendor",
       "contact_details": "psirt@festo.com",
       "name": "Festo SE & Co. KG",
-      "namespace": "https://festo.com"
+      "namespace": "https://www.festo.com"
     },
     "references": [
       {
@@ -78,12 +78,12 @@
       "aliases": [
         "VDE-2023-013"
       ],
-      "current_release_date": "2025-11-04T11:00:00.000Z",
+      "current_release_date": "2026-02-02T08:00:00.000Z",
       "generator": {
-        "date": "2025-11-04T15:15:47.946Z",
+        "date": "2026-02-02T08:11:43.687Z",
         "engine": {
           "name": "Secvisogram",
-          "version": "2.5.38"
+          "version": "2.5.42"
         }
       },
       "id": "FSA-202302",
@@ -95,18 +95,23 @@
           "summary": "Initial revision."
         },
         {
-          "number": "1.0.1",
           "date": "2024-01-11T10:00:00.000Z",
+          "number": "1.0.1",
           "summary": "Adjust link to VDE Advisory."
         },
         {
-          "summary": "Adjusted to VDE template. Changed title from \"Several Vulnerabilities in FactoryViews <= 1.5.2\" to \"Festo: Several vulnerabilities in FactoryViews\". Updated legal disclaimer to add references to special provisions. Included remediation for FactoryViews Lite",
+          "date": "2025-07-31T10:00:00.000Z",
           "number": "1.0.2",
-          "date": "2025-11-04T11:00:00.000Z"
+          "summary": "Adjusted to VDE template. Changed title from \"Several Vulnerabilities in FactoryViews <= 1.5.2\" to \"Festo: Several vulnerabilities in FactoryViews\". Updated legal disclaimer to add references to special provisions. Included remediation for FactoryViews Lite"
+        },
+        {
+          "date": "2026-02-02T08:00:00.000Z",
+          "number": "1.0.3",
+          "summary": "Added missing CWE values"
         }
       ],
       "status": "final",
-      "version": "1.0.2"
+      "version": "1.0.3"
     }
   },
   "product_tree": {
@@ -119,7 +124,7 @@
                 "branches": [
                   {
                     "category": "product_version_range",
-                    "name": "<1.6.0",
+                    "name": "vers:semver/<1.6.0",
                     "product": {
                       "name": "FactoryViews <1.6.0",
                       "product_id": "CSAFPID-51001"
@@ -130,15 +135,21 @@
                     "name": "1.6.0",
                     "product": {
                       "name": "FactoryViews 1.6.0",
-                      "product_id": "CSAFPID-52001"
+                      "product_id": "CSAFPID-52001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:a:festo:factory_views_software:1.6.0:*:*:*:*:*:*:*"
+                      }
                     }
                   },
                   {
-                    "name": "1.7.0",
                     "category": "product_version",
+                    "name": "1.7.0",
                     "product": {
+                      "name": "FactoryViews 1.7.0",
                       "product_id": "CSAFPID-52002",
-                      "name": "FactoryViews 1.7.0"
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:a:festo:factory_views_software:1.7.0:*:*:*:*:*:*:*"
+                      }
                     }
                   }
                 ],
@@ -149,7 +160,7 @@
                 "branches": [
                   {
                     "category": "product_version_range",
-                    "name": "<=1.1",
+                    "name": "vers:generic/<=1.1",
                     "product": {
                       "name": "FactoryViews Lite <=1.1",
                       "product_id": "CSAFPID-51002"
@@ -190,6 +201,10 @@
   "vulnerabilities": [
     {
       "cve": "CVE-2021-35604",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -210,7 +225,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -270,7 +285,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -330,7 +345,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -390,7 +405,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -450,7 +465,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -510,7 +525,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -570,7 +585,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -630,7 +645,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -690,7 +705,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -726,6 +741,10 @@
     },
     {
       "cve": "CVE-2021-46661",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -746,7 +765,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -782,6 +801,10 @@
     },
     {
       "cve": "CVE-2021-46662",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -802,7 +825,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -838,6 +861,10 @@
     },
     {
       "cve": "CVE-2021-46663",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -858,7 +885,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -918,7 +945,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -954,6 +981,10 @@
     },
     {
       "cve": "CVE-2021-46665",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -974,7 +1005,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1034,7 +1065,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1094,7 +1125,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1154,7 +1185,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1214,7 +1245,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1274,7 +1305,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1334,7 +1365,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1394,7 +1425,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1454,7 +1485,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1514,7 +1545,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1574,7 +1605,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1634,7 +1665,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1670,6 +1701,10 @@
     },
     {
       "cve": "CVE-2022-21595",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -1690,7 +1725,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1750,7 +1785,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1810,7 +1845,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1870,7 +1905,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1930,7 +1965,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -1990,7 +2025,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2050,7 +2085,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2110,7 +2145,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2170,7 +2205,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2230,7 +2265,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2290,7 +2325,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2350,7 +2385,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2410,7 +2445,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2470,7 +2505,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2530,7 +2565,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2590,7 +2625,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2650,7 +2685,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2710,7 +2745,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2746,6 +2781,10 @@
     },
     {
       "cve": "CVE-2019-9637",
+      "cwe": {
+        "id": "CWE-732",
+        "name": "Incorrect Permission Assignment for Critical Resource"
+      },
       "notes": [
         {
           "category": "description",
@@ -2766,7 +2805,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2826,7 +2865,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2886,7 +2925,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -2946,7 +2985,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3006,7 +3045,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3066,7 +3105,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3126,7 +3165,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3186,7 +3225,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3246,7 +3285,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3306,7 +3345,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3366,7 +3405,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3426,7 +3465,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3486,7 +3525,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3522,6 +3561,10 @@
     },
     {
       "cve": "CVE-2022-27444",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -3542,7 +3585,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3602,7 +3645,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3638,6 +3681,10 @@
     },
     {
       "cve": "CVE-2022-27445",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -3658,7 +3705,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3718,7 +3765,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3754,6 +3801,10 @@
     },
     {
       "cve": "CVE-2022-27446",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -3774,7 +3825,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3834,7 +3885,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3894,7 +3945,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -3954,7 +4005,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4014,7 +4065,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4074,7 +4125,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4110,6 +4161,10 @@
     },
     {
       "cve": "CVE-2022-27449",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
       "notes": [
         {
           "category": "description",
@@ -4130,7 +4185,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4190,7 +4245,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4226,6 +4281,10 @@
     },
     {
       "cve": "CVE-2022-27451",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -4246,7 +4305,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4306,7 +4365,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4342,6 +4401,10 @@
     },
     {
       "cve": "CVE-2022-27452",
+      "cwe": {
+        "id": "CWE-617",
+        "name": "Reachable Assertion"
+      },
       "notes": [
         {
           "category": "description",
@@ -4362,7 +4425,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4422,7 +4485,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4482,7 +4545,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4542,7 +4605,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4602,7 +4665,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4662,7 +4725,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4722,7 +4785,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4782,7 +4845,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4842,7 +4905,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4902,7 +4965,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -4962,7 +5025,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5022,7 +5085,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5082,7 +5145,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5142,7 +5205,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5202,7 +5265,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5262,7 +5325,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5322,7 +5385,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5382,7 +5445,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5442,7 +5505,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5502,7 +5565,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5562,7 +5625,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5622,7 +5685,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5682,7 +5745,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5718,6 +5781,10 @@
     },
     {
       "cve": "CVE-2022-32083",
+      "cwe": {
+        "id": "CWE-229",
+        "name": "Improper Handling of Values"
+      },
       "notes": [
         {
           "category": "description",
@@ -5738,7 +5805,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5798,7 +5865,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5834,6 +5901,10 @@
     },
     {
       "cve": "CVE-2022-32084",
+      "cwe": {
+        "id": "CWE-229",
+        "name": "Improper Handling of Values"
+      },
       "notes": [
         {
           "category": "description",
@@ -5854,7 +5925,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5914,7 +5985,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -5950,6 +6021,10 @@
     },
     {
       "cve": "CVE-2022-32085",
+      "cwe": {
+        "id": "CWE-229",
+        "name": "Improper Handling of Values"
+      },
       "notes": [
         {
           "category": "description",
@@ -5970,7 +6045,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6030,7 +6105,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6066,6 +6141,10 @@
     },
     {
       "cve": "CVE-2022-32086",
+      "cwe": {
+        "id": "CWE-229",
+        "name": "Improper Handling of Values"
+      },
       "notes": [
         {
           "category": "description",
@@ -6086,7 +6165,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6146,7 +6225,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6182,6 +6261,10 @@
     },
     {
       "cve": "CVE-2022-32087",
+      "cwe": {
+        "id": "CWE-229",
+        "name": "Improper Handling of Values"
+      },
       "notes": [
         {
           "category": "description",
@@ -6202,7 +6285,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6262,7 +6345,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6322,7 +6405,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6358,6 +6441,10 @@
     },
     {
       "cve": "CVE-2022-32088",
+      "cwe": {
+        "id": "CWE-229",
+        "name": "Improper Handling of Values"
+      },
       "notes": [
         {
           "category": "description",
@@ -6378,7 +6465,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6438,7 +6525,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6474,6 +6561,10 @@
     },
     {
       "cve": "CVE-2022-32089",
+      "cwe": {
+        "id": "CWE-229",
+        "name": "Improper Handling of Values"
+      },
       "notes": [
         {
           "category": "description",
@@ -6494,7 +6585,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6554,7 +6645,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6614,7 +6705,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6674,7 +6765,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6734,7 +6825,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6794,7 +6885,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6854,7 +6945,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6914,7 +7005,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -6974,7 +7065,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7034,7 +7125,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7094,7 +7185,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7130,6 +7221,10 @@
     },
     {
       "cve": "CVE-2021-2007",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -7150,7 +7245,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7210,7 +7305,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7246,6 +7341,10 @@
     },
     {
       "cve": "CVE-2021-2011",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -7266,7 +7365,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7326,7 +7425,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7362,6 +7461,10 @@
     },
     {
       "cve": "CVE-2021-2022",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
       "notes": [
         {
           "category": "description",
@@ -7382,7 +7485,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7442,7 +7545,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7478,6 +7581,10 @@
     },
     {
       "cve": "CVE-2021-2032",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -7498,7 +7605,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7558,7 +7665,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7594,6 +7701,10 @@
     },
     {
       "cve": "CVE-2021-2144",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -7614,7 +7725,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7674,7 +7785,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7710,6 +7821,10 @@
     },
     {
       "cve": "CVE-2021-2154",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -7730,7 +7845,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7790,7 +7905,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7826,6 +7941,10 @@
     },
     {
       "cve": "CVE-2021-2166",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -7846,7 +7965,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7906,7 +8025,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -7942,6 +8061,10 @@
     },
     {
       "cve": "CVE-2021-2174",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -7962,7 +8085,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8022,7 +8145,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8058,6 +8181,10 @@
     },
     {
       "cve": "CVE-2021-2180",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -8078,7 +8205,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8138,7 +8265,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8174,6 +8301,10 @@
     },
     {
       "cve": "CVE-2021-2194",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -8194,7 +8325,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8237,7 +8368,7 @@
       "notes": [
         {
           "category": "description",
-          "text": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, password_verify() function may accept some invalid Blowfish hashes as valid. If such invalid hash ever ends up in the password database, it may lead to an application allowing any password for this entry as valid. \n\n",
+          "text": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, password_verify() function may accept some invalid Blowfish hashes as valid. If such invalid hash ever ends up in the password database, it may lead to an application allowing any password for this entry as valid. \n\n",
           "title": "Vulnerability Description"
         }
       ],
@@ -8254,7 +8385,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8290,6 +8421,10 @@
     },
     {
       "cve": "CVE-2021-2372",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -8310,7 +8445,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8370,7 +8505,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8406,6 +8541,10 @@
     },
     {
       "cve": "CVE-2021-2389",
+      "cwe": {
+        "id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
       "notes": [
         {
           "category": "description",
@@ -8426,7 +8565,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8486,7 +8625,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8546,7 +8685,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8606,7 +8745,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8666,7 +8805,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8702,6 +8841,10 @@
     },
     {
       "cve": "CVE-2023-23919",
+      "cwe": {
+        "id": "CWE-755",
+        "name": "Improper Handling of Exceptional Conditions"
+      },
       "notes": [
         {
           "category": "description",
@@ -8722,7 +8865,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8782,7 +8925,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8842,7 +8985,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8902,7 +9045,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -8962,7 +9105,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9022,7 +9165,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9082,7 +9225,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9142,7 +9285,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9202,7 +9345,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9262,7 +9405,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9322,7 +9465,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9382,7 +9525,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9442,7 +9585,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9502,7 +9645,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9562,7 +9705,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9622,7 +9765,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9682,7 +9825,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9742,7 +9885,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9802,7 +9945,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9862,7 +10005,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9922,7 +10065,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -9982,7 +10125,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -10042,7 +10185,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -10102,7 +10245,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -10162,7 +10305,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -10198,6 +10341,10 @@
     },
     {
       "cve": "CVE-2021-27290",
+      "cwe": {
+        "id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      },
       "notes": [
         {
           "category": "description",
@@ -10218,7 +10365,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -10278,7 +10425,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -10338,7 +10485,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]
@@ -10398,7 +10545,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
+          "details": "FactoryViews (non-Lite): Upgrade to FactoryViews 1.6.0. See the upgrade guide for information on how to upgrade.\nFactoryViews Lite: Upgrade to FactoryViews 1.7.0. See the upgrade guide for information on how to upgrade.",
           "group_ids": [
             "CSAFGID-0001"
           ]

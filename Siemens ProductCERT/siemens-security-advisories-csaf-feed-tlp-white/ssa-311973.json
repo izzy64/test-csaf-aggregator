@@ -1,0 +1,218 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Multiple Siemens products are affected by two local privilege escalation vulnerabilities which could allow an low privileged attacker to load malicious DLLs, potentially leading to arbitrary code execution with elevated privileges.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-311973: Multiple Local Privilege Escalation Vulnerabilities in SINEC NMS and User Management Component (UMC) - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-311973.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-311973: Multiple Local Privilege Escalation Vulnerabilities in SINEC NMS and User Management Component (UMC) - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-311973.json"
+      }
+    ],
+    "title": "SSA-311973: Multiple Local Privilege Escalation Vulnerabilities in SINEC NMS and User Management Component (UMC)",
+    "tracking": {
+      "current_release_date": "2026-02-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-311973",
+      "initial_release_date": "2026-02-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2026-02-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V4.0 SP2",
+                "product": {
+                  "name": "SINEC NMS",
+                  "product_id": "1"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SINEC NMS",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SINEC NMS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.15.2.1",
+                "product": {
+                  "name": "User Management Component (UMC)",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "User Management Component (UMC)"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-25655",
+      "cwe": {
+        "id": "CWE-427",
+        "name": "Uncontrolled Search Path Element"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application permits improper modification of a configuration file by a low-privileged user.\r\nThis could allow an attacker to load malicious DLLs, potentially leading to arbitrary code execution with administrative privilege.(ZDI-CAN-28107)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.0 SP2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109998317/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25655"
+    },
+    {
+      "cve": "CVE-2026-25656",
+      "cwe": {
+        "id": "CWE-427",
+        "name": "Uncontrolled Search Path Element"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application permits improper modification of a configuration file by a low-privileged user.\r\nThis could allow an attacker to load malicious DLLs, potentially leading to arbitrary code execution with SYSTEM privileges.(ZDI-CAN-28108)",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2",
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.15.2.1 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109996127/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update UMC to V2.15.2.1 or later compatible version https://support.industry.siemens.com/cs/document/109996127/",
+          "product_ids": [
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25656"
+    }
+  ]
+}

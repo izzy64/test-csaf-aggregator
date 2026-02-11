@@ -1,0 +1,293 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Versions V6.0 through V8 QU1 of the Desigo CC product family (Desigo CC, Desigo CC Compact, Desigo CC Connect, Cerberus DMS), as well as the Desigo CC-based SENTRON Powermanager, are affected by a vulnerability in the underlying third-party component WIBU Systems CodeMeter Runtime. Successful exploitation of this vulnerability could lead to code execution in the context of the current process.\n\nSiemens has released instructions how to update the CodeMeter Runtime component and recommends to apply the update on affected systems.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-507364: Heap Based Buffer Overflow Vulnerability in WIBU CodeMeter Runtime Affecting the Desigo CC Product Family and SENTRON Powermanager - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-507364.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-507364: Heap Based Buffer Overflow Vulnerability in WIBU CodeMeter Runtime Affecting the Desigo CC Product Family and SENTRON Powermanager - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-507364.json"
+      }
+    ],
+    "title": "SSA-507364: Heap Based Buffer Overflow Vulnerability in WIBU CodeMeter Runtime Affecting the Desigo CC Product Family and SENTRON Powermanager",
+    "tracking": {
+      "current_release_date": "2026-02-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-507364",
+      "initial_release_date": "2026-02-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2026-02-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC family V6",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC family V6"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC family V7",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC family V7"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V8.0 QU2",
+                "product": {
+                  "name": "Desigo CC family V8",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC family V8"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC family V9",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC family V9"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SENTRON Powermanager V6",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SENTRON Powermanager V6"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SENTRON Powermanager V7",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SENTRON Powermanager V7"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V8.0 QU2",
+                "product": {
+                  "name": "SENTRON Powermanager V8",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SENTRON Powermanager V8"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SENTRON Powermanager V9",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SENTRON Powermanager V9"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2023-38545",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "4",
+            "8"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "This flaw makes curl overflow a heap based buffer in the SOCKS5 proxy handshake.\r\n\r\nWhen curl is asked to pass along the hostname to the SOCKS5 proxy to allow that to resolve the address instead of it getting done by curl itself, the maximum length that hostname can be is 255 bytes.\r\n\r\nIf the hostname is detected to be longer than 255 bytes, curl switches to local name resolving and instead passes on the resolved address only to the proxy. Due to a bug, the local variable that means \"let the host resolve the name\" could get the wrong value during a slow SOCKS5 handshake, and contrary to the intention, copy the too long hostname to the target buffer instead of copying just the resolved address there.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "5",
+          "6",
+          "7"
+        ],
+        "known_not_affected": [
+          "4",
+          "8"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.0 QU2 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109997962/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.0 QU2 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109771760/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Apply patch as documented in section 'Additional Information'",
+          "product_ids": [
+            "1",
+            "2",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "The product does not contain affected WIBU CodeMeter Runtime component",
+          "product_ids": [
+            "4",
+            "8"
+          ]
+        }
+      ],
+      "title": "CVE-2023-38545"
+    }
+  ]
+}

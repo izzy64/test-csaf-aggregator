@@ -51,7 +51,7 @@
     ],
     "title": "SSA-212953: Multiple Vulnerabilities in COMOS",
     "tracking": {
-      "current_release_date": "2026-01-13T00:00:00Z",
+      "current_release_date": "2026-02-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Removed CVE-2024-11053 and CVE-2025-10148 from COMOS V10.5.2 as this version line is not affected"
+        },
+        {
+          "date": "2026-02-10T00:00:00Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for COMOS V10.4.5"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -108,7 +114,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<10.4.5.0.2",
                 "product": {
                   "name": "COMOS V10.4.5",
                   "product_id": "3"
@@ -185,8 +191,14 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "3",
             "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "3"
           ]
         }
       ],
@@ -336,8 +348,14 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "3",
             "6"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "3"
           ]
         }
       ],

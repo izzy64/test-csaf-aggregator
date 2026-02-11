@@ -51,7 +51,7 @@
     ],
     "title": "SSA-282044: DLL Hijacking Vulnerability in Siemens Web Installer used by the Online Software Delivery",
     "tracking": {
-      "current_release_date": "2026-01-13T00:00:00Z",
+      "current_release_date": "2026-02-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -96,10 +96,16 @@
           "legacy_version": "1.5",
           "number": "6",
           "summary": "Added fixes for WinCC Panel Image Setup, SIMATIC WinCC Runtime Advanced, SIMATIC WinCC Runtime Professional, SIMATIC WinCC Visualization Architect (SiVArc) V17, SIMATIC Process Historian 2024, SIMATIC PCS 7 Basis Library V10.0, SIMATIC Logon V2.0, SIMATIC PDM V9.3, and MultiFieldbus Configuration Tool (MFCT); Clarified that no fix is planned for TIA Project-Server V17"
+        },
+        {
+          "date": "2026-02-10T00:00:00Z",
+          "legacy_version": "1.6",
+          "number": "7",
+          "summary": "Updated remediation for SIMATIC ODK 1500S and SIMATIC S7-PLCSIM V17, V18, V19 to 'No fix planned' and added fix version for Create MyConfig (CMC)"
         }
       ],
       "status": "interim",
-      "version": "6"
+      "version": "7"
     }
   },
   "product_tree": {
@@ -166,7 +172,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.9",
                 "product": {
                   "name": "Create MyConfig (CMC)",
                   "product_id": "5"
@@ -2528,6 +2534,7 @@
             "18",
             "29",
             "34",
+            "44",
             "56",
             "68",
             "73",
@@ -2535,6 +2542,9 @@
             "78",
             "83",
             "85",
+            "90",
+            "91",
+            "92",
             "95",
             "96",
             "99",
@@ -2548,7 +2558,6 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "4",
-            "5",
             "7",
             "8",
             "10",
@@ -2570,7 +2579,6 @@
             "40",
             "41",
             "42",
-            "44",
             "46",
             "47",
             "48",
@@ -2592,9 +2600,6 @@
             "81",
             "82",
             "84",
-            "90",
-            "91",
-            "92",
             "94",
             "97",
             "98",
@@ -2886,6 +2891,14 @@
             "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/114358/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.9 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109955311/"
         },
         {
           "category": "vendor_fix",

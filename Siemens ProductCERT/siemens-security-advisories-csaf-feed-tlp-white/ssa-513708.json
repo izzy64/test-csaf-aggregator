@@ -51,7 +51,7 @@
     ],
     "title": "SSA-513708: Multiple Vulnerabilities in Palo Alto Networks Virtual NGFW on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2025-10-14T00:00:00Z",
+      "current_release_date": "2026-02-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -78,10 +78,16 @@
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added CVE-2025-4614 and CVE-2025-4615"
+        },
+        {
+          "date": "2026-02-10T00:00:00Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added CVE-2026-0227"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -370,6 +376,48 @@
         }
       ],
       "title": "CVE-2025-4615"
+    },
+    {
+      "cve": "CVE-2026-0227",
+      "cwe": {
+        "id": "CWE-754",
+        "name": "Improper Check for Unusual or Exceptional Conditions"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A vulnerability in Palo Alto Networks PAN-OS software enables an unauthenticated attacker to cause a denial of service (DoS) to the firewall. Repeated attempts to trigger this issue results in the firewall entering into maintenance mode.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-0227"
     }
   ]
 }

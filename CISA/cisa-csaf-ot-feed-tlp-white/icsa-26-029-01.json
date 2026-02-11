@@ -8,7 +8,7 @@
         "summary": "reported this vulnerability to CISA"
       }
     ],
-    "category": "csaf_security_advisory",
+    "category": "csaf_security_advisory", 
     "csaf_version": "2.0",
     "distribution": {
       "text": "Disclosure is not limited",
@@ -188,11 +188,11 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "KiloView Encoder Series",
+    "title": "KiloView Encoder Series (Update A)",
     "tracking": {
-      "current_release_date": "2026-01-29T07:00:00.000000Z",
+      "current_release_date": "2026-02-05T07:00:00.000000Z",
       "generator": {
-        "date": "2026-01-28T16:26:17.503343Z",
+        "date": "2026-02-04T21:38:37.871883Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -206,10 +206,16 @@
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
+        },
+        {
+          "date": "2026-02-05T07:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - Affected products are end-of-life"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -220,9 +226,9 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "4.7.2516",
+                "name": "Software_4.7.2516",
                 "product": {
-                  "name": "KiloView Encoder Series E1 hardware Version 1.4: 4.7.2516",
+                  "name": "KiloView Encoder Series E1 hardware Version 1.4: Software_4.7.2516",
                   "product_id": "CSAFPID-0001"
                 }
               }
@@ -290,9 +296,9 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "4.8.2561",
+                "name": "Software_4.8.2561",
                 "product": {
-                  "name": "KiloView Encoder Series G1 hardware Version 1.6.20: 4.8.2561",
+                  "name": "KiloView Encoder Series G1 hardware Version 1.6.20: Software_4.8.2561",
                   "product_id": "CSAFPID-0006"
                 }
               }
@@ -318,9 +324,9 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "4.8.2633",
+                "name": "Software_4.8.2633",
                 "product": {
-                  "name": "KiloView Encoder Series P2 hardware Version 1.8.20: 4.8.2633",
+                  "name": "KiloView Encoder Series P2 hardware Version 1.8.20: Software_4.8.2633",
                   "product_id": "CSAFPID-0008"
                 }
               }
@@ -332,9 +338,9 @@
             "branches": [
               {
                 "category": "product_version",
-                "name": "4.7.2513",
+                "name": "Software_4.7.2513",
                 "product": {
-                  "name": "KiloView Encoder Series RE1 hardware Version 2.0.00: 4.7.2513",
+                  "name": "KiloView Encoder Series RE1 hardware Version 2.0.00: Software_4.7.2513",
                   "product_id": "CSAFPID-0009"
                 }
               }
@@ -377,7 +383,7 @@
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/T:T/M:M/D:T/2026-01-28T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/T:T/M:M/D:T/2026-02-04T07:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -420,7 +426,23 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "KiloView has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of KiloView Encoder Series are invited to contact KiloView customer support for additional information.",
+          "details": "KiloView states that these specific hardware versions are end-of-life; therefore, no patches will be released due to hardware limitations. KiloView recommends that users implement mitigation measures such as network isolation or upgrade to newer hardware generations.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Users of affected versions of KiloView Encoder Series are invited to contact KiloView customer support at https://www.kiloview.com/contact/ for additional information.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",

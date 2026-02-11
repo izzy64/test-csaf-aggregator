@@ -51,7 +51,7 @@
     ],
     "title": "SSA-864900: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2026-01-22T00:00:00Z",
+      "current_release_date": "2026-02-10T00:00:00Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -102,10 +102,16 @@
           "legacy_version": "1.6",
           "number": "7",
           "summary": "Updated remediation for CVE-2024-52963 , CVE-2024-32122, CVE-2024-32122, CVE-2024-50562, CVE-2025-22862, CVE-2025-24471, CVE-2025-25250 , CVE-2024-55599, CVE-2025-25248, CVE-2025-53744, CVE-2025-57740, CVE-2025-58903, CVE-2025-31366, CVE-2025-47890, CVE-2025-25253, CVE-2025-58413, CVE-2025-53843, CVE-2025-59718 and CVE-2025-59719"
+        },
+        {
+          "date": "2026-02-10T00:00:00Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Added CVE-2025-25249"
         }
       ],
       "status": "final",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -441,6 +447,55 @@
         }
       ],
       "title": "CVE-2025-25248"
+    },
+    {
+      "cve": "CVE-2025-25249",
+      "cwe": {
+        "id": "CWE-122",
+        "name": "Heap-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4.0 through 6.4.16, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "For each interface, remove \"fabric\" access (see https://fortiguard.fortinet.com/psirt/FG-IR-25-084)",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.9 or later following the secure update recommendation procedure. Contact customer support to receive detailed information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-25249"
     },
     {
       "cve": "CVE-2025-25250",

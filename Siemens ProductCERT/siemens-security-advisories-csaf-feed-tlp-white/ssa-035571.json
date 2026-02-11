@@ -1,0 +1,168 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Polarion before V2506 contains a vulnerability that could allow authenticated remote attackers to conduct cross-site scripting attacks.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-035571: Cross Site Scripting Vulnerability in Polarion Before V2506 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-035571.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-035571: Cross Site Scripting Vulnerability in Polarion Before V2506 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-035571.json"
+      }
+    ],
+    "title": "SSA-035571: Cross Site Scripting Vulnerability in Polarion Before V2506",
+    "tracking": {
+      "current_release_date": "2026-02-10T00:00:00Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-035571",
+      "initial_release_date": "2026-02-10T00:00:00Z",
+      "revision_history": [
+        {
+          "date": "2026-02-10T00:00:00Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2404.5",
+                "product": {
+                  "name": "Polarion V2404",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Polarion V2404"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2410.2",
+                "product": {
+                  "name": "Polarion V2410",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Polarion V2410"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-40587",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application allows arbitrary JavaScript code be included in document titles. This could allow an authenticated remote attacker to conduct a stored cross-site scripting attack by creating specially crafted document titles that are later viewed by other users of the application.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2404.5 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.sw.siemens.com/product/230235217/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2410.2 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/product/230235217/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.6,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40587"
+    }
+  ]
+}

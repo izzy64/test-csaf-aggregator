@@ -98,12 +98,12 @@
       "aliases": [
         "VDE-2025-106"
       ],
-      "current_release_date": "2026-01-26T10:00:00.000Z",
+      "current_release_date": "2026-02-12T09:00:00.000Z",
       "generator": {
-        "date": "2026-01-08T10:13:28.154Z",
+        "date": "2026-02-12T08:54:19.787Z",
         "engine": {
           "name": "Secvisogram",
-          "version": "2.5.41"
+          "version": "2.5.42"
         }
       },
       "id": "VDE-2025-106",
@@ -113,10 +113,15 @@
           "date": "2025-12-10T10:00:00.000Z",
           "number": "1.0.0",
           "summary": "Initial revision"
+        },
+        {
+          "date": "2026-02-12T09:00:00.000Z",
+          "number": "1.0.1",
+          "summary": "A typo was corrected in the CVE description."
         }
       ],
       "status": "final",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   },
   "product_tree": {
@@ -338,7 +343,7 @@
       "notes": [
         {
           "category": "description",
-          "text": "~On an instance of TwinCAT 3 HMI Server running on a device an authenticated administrator can inject arbitrary content into the custom CSS field which is persisted on the device and later returned via the login page and error page.~\n\nAn high privileged remote attacker can inject arbitrary content into the custom CSS field on the affected devices due too improper neutralization of input during web page generation ('Cross-site Scripting').\n\n",
+          "text": "An high privileged remote attacker can inject arbitrary content into the custom CSS field on the affected devices due to improper neutralization of input during web page generation ('Cross-site Scripting').\n\n",
           "title": "CVE Description"
         }
       ],

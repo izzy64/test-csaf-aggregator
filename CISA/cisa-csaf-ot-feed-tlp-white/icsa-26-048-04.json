@@ -26,7 +26,7 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of this vulnerability could lead to account takeovers and unauthorized access to camera feeds; an unauthenticated attacker may change the recovery email address, potentially leading to further network compromise.",
+        "text": "Successful exploitation of this vulnerability could lead to account takeovers and unauthorized access to camera feeds; an unauthenticated attacker may change the recovery email address, potentially leading to further network compromise. ",
         "title": "Risk evaluation"
       },
       {
@@ -36,12 +36,12 @@
       },
       {
         "category": "other",
-        "text": "Worldwide",
+        "text": "India",
         "title": "Countries/areas deployed"
       },
       {
         "category": "other",
-        "text": "United States",
+        "text": "India",
         "title": "Company headquarters location"
       },
       {
@@ -188,11 +188,11 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "Honeywell CCTV Products",
+    "title": "Honeywell HIB2PI and HDZ Series CCTV Cameras (Update A)",
     "tracking": {
-      "current_release_date": "2026-02-17T07:00:00.000000Z",
+      "current_release_date": "2026-02-26T07:00:00.000000Z",
       "generator": {
-        "date": "2026-02-16T23:44:32.306580Z",
+        "date": "2026-02-25T22:15:53.040847Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -206,10 +206,16 @@
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
+        },
+        {
+          "date": "2026-02-26T07:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - Altered affected products, deployed locations, and headquarters location"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -219,58 +225,44 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "6.1.22.1216",
+                "category": "product_version_range",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "Honeywell I-HIB2PI-UL 2MP IP: 6.1.22.1216",
+                  "name": "Honeywell HDZ322DI: vers:all/*",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "I-HIB2PI-UL 2MP IP"
+            "name": "HDZ322DI"
           },
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "WDR_2MP_32M_PTZ_v2.0",
+                "category": "product_version_range",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "Honeywell SMB NDAA MVO-3: WDR_2MP_32M_PTZ_v2.0",
+                  "name": "Honeywell HC20WZ2R25: vers:all/*",
                   "product_id": "CSAFPID-0002"
                 }
               }
             ],
             "category": "product_name",
-            "name": "SMB NDAA MVO-3"
+            "name": "HC20WZ2R25"
           },
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "WDR_2MP_32M_PTZ_v2.0",
+                "category": "product_version_range",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "Honeywell PTZ WDR 2MP 32M: WDR_2MP_32M_PTZ_v2.0",
+                  "name": "Honeywell I-HIB2PI-UL: vers:all/*",
                   "product_id": "CSAFPID-0003"
                 }
               }
             ],
             "category": "product_name",
-            "name": "PTZ WDR 2MP 32M"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version",
-                "name": "WDR_2MP_32M_PTZ_v2.0",
-                "product": {
-                  "name": "Honeywell 25M IPC: WDR_2MP_32M_PTZ_v2.0",
-                  "product_id": "CSAFPID-0004"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "25M IPC"
+            "name": "I-HIB2PI-UL"
           }
         ],
         "category": "vendor",
@@ -288,12 +280,12 @@
       "notes": [
         {
           "category": "summary",
-          "text": "The affected product is vulnerable to an unauthenticated API endpoint exposure, which may allow an attacker to remotely change the \"forgot password\" recovery email address.",
+          "text": "The affected products are vulnerable to an unauthenticated API endpoint exposure, which may allow an attacker to remotely change the \"forgot password\" recovery email address.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-02-16T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-02-25T07:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -301,8 +293,7 @@
         "known_affected": [
           "CSAFPID-0001",
           "CSAFPID-0002",
-          "CSAFPID-0003",
-          "CSAFPID-0004"
+          "CSAFPID-0003"
         ]
       },
       "references": [
@@ -330,12 +321,11 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Honeywell recommends users contact Honeywell at https://www.honeywell.com/us/en/contact/support for patch information.",
+          "details": "Honeywell recommends users contact Honeywell customer support at https://www.honeywell.com/us/en/contact/support for patch information.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0003"
           ],
           "url": "https://www.honeywell.com/us/en/contact/support"
         }
@@ -351,8 +341,7 @@
           "products": [
             "CSAFPID-0001",
             "CSAFPID-0002",
-            "CSAFPID-0003",
-            "CSAFPID-0004"
+            "CSAFPID-0003"
           ]
         }
       ]

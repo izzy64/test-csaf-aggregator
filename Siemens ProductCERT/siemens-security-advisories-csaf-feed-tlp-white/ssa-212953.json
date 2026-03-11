@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "COMOS is affected by multiple vulnerabilities that could allow an attacker to execute arbitrary code or cause denial of service condition, data infiltration or perform access control violations. \n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "COMOS is affected by multiple vulnerabilities that could allow an attacker to execute arbitrary code or cause denial of service condition, data infiltration or perform access control violations. \n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-212953: Multiple Vulnerabilities in COMOS",
     "tracking": {
-      "current_release_date": "2026-02-10T00:00:00Z",
+      "current_release_date": "2026-03-10T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,29 +59,35 @@
         }
       },
       "id": "SSA-212953",
-      "initial_release_date": "2025-12-09T00:00:00Z",
+      "initial_release_date": "2025-12-09T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-12-09T00:00:00Z",
+          "date": "2025-12-09T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2026-01-13T00:00:00Z",
+          "date": "2026-01-13T00:00:00.000Z",
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Removed CVE-2024-11053 and CVE-2025-10148 from COMOS V10.5.2 as this version line is not affected"
         },
         {
-          "date": "2026-02-10T00:00:00Z",
+          "date": "2026-02-10T00:00:00.000Z",
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added fix for COMOS V10.4.5"
+        },
+        {
+          "date": "2026-03-10T00:00:00.000Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added fix for COMOS V10.6"
         }
       ],
       "status": "interim",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -150,7 +156,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<10.6.1",
                 "product": {
                   "name": "COMOS V10.6",
                   "product_id": "6"
@@ -188,11 +194,12 @@
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.6.1 or later version",
           "product_ids": [
             "6"
-          ]
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
         },
         {
           "category": "vendor_fix",
@@ -345,11 +352,12 @@
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.6.1 or later version",
           "product_ids": [
             "6"
-          ]
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
         },
         {
           "category": "vendor_fix",
@@ -395,11 +403,12 @@
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.6.1 or later version",
           "product_ids": [
             "6"
-          ]
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
         }
       ],
       "scores": [
@@ -437,11 +446,12 @@
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.6.1 or later version",
           "product_ids": [
             "6"
-          ]
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
         }
       ],
       "scores": [

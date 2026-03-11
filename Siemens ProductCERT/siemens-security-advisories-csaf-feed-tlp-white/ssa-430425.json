@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SINEC Security Monitor before V4.9.0 contains multiple  vulnerabilities.\n\nSiemens has released a new version for Siemens SINEC Security Monitor and recommends to update to the latest version.",
+        "text": "SINEC Security Monitor before V4.9.0 contains multiple  vulnerabilities.\n\nSiemens has released a new version for SINEC Security Monitor and recommends to update to the latest version.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "Siemens Security Advisories are subject to the terms and conditions contained in Siemens' underlying license terms or other applicable agreements previously agreed to with Siemens (hereinafter \"License Terms\"). To the extent applicable to information, software or documentation made available in or through a Siemens Security Advisory, the Terms of Use of Siemens' Global Website (https://www.siemens.com/terms_of_use, hereinafter \"Terms of Use\"), in particular Sections 8-10 of the Terms of Use, shall apply additionally. In case of conflicts, the License Terms shall prevail over the Terms of Use.",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
         "title": "Terms of Use"
       }
     ],
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-430425: Multiple Vulnerabilities in SINEC Security Monitor before V4.9.0",
     "tracking": {
-      "current_release_date": "2024-10-08T00:00:00Z",
+      "current_release_date": "2026-03-10T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-430425",
-      "initial_release_date": "2024-10-08T00:00:00Z",
+      "initial_release_date": "2024-10-08T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2024-10-08T00:00:00Z",
+          "date": "2024-10-08T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-03-10T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added CVE-2026-27661"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,15 +86,15 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V4.9.0",
+                "name": "vers:intdot/<4.9.0",
                 "product": {
-                  "name": "Siemens SINEC Security Monitor",
+                  "name": "SINEC Security Monitor",
                   "product_id": "1"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Siemens SINEC Security Monitor"
+            "name": "SINEC Security Monitor"
           }
         ],
         "category": "vendor",
@@ -268,6 +274,49 @@
         }
       ],
       "title": "CVE-2024-47565"
+    },
+    {
+      "cve": "CVE-2026-27661",
+      "cwe": {
+        "id": "CWE-1230",
+        "name": "Exposure of Sensitive Information Through Metadata"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application leaks confidential information in metadata, and files such as information on contributors and email address, on `SSM Server`.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.9.0 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109975096/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-27661"
     }
   ]
 }

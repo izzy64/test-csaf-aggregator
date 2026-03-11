@@ -51,7 +51,7 @@
     ],
     "title": "SSA-535115: Data Validation Vulnerability in NX Before V2512",
     "tracking": {
-      "current_release_date": "2026-02-10T00:00:00Z",
+      "current_release_date": "2026-03-10T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-535115",
-      "initial_release_date": "2026-02-10T00:00:00Z",
+      "initial_release_date": "2026-02-10T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2026-02-10T00:00:00Z",
+          "date": "2026-02-10T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-03-10T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added product-specific CVSS for NX with managed mode"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -89,6 +95,20 @@
             ],
             "category": "product_name",
             "name": "NX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2512",
+                "product": {
+                  "name": "NX (Managed Mode)",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "NX (Managed Mode)"
           }
         ],
         "category": "vendor",
@@ -108,11 +128,17 @@
           "category": "summary",
           "text": "The affected application contains a data validation vulnerability that could allow an attacker with local access to interfere with internal data during the PDF export process that could potentially lead to arbitrary code execution.",
           "title": "Summary"
+        },
+        {
+          "category": "summary",
+          "text": "An attacker would need privileged access to the application running in managed mode in order to exploit",
+          "title": "For NX (Managed Mode)"
         }
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2"
         ]
       },
       "remediations": [
@@ -120,14 +146,16 @@
           "category": "mitigation",
           "details": "Prioritize strong overall system hygiene to prevent initial system infection which includes maintaining fully patched systems, robust endpoint security, and continuous monitoring for signs of compromise",
           "product_ids": [
-            "1"
+            "1",
+            "2"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V2512 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2"
           ],
           "url": "https://support.sw.siemens.com/product/209349590/"
         }
@@ -142,6 +170,17 @@
           },
           "products": [
             "1"
+          ]
+        },
+        {
+          "cvss_v3": {
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "2"
           ]
         }
       ],

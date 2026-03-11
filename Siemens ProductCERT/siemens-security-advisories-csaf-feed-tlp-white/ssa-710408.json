@@ -51,7 +51,7 @@
     ],
     "title": "SSA-710408: Missing Server Certificate Validation in Siemens Advanced Licensing (SALT) Toolkit",
     "tracking": {
-      "current_release_date": "2025-12-09T00:00:00Z",
+      "current_release_date": "2026-03-10T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-710408",
-      "initial_release_date": "2025-12-09T00:00:00Z",
+      "initial_release_date": "2025-12-09T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-12-09T00:00:00Z",
+          "date": "2025-12-09T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-03-10T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for COMOS V10.6, Simcenter Studio and Simcenter System Architect"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,7 +86,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<10.6.1",
                 "product": {
                   "name": "COMOS V10.6",
                   "product_id": "1"
@@ -164,7 +170,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<2506.0001",
                 "product": {
                   "name": "Simcenter Studio",
                   "product_id": "7"
@@ -178,7 +184,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<2506.0001",
                 "product": {
                   "name": "Simcenter System Architect",
                   "product_id": "8"
@@ -244,13 +250,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.6.1 or later version",
           "product_ids": [
-            "1",
-            "7",
-            "8"
-          ]
+            "1"
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
         },
         {
           "category": "vendor_fix",
@@ -267,6 +272,21 @@
             "9"
           ],
           "url": "https://support.sw.siemens.com/product/297028302/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2506.0001 or later version",
+          "product_ids": [
+            "7"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2506.0001 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.sw.siemens.com/product/273211926/"
         },
         {
           "category": "vendor_fix",

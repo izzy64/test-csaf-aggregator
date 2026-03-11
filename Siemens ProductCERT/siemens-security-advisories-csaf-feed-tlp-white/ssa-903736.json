@@ -1,0 +1,353 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "The SICAM SIAPP SDK contains multiple vulnerabilities that could allow an attacker to disrupt the customer-developed SIAPP or its simulation environment. Potential impacts include denial of service within the SIAPP, corruption of SIAPP data, or exploit the simulation environment. These vulnerabilities are only exploitable if the API is used improperly or hardening measures are not applied.\n\nSiemens has released a new version for SICAM SIAPP SDK and recommends to update to the latest version.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\nhttps://www.siemens.com/gridsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-903736: Multiple vulnerabilities in SICAM SIAPP SDK before V2.1.7 - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-903736.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-903736: Multiple vulnerabilities in SICAM SIAPP SDK before V2.1.7 - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-903736.json"
+      }
+    ],
+    "title": "SSA-903736: Multiple vulnerabilities in SICAM SIAPP SDK before V2.1.7",
+    "tracking": {
+      "current_release_date": "2026-03-10T00:00:00.000Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-903736",
+      "initial_release_date": "2026-03-10T00:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-03-10T00:00:00.000Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2.1.7",
+                "product": {
+                  "name": "SICAM SIAPP SDK",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICAM SIAPP SDK"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-25569",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An out-of-bounds write vulnerability exists in SICAM SIAPP SDK. This could allow an attacker to write data beyond the intended buffer, potentially leading to denial of service, or arbitrary code execution.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.7 or later",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25569"
+    },
+    {
+      "cve": "CVE-2026-25570",
+      "cwe": {
+        "id": "CWE-121",
+        "name": "Stack-based Buffer Overflow"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The SICAM SIAPP SDK does not perform checks on input values potentially resulting in stack overflow. This could allow an attacker to perform code execution and denial of service.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.7 or later",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25570"
+    },
+    {
+      "cve": "CVE-2026-25571",
+      "cwe": {
+        "id": "CWE-130",
+        "name": "Improper Handling of Length Parameter Inconsistency"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The SICAM SIAPP SDK client component does not enforce maximum length checks on certain variables before use. This could allow an attacker to send an oversized input that could trigger a stack overflow crashing the process and potentially causing denial of service.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.7 or later",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25571"
+    },
+    {
+      "cve": "CVE-2026-25572",
+      "cwe": {
+        "id": "CWE-130",
+        "name": "Improper Handling of Length Parameter Inconsistency"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The SICAM SIAPP SDK server component does not enforce maximum length checks on certain variables before use. This could allow an attacker to send an oversized input that could trigger a stack overflow crashing the process and potentially causing denial of service.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.7 or later",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.1,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25572"
+    },
+    {
+      "cve": "CVE-2026-25573",
+      "cwe": {
+        "id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application builds shell commands with caller-provided strings and executes them. An attacker could influence the executed command, potentially resulting in command injection and full system compromise.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.7 or later",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25573"
+    },
+    {
+      "cve": "CVE-2026-25605",
+      "cwe": {
+        "id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application performs file deletion without properly validating the file path or target. An attacker could delete files or sockets that the affected process has permission to remove, potentially resulting in denial of service or service disruption.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2.1.7 or later",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2026-25605"
+    }
+  ]
+}

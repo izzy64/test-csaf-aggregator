@@ -51,7 +51,7 @@
     ],
     "title": "SSA-282044: DLL Hijacking Vulnerability in Siemens Web Installer used by the Online Software Delivery",
     "tracking": {
-      "current_release_date": "2026-02-10T00:00:00Z",
+      "current_release_date": "2026-03-10T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,53 +59,59 @@
         }
       },
       "id": "SSA-282044",
-      "initial_release_date": "2025-08-12T00:00:00Z",
+      "initial_release_date": "2025-08-12T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-08-12T00:00:00Z",
+          "date": "2025-08-12T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2025-09-09T00:00:00Z",
+          "date": "2025-09-09T00:00:00.000Z",
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added Sahil Shah to acknowledgment; Added fix for SIMATIC Energy Suite V19, SIMATIC Energy Suite V20, SIMATIC MTP CREATOR V4.x, SIMATIC Control Function Library (CFL) V3.x, TIA Portal Test Suite V19, TIA Portal Test Suite V20, SIMATIC WinCC Visualization Architect V19, SIMATIC WinCC Visualization Architect V20, SIMATIC S7-PCT;  Updated No fix planned for SIMATIC ProSave V17,SIMATIC WinCC flexible ES,  SIMATIC Control Function Library (CFL) V1.x,  SIMATIC Control Function Library (CFL) V2.x"
         },
         {
-          "date": "2025-10-14T00:00:00Z",
+          "date": "2025-10-14T00:00:00.000Z",
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added fix for MTP Creator V2.x, CFL V4.x, Simatic WinCC Unified Line Coordination and Simatic WinCC Unified Sequence"
         },
         {
-          "date": "2025-11-11T00:00:00Z",
+          "date": "2025-11-11T00:00:00.000Z",
           "legacy_version": "1.3",
           "number": "4",
           "summary": "Added Fixes for PCS 7 Logic Matrix V9.1, PCS7 Advanced Process Faceplates V9.1, SIMATIC PCS 7 Basis Faceplates V9.1 PCS 7 Basis Library V9.1, SIMATIC Management Agent V9.1, SIMATIC Management Console V9.1, PCS 7 V9.1, PCS 7 V10.0"
         },
         {
-          "date": "2025-12-09T00:00:00Z",
+          "date": "2025-12-09T00:00:00.000Z",
           "legacy_version": "1.4",
           "number": "5",
           "summary": "Added fixes for TIA Project-Server, TIA Portal Cloud Connector, SIMATIC MTP CREATOR V5.x, SIMATIC S7-1500 Software Controller V3, Simatic Prosave, TIA Portal V20, V19, and V17 and updated Energy suite V17 and V18, SIMATIC S7-1500 Software Controller V2 with no fix planned"
         },
         {
-          "date": "2026-01-13T00:00:00Z",
+          "date": "2026-01-13T00:00:00.000Z",
           "legacy_version": "1.5",
           "number": "6",
           "summary": "Added fixes for WinCC Panel Image Setup, SIMATIC WinCC Runtime Advanced, SIMATIC WinCC Runtime Professional, SIMATIC WinCC Visualization Architect (SiVArc) V17, SIMATIC Process Historian 2024, SIMATIC PCS 7 Basis Library V10.0, SIMATIC Logon V2.0, SIMATIC PDM V9.3, and MultiFieldbus Configuration Tool (MFCT); Clarified that no fix is planned for TIA Project-Server V17"
         },
         {
-          "date": "2026-02-10T00:00:00Z",
+          "date": "2026-02-10T00:00:00.000Z",
           "legacy_version": "1.6",
           "number": "7",
           "summary": "Updated remediation for SIMATIC ODK 1500S and SIMATIC S7-PLCSIM V17, V18, V19 to 'No fix planned' and added fix version for Create MyConfig (CMC)"
+        },
+        {
+          "date": "2026-03-10T00:00:00.000Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Added fixes for Simatic Target, Simatic Wincc V7.5 and V8.0"
         }
       ],
       "status": "interim",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -1484,7 +1490,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V6.0 SP3",
                 "product": {
                   "name": "SIMATIC Target",
                   "product_id": "98"
@@ -1638,7 +1644,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V7.5 SP2 Update 20",
                 "product": {
                   "name": "SIMATIC WinCC V7.5",
                   "product_id": "109"
@@ -1652,7 +1658,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V8.0 Update 8",
                 "product": {
                   "name": "SIMATIC WinCC V8.0",
                   "product_id": "110"
@@ -2602,14 +2608,11 @@
             "84",
             "94",
             "97",
-            "98",
             "102",
             "103",
             "105",
             "106",
             "107",
-            "109",
-            "110",
             "113",
             "116",
             "117",
@@ -2886,6 +2889,14 @@
         },
         {
           "category": "vendor_fix",
+          "details": "Update to V6.0 SP3 or later version",
+          "product_ids": [
+            "98"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109997133/"
+        },
+        {
+          "category": "vendor_fix",
           "details": "Update to V6.2 Upd3 or later version",
           "product_ids": [
             "2"
@@ -2907,6 +2918,22 @@
             "89"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109988436/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V7.5 SP2 Update 20 or later version",
+          "product_ids": [
+            "109"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109793460/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V8.0 Update 8 or later version",
+          "product_ids": [
+            "110"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109818723/"
         },
         {
           "category": "vendor_fix",

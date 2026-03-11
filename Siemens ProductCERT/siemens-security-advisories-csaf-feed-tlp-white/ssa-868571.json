@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Multiple Siemens products are affected by improper certificate validation in IAM Client. This could allow an unauthenticated remote attacker to perform man in the middle attacks.\n\nSiemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "Multiple Siemens products are affected by improper certificate validation in IAM Client. This could allow an unauthenticated remote attacker to perform man in the middle attacks.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-868571: Missing Server Certificate Validation in IAM Client",
     "tracking": {
-      "current_release_date": "2025-12-09T00:00:00Z",
+      "current_release_date": "2026-03-10T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-868571",
-      "initial_release_date": "2025-12-09T00:00:00Z",
+      "initial_release_date": "2025-12-09T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-12-09T00:00:00Z",
+          "date": "2025-12-09T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-03-10T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for COMOS V10.6"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,7 +86,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<10.6.1",
                 "product": {
                   "name": "COMOS V10.6",
                   "product_id": "1"
@@ -207,11 +213,12 @@
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.6.1 or later version",
           "product_ids": [
             "1"
-          ]
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
         },
         {
           "category": "vendor_fix",

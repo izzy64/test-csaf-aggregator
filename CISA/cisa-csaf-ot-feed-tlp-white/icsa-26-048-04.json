@@ -26,7 +26,7 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of this vulnerability could lead to account takeovers and unauthorized access to camera feeds; an unauthenticated attacker may change the recovery email address, potentially leading to further network compromise. ",
+        "text": "Successful exploitation of this vulnerability could lead to account takeover and unauthorized access to camera feeds.",
         "title": "Risk evaluation"
       },
       {
@@ -188,11 +188,11 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "Honeywell HIB2PI and HDZ Series CCTV Cameras (Update A)",
+    "title": "Honeywell HIB2PI CCTV Camera (Update B)",
     "tracking": {
-      "current_release_date": "2026-02-26T07:00:00.000000Z",
+      "current_release_date": "2026-03-12T06:00:00.000000Z",
       "generator": {
-        "date": "2026-02-25T22:15:53.040847Z",
+        "date": "2026-03-11T19:34:56.941693Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -211,11 +211,17 @@
           "date": "2026-02-26T07:00:00.000000Z",
           "legacy_version": "Update A",
           "number": "2",
-          "summary": "Update A - Altered affected products, deployed locations, and headquarters location"
+          "summary": "Update A - Altered affected products, deployed locations, and headquarters location."
+        },
+        {
+          "date": "2026-03-12T06:00:00.000000Z",
+          "legacy_version": "Update B",
+          "number": "3",
+          "summary": "Update B - Affected products changed, added that product has been discontinued."
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -228,36 +234,8 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "Honeywell HDZ322DI: vers:all/*",
-                  "product_id": "CSAFPID-0001"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "HDZ322DI"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "Honeywell HC20WZ2R25: vers:all/*",
-                  "product_id": "CSAFPID-0002"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "HC20WZ2R25"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
                   "name": "Honeywell I-HIB2PI-UL: vers:all/*",
-                  "product_id": "CSAFPID-0003"
+                  "product_id": "CSAFPID-0001"
                 }
               }
             ],
@@ -280,20 +258,18 @@
       "notes": [
         {
           "category": "summary",
-          "text": "The affected products are vulnerable to an unauthenticated API endpoint exposure, which may allow an attacker to remotely change the \"forgot password\" recovery email address.",
+          "text": "The affected product is vulnerable to an unauthenticated API endpoint exposure that may allow an attacker to remotely change the \"forgot password\" recovery email address.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-02-25T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-03-11T06:00:00.000000Z",
           "title": "SSVC"
         }
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0003"
+          "CSAFPID-0001"
         ]
       },
       "references": [
@@ -321,11 +297,17 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Honeywell recommends users contact Honeywell customer support at https://www.honeywell.com/us/en/contact/support for patch information.",
+          "details": "The affected product has been discontinued since April 2025. Honeywell recommends users contact Honeywell customer service and technical support at https://www.honeywell.com/us/en/contact/support for patch information.",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003"
+            "CSAFPID-0001"
+          ],
+          "url": "https://www.honeywell.com/us/en/contact/support"
+        },
+        {
+          "category": "mitigation",
+          "details": "Honeywell recommends that users follow the guidance in product manuals and configure devices in a protected IT environment, behind a firewall that is not accessible from untrusted networks. Users are advised to update to the current version through Honeywell customer service and technical support at https://www.honeywell.com/us/en/contact/support.",
+          "product_ids": [
+            "CSAFPID-0001"
           ],
           "url": "https://www.honeywell.com/us/en/contact/support"
         }
@@ -339,9 +321,7 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0003"
+            "CSAFPID-0001"
           ]
         }
       ]

@@ -3,7 +3,7 @@
     "acknowledgments": [
       {
         "organization": "Siemens ProductCERT",
-        "summary": "reporting this vulnerability to CISA."
+        "summary": "reported this vulnerability to CISA."
       }
     ],
     "category": "csaf_security_advisory",
@@ -19,7 +19,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Multiple Siemens products are affected by improper certificate validation in IAM Client. This could allow an unauthenticated remote attacker to perform man in the middle attacks.\n\nSiemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "Multiple Siemens products are affected by improper certificate validation in IAM Client. This could allow an unauthenticated remote attacker to perform man in the middle attacks.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
@@ -163,12 +163,12 @@
     ],
     "title": "Siemens IAM Client",
     "tracking": {
-      "current_release_date": "2025-12-09T00:00:00.000000Z",
+      "current_release_date": "2026-03-12T06:00:00.000000Z",
       "generator": {
-        "date": "2025-12-10T21:52:54.050677Z",
+        "date": "2026-03-11T21:23:48.440922Z",
         "engine": {
           "name": "CISA CSAF Generator",
-          "version": "1.0.0"
+          "version": "1.5.0"
         }
       },
       "id": "ICSA-25-345-04",
@@ -176,13 +176,25 @@
       "revision_history": [
         {
           "date": "2025-12-09T00:00:00.000000Z",
-          "legacy_version": "1.0",
+          "legacy_version": "Initial",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-03-10T00:00:00.000000Z",
+          "legacy_version": "Additional Release 1",
+          "number": "2",
+          "summary": "Added fix for COMOS V10.6"
+        },
+        {
+          "date": "2026-03-12T06:00:00.000000Z",
+          "legacy_version": "Latest Updated CISA Republication",
+          "number": "3",
+          "summary": "CISA Republication update based on Siemens ProductCERT SSA-868571 advisory"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -193,7 +205,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<10.6.1",
                 "product": {
                   "name": "COMOS V10.6",
                   "product_id": "CSAFPID-0001"
@@ -318,13 +330,31 @@
           "CSAFPID-0007"
         ]
       },
+      "references": [
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-40800"
+        },
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/295.html"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V10.6.1 or later version",
           "product_ids": [
             "CSAFPID-0001"
-          ]
+          ],
+          "url": "https://support.sw.siemens.com/product/222981661/"
         },
         {
           "category": "vendor_fix",

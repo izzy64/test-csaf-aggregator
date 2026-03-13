@@ -1,0 +1,795 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CISA",
+        "summary": "discovered a public Proof of Concept (PoC) as authored by semaja22 and reported it to Ceragon"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited",
+      "tlp": {
+        "label": "WHITE",
+        "url": "https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "legal_disclaimer",
+        "text": "This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy & Use policy (https://www.cisa.gov/privacy-policy).",
+        "title": "Legal Notice and Terms of Use"
+      },
+      {
+        "category": "summary",
+        "text": "Successful exploitation of this vulnerability could result in arbitrary file upload to the target equipment.",
+        "title": "Risk evaluation"
+      },
+      {
+        "category": "other",
+        "text": "Communications",
+        "title": "Critical infrastructure sectors"
+      },
+      {
+        "category": "other",
+        "text": "Worldwide",
+        "title": "Countries/areas deployed"
+      },
+      {
+        "category": "other",
+        "text": "Israel",
+        "title": "Company headquarters location"
+      },
+      {
+        "category": "general",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this (these) vulnerability(ies), such as:",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
+        "title": "Recommended Practices"
+      },
+      {
+        "category": "general",
+        "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.",
+        "title": "Recommended Practices"
+      }
+    ],
+    "publisher": {
+      "category": "coordinator",
+      "contact_details": "central@cisa.dhs.gov",
+      "name": "CISA",
+      "namespace": "https://www.cisa.gov/"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "ICS Advisory ICSA-26-069-04 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsa-26-069-04.json"
+      },
+      {
+        "category": "self",
+        "summary": "ICSA Advisory ICSA-26-069-04 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-069-04"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/resources-tools/resources/ics-recommended-practices"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/sites/default/files/publications/Cybersecurity_Best_Practices_for_Industrial_Control_Systems.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/topics/industrial-control-systems"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/news-events/ics-alerts/ics-alert-10-301-01"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/news-events/news/targeted-cyber-intrusion-detection-and-mitigation-strategies-update-b"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/secure-our-world/teach-employees-avoid-phishing"
+      },
+      {
+        "category": "external",
+        "summary": "Recommended Practices",
+        "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
+      }
+    ],
+    "title": "Ceragon Siklu MultiHaul and EtherHaul Series",
+    "tracking": {
+      "current_release_date": "2026-03-10T05:00:00.000000Z",
+      "generator": {
+        "date": "2026-03-09T18:39:36.504272Z",
+        "engine": {
+          "name": "CISA CSAF Generator",
+          "version": "1.0.0"
+        }
+      },
+      "id": "ICSA-26-069-04",
+      "initial_release_date": "2026-03-10T05:00:00.000000Z",
+      "revision_history": [
+        {
+          "date": "2026-03-10T05:00:00.000000Z",
+          "legacy_version": "Initial",
+          "number": "1",
+          "summary": "Initial Publication"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R2.4.0",
+                "product": {
+                  "name": "Ceragon MultiHaul MH-B100-CCS: <R2.4.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MultiHaul MH-B100-CCS"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R2.4.0",
+                "product": {
+                  "name": "Ceragon MultiHaul MH-T200-CCC: <R2.4.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MultiHaul MH-T200-CCC"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R2.4.0",
+                "product": {
+                  "name": "Ceragon MultiHaul MH-T200-CNN: <R2.4.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MultiHaul MH-T200-CNN"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R2.4.0",
+                "product": {
+                  "name": "Ceragon MultiHaul MH-T201-CNN: <R2.4.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "MultiHaul MH-T201-CNN"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R10.8.1",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-8010FX: <R10.8.1",
+                  "product_id": "CSAFPID-0005"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-8010FX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-500TX: <R7.7.12",
+                  "product_id": "CSAFPID-0006"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-500TX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-600TX: <R7.7.12",
+                  "product_id": "CSAFPID-0007"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-600TX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-614TX: <R7.7.12",
+                  "product_id": "CSAFPID-0008"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-614TX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-700TX: <R7.7.12",
+                  "product_id": "CSAFPID-0009"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-700TX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-710TX: <R7.7.12",
+                  "product_id": "CSAFPID-0010"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-710TX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-1200TX: <R7.7.12",
+                  "product_id": "CSAFPID-0011"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-1200TX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-1200FX: <R7.7.12",
+                  "product_id": "CSAFPID-0012"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-1200FX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-2200FX: <R7.7.12",
+                  "product_id": "CSAFPID-0013"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-2200FX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-2500FX: <R7.7.12",
+                  "product_id": "CSAFPID-0014"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-2500FX"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<R7.7.12",
+                "product": {
+                  "name": "Ceragon EtherHaul EH-5500FD: <R7.7.12",
+                  "product_id": "CSAFPID-0015"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "EtherHaul EH-5500FD"
+          }
+        ],
+        "category": "vendor",
+        "name": "Ceragon"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-57176",
+      "cwe": {
+        "id": "CWE-434",
+        "name": "Unrestricted Upload of File with Dangerous Type"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The rfpiped service on TCP port 555 in Ceragon Networks / Siklu Communication EtherHaul and MultiHaul Series microwave antennas allow unauthenticated file uploads to any writable location on the device. File upload packets use weak encryption (metadata only) with file contents transmitted in cleartext. No authentication or path validation is performed.",
+          "title": "Vulnerability Summary"
+        },
+        {
+          "category": "details",
+          "text": "SSVCv2/E:P/A:Y/2026-03-09T05:00:00.000000Z",
+          "title": "SSVC"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002",
+          "CSAFPID-0003",
+          "CSAFPID-0004",
+          "CSAFPID-0005",
+          "CSAFPID-0006",
+          "CSAFPID-0007",
+          "CSAFPID-0008",
+          "CSAFPID-0009",
+          "CSAFPID-0010",
+          "CSAFPID-0011",
+          "CSAFPID-0012",
+          "CSAFPID-0013",
+          "CSAFPID-0014",
+          "CSAFPID-0015"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/434.html"
+        },
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-57176"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3-1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/4-0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Ceragon has released a software update for the affected models:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Affected users should install firmware version R2.4.0 for affected MultiHaul models.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Affected users should install firmware version R10.8.1 for the affected EH-8010FX model.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Affected users should install firmware version R7.7.12 for other affected EtherHaul models.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Additionally Ceragon has provided the following security recommendations for mitigating the listed vulnerability. To prevent exposure, management access must follow standard operator security guidelines:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Management IP addresses must use private subnets (RFC 1918)",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Management networks must be protected by: *-* Firewalls *-* Access Control Lists *-* Network Access Translation / Secure management domains",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Firewalls",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Access Control Lists",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Network Access Translation / Secure management domains",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Public exposure of management IP Addresses is not supported nor recommendedCeragon requests that affected users please verify that all affected radio units:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Use private management IP addresses only",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Are placed behind internal security controls",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Follow your organization's authentication and access-control policies",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Please visit the Ceragon portal here: https://portal.ceragon.com/ (login required) for further information.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ],
+          "url": "https://portal.ceragon.com/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013",
+            "CSAFPID-0014",
+            "CSAFPID-0015"
+          ]
+        }
+      ]
+    }
+  ]
+}

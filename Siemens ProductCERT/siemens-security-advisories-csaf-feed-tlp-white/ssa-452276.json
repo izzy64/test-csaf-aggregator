@@ -51,7 +51,7 @@
     ],
     "title": "SSA-452276: Stored Cross-Site Scripting Vulnerability in SIMATIC S7-1500",
     "tracking": {
-      "current_release_date": "2026-03-10T00:00:00.000Z",
+      "current_release_date": "2026-03-13T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-03-13T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Removed S7-1500 R/H CPU variants as they are not affected by CVE-2025-40943"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -921,46 +927,8 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC S7-1500 CPU 1513R-1 PN (6ES7513-1RL00-0AB0)",
-                  "product_id": "47",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7513-1RL00-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1513R-1 PN (6ES7513-1RL00-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:intdot/<4.1.2",
-                "product": {
-                  "name": "SIMATIC S7-1500 CPU 1513R-1 PN (6ES7513-1RM03-0AB0)",
-                  "product_id": "48",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7513-1RM03-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1513R-1 PN (6ES7513-1RM03-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
                   "name": "SIMATIC S7-1500 CPU 1515-2 PN (6ES7515-2AM01-0AB0)",
-                  "product_id": "49",
+                  "product_id": "47",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2AM01-0AB0"
@@ -979,7 +947,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515-2 PN (6ES7515-2AM02-0AB0)",
-                  "product_id": "50",
+                  "product_id": "48",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2AM02-0AB0"
@@ -998,7 +966,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515-2 PN (6ES7515-2AN03-0AB0)",
-                  "product_id": "51",
+                  "product_id": "49",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2AN03-0AB0"
@@ -1017,7 +985,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515F-2 PN (6ES7515-2FM01-0AB0)",
-                  "product_id": "52",
+                  "product_id": "50",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2FM01-0AB0"
@@ -1036,7 +1004,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515F-2 PN (6ES7515-2FM02-0AB0)",
-                  "product_id": "53",
+                  "product_id": "51",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2FM02-0AB0"
@@ -1055,7 +1023,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515F-2 PN (6ES7515-2FN03-0AB0)",
-                  "product_id": "54",
+                  "product_id": "52",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2FN03-0AB0"
@@ -1073,46 +1041,8 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC S7-1500 CPU 1515R-2 PN (6ES7515-2RM00-0AB0)",
-                  "product_id": "55",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7515-2RM00-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1515R-2 PN (6ES7515-2RM00-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:intdot/<4.1.2",
-                "product": {
-                  "name": "SIMATIC S7-1500 CPU 1515R-2 PN (6ES7515-2RN03-0AB0)",
-                  "product_id": "56",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7515-2RN03-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1515R-2 PN (6ES7515-2RN03-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
                   "name": "SIMATIC S7-1500 CPU 1515T-2 PN (6ES7515-2TM01-0AB0)",
-                  "product_id": "57",
+                  "product_id": "53",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2TM01-0AB0"
@@ -1131,7 +1061,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515T-2 PN (6ES7515-2TN03-0AB0)",
-                  "product_id": "58",
+                  "product_id": "54",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2TN03-0AB0"
@@ -1150,7 +1080,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515TF-2 PN (6ES7515-2UM01-0AB0)",
-                  "product_id": "59",
+                  "product_id": "55",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2UM01-0AB0"
@@ -1169,7 +1099,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1515TF-2 PN (6ES7515-2UN03-0AB0)",
-                  "product_id": "60",
+                  "product_id": "56",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7515-2UN03-0AB0"
@@ -1188,7 +1118,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516-3 PN/DP (6ES7516-3AN01-0AB0)",
-                  "product_id": "61",
+                  "product_id": "57",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3AN01-0AB0"
@@ -1207,7 +1137,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516-3 PN/DP (6ES7516-3AN02-0AB0)",
-                  "product_id": "62",
+                  "product_id": "58",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3AN02-0AB0"
@@ -1226,7 +1156,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516-3 PN/DP (6ES7516-3AP03-0AB0)",
-                  "product_id": "63",
+                  "product_id": "59",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3AP03-0AB0"
@@ -1245,7 +1175,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516F-3 PN/DP (6ES7516-3FN01-0AB0)",
-                  "product_id": "64",
+                  "product_id": "60",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3FN01-0AB0"
@@ -1264,7 +1194,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516F-3 PN/DP (6ES7516-3FN02-0AB0)",
-                  "product_id": "65",
+                  "product_id": "61",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3FN02-0AB0"
@@ -1283,7 +1213,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516F-3 PN/DP (6ES7516-3FP03-0AB0)",
-                  "product_id": "66",
+                  "product_id": "62",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3FP03-0AB0"
@@ -1302,7 +1232,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516pro F-2 PN (6ES7516-2GP03-0AB0)",
-                  "product_id": "67",
+                  "product_id": "63",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-2GP03-0AB0"
@@ -1321,7 +1251,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516pro-2 PN (6ES7516-2PP03-0AB0)",
-                  "product_id": "68",
+                  "product_id": "64",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-2PP03-0AB0"
@@ -1340,7 +1270,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516T-3 PN (6ES7516-3TP10-0AB0)",
-                  "product_id": "69",
+                  "product_id": "65",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3TP10-0AB0"
@@ -1359,7 +1289,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516T-3 PN/DP (6ES7516-3TN00-0AB0)",
-                  "product_id": "70",
+                  "product_id": "66",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3TN00-0AB0"
@@ -1378,7 +1308,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516TF-3 PN (6ES7516-3UP10-0AB0)",
-                  "product_id": "71",
+                  "product_id": "67",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3UP10-0AB0"
@@ -1397,7 +1327,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1516TF-3 PN/DP (6ES7516-3UN00-0AB0)",
-                  "product_id": "72",
+                  "product_id": "68",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-3UN00-0AB0"
@@ -1416,7 +1346,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517-3 PN (6ES7517-3AQ10-0AB0)",
-                  "product_id": "73",
+                  "product_id": "69",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3AQ10-0AB0"
@@ -1435,7 +1365,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517-3 PN/DP (6ES7517-3AP00-0AB0)",
-                  "product_id": "74",
+                  "product_id": "70",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3AP00-0AB0"
@@ -1454,7 +1384,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517F-3 PN (6ES7517-3FQ10-0AB0)",
-                  "product_id": "75",
+                  "product_id": "71",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3FQ10-0AB0"
@@ -1473,7 +1403,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517F-3 PN/DP (6ES7517-3FP00-0AB0)",
-                  "product_id": "76",
+                  "product_id": "72",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3FP00-0AB0"
@@ -1492,7 +1422,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517F-3 PN/DP (6ES7517-3FP01-0AB0)",
-                  "product_id": "77",
+                  "product_id": "73",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3FP01-0AB0"
@@ -1508,48 +1438,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC S7-1500 CPU 1517H-3 PN (6ES7517-3HP00-0AB0)",
-                  "product_id": "78",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7517-3HP00-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1517H-3 PN (6ES7517-3HP00-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:intdot/<4.1.2",
-                "product": {
-                  "name": "SIMATIC S7-1500 CPU 1517H-4 PN (6ES7517-4HQ10-0AB0)",
-                  "product_id": "79",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7517-4HQ10-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1517H-4 PN (6ES7517-4HQ10-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517T-3 PN (6ES7517-3TQ10-0AB0)",
-                  "product_id": "80",
+                  "product_id": "74",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3TQ10-0AB0"
@@ -1568,7 +1460,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517T-3 PN/DP (6ES7517-3TP00-0AB0)",
-                  "product_id": "81",
+                  "product_id": "75",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3TP00-0AB0"
@@ -1587,7 +1479,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517TF-3 PN (6ES7517-3UQ10-0AB0)",
-                  "product_id": "82",
+                  "product_id": "76",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3UQ10-0AB0"
@@ -1606,7 +1498,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1517TF-3 PN/DP (6ES7517-3UP00-0AB0)",
-                  "product_id": "83",
+                  "product_id": "77",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7517-3UP00-0AB0"
@@ -1625,7 +1517,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518-3 PN (6ES7518-3AT10-0AB0)",
-                  "product_id": "84",
+                  "product_id": "78",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-3AT10-0AB0"
@@ -1644,7 +1536,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518-4 PN/DP (6ES7518-4AP00-0AB0)",
-                  "product_id": "85",
+                  "product_id": "79",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4AP00-0AB0"
@@ -1663,7 +1555,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AB0)",
-                  "product_id": "86",
+                  "product_id": "80",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4AX00-1AB0"
@@ -1682,7 +1574,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AC0)",
-                  "product_id": "87",
+                  "product_id": "81",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4AX00-1AC0"
@@ -1701,7 +1593,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518F-3 PN (6ES7518-3FT10-0AB0)",
-                  "product_id": "88",
+                  "product_id": "82",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-3FT10-0AB0"
@@ -1720,7 +1612,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518F-4 PN/DP (6ES7518-4FP00-0AB0)",
-                  "product_id": "89",
+                  "product_id": "83",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4FP00-0AB0"
@@ -1739,7 +1631,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AB0)",
-                  "product_id": "90",
+                  "product_id": "84",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4FX00-1AB0"
@@ -1758,7 +1650,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AC0)",
-                  "product_id": "91",
+                  "product_id": "85",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4FX00-1AC0"
@@ -1774,48 +1666,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIMATIC S7-1500 CPU 1518HF-4 PN (6ES7518-4JP00-0AB0)",
-                  "product_id": "92",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7518-4JP00-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1518HF-4 PN (6ES7518-4JP00-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:intdot/<4.1.2",
-                "product": {
-                  "name": "SIMATIC S7-1500 CPU 1518HF-4 PN (6ES7518-4JT10-0AB0)",
-                  "product_id": "93",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6ES7518-4JT10-0AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIMATIC S7-1500 CPU 1518HF-4 PN (6ES7518-4JT10-0AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518T-3 PN (6ES7518-3TT10-0AB0)",
-                  "product_id": "94",
+                  "product_id": "86",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-3TT10-0AB0"
@@ -1834,7 +1688,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518T-4 PN/DP (6ES7518-4TP00-0AB0)",
-                  "product_id": "95",
+                  "product_id": "87",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4TP00-0AB0"
@@ -1853,7 +1707,7 @@
                 "name": "vers:intdot/<4.1.2",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518TF-3 PN (6ES7518-3UT10-0AB0)",
-                  "product_id": "96",
+                  "product_id": "88",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-3UT10-0AB0"
@@ -1872,7 +1726,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU 1518TF-4 PN/DP (6ES7518-4UP00-0AB0)",
-                  "product_id": "97",
+                  "product_id": "89",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4UP00-0AB0"
@@ -1891,7 +1745,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU S7-1518-4 PN/DP ODK (6ES7518-4AP00-3AB0)",
-                  "product_id": "98",
+                  "product_id": "90",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4AP00-3AB0"
@@ -1910,7 +1764,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 CPU S7-1518F-4 PN/DP ODK (6ES7518-4FP00-3AB0)",
-                  "product_id": "99",
+                  "product_id": "91",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7518-4FP00-3AB0"
@@ -1929,7 +1783,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 ET 200pro: CPU 1513PRO F-2 PN (6ES7513-2GL00-0AB0)",
-                  "product_id": "100",
+                  "product_id": "92",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7513-2GL00-0AB0"
@@ -1948,7 +1802,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 ET 200pro: CPU 1513PRO-2 PN (6ES7513-2PL00-0AB0)",
-                  "product_id": "101",
+                  "product_id": "93",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7513-2PL00-0AB0"
@@ -1967,7 +1821,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 ET 200pro: CPU 1516PRO F-2 PN (6ES7516-2GN00-0AB0)",
-                  "product_id": "102",
+                  "product_id": "94",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-2GN00-0AB0"
@@ -1986,7 +1840,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 ET 200pro: CPU 1516PRO-2 PN (6ES7516-2PN00-0AB0)",
-                  "product_id": "103",
+                  "product_id": "95",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6ES7516-2PN00-0AB0"
@@ -2005,7 +1859,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1507S F V2",
-                  "product_id": "104"
+                  "product_id": "96"
                 }
               }
             ],
@@ -2019,7 +1873,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1507S F V3",
-                  "product_id": "105"
+                  "product_id": "97"
                 }
               }
             ],
@@ -2033,7 +1887,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1507S F V4",
-                  "product_id": "106"
+                  "product_id": "98"
                 }
               }
             ],
@@ -2047,7 +1901,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1507S V2",
-                  "product_id": "107"
+                  "product_id": "99"
                 }
               }
             ],
@@ -2061,7 +1915,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1507S V3",
-                  "product_id": "108"
+                  "product_id": "100"
                 }
               }
             ],
@@ -2075,7 +1929,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1507S V4",
-                  "product_id": "109"
+                  "product_id": "101"
                 }
               }
             ],
@@ -2089,7 +1943,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S F V2",
-                  "product_id": "110"
+                  "product_id": "102"
                 }
               }
             ],
@@ -2103,7 +1957,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S F V3",
-                  "product_id": "111"
+                  "product_id": "103"
                 }
               }
             ],
@@ -2117,7 +1971,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S F V4",
-                  "product_id": "112"
+                  "product_id": "104"
                 }
               }
             ],
@@ -2131,7 +1985,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S T V3",
-                  "product_id": "113"
+                  "product_id": "105"
                 }
               }
             ],
@@ -2145,7 +1999,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S TF V3",
-                  "product_id": "114"
+                  "product_id": "106"
                 }
               }
             ],
@@ -2159,7 +2013,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S V2",
-                  "product_id": "115"
+                  "product_id": "107"
                 }
               }
             ],
@@ -2173,7 +2027,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S V3",
-                  "product_id": "116"
+                  "product_id": "108"
                 }
               }
             ],
@@ -2187,7 +2041,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller CPU 1508S V4",
-                  "product_id": "117"
+                  "product_id": "109"
                 }
               }
             ],
@@ -2201,7 +2055,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller Linux V2",
-                  "product_id": "118"
+                  "product_id": "110"
                 }
               }
             ],
@@ -2215,7 +2069,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-1500 Software Controller Linux V3",
-                  "product_id": "119"
+                  "product_id": "111"
                 }
               }
             ],
@@ -2229,7 +2083,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIMATIC S7-PLCSIM Advanced",
-                  "product_id": "120"
+                  "product_id": "112"
                 }
               }
             ],
@@ -2243,7 +2097,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1510SP F-1 PN (6AG1510-1SJ01-2AB0)",
-                  "product_id": "121",
+                  "product_id": "113",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1510-1SJ01-2AB0"
@@ -2262,7 +2116,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1510SP F-1 PN RAIL (6AG2510-1SJ01-1AB0)",
-                  "product_id": "122",
+                  "product_id": "114",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2510-1SJ01-1AB0"
@@ -2281,7 +2135,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1510SP-1 PN (6AG1510-1DJ01-2AB0)",
-                  "product_id": "123",
+                  "product_id": "115",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1510-1DJ01-2AB0"
@@ -2300,7 +2154,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1510SP-1 PN (6AG1510-1DJ01-7AB0)",
-                  "product_id": "124",
+                  "product_id": "116",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1510-1DJ01-7AB0"
@@ -2319,7 +2173,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1510SP-1 PN RAIL (6AG2510-1DJ01-1AB0)",
-                  "product_id": "125",
+                  "product_id": "117",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2510-1DJ01-1AB0"
@@ -2338,7 +2192,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1510SP-1 PN RAIL (6AG2510-1DJ01-4AB0)",
-                  "product_id": "126",
+                  "product_id": "118",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2510-1DJ01-4AB0"
@@ -2357,7 +2211,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP F-1 PN (6AG1512-1SK01-2AB0)",
-                  "product_id": "127",
+                  "product_id": "119",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1512-1SK01-2AB0"
@@ -2376,7 +2230,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP F-1 PN (6AG1512-1SK01-7AB0)",
-                  "product_id": "128",
+                  "product_id": "120",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1512-1SK01-7AB0"
@@ -2395,7 +2249,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP F-1 PN RAIL (6AG2512-1SK01-1AB0)",
-                  "product_id": "129",
+                  "product_id": "121",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2512-1SK01-1AB0"
@@ -2414,7 +2268,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP F-1 PN RAIL (6AG2512-1SK01-4AB0)",
-                  "product_id": "130",
+                  "product_id": "122",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2512-1SK01-4AB0"
@@ -2433,7 +2287,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP-1 PN (6AG1512-1DK01-2AB0)",
-                  "product_id": "131",
+                  "product_id": "123",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1512-1DK01-2AB0"
@@ -2452,7 +2306,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP-1 PN (6AG1512-1DK01-7AB0)",
-                  "product_id": "132",
+                  "product_id": "124",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1512-1DK01-7AB0"
@@ -2471,7 +2325,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP-1 PN RAIL (6AG2512-1DK01-1AB0)",
-                  "product_id": "133",
+                  "product_id": "125",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2512-1DK01-1AB0"
@@ -2490,7 +2344,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS ET 200SP CPU 1512SP-1 PN RAIL (6AG2512-1DK01-4AB0)",
-                  "product_id": "134",
+                  "product_id": "126",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2512-1DK01-4AB0"
@@ -2509,7 +2363,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK01-2AB0)",
-                  "product_id": "135",
+                  "product_id": "127",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1511-1AK01-2AB0"
@@ -2528,7 +2382,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK01-7AB0)",
-                  "product_id": "136",
+                  "product_id": "128",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1511-1AK01-7AB0"
@@ -2547,7 +2401,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK02-2AB0)",
-                  "product_id": "137",
+                  "product_id": "129",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1511-1AK02-2AB0"
@@ -2566,7 +2420,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK02-7AB0)",
-                  "product_id": "138",
+                  "product_id": "130",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1511-1AK02-7AB0"
@@ -2585,7 +2439,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN T1 RAIL (6AG2511-1AK01-1AB0)",
-                  "product_id": "139",
+                  "product_id": "131",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2511-1AK01-1AB0"
@@ -2604,7 +2458,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN T1 RAIL (6AG2511-1AK02-1AB0)",
-                  "product_id": "140",
+                  "product_id": "132",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2511-1AK02-1AB0"
@@ -2623,7 +2477,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN TX RAIL (6AG2511-1AK01-4AB0)",
-                  "product_id": "141",
+                  "product_id": "133",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2511-1AK01-4AB0"
@@ -2642,7 +2496,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511-1 PN TX RAIL (6AG2511-1AK02-4AB0)",
-                  "product_id": "142",
+                  "product_id": "134",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2511-1AK02-4AB0"
@@ -2661,7 +2515,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511F-1 PN (6AG1511-1FK01-2AB0)",
-                  "product_id": "143",
+                  "product_id": "135",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1511-1FK01-2AB0"
@@ -2680,7 +2534,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1511F-1 PN (6AG1511-1FK02-2AB0)",
-                  "product_id": "144",
+                  "product_id": "136",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1511-1FK02-2AB0"
@@ -2699,7 +2553,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL01-2AB0)",
-                  "product_id": "145",
+                  "product_id": "137",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1513-1AL01-2AB0"
@@ -2718,7 +2572,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL01-7AB0)",
-                  "product_id": "146",
+                  "product_id": "138",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1513-1AL01-7AB0"
@@ -2737,7 +2591,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL02-2AB0)",
-                  "product_id": "147",
+                  "product_id": "139",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1513-1AL02-2AB0"
@@ -2756,7 +2610,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL02-7AB0)",
-                  "product_id": "148",
+                  "product_id": "140",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1513-1AL02-7AB0"
@@ -2775,7 +2629,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1513F-1 PN (6AG1513-1FL01-2AB0)",
-                  "product_id": "149",
+                  "product_id": "141",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1513-1FL01-2AB0"
@@ -2794,7 +2648,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1513F-1 PN (6AG1513-1FL02-2AB0)",
-                  "product_id": "150",
+                  "product_id": "142",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1513-1FL02-2AB0"
@@ -2813,7 +2667,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1515F-2 PN (6AG1515-2FM01-2AB0)",
-                  "product_id": "151",
+                  "product_id": "143",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1515-2FM01-2AB0"
@@ -2832,7 +2686,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1515F-2 PN (6AG1515-2FM02-2AB0)",
-                  "product_id": "152",
+                  "product_id": "144",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1515-2FM02-2AB0"
@@ -2851,7 +2705,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1515F-2 PN RAIL (6AG2515-2FM02-4AB0)",
-                  "product_id": "153",
+                  "product_id": "145",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2515-2FM02-4AB0"
@@ -2870,7 +2724,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1515F-2 PN T2 RAIL (6AG2515-2FM01-2AB0)",
-                  "product_id": "154",
+                  "product_id": "146",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2515-2FM01-2AB0"
@@ -2888,46 +2742,8 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIPLUS S7-1500 CPU 1515R-2 PN (6AG1515-2RM00-7AB0)",
-                  "product_id": "155",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1515-2RM00-7AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-1500 CPU 1515R-2 PN (6AG1515-2RM00-7AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIPLUS S7-1500 CPU 1515R-2 PN TX RAIL (6AG2515-2RM00-4AB0)",
-                  "product_id": "156",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG2515-2RM00-4AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-1500 CPU 1515R-2 PN TX RAIL (6AG2515-2RM00-4AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
                   "name": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN01-2AB0)",
-                  "product_id": "157",
+                  "product_id": "147",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1516-3AN01-2AB0"
@@ -2946,7 +2762,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN01-7AB0)",
-                  "product_id": "158",
+                  "product_id": "148",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1516-3AN01-7AB0"
@@ -2965,7 +2781,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN02-2AB0)",
-                  "product_id": "159",
+                  "product_id": "149",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1516-3AN02-2AB0"
@@ -2984,7 +2800,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN02-7AB0)",
-                  "product_id": "160",
+                  "product_id": "150",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1516-3AN02-7AB0"
@@ -3003,7 +2819,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516-3 PN/DP RAIL (6AG2516-3AN02-4AB0)",
-                  "product_id": "161",
+                  "product_id": "151",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2516-3AN02-4AB0"
@@ -3022,7 +2838,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516-3 PN/DP TX RAIL (6AG2516-3AN01-4AB0)",
-                  "product_id": "162",
+                  "product_id": "152",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2516-3AN01-4AB0"
@@ -3041,7 +2857,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516F-3 PN/DP (6AG1516-3FN01-2AB0)",
-                  "product_id": "163",
+                  "product_id": "153",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1516-3FN01-2AB0"
@@ -3060,7 +2876,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516F-3 PN/DP (6AG1516-3FN02-2AB0)",
-                  "product_id": "164",
+                  "product_id": "154",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1516-3FN02-2AB0"
@@ -3079,7 +2895,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516F-3 PN/DP RAIL (6AG2516-3FN02-2AB0)",
-                  "product_id": "165",
+                  "product_id": "155",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2516-3FN02-2AB0"
@@ -3098,7 +2914,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1516F-3 PN/DP RAIL (6AG2516-3FN02-4AB0)",
-                  "product_id": "166",
+                  "product_id": "156",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG2516-3FN02-4AB0"
@@ -3116,27 +2932,8 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIPLUS S7-1500 CPU 1517H-3 PN (6AG1517-3HP00-4AB0)",
-                  "product_id": "167",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1517-3HP00-4AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-1500 CPU 1517H-3 PN (6AG1517-3HP00-4AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
                   "name": "SIPLUS S7-1500 CPU 1518-4 PN/DP (6AG1518-4AP00-4AB0)",
-                  "product_id": "168",
+                  "product_id": "157",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1518-4AP00-4AB0"
@@ -3155,7 +2952,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1518-4 PN/DP MFP (6AG1518-4AX00-4AC0)",
-                  "product_id": "169",
+                  "product_id": "158",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1518-4AX00-4AC0"
@@ -3174,7 +2971,7 @@
                 "name": "vers:all/*",
                 "product": {
                   "name": "SIPLUS S7-1500 CPU 1518F-4 PN/DP (6AG1518-4FP00-4AB0)",
-                  "product_id": "170",
+                  "product_id": "159",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6AG1518-4FP00-4AB0"
@@ -3185,25 +2982,6 @@
             ],
             "category": "product_name",
             "name": "SIPLUS S7-1500 CPU 1518F-4 PN/DP (6AG1518-4FP00-4AB0)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/*",
-                "product": {
-                  "name": "SIPLUS S7-1500 CPU 1518HF-4 PN (6AG1518-4JP00-4AB0)",
-                  "product_id": "171",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6AG1518-4JP00-4AB0"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SIPLUS S7-1500 CPU 1518HF-4 PN (6AG1518-4JP00-4AB0)"
           }
         ],
         "category": "vendor",
@@ -3385,19 +3163,7 @@
           "156",
           "157",
           "158",
-          "159",
-          "160",
-          "161",
-          "162",
-          "163",
-          "164",
-          "165",
-          "166",
-          "167",
-          "168",
-          "169",
-          "170",
-          "171"
+          "159"
         ]
       },
       "remediations": [
@@ -3563,19 +3329,7 @@
             "156",
             "157",
             "158",
-            "159",
-            "160",
-            "161",
-            "162",
-            "163",
-            "164",
-            "165",
-            "166",
-            "167",
-            "168",
-            "169",
-            "170",
-            "171"
+            "159"
           ]
         },
         {
@@ -3740,19 +3494,7 @@
             "156",
             "157",
             "158",
-            "159",
-            "160",
-            "161",
-            "162",
-            "163",
-            "164",
-            "165",
-            "166",
-            "167",
-            "168",
-            "169",
-            "170",
-            "171"
+            "159"
           ]
         },
         {
@@ -3788,33 +3530,37 @@
             "42",
             "43",
             "47",
-            "49",
+            "48",
             "50",
-            "52",
+            "51",
             "53",
             "55",
             "57",
-            "59",
+            "58",
+            "60",
             "61",
-            "62",
-            "64",
-            "65",
+            "66",
+            "68",
             "70",
             "72",
-            "74",
-            "76",
+            "73",
+            "75",
             "77",
-            "78",
+            "79",
+            "80",
             "81",
             "83",
+            "84",
             "85",
-            "86",
             "87",
             "89",
             "90",
             "91",
             "92",
+            "93",
+            "94",
             "95",
+            "96",
             "97",
             "98",
             "99",
@@ -3877,19 +3623,7 @@
             "156",
             "157",
             "158",
-            "159",
-            "160",
-            "161",
-            "162",
-            "163",
-            "164",
-            "165",
-            "166",
-            "167",
-            "168",
-            "169",
-            "170",
-            "171"
+            "159"
           ]
         },
         {
@@ -3914,28 +3648,24 @@
             "44",
             "45",
             "46",
-            "48",
-            "51",
+            "49",
+            "52",
             "54",
             "56",
-            "58",
-            "60",
+            "59",
+            "62",
             "63",
-            "66",
+            "64",
+            "65",
             "67",
-            "68",
             "69",
             "71",
-            "73",
-            "75",
-            "79",
-            "80",
+            "74",
+            "76",
+            "78",
             "82",
-            "84",
-            "88",
-            "93",
-            "94",
-            "96"
+            "86",
+            "88"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -4107,19 +3837,7 @@
             "156",
             "157",
             "158",
-            "159",
-            "160",
-            "161",
-            "162",
-            "163",
-            "164",
-            "165",
-            "166",
-            "167",
-            "168",
-            "169",
-            "170",
-            "171"
+            "159"
           ]
         }
       ],

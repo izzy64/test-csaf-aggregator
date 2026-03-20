@@ -40,18 +40,18 @@
     "references": [
       {
         "category": "self",
-        "summary": "SSA-452276: Stored Cross-Site Scripting Vulnerability in SIMATIC S7-1500 - HTML Version",
+        "summary": "SSA-452276: Eval Injection Vulnerability in SIMATIC S7-1500 - HTML Version",
         "url": "https://cert-portal.siemens.com/productcert/html/ssa-452276.html"
       },
       {
         "category": "self",
-        "summary": "SSA-452276: Stored Cross-Site Scripting Vulnerability in SIMATIC S7-1500 - CSAF Version",
+        "summary": "SSA-452276: Eval Injection Vulnerability in SIMATIC S7-1500 - CSAF Version",
         "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-452276.json"
       }
     ],
-    "title": "SSA-452276: Stored Cross-Site Scripting Vulnerability in SIMATIC S7-1500",
+    "title": "SSA-452276: Eval Injection Vulnerability in SIMATIC S7-1500",
     "tracking": {
-      "current_release_date": "2026-03-13T00:00:00.000Z",
+      "current_release_date": "2026-03-19T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Removed S7-1500 R/H CPU variants as they are not affected by CVE-2025-40943"
+        },
+        {
+          "date": "2026-03-19T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Adjusted title, CVE description enrichment and CWE adjustment"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -2993,13 +2999,13 @@
     {
       "cve": "CVE-2025-40943",
       "cwe": {
-        "id": "CWE-79",
-        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        "id": "CWE-95",
+        "name": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Affected devices do not properly sanitize contents of trace files. This could allow an attacker to inject code through social engineering a legitimate user to import a specially crafted trace file",
+          "text": "Affected devices do not properly sanitize contents of trace files.\r\n\r\nThis could allow an attacker to inject code through social engineering an authorized user, who has the function right \"Read diagnostics\", to import a specially crafted trace file.\r\n\r\nThe malicious trace file is insufficiently sanitized and malicious code could be executed in the clients browser session and trigger PLC operations via the webserver that the legitimate user is authorized to perform.",
           "title": "Summary"
         }
       ],

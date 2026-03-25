@@ -55,7 +55,7 @@
       },
       {
         "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability, such as:",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability.",
         "title": "Recommended Practices"
       },
       {
@@ -207,11 +207,11 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "WHILL Model C2 Electric Wheelchairs and Model F Power Chairs",
+    "title": "WHILL Model C2 Electric Wheelchairs and Model F Power Chairs (Update A)",
     "tracking": {
-      "current_release_date": "2025-12-30T07:00:00.000000Z",
+      "current_release_date": "2026-03-24T06:00:00.000000Z",
       "generator": {
-        "date": "2025-12-29T19:38:56.317496Z",
+        "date": "2026-03-23T17:44:30.348586Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -225,10 +225,16 @@
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
+        },
+        {
+          "date": "2026-03-24T06:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - Revision to mitigation section"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -281,6 +287,11 @@
           "category": "summary",
           "text": "WHILL Model C2 Electric Wheelchairs and Model F Power Chairs do not enforce authentication for Bluetooth connections. An attacker within range can pair with the device and issue movement commands, override speed restrictions, and manipulate configuration profiles without any credentials or user interaction.",
           "title": "Vulnerability Summary"
+        },
+        {
+          "category": "details",
+          "text": "SSVCv2/E:N/A:Y/2026-03-23T06:00:00.000000Z",
+          "title": "SSVC"
         }
       ],
       "product_status": {
@@ -290,6 +301,11 @@
         ]
       },
       "references": [
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/306.html"
+        },
         {
           "category": "external",
           "summary": "www.cve.org",
@@ -309,63 +325,21 @@
       "remediations": [
         {
           "category": "mitigation",
-          "details": "WHILL has deployed the following fixes on December 29th, 2025:",
+          "details": "WHILL has released Model C2: HMI v2.24. This firmware includes a modification to disable the BLE interface after installation.",
           "product_ids": [
-            "CSAFPID-0001",
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "WHILL has released Model F: HMI v2.25. This firmware includes a modification to disable the BLE interface after installation.",
+          "product_ids": [
             "CSAFPID-0002"
           ]
         },
         {
           "category": "mitigation",
-          "details": "Device-Side Speed Profile Protection:",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Implemented a safeguard in the wheelchair firmware to prevent unauthorized modification of speed profiles from the mobile application.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Unlock Command Restriction During Motion:",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Block unlock commands issued from either the mobile app or the smart key while the wheelchair is in motion.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Application JSON File Obfuscation:",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "Obfuscate the configuration files used by the mobile application by converting JSON files into a binary format on both Android and iOS platforms.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "For more information, contact WHILL Inc.",
+          "details": "For more information, contact WHILL Inc. (https://whill.inc/us/contact/)",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"

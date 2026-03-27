@@ -47,7 +47,7 @@
       },
       {
         "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability, such as:",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability.",
         "title": "Recommended Practices"
       },
       {
@@ -189,11 +189,11 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "Honeywell IQ4x BMS Controller",
+    "title": "Honeywell IQ4 Series BMS Controller (Update A)",
     "tracking": {
-      "current_release_date": "2026-03-10T06:00:00.000000Z",
+      "current_release_date": "2026-03-26T06:00:00.000000Z",
       "generator": {
-        "date": "2026-03-09T17:43:15.286722Z",
+        "date": "2026-03-25T21:11:23.243110Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -207,10 +207,16 @@
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
+        },
+        {
+          "date": "2026-03-26T06:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - Revised Affected Versions, updated vulnerability description and scores, and revised Mitigations to include the date of when secure default installations were enforced."
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -221,99 +227,71 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                "name": "<v3.30",
                 "product": {
-                  "name": "Honeywell IQ4E: >=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                  "name": "Honeywell IQ4E Firmware: <v3.30",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "IQ4E"
+            "name": "IQ4E Firmware"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                "name": "<v3.30",
                 "product": {
-                  "name": "Honeywell IQ412: >=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                  "name": "Honeywell IQ412 Firmware: <v3.30",
                   "product_id": "CSAFPID-0002"
                 }
               }
             ],
             "category": "product_name",
-            "name": "IQ412"
+            "name": "IQ412 Firmware"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                "name": "<v3.30",
                 "product": {
-                  "name": "Honeywell IQ422: >=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                  "name": "Honeywell IQ422 Firmware: <v3.30",
                   "product_id": "CSAFPID-0003"
                 }
               }
             ],
             "category": "product_name",
-            "name": "IQ422"
+            "name": "IQ422 Firmware"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                "name": "<v3.30",
                 "product": {
-                  "name": "Honeywell IQ4NC: >=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                  "name": "Honeywell IQ4NC Firmware: <v3.30",
                   "product_id": "CSAFPID-0004"
                 }
               }
             ],
             "category": "product_name",
-            "name": "IQ4NC"
+            "name": "IQ4NC Firmware"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": ">=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                "name": "<v3.30",
                 "product": {
-                  "name": "Honeywell IQ41x: >=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
+                  "name": "Honeywell IQ41x Firmware: <v3.30",
                   "product_id": "CSAFPID-0005"
                 }
               }
             ],
             "category": "product_name",
-            "name": "IQ41x"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": ">=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
-                "product": {
-                  "name": "Honeywell IQ3: >=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
-                  "product_id": "CSAFPID-0006"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "IQ3"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": ">=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
-                "product": {
-                  "name": "Honeywell IQECO: >=Firmware_v3.50_3.44|<4.36_build_4.3.7.9",
-                  "product_id": "CSAFPID-0007"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "IQECO"
+            "name": "IQ41x Firmware"
           }
         ],
         "category": "vendor",
@@ -331,12 +309,12 @@
       "notes": [
         {
           "category": "summary",
-          "text": "The Honeywell IQ4x building management controller, exposes its full web-based HMI without authentication in its factory-default configuration. With no user module configured, security is disabled by design and the system operates under a System Guest (level 100) context, granting read/write privileges to any party able to reach the HTTP interface. Authentication controls are only enforced after a web user is created via U.htm, which dynamically enables the user module. Because this function is accessible prior to authentication, a remote user can create a new account with administrative read/write permissions enabling the user module and imposing authentication under attacker-controlled credentials. This action can effectively lock legitimate operators out of local and web-based configuration and administration.",
+          "text": "Prior to version 3.30, Honeywell IQ4 Series of building management controllers expose a web-based HMI without authentication in its factory-default configuration. With no user module configured, the system operates under a System Guest (level 100) context, granting read/write privileges to any party able to reach the HTTP interface. Authentication controls are enforced after a web user is created during commissioning, which dynamically enables the user module. Because this function is accessible prior to authentication, a remote user can create a new account with administrative read/write permissions enabling the user module and imposing authentication under attacker-controlled credentials. This action can effectively lock legitimate users out of the controller.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-03-09T06:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-03-25T06:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -346,9 +324,7 @@
           "CSAFPID-0002",
           "CSAFPID-0003",
           "CSAFPID-0004",
-          "CSAFPID-0005",
-          "CSAFPID-0006",
-          "CSAFPID-0007"
+          "CSAFPID-0005"
         ]
       },
       "references": [
@@ -365,36 +341,145 @@
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Honeywell is aware of the issue, but has not released a fix. For more information, contact Honeywell directly. https://www.honeywell.com/us/en/contact.",
+          "details": "Version 3.30, released June 2015, and later force users to install a user module upon the commissioning of the device. This user module enables authentication and other security features for the web interface. When updating previously commissioned devices to firmware versions 3.30 or later (current version is 4.3x), users are not forced to install a user module unless they have changed their device configuration files after updating the firmware version. Honeywell recommends that users check their firmware versions and ensure that a user module has been set up to enable device security features, even if they are running firmware version 3.30 or later.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
             "CSAFPID-0003",
             "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007"
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Honeywell recommends that users with affected products take the following steps:",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Apply product updates as available.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Follow guidance in the product security manual to ensure isolation of network segments hosting building automation controllers.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Ensure adequate security controls are in place between OT and IT segments.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Disable unnecessary accounts and services.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Restrict system access to authorized personnel only and follow a least privilege approach.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Apply defense-in-depth strategies.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "Log and monitor network traffic for suspicious activity.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "mitigation",
+          "details": "For IQ4 Series controllers, ensure the latest available firmware version is utilized. The latest firmware may be obtained from a dealer or the Trend Partner Network https://partners.trendcontrols.com/signin (login required).",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
           ],
-          "url": "https://www.honeywell.com/us/en/contact"
+          "url": "https://partners.trendcontrols.com/signin"
+        },
+        {
+          "category": "mitigation",
+          "details": "Follow the Security Best Practice for Trend Products included with product documentation. Additional copies may be obtained from a dealer or the Trend Partner Network https://partners.trendcontrols.com/signin (login required).",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005"
+          ],
+          "url": "https://partners.trendcontrols.com/signin"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 10.0,
+            "baseScore": 9.8,
             "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -402,9 +487,7 @@
             "CSAFPID-0002",
             "CSAFPID-0003",
             "CSAFPID-0004",
-            "CSAFPID-0005",
-            "CSAFPID-0006",
-            "CSAFPID-0007"
+            "CSAFPID-0005"
           ]
         }
       ]

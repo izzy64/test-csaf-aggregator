@@ -1,0 +1,231 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Multiple SICAM 8 products are affected by multiple vulnerabilities that could lead to denial of service, namely:\n\n- \nSICAM A8000 Device firmware\n\n- CPCI85 for CP-8031/CP-8050\n- SICORE for CP-8010/CP-8012 \n- RTUM85 for CP-8010/CP-8012 \n\n\n- \nSICAM EGS Device firmware\n\n- CPCI85\n\n\n- \nSICAM S8000\n\n- SICORE\n- RTUM85\n\n\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\nhttps://www.siemens.com/gridsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-246443: Multiple Vulnerabilities in SICAM 8 Products - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-246443.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-246443: Multiple Vulnerabilities in SICAM 8 Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-246443.json"
+      }
+    ],
+    "title": "SSA-246443: Multiple Vulnerabilities in SICAM 8 Products",
+    "tracking": {
+      "current_release_date": "2026-03-26T00:00:00.000Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-246443",
+      "initial_release_date": "2026-03-26T00:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-03-26T00:00:00.000Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<26.10",
+                "product": {
+                  "name": "CPCI85 Central Processing/Communication",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CPCI85 Central Processing/Communication"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<26.10",
+                "product": {
+                  "name": "RTUM85\u00a0RTU Base",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "RTUM85\u00a0RTU Base"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<26.10.0",
+                "product": {
+                  "name": "SICORE Base system",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SICORE Base system"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-27663",
+      "cwe": {
+        "id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application contains denial-of-service (DoS) vulnerability. The remote operation mode is susceptible to a resource exhaustion condition when subjected to a high volume of requests. Sending multiple requests can exhaust resources, preventing parameterization and requiring a reset or reboot to restore functionality.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V26.10 or later version\n\nThe firmware RTUM85 V26.10 is present within \u201cCP-8010/CP-8012 Package\u201d V26.10 \n\nhttps://support.industry.siemens.com/cs/ww/en/view/109972894/ and also within \u201cSICAM S8000  Package\u201d V26.10\n\nhttps://support.industry.siemens.com/cs/document/109818240",
+          "product_ids": [
+            "2"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V26.10 or later version \n\nThe firmware CPCI85 V26.10 is present within \u201cCP-8031/CP-8050 Package\u201d V26.10\n\nhttps://support.industry.siemens.com/cs/ww/en/view/109804985/\n\nand also within \u201cSICAM EGS Package\u201d V26.10\n\nhttps://support.industry.siemens.com/cs/document/109972536/",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2026-27663"
+    },
+    {
+      "cve": "CVE-2026-27664",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The affected application contains an out-of-bounds write vulnerability while parsing specially crafted XML inputs. This could allow an unauthenticated attacker to exploit this issue by sending a malicious XML request, which may cause the service to crash, resulting in a denial-of-service condition.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V26.10 or later version \n\nThe firmware CPCI85 V26.10 is present within \u201cCP-8031/CP-8050 Package\u201d V26.10\n\nhttps://support.industry.siemens.com/cs/ww/en/view/109804985/\n\nand also within \u201cSICAM EGS Package\u201d V26.10\n\nhttps://support.industry.siemens.com/cs/document/109972536/",
+          "product_ids": [
+            "1"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V26.10.0 or later version \n\nThe firmware SICORE V26.10.0 is present within \u201cCP-8010/CP-8012 Package\u201d V26.10\n\nhttps://support.industry.siemens.com/cs/ww/en/view/109972894/ and also within \u201cSICAM S8000  Package\u201d V26.10 \n\nhttps://support.industry.siemens.com/cs/document/109818240",
+          "product_ids": [
+            "3"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2026-27664"
+    }
+  ]
+}

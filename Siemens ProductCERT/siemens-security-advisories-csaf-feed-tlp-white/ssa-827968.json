@@ -51,7 +51,7 @@
     ],
     "title": "SSA-827968: Vulnerability in Nozomi Guardian/CMC on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2026-01-13T00:00:00Z",
+      "current_release_date": "2026-04-14T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-827968",
-      "initial_release_date": "2026-01-13T00:00:00Z",
+      "initial_release_date": "2026-01-13T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2026-01-13T00:00:00Z",
+          "date": "2026-01-13T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-04-14T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added CVE-2025-40894"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -222,6 +228,48 @@
         }
       ],
       "title": "CVE-2025-40893"
+    },
+    {
+      "cve": "CVE-2025-40894",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored HTML Injection vulnerability was discovered in the Alerted Nodes Dashboard functionality due to improper validation on an input parameter.\n\n\n\nA malicious authenticated user with the required privileges could edit a node label to inject HTML tags. If the system is configured to use the Alerted Nodes Dashboard, and alerts are reported for the affected node, then the injected HTML may render in the browser of a victim user interacting with it, enabling phishing and possibly open redirect attacks. Full XSS exploitation and direct information disclosure are prevented by the existing input validation and Content Security Policy configuration.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.4,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40894"
     },
     {
       "cve": "CVE-2025-40898",

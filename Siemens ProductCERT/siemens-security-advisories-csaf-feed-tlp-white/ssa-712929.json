@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "A vulnerability in the openSSL component (CVE-2022-0778, [0]) could allow an attacker to create a denial of service condition by providing specially crafted elliptic curve certificates to products that use a vulnerable version of openSSL.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.\n\n[0] \nhttps://www.openssl.org/news/secadv/20220315.txt",
+        "text": "A vulnerability in the openSSL component (CVE-2022-0778, [0]) could allow an attacker to create a denial of service condition by providing specially crafted elliptic curve certificates to products that use a vulnerable version of openSSL.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.\n\n[0] https://www.openssl.org/news/secadv/20220315.txt",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-712929: Denial of Service Vulnerability in OpenSSL (CVE-2022-0778) Affecting Industrial Products",
     "tracking": {
-      "current_release_date": "2025-09-09T00:00:00Z",
+      "current_release_date": "2026-04-14T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,137 +59,143 @@
         }
       },
       "id": "SSA-712929",
-      "initial_release_date": "2022-06-14T00:00:00Z",
+      "initial_release_date": "2022-06-14T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2022-06-14T00:00:00Z",
+          "date": "2022-06-14T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2022-07-12T00:00:00Z",
+          "date": "2022-07-12T00:00:00.000Z",
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added SCALANCE X-200, X-200 IRT, X-300, XM-400, XR-500, XR-300WG, XB-200, XC-200, XF-200, XP-200 product families and Security Configuration Tool (SCT) as affected; added fix for RUGGEDCOM ROX devices and SIMATIC MV500 devices; no fix planned for SIMATIC NET PC Software, SIMATIC CP 343-1 Advanced and SIMATIC CP 443-1 Advanced (incl. SIPLUS NET variants)"
         },
         {
-          "date": "2022-08-09T00:00:00Z",
+          "date": "2022-08-09T00:00:00.000Z",
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added fix for Industrial Edge - OPC UA Connector, SIMATIC Cloud Connect 7 gateways, SIMATIC Logon, SIMATIC PDM, SIMATIC STEP 7 V5.X and TeleControl Server Basic; added SCALANCE W1750D as affected; clarified that Industrial Edge - PROFINET IO Connector is not affected"
         },
         {
-          "date": "2022-09-13T00:00:00Z",
+          "date": "2022-09-13T00:00:00.000Z",
           "legacy_version": "1.3",
           "number": "4",
           "summary": "Added fix for RUGGEDCOM CROSSBOW Station Access Controller (SAC), SCALANCE XM-400 and XR-500 product families, and SINEC INS"
         },
         {
-          "date": "2022-10-11T00:00:00Z",
+          "date": "2022-10-11T00:00:00.000Z",
           "legacy_version": "1.4",
           "number": "5",
           "summary": "Added fix for SIMATIC WinCC Unified, TIA Portal V17, and SINEC NMS; added SCALANCE W-700 and W-1700 product families as affected; corrected several product names in the SCALANCE XB and XP product families"
         },
         {
-          "date": "2022-12-13T00:00:00Z",
+          "date": "2022-12-13T00:00:00.000Z",
           "legacy_version": "1.5",
           "number": "6",
           "summary": "Added SIMATIC Process Historian and SIMATIC HMI Unified Comfort Panels; added fix for SIMATIC PCS neo, SIMATIC Drive Controller family, SIMATIC S7-PLCSIM Advanced, SIMATIC S7-1500 and S7-1200 CPU families, and TIA Administrator; no fix planned for TIA Portal V16"
         },
         {
-          "date": "2023-01-10T00:00:00Z",
+          "date": "2023-01-10T00:00:00.000Z",
           "legacy_version": "1.6",
           "number": "7",
           "summary": "Added fix for SCALANCE W-700 IEEE 802.11ax product family"
         },
         {
-          "date": "2023-02-14T00:00:00Z",
+          "date": "2023-02-14T00:00:00.000Z",
           "legacy_version": "1.7",
           "number": "8",
           "summary": "Added fix for SCALANCE W1750D product family"
         },
         {
-          "date": "2023-03-14T00:00:00Z",
+          "date": "2023-03-14T00:00:00.000Z",
           "legacy_version": "1.8",
           "number": "9",
           "summary": "Added fix for SIMATIC CP 1542SP-1 and SIMATIC CP 1543SP-1, RUGGEDCOM RM1224 family, SCALANCE M-800 family, SCALANCE MUM-800 family, SCALANCE S615. Added missing affected products SCALANCE M876-4 (6GK5876-4AA10-2BA2) and SCALANCE S615 EEC (6GK5615-0AA01- 2AA2)"
         },
         {
-          "date": "2023-04-11T00:00:00Z",
+          "date": "2023-04-11T00:00:00.000Z",
           "legacy_version": "1.9",
           "number": "10",
           "summary": "Added fix for SCALANCE X-200IRT family, SIMATIC CP 443-1 Advanced, TIM 1531 IRC, SCALANCE XB-200, XC-200, XP-200, XF-200BA, XR-300WG family, and for SIMATIC WinCC"
         },
         {
-          "date": "2023-05-09T00:00:00Z",
+          "date": "2023-05-09T00:00:00.000Z",
           "legacy_version": "2.0",
           "number": "11",
           "summary": "Added fix for SIMATIC S7-1500 Software Controller; fix planned for SIMATIC NET PC Software V17"
         },
         {
-          "date": "2023-06-13T00:00:00Z",
+          "date": "2023-06-13T00:00:00.000Z",
           "legacy_version": "2.1",
           "number": "12",
           "summary": "Added fix for SIMOTION; clarified that no fix is planned for V8.2, V9.0, V9.1 of OpenPCS 7 and for V8.2, V9.0 of SIMATIC PCS 7; added fix and mitigation information for SIMATIC PCS 7 V9.1"
         },
         {
-          "date": "2023-07-11T00:00:00Z",
+          "date": "2023-07-11T00:00:00.000Z",
           "legacy_version": "2.2",
           "number": "13",
           "summary": "Expanded SIMATIC S7-1500 CPU family to individual products/MLFBs and added additional fix for V2 firmware version line; Fix for SIMATIC Drive Controller available already with V2.9.7"
         },
         {
-          "date": "2023-09-12T00:00:00Z",
+          "date": "2023-09-12T00:00:00.000Z",
           "legacy_version": "2.3",
           "number": "14",
           "summary": "Clarified SIMATIC S7-1500 Software Controller versions and adjusted fix for SIMATIC S7-1500 Software Controller V2; Clarified SIMATIC ET 200SP Open Controller versions and added fix for SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants)"
         },
         {
-          "date": "2023-10-10T00:00:00Z",
+          "date": "2023-10-10T00:00:00.000Z",
           "legacy_version": "2.4",
           "number": "15",
           "summary": "Added fix for SIMATIC CP 1242-7 V2 family, SIMATIC CP 1243-1 family, SIMATIC CP 1243-7 LTE family, SIMATIC CP 1243-8 IRC and for SIMATIC NET PC Software V17"
         },
         {
-          "date": "2024-01-09T00:00:00Z",
+          "date": "2024-01-09T00:00:00.000Z",
           "legacy_version": "2.5",
           "number": "16",
           "summary": "Added fix for SIMATIC PCS 7 TeleControl; Clarified that no fix is planned for SINAUT Software ST7sc and SINAUT ST7CC"
         },
         {
-          "date": "2024-04-09T00:00:00Z",
+          "date": "2024-04-09T00:00:00.000Z",
           "legacy_version": "2.6",
           "number": "17",
           "summary": "Added fix for SIMATIC CP 1543-1 (incl. SIPLUS variants); Updated fix for TIM 1531 IRC (incl. SIPLUS NET variants)"
         },
         {
-          "date": "2024-05-14T00:00:00Z",
+          "date": "2024-05-14T00:00:00.000Z",
           "legacy_version": "2.7",
           "number": "18",
           "summary": "Expanded SIMATIC WinCC family to individual version lines; SIMATIC PCS 7 V9.1: clarified that V9.1 SP2 UC04 fixes the issue in SIMATIC WinCC"
         },
         {
-          "date": "2024-07-09T00:00:00Z",
+          "date": "2024-07-09T00:00:00.000Z",
           "legacy_version": "2.8",
           "number": "19",
           "summary": "Added fix for SCALANCE X-300 family (incl. X408 and SIPLUS NET variants)"
         },
         {
-          "date": "2025-02-11T00:00:00Z",
+          "date": "2025-02-11T00:00:00.000Z",
           "legacy_version": "2.9",
           "number": "20",
           "summary": "Adjusted Totally Integrated Automation Portal (TIA Portal) entries and clarified that no fix is planned for SCALANCE W-1700 IEEE 802.11ac family"
         },
         {
-          "date": "2025-09-09T00:00:00Z",
+          "date": "2025-09-09T00:00:00.000Z",
           "legacy_version": "3.0",
           "number": "21",
           "summary": "Added fix for  SIMATIC CP 1545-1; Updated several product names and expanded SIMATIC S7-1200 CPU family to individual products and MLFB IDs"
+        },
+        {
+          "date": "2026-04-14T00:00:00.000Z",
+          "legacy_version": "3.1",
+          "number": "22",
+          "summary": "Added fix for SCALANCE W-700 IEEE 802.11n family"
         }
       ],
       "status": "interim",
-      "version": "21"
+      "version": "22"
     }
   },
   "product_tree": {
@@ -1103,7 +1109,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AA0)",
                   "product_id": "53",
@@ -1122,7 +1128,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AB0)",
                   "product_id": "54",
@@ -1141,7 +1147,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AA0)",
                   "product_id": "55",
@@ -1160,7 +1166,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AB0)",
                   "product_id": "56",
@@ -1179,7 +1185,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AC0)",
                   "product_id": "57",
@@ -1198,7 +1204,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AA0)",
                   "product_id": "58",
@@ -1217,7 +1223,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AA6)",
                   "product_id": "59",
@@ -1236,7 +1242,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W734-1 RJ45 (6GK5734-1FX00-0AB0)",
                   "product_id": "60",
@@ -1255,7 +1261,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W734-1 RJ45 (USA) (6GK5734-1FX00-0AB6)",
                   "product_id": "61",
@@ -1274,7 +1280,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W738-1 M12 (6GK5738-1GY00-0AA0)",
                   "product_id": "62",
@@ -1293,7 +1299,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W738-1 M12 (6GK5738-1GY00-0AB0)",
                   "product_id": "63",
@@ -1312,7 +1318,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W748-1 M12 (6GK5748-1GD00-0AA0)",
                   "product_id": "64",
@@ -1331,7 +1337,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W748-1 M12 (6GK5748-1GD00-0AB0)",
                   "product_id": "65",
@@ -1350,7 +1356,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W748-1 RJ45 (6GK5748-1FC00-0AA0)",
                   "product_id": "66",
@@ -1369,7 +1375,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W748-1 RJ45 (6GK5748-1FC00-0AB0)",
                   "product_id": "67",
@@ -1388,7 +1394,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W761-1 RJ45 (6GK5761-1FC00-0AA0)",
                   "product_id": "68",
@@ -1407,7 +1413,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W761-1 RJ45 (6GK5761-1FC00-0AB0)",
                   "product_id": "69",
@@ -1426,7 +1432,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W774-1 M12 EEC (6GK5774-1FY00-0TA0)",
                   "product_id": "70",
@@ -1445,7 +1451,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W774-1 M12 EEC (6GK5774-1FY00-0TB0)",
                   "product_id": "71",
@@ -1464,7 +1470,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AA0)",
                   "product_id": "72",
@@ -1483,7 +1489,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AA6)",
                   "product_id": "73",
@@ -1502,7 +1508,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AB0)",
                   "product_id": "74",
@@ -1521,7 +1527,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W774-1 RJ45 (6GK5774-1FX00-0AC0)",
                   "product_id": "75",
@@ -1540,7 +1546,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W774-1 RJ45 (USA) (6GK5774-1FX00-0AB6)",
                   "product_id": "76",
@@ -1559,7 +1565,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W778-1 M12 (6GK5778-1GY00-0AA0)",
                   "product_id": "77",
@@ -1578,7 +1584,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W778-1 M12 (6GK5778-1GY00-0AB0)",
                   "product_id": "78",
@@ -1597,7 +1603,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W778-1 M12 EEC (6GK5778-1GY00-0TA0)",
                   "product_id": "79",
@@ -1616,7 +1622,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W778-1 M12 EEC (USA) (6GK5778-1GY00-0TB0)",
                   "product_id": "80",
@@ -1635,7 +1641,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-1 RJ45 (6GK5786-1FC00-0AA0)",
                   "product_id": "81",
@@ -1654,7 +1660,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-1 RJ45 (6GK5786-1FC00-0AB0)",
                   "product_id": "82",
@@ -1673,7 +1679,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AA0)",
                   "product_id": "83",
@@ -1692,7 +1698,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AB0)",
                   "product_id": "84",
@@ -1711,7 +1717,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-2 RJ45 (6GK5786-2FC00-0AC0)",
                   "product_id": "85",
@@ -1730,7 +1736,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-2 SFP (6GK5786-2FE00-0AA0)",
                   "product_id": "86",
@@ -1749,7 +1755,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-2 SFP (6GK5786-2FE00-0AB0)",
                   "product_id": "87",
@@ -1768,7 +1774,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-2IA RJ45 (6GK5786-2HC00-0AA0)",
                   "product_id": "88",
@@ -1787,7 +1793,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W786-2IA RJ45 (6GK5786-2HC00-0AB0)",
                   "product_id": "89",
@@ -1806,7 +1812,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-1 M12 (6GK5788-1GD00-0AA0)",
                   "product_id": "90",
@@ -1825,7 +1831,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-1 M12 (6GK5788-1GD00-0AB0)",
                   "product_id": "91",
@@ -1844,7 +1850,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-1 RJ45 (6GK5788-1FC00-0AA0)",
                   "product_id": "92",
@@ -1863,7 +1869,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-1 RJ45 (6GK5788-1FC00-0AB0)",
                   "product_id": "93",
@@ -1882,7 +1888,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 M12 (6GK5788-2GD00-0AA0)",
                   "product_id": "94",
@@ -1901,7 +1907,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 M12 (6GK5788-2GD00-0AB0)",
                   "product_id": "95",
@@ -1920,7 +1926,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TA0)",
                   "product_id": "96",
@@ -1939,7 +1945,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TB0)",
                   "product_id": "97",
@@ -1958,7 +1964,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 M12 EEC (6GK5788-2GD00-0TC0)",
                   "product_id": "98",
@@ -1977,7 +1983,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AA0)",
                   "product_id": "99",
@@ -1996,7 +2002,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AB0)",
                   "product_id": "100",
@@ -2015,7 +2021,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<6.6.0",
                 "product": {
                   "name": "SCALANCE W788-2 RJ45 (6GK5788-2FC00-0AC0)",
                   "product_id": "101",
@@ -11607,55 +11613,6 @@
             "50",
             "51",
             "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59",
-            "60",
-            "61",
-            "62",
-            "63",
-            "64",
-            "65",
-            "66",
-            "67",
-            "68",
-            "69",
-            "70",
-            "71",
-            "72",
-            "73",
-            "74",
-            "75",
-            "76",
-            "77",
-            "78",
-            "79",
-            "80",
-            "81",
-            "82",
-            "83",
-            "84",
-            "85",
-            "86",
-            "87",
-            "88",
-            "89",
-            "90",
-            "91",
-            "92",
-            "93",
-            "94",
-            "95",
-            "96",
-            "97",
-            "98",
-            "99",
-            "100",
-            "101",
             "118",
             "119",
             "120",
@@ -12289,6 +12246,62 @@
             "451"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109811212/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.6.0 or later version",
+          "product_ids": [
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100",
+            "101"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109996102/"
         },
         {
           "category": "vendor_fix",

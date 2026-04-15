@@ -1,0 +1,288 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Multiple Siemens applications are affected by improper certificate validation in Siemens Analytics Toolkit. This could allow an unauthenticated remote attacker to perform man in the middle attacks.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-981622: Improper Certificate Validation Vulnerability in Siemens Analytics Toolkit - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-981622.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-981622: Improper Certificate Validation Vulnerability in Siemens Analytics Toolkit - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-981622.json"
+      }
+    ],
+    "title": "SSA-981622: Improper Certificate Validation Vulnerability in Siemens Analytics Toolkit",
+    "tracking": {
+      "current_release_date": "2026-04-14T00:00:00.000Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-981622",
+      "initial_release_date": "2026-04-14T00:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-04-14T00:00:00.000Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        }
+      ],
+      "status": "interim",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.5.8.2",
+                "product": {
+                  "name": "Siemens Software Center",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siemens Software Center"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2506.6000",
+                "product": {
+                  "name": "Simcenter 3D",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter 3D"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2506.0002",
+                "product": {
+                  "name": "Simcenter Femap",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter Femap"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2602",
+                "product": {
+                  "name": "Simcenter STAR-CCM+",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter STAR-CCM+"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V225.0 Update 13",
+                "product": {
+                  "name": "Solid Edge SE2025",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Solid Edge SE2025"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "All versions < V226.0 Update 04",
+                "product": {
+                  "name": "Solid Edge SE2026",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Solid Edge SE2026"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2504.0008",
+                "product": {
+                  "name": "Tecnomatix Plant Simulation",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Tecnomatix Plant Simulation"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-40745",
+      "cwe": {
+        "id": "CWE-295",
+        "name": "Improper Certificate Validation"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Affected applications do not properly validate client certificates to connect to Analytics Service endpoint. This could allow an unauthenticated remote attacker to perform man in the middle attacks.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update to V225.0 Update 13 or later version",
+          "product_ids": [
+            "5"
+          ],
+          "url": "https://support.sw.siemens.com/product/246738425/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V226.0 Update 04 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://support.sw.siemens.com/product/246738425/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2504.0008 or later version",
+          "product_ids": [
+            "7"
+          ],
+          "url": "https://support.sw.siemens.com/product/297028302/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2506.0002 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://support.sw.siemens.com/product/275652363/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2506.6000 or later version",
+          "product_ids": [
+            "2"
+          ],
+          "url": "https://support.sw.siemens.com/product/289054037/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V2602 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.sw.siemens.com/product/226870983/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.5.8.2 or later version",
+          "product_ids": [
+            "1"
+          ],
+          "url": "https://www.sw.siemens.com/en-US/siemens-software-center/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 3.7,
+            "baseSeverity": "LOW",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40745"
+    }
+  ]
+}

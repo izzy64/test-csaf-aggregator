@@ -51,7 +51,7 @@
     ],
     "title": "SSA-311973: Multiple Local Privilege Escalation Vulnerabilities in SINEC NMS and User Management Component (UMC)",
     "tracking": {
-      "current_release_date": "2026-02-10T00:00:00Z",
+      "current_release_date": "2026-04-14T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-311973",
-      "initial_release_date": "2026-02-10T00:00:00Z",
+      "initial_release_date": "2026-02-10T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2026-02-10T00:00:00Z",
+          "date": "2026-02-10T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-04-14T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix version for SINEC NMS for CVE-2026-25656"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -88,7 +94,7 @@
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "All versions < V4.0 SP3",
                 "product": {
                   "name": "SINEC NMS",
                   "product_id": "2"
@@ -192,10 +198,11 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update UMC to V2.15.2.1 or later compatible version https://support.industry.siemens.com/cs/document/109996127/",
+          "details": "Update to V4.0 SP3 or later version",
           "product_ids": [
             "2"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/110000760/"
         }
       ],
       "scores": [

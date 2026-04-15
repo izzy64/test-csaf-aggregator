@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SIMOTION SCOUT, SIMOTION SCOUT TIA and SINAMICS STARTER are affected by an XXE injection vulnerability that could allow an attacker to access arbitrary application files.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "SIMOTION SCOUT, SIMOTION SCOUT TIA and SINAMICS STARTER are affected by an XXE injection vulnerability that could allow an attacker to access arbitrary application files.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-186293: XML External Entity (XXE) Injection Vulnerability in SIMOTION SCOUT, SIMOTION SCOUT TIA and SINAMICS STARTER",
     "tracking": {
-      "current_release_date": "2025-10-14T00:00:00Z",
+      "current_release_date": "2026-04-14T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,23 +59,29 @@
         }
       },
       "id": "SSA-186293",
-      "initial_release_date": "2025-08-12T00:00:00Z",
+      "initial_release_date": "2025-08-12T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-08-12T00:00:00Z",
+          "date": "2025-08-12T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2025-10-14T00:00:00Z",
+          "date": "2025-10-14T00:00:00.000Z",
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for SINAMICS STARTER V5.7"
+        },
+        {
+          "date": "2026-04-14T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Updated remediation to \"No Fix is Planned\" for SIMOTION SCOUT TIA V5.4 and V5.5"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -293,18 +299,12 @@
           "category": "no_fix_planned",
           "details": "Currently no fix is planned",
           "product_ids": [
+            "1",
+            "2",
             "5",
             "6",
             "9",
             "10"
-          ]
-        },
-        {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "1",
-            "2"
           ]
         },
         {

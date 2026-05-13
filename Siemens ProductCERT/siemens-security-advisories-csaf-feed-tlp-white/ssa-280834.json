@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "SCALANCE M-800 and SC-600 families are affected by improper input validation in the OpenVPN authentication. \n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "SCALANCE M-800 and SC-600 families are affected by improper input validation in the OpenVPN authentication. \n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-280834: Improper OpenVPN Credential Validation Vulnerability in SCALANCE M-800 and SC-600 Families",
     "tracking": {
-      "current_release_date": "2025-03-11T00:00:00Z",
+      "current_release_date": "2026-05-12T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-280834",
-      "initial_release_date": "2025-03-11T00:00:00Z",
+      "initial_release_date": "2025-03-11T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-03-11T00:00:00Z",
+          "date": "2025-03-11T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-05-12T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for SCALANCE SC-600 family"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,7 +86,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "RUGGEDCOM RM1224 LTE(4G) EU (6GK6108-4AM00-2BA2)",
                   "product_id": "1",
@@ -99,7 +105,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "RUGGEDCOM RM1224 LTE(4G) NAM (6GK6108-4AM00-2DA2)",
                   "product_id": "2",
@@ -118,7 +124,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M804PB (6GK5804-0AP00-2AA2)",
                   "product_id": "3",
@@ -137,7 +143,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M812-1 ADSL-Router family",
                   "product_id": "4"
@@ -151,7 +157,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M816-1 ADSL-Router family",
                   "product_id": "5"
@@ -165,7 +171,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2)",
                   "product_id": "6",
@@ -184,7 +190,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M874-2 (6GK5874-2AA00-2AA2)",
                   "product_id": "7",
@@ -203,29 +209,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
-                "product": {
-                  "name": "SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2)",
-                  "product_id": "8",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "6GK5874-3AA00-2FA2"
-                    ]
-                  }
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2)"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M874-3 (6GK5874-3AA00-2AA2)",
-                  "product_id": "9",
+                  "product_id": "8",
                   "product_identification_helper": {
                     "model_numbers": [
                       "6GK5874-3AA00-2AA2"
@@ -241,7 +228,26 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
+                "product": {
+                  "name": "SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2)",
+                  "product_id": "9",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5874-3AA00-2FA2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M876-3 (6GK5876-3AA02-2BA2)",
                   "product_id": "10",
@@ -260,7 +266,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2)",
                   "product_id": "11",
@@ -279,7 +285,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M876-4 (6GK5876-4AA10-2BA2)",
                   "product_id": "12",
@@ -298,7 +304,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2)",
                   "product_id": "13",
@@ -317,7 +323,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2)",
                   "product_id": "14",
@@ -336,7 +342,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUB852-1 (A1) (6GK5852-1EA10-1AA1)",
                   "product_id": "15",
@@ -355,7 +361,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUB852-1 (B1) (6GK5852-1EA10-1BA1)",
                   "product_id": "16",
@@ -374,7 +380,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM853-1 (A1) (6GK5853-2EA10-2AA1)",
                   "product_id": "17",
@@ -393,7 +399,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM853-1 (B1) (6GK5853-2EA10-2BA1)",
                   "product_id": "18",
@@ -412,7 +418,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM853-1 (EU) (6GK5853-2EA00-2DA1)",
                   "product_id": "19",
@@ -431,7 +437,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM856-1 (A1) (6GK5856-2EA10-3AA1)",
                   "product_id": "20",
@@ -450,7 +456,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM856-1 (B1) (6GK5856-2EA10-3BA1)",
                   "product_id": "21",
@@ -469,7 +475,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM856-1 (CN) (6GK5856-2EA00-3FA1)",
                   "product_id": "22",
@@ -488,7 +494,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM856-1 (EU) (6GK5856-2EA00-3DA1)",
                   "product_id": "23",
@@ -507,7 +513,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE MUM856-1 (RoW) (6GK5856-2EA00-3AA1)",
                   "product_id": "24",
@@ -526,7 +532,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE S615 EEC LAN-Router (6GK5615-0AA01-2AA2)",
                   "product_id": "25",
@@ -545,7 +551,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.2.1",
+                "name": "vers:intdot/<8.2.1",
                 "product": {
                   "name": "SCALANCE S615 LAN-Router (6GK5615-0AA00-2AA2)",
                   "product_id": "26",
@@ -564,15 +570,115 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.2",
                 "product": {
-                  "name": "SCALANCE SC-600 family",
-                  "product_id": "27"
+                  "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
+                  "product_id": "27",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5622-2GS00-2AC2"
+                    ]
+                  }
                 }
               }
             ],
             "category": "product_name",
-            "name": "SCALANCE SC-600 family"
+            "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.2",
+                "product": {
+                  "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
+                  "product_id": "28",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5626-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.2",
+                "product": {
+                  "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
+                  "product_id": "29",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5632-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.2",
+                "product": {
+                  "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
+                  "product_id": "30",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5636-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.2",
+                "product": {
+                  "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
+                  "product_id": "31",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5642-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<3.2",
+                "product": {
+                  "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
+                  "product_id": "32",
+                  "product_identification_helper": {
+                    "model_numbers": [
+                      "6GK5646-2GS00-2AC2"
+                    ]
+                  }
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)"
           }
         ],
         "category": "vendor",
@@ -592,11 +698,6 @@
           "category": "summary",
           "text": "Affected devices improperly validate usernames during OpenVPN authentication. This could allow an attacker to get partial invalid usernames accepted by the server.",
           "title": "Summary"
-        },
-        {
-          "category": "summary",
-          "text": "A remote attacker needs to have access to a valid certificate in order to perform a successful attack.",
-          "title": "For SCALANCE SC-600 family"
         }
       ],
       "product_status": {
@@ -608,8 +709,8 @@
           "5",
           "6",
           "7",
-          "9",
           "8",
+          "9",
           "10",
           "11",
           "12",
@@ -627,7 +728,12 @@
           "24",
           "25",
           "26",
-          "27"
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32"
         ]
       },
       "remediations": [
@@ -642,8 +748,8 @@
             "5",
             "6",
             "7",
-            "9",
             "8",
+            "9",
             "10",
             "11",
             "12",
@@ -661,15 +767,26 @@
             "24",
             "25",
             "26",
-            "27"
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V3.2 or later version",
           "product_ids": [
-            "27"
-          ]
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/110001886/"
         },
         {
           "category": "vendor_fix",
@@ -682,8 +799,8 @@
             "5",
             "6",
             "7",
-            "9",
             "8",
+            "9",
             "10",
             "11",
             "12",
@@ -721,8 +838,8 @@
             "5",
             "6",
             "7",
-            "9",
             "8",
+            "9",
             "10",
             "11",
             "12",
@@ -739,18 +856,13 @@
             "23",
             "24",
             "25",
-            "26"
-          ]
-        },
-        {
-          "cvss_v3": {
-            "baseScore": 2.2,
-            "baseSeverity": "LOW",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
-            "version": "3.1"
-          },
-          "products": [
-            "27"
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
           ]
         }
       ],

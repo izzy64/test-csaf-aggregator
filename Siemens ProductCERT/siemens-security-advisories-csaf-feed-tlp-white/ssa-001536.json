@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Siemens Industrial Edge Devices contain an authorization bypass vulnerability that could facilitate an unauthenticated remote attacker to circumvent authentication and impersonate a legitimate user.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Siemens Industrial Edge Devices contain an authorization bypass vulnerability that could facilitate an unauthenticated remote attacker to circumvent authentication and impersonate a legitimate user.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-001536: Authorization Bypass Vulnerability in Siemens Industrial Edge Devices",
     "tracking": {
-      "current_release_date": "2026-01-13T00:00:00Z",
+      "current_release_date": "2026-05-12T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-001536",
-      "initial_release_date": "2026-01-13T00:00:00Z",
+      "initial_release_date": "2026-01-13T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2026-01-13T00:00:00Z",
+          "date": "2026-01-13T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-05-12T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix for SIMATIC Automation Workstation family"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -160,7 +166,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<1.3",
                 "product": {
                   "name": "SIMATIC Automation Workstation 19\" (6AV7256-6CA01-0FP0)",
                   "product_id": "6",
@@ -179,7 +185,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<1.3",
                 "product": {
                   "name": "SIMATIC Automation Workstation 24\" (6AV7256-6CA00-0FP0)",
                   "product_id": "7",
@@ -1444,14 +1450,6 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
-          "product_ids": [
-            "6",
-            "7"
-          ]
-        },
-        {
           "category": "vendor_fix",
           "details": "Update to V1.24.2 or later version",
           "product_ids": [
@@ -1475,6 +1473,15 @@
             "56"
           ],
           "url": "https://docs.industrial-operations-x.siemens.cloud/r/en-us/v1.25/one-db-simatic-iot2050-industrial-edge-device/all-release-notes/release-notes-v1.25"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V1.3 or later version",
+          "product_ids": [
+            "6",
+            "7"
+          ],
+          "url": "https://iehub.eu1.edge.siemens.cloud/"
         },
         {
           "category": "vendor_fix",

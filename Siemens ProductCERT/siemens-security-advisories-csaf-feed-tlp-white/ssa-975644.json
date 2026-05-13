@@ -51,7 +51,7 @@
     ],
     "title": "SSA-975644: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2026-03-10T00:00:00.000Z",
+      "current_release_date": "2026-05-12T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-05-12T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added CVE-2025-61624 and CVE-2025-53847"
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -93,6 +99,14 @@
                   "name": "RUGGEDCOM APE1808",
                   "product_id": "2"
                 }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "RUGGEDCOM APE1808",
+                  "product_id": "3"
+                }
               }
             ],
             "category": "product_name",
@@ -105,6 +119,48 @@
     ]
   },
   "vulnerabilities": [
+    {
+      "cve": "CVE-2025-53847",
+      "cwe": {
+        "id": "CWE-306",
+        "name": "Missing Authentication for Critical Function"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A missing authentication for critical function vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4 all versions, FortiOS 6.2.9 through 6.2.17 allows attacker to execute unauthorized code or commands via specially crafted packets.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "3"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.9 or later version. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "3"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "3"
+          ]
+        }
+      ],
+      "title": "CVE-2025-53847"
+    },
     {
       "cve": "CVE-2025-55018",
       "cwe": {
@@ -126,7 +182,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update Fortigate NGFW to V7.4.10 or later version. Contact customer support to receive patch and update information.",
+          "details": "Update Fortigate NGFW to V7.4.10 or later version. Contact customer support to receive patch and update information",
           "product_ids": [
             "2"
           ]
@@ -146,6 +202,48 @@
         }
       ],
       "title": "CVE-2025-55018"
+    },
+    {
+      "cve": "CVE-2025-61624",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.4, FortiProxy 7.4.0 through 7.4.11, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions, FortiSwitchManager 7.2.0 through 7.2.7, FortiSwitchManager 7.0.0 through 7.0.6 may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.4.10 or later version. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.0,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2025-61624"
     },
     {
       "cve": "CVE-2025-62439",
@@ -168,7 +266,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update Fortigate NGFW to V7.4.10 or later version with FSSO TS Agent version 5.0 build 0324 or later version. Contact customer support to receive patch and update information.",
+          "details": "Update Fortigate NGFW to V7.4.10 or later version with FSSO TS Agent version 5.0 build 0324 or later version. Contact customer support to receive patch and update information",
           "product_ids": [
             "2"
           ]
@@ -210,7 +308,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update Fortigate NGFW to V7.4.10 or later version. Contact customer support to receive patch and update information.",
+          "details": "Update Fortigate NGFW to V7.4.10 or later version. Contact customer support to receive patch and update information",
           "product_ids": [
             "2"
           ]
@@ -252,7 +350,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update Fortigate NGFW to V7.4.11 or later version. Contact customer support to receive patch and update information.",
+          "details": "Update Fortigate NGFW to V7.4.11 or later version. Contact customer support to receive patch and update information",
           "product_ids": [
             "1"
           ]

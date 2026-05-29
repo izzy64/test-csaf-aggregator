@@ -19,12 +19,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory.\nThe vulnerability enables unauthorized access to the Reboot OS function within the Remote Transport Service, allowing an attacker to trigger a system reboot without the required authentication. This functionality initiates a system reboot on the target machine. However, remote exploitation of this vulnerability is not feasible unless the attacker has already gained access to the network where the affected ABB Ability\u2122 zenon system is deployed.\nAt the time of writing, there is no evidence that this vulnerability is being actively exploited in the wild.\n",
+        "text": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory.\nThe vulnerability enables unauthorized access to the Reboot OS function within the Remote Transport Service, allowing an attacker to trigger a system reboot without the required authentication. This functionality initiates a system reboot on the target machine. However, remote exploitation of this vulnerability is not feasible unless the attacker has already gained access to the network where the affected ABB Ability Zenon system is deployed.\nAt the time of writing, there is no evidence that this vulnerability is being actively exploited in the wild.\n",
         "title": "summary"
       },
       {
         "category": "other",
-        "text": "\u2022ABB recommends installing only the Service Engine component on production systems and installing the Engineering Studio on a separate dedicated Engineering station. Physical, local access to systems with the ABB AbilityTM zenon Software Platform should be restricted to authorized users only in an environment with physical access control measures in place.\n\u2022ABB recommends that system integrators and asset owners conduct their own risk assessments to determine appropriate mitigation strategies.\n\u2022ABB recommends keeping the operating system and software up to date\n",
+        "text": "\u2022ABB recommends installing only the Service Engine component on production systems and installing the Engineering Studio on a separate dedicated Engineering station. Physical, local access to systems with the ABB Ability Zenon Software Platform should be restricted to authorized users only in an environment with physical access control measures in place.\n\u2022ABB recommends that system integrators and asset owners conduct their own risk assessments to determine appropriate mitigation strategies.\n\u2022ABB recommends keeping the operating system and software up to date\n",
         "title": "General security recommendations"
       },
       {
@@ -39,7 +39,7 @@
       },
       {
         "category": "general",
-        "text": "\u2022\tRestrict network access to systems with the ABB zenon Software Platform installed. \n\n-\tEnsure that access to a system is restricted by implementing access controls to minimize the risk of unauthorized access.\n\n\u2022\tAssess the necessity of the ABB zenon Remote Transport functionality.\n\n\n-\tEnsure that if the Remote Transport functionality is not used, the zensyssrv.exe (ABB zenon System Service) is stopped or terminated. The zensyssrv.exe can also be stopped or terminated after authorized use to prevent this vulnerability.\n",
+        "text": "\u2022\tRestrict network access to systems with the ABB zenon Software Platform installed. \n\n-\tEnsure that access to a system is restricted by implementing access controls to minimize the risk of unauthorized access.\n\n\u2022\tAssess the necessity of the ABB Zenon Remote Transport functionality.\n\n\n-\tEnsure that if the Remote Transport functionality is not used, the zensyssrv.exe (ABB Zenon System Service) is stopped or terminated. The zensyssrv.exe can also be stopped or terminated after authorized use to prevent this vulnerability.\n",
         "title": "Work around"
       },
       {
@@ -166,11 +166,11 @@
         "url": "https://www.cisa.gov/news-events/news/targeted-cyber-intrusion-detection-and-mitigation-strategies-update-b"
       }
     ],
-    "title": "ABB AbilityTM Zenon Remote Transport Vulnerability",
+    "title": "ABB Ability Zenon Remote Transport Vulnerability (Update A)",
     "tracking": {
-      "current_release_date": "2026-05-26T06:00:00.000000Z",
+      "current_release_date": "2026-05-28T06:00:00.000000Z",
       "generator": {
-        "date": "2026-05-26T13:10:30.628165Z",
+        "date": "2026-05-26T18:21:24.153317Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.5.0"
@@ -186,14 +186,27 @@
           "summary": "Initial version."
         },
         {
-          "date": "2026-05-26T06:00:00.000000Z",
-          "legacy_version": "CISA Republication",
+          "date": "2026-05-22T00:30:00.000000Z",
+          "legacy_version": "Additional Release 1",
           "number": "2",
+          "summary": "Minor correction to the affected product version in the product tree."
+        },
+        {
+          "date": "2026-05-26T06:00:00.000000Z",
+          "legacy_version": "Additional Release 2",
+          "number": "3",
           "summary": "Initial CISA Republication of ABB PSIRT 2NGA002743 advisory"
+        },
+        {
+          "date": "2026-05-28T06:00:00.000000Z",
+          "legacy_version": "Latest Updated CISA Republication",
+          "number": "4",
+          "summary": "CISA Republication update based on ABB PSIRT 2NGA002743 advisory. Removed \"Trademark\" abbreviation from the Ability product name in the title and throughout the advisory."
         }
+
       ],
       "status": "final",
-      "version": "2"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -204,15 +217,15 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<=14",
+                "name": ">=7.50|<=14",
                 "product": {
-                  "name": "AbilityTM zenon versions >=7.50 to <=14",
+                  "name": "ABB Ability Zenon >=7.50|<=14",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "AbilityTM zenon "
+            "name": "Ability Zenon"
           }
         ],
         "category": "vendor",
@@ -230,7 +243,7 @@
       "notes": [
         {
           "category": "description",
-          "text": "In the default configuration of the ABB zenon software platform, the zensyssrv.exe service is set to start automatically. To utilize the Remote Transport Service, users are required to configure a password beforehand. However, a security vulnerability has been identified that enables unauthorized attackers to bypass authentication mechanisms and remotely initiate a system reboot without proper authorization",
+          "text": "In the default configuration of the ABB Zenon software platform, the zensyssrv.exe service is set to start automatically. To utilize the Remote Transport Service, users are required to configure a password beforehand. However, a security vulnerability has been identified that enables unauthorized attackers to bypass authentication mechanisms and remotely initiate a system reboot without proper authorization",
           "title": "CVE description"
         }
       ],
@@ -264,7 +277,7 @@
       "remediations": [
         {
           "category": "workaround",
-          "details": "\u2022\tRestrict network access to systems with the ABB zenon Software Platform installed. \n\n-\tEnsure that access to a system is restricted by implementing access controls to minimize the risk of unauthorized access.\n\n\n\u2022\tAssess the necessity of the ABB zenon Remote Transport functionality.\n\n-\tEnsure that if the Remote Transport functionality is not used, the zensyssrv.exe (ABB zenon System Service) is stopped or terminated. The zensyssrv.exe can also be stopped or terminated after authorized use to prevent this vulnerability.\n",
+          "details": "\u2022\tRestrict network access to systems with the ABB Zenon Software Platform installed. \n\n-\tEnsure that access to a system is restricted by implementing access controls to minimize the risk of unauthorized access.\n\n\n\u2022\tAssess the necessity of the ABB Zenon Remote Transport functionality.\n\n-\tEnsure that if the Remote Transport functionality is not used, the zensyssrv.exe (ABB Zenon System Service) is stopped or terminated. The zensyssrv.exe can also be stopped or terminated after authorized use to prevent this vulnerability.\n",
           "product_ids": [
             "CSAFPID-0001"
           ]

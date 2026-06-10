@@ -1,0 +1,209 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en-US",
+    "publisher": {
+      "category": "coordinator",
+      "contact_details": "https://www.cisa.gov/report",
+      "issuing_authority": "CISA",
+      "name": "CISA",
+      "namespace": "https://www.cisa.gov/"
+    },
+    "title": "SQLite sqldiff remote code execution via argument injection",
+    "tracking": {
+      "current_release_date": "2026-06-04T14:10:30Z",
+      "generator": {
+        "engine": {
+          "name": "VINCE-NT",
+          "version": "1.15.0+build.86"
+        }
+      },
+      "id": "VA-26-155-01",
+      "initial_release_date": "2026-06-04T14:10:30Z",
+      "status": "final",
+      "version": "1.0.0",
+      "revision_history": [
+        {
+          "number": "1.0.0",
+          "summary": "Initial publication",
+          "date": "2026-06-04T14:10:30Z"
+        }
+      ]
+    },
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "text": "All information products included in [https://github.com/cisagov/CSAF/tree/develop/csaf_files/IT/white](https://github.com/cisagov/CSAF/tree/develop/csaf_files/IT/white) are provided \\\"as is\\\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see [https://us-cert.cisa.gov/tlp/](https://us-cert.cisa.gov/tlp/).",
+        "title": "Legal Notice",
+        "category": "legal_disclaimer"
+      },
+      {
+        "text": "Worldwide",
+        "title": "Countries and Areas Deployed",
+        "category": "other"
+      },
+      {
+        "text": "Information Technology",
+        "title": "Critical Infrastructure Sectors",
+        "category": "other"
+      },
+      {
+        "text": " An attacker could use the '-L' option to load an arbitrary DLL with a crafted command line argument string that results in command line file arguments being misinterpreted as command line options.",
+        "title": "Risk Evaluation",
+        "category": "summary"
+      },
+      {
+        "text": "Fixed on 2025-12-26.",
+        "title": "Recommended Practices",
+        "category": "general"
+      },
+      {
+        "text": "United States",
+        "title": "Company Headquarters Location",
+        "category": "other"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-155-01.json",
+        "summary": "Vulnerability Advisory VA-26-155-01 CSAF",
+        "category": "self"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "vendor",
+        "name": "SQLite",
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "sqldiff",
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<2025-12-26",
+                "product": {
+                  "name": "SQLite sqldiff <2025-12-26",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2025-12-26",
+                "product": {
+                  "name": "SQLite sqldiff 2025-12-26",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-71316",
+      "cwe": {
+        "id": "CWE-176",
+        "name": "Improper Handling of Unicode Encoding"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "SQLite 'sqldiff.exe' does not securely handle the way the Microsoft Windows C runtime converts Unicode characters to ANSI codepages.  An attacker could use the '-L' option to load an arbitrary DLL with a crafted command line argument string that results in command line file arguments being misinterpreted as command line options. Fixed on or around 2025-12-26.",
+          "title": "Description"
+        },
+        {
+          "category": "details",
+          "title": "SSVC",
+          "text": "SSVCv2/E:P/A:N/T:T/2026-06-04T17:02:25Z/"
+        }
+      ],
+      "title": "SQLite sqldiff remote code execution via argument injection",
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001"
+        ],
+        "fixed": [
+          "CSAFPID-0002"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "sqlite.org",
+          "url": "https://sqlite.org/src/file/tool/winmain.c"
+        },
+        {
+          "category": "external",
+          "summary": "learn.microsoft.com",
+          "url": "https://learn.microsoft.com/en-us/windows/win32/api/processenv/nf-processenv-getcommandlinea#security-remarks"
+        },
+        {
+          "category": "external",
+          "summary": "i.blackhat.com",
+          "url": "https://i.blackhat.com/EU-24/Presentations/EU-24-Tsai-V2-WorstFit-Unveiling-Hidden-Transformers-in-Windows-ANSI.pdf"
+        },
+        {
+          "category": "external",
+          "summary": "VA-26-155-01",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-155-01.json"
+        },
+        {
+          "category": "external",
+          "summary": "CVE-2025-71316",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-71316"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Fixed on 2025-12-26.",
+          "url": "https://sqlite.org/src/file/tool/winmain.c",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "date": "2025-12-26T00:00:00Z"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Fixed on 2025-12-26.",
+          "url": "https://sqlite.org/src/file/tool/winmain.c",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "date": "2025-12-26T00:00:00Z"
+        }
+      ],
+      "acknowledgments": [
+        {
+          "names": [
+            "Vincent55"
+          ]
+        }
+      ],
+      "release_date": "2025-12-26T00:00:00Z"
+    }
+  ]
+}

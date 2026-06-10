@@ -3,7 +3,7 @@
     "acknowledgments": [
       {
         "organization": "Schneider Electric CPCERT",
-        "summary": "reporting this vulnerability to CISA."
+        "summary": "reported this vulnerability to CISA."
       }
     ],
     "category": "csaf_security_advisory",
@@ -12,7 +12,7 @@
       "text": "Disclosure is not limited",
       "tlp": {
         "label": "WHITE",
-        "url": "https://us-cert.cisa.gov/tlp/"
+        "url": "https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage"
       }
     },
     "lang": "en-US",
@@ -52,28 +52,13 @@
       },
       {
         "category": "legal_disclaimer",
-        "text": "All information products included in https://us-cert.cisa.gov/ics are provided \"as is\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see https://us-cert.cisa.gov/tlp/.",
-        "title": "Legal Notice"
+        "text": "This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy & Use policy (https://www.cisa.gov/privacy-policy).",
+        "title": "Legal Notice and Terms of Use"
       },
       {
         "category": "other",
         "text": "This ICSA is a verbatim republication of Schneider Electric CPCERT SEVD-2025-014-05 from a direct conversion of the vendor's Common Security Advisory Framework (CSAF) advisory. This is republished to CISA's website as a means of increasing visibility and is provided \"as-is\" for informational purposes only. CISA is not responsible for the editorial or technical accuracy of republished advisories and provides no warranties of any kind regarding any information contained within this advisory.  Further, CISA does not endorse any commercial product or service.  Please contact Schneider Electric CPCERT directly for any questions regarding this advisory.",
         "title": "Advisory Conversion Disclaimer"
-      },
-      {
-        "category": "other",
-        "text": "Commercial Facilities, Critical Manufacturing, Energy",
-        "title": "Critical infrastructure sectors"
-      },
-      {
-        "category": "other",
-        "text": "Worldwide",
-        "title": "Countries/areas deployed"
-      },
-      {
-        "category": "other",
-        "text": "France",
-        "title": "Company headquarters location"
       },
       {
         "category": "general",
@@ -114,6 +99,21 @@
         "category": "general",
         "text": "Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents.",
         "title": "Recommended Practices"
+      },
+      {
+        "category": "other",
+        "text": "Commercial Facilities, Critical Manufacturing, Energy",
+        "title": "Critical infrastructure sectors"
+      },
+      {
+        "category": "other",
+        "text": "Worldwide",
+        "title": "Countries/areas deployed"
+      },
+      {
+        "category": "other",
+        "text": "France",
+        "title": "Company headquarters location"
       }
     ],
     "publisher": {
@@ -131,7 +131,7 @@
       {
         "category": "self",
         "summary": "Web Server on Modicon M340 and BMXNOE0100/0110, BMXNOR0200H Communication Modules - SEVD-2025-014-05 PDF Version",
-        "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-014-05&p_enDocType=Security+and+Safety+Notice&p_File_Name=sevd-2025-014-05.pdf"
+        "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-014-05&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2025-014-05.pdf"
       },
       {
         "category": "external",
@@ -151,7 +151,7 @@
       {
         "category": "external",
         "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
+        "url": "https://www.cisa.gov/news-events/ics-alerts/ics-alert-10-301-01"
       },
       {
         "category": "external",
@@ -166,7 +166,7 @@
       {
         "category": "external",
         "summary": "Recommended Practices",
-        "url": "https://us-cert.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
+        "url": "https://www.cisa.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf"
       },
       {
         "category": "external",
@@ -176,17 +176,17 @@
       {
         "category": "external",
         "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ics/tips/ICS-TIP-12-146-01B"
+        "url": "https://www.cisa.gov/news-events/news/targeted-cyber-intrusion-detection-and-mitigation-strategies-update-b"
       }
     ],
-    "title": "Schneider Electric Modicon M340 and BMXNOE0100/0110, BMXNOR0200H",
+    "title": "Schneider Electric Modicon M340 and BMXNOE0100/0110, BMXNOR0200H (Update B)",
     "tracking": {
-      "current_release_date": "2025-08-12T04:00:00.000000Z",
+      "current_release_date": "2026-06-09T06:00:00.000000Z",
       "generator": {
-        "date": "2025-09-11T18:02:30.770924Z",
+        "date": "2026-06-08T19:28:43.713315Z",
         "engine": {
           "name": "CISA CSAF Generator",
-          "version": "1.0.0"
+          "version": "1.5.0"
         }
       },
       "id": "ICSA-25-035-06",
@@ -194,17 +194,31 @@
       "revision_history": [
         {
           "date": "2025-01-14T00:00:00.000000Z",
-          "number": "1.0.0",
+          "legacy_version": "Initial",
+          "number": "1",
           "summary": "Original Release"
         },
         {
           "date": "2025-08-12T04:00:00.000000Z",
-          "number": "2.0.0",
+          "legacy_version": "Additional Release 1",
+          "number": "2",
           "summary": "Remediations are available for BMXNOE0100 (Modbus/TCP \nEthernet Modicon M340 module) and BMXNOE0110 \n(Modbus/TCP Ethernet Modicon M340 FactoryCast module)"
+        },
+        {
+          "date": "2026-04-14T07:00:00.000000Z",
+          "legacy_version": "Additional Release 2",
+          "number": "3",
+          "summary": "Remediation is available for Modicon M340"
+        },
+        {
+          "date": "2026-06-09T06:00:00.000000Z",
+          "legacy_version": "Latest Updated CISA Republication",
+          "number": "4",
+          "summary": "CISA Republication update based on Schneider Electric CPCERT SEVD-2025-014-05 advisory"
         }
       ],
       "status": "final",
-      "version": "2.0.0"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -215,15 +229,24 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:generic/<SV3.70",
                 "product": {
-                  "name": "Schneider Electric Modicon M340 processors All versions",
-                  "product_id": "CSAFPID-0001",
-                  "product_identification_helper": {
-                    "model_numbers": [
-                      "BMXP34*"
-                    ]
-                  }
+                  "name": "Modicon M340 Firmware Versions prior to SV3.70",
+                  "product_id": "CSAFPID-0001"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Modicon M340 processors"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version",
+                "name": "SV3.70",
+                "product": {
+                  "name": "Modicon M340 Firmware Version SV3.70",
+                  "product_id": "CSAFPID-0002"
                 }
               }
             ],
@@ -234,10 +257,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<SV3.60",
+                "name": "vers:generic/<SV3.60",
                 "product": {
-                  "name": "Schneider Electric Modbus/TCP Ethernet Modicon M340 module Versions prior to SV3.60",
-                  "product_id": "CSAFPID-0002",
+                  "name": "Modbus/TCP Ethernet Modicon M340 module Versions prior to SV3.60",
+                  "product_id": "CSAFPID-0003",
                   "product_identification_helper": {
                     "model_numbers": [
                       "BMXNOE0100"
@@ -255,8 +278,8 @@
                 "category": "product_version",
                 "name": "SV3.60",
                 "product": {
-                  "name": "Schneider Electric Modbus/TCP Ethernet Modicon M340 module Version SV3.60",
-                  "product_id": "CSAFPID-0003",
+                  "name": "Modbus/TCP Ethernet Modicon M340 module Version SV3.60",
+                  "product_id": "CSAFPID-0004",
                   "product_identification_helper": {
                     "model_numbers": [
                       "BMXNOE0100"
@@ -272,10 +295,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<SV6.80",
+                "name": "vers:generic/<SV6.80",
                 "product": {
-                  "name": "Schneider Electric Modbus/TCP Ethernet Modicon M340 FactoryCast module Versions prior to SV6.80",
-                  "product_id": "CSAFPID-0004",
+                  "name": "Modbus/TCP Ethernet Modicon M340 FactoryCast module Versions prior to SV6.80",
+                  "product_id": "CSAFPID-0005",
                   "product_identification_helper": {
                     "model_numbers": [
                       "BMXNOE0110"
@@ -293,8 +316,8 @@
                 "category": "product_version",
                 "name": "SV6.80",
                 "product": {
-                  "name": "Schneider Electric Modbus/TCP Ethernet Modicon M340 FactoryCast module Version SV6.80",
-                  "product_id": "CSAFPID-0005",
+                  "name": "Modbus/TCP Ethernet Modicon M340 FactoryCast module Version SV6.80",
+                  "product_id": "CSAFPID-0006",
                   "product_identification_helper": {
                     "model_numbers": [
                       "BMXNOE0110"
@@ -310,10 +333,10 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "<SV1.70IR26",
+                "name": "vers:generic/<SV1.70IR26",
                 "product": {
-                  "name": "Schneider Electric Ethernet / Serial RTU module Versions prior to SV1.70IR26",
-                  "product_id": "CSAFPID-0006",
+                  "name": "Ethernet / Serial RTU module Versions prior to SV1.70IR26",
+                  "product_id": "CSAFPID-0007",
                   "product_identification_helper": {
                     "model_numbers": [
                       "BMXNOR0200H"
@@ -331,8 +354,8 @@
                 "category": "product_version",
                 "name": "SV1.70IR26",
                 "product": {
-                  "name": "Schneider Electric Ethernet / Serial RTU module Version SV1.70IR26",
-                  "product_id": "CSAFPID-0007",
+                  "name": "Ethernet / Serial RTU module Version SV1.70IR26",
+                  "product_id": "CSAFPID-0008",
                   "product_identification_helper": {
                     "model_numbers": [
                       "BMXNOR0200H"
@@ -343,10 +366,43 @@
             ],
             "category": "product_name",
             "name": "Ethernet / Serial RTU module"
+          },
+          {
+            "category": "product_name",
+            "name": "Modicon M340 processors",
+            "product": {
+              "name": "Modicon M340 processors (part numbers BMXP34*)",
+              "product_id": "CSAFPID-0009",
+              "product_identification_helper": {
+                "model_numbers": [
+                  "BMXP34*"
+                ]
+              }
+            }
           }
         ],
         "category": "vendor",
         "name": "Schneider Electric"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Modicon M340 Firmware Versions prior to SV3.70 installed on Modicon M340 processors (part numbers BMXP34*)",
+          "product_id": "CSAFPID-0010"
+        },
+        "product_reference": "CSAFPID-0001",
+        "relates_to_product_reference": "CSAFPID-0009"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Modicon M340 Firmware Version SV3.70 installed on Modicon M340 processors (part numbers BMXP34*)",
+          "product_id": "CSAFPID-0011"
+        },
+        "product_reference": "CSAFPID-0002",
+        "relates_to_product_reference": "CSAFPID-0009"
       }
     ]
   },
@@ -362,27 +418,50 @@
           "category": "description",
           "text": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor vulnerability exists that could \r\ncause information disclosure of restricted web page, modification of web page and denial of \r\nservice when specific web pages are modified and restricted functions are invoked.",
           "title": "CVE Description"
+        },
+        {
+          "category": "details",
+          "text": "CVSS v4.0 Base Score 8.8 | High | [CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N)",
+          "title": "CVSS v4.0  Score"
         }
       ],
       "product_status": {
         "fixed": [
-          "CSAFPID-0007",
-          "CSAFPID-0003",
-          "CSAFPID-0005"
+          "CSAFPID-0008",
+          "CSAFPID-0011",
+          "CSAFPID-0006",
+          "CSAFPID-0004"
         ],
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002",
-          "CSAFPID-0004",
-          "CSAFPID-0006"
+          "CSAFPID-0010",
+          "CSAFPID-0003",
+          "CSAFPID-0005",
+          "CSAFPID-0007"
         ]
       },
+      "references": [
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2024-12142"
+        },
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/200.html"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+        }
+      ],
       "remediations": [
         {
           "category": "vendor_fix",
           "details": "Version SV1.70IR26 of BMXNOR0200H includes a fix for this vulnerability and is \navailable for download here:\nhttps://www.se.com/ww/en/product/BMXNOR0200H/ethernet-serial-rtu-module-2-x-rj45/",
           "product_ids": [
-            "CSAFPID-0006"
+            "CSAFPID-0007"
           ],
           "restart_required": {
             "category": "none"
@@ -390,21 +469,21 @@
           "url": "https://www.se.com/ww/en/product/BMXNOR0200H/ethernet-serial-rtu-module-2-x-rj45/"
         },
         {
-          "category": "mitigation",
-          "details": "Schneider Electric is establishing a remediation plan for all future versions \nof Modicon M340 processors BMXP34* that will include a fix for this \nvulnerability. We will update this document when the remediation is \navailable. Until then, customers should immediately apply the following \nmitigations to reduce the risk of exploit:\n\u2022 Set up network segmentation and implement a firewall to block all \nunauthorized access to FTP port 21/TCP on the devices. \n\u2022 Disable FTP service via EcoStruxureTM Control Expert. This is \ndisabled by default when a new application is created.\n\u2022 Disable Web server service via EcoStruxureTM Control Expert. This \nis disabled by default when a new application is created. \n\u2022 Configure the Access Control List following the recommendation on \nthe \u201cModicon Controllers System Cybersecurity\u201d",
+          "category": "vendor_fix",
+          "details": "Version SV3.70 of Modicon M340 includes a fix for this vulnerability and is available for download here: https://www.se.com/ww/en/product-range/1468-modicon-m340/#software-and-firmware",
           "product_ids": [
-            "CSAFPID-0001"
+            "CSAFPID-0010"
           ],
           "restart_required": {
-            "category": "none"
+            "category": "system"
           },
-          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=EIO0000001999&p_enDocType=User+guide&p_File_Name=EIO0000001999-12_Modicon_Controller_Cybersecurity.pdf"
+          "url": "https://www.se.com/ww/en/product-range/1468-modicon-m340/#software-and-firmware"
         },
         {
           "category": "vendor_fix",
           "details": "Version SV3.60 of BMXNOE0100 includes a fix for this vulnerability and is available for \ndownload here:\nhttps://www.se.com/ww/en/product/BMXNOE0100/network-module-modicon-m340-\nmodbus-tcp-1-x-rj45-flash-memory-card/",
           "product_ids": [
-            "CSAFPID-0002"
+            "CSAFPID-0003"
           ],
           "restart_required": {
             "category": "none"
@@ -415,25 +494,12 @@
           "category": "vendor_fix",
           "details": "Version SV6.80 of BMXNOE0110 includes a fix for this vulnerability and is available for \ndownload here:\nhttps://www.se.com/ww/en/product/BMXNOE0110/ethernet-tcp-ip-network-module\u0002modicon-m340-automation-platform-flash-memory-card-internal-ram-16-mb-1-x-rj45-\n10-100/",
           "product_ids": [
-            "CSAFPID-0004"
+            "CSAFPID-0005"
           ],
           "restart_required": {
             "category": "none"
           },
           "url": "https://www.se.com/ww/en/product/BMXNOE0110/ethernet-tcp-ip-network-module-modicon-m340-automation-platform-flash-memory-card-internal-ram-16-mb-1-x-rj45-10-100/"
-        },
-        {
-          "category": "mitigation",
-          "details": "If customers choose not to apply the remediation provided above, they should immediately apply the following \nmitigations to reduce the risk of exploit: \n\u2022 Set up network segmentation and implement a firewall to block all \nunauthorized access to FTP port 21/TCP on the devices. \n\u2022 Disable FTP service via EcoStruxureTM Control Expert. This is \ndisabled by default when a new application is created.\n\u2022 Disable Web server service via EcoStruxureTM Control Expert. This \nis disabled by default when a new application is created. \n\u2022 Configure the Access Control List following the recommendation on \nthe \u201cModicon Controllers System Cybersecurity\u201dhttps://download.schneider-electric.com/files?p_Doc_Ref=EIO0000001999&p_enDocType=User+guide&p_File_Name=EIO0000001999-12_Modicon_Controller_Cybersecurity.pdf",
-          "product_ids": [
-            "CSAFPID-0002",
-            "CSAFPID-0004",
-            "CSAFPID-0006"
-          ],
-          "restart_required": {
-            "category": "none"
-          },
-          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=EIO0000001999&p_enDocType=User+guide&p_File_Name=EIO0000001999-12_Modicon_Controller_Cybersecurity.pdf"
         }
       ],
       "scores": [
@@ -453,10 +519,10 @@
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002",
-            "CSAFPID-0004",
-            "CSAFPID-0006"
+            "CSAFPID-0010",
+            "CSAFPID-0003",
+            "CSAFPID-0005",
+            "CSAFPID-0007"
           ]
         }
       ],

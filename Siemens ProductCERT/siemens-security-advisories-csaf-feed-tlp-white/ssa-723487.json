@@ -51,7 +51,7 @@
     ],
     "title": "SSA-723487: RADIUS Protocol Susceptible to Forgery Attacks (CVE-2024-3596) - Impact to SCALANCE, RUGGEDCOM and Related Products",
     "tracking": {
-      "current_release_date": "2026-05-12T00:00:00.000Z",
+      "current_release_date": "2026-06-09T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -120,10 +120,16 @@
           "legacy_version": "1.9",
           "number": "10",
           "summary": "Added fix for SCALANCE W-700 IEEE 802.11n family."
+        },
+        {
+          "date": "2026-06-09T00:00:00.000Z",
+          "legacy_version": "2.0",
+          "number": "11",
+          "summary": "Added fix for SCALANCE SC-600 Family"
         }
       ],
       "status": "interim",
-      "version": "10"
+      "version": "11"
     }
   },
   "product_tree": {
@@ -2719,7 +2725,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.2",
                 "product": {
                   "name": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
                   "product_id": "176",
@@ -2738,7 +2744,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.2",
                 "product": {
                   "name": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
                   "product_id": "177",
@@ -2757,7 +2763,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.2",
                 "product": {
                   "name": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
                   "product_id": "178",
@@ -2776,7 +2782,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.2",
                 "product": {
                   "name": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
                   "product_id": "179",
@@ -2795,7 +2801,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.2",
                 "product": {
                   "name": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
                   "product_id": "180",
@@ -2814,7 +2820,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.2",
                 "product": {
                   "name": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
                   "product_id": "181",
@@ -10372,12 +10378,6 @@
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "176",
-            "177",
-            "178",
-            "179",
-            "180",
-            "181",
             "366",
             "367",
             "368",
@@ -10411,7 +10411,8 @@
           "details": "Update to V1.0 SP2 Update 4 or later version",
           "product_ids": [
             "492"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109999722/"
         },
         {
           "category": "vendor_fix",
@@ -10522,6 +10523,19 @@
             "360"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109988839/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.2 or later version",
+          "product_ids": [
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "181"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/110001886/"
         },
         {
           "category": "vendor_fix",

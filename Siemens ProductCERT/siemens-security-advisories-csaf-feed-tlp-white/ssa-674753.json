@@ -51,7 +51,7 @@
     ],
     "title": "SSA-674753: Denial-of-Service Vulnerability in ET 200 Devices",
     "tracking": {
-      "current_release_date": "2026-02-10T00:00:00Z",
+      "current_release_date": "2026-06-09T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,23 +59,29 @@
         }
       },
       "id": "SSA-674753",
-      "initial_release_date": "2026-01-13T00:00:00Z",
+      "initial_release_date": "2026-01-13T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2026-01-13T00:00:00Z",
+          "date": "2026-01-13T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2026-02-10T00:00:00Z",
+          "date": "2026-02-10T00:00:00.000Z",
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added Researcher to Acknowledgements"
+        },
+        {
+          "date": "2026-06-09T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix for SIMATIC ET 200SP IM 155-6 PN/2 HF"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -176,7 +182,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/>=4.2.0",
+                "name": "vers:intdot/>=4.2.0|<4.2.5",
                 "product": {
                   "name": "SIMATIC ET 200SP IM 155-6 PN/2 HF (6ES7155-6AU01-0CN0)",
                   "product_id": "6",
@@ -309,7 +315,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/>=4.2.0",
+                "name": "vers:intdot/>=4.2.0|<4.2.5",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-2CN0)",
                   "product_id": "13",
@@ -328,7 +334,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/>=4.2.0",
+                "name": "vers:intdot/>=4.2.0|<4.2.5",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-7CN0)",
                   "product_id": "14",
@@ -347,7 +353,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/>=4.2.0",
+                "name": "vers:intdot/>=4.2.0|<4.2.5",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU01-1CN0)",
                   "product_id": "15",
@@ -366,7 +372,7 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/>=4.2.0",
+                "name": "vers:intdot/>=4.2.0|<4.2.5",
                 "product": {
                   "name": "SIPLUS ET 200SP IM 155-6 PN HF TX RAIL (6AG2155-6AU01-4CN0)",
                   "product_id": "16",
@@ -495,15 +501,10 @@
             "1",
             "2",
             "3",
-            "6",
             "8",
             "10",
             "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16"
+            "12"
           ]
         },
         {
@@ -521,6 +522,18 @@
             "7"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109769419/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.2.5 or later version",
+          "product_ids": [
+            "6",
+            "13",
+            "14",
+            "15",
+            "16"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109769765/"
         },
         {
           "category": "vendor_fix",

@@ -51,7 +51,7 @@
     ],
     "title": "SSA-827968: Vulnerability in Nozomi Guardian/CMC Before  V26.2.0 on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2026-05-12T00:00:00.000Z",
+      "current_release_date": "2026-06-09T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -78,10 +78,16 @@
           "legacy_version": "1.2",
           "number": "3",
           "summary": "Added CVE-2025-40897 and CVE-2025-40899"
+        },
+        {
+          "date": "2026-06-09T00:00:00.000Z",
+          "legacy_version": "1.3",
+          "number": "4",
+          "summary": "Added CVE-2025-40900, CVE-2025-40901, CVE-2025-40902, CVE--2025-40903 and CVE-2025-40904"
         }
       ],
       "status": "final",
-      "version": "3"
+      "version": "4"
     }
   },
   "product_tree": {
@@ -402,6 +408,216 @@
         }
       ],
       "title": "CVE-2025-40899"
+    },
+    {
+      "cve": "CVE-2025-40900",
+      "cwe": {
+        "id": "CWE-1336",
+        "name": "Improper Neutralization of Special Elements Used in a Template Engine"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An Angular template injection vulnerability was discovered in the Reports functionality due to improper validation of an input parameter. An authenticated user with report privileges can define a malicious report containing an Angular template payload, or a victim can be socially engineered to import a malicious report template. When the victim views or imports the report, the Angular template executes in their browser context, allowing the attacker to modify application data, or disrupt application availability. Full XSS exploitation and direct information disclosure are prevented by the existing input validation and Content Security Policy configuration.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Nozomi Guardian to v26.2.0. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 4.6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40900"
+    },
+    {
+      "cve": "CVE-2025-40901",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored HTML Injection vulnerability was discovered in the Credentials Manager functionality due to improper validation of an input parameter. An authenticated user with administrative privileges can define a malicious identity containing HTML tags. When a victim attempts to delete the affected identity, the injected HTML renders in their browser, enabling phishing and possibly open redirect attacks. Full XSS exploitation and direct information disclosure are prevented by the existing input validation and Content Security Policy configuration.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Nozomi Guardian to v26.2.0. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40901"
+    },
+    {
+      "cve": "CVE-2025-40902",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored HTML Injection vulnerability was discovered in the Users functionality due to improper validation of an input parameter. An authenticated user with administrative privileges can create a malicious user whose username contains HTML tags. When a victim attempts to delete a group containing the affected user, the injected HTML renders in their browser, enabling phishing and possibly open redirect attacks. Full XSS exploitation and direct information disclosure are prevented by the existing input validation and Content Security Policy configuration.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Nozomi Guardian to v26.2.0. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40902"
+    },
+    {
+      "cve": "CVE-2025-40903",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored HTML Injection vulnerability was discovered in the Schedule Restore Archive functionality due to improper validation of an input parameter. An authenticated user with administrative privileges can define a malicious restore schedule containing HTML tags. When a victim views the affected schedule, the injected HTML renders in their browser, enabling phishing and possibly open redirect attacks. Full XSS exploitation and direct information disclosure are prevented by the existing input validation and Content Security Policy configuration.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Nozomi Guardian to v26.2.0. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40903"
+    },
+    {
+      "cve": "CVE-2025-40904",
+      "cwe": {
+        "id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A Stored HTML Injection vulnerability was discovered in the Smart Polling functionality due to improper validation of an input parameter. An authenticated user with limited privileges can push malicious remote strategies containing HTML tags through the sync. When a victim views the affected remote strategy in the Smart Polling functionality, the injected HTML renders in their browser, enabling phishing and possibly open redirect attacks. Full XSS exploitation and direct information disclosure are prevented by the existing input validation and Content Security Policy configuration.",
+          "title": "Summary"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "1"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Nozomi Guardian to v26.2.0. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "1"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "1"
+          ]
+        }
+      ],
+      "title": "CVE-2025-40904"
     }
   ]
 }

@@ -1,0 +1,171 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "High",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Disabled and non-configurable TLS certificate validation in n2os-tui when connecting the Remote Collector to a Guardian or CMC, in Remote Collector before v26.2.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2026-31985"
+      ],
+      "current_release_date": "2026-07-07T11:00:00.000Z",
+      "id": "NN-2026:12-01",
+      "initial_release_date": "2026-07-07T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-07-07T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<26.2.0",
+                "product": {
+                  "name": "Nozomi Networks Remote Collector <26.2.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.2.0",
+                "product": {
+                  "name": "Nozomi Networks Remote Collector 26.2.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Remote Collector"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Andrea Palanca"
+          ],
+          "organization": "Nozomi Networks Product Security team",
+          "summary": "finding this issue during an internal investigation"
+        }
+      ],
+      "cve": "CVE-2026-31985",
+      "cwe": {
+        "id": "CWE-671",
+        "name": "Lack of Administrator Control over Security"
+      },
+      "discovery_date": "2026-07-07T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2026:12-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "When the upstream Guardian or CMC was configured in the Remote Collector via n2os-tui, the generated configuration disabled TLS certificate verification, and no option was provided to enable it.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002"
+        ],
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-31985"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2026/nn-2026_12-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2026:12-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Manually edit the \"n2os.conf.user\" file in the Remote Collector and remove the \"!\" prefix from the upstream Guardian or CMC endpoint entry to enable TLS certificate verification.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Remote Collector to v26.2.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "A malicious actor could perform a man-in-the-middle attack and intercept the communication between the Remote Collector and the Guardian or CMC. This could result in theft of the sync token, impersonation of the server, injection of spoofed data (such as false asset information or vulnerabilities) into the Guardian or CMC, or disruption of the data flow between the Remote Collector and the Guardian or CMC."
+        }
+      ],
+      "title": "Disabled and non-configurable TLS certificate validation in n2os-tui when connecting the Remote Collector to a Guardian or CMC, in Remote Collector before v26.2.0"
+    }
+  ]
+}

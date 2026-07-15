@@ -7,6 +7,13 @@
         ],
         "organization": "Samurai Digital Security Ltd",
         "summary": "reported this vulnerability to CISA"
+      },
+      {
+        "names": [
+          "Ethan Thomason"
+        ],
+        "organization": "CedarTech",
+        "summary": "reported this vulnerability to CISA"
       }
     ],
     "category": "csaf_security_advisory",
@@ -28,7 +35,7 @@
       {
         "category": "summary",
         "text": "Successful exploitation of this vulnerability could allow an attacker to be granted direct SYSTEM-level code execution on the host operating system running the Ignition Gateway service on Windows systems.",
-        "title": "Risk evaluation"
+        "title": "Advisory Summary"
       },
       {
         "category": "other",
@@ -47,7 +54,7 @@
       },
       {
         "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability, such as:",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability.",
         "title": "Recommended Practices"
       },
       {
@@ -112,7 +119,7 @@
       },
       {
         "category": "general",
-        "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time. This vulnerability has a high attack complexity.",
+        "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time. This vulnerability has a high attack complexity. This vulnerability is not exploitable remotely.",
         "title": "Recommended Practices"
       }
     ],
@@ -189,11 +196,11 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "Inductive Automation Ignition",
+    "title": "Inductive Automation Ignition (Update A)",
     "tracking": {
-      "current_release_date": "2025-12-18T07:00:00.000000Z",
+      "current_release_date": "2026-07-14T06:00:00.000000Z",
       "generator": {
-        "date": "2025-12-17T22:49:08.145816Z",
+        "date": "2026-07-14T17:51:23.119923Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
@@ -207,10 +214,16 @@
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
+        },
+        {
+          "date": "2026-07-14T06:00:00.000000Z",
+          "legacy_version": "Update A",
+          "number": "2",
+          "summary": "Update A - Updated vulnerability description, updated mitigation section, added an additional researcher in researcher credit section."
         }
       ],
       "status": "final",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -247,7 +260,7 @@
       "notes": [
         {
           "category": "summary",
-          "text": "The vulnerability affects Ignition SCADA applications where Python scripting is utilized for automation purposes. The vulnerability arises from the absence of proper security controls that restrict which Python libraries can be imported and executed within the scripting environment. The core issue lies in the Ignition service account having system permissions beyond what an Ignition privileged user requires.  When an authenticated administrator uploads a malicious project file containing Python scripts with bind shell capabilities, the application executes these scripts with the same privileges as the Ignition Gateway process, which typically runs with SYSTEM-level permissions on Windows. Alternative code execution patterns could lead to similar results.",
+          "text": "Ignition by Inductive Automation, when installed with default OS service account settings, may expose the host system to an elevated code execution risk via the gateway backup restore functionality. An authenticated user with Gateway Administrator privileges can import a malicious gateway backup (.gwbk) file containing crafted project resources, scripts, or modules, resulting in code execution on the host system. This affects both Windows and Linux installations. On Windows, default installations often run the Ignition service as NT AUTHORITY\\SYSTEM, resulting in code execution with full local system privileges. On Linux, default installations commonly run the Ignition service as root or with elevated privileges. Specific privilege level depends on installation configuration.",
           "title": "Vulnerability Summary"
         }
       ],
@@ -257,6 +270,11 @@
         ]
       },
       "references": [
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/250.html"
+        },
         {
           "category": "external",
           "summary": "www.cve.org",
@@ -277,6 +295,13 @@
         {
           "category": "mitigation",
           "details": "Inductive Automation encourages users to do the following in order to reduce the risk of this vulnerability:",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Mitigation guidance covering OS-level service account hardening for both Windows and Linux is available in Annex A of the Ignition Security Hardening Guide. Application-level controls under a default installation are in development.",
           "product_ids": [
             "CSAFPID-0001"
           ]

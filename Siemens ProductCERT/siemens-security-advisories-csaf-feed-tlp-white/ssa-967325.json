@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Palo Alto Networks has published [1] information on vulnerabilities in PAN-OS. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\n\nSiemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications.\n\n[1] https://security.paloaltonetworks.com/",
+        "text": "Palo Alto Networks has published [1] information on vulnerabilities in PAN-OS. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications.\n\n[1] https://security.paloaltonetworks.com/",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-967325: Multiple Vulnerabilities in Palo Alto Networks PAN-OS on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2026-06-09T00:00:00.000Z",
+      "current_release_date": "2026-07-14T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added CVE-2026-0256, CVE-2026-0257, CVE-2026-0258, CVE-2026-0261, CVE-2026-0262, CVE-2026-0264 and CVE-2026-0265"
+        },
+        {
+          "date": "2026-07-14T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added CVE-2026-0269. Added remediation for CVE-2026-0300, CVE-2026-0256, CVE-2026-0257, CVE-2026-0261, CVE-2026-0262, CVE-2026-0258, CVE-2026-0264 and CVE-2026-0265"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -88,7 +94,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Palo Alto Networks Virtual NGFW with User-ID\u2122 Authentication Portal configured  and interface management profile with response pages enabled",
                   "product_id": "1"
                 }
               },
@@ -96,7 +102,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Palo Alto Networks Virtual NGFW",
                   "product_id": "2"
                 }
               },
@@ -104,7 +110,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Palo Alto Networks Virtual NGFW with GlobalProtect portal or gateway configured when authentication override cookies are enabled and a specific certificate configuration exists",
                   "product_id": "3"
                 }
               },
@@ -112,7 +118,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Palo Alto Networks Virtual NGFW with a PAN-OS Site-to-Site VPN Gateway with IKEv2 configured",
                   "product_id": "4"
                 }
               },
@@ -120,7 +126,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Palo Alto Networks Virtual NGFW with DNS Proxy enabled and a network proxy attached",
                   "product_id": "5"
                 }
               },
@@ -128,7 +134,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Palo Alto Networks Virtual NGFW with Authentication Profile with CAS enabled and Authentication profile is attached to a login interface",
                   "product_id": "6"
                 }
               }
@@ -151,9 +157,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A stored cross-site scripting (XSS) vulnerability in Palo Alto Networks PAN-OS\u00ae software enables a malicious authenticated administrator to store a JavaScript payload using the web interface.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -164,7 +170,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h6. Contact customer support to receive patch and update information",
           "product_ids": [
             "2"
           ]
@@ -193,9 +199,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "Authentication bypass vulnerabilities in the GlobalProtect portal and gateway of Palo Alto Networks PAN-OS\u00ae software allows the attacker to bypass security restrictions and establish an unauthorized VPN connection.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -220,7 +226,7 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h7. Contact customer support to receive patch and update information",
           "product_ids": [
             "3"
           ]
@@ -249,9 +255,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A server-side request forgery (SSRF) vulnerability in the IKEv2 implementation of Palo Alto Networks PAN-OS\u00ae software allows an unauthenticated attacker to cause the firewall to send network requests to unintended destinations or cause a denial of service (DoS) condition",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -262,7 +268,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h6. Contact customer support to receive patch and update information",
           "product_ids": [
             "4"
           ]
@@ -291,9 +297,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "Multiple command injection vulnerabilities in Palo Alto Networks PAN-OS\u00ae software enable an authenticated administrator to bypass system restrictions and run arbitrary commands as a root user. To be able to exploit this issue, the user must have access to the PAN-OS CLI or Web UI",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -304,7 +310,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h6. Contact customer support to receive patch and update information",
           "product_ids": [
             "2"
           ]
@@ -333,9 +339,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "Multiple denial of service vulnerabilities in Palo Alto Networks PAN-OS\u00ae software allow an unauthenticated attacker with network access to cause a denial of service (DoS) condition by sending specially crafted network traffic to a dataplane interface",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -346,7 +352,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h6. Contact customer support to receive patch and update information",
           "product_ids": [
             "2"
           ]
@@ -375,9 +381,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A buffer overflow vulnerability in the DNS proxy and DNS Server features of Palo Alto Networks PAN-OS\u00ae Software allows an unauthenticated attacker with network access to cause a denial of service (DoS) condition (all PAN-OS platforms except Cloud NGFW and Prisma Access) or potentially execute arbitrary code by sending specially crafted network traffic (PA-Series hardware only)",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -402,7 +408,7 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h6. Contact customer support to receive patch and update information",
           "product_ids": [
             "5"
           ]
@@ -431,9 +437,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An authentication bypass vulnerability in Palo Alto Networks PAN-OS\u00ae software enables an unauthenticated attacker with network access to bypass authentication controls when Cloud Authentication Service (CAS) is enabled",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -444,7 +450,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h6. Contact customer support to receive patch and update information",
           "product_ids": [
             "6"
           ]
@@ -466,6 +472,48 @@
       "title": "CVE-2026-0265"
     },
     {
+      "cve": "CVE-2026-0269",
+      "cwe": {
+        "id": "CWE-754",
+        "name": "Improper Check for Unusual or Exceptional Conditions"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "A memory corruption vulnerability in the processing of tunnel traffic in Palo Alto Networks PAN-OS\u00ae software allows an authenticated user to initiate system reboots using a maliciously crafted packet. Repeated attempts to initiate a reboot causes the firewall to enter maintenance mode.\n\n\n\nPanorama, Cloud NGFW, and Prisma\u00ae Access are not impacted by this vulnerability.",
+          "title": "CVE Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h7. Contact customer support to receive patch and update information",
+          "product_ids": [
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 0.0,
+            "baseSeverity": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2026-0269"
+    },
+    {
       "cve": "CVE-2026-0300",
       "cwe": {
         "id": "CWE-787",
@@ -473,9 +521,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A buffer overflow vulnerability in the User-ID\u2122 Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -507,7 +555,7 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Contact customer support to receive patch and update information",
+          "details": "Upgrade Palo Alto Networks Virtual NGFW V11.2.10-h6. Contact customer support to receive patch and update information",
           "product_ids": [
             "1"
           ]

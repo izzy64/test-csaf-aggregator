@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products.\n\nSiemens is preparing fix versions and recommends to consult and implement the workarounds provided in Fortinet's upstream security notifications.",
+        "text": "Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-864900: Multiple Vulnerabilities in Fortigate NGFW on RUGGEDCOM APE1808 Devices",
     "tracking": {
-      "current_release_date": "2026-06-09T00:00:00.000Z",
+      "current_release_date": "2026-07-14T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -114,10 +114,16 @@
           "legacy_version": "1.8",
           "number": "9",
           "summary": "Added CVE-2025-53844. Updated remediation for CVE-2025-31514 and CVE-2025-54821"
+        },
+        {
+          "date": "2026-07-14T00:00:00.000Z",
+          "legacy_version": "1.9",
+          "number": "10",
+          "summary": "Added CVE-2025-67862"
         }
       ],
       "status": "final",
-      "version": "9"
+      "version": "10"
     }
   },
   "product_tree": {
@@ -130,7 +136,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Fortinet NGFW < V7.4.9",
                   "product_id": "1"
                 }
               },
@@ -138,7 +144,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "RUGGEDCOM APE1808",
+                  "name": "RUGGEDCOM APE1808 with Fortinet NGFW < V7.6.6",
                   "product_id": "2"
                 }
               }
@@ -161,9 +167,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An insufficiently protected credentials vulnerability in FortiOS may allow a privileged authenticated attacker to retrieve LDAP credentials via modifying the LDAP server IP address in the FortiOS configuration to point to a malicious attacker-controlled server.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -203,9 +209,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Insufficient Session Expiration vulnerability [CWE-613] in FortiOS SSL-VPN version 7.6.0, version 7.4.6 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions may allow an attacker in possession of a cookie used to log in the SSL-VPN portal to log in again, although the session has expired or was logged out.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -245,9 +251,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A out-of-bounds write in Fortinet FortiOS versions 7.6.0, 7.4.0 through 7.4.6, 7.2.0 through 7.2.10, 7.0.0 through 7.0.16, 6.4.0 through 6.4.15 allows attacker to trigger a denial of service via specially crafted packets.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -294,9 +300,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Improperly Implemented Security Check for Standard vulnerability [CWE-358] in FortiOS version 7.6.0, version 7.4.7 and below, 7.0 all versions, 6.4 all versions and FortiProxy version 7.6.1 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions may allow a remote unauthenticated user to bypass the DNS filter via Apple devices.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -336,9 +342,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Authentication Bypass Using an Alternate Path or Channel vulnerability in FortiOS and FortiProxy may allow an authenticated attacker to elevate their privileges via triggering a malicious Webhook action in the Automation Stitch component.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -378,9 +384,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An\u00a0Improper Certificate Validation vulnerability [CWE-295] in FortiOS version 7.6.1 and below, version 7.4.7 and below may allow an EAP verified remote user to connect from FortiClient via revoked certificate.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -420,9 +426,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An\u00a0Integer Overflow or Wraparound vulnerability [CWE-190] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.2 all versions, 6.4 all versions, FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions, 2.0 all versions and FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions SSL-VPN RDP and VNC bookmarks may allow an authenticated user to affect the device SSL-VPN availability via crafted requests.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -462,9 +468,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A heap-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiOS 6.4.0 through 6.4.16, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows attacker to execute unauthorized code or commands via specially crafted packets",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -511,9 +517,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Exposure of Sensitive Information to an Unauthorized Actor vulnerability [CWE-200] in FortiOS version 7.6.0, version 7.4.7 and below, 7.2 all versions, 7.0 all versions, 6.4 all versions SSL-VPN web-mode may allow an authenticated user to access full SSL-VPN settings via crafted URL.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -553,9 +559,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Improper Validation of Certificate with Host Mismatch vulnerability [CWE-297] in FortiProxy version 7.6.1 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions and FortiOS version 7.6.2 and below, version 7.4.8 and below, 7.2 all versions, 7.0 all versions ZTNA proxy may allow an unauthenticated attacker in a man-in-the middle position to intercept and tamper with connections to the ZTNA proxy",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -595,9 +601,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Improper Neutralization of Input During Web Page Generation vulnerability [CWE-79] in FortiOS 7.6.0 through 7.6.3, 7.4.0 through 7.4.7, 7.2 all versions, 7.0 all versions, 6.4 all versions; FortiProxy 7.6.0 through 7.6.3, 7.4.0 through 7.4.9, 7.2 all versions, 7.0 all versions; FortiSASE 25.3.a may allow an unauthenticated attacker to perform a reflected cross site scripting (XSS) via crafted HTTP requests.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -637,9 +643,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Insertion of Sensitive Information into Log File vulnerability [CWE-532] in FortiOS 7.6.0 through 7.6.3, 7.4 all versions, 7.2 all versions, 7.0 all versions, 6.4 all versions may allow an attacker with at least read-only privileges to retrieve sensitive 2FA-related information via observing logs or via diagnose command.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -679,9 +685,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An URL Redirection to Untrusted Site vulnerabilities [CWE-601] in FortiOS 7.6.0 through 7.6.2, 7.4.0 through 7.4.8, 7.2 all versions, 7.0 all versions, 6.4 all versions; FortiProxy 7.6.0 through 7.6.3, 7.4 all versions, 7.2 all versions, 7.0 all versions; FortiSASE 25.2.a may allow an unauthenticated attacker to perform an open redirect attack via crafted HTTP requests.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -721,9 +727,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An incorrect privilege assignment vulnerability [CWE-266] in FortiOS Security Fabric version 7.6.0 through 7.6.2, 7.4.0 through 7.4.7, 7.2 all versions, 7.0 all versions, 6.4 all versions, may allow a remote authenticated attacker with high privileges to escalate their privileges to super-admin via registering the device to a malicious FortiManager.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -763,9 +769,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions allows attacker to execute unauthorized code or commands via specially crafted packets",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -812,9 +818,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A out-of-bounds write vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11 allows attacker to execute unauthorized code or commands via specially crafted packets.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -854,9 +860,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Improper Privilege Management vulnerability [CWE-269] in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4 all versions, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.6.0, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.3, FortiProxy 7.4 all versions, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions may allow an authenticated administrator to bypass the trusted host policy via crafted CLI command.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -896,9 +902,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Heap-based Buffer Overflow vulnerability [CWE-122] in FortiOS version 7.6.2 and below, version 7.4.7 and below, version 7.2.10 and below, 7.0 all versions, 6.4 all versions; FortiPAM version 1.5.0, version 1.4.2 and below, 1.3 all versions, 1.2 all versions, 1.1 all versions, 1.0 all versions and FortiProxy version 7.6.2 and below, version 7.4.3 and below, 7.2 all versions, 7.0 all versions RDP bookmark connection may allow an authenticated user to execute unauthorized code via crafted requests.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -938,9 +944,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A stack-based buffer overflow vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiOS 6.2 all versions, FortiOS 6.0 all versions, FortiSASE 25.3.b allows attacker to execute unauthorized code or commands via specially crafted packets",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -987,9 +993,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An Unchecked Return Value vulnerability [CWE-252] in Fortinet FortiOS version 7.6.0 through 7.6.3 and before 7.4.8 API allows an authenticated user to cause a  Null Pointer Dereference, crashing the http daemon via a specialy crafted request.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -1029,9 +1035,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A improper verification of cryptographic signature vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiProxy 7.6.0 through 7.6.3, FortiProxy 7.4.0 through 7.4.10, FortiProxy 7.2.0 through 7.2.14, FortiProxy 7.0.0 through 7.0.21, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows an unauthenticated attacker to bypass the FortiCloud SSO login authentication via a crafted SAML response message.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -1078,9 +1084,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "An improper verification of cryptographic signature vulnerability in Fortinet FortiWeb 8.0.0, FortiWeb 7.6.0 through 7.6.4, FortiWeb 7.4.0 through 7.4.9 may allow an unauthenticated attacker to bypass the FortiCloud SSO login authentication via a crafted SAML response message.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -1118,6 +1124,48 @@
         }
       ],
       "title": "CVE-2025-59719"
+    },
+    {
+      "cve": "CVE-2025-67862",
+      "cwe": {
+        "id": "CWE-1244",
+        "name": "Internal Asset Exposed to Unsafe Debug Access Level or State"
+      },
+      "notes": [
+        {
+          "category": "description",
+          "text": "An Internal Asset Exposed to Unsafe Debug Access Level or State vulnerability [CWE-1244] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.2, FortiOS 7.4.0 through 7.4.7, FortiOS 7.2.0 through 7.2.10, FortiOS 7.0.0 through 7.0.16, FortiOS 6.4 all versions, FortiProxy 7.6.0 through 7.6.3, FortiProxy 7.4.0 through 7.4.10, FortiProxy 7.2.0 through 7.2.14, FortiProxy 7.0 all versions may allow an authenticated admin to execute lua scripts via crafted CLI commands.",
+          "title": "CVE Description"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "2"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update Fortigate NGFW to V7.6.6 or later following the secure update recommendation procedure. Contact customer support to receive detailed information",
+          "product_ids": [
+            "2"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "2"
+          ]
+        }
+      ],
+      "title": "CVE-2025-67862"
     }
   ]
 }

@@ -51,7 +51,7 @@
     ],
     "title": "SSA-628843: Out of Bound Read Vulnerability in TPM 2.0",
     "tracking": {
-      "current_release_date": "2026-04-14T00:00:00.000Z",
+      "current_release_date": "2026-08-11T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-08-11T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added no fix planned for SIMATIC ITP1000 and for SIMATIC Field PG M5. Added fix for SIMATIC Field PG M6"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -82,7 +88,7 @@
                 "category": "product_version_range",
                 "name": "vers:all/*",
                 "product": {
-                  "name": "SIMATIC CN 4100",
+                  "name": "SIMATIC CN 4100 with Hardware versions < FS 05",
                   "product_id": "1"
                 }
               }
@@ -108,9 +114,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<26.01.14",
                 "product": {
-                  "name": "SIMATIC Field PG M6",
+                  "name": "SIMATIC Field PG M6 < V26.01.14",
                   "product_id": "3"
                 }
               }
@@ -124,7 +130,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<29.01.09",
                 "product": {
-                  "name": "SIMATIC IPC BX-32A",
+                  "name": "SIMATIC IPC BX-32A < V29.01.09",
                   "product_id": "4"
                 }
               }
@@ -138,7 +144,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<29.01.09",
                 "product": {
-                  "name": "SIMATIC IPC BX-39A",
+                  "name": "SIMATIC IPC BX-39A < V29.01.09",
                   "product_id": "5"
                 }
               }
@@ -152,7 +158,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<32.01.09",
                 "product": {
-                  "name": "SIMATIC IPC BX-56A",
+                  "name": "SIMATIC IPC BX-56A < V32.01.09",
                   "product_id": "6"
                 }
               }
@@ -166,7 +172,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<32.01.09",
                 "product": {
-                  "name": "SIMATIC IPC BX-59A",
+                  "name": "SIMATIC IPC BX-59A < V32.01.09",
                   "product_id": "7"
                 }
               }
@@ -180,7 +186,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<30.01.10",
                 "product": {
-                  "name": "SIMATIC IPC MD-57A",
+                  "name": "SIMATIC IPC MD-57A < V30.01.10",
                   "product_id": "8"
                 }
               }
@@ -194,7 +200,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<29.01.09",
                 "product": {
-                  "name": "SIMATIC IPC PX-32A",
+                  "name": "SIMATIC IPC PX-32A < V29.01.09",
                   "product_id": "9"
                 }
               }
@@ -208,7 +214,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<29.01.09",
                 "product": {
-                  "name": "SIMATIC IPC PX-39A",
+                  "name": "SIMATIC IPC PX-39A < V29.01.09",
                   "product_id": "10"
                 }
               }
@@ -222,7 +228,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<29.01.09",
                 "product": {
-                  "name": "SIMATIC IPC PX-39A PRO",
+                  "name": "SIMATIC IPC PX-39A PRO < V29.01.09",
                   "product_id": "11"
                 }
               }
@@ -236,7 +242,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<34.01.02",
                 "product": {
-                  "name": "SIMATIC IPC RW-528A",
+                  "name": "SIMATIC IPC RW-528A < V34.01.02",
                   "product_id": "12"
                 }
               }
@@ -250,7 +256,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<34.01.02",
                 "product": {
-                  "name": "SIMATIC IPC RW-548A",
+                  "name": "SIMATIC IPC RW-548A < V34.01.02",
                   "product_id": "13"
                 }
               }
@@ -292,7 +298,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<21.01.20",
                 "product": {
-                  "name": "SIMATIC IPC427E",
+                  "name": "SIMATIC IPC427E < V21.01.20",
                   "product_id": "16"
                 }
               }
@@ -306,7 +312,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<21.01.20",
                 "product": {
-                  "name": "SIMATIC IPC477E",
+                  "name": "SIMATIC IPC477E < V21.01.20",
                   "product_id": "17"
                 }
               }
@@ -320,7 +326,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<21.01.20",
                 "product": {
-                  "name": "SIMATIC IPC477E PRO",
+                  "name": "SIMATIC IPC477E PRO < V21.01.20",
                   "product_id": "18"
                 }
               }
@@ -404,7 +410,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<21.01.20",
                 "product": {
-                  "name": "SIPLUS IPC427E",
+                  "name": "SIPLUS IPC427E < V21.01.20",
                   "product_id": "24"
                 }
               }
@@ -427,9 +433,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "TCG TPM2.0 Reference implementation's CryptHmacSign helper function is vulnerable to Out-of-Bounds read due to the lack of validation the signature scheme with the signature key's algorithm. See Errata Revision 1.83 and advisory TCGVRT0009 for TCG standard TPM2.0",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -466,21 +472,20 @@
           "details": "Currently no fix is planned",
           "product_ids": [
             "1",
+            "2",
             "14",
-            "15"
+            "15",
+            "23"
           ]
         },
         {
           "category": "none_available",
           "details": "Currently no fix is available",
           "product_ids": [
-            "2",
-            "3",
             "19",
             "20",
             "21",
-            "22",
-            "23"
+            "22"
           ]
         },
         {
@@ -491,6 +496,14 @@
             "17",
             "18",
             "24"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V26.01.14 or later version",
+          "product_ids": [
+            "3"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109763408/"
         },

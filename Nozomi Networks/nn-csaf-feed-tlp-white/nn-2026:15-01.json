@@ -1,0 +1,171 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "MEDIUM"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "Medium",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Path traversal in the Offline archives functionality of the local web interface in Arc before v2.7.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2026-33922"
+      ],
+      "current_release_date": "2026-08-11T11:00:00.000Z",
+      "id": "NN-2026:15-01",
+      "initial_release_date": "2026-08-11T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-08-11T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<2.7.0",
+                "product": {
+                  "name": "Nozomi Networks Arc <2.7.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.7.0",
+                "product": {
+                  "name": "Nozomi Networks Arc 2.7.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Arc"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Andrea Palanca"
+          ],
+          "organization": "Nozomi Networks Product Security team",
+          "summary": "finding this issue during an internal investigation"
+        }
+      ],
+      "cve": "CVE-2026-33922",
+      "cwe": {
+        "id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      "discovery_date": "2026-08-11T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2026:15-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "A path traversal vulnerability was discovered in the Offline archives functionality of the local web interface due to insufficient validation of an input parameter.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002"
+        ],
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33922"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2026/nn-2026_15-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2026:15-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "Review the credentials of the web interface and rotate them by relaunching Arc's local web server if they may have been exposed to untrusted users.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Arc to v2.7.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "A local user with administrative credentials for the web interface could submit an archive name containing traversal sequences and delete arbitrary files reachable by the Arc process, which runs with administrative privileges on the host."
+        }
+      ],
+      "title": "Path traversal in the Offline archives functionality of the local web interface in Arc before v2.7.0"
+    }
+  ]
+}

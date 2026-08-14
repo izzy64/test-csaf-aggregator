@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Simcenter Nastran is affected by a stack overflow vulnerability that could be triggered when an application binary reads arbitrary string as a file argument. If a user is tricked to run one of the impacted application binary with a malicious string, an attacker could leverage the vulnerability to perform remote code execution in the context of the current process.\n\nSiemens has released a new version for Simcenter Nastran and recommends to update to the latest version.",
+        "text": "Simcenter Nastran is affected by a stack overflow vulnerability that could be triggered when an application binary reads arbitrary string as a file argument. If a user is tricked to run one of the impacted application binary with a malicious string, an attacker could leverage the vulnerability to perform remote code execution in the context of the current process.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-069220: Stack Overflow Vulnerability in Simcenter Nastran Before V2606",
     "tracking": {
-      "current_release_date": "2026-08-11T00:00:00.000Z",
+      "current_release_date": "2026-08-13T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-08-13T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added Simcenter Femap with fix"
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -82,8 +88,22 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<2606",
                 "product": {
-                  "name": "Simcenter Nastran < V2606",
+                  "name": "Simcenter Femap < V2606",
                   "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter Femap"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<2606",
+                "product": {
+                  "name": "Simcenter Nastran < V2606",
+                  "product_id": "2"
                 }
               }
             ],
@@ -112,7 +132,8 @@
       ],
       "product_status": {
         "known_affected": [
-          "1"
+          "1",
+          "2"
         ]
       },
       "remediations": [
@@ -120,9 +141,10 @@
           "category": "vendor_fix",
           "details": "Update to V2606 or later version",
           "product_ids": [
-            "1"
+            "1",
+            "2"
           ],
-          "url": "https://support.sw.siemens.com/product/289054037/"
+          "url": "https://support.sw.siemens.com/product/275652363/"
         }
       ],
       "scores": [
@@ -134,7 +156,8 @@
             "version": "3.1"
           },
           "products": [
-            "1"
+            "1",
+            "2"
           ]
         }
       ],

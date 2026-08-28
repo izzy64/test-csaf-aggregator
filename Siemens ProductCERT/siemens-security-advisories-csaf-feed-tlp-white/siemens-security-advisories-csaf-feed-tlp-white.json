@@ -9,6 +9,37 @@
     "entry": [
       {
         "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-682041.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-682041",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-682041.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-682041.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-682041.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2026-08-27T00:00:00Z",
+        "summary": {
+          "content": "The si-map component does not properly neutralize user-controllable input of the points property that is used to render the tooltip label of map pins.\r\nThis could allow an attacker to craft a malicious URL that, when loaded by a victim and the map pin is hovered over, executes arbitrary script code within the victim's browser session. This vulnerability affects only the @siemens/maps-ng package.\r\n\r\nSiemens has released new versions for the affected products and recommends to update to the latest versions."
+        },
+        "title": "Cross Site Scripting Vulnerability in Element Maps",
+        "updated": "2026-08-27T00:00:00Z"
+      },
+      {
+        "content": {
           "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-069220.json",
           "type": "application/json"
         },
@@ -25777,6 +25808,6 @@
       }
     ],
     "title": "Siemens Security Advisories CSAF feed (TLP:WHITE)",
-    "updated": "2026-08-26T08:27:41.732919Z"
+    "updated": "2026-08-28T19:41:15.372780Z"
   }
 }

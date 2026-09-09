@@ -1,0 +1,232 @@
+{
+  "document": {
+    "aggregate_severity": {
+      "text": "HIGH"
+    },
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "other",
+        "text": "High",
+        "title": "Risk Level for Nozomi customers"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "Nozomi Networks Product Security team can be reached at prodsec@nozominetworks.com",
+      "name": "Nozomi Networks Product Security",
+      "namespace": "https://security.nozominetworks.com/psirt"
+    },
+    "title": "Disabled and non-configurable certificate/host key validation in Smart Polling in Guardian/CMC before 26.3.0 and Arc before v2.7.0",
+    "tracking": {
+      "aliases": [
+        "CVE-2026-33389"
+      ],
+      "current_release_date": "2026-09-08T11:00:00.000Z",
+      "id": "NN-2026:20-01",
+      "initial_release_date": "2026-09-08T11:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-09-08T11:00:00.000Z",
+          "number": "1",
+          "summary": "Initial revision"
+        }
+      ],
+      "status": "final",
+      "version": "1"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<26.3.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian <26.3.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.3.0",
+                "product": {
+                  "name": "Nozomi Networks Guardian 26.3.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Guardian"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<26.3.0",
+                "product": {
+                  "name": "Nozomi Networks CMC <26.3.0",
+                  "product_id": "CSAFPID-0003"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "26.3.0",
+                "product": {
+                  "name": "Nozomi Networks CMC 26.3.0",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CMC"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:gem/<2.7.0",
+                "product": {
+                  "name": "Nozomi Networks Arc <2.7.0",
+                  "product_id": "CSAFPID-0005"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "2.7.0",
+                "product": {
+                  "name": "Nozomi Networks Arc 2.7.0",
+                  "product_id": "CSAFPID-0006"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Arc"
+          }
+        ],
+        "category": "vendor",
+        "name": "Nozomi Networks"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "acknowledgments": [
+        {
+          "names": [
+            "Stefano Balzarotti"
+          ],
+          "organization": "Nozomi Networks",
+          "summary": "finding this issue during an internal investigation"
+        },
+        {
+          "names": [
+            "Andrea Palanca"
+          ],
+          "organization": "Nozomi Networks Product Security team",
+          "summary": "finding this issue during an internal investigation"
+        }
+      ],
+      "cve": "CVE-2026-33389",
+      "cwe": {
+        "id": "CWE-671",
+        "name": "Lack of Administrator Control over Security"
+      },
+      "discovery_date": "2026-09-08T11:00:00.000Z",
+      "ids": [
+        {
+          "system_name": "Nozomi Networks Security Advisory ID",
+          "text": "NN-2026:20-01"
+        }
+      ],
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An improper certificate/host key validation vulnerability was discovered in the Smart Polling functionality, which established encrypted connections to target devices without validating the remote host's identity, and no option was provided to enable it.",
+          "title": "Vulnerability summary"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-0002",
+          "CSAFPID-0004",
+          "CSAFPID-0006"
+        ],
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0003",
+          "CSAFPID-0005"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Mitre CVE entry",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33389"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.nozominetworks.com/csaf/2026/nn-2026_20-01.json"
+        },
+        {
+          "category": "self",
+          "summary": "Human-readable advisory.",
+          "url": "https://security.nozominetworks.com/NN-2026:20-01"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "mitigation",
+          "details": "N/A",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003",
+            "CSAFPID-0005"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Upgrade Guardian/CMC to v26.3.0 or later. Upgrade Arc to v2.7.0 or later.",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0003",
+            "CSAFPID-0005"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0003",
+            "CSAFPID-0005"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "category": "impact",
+          "details": "A man-in-the-middle attacker positioned between a sensor and a polled device can, during a polling session, impersonate the device and intercept the communication, including the credentials used to access it. The captured credentials can then be replayed to authenticate against the device itself or against other devices sharing the same credentials, allowing the attacker to access and tamper with the device's data and to disrupt its operations."
+        }
+      ],
+      "title": "Disabled and non-configurable certificate/host key validation in Smart Polling in Guardian/CMC before 26.3.0 and Arc before v2.7.0"
+    }
+  ]
+}

@@ -2,8 +2,10 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "Rockwell Automation",
-        "summary": "reported these vulnerabilities to CISA"
+        "names": [
+          "Andrej Tomci"
+        ],
+        "summary": "reported this vulnerability to CISA"
       }
     ],
     "category": "csaf_security_advisory",
@@ -24,12 +26,12 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of these vulnerabilities could crash the device being accessed; an out-of-bounds write condition may allow remote code execution.",
+        "text": "Successful exploitation of this vulnerability could allow an authenticated remote attacker to write past the end of a heap allocation when Orthanc decodes an attacker-supplied PNG or JPEG image, resulting in a crash of the Orthanc process and a denial-of-service condition.",
         "title": "Advisory Summary"
       },
       {
         "category": "other",
-        "text": "Chemical, Critical Manufacturing, Food and Agriculture, Healthcare and Public Health, Water and Wastewater",
+        "text": "Healthcare and Public Health",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -39,12 +41,12 @@
       },
       {
         "category": "other",
-        "text": "United States",
+        "text": "Belgium",
         "title": "Company headquarters location"
       },
       {
         "category": "general",
-        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities.",
+        "text": "CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability.",
         "title": "Recommended Practices"
       },
       {
@@ -109,7 +111,7 @@
       },
       {
         "category": "general",
-        "text": "No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time. These vulnerabilities are not exploitable remotely.",
+        "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.",
         "title": "Recommended Practices"
       }
     ],
@@ -122,13 +124,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-26-244-06 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-244-06.json"
+        "summary": "ICS Advisory ICSMA-26-253-02 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsma-26-253-02.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-26-244-06 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-06"
+        "summary": "ICSA Advisory ICSMA-26-253-02 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-253-02"
       },
       {
         "category": "external",
@@ -186,34 +188,28 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "Rockwell Automation Historian ME",
+    "title": "Orthanc DICOM Server",
     "tracking": {
-      "current_release_date": "2026-09-09T06:00:00.000000Z",
+      "current_release_date": "2026-09-10T06:00:00.000000Z",
       "generator": {
-        "date": "2026-09-08T21:41:49.143642Z",
+        "date": "2026-09-08T18:37:26.375127Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-26-244-06",
-      "initial_release_date": "2026-09-01T06:00:00.000000Z",
+      "id": "ICSMA-26-253-02",
+      "initial_release_date": "2026-09-10T06:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2026-09-01T06:00:00.000000Z",
+          "date": "2026-09-10T06:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
-        },
-        {
-          "date": "2026-09-09T06:00:00.000000Z",
-          "legacy_version": "Revision",
-          "number": "2",
-          "summary": "Revision - Removed a typo in the vulnerability description"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -223,48 +219,34 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "5.202",
+                "category": "product_version_range",
+                "name": "<1.13.0.",
                 "product": {
-                  "name": "Rockwell Automation Series B: 5.202",
+                  "name": "Orthanc DICOM Server: <1.13.0.",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Series B"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version",
-                "name": "7.101",
-                "product": {
-                  "name": "Rockwell Automation Series C: 7.101",
-                  "product_id": "CSAFPID-0002"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Series C"
+            "name": "DICOM Server"
           }
         ],
         "category": "vendor",
-        "name": "Rockwell Automation"
+        "name": "Orthanc"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-12768",
+      "cve": "CVE-2026-87020",
       "cwe": {
-        "id": "CWE-787",
-        "name": "Out-of-bounds Write"
+        "id": "CWE-190",
+        "name": "Integer Overflow or Wraparound"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "A security issue exists within FactoryTalk® Historian Machine Edition. An attacker with low-level authentication could exploit this vulnerability to achieve remote code execution on the affected device.",
+          "text": "An integer overflow in a specified pitch and buffer-size computation leads to a heap out-of-bounds write when Orthanc decodes an attacker-supplied PNG.",
           "title": "Vulnerability Summary"
         },
         {
@@ -275,162 +257,51 @@
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002"
+          "CSAFPID-0001"
         ]
       },
       "references": [
         {
           "category": "external",
           "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/787.html"
+          "url": "https://cwe.mitre.org/data/definitions/190.html"
         },
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2025-12768"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-87020"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "Customers using the affected software, who are not able to upgrade to one of the corrected versions, should use Rockwell Automation's security best practices found at https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight.",
+          "details": "Orthanc recommends users update to v1.13.0. https://orthanc.uclouvain.be/downloads/index.html.",
           "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
+            "CSAFPID-0001"
           ],
-          "url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight"
-        },
-        {
-          "category": "mitigation",
-          "details": "If you have any questions regarding the security issue(s) above and how to mitigate them, contact TechConnect for help. More information can be found at https://www.rockwellautomation.com/en-us/company/about-us/contact-us.html.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "https://www.rockwellautomation.com/en-us/company/about-us/contact-us.html"
-        },
-        {
-          "category": "mitigation",
-          "details": "If you have any questions regarding this disclosure, please contact PSIRT Email: rasecure@ra.rockwell.com",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "mailto:rasecure@ra.rockwell.com"
+          "url": "https://orthanc.uclouvain.be/downloads/index.html"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 8.0,
+            "baseScore": 8.1,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ]
-        }
-      ]
-    },
-    {
-      "cve": "CVE-2026-12661",
-      "cwe": {
-        "id": "CWE-121",
-        "name": "Stack-based Buffer Overflow"
-      },
-      "notes": [
-        {
-          "category": "summary",
-          "text": "A denial-of-service security issue exists within FactoryTalk® Historian Machine Edition. A network adjacent attacker who is authenticated could send crafted requests to the web interface, resulting in buffer overflow conditions that may cause the device to crash and become unresponsive.",
-          "title": "Vulnerability Summary"
-        },
-        {
-          "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-09-08T06:00:00.000000Z",
-          "title": "SSVC"
-        }
-      ],
-      "product_status": {
-        "known_affected": [
-          "CSAFPID-0001",
-          "CSAFPID-0002"
-        ]
-      },
-      "references": [
-        {
-          "category": "external",
-          "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/121.html"
-        },
-        {
-          "category": "external",
-          "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2026-12661"
-        },
-        {
-          "category": "external",
-          "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
-        },
-        {
-          "category": "external",
-          "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:A/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
-        }
-      ],
-      "remediations": [
-        {
-          "category": "mitigation",
-          "details": "Customers using the affected software, who are not able to upgrade to one of the corrected versions, should use Rockwell Automation's security best practices found at https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight"
-        },
-        {
-          "category": "mitigation",
-          "details": "If you have any questions regarding the security issue(s) above and how to mitigate them, contact TechConnect for help. More information can be found at https://www.rockwellautomation.com/en-us/company/about-us/contact-us.html.",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "https://www.rockwellautomation.com/en-us/company/about-us/contact-us.html"
-        },
-        {
-          "category": "mitigation",
-          "details": "If you have any questions regarding this disclosure, please contact PSIRT Email: rasecure@ra.rockwell.com",
-          "product_ids": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
-          ],
-          "url": "mailto:rasecure@ra.rockwell.com"
-        }
-      ],
-      "scores": [
-        {
-          "cvss_v3": {
-            "baseScore": 4.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
-            "version": "3.1"
-          },
-          "products": [
-            "CSAFPID-0001",
-            "CSAFPID-0002"
+            "CSAFPID-0001"
           ]
         }
       ]

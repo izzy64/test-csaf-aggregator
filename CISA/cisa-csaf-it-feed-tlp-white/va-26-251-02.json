@@ -1,0 +1,200 @@
+{
+  "document": {
+    "category": "csaf_vex",
+    "csaf_version": "2.0",
+    "lang": "en-US",
+    "publisher": {
+      "category": "coordinator",
+      "contact_details": "https://www.cisa.gov/report",
+      "issuing_authority": "CISA",
+      "name": "CISA",
+      "namespace": "https://www.cisa.gov/"
+    },
+    "title": "Waves Central local privilege escalation via Improper XPC Client Authentication in macOS",
+    "tracking": {
+      "current_release_date": "2026-09-08T18:44:30Z",
+      "generator": {
+        "engine": {
+          "name": "VINCE-NT",
+          "version": "1.15.0+build.116"
+        }
+      },
+      "id": "VA-26-251-02",
+      "initial_release_date": "2026-09-08T18:44:30Z",
+      "status": "final",
+      "version": "1.0.0",
+      "revision_history": [
+        {
+          "number": "1.0.0",
+          "summary": "Initial publication",
+          "date": "2026-09-08T18:44:30Z"
+        }
+      ]
+    },
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "notes": [
+      {
+        "text": "All information products included in [https://github.com/cisagov/CSAF/tree/develop/csaf_files/IT/white](https://github.com/cisagov/CSAF/tree/develop/csaf_files/IT/white) are provided \\\"as is\\\" for informational purposes only. The Department of Homeland Security (DHS) does not provide any warranties of any kind regarding any information contained within. DHS does not endorse any commercial product or service, referenced in this product or otherwise. Further dissemination of this product is governed by the Traffic Light Protocol (TLP) marking in the header. For more information about TLP, see [https://us-cert.cisa.gov/tlp/](https://us-cert.cisa.gov/tlp/).",
+        "title": "Legal Notice",
+        "category": "legal_disclaimer"
+      },
+      {
+        "text": "Worldwide",
+        "title": "Countries and Areas Deployed",
+        "category": "other"
+      },
+      {
+        "text": "Information Technology",
+        "title": "Critical Infrastructure Sectors",
+        "category": "other"
+      },
+      {
+        "text": "Waves Central for macOS contains a local privilege escalation in the privileged helper service. The helper authorizes connecting XPC clients by comparing the caller's code-signing certificate chain for equality with its own, rather than validating the caller against a pinned code requirement (application identifier and Team ID). A local, unprivileged user can execute code within the vendor-signed process, satisfy the helper's client check, and cause the helper to execute a script with root privileges.",
+        "title": "Risk Evaluation",
+        "category": "summary"
+      },
+      {
+        "text": "Update to 17.0.",
+        "title": "Recommended Practices",
+        "category": "general"
+      },
+      {
+        "text": "Israel",
+        "title": "Company Headquarters Location",
+        "category": "other"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-251-02.json",
+        "summary": "Vulnerability Advisory VA-26-251-02 CSAF",
+        "category": "self"
+      }
+    ]
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "category": "vendor",
+        "name": "Waves Audio Ltd.",
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Waves Central",
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": ">=16.6.2|<17.0",
+                "product": {
+                  "name": "Waves Audio Ltd. Waves Central >=16.6.2|<17.0",
+                  "product_id": "CSAFPID-0001"
+                }
+              },
+              {
+                "category": "product_version",
+                "name": "17.0",
+                "product": {
+                  "name": "Waves Audio Ltd. Waves Central 17.0",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-86819",
+      "cwe": {
+        "id": "CWE-862",
+        "name": "Missing Authorization"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Waves Central for macOS contains a local privilege escalation in the privileged helper service. The helper authorizes connecting XPC clients by comparing the caller's code-signing certificate chain for equality with its own, rather than validating the caller against a pinned code requirement (application identifier and Team ID). A local, authenticated user can execute code within the vendor-signed process, satisfy the helper's client check, and cause the helper to execute a script with root privileges. Fixed in 17.0.",
+          "title": "Description"
+        },
+        {
+          "category": "details",
+          "title": "SSVC",
+          "text": "SSVCv2/E:N/A:N/T:T/2026-09-04T19:25:57Z/"
+        }
+      ],
+      "title": "Waves Central local privilege escalation via Improper XPC Client Authentication in macOS",
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001"
+        ],
+        "fixed": [
+          "CSAFPID-0002"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "www.waves.com",
+          "url": "https://www.waves.com/downloads/release-notes#v17"
+        },
+        {
+          "category": "external",
+          "summary": "CVE-2026-86819",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-86819"
+        },
+        {
+          "category": "external",
+          "summary": "VA-26-251-02 CSAF",
+          "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/IT/white/2026/va-26-251-02.json"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Fixed in 17.0.",
+          "url": "https://www.waves.com/downloads/release-notes#v17",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "date": "2026-09-08T00:00:00Z"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Fixed in 17.0.",
+          "url": "https://www.waves.com/downloads/release-notes#v17",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "date": "2026-09-08T00:00:00Z"
+        }
+      ],
+      "acknowledgments": [
+        {
+          "organization": "Independent Security Researcher",
+          "names": [
+            "Shravan Kumar Sheri"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08T00:00:00Z"
+    }
+  ]
+}

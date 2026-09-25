@@ -19,12 +19,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "This advisory is revoked. Re-investigation confirmed the reported behavior is expected platform configuration and does not expose the protected attribute.",
+        "text": "The products listed below contain a denial of service vulnerability that could allow an attacker to force the devices into protection mode under certain conditions. This disables remote connectivity functions (Web Access) to the devices.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure Siemens strongly recommends to protect network access to affected products with appropriate mechanisms. It is advised to follow recommended security practices in order to run the devices in a protected IT environment.",
         "title": "General Recommendations"
       },
       {
@@ -44,7 +44,7 @@
       },
       {
         "category": "other",
-        "text": "This ICSA is a verbatim republication of Siemens ProductCERT SSA-814963 from a direct conversion of the vendor's Common Security Advisory Framework (CSAF) advisory. This is republished to CISA's website as a means of increasing visibility and is provided \"as-is\" for informational purposes only. CISA is not responsible for the editorial or technical accuracy of republished advisories and provides no warranties of any kind regarding any information contained within this advisory.  Further, CISA does not endorse any commercial product or service.  Please contact Siemens ProductCERT directly for any questions regarding this advisory.",
+        "text": "This ICSA is a verbatim republication of Siemens ProductCERT SSA-823812 from a direct conversion of the vendor's Common Security Advisory Framework (CSAF) advisory. This is republished to CISA's website as a means of increasing visibility and is provided \"as-is\" for informational purposes only. CISA is not responsible for the editorial or technical accuracy of republished advisories and provides no warranties of any kind regarding any information contained within this advisory.  Further, CISA does not endorse any commercial product or service.  Please contact Siemens ProductCERT directly for any questions regarding this advisory.",
         "title": "Advisory Conversion Disclaimer"
       },
       {
@@ -89,7 +89,7 @@
       },
       {
         "category": "other",
-        "text": "Critical Manufacturing",
+        "text": "Energy",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -112,23 +112,23 @@
     "references": [
       {
         "category": "self",
-        "summary": "SSA-814963: Insecure Inherited Permission in Mendix (Revoked) - CSAF Version",
-        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-814963.json"
+        "summary": "SSA-823812: Denial of Service Vulnerability in WTV676 and WTV776 devices - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-823812.json"
       },
       {
         "category": "self",
-        "summary": "SSA-814963: Insecure Inherited Permission in Mendix (Revoked) - HTML Version",
-        "url": "https://cert-portal.siemens.com/productcert/html/ssa-814963.html"
+        "summary": "SSA-823812: Denial of Service Vulnerability in WTV676 and WTV776 devices - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-823812.html"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-26-209-02 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-209-02.json"
+        "summary": "ICS Advisory ICSA-26-265-08 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-265-08.json"
       },
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-26-209-02 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-02"
+        "summary": "ICS Advisory ICSA-26-265-08 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
       },
       {
         "category": "external",
@@ -161,46 +161,34 @@
         "url": "https://www.cisa.gov/news-events/news/targeted-cyber-intrusion-detection-and-mitigation-strategies-update-b"
       }
     ],
-    "title": "Siemens Mendix Runtime",
+    "title": "Siemens WTV676 and WTV776",
     "tracking": {
-      "current_release_date": "2026-09-24T06:00:00.000000Z",
+      "current_release_date": "2026-09-22T06:00:00.000000Z",
       "generator": {
-        "date": "2026-09-22T19:32:07.914460Z",
+        "date": "2026-09-21T21:25:00.431927Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.5.0"
         }
       },
-      "id": "ICSA-26-209-02",
-      "initial_release_date": "2026-07-14T00:00:00.000000Z",
+      "id": "ICSA-26-265-08",
+      "initial_release_date": "2026-09-16T00:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2026-07-14T00:00:00.000000Z",
+          "date": "2026-09-16T00:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2026-07-28T06:00:00.000000Z",
-          "legacy_version": "Additional Release 1",
+          "date": "2026-09-22T06:00:00.000000Z",
+          "legacy_version": "CISA Republication",
           "number": "2",
-          "summary": "CISA Republication - Initial CISA Republication of Siemens ProductCERT SSA-814963 advisory"
-        },
-        {
-          "date": "2026-09-22T00:00:00.000000Z",
-          "legacy_version": "Additional Release 2",
-          "number": "3",
-          "summary": "Revoked advisory as the CVE is rejected"
-        },
-        {
-          "date": "2026-09-24T06:00:00.000000Z",
-          "legacy_version": "Latest Updated CISA Republication",
-          "number": "4",
-          "summary": "CISA Republication update based on Siemens ProductCERT SSA-814963 advisory"
+          "summary": "Initial CISA Republication of Siemens ProductCERT SSA-823812 advisory"
         }
       ],
       "status": "final",
-      "version": "4"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -211,15 +199,29 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.94",
                 "product": {
-                  "name": "Mendix Runtime",
+                  "name": "WTV676-HB6035 Web Interface < V3.94",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Mendix Runtime"
+            "name": "WTV676-HB6035 Web Interface"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<4.17",
+                "product": {
+                  "name": "WTV776-HB6035 Web Interface < V4.17",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "WTV776-HB6035 Web Interface"
           }
         ],
         "category": "vendor",
@@ -229,53 +231,74 @@
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2026-7891",
+      "cve": "CVE-2026-89207",
       "cwe": {
-        "id": "CWE-277",
-        "name": "Insecure Inherited Permissions"
+        "id": "CWE-1287",
+        "name": "Improper Validation of Specified Type of Input"
       },
-      "flags": [
-        {
-          "label": "vulnerable_code_not_present",
-          "product_ids": [
-            "CSAFPID-0001"
-          ]
-        }
-      ],
       "notes": [
         {
           "category": "description",
-          "text": "This CVE has been retracted. Re-investigation confirmed the reported behavior is expected platform configuration and does not expose the protected application-specific attribute.",
+          "text": "Affected devices do not properly validate input received from backend services.\r\nThis could allow an unauthenticated remote attacker to force the device into protection mode, which results in losing remote connectivity functions (Web Access).",
           "title": "CVE Description"
         }
       ],
       "product_status": {
-        "known_not_affected": [
-          "CSAFPID-0001"
+        "known_affected": [
+          "CSAFPID-0001",
+          "CSAFPID-0002"
         ]
       },
       "references": [
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2026-7891"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-89207"
         },
         {
           "category": "external",
           "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/277.html"
+          "url": "https://cwe.mitre.org/data/definitions/1287.html"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
         }
       ],
-      "threats": [
+      "remediations": [
         {
-          "category": "impact",
-          "details": "Vulnerability is rejected as re-investigation confirmed the reported behavior is expected platform configuration and does not expose the protected application-specific attribute",
+          "category": "vendor_fix",
+          "details": "Update to V3.94 or later version",
           "product_ids": [
             "CSAFPID-0001"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109480838/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V4.17 or later version",
+          "product_ids": [
+            "CSAFPID-0002"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109480838/"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001",
+            "CSAFPID-0002"
           ]
         }
       ],
-      "title": "CVE-2026-7891"
+      "title": "CVE-2026-89207"
     }
   ]
 }

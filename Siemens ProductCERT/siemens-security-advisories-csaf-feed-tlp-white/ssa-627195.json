@@ -17,7 +17,7 @@
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: \nhttps://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\n\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-627195: Zip Path Traversal Vulnerability in Mendix Studio Pro's Module Installation Process",
     "tracking": {
-      "current_release_date": "2025-07-08T00:00:00Z",
+      "current_release_date": "2026-09-28T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,23 +59,29 @@
         }
       },
       "id": "SSA-627195",
-      "initial_release_date": "2025-06-12T00:00:00Z",
+      "initial_release_date": "2025-06-12T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-06-12T00:00:00Z",
+          "date": "2025-06-12T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2025-07-08T00:00:00Z",
+          "date": "2025-07-08T00:00:00.000Z",
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for Mendix Studio Pro 11"
+        },
+        {
+          "date": "2026-09-28T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Removed unsupported versions; Adjusted fix versions"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -86,38 +92,18 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V8.18.35",
+                "name": "vers:intdot/<10.24.24",
                 "product": {
-                  "name": "Mendix Studio Pro 8",
+                  "name": "Mendix Studio Pro 10 < V10.24.24 for Windows",
                   "product_id": "1"
                 }
-              }
-            ],
-            "category": "product_name",
-            "name": "Mendix Studio Pro 8"
-          },
-          {
-            "branches": [
+              },
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V9.24.35",
+                "name": "vers:intdot/<10.24.24",
                 "product": {
-                  "name": "Mendix Studio Pro 9",
+                  "name": "Mendix Studio Pro 10 < V10.24.24 for Mac",
                   "product_id": "2"
-                }
-              }
-            ],
-            "category": "product_name",
-            "name": "Mendix Studio Pro 9"
-          },
-          {
-            "branches": [
-              {
-                "category": "product_version_range",
-                "name": "vers:all/<V10.23.0",
-                "product": {
-                  "name": "Mendix Studio Pro 10",
-                  "product_id": "3"
                 }
               }
             ],
@@ -128,57 +114,81 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V10.6.24",
+                "name": "vers:intdot/<11.13.0",
                 "product": {
-                  "name": "Mendix Studio Pro 10.6",
+                  "name": "Mendix Studio Pro 11 < V11.13.0 for Windows",
+                  "product_id": "3"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<11.13.0",
+                "product": {
+                  "name": "Mendix Studio Pro 11 < V11.13.0 for Mac",
                   "product_id": "4"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Mendix Studio Pro 10.6"
+            "name": "Mendix Studio Pro 11"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V10.12.17",
+                "name": "vers:intdot/<11.12.2",
                 "product": {
-                  "name": "Mendix Studio Pro 10.12",
+                  "name": "Mendix Studio Pro 11.12 < V11.12.2 for Windows",
                   "product_id": "5"
                 }
-              }
-            ],
-            "category": "product_name",
-            "name": "Mendix Studio Pro 10.12"
-          },
-          {
-            "branches": [
+              },
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V10.18.7",
+                "name": "vers:intdot/<11.12.2",
                 "product": {
-                  "name": "Mendix Studio Pro 10.18",
+                  "name": "Mendix Studio Pro 11.12 < V11.12.2 for Mac",
                   "product_id": "6"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Mendix Studio Pro 10.18"
+            "name": "Mendix Studio Pro 11.12"
           },
           {
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/<V11.0.0",
+                "name": "vers:intdot/<11.6.9",
                 "product": {
-                  "name": "Mendix Studio Pro 11",
+                  "name": "Mendix Studio Pro 11.6 < V11.6.9 for Windows",
                   "product_id": "7"
+                }
+              },
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<11.6.9",
+                "product": {
+                  "name": "Mendix Studio Pro 11.6 < V11.6.9 for Mac",
+                  "product_id": "8"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Mendix Studio Pro 11"
+            "name": "Mendix Studio Pro 11.6"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:intdot/<9.24.44",
+                "product": {
+                  "name": "Mendix Studio Pro 9 < V9.24.44 for Windows",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Mendix Studio Pro 9"
           }
         ],
         "category": "vendor",
@@ -195,9 +205,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A zip path traversal vulnerability exists in the module installation process of Studio Pro. By crafting a malicious module and distributing it via (for example) the Mendix Marketplace, an attacker could write or modify arbitrary files in directories outside a developer\u2019s project directory upon module installation.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -208,7 +218,9 @@
           "4",
           "5",
           "6",
-          "7"
+          "7",
+          "8",
+          "9"
         ]
       },
       "remediations": [
@@ -222,62 +234,52 @@
             "4",
             "5",
             "6",
-            "7"
+            "7",
+            "8",
+            "9"
           ]
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V10.12.17 or later version",
+          "details": "Update to V10.24.24 or later version",
           "product_ids": [
-            "5"
-          ],
-          "url": "https://docs.mendix.com/releasenotes/studio-pro/10.12/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V10.18.7 or later version",
-          "product_ids": [
-            "6"
-          ],
-          "url": "https://docs.mendix.com/releasenotes/studio-pro/10.18/"
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Update to V10.23.0 or later version",
-          "product_ids": [
-            "3"
+            "1",
+            "2"
           ],
           "url": "https://docs.mendix.com/releasenotes/studio-pro/10/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V10.6.24 or later version",
+          "details": "Update to V11.12.2 or later version",
           "product_ids": [
-            "4"
+            "5",
+            "6"
           ],
-          "url": "https://docs.mendix.com/releasenotes/studio-pro/10.6/"
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/11.12/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V11.0.0 or later version",
+          "details": "Update to V11.13.0 or later version",
           "product_ids": [
-            "7"
+            "3",
+            "4"
           ],
           "url": "https://docs.mendix.com/releasenotes/studio-pro/11/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V8.18.35 or later version",
+          "details": "Update to V11.6.9 or later version",
           "product_ids": [
-            "1"
+            "7",
+            "8"
           ],
-          "url": "https://docs.mendix.com/releasenotes/studio-pro/8/"
+          "url": "https://docs.mendix.com/releasenotes/studio-pro/11.6/"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V9.24.35 or later version",
+          "details": "Update to V9.24.44 or later version",
           "product_ids": [
-            "2"
+            "9"
           ],
           "url": "https://docs.mendix.com/releasenotes/studio-pro/9/"
         }
@@ -297,7 +299,9 @@
             "4",
             "5",
             "6",
-            "7"
+            "7",
+            "8",
+            "9"
           ]
         }
       ],

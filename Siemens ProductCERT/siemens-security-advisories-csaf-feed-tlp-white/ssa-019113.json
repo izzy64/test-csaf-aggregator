@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Multiple vulnerabilities have been identified in the additional GNU/Linux subsystem of the firmware version V3.1.6 for the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP (incl. SIPLUS variant).\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Multiple vulnerabilities have been identified in the additional GNU/Linux subsystem of the firmware version V3.1.6 for the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP (incl. SIPLUS variant).\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.\n\nSIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP V3.1.6 is no longer maintained and there won't be any update to the CVE list anymore. Please update to the latest version.\n\nNote: This SSA advises vulnerabilities for firmware version V3.1.6 only; for version V3.1.7 refer to SSA-457936.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-019113: Vulnerabilities in the additional GNU/Linux subsystem of the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP V3.1.6",
     "tracking": {
-      "current_release_date": "2026-09-08T00:00:00.000Z",
+      "current_release_date": "2026-10-13T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added 79 CVEs; Added fix for CVE-2026-43284, CVE-2026-46300 and CVE-2026-31431"
+        },
+        {
+          "date": "2026-10-13T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Linked to V3.1.7"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -537,9 +543,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.7,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -765,9 +771,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -1677,9 +1683,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.7,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -1753,9 +1759,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -1905,9 +1911,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.7,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -2209,9 +2215,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -2285,9 +2291,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -2513,9 +2519,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.4,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3197,9 +3203,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.4,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3425,9 +3431,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.7,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3501,9 +3507,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3577,9 +3583,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3881,9 +3887,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3957,9 +3963,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -4185,9 +4191,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -4261,9 +4267,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.8,
+            "baseScore": 8.1,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -4413,9 +4419,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -4565,9 +4571,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -4641,9 +4647,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -5173,9 +5179,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -5325,9 +5331,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -5705,9 +5711,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -5781,9 +5787,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.9,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -5857,9 +5863,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
             "version": "3.1"
           },
           "products": [
@@ -6085,9 +6091,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6465,9 +6471,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6769,9 +6775,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6997,9 +7003,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -7149,9 +7155,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.5,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -7301,9 +7307,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 9.4,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -7377,9 +7383,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -7681,9 +7687,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -7757,9 +7763,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.1,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -7909,9 +7915,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.1,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -8137,9 +8143,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -8821,9 +8827,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.4,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -9201,9 +9207,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -9505,9 +9511,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -9581,9 +9587,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -9885,9 +9891,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -10113,9 +10119,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -10189,9 +10195,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -10265,9 +10271,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.4,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -10721,9 +10727,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -10797,9 +10803,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 8.1,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -10873,9 +10879,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.0,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -11101,9 +11107,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.6,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -11405,9 +11411,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -11481,9 +11487,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -11633,9 +11639,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -11861,9 +11867,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12165,9 +12171,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12393,9 +12399,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.1,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12621,9 +12627,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12925,9 +12931,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 8.0,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -13153,9 +13159,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -13761,9 +13767,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 9.1,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -14065,9 +14071,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 8.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -14445,9 +14451,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -14521,9 +14527,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -14597,9 +14603,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -15205,9 +15211,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [

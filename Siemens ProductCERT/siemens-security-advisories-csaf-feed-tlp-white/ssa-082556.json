@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Multiple vulnerabilities have been identified in the additional GNU/Linux subsystem of the firmware version V3.1.5 for the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP (incl. SIPLUS variant).\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.\n\nNote: This SSA advises vulnerabilities for firmware version V3.1.5 only; for version V3.1.6 refer to SSA-019113.",
+        "text": "Multiple vulnerabilities have been identified in the additional GNU/Linux subsystem of the firmware version V3.1.5 for the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP (incl. SIPLUS variant).\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fixes and recommends specific mitigations for products where fixes are not or not yet available.\n\nSIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP V3.1.5 is no longer maintained and there won't be any update to the CVE list anymore. Please update to the latest version.\n\nNote: This SSA advises vulnerabilities for firmware version V3.1.5 only; for version V3.1.6 refer to SSA-019113.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-082556: Vulnerabilities in the additional GNU/Linux subsystem of the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP V3.1.5",
     "tracking": {
-      "current_release_date": "2026-07-14T00:00:00.000Z",
+      "current_release_date": "2026-10-13T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -102,10 +102,16 @@
           "legacy_version": "1.6",
           "number": "7",
           "summary": "Added 167 CVEs; Added fix for CVE-2026-32776, CVE-2026-32777, CVE-2026-32778, CVE-2026-3904, CVE-2026-4046, CVE-2026-41080, CVE-2026-4437, CVE-2026-4438, CVE-2026-45186, CVE-2026-5435, CVE-2026-5450, CVE-2026-5928, CVE-2026-6238"
+        },
+        {
+          "date": "2026-10-13T00:00:00.000Z",
+          "legacy_version": "1.7",
+          "number": "8",
+          "summary": "Clarified maintenance situation"
         }
       ],
       "status": "interim",
-      "version": "7"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -1631,9 +1637,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 4.7,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3531,9 +3537,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 10.0,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -3759,9 +3765,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -5507,9 +5513,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -5583,9 +5589,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6191,9 +6197,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6267,9 +6273,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6343,9 +6349,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6495,9 +6501,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6571,9 +6577,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.8,
-            "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -6799,9 +6805,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -8091,9 +8097,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -8243,9 +8249,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.1,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -10371,9 +10377,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -11663,9 +11669,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12271,9 +12277,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12347,9 +12353,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 7.8,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12499,9 +12505,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 7.0,
+            "baseScore": 8.1,
             "baseSeverity": "HIGH",
-            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12651,9 +12657,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 6.6,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -12955,9 +12961,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -13031,9 +13037,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -13107,9 +13113,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [
@@ -13183,9 +13189,9 @@
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 5.5,
-            "baseSeverity": "MEDIUM",
-            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.8,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
             "version": "3.1"
           },
           "products": [
@@ -13442,11 +13448,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13454,33 +13460,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -13494,11 +13528,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -13519,11 +13553,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13531,33 +13565,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -13571,11 +13633,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -13596,11 +13658,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13608,33 +13670,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -13648,11 +13738,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -13673,11 +13763,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13685,33 +13775,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -13725,11 +13843,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -13750,11 +13868,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13762,33 +13880,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -13802,11 +13948,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -13827,11 +13973,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13839,33 +13985,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -13879,11 +14053,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -13904,11 +14078,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13916,33 +14090,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -13956,11 +14158,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -13981,11 +14183,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -13993,33 +14195,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -14033,11 +14263,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -22646,11 +22876,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -22658,33 +22888,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -22698,11 +22956,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -22723,11 +22981,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -22735,33 +22993,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -22775,11 +23061,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -22800,11 +23086,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -22812,33 +23098,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -22852,11 +23166,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -22953,11 +23267,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -22965,33 +23279,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -23005,11 +23347,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],
@@ -24094,11 +24436,11 @@
       ],
       "product_status": {
         "known_affected": [
+          "10",
           "2",
           "4",
           "6",
-          "8",
-          "10"
+          "8"
         ]
       },
       "remediations": [
@@ -24106,33 +24448,61 @@
           "category": "mitigation",
           "details": "Limit access to the interactive shell of the additional GNU/Linux subssytem to trusted personnel only.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "mitigation",
           "details": "Only build and run applications from trusted sources.",
           "product_ids": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.1.6 or later version",
           "product_ids": [
-            "2",
-            "4",
-            "6",
-            "8",
+            "6"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
             "10"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "4"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "8"
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.1.6 or later version",
+          "product_ids": [
+            "2"
           ],
           "url": "https://support.industry.siemens.com/cs/ww/en/view/109478459/"
         }
@@ -24146,11 +24516,11 @@
             "version": "3.1"
           },
           "products": [
+            "10",
             "2",
             "4",
             "6",
-            "8",
-            "10"
+            "8"
           ]
         }
       ],

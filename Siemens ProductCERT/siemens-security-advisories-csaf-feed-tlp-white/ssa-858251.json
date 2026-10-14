@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "The products listed below contain two authentication bypass vulnerabilities that could allow an attacker to gain access to the data managed by the server.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+        "text": "The products listed below contain two authentication bypass vulnerabilities that could allow an attacker to gain access to the data managed by the server.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-858251: Authentication Bypass Vulnerabilities in OPC UA",
     "tracking": {
-      "current_release_date": "2026-01-13T00:00:00Z",
+      "current_release_date": "2026-10-13T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,25 +59,25 @@
         }
       },
       "id": "SSA-858251",
-      "initial_release_date": "2025-03-11T00:00:00Z",
+      "initial_release_date": "2025-03-11T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-03-11T00:00:00Z",
+          "date": "2025-03-11T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
         },
         {
-          "date": "2025-06-10T00:00:00Z",
+          "date": "2025-06-10T00:00:00.000Z",
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Added fix for  SIMIT V11; Clarified that SIMATIC BRAUMAT and SIMATIC SISTAR are not affected by CVE-2024-42513"
         },
         {
-          "date": "2026-01-13T00:00:00Z",
+          "date": "2026-10-13T00:00:00.000Z",
           "legacy_version": "1.2",
           "number": "3",
-          "summary": "Automatically generated entry"
+          "summary": "Added Fix version for  SIMATIC WinCC Unified V18"
         }
       ],
       "status": "interim",
@@ -148,9 +148,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions >= V7.4 Update 0 < V7.4 Update 7",
+                "name": "vers:intdot/>=7.4.0.0|<7.4.0.7",
                 "product": {
-                  "name": "SIMATIC Energy Manager PRO V7.4",
+                  "name": "SIMATIC Energy Manager PRO V7.4 >= V7.4 Update 0 < V7.4 Update 7",
                   "product_id": "5"
                 }
               }
@@ -162,9 +162,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions >= V7.5 Update 0 < V7.5 Update 2",
+                "name": "vers:intdot/>=7.5.0.0|<7.5.0.2",
                 "product": {
-                  "name": "SIMATIC Energy Manager PRO V7.5",
+                  "name": "SIMATIC Energy Manager PRO V7.5 >= V7.5 Update 0 < V7.5 Update 2",
                   "product_id": "6"
                 }
               }
@@ -204,9 +204,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<18.0.6",
                 "product": {
-                  "name": "SIMATIC WinCC Unified V18",
+                  "name": "SIMATIC WinCC Unified V18 < V18 Update 6",
                   "product_id": "9"
                 }
               }
@@ -218,9 +218,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions < V19 Update 4",
+                "name": "vers:intdot/<19.0.4",
                 "product": {
-                  "name": "SIMATIC WinCC Unified V19",
+                  "name": "SIMATIC WinCC Unified V19 < V19 Update 4",
                   "product_id": "10"
                 }
               }
@@ -232,9 +232,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "All versions < V8.0 Update 3",
+                "name": "vers:intdot/<8.0.0.3",
                 "product": {
-                  "name": "SIMATIC WinCC V8.0",
+                  "name": "SIMATIC WinCC V8.0 < V8.0 Update 3",
                   "product_id": "11"
                 }
               }
@@ -248,7 +248,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<11.3",
                 "product": {
-                  "name": "SIMIT V11",
+                  "name": "SIMIT V11 < V11.3",
                   "product_id": "12"
                 }
               }
@@ -271,18 +271,18 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "Vulnerability in the OPC UA .NET Standard Stack before 1.5.374.158 allows an unauthorized attacker to bypass application authentication when the deprecated Basic128Rsa15 security policy is enabled.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
         "known_affected": [
+          "12",
           "3",
           "4",
           "5",
-          "6",
-          "12"
+          "6"
         ]
       },
       "remediations": [
@@ -328,11 +328,11 @@
             "version": "3.1"
           },
           "products": [
+            "12",
             "3",
             "4",
             "5",
-            "6",
-            "12"
+            "6"
           ]
         }
       ],
@@ -355,22 +355,22 @@
       ],
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "Vulnerability in the OPC UA .NET Standard Stack before 1.5.374.158 allows an unauthorized attacker to bypass application authentication when using HTTPS endpoints.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
         "known_affected": [
           "1",
+          "10",
+          "11",
           "3",
           "4",
           "5",
           "6",
           "7",
-          "9",
-          "10",
-          "11"
+          "9"
         ],
         "known_not_affected": [
           "2",
@@ -382,8 +382,8 @@
           "category": "mitigation",
           "details": "Please note that the affected functionality (HTTPS endpoint in OPC UA Server) is deactivated by default in Unified RT. Systems running with default configuration are therefore not affected by this vulnerability.",
           "product_ids": [
-            "9",
-            "10"
+            "10",
+            "9"
           ]
         },
         {
@@ -404,11 +404,12 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V18 Update 6 or later version",
           "product_ids": [
             "9"
-          ]
+          ],
+          "url": "https://support.industry.siemens.com/cs/ww/en/view/109817218/"
         },
         {
           "category": "vendor_fix",
@@ -453,14 +454,14 @@
           },
           "products": [
             "1",
+            "10",
+            "11",
             "3",
             "4",
             "5",
             "6",
             "7",
-            "9",
-            "10",
-            "11"
+            "9"
           ]
         }
       ],

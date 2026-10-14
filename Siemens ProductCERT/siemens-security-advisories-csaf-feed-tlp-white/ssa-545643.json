@@ -51,7 +51,7 @@
     ],
     "title": "SSA-545643: Multiple Vulnerabilities in KACO Blueplanet Inverters",
     "tracking": {
-      "current_release_date": "2026-05-29T00:00:00.000Z",
+      "current_release_date": "2026-10-13T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -72,10 +72,16 @@
           "legacy_version": "1.1",
           "number": "2",
           "summary": "Name of blueplanet gridsafe 92.0 TL3-S was updated to blueplanet gridsave 92.0 TL3-S, Name of blueplanet gridsafe 137 TL3-S was updated to blueplanet gridsave 137 TL3-S, Name of blueplanet gridsafe 110 TL3-S was updated to blueplanet gridsave 110 TL3-S and Name of blueplanet 125 NX3 M11 was updated to blueplanet 125 NX3 M10"
+        },
+        {
+          "date": "2026-10-13T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added fix (v3.92) for blueplanet gridsafe 92.0-137 TL3-S and for blueplanet 3.0 87.0 TL3 - 165 TL3"
         }
       ],
       "status": "interim",
-      "version": "2"
+      "version": "3"
     }
   },
   "product_tree": {
@@ -110,7 +116,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 100 TL3 GEN2",
+                  "name": "blueplanet 100 TL3 GEN2 < V6.1.4.9",
                   "product_id": "3"
                 }
               }
@@ -122,9 +128,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 105 TL3",
+                  "name": "blueplanet 105 TL3 < V3.92",
                   "product_id": "4"
                 }
               }
@@ -146,7 +152,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 105 TL3 GEN2",
+                  "name": "blueplanet 105 TL3 GEN2 < V6.1.4.9",
                   "product_id": "6"
                 }
               }
@@ -158,9 +164,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 110 TL3",
+                  "name": "blueplanet 110 TL3 < V3.92",
                   "product_id": "7"
                 }
               }
@@ -186,9 +192,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 125 TL3",
+                  "name": "blueplanet 125 TL3 < V3.92",
                   "product_id": "9"
                 }
               }
@@ -210,7 +216,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 125 TL3 GEN2",
+                  "name": "blueplanet 125 TL3 GEN2 < V6.1.4.9",
                   "product_id": "11"
                 }
               }
@@ -222,9 +228,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 137 TL3",
+                  "name": "blueplanet 137 TL3 < V3.92",
                   "product_id": "12"
                 }
               }
@@ -236,9 +242,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 150 TL3",
+                  "name": "blueplanet 150 TL3 < V3.92",
                   "product_id": "13"
                 }
               }
@@ -260,7 +266,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 150 TL3 GEN2",
+                  "name": "blueplanet 150 TL3 GEN2 < V6.1.4.9",
                   "product_id": "15"
                 }
               }
@@ -272,9 +278,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 155 TL3",
+                  "name": "blueplanet 155 TL3 < V3.92",
                   "product_id": "16"
                 }
               }
@@ -296,7 +302,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 155 TL3 GEN2",
+                  "name": "blueplanet 155 TL3 GEN2 < V6.1.4.9",
                   "product_id": "18"
                 }
               }
@@ -308,9 +314,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 165 TL3",
+                  "name": "blueplanet 165 TL3 < V3.92",
                   "product_id": "19"
                 }
               }
@@ -332,7 +338,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 165 TL3 GEN2",
+                  "name": "blueplanet 165 TL3 GEN2 < V6.1.4.9",
                   "product_id": "21"
                 }
               }
@@ -428,9 +434,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 87.0 TL3",
+                  "name": "blueplanet 87.0 TL3 < V3.92",
                   "product_id": "28"
                 }
               }
@@ -452,7 +458,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 87.0 TL3 GEN2",
+                  "name": "blueplanet 87.0 TL3 GEN2 < V6.1.4.9",
                   "product_id": "30"
                 }
               }
@@ -464,9 +470,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet 92.0 TL3",
+                  "name": "blueplanet 92.0 TL3 < V3.92",
                   "product_id": "31"
                 }
               }
@@ -488,7 +494,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<6.1.4.9",
                 "product": {
-                  "name": "blueplanet 92.0 TL3 GEN2",
+                  "name": "blueplanet 92.0 TL3 GEN2 < V6.1.4.9",
                   "product_id": "33"
                 }
               }
@@ -502,15 +508,15 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<3.91",
                 "product": {
-                  "name": "blueplanet gridsave 110 TL3-S",
+                  "name": "blueplanet gridsave 110 TL3-S < V3.91",
                   "product_id": "34"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet gridsave 110 TL3-S",
+                  "name": "blueplanet gridsave 110 TL3-S < V3.92",
                   "product_id": "35"
                 }
               }
@@ -524,15 +530,15 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<3.91",
                 "product": {
-                  "name": "blueplanet gridsave 137 TL3-S",
+                  "name": "blueplanet gridsave 137 TL3-S < V3.91",
                   "product_id": "36"
                 }
               },
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet gridsave 137 TL3-S",
+                  "name": "blueplanet gridsave 137 TL3-S < V3.92",
                   "product_id": "37"
                 }
               }
@@ -544,9 +550,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<3.92",
                 "product": {
-                  "name": "blueplanet gridsave 92.0 TL3-S",
+                  "name": "blueplanet gridsave 92.0 TL3-S < V3.92",
                   "product_id": "38"
                 }
               },
@@ -554,7 +560,7 @@
                 "category": "product_version_range",
                 "name": "vers:intdot/<3.91",
                 "product": {
-                  "name": "blueplanet gridsave 92.0 TL3-S",
+                  "name": "blueplanet gridsave 92.0 TL3-S < V3.91",
                   "product_id": "39"
                 }
               }
@@ -607,32 +613,26 @@
         {
           "label": "component_not_present",
           "product_ids": [
-            "27",
+            "26",
             "40",
             "25",
-            "26",
             "23",
             "22",
-            "41"
+            "41",
+            "27"
           ]
         }
       ],
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "A CRC16-based algorithm for generating Technical Service credentials could allow an attacker to derive the credentials from the devices serial number and misuse them to gain unauthorized access.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
         "known_affected": [
           "1",
-          "3",
-          "4",
-          "6",
-          "7",
-          "8",
-          "9",
           "11",
           "12",
           "13",
@@ -643,12 +643,18 @@
           "21",
           "24",
           "28",
+          "3",
           "30",
           "31",
           "33",
           "34",
           "36",
-          "39"
+          "39",
+          "4",
+          "6",
+          "7",
+          "8",
+          "9"
         ],
         "known_not_affected": [
           "22",
@@ -673,25 +679,46 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "1",
-            "4",
-            "7",
-            "8",
-            "9",
-            "12",
-            "13",
-            "16",
-            "19",
-            "28",
-            "31"
+            "8"
           ]
         },
         {
           "category": "vendor_fix",
           "details": "Update to V3.91 or later version",
           "product_ids": [
-            "34",
-            "36",
+            "34"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.91 or later version",
+          "product_ids": [
             "39"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.91 or later version",
+          "product_ids": [
+            "36"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.92 or later version",
+          "product_ids": [
+            "12",
+            "13",
+            "16",
+            "19",
+            "28",
+            "31",
+            "4",
+            "7",
+            "9"
           ],
           "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
         },
@@ -699,14 +726,63 @@
           "category": "vendor_fix",
           "details": "Update to V6.1.4.9 or later version",
           "product_ids": [
-            "3",
-            "6",
-            "11",
-            "15",
-            "18",
-            "21",
-            "30",
+            "21"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1.4.9 or later version",
+          "product_ids": [
+            "11"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1.4.9 or later version",
+          "product_ids": [
+            "3"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1.4.9 or later version",
+          "product_ids": [
             "33"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1.4.9 or later version",
+          "product_ids": [
+            "18"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1.4.9 or later version",
+          "product_ids": [
+            "6"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1.4.9 or later version",
+          "product_ids": [
+            "30"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V6.1.4.9 or later version",
+          "product_ids": [
+            "15"
           ],
           "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
         }
@@ -721,12 +797,6 @@
           },
           "products": [
             "1",
-            "3",
-            "4",
-            "6",
-            "7",
-            "8",
-            "9",
             "11",
             "12",
             "13",
@@ -737,12 +807,18 @@
             "21",
             "24",
             "28",
+            "3",
             "30",
             "31",
             "33",
             "34",
             "36",
-            "39"
+            "39",
+            "4",
+            "6",
+            "7",
+            "8",
+            "9"
           ]
         }
       ],
@@ -751,13 +827,13 @@
           "category": "impact",
           "details": "Different code base compared to affected products.",
           "product_ids": [
-            "27",
+            "26",
             "40",
             "25",
-            "26",
             "23",
             "22",
-            "41"
+            "41",
+            "27"
           ]
         }
       ],
@@ -773,32 +849,26 @@
         {
           "label": "component_not_present",
           "product_ids": [
-            "27",
+            "26",
             "40",
             "25",
-            "26",
             "23",
             "22",
-            "41"
+            "41",
+            "27"
           ]
         }
       ],
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "Improper neutralization of special elements used in an sql command ('sql injection') in KACO Meteor server allows an authorized attacker to elevate privileges over a local network.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
         "known_affected": [
           "1",
-          "2",
-          "4",
-          "5",
-          "7",
-          "8",
-          "9",
           "10",
           "12",
           "13",
@@ -806,6 +876,7 @@
           "16",
           "17",
           "19",
+          "2",
           "20",
           "28",
           "29",
@@ -813,7 +884,12 @@
           "32",
           "35",
           "37",
-          "38"
+          "38",
+          "4",
+          "5",
+          "7",
+          "8",
+          "9"
         ],
         "known_not_affected": [
           "22",
@@ -831,28 +907,56 @@
           "details": "Currently no fix is available",
           "product_ids": [
             "1",
-            "2",
-            "4",
-            "5",
-            "7",
-            "8",
-            "9",
             "10",
+            "14",
+            "17",
+            "2",
+            "20",
+            "29",
+            "32",
+            "5",
+            "8"
+          ]
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.92 or later version",
+          "product_ids": [
+            "37"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.92 or later version",
+          "product_ids": [
             "12",
             "13",
-            "14",
             "16",
-            "17",
             "19",
-            "20",
             "28",
-            "29",
             "31",
-            "32",
-            "35",
-            "37",
+            "4",
+            "7",
+            "9"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.92 or later version",
+          "product_ids": [
+            "35"
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
+        },
+        {
+          "category": "vendor_fix",
+          "details": "Update to V3.92 or later version",
+          "product_ids": [
             "38"
-          ]
+          ],
+          "url": "https://kaco-newenergy.com/service/mykacocom-customer-portal"
         }
       ],
       "scores": [
@@ -865,12 +969,6 @@
           },
           "products": [
             "1",
-            "2",
-            "4",
-            "5",
-            "7",
-            "8",
-            "9",
             "10",
             "12",
             "13",
@@ -878,6 +976,7 @@
             "16",
             "17",
             "19",
+            "2",
             "20",
             "28",
             "29",
@@ -885,7 +984,12 @@
             "32",
             "35",
             "37",
-            "38"
+            "38",
+            "4",
+            "5",
+            "7",
+            "8",
+            "9"
           ]
         }
       ],
@@ -894,13 +998,13 @@
           "category": "impact",
           "details": "Different code base compared to affected products.",
           "product_ids": [
-            "27",
+            "26",
             "40",
             "25",
-            "26",
             "23",
             "22",
-            "41"
+            "41",
+            "27"
           ]
         }
       ],

@@ -12,12 +12,12 @@
     "notes": [
       {
         "category": "summary",
-        "text": "Several tools for the SIMOTION system are affected by a local privilege escalation vulnerability. This could allow an attacker to execute arbitrary code with SYSTEM privileges when a legitimate user installs an application that uses the affected setup component. This vulnerability poses a risk only during setup and installation phase of the affected tools.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+        "text": "Several tools for the SIMOTION system are affected by a local privilege escalation vulnerability. This could allow an attacker to execute arbitrary code with SYSTEM privileges when a legitimate user installs an application that uses the affected setup component. This vulnerability poses a risk only during setup and installation phase of the affected tools.\n\nSiemens has released a new version for SIMATIC Technology Package TPCamGen and recommends to update to the latest version. Siemens recommends specific mitigations for products where fixes are not or not yet available.",
         "title": "Summary"
       },
       {
         "category": "general",
-        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: \nhttps://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
         "title": "General Recommendations"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-563922: Local Privilege Escalation Vulnerability in SIMOTION Tools",
     "tracking": {
-      "current_release_date": "2025-09-09T00:00:00Z",
+      "current_release_date": "2026-10-13T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -59,17 +59,23 @@
         }
       },
       "id": "SSA-563922",
-      "initial_release_date": "2025-09-09T00:00:00Z",
+      "initial_release_date": "2025-09-09T00:00:00.000Z",
       "revision_history": [
         {
-          "date": "2025-09-09T00:00:00Z",
+          "date": "2025-09-09T00:00:00.000Z",
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-10-13T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added fix version for SIMATIC Technology Package TPCamGen"
         }
       ],
-      "status": "interim",
-      "version": "1"
+      "status": "final",
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,9 +86,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<1.3.1",
                 "product": {
-                  "name": "SIMATIC Technology Package TPCamGen (6ES7823-0FE30-1AA0)",
+                  "name": "SIMATIC Technology Package TPCamGen (6ES7823-0FE30-1AA0) < V1.3.1",
                   "product_id": "1",
                   "product_identification_helper": {
                     "model_numbers": [
@@ -186,9 +192,9 @@
       },
       "notes": [
         {
-          "category": "summary",
+          "category": "description",
           "text": "Nullsoft Scriptable Install System (NSIS) before 3.11 on Windows allows local users to escalate privileges to SYSTEM during an installation, because the temporary plugins directory is created under %WINDIR%\\temp and unprivileged users can place a crafted executable file by winning a race condition. This occurs because EW_CREATEDIR does not always set the CreateRestrictedDirectory error flag.",
-          "title": "Summary"
+          "title": "CVE Description"
         }
       ],
       "product_status": {
@@ -223,8 +229,8 @@
           ]
         },
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V1.3.1 or later version\nTo obtain the patch and update information, please contact your regular Siemens contact person.",
           "product_ids": [
             "1"
           ]

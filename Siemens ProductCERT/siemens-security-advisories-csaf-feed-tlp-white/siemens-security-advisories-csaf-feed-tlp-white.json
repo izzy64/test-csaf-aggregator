@@ -9,6 +9,37 @@
     "entry": [
       {
         "content": {
+          "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-580366.json",
+          "type": "application/json"
+        },
+        "format": {
+          "schema": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json",
+          "version": "2.0"
+        },
+        "id": "SSA-580366",
+        "link": [
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-580366.json",
+            "rel": "self"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-580366.json.sha512",
+            "rel": "hash"
+          },
+          {
+            "href": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-580366.json.asc",
+            "rel": "signature"
+          }
+        ],
+        "published": "2026-10-15T00:00:00Z",
+        "summary": {
+          "content": "The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application. \r\n\r\nSiemens is preparing fixes and recommends mitigations for products where fixes are not yet available. Currently the fix is expected in the week commencing 19th of October, 2026."
+        },
+        "title": "DLL Sideloading Vulnerability in Siemens Software Center",
+        "updated": "2026-10-15T00:00:00Z"
+      },
+      {
+        "content": {
           "src": "https://raw.githubusercontent.com/izzy64/test-csaf-aggregator/main/Siemens%20ProductCERT/siemens-security-advisories-csaf-feed-tlp-white/ssa-019113.json",
           "type": "application/json"
         },
@@ -26583,6 +26614,6 @@
       }
     ],
     "title": "Siemens Security Advisories CSAF feed (TLP:WHITE)",
-    "updated": "2026-10-14T13:08:13.790735Z"
+    "updated": "2026-10-16T12:46:40.420744Z"
   }
 }

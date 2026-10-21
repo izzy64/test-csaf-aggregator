@@ -12,7 +12,7 @@
     "notes": [
       {
         "category": "summary",
-        "text": "The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application. \n\nSiemens is preparing fixes and recommends mitigations for products where fixes are not yet available. Currently the fix is expected in the week commencing 19th of October, 2026.",
+        "text": "The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application. \n\nSiemens has released a new version for Siemens Software Center and recommends to update to the latest version. Please refer to our blog post for additional information about current known active exploitation and how to detect it.",
         "title": "Summary"
       },
       {
@@ -51,7 +51,7 @@
     ],
     "title": "SSA-580366: DLL Sideloading Vulnerability in Siemens Software Center",
     "tracking": {
-      "current_release_date": "2026-10-15T00:00:00.000Z",
+      "current_release_date": "2026-10-19T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,22 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-10-17T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added remediation for Siemens Software Center"
+        },
+        {
+          "date": "2026-10-19T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added reference to blog post about active exploitation of the vulnerability"
         }
       ],
-      "status": "interim",
-      "version": "1"
+      "status": "final",
+      "version": "3"
     }
   },
   "product_tree": {
@@ -80,9 +92,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:all/*",
+                "name": "vers:intdot/<4.0.9.8",
                 "product": {
-                  "name": "Siemens Software Center",
+                  "name": "Siemens Software Center < V4.0.9.8",
                   "product_id": "1"
                 }
               }
@@ -117,8 +129,8 @@
       },
       "remediations": [
         {
-          "category": "none_available",
-          "details": "Currently no fix is available",
+          "category": "vendor_fix",
+          "details": "Update to V4.0.9.8 or later version (All existing versions of SSC will be auto updated on next startup. The latest version can also be downloaded in the respective link)",
           "product_ids": [
             "1"
           ]

@@ -1,0 +1,334 @@
+{
+  "document": {
+    "acknowledgments": [
+      {
+        "organization": "CERT@VDE",
+        "summary": "coordination and support with this publication"
+      }
+    ],
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en-US",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "Festo AX OS versions 25.0.1.46 and 25.9.2.4, which are based on PLCnext by Phoenix Contact, used by the Festo product CEPE are affected by multiple OpenSSL vulnerabilities. The vulnerabilities are identified as CVE-2025-15467 and CVE-2025-69419. Attacks may be possible when maliciously crafted firmware, key files, PKCS#12 files, CMS/PKCS#7 content, or digitally signed objects are uploaded and processed by the affected system. In the device context, exploitation typically requires a logged-in user with high privileges or the processing of attacker-supplied cryptographic objects.",
+        "title": "Summary"
+      },
+      {
+        "category": "details",
+        "text": "A successful attack using manipulated firmware, key files, PKCS#12 files, CMS/PKCS#7 content, or digitally signed objects may lead to memory corruption, application crash, or denial of service. Depending on the affected code path, execution context, platform protections, and toolchain mitigations, execution of malicious code may be possible. This can jeopardize confidentiality, integrity, and availability of the affected system.",
+        "title": "Impact"
+      },
+      {
+        "category": "description",
+        "text": "Festo recommends updating affected CEPE installations running Festo AX OS 25.0.1.46 or Festo AX OS 25.9.2.4 to Festo AX OS 26.3.1.4 or later as soon as the fixed version becomes available.",
+        "title": "Remediation"
+      },
+      {
+        "category": "general",
+        "text": "As part of a security strategy, Festo recommends the following general defense measures to reduce the risk of exploits: \n- Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside.\n- Use firewalls to protect and separate the control system network from other networks.\n- Use VPN (Virtual Private Networks) tunnels if remote access is required.\n- Activate and apply user management and password features.\n- Use encrypted communication links.\n- Limit the access to both development and control system by physical means, operating system features, etc. \n- Protect both development and control systems by using up-to-date virus detection solutions.\n\nFesto strongly recommends minimizing and protecting network access to connected devices with state-of-the-art techniques and processes. \nTo ensure secure operation follow the recommendations in the product manuals.",
+        "title": "General recommendations"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "Festo assumes no liability whatsoever for indirect, collateral, accidental or consequential losses that occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided free of charge and on good faith by Festo. Insofar as permissible by law, however, none of this information shall establish any warranty, guarantee, commitment, or liability on the part of Festo.\n\nNote: In no case does this information release the operator or responsible person from the obligation to check the effect on his system or installation before using the information and, in the event of negative consequences, not to use the information.\n\nIn addition, the actual general terms, and conditions for delivery, payment and software use of Festo, available under http://www.festo.com and the special provisions for the use of Festo Security Advisory available at https://www.festo.com/psirt shall apply.",
+        "title": "Disclaimer"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "psirt@festo.com",
+      "name": "Festo SE & Co. KG",
+      "namespace": "https://www.festo.com"
+    },
+    "references": [
+      {
+        "category": "external",
+        "summary": "CERT@VDE Advisory ",
+        "url": "https://certvde.com/en/advisories/vendor/festo/"
+      },
+      {
+        "category": "external",
+        "summary": "For further security-related issues in Festo products please contact the Festo Product Security Incident Response Team (PSIRT)",
+        "url": "https://www.festo.com/psirt"
+      },
+      {
+        "category": "external",
+        "summary": "Phoenix Contact Advisory PCSA-2026-00001 / VDE-2026-023: Several products are affected by vulnerabilities found in OpenSSL",
+        "url": "https://phoenixcontact.com/psirt"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202602: Multiple OpenSSL vulnerabilities affect Festo AX OS in CEPE - CSAF",
+        "url": "https://festo.csaf-tp.certvde.com/.well-known/csaf/white/2026/fsa-202602.json"
+      },
+      {
+        "category": "self",
+        "summary": "FSA-202602: Multiple OpenSSL vulnerabilities affect Festo AX OS in CEPE - HTML",
+        "url": "https://certvde.com/en/advisories/VDE-2026-090"
+      }
+    ],
+    "title": "Multiple OpenSSL vulnerabilities affect Festo AX OS in CEPE",
+    "tracking": {
+      "aliases": [
+        "VDE-2026-090"
+      ],
+      "current_release_date": "2026-10-20T12:00:00.000Z",
+      "generator": {
+        "date": "2026-10-07T09:11:49.542Z",
+        "engine": {
+          "name": "Secvisogram",
+          "version": "2.6.13"
+        }
+      },
+      "id": "FSA-202602",
+      "initial_release_date": "2026-10-20T12:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-10-20T12:00:00.000Z",
+          "number": "1.0.0",
+          "summary": "Initial Revision"
+        }
+      ],
+      "status": "final",
+      "version": "1.0.0"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_name",
+                "name": "CEPE",
+                "product": {
+                  "name": "CEPE Product",
+                  "product_id": "CEPE_ID",
+                  "product_identification_helper": {
+                    "cpe": "cpe:2.3:h:festo:cepe:*:*:*:*:*:*:*:*"
+                  }
+                }
+              }
+            ],
+            "category": "product_family",
+            "name": "Hardware"
+          },
+          {
+            "branches": [
+              {
+                "branches": [
+                  {
+                    "category": "product_version",
+                    "name": "Festo AX OS 25.0.1.46",
+                    "product": {
+                      "name": "Festo AX OS 25.0.1.46",
+                      "product_id": "CSAFPID-21001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:festo:festo_ax_os:25.0.1.46:*:*:*:*:*:*:*"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "Festo AX OS 25.9.2.4",
+                    "product": {
+                      "name": "Festo AX OS 25.9.2.4",
+                      "product_id": "CSAFPID-21002",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:festo:festo_ax_os:25.9.2.4:*:*:*:*:*:*:*"
+                      }
+                    }
+                  },
+                  {
+                    "category": "product_version",
+                    "name": "Festo AX OS 26.3.1.4",
+                    "product": {
+                      "name": "Festo AX OS 26.3.1.4",
+                      "product_id": "CSAFPID-22001",
+                      "product_identification_helper": {
+                        "cpe": "cpe:2.3:o:festo:festo_ax_os:26.3.1.4:*:*:*:*:*:*:*"
+                      }
+                    }
+                  }
+                ],
+                "category": "product_name",
+                "name": "Festo AX OS"
+              }
+            ],
+            "category": "product_family",
+            "name": "Firmware"
+          }
+        ],
+        "category": "vendor",
+        "name": "Festo"
+      }
+    ],
+    "relationships": [
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Festo AX OS 25.0.1.46 installed on CEPE Product",
+          "product_id": "CSAFPID-31001",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:festo:cepe:25.0.1.46:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-21001",
+        "relates_to_product_reference": "CEPE_ID"
+      },
+      {
+        "category": "installed_on",
+        "full_product_name": {
+          "name": "Festo AX OS 25.9.2.4 installed on CEPE Product",
+          "product_id": "CSAFPID-31002",
+          "product_identification_helper": {
+            "cpe": "cpe:2.3:o:festo:cepe:25.9.2.4:*:*:*:*:*:*:*"
+          }
+        },
+        "product_reference": "CSAFPID-21002",
+        "relates_to_product_reference": "CEPE_ID"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2025-15467",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Parsing CMS AuthEnvelopedData or EnvelopedData message with maliciously crafted AEAD parameters can trigger a stack buffer overflow.",
+          "title": "Vulnerability Summary"
+        },
+        {
+          "category": "description",
+          "text": "Parsing CMS AuthEnvelopedData or EnvelopedData message with maliciously crafted AEAD parameters can trigger a stack buffer overflow.\n\nImpact summary: A stack buffer overflow may lead to a crash, causing Denial of Service, or potentially remote code execution.\n\nWhen parsing CMS (Auth)EnvelopedData structures that use AEAD ciphers such as AES-GCM, the IV (Initialization Vector) encoded in the ASN.1 parameters is copied into a fixed-size stack buffer without verifying that its length fits the destination. An attacker can supply a crafted CMS message with an oversized IV, causing a stack-based out-of-bounds write before any authentication or tag verification occurs.\n\nApplications and services that parse untrusted CMS or PKCS#7 content using AEAD ciphers (e.g., S/MIME (Auth)EnvelopedData with AES-GCM) are vulnerable. Because the overflow occurs prior to authentication, no valid key material is required to trigger it. While exploitability to remote code execution depends on platform and toolchain mitigations, the stack-based write primitive represents a severe risk.\n\nThe FIPS modules in 3.6, 3.5, 3.4, 3.3 and 3.0 are not affected by this issue, as the CMS implementation is outside the OpenSSL FIPS module boundary.\n\nOpenSSL 3.6, 3.5, 3.4, 3.3 and 3.0 are vulnerable to this issue.\n\nOpenSSL 1.1.1 and 1.0.2 are not affected by this issue.",
+          "title": "CVE description"
+        },
+        {
+          "category": "details",
+          "text": "A stack buffer overflow may lead to a crash, causing denial of service, or potentially remote code execution. Exploitability for code execution depends on the affected code path, platform protections, and toolchain mitigations.",
+          "title": "Impact"
+        },
+        {
+          "category": "details",
+          "text": "In the device context described by the referenced advisory, exploitation may require an authenticated high-privileged user to upload malicious firmware or another maliciously crafted digitally signed object from an untrusted source. The Phoenix Contact advisory states that an attacker must trick the authenticated user into uploading malicious firmware without checking the SHA256 checksum and that the firmware upload function is only available to users with high privileges.",
+          "title": "Device Context"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-22001"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update affected CEPE installations running Festo AX OS 25.0.1.46 or Festo AX OS 25.9.2.4 to Festo AX OS 26.3.1.4 or later.",
+          "product_ids": [
+            "CSAFPID-31001",
+            "CSAFPID-31002"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002"
+          ]
+        }
+      ],
+      "title": "Stack buffer overflow in CMS (Auth)EnvelopedData parsing"
+    },
+    {
+      "cve": "CVE-2025-69419",
+      "cwe": {
+        "id": "CWE-787",
+        "name": "Out-of-bounds Write"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Calling PKCS12_get_friendlyname() function on a maliciously crafted PKCS#12 file with a BMPString (UTF-16BE) friendly name containing non-ASCII BMP code point can trigger a one byte write before the allocated buffer.",
+          "title": "Vulnerability Summary"
+        },
+        {
+          "category": "description",
+          "text": "Calling PKCS12_get_friendlyname() function on a maliciously crafted PKCS#12 file with a BMPString (UTF-16BE) friendly name containing non-ASCII BMP code point can trigger a one byte write before the allocated buffer.\n\nImpact summary: The out-of-bounds write can cause a memory corruption which can have various consequences including a Denial of Service.\n\nThe OPENSSL_uni2utf8() function performs a two-pass conversion of a PKCS#12 BMPString (UTF-16BE) to UTF-8. In the second pass, when emitting UTF-8 bytes, the helper function bmp_to_utf8() incorrectly forwards the remaining UTF-16 source byte count as the destination buffer capacity to UTF8_putc(). For BMP code points above U+07FF, UTF-8 requires three bytes, but the forwarded capacity can be just two bytes. UTF8_putc() then returns -1, and this negative value is added to the output length without validation, causing the length to become negative. The subsequent trailing NUL byte is then written at a negative offset, causing write outside of heap allocated buffer.\n\nThe vulnerability is reachable via the public PKCS12_get_friendlyname() API when parsing attacker-controlled PKCS#12 files. While PKCS12_parse() uses a different code path that avoids this issue, PKCS12_get_friendlyname() directly invokes the vulnerable function. Exploitation requires an attacker to provide a malicious PKCS#12 file to be parsed by the application and the attacker can just trigger a one zero byte write before the allocated buffer. For that reason the issue was assessed as Low severity according to our Security Policy.\n\nThe FIPS modules in 3.6, 3.5, 3.4, 3.3 and 3.0 are not affected by this issue, as the PKCS#12 implementation is outside the OpenSSL FIPS module boundary.\n\nOpenSSL 3.6, 3.5, 3.4, 3.3, 3.0 and 1.1.1 are vulnerable to this issue.\n\nOpenSSL 1.0.2 is not affected by this issue.",
+          "title": "CVE description"
+        },
+        {
+          "category": "details",
+          "text": "The OPENSSL_uni2utf8() function performs a conversion of a PKCS#12 BMPString to UTF-8. For certain BMP code points, UTF-8 requires three bytes, but the forwarded destination capacity may be only two bytes. This can cause a negative length calculation and a trailing NUL byte write at a negative offset, resulting in a write outside the heap-allocated buffer.",
+          "title": "Technical Details"
+        },
+        {
+          "category": "details",
+          "text": "The out-of-bounds write can cause memory corruption, which may have various consequences including denial of service. Depending on the affected application context and platform mitigations, additional impact cannot be ruled out.",
+          "title": "Impact"
+        },
+        {
+          "category": "details",
+          "text": "In the device context described by the referenced advisory, exploitation requires that an attacker provides a malicious PKCS#12 file that is parsed by the application. The Phoenix Contact advisory states that, in the device context, the attacker must be logged in with a high-privileged user.",
+          "title": "Device Context"
+        }
+      ],
+      "product_status": {
+        "fixed": [
+          "CSAFPID-22001"
+        ],
+        "known_affected": [
+          "CSAFPID-31001",
+          "CSAFPID-31002"
+        ]
+      },
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Update affected CEPE installations running Festo AX OS 25.0.1.46 or Festo AX OS 25.9.2.4 to Festo AX OS 26.3.1.4 or later.",
+          "product_ids": [
+            "CSAFPID-31001",
+            "CSAFPID-31002"
+          ]
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-31001",
+            "CSAFPID-31002"
+          ]
+        }
+      ],
+      "title": "Out of bounds write in PKCS12_get_friendlyname() UTF-8 conversion"
+    }
+  ]
+}

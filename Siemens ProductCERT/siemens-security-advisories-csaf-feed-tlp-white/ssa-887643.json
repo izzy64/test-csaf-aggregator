@@ -51,7 +51,7 @@
     ],
     "title": "SSA-887643: Account Hijacking Vulnerability in Mendix SAML module",
     "tracking": {
-      "current_release_date": "2026-09-03T00:00:00.000Z",
+      "current_release_date": "2026-10-26T00:00:00.000Z",
       "generator": {
         "engine": {
           "name": "Siemens ProductCERT CSAF Generator",
@@ -66,10 +66,16 @@
           "legacy_version": "1.0",
           "number": "1",
           "summary": "Publication Date"
+        },
+        {
+          "date": "2026-10-26T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Released new fixed versions, as the previous versions did not fully remediate the vulnerability."
         }
       ],
       "status": "interim",
-      "version": "1"
+      "version": "2"
     }
   },
   "product_tree": {
@@ -80,9 +86,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/<4.2.3",
+                "name": "vers:intdot/<4.2.4",
                 "product": {
-                  "name": "Mendix SAML (Mendix 10 compatible) < V4.2.3",
+                  "name": "Mendix SAML (Mendix 10 compatible) < V4.2.4",
                   "product_id": "1"
                 }
               }
@@ -94,9 +100,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/<4.2.3",
+                "name": "vers:intdot/<4.2.4",
                 "product": {
-                  "name": "Mendix SAML (Mendix 11 compatible) < V4.2.3",
+                  "name": "Mendix SAML (Mendix 11 compatible) < V4.2.4",
                   "product_id": "2"
                 }
               }
@@ -108,9 +114,9 @@
             "branches": [
               {
                 "category": "product_version_range",
-                "name": "vers:intdot/<3.6.27",
+                "name": "vers:intdot/<3.6.29",
                 "product": {
-                  "name": "Mendix SAML (Mendix 9.24 compatible) < V3.6.27",
+                  "name": "Mendix SAML (Mendix 9.24 compatible) < V3.6.29",
                   "product_id": "3"
                 }
               }
@@ -148,7 +154,7 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "Update to V3.6.27 or later version",
+          "details": "Update to V3.6.29 or later version",
           "product_ids": [
             "3"
           ],
@@ -156,17 +162,17 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V4.2.3 or later version",
+          "details": "Update to V4.2.4 or later version",
           "product_ids": [
-            "1"
+            "2"
           ],
           "url": "https://marketplace.mendix.com/link/component/1174"
         },
         {
           "category": "vendor_fix",
-          "details": "Update to V4.2.3 or later version",
+          "details": "Update to V4.2.4 or later version",
           "product_ids": [
-            "2"
+            "1"
           ],
           "url": "https://marketplace.mendix.com/link/component/1174"
         }

@@ -1,0 +1,859 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "On October 21, 2026, the PHP project and security researchers disclosed two critical, unauthenticated remote code execution vulnerabilities in the core PHP language runtime known as \"php2shell\" (tracked as CVE-2026-109618 and CVE-2026-109619). This advisory covers the status of impact of various Siemens software products.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals.\nAdditional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-566435: PHP2Shell Vulnerabilities in Siemens Software Products - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-566435: PHP2Shell Vulnerabilities in Siemens Software Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-566435.json"
+      }
+    ],
+    "title": "SSA-566435: PHP2Shell Vulnerabilities in Siemens Software Products",
+    "tracking": {
+      "current_release_date": "2026-10-27T00:00:00.000Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-566435",
+      "initial_release_date": "2026-10-23T00:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-10-23T00:00:00.000Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2026-10-26T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Added Valor NPI, Solid Edge and Capital to \"Known Not Affected Product\" list"
+        },
+        {
+          "date": "2026-10-27T00:00:00.000Z",
+          "legacy_version": "1.2",
+          "number": "3",
+          "summary": "Added Insights Hub, Simcenter Flux and Simcenter Simlab"
+        }
+      ],
+      "status": "final",
+      "version": "3"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "CADRA",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "CADRA"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Capital",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Capital"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "DFMExpress",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "DFMExpress"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "HyperLynx",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "HyperLynx"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Insights Hub",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Insights Hub"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Opcenter Connect MOM",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter Connect MOM"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Opcenter Execution Core",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter Execution Core"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Opcenter X",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Opcenter X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "PADS Pro Essentials",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PADS Pro Essentials"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "PADS Pro Student Edition",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PADS Pro Student Edition"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "PADS Professional",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PADS Professional"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "PADS Professional - XCR",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PADS Professional - XCR"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "PADS Standard - XCR",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PADS Standard - XCR"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "PADS Standard & Standard Plus",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "PADS Standard & Standard Plus"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Polarion",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Polarion"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "QuadView",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "QuadView"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Simcenter Flomaster",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter Flomaster"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Simcenter Flux",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter Flux"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Simcenter Simlab",
+                  "product_id": "19"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Simcenter Simlab"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Solid Edge",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Solid Edge"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Teamcenter",
+                  "product_id": "21"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Teamcenter"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Teamcenter Product Cost Management",
+                  "product_id": "22"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Teamcenter Product Cost Management"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Teamcenter Visualization",
+                  "product_id": "23"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Teamcenter Visualization"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Tecnomatix Plant Simulation",
+                  "product_id": "24"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Tecnomatix Plant Simulation"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "TestWay",
+                  "product_id": "25"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "TestWay"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Valor NPI",
+                  "product_id": "26"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Valor NPI"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Xpedition Designer",
+                  "product_id": "27"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Xpedition Designer"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Xpedition Enterprise",
+                  "product_id": "28"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Xpedition Enterprise"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Xpedition Enterprise XCR",
+                  "product_id": "29"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Xpedition Enterprise XCR"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Xpedition IC Packaging",
+                  "product_id": "30"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Xpedition IC Packaging"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Xpedition Layout Browser",
+                  "product_id": "31"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Xpedition Layout Browser"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-109618",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "22",
+            "29",
+            "16",
+            "2",
+            "7",
+            "25",
+            "21",
+            "18",
+            "5",
+            "19",
+            "4",
+            "8",
+            "14",
+            "30",
+            "11",
+            "23",
+            "28",
+            "1",
+            "10",
+            "17",
+            "3",
+            "20",
+            "24",
+            "15",
+            "12",
+            "26",
+            "6",
+            "27",
+            "9",
+            "13",
+            "31"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
+          "title": "CVE Description"
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "3",
+          "30",
+          "31",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "PHP is not present in this product",
+          "product_ids": [
+            "22",
+            "29",
+            "16",
+            "2",
+            "25",
+            "21",
+            "18",
+            "5",
+            "19",
+            "4",
+            "14",
+            "30",
+            "11",
+            "23",
+            "28",
+            "1",
+            "10",
+            "20",
+            "3",
+            "12",
+            "26",
+            "27",
+            "9",
+            "13",
+            "31"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Opcenter Connect MOM does not use PHP in any part of its product architecture",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Opcenter Execution Core does not use PHP in any part of its product architecture",
+          "product_ids": [
+            "7"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Opcenter X does not use PHP, therefore it is not affected by these critical vulnerabilities and no remediations are needed",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Polarion suite is not impacted by PHP as there is no usage of PHP.\r\nPolarion out of the box components do not use PHP",
+          "product_ids": [
+            "15"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Simcenter Flomaster is not affected by the PHP issue",
+          "product_ids": [
+            "17"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Tecnomatic Plant Simulation is not impacted by PHP as there is no usage of PHP",
+          "product_ids": [
+            "24"
+          ]
+        }
+      ],
+      "title": "CVE-2026-109618"
+    },
+    {
+      "cve": "CVE-2026-109619",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "22",
+            "29",
+            "16",
+            "2",
+            "7",
+            "25",
+            "21",
+            "18",
+            "5",
+            "19",
+            "4",
+            "8",
+            "14",
+            "30",
+            "11",
+            "23",
+            "28",
+            "1",
+            "10",
+            "17",
+            "3",
+            "20",
+            "24",
+            "15",
+            "12",
+            "26",
+            "6",
+            "27",
+            "9",
+            "13",
+            "31"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
+          "title": "CVE Description"
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "3",
+          "30",
+          "31",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "PHP is not present in this product",
+          "product_ids": [
+            "22",
+            "29",
+            "16",
+            "2",
+            "25",
+            "21",
+            "18",
+            "5",
+            "19",
+            "4",
+            "14",
+            "30",
+            "11",
+            "23",
+            "28",
+            "1",
+            "10",
+            "20",
+            "3",
+            "12",
+            "26",
+            "27",
+            "9",
+            "13",
+            "31"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Opcenter Connect MOM does not use PHP in any part of its product architecture",
+          "product_ids": [
+            "6"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Opcenter Execution Core does not use PHP in any part of its product architecture",
+          "product_ids": [
+            "7"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Opcenter X does not use PHP, therefore it is not affected by these critical vulnerabilities and no remediations are needed",
+          "product_ids": [
+            "8"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Polarion suite is not impacted by PHP as there is no usage of PHP.\r\nPolarion out of the box components do not use PHP",
+          "product_ids": [
+            "15"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Simcenter Flomaster is not affected by the PHP issue",
+          "product_ids": [
+            "17"
+          ]
+        },
+        {
+          "category": "impact",
+          "details": "Tecnomatic Plant Simulation is not impacted by PHP as there is no usage of PHP",
+          "product_ids": [
+            "24"
+          ]
+        }
+      ],
+      "title": "CVE-2026-109619"
+    }
+  ]
+}

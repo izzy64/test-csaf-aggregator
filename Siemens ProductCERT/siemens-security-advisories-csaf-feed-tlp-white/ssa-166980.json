@@ -1,0 +1,561 @@
+{
+  "document": {
+    "category": "csaf_security_advisory",
+    "csaf_version": "2.0",
+    "distribution": {
+      "text": "Disclosure is not limited. (TLPv2: TLP:CLEAR)",
+      "tlp": {
+        "label": "WHITE"
+      }
+    },
+    "lang": "en",
+    "notes": [
+      {
+        "category": "summary",
+        "text": "On October 21, 2026, the PHP project and security researchers disclosed two critical, unauthenticated remote code execution vulnerabilities in the core PHP language runtime known as \"php2shell\" (tracked as CVE-2026-109618 and CVE-2026-109619). This advisory covers the status of impact of various Siemens software products.\n\nAs a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines, and to follow the recommendations in the product manuals.\n\nSiemens is actively monitoring the situation and assessing the implications of these vulnerabilities on our portfolio. Because this evaluation is ongoing, our findings are subject to change as new technical details and vendor updates emerge. We will publish updated findings, guidance, and remediation recommendations as soon as they become available.",
+        "title": "Summary"
+      },
+      {
+        "category": "general",
+        "text": "Operators of critical power systems (e.g. TSOs or DSOs) worldwide are usually required by regulations to build resilience into the power grids by applying multi-level redundant secondary protection schemes. It is therefore recommended that the operators check whether appropriate resilient protection measures are in place. The risk of cyber incidents impacting the grid's reliability can thus be minimized by virtue of the grid design.\nSiemens strongly recommends applying the provided security updates using the corresponding tooling and documented procedures made available with the product. If supported by the product, an automated means to apply the security updates across multiple product instances may be used. Siemens strongly recommends prior validation of any security update before being applied, and supervision by trained staff of the update process in the target environment. \nAs a general security measure Siemens strongly recommends to protect network access with appropriate mechanisms (e.g. firewalls, segmentation, VPN). It is advised to configure the environment according to our operational guidelines in order to run the devices in a protected IT environment.\n\nRecommended security guidelines can be found at:\nhttps://www.siemens.com/gridsecurity",
+        "title": "General Recommendations"
+      },
+      {
+        "category": "general",
+        "text": "For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories",
+        "title": "Additional Resources"
+      },
+      {
+        "category": "legal_disclaimer",
+        "text": "The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use.",
+        "title": "Terms of Use"
+      }
+    ],
+    "publisher": {
+      "category": "vendor",
+      "contact_details": "productcert@siemens.com",
+      "name": "Siemens ProductCERT",
+      "namespace": "https://www.siemens.com"
+    },
+    "references": [
+      {
+        "category": "self",
+        "summary": "SSA-166980: PHP2Shell Vulnerabilities in Siemens Products - HTML Version",
+        "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html"
+      },
+      {
+        "category": "self",
+        "summary": "SSA-166980: PHP2Shell Vulnerabilities in Siemens Products - CSAF Version",
+        "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-166980.json"
+      }
+    ],
+    "title": "SSA-166980: PHP2Shell Vulnerabilities in Siemens Products",
+    "tracking": {
+      "current_release_date": "2026-10-27T00:00:00.000Z",
+      "generator": {
+        "engine": {
+          "name": "Siemens ProductCERT CSAF Generator",
+          "version": "1"
+        }
+      },
+      "id": "SSA-166980",
+      "initial_release_date": "2026-10-26T00:00:00.000Z",
+      "revision_history": [
+        {
+          "date": "2026-10-26T00:00:00.000Z",
+          "legacy_version": "1.0",
+          "number": "1",
+          "summary": "Publication Date"
+        },
+        {
+          "date": "2026-10-27T00:00:00.000Z",
+          "legacy_version": "1.1",
+          "number": "2",
+          "summary": "Updated the Known not affected list"
+        }
+      ],
+      "status": "final",
+      "version": "2"
+    }
+  },
+  "product_tree": {
+    "branches": [
+      {
+        "branches": [
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Building X",
+                  "product_id": "1"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Building X"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Climatix Cloud IC",
+                  "product_id": "2"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Climatix Cloud IC"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Climatix Devices",
+                  "product_id": "3"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Climatix Devices"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Connect X200",
+                  "product_id": "4"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Connect X200"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Connect X300",
+                  "product_id": "5"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Connect X300"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Connect X500",
+                  "product_id": "6"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Connect X500"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "cRSP",
+                  "product_id": "7"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "cRSP"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo CC",
+                  "product_id": "8"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo CC"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo Optic",
+                  "product_id": "9"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo Optic"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo PXC4",
+                  "product_id": "10"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo PXC4"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo PXC5",
+                  "product_id": "11"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo PXC5"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Desigo PXC7",
+                  "product_id": "12"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Desigo PXC7"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Navigator E&S",
+                  "product_id": "13"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Navigator E&S"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Sinteso FS20 EN",
+                  "product_id": "14"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Sinteso FS20 EN"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SiPass integrated",
+                  "product_id": "15"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SiPass integrated"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "SIPORT",
+                  "product_id": "16"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "SIPORT"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Siveillance Control",
+                  "product_id": "17"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Control"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Siveillance Control Pro",
+                  "product_id": "18"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Control Pro"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Siveillance Intrusion",
+                  "product_id": "19"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Intrusion"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "vers:all/*",
+                "product": {
+                  "name": "Siveillance Video",
+                  "product_id": "20"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Siveillance Video"
+          }
+        ],
+        "category": "vendor",
+        "name": "Siemens"
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-109618",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "16",
+            "2",
+            "7",
+            "18",
+            "5",
+            "19",
+            "4",
+            "8",
+            "14",
+            "11",
+            "1",
+            "10",
+            "17",
+            "3",
+            "20",
+            "15",
+            "12",
+            "6",
+            "9",
+            "13"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
+          "title": "CVE Description"
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "PHP is not present in this product",
+          "product_ids": [
+            "16",
+            "2",
+            "7",
+            "18",
+            "5",
+            "19",
+            "4",
+            "8",
+            "14",
+            "11",
+            "1",
+            "10",
+            "17",
+            "3",
+            "20",
+            "15",
+            "12",
+            "6",
+            "9",
+            "13"
+          ]
+        }
+      ],
+      "title": "CVE-2026-109618"
+    },
+    {
+      "cve": "CVE-2026-109619",
+      "cwe": {
+        "id": "CWE-416",
+        "name": "Use After Free"
+      },
+      "flags": [
+        {
+          "label": "component_not_present",
+          "product_ids": [
+            "16",
+            "2",
+            "7",
+            "18",
+            "5",
+            "19",
+            "4",
+            "8",
+            "14",
+            "11",
+            "1",
+            "10",
+            "17",
+            "3",
+            "20",
+            "15",
+            "12",
+            "6",
+            "9",
+            "13"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "category": "description",
+          "text": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
+          "title": "CVE Description"
+        }
+      ],
+      "product_status": {
+        "known_not_affected": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "threats": [
+        {
+          "category": "impact",
+          "details": "PHP is not present in this product",
+          "product_ids": [
+            "16",
+            "2",
+            "7",
+            "18",
+            "5",
+            "19",
+            "4",
+            "8",
+            "14",
+            "11",
+            "1",
+            "10",
+            "17",
+            "3",
+            "20",
+            "15",
+            "12",
+            "6",
+            "9",
+            "13"
+          ]
+        }
+      ],
+      "title": "CVE-2026-109619"
+    }
+  ]
+}
